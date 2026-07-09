@@ -17,7 +17,21 @@
       "id": "200L",
       "name": "200 Level (Sophomore)",
       "courses": [
-        { "code": "CSC 201", "title": "Java Programming", "file": "200L/csc_201_java.json" }
+        { "code": "", "title": "N/A", "file": "200L/csc_201_java.json" }
+      ]
+    },
+    {
+      "id": "300L",
+      "name": "300 Level (Penultimate Year)",
+      "courses": [
+        { "code": "", "title": "N/A", "file": "300L/csc_301_dsa.json" }
+      ]
+    },
+    {
+      "id": "400L",
+      "name": "400 Level (Senior)",
+      "courses": [
+        { "code": "", "title": "N/A", "file": "400L/csc_401_ai.json" }
       ]
     }
   ]
