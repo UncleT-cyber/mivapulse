@@ -1,0 +1,821 @@
+[
+  {
+    "course_code": "GST 112",
+    "topic": "Colonialism and Societal Structures",
+    "question": "How did historical disruptions like colonialism fundamentally reshape indigenous family dynamics and economic systems in Nigerian societies?",
+    "options": {
+      "A": "By completely eliminating communal farming in favor of isolated hunter-gatherer systems.",
+      "B": "By introducing a cash-crop economy and wage labor that disrupted traditional communal production and shifted gender roles.",
+      "C": "By institutionalizing matriarchal family structures across all ethnic groups to ease administrative tax collection.",
+      "D": "By preserving traditional barter networks entirely untouched while only altering urban political systems."
+    },
+    "correct_answer": "B",
+    "explanation": "Colonial capitalism introduced taxation and commercial cash-cropping (e.g., cocoa, palm oil, groundnuts). This forced a shift toward monetization, pulled men into wage labor away from home, and modified traditional gender divisions of labor and extended family cohesion."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "National Integration and Nation-Building",
+    "question": "When evaluating post-independence initiatives like the National Youth Service Corps (NYSC) and the unitary unity school system, what is their primary structural objective in nation-building?",
+    "options": {
+      "A": "To enforce military conscription across all regional borders to expand the national army.",
+      "B": "To minimize cross-cultural interactions by keeping students strictly within their states of origin.",
+      "C": "To foster national integration, bridge ethnocentric divisions, and encourage inter-ethnic cooperation.",
+      "D": "To decentralize federal education funding to state ministries of local government."
+    },
+    "correct_answer": "C",
+    "explanation": "The NYSC (established in 1973) and Federal Unity Schools were structural interventions designed following the civil war to promote national integration, deconstruct ethnic stereotypes, and foster a shared identity among Nigerian youths."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Pre-Colonial Interactions",
+    "question": "How did pre-colonial interactions among diverse ethnic groups in the Niger area primarily influence their socio-cultural practices and identity development?",
+    "options": {
+      "A": "They led to total cultural assimilation, wiping out distinct ethnic languages.",
+      "B": "They fostered absolute isolationism, with groups avoiding contact due to dense rainforest geography.",
+      "C": "They encouraged dynamic cultural borrowing, shared religious motifs, and linguistic cross-pollination while maintaining distinct local identities.",
+      "D": "They prevented the development of organized political kingdoms or monarchies."
+    },
+    "correct_answer": "C",
+    "explanation": "Pre-colonial interactions via trade, migrations, and diplomacy led to cross-cultural borrowing (such as artistic influences between Benin and Ife, or linguistic integrations across the Niger-Benue confluence) without erasing local community identities."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Pre-Colonial Interactions",
+    "question": "In what ways did economic interdependence shape regional trade networks in Nigeria's Niger area before European contact?",
+    "options": {
+      "A": "It confined trade exclusively to luxury items meant for royal elites.",
+      "B": "It created specialized ecological production zones (e.g., canoe building in the Delta, agriculture in the hinterland) that fueled robust regional markets.",
+      "C": "It made local markets entirely dependent on Mediterranean trans-Saharan caravans.",
+      "D": "It caused chronic economic scarcity due to a complete lack of regional currencies like cowries."
+    },
+    "correct_answer": "B",
+    "explanation": "Different ecological zones produced complementary resource needs. Delta communities provided salt and fish, while hinterland agriculturalists provided yams and grains. This interdependence created interconnected riverine and overland trade routes."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Trans-Atlantic Slave Trade",
+    "question": "What was a significant political and economic consequence of the Trans-Atlantic Slave Trade on the structures of the Niger Area?",
+    "options": {
+      "A": "The immediate democratic transition of all localized city-states.",
+      "B": "The militarization of political structures, proliferation of firearms, and reorientation of local economies toward predatory captive-capturing.",
+      "C": "The complete replacement of agricultural production with manufacturing industries.",
+      "D": "The total stabilization of regional peace due to population reductions."
+    },
+    "correct_answer": "B",
+    "explanation": "The external demand for captives fueled regional warfare, empowered militarized ruling classes, integrated firearms into political struggles, and diverted local productive labor away from sustainable indigenous industries."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Trans-Atlantic Slave Trade",
+    "question": "The transition from the slave trade to 'Legitimate Trade' (e.g., palm oil export) challenged established economic paradigms in the Niger Coast by doing what?",
+    "options": {
+      "A": "Restricting economic power exclusively to traditional royal bloodlines.",
+      "B": "Enforcing a return to complete isolationist subsistence farming.",
+      "C": "Allowing commoners and enterprising individuals (like Jaja of Opobo) to accumulate wealth and challenge traditional aristocratic power.",
+      "D": "Ending all forms of manual domestic labor overnight."
+    },
+    "correct_answer": "C",
+    "explanation": "Legitimate commerce required broad collection networks for agricultural commodities. This allowed individuals of humble background or domestic slaves to gain significant economic leverage through trade, shifting old socio-political power structures."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "How did colonial-era constitutions (Clifford, Richard, Macpherson, Lyttleton) navigate the balance between colonial control and Nigerian self-governance?",
+    "options": {
+      "A": "They granted immediate, unconditional independence starting in 1922.",
+      "B": "They steadily introduced regionalism and representative councils, balancing concessions to nationalist agitations while retaining ultimate British veto powers.",
+      "C": "They completely banned all forms of regional political expression until 1960.",
+      "D": "They forced Nigeria into a unitary state system with no regional administrative divisions."
+    },
+    "correct_answer": "B",
+    "explanation": "Each constitution marked a transitional compromise. From Clifford’s elective principle to Lyttleton’s formal federal framework, the colonial government introduced controlled legislative inclusion while protecting imperial interests."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "What was a critical structural flaw in the formation and growth strategies of early political parties in Nigeria during the nationalist era?",
+    "options": {
+      "A": "They completely rejected the use of modern news media or print journalism.",
+      "B": "They relied heavily on regional and ethnic mobilization bases, which compromised their ability to project a unified national front.",
+      "C": "They refused to engage in constitutional negotiations with the British colonial office.",
+      "D": "They focused exclusively on international foreign policy rather than local independence."
+    },
+    "correct_answer": "B",
+    "explanation": "Major parties (such as the AG, NPC, and to an extent the NCNC) became structurally anchored within specific regions and ethnic majorities (West, North, and East respectively). This regionalism fractured political consensus post-independence."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Civil War and Military Rule",
+    "question": "Analyzing the political and social ramifications of the 1966 pogroms and the subsequent Nigerian Civil War shows that these events did what?",
+    "options": {
+      "A": "Instantly unified the country's ethnic groups under a common cultural identity.",
+      "B": "Deepened structural distrust, caused massive population displacements, and led to long-term centralization of federal power.",
+      "C": "Eliminated the presence of ethnic identity from subsequent political arrangements.",
+      "D": "Led to the permanent geopolitical dissolution of the Nigerian state."
+    },
+    "correct_answer": "B",
+    "explanation": "The civil war (1967–1970) caused severe loss of life and humanitarian crises. Politically, it accelerated the shift away from loose regionalism toward a powerful central federal structure dominated by military hierarchies."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Civil War and Military Rule",
+    "question": "Which of the following correctly balances the structural pros and cons of the military dictatorship era in Nigeria?",
+    "options": {
+      "A": "Pros: Expanded civil liberties; Cons: Slow infrastructural decision-making.",
+      "B": "Pros: Rapid decentralization of tax powers; Cons: Inability to create new states.",
+      "C": "Pros: Decisive policy execution and infrastructure creation; Cons: Systemic erosion of human rights and democratic institutions.",
+      "D": "Pros: Total economic insulation from global markets; Cons: Extreme multi-party political instability."
+    },
+    "correct_answer": "C",
+    "explanation": "Military regimes used centralized decrees to bypass legislative gridlock, funding large infrastructure works and restructuring states. However, this came at the expense of human rights abuses, suppression of free speech, and the suspension of the constitution."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Post-Independence Economic Trajectory",
+    "question": "Which major turning point in Nigeria's post-1960 economic trajectory fundamentally altered its structural dependency profile?",
+    "options": {
+      "A": "The complete transition to a specialized tech-manufacturing economy in 1965.",
+      "B": "The 1970s oil boom, which shifted the nation from an agrarian export base to a mono-product economy dependent on crude oil revenues.",
+      "C": "The total ban on foreign direct investment enacted by the democratic government in 1999.",
+      "D": "The nationalization of all small-scale retail businesses across West Africa."
+    },
+    "correct_answer": "B",
+    "explanation": "The rapid expansion of the petroleum sector in the 1970s created Dutch Disease dynamics. This marginalized agricultural exports, made public finance volatile, and anchored state expenditures to international oil prices."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Post-Independence Economic Trajectory",
+    "question": "When looking at Nigeria's economic stability challenges, how do internal governance issues interact with external global dynamics?",
+    "options": {
+      "A": "Internal systemic resource mismanagement renders the local economy highly vulnerable to external global commodity price shocks.",
+      "B": "Global financial dynamics have zero structural influence over domestic inflation or currency values.",
+      "C": "Excellent internal resource tracking fully insulates Nigeria from international debt market conditions.",
+      "D": "External trade imbalances are solely caused by a lack of natural resources."
+    },
+    "correct_answer": "A",
+    "explanation": "Weak domestic revenue diversification, fuel subsidy structural complexities, and corruption leave Nigeria poorly buffered. Consequently, when international oil prices crash or global interest rates shift, the local economy faces immediate currency and inflationary pressures."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Human Rights and Society",
+    "question": "Which of the following describes a persistent structural challenge in effectively addressing human rights abuses in Nigeria?",
+    "options": {
+      "A": "A total lack of domestic civil society organizations or activist networks.",
+      "B": "Institutional weaknesses within law enforcement agencies combined with systemic gaps in accountability mechanisms.",
+      "C": "Constitutional clauses that explicitly command the abuse of minority citizens.",
+      "D": "The complete absence of formal judicial court systems in regional capitals."
+    },
+    "correct_answer": "B",
+    "explanation": "While Nigeria possesses robust human rights legislation on paper, implementation is often limited by institutional institutional gaps, weak oversight over security agencies, and slow judicial processes."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Human Rights and Society",
+    "question": "How do socio-economic inequalities intersect with the perpetuation of human rights abuses in society?",
+    "options": {
+      "A": "Socio-economic privileges protect lower-income citizens from legal exploitation.",
+      "B": "Economic vulnerability limits access to proper legal representation, making marginalized populations more susceptible to systemic rights violations.",
+      "C": "High poverty rates automatically dissolve federal authority to draft human rights protections.",
+      "D": "Political access is uniformly distributed, removing economic status from legal outcomes."
+    },
+    "correct_answer": "B",
+    "explanation": "Poverty often correlates with limited legal literacy and an inability to secure quality legal defense. This systemic imbalance leaves lower-income citizens disproportionately exposed to arbitrary detentions and extrajudicial actions."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Citizenship and Civil Responsibilities",
+    "question": "Why is modern citizenship viewed as an evolving concept rather than a static legal definition?",
+    "options": {
+      "A": "Because global treaties have abolished national borders entirely.",
+      "B": "Because its scope broadens over time as marginalized groups secure rights, and global migrations rewrite legal identities.",
+      "C": "Because citizenship status is re-evaluated by national lottery algorithms every calendar year.",
+      "D": "Because it has reverted to pre-modern imperial subjecthood classifications."
+    },
+    "correct_answer": "B",
+    "explanation": "Citizenship is dynamic. Historically exclusive, its boundaries expand through social struggles, diaspora engagements (e.g., dual citizenship laws), and legislative adjustments regarding inclusivity and fundamental human liberties."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Citizenship and Civil Responsibilities",
+    "question": "When individual liberties directly conflict with collective civic responsibilities (such as public safety mandates), what ethical framework typically guides democratic resolution?",
+    "options": {
+      "A": "The immediate suspension of all individual rights with zero legal right to appeal.",
+      "B": "Balancing personal freedoms against the collective welfare using principles of proportionality, public interest, and constitutional checks.",
+      "C": "Prioritizing individual desires completely over public safety under all conditions.",
+      "D": "Allowing regional military councils to decide issues without constitutional reference."
+    },
+    "correct_answer": "B",
+    "explanation": "Constitutional democracies navigate tensions between individual rights and public interest by testing measures against legal necessity, minimizing overreach, and preserving fundamental liberties."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "National Orientation Strategies",
+    "question": "What is a primary factor that can limit the success of national orientation strategies (such as civic values campaigns) in Nigeria?",
+    "options": {
+      "A": "A complete lack of radio or television transmission networks nationwide.",
+      "B": "Political, regional, or cultural mistrust, alongside a disconnect between official rhetoric and the lived socio-economic realities of citizens.",
+      "C": "A national population that refuses to learn any common lingua franca.",
+      "D": "The structural absence of any government ministry tasked with communication."
+    },
+    "correct_answer": "B",
+    "explanation": "National orientation efforts (e.g., National Orientation Agency campaigns) often face headwinds if citizens perceive a trust deficit in leadership or if the campaigns fail to address core issues like poverty, corruption, and insecurity."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "National Orientation Strategies",
+    "question": "How have national orientation and public communication methods adjusted to meet the demands of modern technological developments?",
+    "options": {
+      "A": "By completely abandoning digital networks to focus exclusively on print flyers.",
+      "B": "By shifting from legacy one-way mass media formats to interactive digital spaces and social media amplification.",
+      "C": "By using satellite arrays to broadcast messages directly into home appliances.",
+      "D": "By restricting information access to citizens with specialized engineering licenses."
+    },
+    "correct_answer": "B",
+    "explanation": "Modern civic orientation must leverage digital spaces. Shifting focus to online platforms allows for rapid dissemination, real-time engagement, and direct feedback loops with the country's large youth demographic."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Globalization and Pop Culture",
+    "question": "How have globalization and digital media platforms influenced the adaptation of Nigerian pop culture (such as Afrobeats and Nollywood) globally?",
+    "options": {
+      "A": "They have localized content, preventing it from crossing regional borders.",
+      "B": "They have served as distribution channels, turning local creative expressions into a powerful global export and a key tool of soft power.",
+      "C": "They have forced creative industries to produce content exclusively in European languages.",
+      "D": "They have reduced the economic value of local intellectual property to zero."
+    },
+    "correct_answer": "B",
+    "explanation": "Streaming infrastructure (e.g., Spotify, YouTube, Netflix) bypasses traditional international distribution gatekeepers. This enables Nigerian music and film to find global audiences, driving economic returns and projecting cultural soft power."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Globalization and Pop Culture",
+    "question": "In what way did the 2020 EndSARS protests expand beyond their initial focus on police brutality into a broader conversation on governance?",
+    "options": {
+      "A": "By focusing exclusively on regional agricultural land boundary disputes.",
+      "B": "By evolving into an organized national conversation on accountability, institutional transparency, bad governance, and systemic socio-economic reforms.",
+      "C": "By demanding the total dissolution of all civil court structures across the federation.",
+      "D": "By advocating for a return to pre-independence constitutional models."
+    },
+    "correct_answer": "B",
+    "explanation": "While sparked by systemic issues within the Special Anti-Robbery Squad, the movement harnessed digital organization to voice broader youth frustrations regarding institutional transparency, rule of law, unemployment, and political accountability."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Sociological Frameworks",
+    "question": "Which sociologist's functionalist approach views society as an organism with interdependent parts?",
+    "options": {
+      "A": "Karl Marx",
+      "B": "Emile Durkheim",
+      "C": "Max Weber",
+      "D": "Herbert Spencer"
+    },
+    "correct_answer": "B",
+    "explanation": "Emile Durkheim's functionalist approach views society as analogous to a living organism where each component plays a crucial role and no single part can function entirely independently of the others."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "National Integration and Nation-Building",
+    "question": "What did the 3R programme initiated by the Gowon regime stand for?",
+    "options": {
+      "A": "Reconstruction, Reintegration, Redistribution",
+      "B": "Reconciliation, Reconstruction, and Rehabilitation",
+      "C": "Retribution, Redistribution, Redirection",
+      "D": "Reconstruction, Redirection, Reconciliation"
+    },
+    "correct_answer": "B",
+    "explanation": "Initiated at the end of the Nigerian Civil War in 1970, the 3R programme aimed to heal national divisions through Reconciliation, Reconstruction, and Rehabilitation."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Pre-Colonial Interactions",
+    "question": "In a traditional Nigerian village, what represents the sociological aspect of culture?",
+    "options": {
+      "A": "Ideas and beliefs",
+      "B": "Material culture",
+      "C": "Extended family, village council, and religious organisations",
+      "D": "Tools and inventions"
+    },
+    "correct_answer": "C",
+    "explanation": "The sociological aspect of culture comprises institutionalized social structures and systems of organization, such as extended family structures, governing village councils, and religious groups."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Pre-Colonial Interactions",
+    "question": "A trade route connecting inland and coastal communities leads to increased exchange of goods and ideas. This outcome primarily illustrates how trade influences ___________.",
+    "options": {
+      "A": "social isolation",
+      "B": "cultural and economic integration",
+      "C": "political fragmentation",
+      "D": "environmental decline"
+    },
+    "correct_answer": "B",
+    "explanation": "Inter-regional trade channels foster mutual commercial dependence while serving as paths for cultural ideas, values, and customs to diffuse across different societies."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Colonialism and Economic Structures",
+    "question": "A foreign power replaces an exploitative system with trade in raw materials while maintaining control over economic structures. What does this shift suggest?",
+    "options": {
+      "A": "Transformation of exploitation",
+      "B": "End of external influence",
+      "C": "Cultural revival",
+      "D": "Complete independence"
+    },
+    "correct_answer": "A",
+    "explanation": "Replacing a direct system like the slave trade with 'legitimate commerce' in raw agricultural commodities maintained underlying colonial economic control and extraction patterns."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Trans-Atlantic Slave Trade",
+    "question": "A shift from violent capture of labour to negotiated exchange occurs after local resistance increases. What does this transition demonstrate?",
+    "options": {
+      "A": "Economic collapse",
+      "B": "Political independence",
+      "C": "Cultural dominance",
+      "D": "Strategic adaptation"
+    },
+    "correct_answer": "D",
+    "explanation": "When direct violence faced operational resistance, external and domestic interests adapted their strategies by shifting to market-based, negotiated commercial terms to secure labor and resources."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Pre-Colonial Interactions",
+    "question": "A ruler forms an alliance with a former rival to defeat a stronger third party. This decision demonstrates the strategic role of conflict in shaping:",
+    "options": {
+      "A": "Religious uniformity",
+      "B": "Political cooperation",
+      "C": "Economic stagnation",
+      "D": "Cultural isolation"
+    },
+    "correct_answer": "B",
+    "explanation": "External security pressures frequently drove pre-colonial political groups to set aside historical rivalries and form diplomatic alliances, showing how conflict can lead to tactical political cooperation."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Colonialism and Economic Structures",
+    "question": "Local traders resist a dominant company by increasing purchase prices in neighbouring territories to encourage smuggling. What does this strategy represent?",
+    "options": {
+      "A": "Economic resistance tactics",
+      "B": "Administrative restructuring",
+      "C": "Market deregulation policy",
+      "D": "Cultural assimilation strategy"
+    },
+    "correct_answer": "A",
+    "explanation": "By manipulating cross-border pricing, local merchants actively disrupted royal chartered monopoly operations (such as the Royal Niger Company), using market disruption as economic resistance."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Pre-Colonial Interactions",
+    "question": "A community adopts a religious practice originally associated with a neighbouring group after years of contact. This situation is best explained as _______.",
+    "options": {
+      "A": "political annexation",
+      "B": "cultural diffusion",
+      "C": "economic monopoly",
+      "D": "administrative reform"
+    },
+    "correct_answer": "B",
+    "explanation": "Cultural diffusion is the process by which cultural traits, religious practices, ideas, or technological elements spread from one distinct social group to another through sustained contact."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Pre-Colonial Interactions",
+    "question": "A historian analysing connections among ethnic groups relies on origin stories, trade links, and shared religious practices to draw conclusions about interaction patterns. This approach best reflects which reasoning?",
+    "options": {
+      "A": "Multi-indicator historical analysis",
+      "B": "Linguistic determinism",
+      "C": "Cultural isolation framework",
+      "D": "Political centralisation model"
+    },
+    "correct_answer": "A",
+    "explanation": "Evaluating complex inter-group relationships by combining oral traditions, commercial trade data, and religious linkages represents a balanced, multi-indicator historical approach."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "The introduction of elected representation in a political system leads to the formation of organised political groups. What does this development demonstrate?",
+    "options": {
+      "A": "Growth of political participation",
+      "B": "Administrative stagnation",
+      "C": "Elimination of leadership",
+      "D": "Decline of governance"
+    },
+    "correct_answer": "A",
+    "explanation": "Introducing electoral franchise choices (such as the elective principle in the 1922 Clifford Constitution) encourages citizens to organize into political parties, expanding civic participation."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "A constitution fails because it cannot accommodate growing demands for self-governance. What does this outcome suggest?",
+    "options": {
+      "A": "Political stability",
+      "B": "Economic growth",
+      "C": "Institutional rigidity",
+      "D": "Cultural integration"
+    },
+    "correct_answer": "C",
+    "explanation": "When an administrative framework fails because it cannot adapt to changing socio-political demands, it shows institutional rigidity."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "A transition from company rule to direct state control occurs after criticism and administrative challenges. What does this shift indicate?",
+    "options": {
+      "A": "Strengthening of private control",
+      "B": "Expansion of imperial governance",
+      "C": "Decline in foreign influence",
+      "D": "Local independence"
+    },
+    "correct_answer": "B",
+    "explanation": "The revocation of corporate charters (like the Royal Niger Company's charter in 1900) and the takeover by the British Crown marked an expansion of direct imperial governance over the region."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Colonialism and Economic Structures",
+    "question": "A violent attack on a trading post occurs after prolonged economic oppression. What is the best interpretation of this reaction?",
+    "options": {
+      "A": "Diplomatic negotiation",
+      "B": "Random conflict",
+      "C": "Cultural misunderstanding",
+      "D": "Resistance to exploitation"
+    },
+    "correct_answer": "D",
+    "explanation": "When diplomatic and commercial options are closed off by monopolistic systems, direct attacks on trading hubs served as a form of physical resistance to economic exploitation."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Trans-Atlantic Slave Trade",
+    "question": "A significant loss of skilled individuals from a region leads to reduced productivity and slowed development. What does this outcome illustrate?",
+    "options": {
+      "A": "Economic expansion",
+      "B": "Political stability",
+      "C": "Technological advancement",
+      "D": "Human capital depletion"
+    },
+    "correct_answer": "D",
+    "explanation": "The forced extraction of millions of young, able-bodied individuals during the slave trade caused severe human capital depletion, disrupting local agricultural and economic development."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "A governing body has been established that possesses advisory powers but lacks legislative authority. What does this structure indicate?",
+    "options": {
+      "A": "Limited participation in governance",
+      "B": "Full political autonomy",
+      "C": "Complete decentralisation",
+      "D": "Judicial independence"
+    },
+    "correct_answer": "A",
+    "explanation": "Early colonial councils provided nominal native inclusion, but denying them actual legislative or lawmaking powers ensured that participation in governance remained strictly limited."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "A constitutional reform introduces regional governance structures alongside a central authority. What does this system reflect?",
+    "options": {
+      "A": "Absolute monarchy",
+      "B": "Federal principles",
+      "C": "Cultural nationalism",
+      "D": "Unitary government"
+    },
+    "correct_answer": "B",
+    "explanation": "Splitting administrative power between a central federal executive and distinct sub-national regional units reflects the application of federal principles."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Post-Independence Economic Trajectory",
+    "question": "A political system allocates revenue based on the origin of resources. This approach demonstrates the _________.",
+    "options": {
+      "A": "centralised allocation",
+      "B": "derivation principle",
+      "C": "equal distribution principle",
+      "D": "arbitrary sharing"
+    },
+    "correct_answer": "B",
+    "explanation": "The derivation principle allocates fiscal revenue directly back to sub-national units in proportion to the volume of natural resources or taxes generated within their borders."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Pre-Colonial Interactions",
+    "question": "Two neighbouring groups frequently engage in warfare but also maintain trade relations and intermarriages. This pattern suggests that inter-group relations are:",
+    "options": {
+      "A": "Exclusively hostile",
+      "B": "Completely cooperative",
+      "C": "Complex and multi-dimensional",
+      "D": "Economically irrelevant"
+    },
+    "correct_answer": "C",
+    "explanation": "Pre-colonial interactions were multi-dimensional; periods of armed rivalry often coexisted with ongoing trade connections, diplomatic alliances, and family intermarriages."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "A constitution designed without local consultation receives widespread criticism. What is the importance of this reaction?",
+    "options": {
+      "A": "External control",
+      "B": "Military authority",
+      "C": "Economic planning",
+      "D": "Inclusive governance"
+    },
+    "correct_answer": "D",
+    "explanation": "Widespread public pushback against imposed laws (like the 1946 Richards Constitution) highlights how vital inclusive governance and citizen consultation are to democratic legitimacy."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "A chartered company gains administrative authority and controls trade within a territory. What is the best description of this arrangement?",
+    "options": {
+      "A": "Cultural federation",
+      "B": "Corporate imperialism",
+      "C": "Democratic administration",
+      "D": "Pure political governance"
+    },
+    "correct_answer": "B",
+    "explanation": "When a commercial firm uses political charters to run regional courts, collect taxes, and monopolize local trade, it functions as an arm of corporate imperialism."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Trans-Atlantic Slave Trade",
+    "question": "Overcrowded and unhealthy transport conditions result in high mortality during forced migration. What does this situation best reflect?",
+    "options": {
+      "A": "Humanitarian reform",
+      "B": "Systemic exploitation",
+      "C": "Voluntary migration",
+      "D": "Efficient labour movement"
+    },
+    "correct_answer": "B",
+    "explanation": "The brutal transport conditions of the Middle Passage highlight the systemic exploitation embedded within international human trafficking networks."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Trans-Atlantic Slave Trade",
+    "question": "A scholar argues that a long-distance trade system involving multiple continents reflects early globalisation. This interpretation is best supported by evidence of what?",
+    "options": {
+      "A": "Limited migration patterns",
+      "B": "Interconnected trade networks",
+      "C": "Localised production systems",
+      "D": "Independent regional economies"
+    },
+    "correct_answer": "B",
+    "explanation": "The Triangular Trade linked European manufacturing, African labor supplies, and American commercial resource extraction into highly interconnected global trade networks."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Colonialism and Economic Structures",
+    "question": "A historian argues that Lagos’ annexation was driven by strategic trade interests rather than humanitarian concern. Which evidence best supports this view?",
+    "options": {
+      "A": "Cultural integration policies",
+      "B": "Expansion of Atlantic trade routes",
+      "C": "Weak leadership in Lagos",
+      "D": "Religious conversion agenda"
+    },
+    "correct_answer": "B",
+    "explanation": "Securing the port of Lagos in 1861 was primarily aimed at protecting British commercial access to palm oil trade routes and establishing a foothold for corporate expansion."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Citizenship and Civil Responsibilities",
+    "question": "A citizen engaging in actions that support an enemy state during conflict may face what legal implication?",
+    "options": {
+      "A": "Automatic promotion",
+      "B": "No consequence if politically motivated",
+      "C": "Guaranteed immunity",
+      "D": "Possible loss of citizenship rights under law"
+    },
+    "correct_answer": "D",
+    "explanation": "Under national constitutional frameworks, actively aiding an enemy state during wartime violates fundamental loyalty requirements and can result in the loss of citizenship rights."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Colonialism and Economic Structures",
+    "question": "A trading monopoly established through control of pricing and supply chains most accurately represents which economic strategy?",
+    "options": {
+      "A": "Subsistence economy",
+      "B": "Monopolistic commercial domination",
+      "C": "Free market competition",
+      "D": "Cooperative trade expansion"
+    },
+    "correct_answer": "B",
+    "explanation": "Using artificial price controls and blocking competitor supply chains are classic methods used to build and maintain monopolistic commercial domination."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "National Orientation Strategies",
+    "question": "A reform programme emphasises behavioural change but fails due to corruption and weak enforcement. What is the most accurate explanation?",
+    "options": {
+      "A": "Institutional implementation failure",
+      "B": "Public rejection of reform ideas",
+      "C": "Excessive funding of the programme",
+      "D": "Lack of policy design"
+    },
+    "correct_answer": "A",
+    "explanation": "Even well-designed public reorientation policies can fall short if institutional implementation failure, driven by weak accountability and corruption, undermines enforcement."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Nationalist Movements",
+    "question": "Political mobilisation through newspapers and protests contributes most directly to _________.",
+    "options": {
+      "A": "growth of political awareness and participation",
+      "B": "increased civic disengagement",
+      "C": "political suppression",
+      "D": "administrative neutrality"
+    },
+    "correct_answer": "A",
+    "explanation": "Early nationalist print media (like the West African Pilot) and public protests served as engines for expanding political awareness and civic participation among the population."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Nationalist Movements",
+    "question": "In comparing early political movements, which feature best distinguishes a mass nationalist organisation from a regional elite-based party?",
+    "options": {
+      "A": "Absence of leadership structure",
+      "B": "Use of military force",
+      "C": "Broader civic participation and national ideology",
+      "D": "Focus on taxation reform"
+    },
+    "correct_answer": "C",
+    "explanation": "Mass nationalist organizations prioritize broad civic participation and a unified national identity over regional or ethnic interests."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Post-Independence Economic Trajectory",
+    "question": "When austerity measures disproportionately affect the population while limiting public sector waste control, what policy issue is revealed?",
+    "options": {
+      "A": "Complete financial stability",
+      "B": "Economic overperformance",
+      "C": "Effective economic redistribution",
+      "D": "Structural imbalance in fiscal policy implementation"
+    },
+    "correct_answer": "D",
+    "explanation": "Imposing hardships on citizens while failing to cut elite public-sector waste points to a structural imbalance in fiscal policy implementation."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "When a commercial organisation also exercises administrative authority over a territory, this arrangement is best described as ______________.",
+    "options": {
+      "A": "local self-rule",
+      "B": "dual commercial-administrative governance",
+      "C": "pure private enterprise",
+      "D": "democratic decentralisation"
+    },
+    "correct_answer": "B",
+    "explanation": "Chartered company rule combined private business operations with public administrative powers, creating a dual commercial-administrative governance framework."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Citizenship and Civil Responsibilities",
+    "question": "Civic duties such as tax payment and law obedience primarily serve what governance objective?",
+    "options": {
+      "A": "Economic isolation",
+      "B": "Political elimination",
+      "C": "Social order and state sustainability",
+      "D": "Military expansion"
+    },
+    "correct_answer": "C",
+    "explanation": "Fulfilling basic civic duties ensures governments have the fiscal revenue and legal compliance needed to maintain social order and support state sustainability."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "The introduction of regional governance structures in constitutional development primarily aimed to achieve what outcome?",
+    "options": {
+      "A": "Centralisation of authority",
+      "B": "Administrative efficiency through decentralisation",
+      "C": "Military restructuring",
+      "D": "Elimination of local governance"
+    },
+    "correct_answer": "B",
+    "explanation": "Dividing the colony into regional administrative units (North, West, and East) was intended to improve administrative efficiency through regional decentralization."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "The introduction of federalism in constitutional development primarily achieved ______________.",
+    "options": {
+      "A": "elimination of regional governments",
+      "B": "military unification",
+      "C": "centralised monarchy",
+      "D": "division of powers between regions and central authority"
+    },
+    "correct_answer": "D",
+    "explanation": "The 1954 Lyttleton Constitution formally introduced federalism, establishing a clear division of powers between regional tiers of government and the central federal authority."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "A policy shift from advisory councils to stronger colonial administrative control most accurately reflects which governance dynamic?",
+    "options": {
+      "A": "Administrative consolidation for control",
+      "B": "Economic liberalisation",
+      "C": "Political decentralisation",
+      "D": "Indigenous empowerment"
+    },
+    "correct_answer": "A",
+    "explanation": "Centralizing authority and curbing council influence was a strategy aimed at administrative consolidation to protect imperial control over local political movements."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Nationalist Movements",
+    "question": "When political parties emerge along ethnic lines, what is the most critical long-term political consequence?",
+    "options": {
+      "A": "Strengthened institutional unity",
+      "B": "Enhanced national integration",
+      "C": "Fragmentation of national political identity",
+      "D": "Improved governance efficiency"
+    },
+    "correct_answer": "C",
+    "explanation": "When political party networks organize around ethnic loyalties rather than shared national platforms, it leads to the fragmentation of a unified national political identity."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "A constitution that introduces elections but retains strong executive dominance can best be described as a __________.",
+    "options": {
+      "A": "stateless governance model",
+      "B": "hybrid constitutional framework",
+      "C": "fully democratic system",
+      "D": "military dictatorship"
+    },
+    "correct_answer": "B",
+    "explanation": "A framework that introduces democratic elements like elections while maintaining absolute executive veto power functions as a hybrid constitutional framework."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Constitutional Development",
+    "question": "A constitutional arrangement allows limited local representation but preserves executive override authority. What does this structure most likely indicate?",
+    "options": {
+      "A": "Direct military governance",
+      "B": "Federal equality of powers",
+      "C": "Controlled political participation under external oversight",
+      "D": "Full democratic autonomy"
+    },
+    "correct_answer": "C",
+    "explanation": "Providing local representation while retaining absolute veto power allowed the colonial administration to maintain controlled political participation under external oversight."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "National Orientation Strategies",
+    "question": "Government efforts aimed at reshaping citizens’ attitudes and national values are best classified as a __________.",
+    "options": {
+      "A": "social reorientation policy",
+      "B": "security enforcement strategy",
+      "C": "economic regulation",
+      "D": "electoral restructuring"
+    },
+    "correct_answer": "A",
+    "explanation": "State campaigns designed to influence civic duties, patriotism, and social values are classified as social reorientation policies."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Nationalist Movements",
+    "question": "A political party formed primarily to resist another party’s regional dominance demonstrates what political behaviour?",
+    "options": {
+      "A": "Administrative cooperation",
+      "B": "Strategic regional competition",
+      "C": "National consensus building",
+      "D": "Ideological neutrality"
+    },
+    "correct_answer": "B",
+    "explanation": "When party organizations are founded to counter a rival group's local influence, it reflects an environment of strategic regional competition."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Human Rights and Society",
+    "question": "The most significant barrier to human rights enforcement in practice is often _______.",
+    "options": {
+      "A": "weak enforcement mechanisms and social constraints",
+      "B": "excessive judicial independence",
+      "C": "over-regulation of media",
+      "D": "strong legal institutions"
+    },
+    "correct_answer": "A",
+    "explanation": "Human rights protections can remain ineffective without reliable enforcement mechanisms and institutional accountability to overcome social and political constraints."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Citizenship and Civil Responsibilities",
+    "question": "Citizenship defined under modern constitutional law is best described as _________.",
+    "options": {
+      "A": "ethnic membership status",
+      "B": "constitutionally guaranteed national belonging",
+      "C": "informal residency status",
+      "D": "colonial legal identity"
+    },
+    "correct_answer": "B",
+    "explanation": "In a modern legal state, citizenship is defined as a status of constitutionally guaranteed national belonging, spelling out specific reciprocal rights and civil duties."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "National Orientation Strategies",
+    "question": "Reorientation programmes fail despite public campaigns due to corruption and weak enforcement. What does this indicate?",
+    "options": {
+      "A": "Cultural resistance",
+      "B": "Institutional inefficiency and governance failure",
+      "C": "Excessive civic awareness",
+      "D": "Overpopulation effects"
+    },
+    "correct_answer": "B",
+    "explanation": "When public value campaigns fail due to corruption and a lack of official accountability, it points directly to institutional inefficiency and governance failure."
+  }
+]

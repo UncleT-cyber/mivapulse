@@ -1,0 +1,24 @@
+{
+  "levels": [
+    {
+      "id": "100L",
+      "name": "100 Level (Freshman)",
+      "courses": [
+        { "code": "COS 102", "title": "Problem Solving", "file": "cos_102_problem_solving.json" },
+        { "code": "CSC 106", "title": "Introduction to Web Technologies", "file": "csc_106_web_technologies.json" },
+        { "code": "GST 112", "title": "Nigerian Peoples and Culture", "file": "gst_112_nigerian_peoples.json" },
+        { "code": "GST 122", "title": "Communication Skills II", "file": "gst_122_communication_skills.json" },
+        { "code": "MTH 102", "title": "Elementary Mathematics II", "file": "mth_102_elementary_math.json" },
+        { "code": "PHY 102", "title": "General Physics II", "file": "phy_102_general_physics.json" },
+        { "code": "PHY 108", "title": "Physics Practical II", "file": "phy_108_physics_practical.json" }
+      ]
+    },
+    {
+      "id": "200L",
+      "name": "200 Level (Sophomore)",
+      "courses": [
+        { "code": "CSC 201", "title": "Java Programming", "file": "200L/csc_201_java.json" }
+      ]
+    }
+  ]
+}

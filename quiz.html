@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miva Prep - Exam Simulator</title>
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+
+    <header class="quiz-header">
+        <div class="quiz-header-container">
+            <a href="index.html" class="btn-back" id="quitBtn">← 🛑 Quit Quiz</a>
+            <div class="active-meta">
+                <h1 id="courseTitleDisplay">Loading Exam...</h1>
+                <span id="courseCodeDisplay" class="badge-code">---</span>
+            </div>
+            <div class="score-tracker" id="scoreTrackerWrapper">
+                Score: <span id="currentScore">0</span> / <span id="totalAttempted">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="quiz-container">
+        
+        <div class="tracker-bar-wrapper">
+            <div class="tracker-text">
+                Question <span id="currentQuestionNum">0</span> of <span id="totalQuestionsNum">0</span>
+            </div>
+            <div class="tracker-track">
+                <div id="trackerFill" class="tracker-fill"></div>
+            </div>
+        </div>
+
+        <div id="examModeNotice" class="hidden" style="background-color: #f3e8ff; color: #5b21b6; border: 1px solid #c084fc; padding: 12px; border-radius: 8px; margin-bottom: 20px; font-weight: bold; font-size: 14px; text-align: center;">
+            📝 Exam Simulation Mode Active: Answers and breakdowns are locked until submission.
+        </div>
+
+        <section class="question-card" id="questionCard">
+            <div class="topic-tag" id="questionTopic">Topic Layer</div>
+            <h2 class="question-text" id="questionText">The active question string will render here dynamically from the file.</h2>
+            
+            <div class="options-container" id="optionsContainer">
+                </div>
+        </section>
+
+        <section class="feedback-panel hidden" id="feedbackPanel">
+            <div class="feedback-status-row">
+                <span id="feedbackTitle" class="feedback-title">Correct Answer!</span>
+                <button id="btnNext" class="btn-next">Next Question →</button>
+            </div>
+            <div class="explanation-box">
+                <strong>Concept Breakdown:</strong>
+                <p id="explanationText">Detailed data structural analytics explanation goes here.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/quiz-engine.js"></script>
+</body>
+</html>

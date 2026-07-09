@@ -1,0 +1,847 @@
+[
+  {
+    "course_code": "COS 102",
+    "topic": "Control Flow & Programming Basics",
+    "question": "How does the effective use of control flow mechanisms, such as loops and conditional statements, contribute to the clarity, efficiency, and functionality of programming code?",
+    "options": {
+      "A": "By converting source code directly into machine language hardware instructions without software intervention.",
+      "B": "By managing the execution path based on conditions, reducing code redundancy, and enhancing readability and execution efficiency.",
+      "C": "By increasing the physical random-access memory (RAM) storage capacity of the host computer system.",
+      "D": "By ensuring that every line of code executes sequentially in a strict top-to-bottom order without deviation."
+    },
+    "correct_answer": "B",
+    "explanation": "Control flow structures break up straight sequential processing, allowing a system to efficiently skip operations or loop over tasks to dramatically reduce logic replication."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Control Flow & Programming Basics",
+    "question": "How would you describe branching in the context of program execution?",
+    "options": {
+      "A": "The process of duplicating source code across multiple physical servers or repositories.",
+      "B": "A mechanism where a program chooses between alternative execution paths based on the evaluation of a boolean condition.",
+      "C": "The act of deleting unused variables and cleaning up local memory blocks.",
+      "D": "A static, non-conditional sequence of code execution that cannot be altered at runtime."
+    },
+    "correct_answer": "B",
+    "explanation": "Branching structures evaluate condition gates to redirect execution flow forward down matching alternative instruction pathways."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Problem-Solving Strategies",
+    "question": "How can one articulate the concept of means-ends analysis as a problem-solving strategy, highlighting its core attributes?",
+    "options": {
+      "A": "It is a trial-and-error strategy that relies on random generation of solutions and exhaustive search patterns.",
+      "B": "It is a purely backward-chaining strategy that evaluates the final state while completely ignoring intermediate sub-goals.",
+      "C": "It is a strategy that identifies differences between the current state and the goal state, establishing sub-goals and applying operators to systematically reduce those differences.",
+      "D": "It is a hardware-driven approach that optimizes physical memory location paths using mathematical sorting."
+    },
+    "correct_answer": "C",
+    "explanation": "Means-ends analysis targets structural gaps between current conditions and terminal system metrics, configuring intermediate milestones to bridge the difference."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Problem-Solving Strategies",
+    "question": "A farm has three times as many goats as rams, and the total number of legs among all these four-legged animals is 760. What type of problem is this, and what is the logical outcome when solving for the number of goats?",
+    "options": {
+      "A": "An algorithmic sorting problem where the exact solution evaluates to 57 goats.",
+      "B": "An algebraic/constraint-satisfaction problem where the mathematical solution yields 142.5 goats, indicating a constraint mismatch since animals must be whole numbers.",
+      "C": "A dynamic programming problem that resolves to exactly 142 goats with zero remainder.",
+      "D": "A network flow problem where the number of goats cannot be determined from the provided constraints."
+    },
+    "correct_answer": "B",
+    "explanation": "Modeling the constraints algebraically yields non-integer values ($16R = 760 \\rightarrow R = 47.5$), showing a real-world mismatch because livestock can only exist as whole integers."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Optimization & Algorithms",
+    "question": "You are given the start and finish times of four activities: A1[1, 2], A2[4, 5], A3[3, 6], and A4[6, 7]. Assuming you cannot work on more than one activity at a time, what is the maximum number of activities you can perform?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_answer": "C",
+    "explanation": "Using Greedy Activity Selection sorted by ending times, selecting intervals [1,2], [4,5], and [6,7] safely maximizes operations without triggering overlap conflicts."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Optimization & Algorithms",
+    "question": "How does data mining function as a computational approach to problem solving, and what is key to its effectiveness?",
+    "options": {
+      "A": "It physically extracts raw materials from hardware components to study performance degradation.",
+      "B": "It manually processes small spreadsheets to compute basic arithmetic means and balances.",
+      "C": "It utilizes algorithmic patterns, statistical models, and machine learning to extract hidden insights, trends, and anomalies from massive datasets.",
+      "D": "It permanently encrypts structural databases to prevent exploratory data analysis."
+    },
+    "correct_answer": "C",
+    "explanation": "Data mining parses wide, distributed datasets mathematically to parse useful relationship patterns out of unstructured raw records."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Algorithm Design",
+    "question": "In the algorithm development process, why is it important to first develop high-level algorithms?",
+    "options": {
+      "A": "To immediately generate low-level executable binary machine code.",
+      "B": "To focus on the core logical steps and problem-solving architecture without getting bogged down by language-specific syntax restrictions.",
+      "C": "To allocate static hardware memory addresses during the conceptualization phase.",
+      "D": "To explicitly prevent the software from using modular functions or data abstraction."
+    },
+    "correct_answer": "B",
+    "explanation": "Drafting broad structural logic first allows developers to establish correct solutions before addressing language-specific constraints."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Algorithm Design",
+    "question": "Which of the following outlines five critical factors that should be considered and described when reflecting on the design of algorithms?",
+    "options": {
+      "A": "Monitor resolution, keyboard layout, mouse sampling rate, chassis material, and power supply efficiency.",
+      "B": "Correctness, efficiency (time/space complexity), clarity/readability, modularity, and maintainability.",
+      "C": "Font typography, variable name length, compiler version numbers, text editor choice, and host operating system background.",
+      "D": "Network bandwidth limits, database storage size, UI color schemas, file download speed, and browser cross-compatibility."
+    },
+    "correct_answer": "B",
+    "explanation": "Core operational algorithm quality metrics always focus on structural sanity: correctness, speed/memory foot-print size, clarity, components modularization, and update maintainability."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Flowcharts",
+    "question": "What is the primary distinguishing factor regarding the characteristics and functions associated with distinct types of flowcharts (e.g., System, Program, Document, Data)?",
+    "options": {
+      "A": "They serve identical logical objectives but utilize different color-coded symbols to specify user roles.",
+      "B": "They target different abstraction layers, mapping out either data movement, program logic control flow, system-level component interactions, or physical document paths.",
+      "C": "They are exclusively utilized to visualize basic arithmetic operations inside hardware registers.",
+      "D": "They act as real-time visual replacements for a compiler during the source code execution phase."
+    },
+    "correct_answer": "B",
+    "explanation": "Different flowchart layouts parse separate business domains, showing either network topologies, micro program structures, or paper trail operations."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Flowcharts",
+    "question": "When designing a flowchart to calculate a student's final grade based on the average of five marks and determining pass/fail, which sequence represents the correct logical flow of symbols?",
+    "options": {
+      "A": "Terminal (Start) -> Process (Input 5 marks) -> Process (Calculate Average) -> Decision (Average >= Pass Mark?) -> Output (Display Pass/Fail) -> Terminal (End)",
+      "B": "Decision -> Terminal -> Process -> Output -> Terminal",
+      "C": "Process -> Decision -> Terminal -> Process -> Output",
+      "D": "Terminal -> Output -> Decision -> Process -> Terminal"
+    },
+    "correct_answer": "A",
+    "explanation": "Standard visualization order dictates moving from terminal initialization, ingestion processing steps, calculations, evaluation logic branches, output rendering, and a terminal exit block."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Compilation & Architecture",
+    "question": "What does a compiler replace with actual physical memory location addresses during the compilation process?",
+    "options": {
+      "A": "Physical hard drive sectors and disk tracks",
+      "B": "Symbolic variable names, labels, and identifiers",
+      "C": "Inline code comments and blank spacing blocks",
+      "D": "The file system extensions of the source code files"
+    },
+    "correct_answer": "B",
+    "explanation": "Compilers resolve arbitrary text variables down into exact addressable hardware pointers during processing passes."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Compilation & Architecture",
+    "question": "Which of the following provides the most accurate definition of a computer program?",
+    "options": {
+      "A": "A physical hardware circuit embedded inside the central processing unit.",
+      "B": "A collection of immutable data records that cannot be parsed by user applications.",
+      "C": "A structured sequence of instructions written in a programming language that guides a computer to execute specific operations.",
+      "D": "The core system configuration profile belonging to the operating system kernel."
+    },
+    "correct_answer": "C",
+    "explanation": "A program is a collection of logical expressions formulated in code languages that direct a machine to perform targeted activities."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Abstraction",
+    "question": "What are the primary computational benefits of incorporating abstraction into software design?",
+    "options": {
+      "A": "It lengthens system execution times and maximizes compiled binary sizes.",
+      "B": "It requires the programmer to explicitly manage low-level hardware registry allocations manually.",
+      "C": "It hides unnecessary structural implementation complexities, allowing developers to focus on high-level logical interactions.",
+      "D": "It completely removes the necessity of using standard variables, constants, or loops in source code."
+    },
+    "correct_answer": "C",
+    "explanation": "Abstraction cuts out processing clutter by hiding backend operational code patterns from high-level user modules."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Abstraction",
+    "question": "How can one articulate the concept of Data Abstraction and its practical implementation in programming?",
+    "options": {
+      "A": "Storing unstructured application data within flat text files without parsing protocols.",
+      "B": "Encapsulating and hiding the internal details of data representation while exposing only essential interfaces and operations via Abstract Data Types (ADTs) or classes.",
+      "C": "Purging structural variables from physical RAM immediately after an operation completes.",
+      "D": "Permanently converting numeric system data types into string representations across all memory address spaces."
+    },
+    "correct_answer": "B",
+    "explanation": "Data abstraction encapsulates internal memory and type mechanics, exposing only clean public methods for interactions."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Object-Oriented Programming",
+    "question": "In object-oriented programming, what concept emphasises that objects are independent and can be created and maintained separately?",
+    "options": {
+      "A": "Inheritance",
+      "B": "Encapsulation",
+      "C": "Independence",
+      "D": "Polymorphism"
+    },
+    "correct_answer": "B",
+    "explanation": "Encapsulation wraps data and methods together into a single, independent unit (an object), hiding internal mechanics so it can be developed and modified without breaking other modules."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Computational Approaches",
+    "question": "_________ involves examining more than one possible solution using a recursive approach to move from one problem state to another.",
+    "options": {
+      "A": "Data mining",
+      "B": "Backtracking",
+      "C": "Pipelining",
+      "D": "Performance testing"
+    },
+    "correct_answer": "B",
+    "explanation": "Backtracking is an algorithmic method that searches recursively for a solution by trying multiple paths and winding back to a previous state when a path hits a dead end."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Computational Approaches",
+    "question": "Which term describes the process of dividing a task into a series of subtasks, where each subtask leads to the next?",
+    "options": {
+      "A": "Pipelining",
+      "B": "Performance testing",
+      "C": "Data mining",
+      "D": "Backtracking"
+    },
+    "correct_answer": "A",
+    "explanation": "Pipelining is a technique where a task is broken down into a series of sequential subtasks, with the output of one phase serving as the immediate input to the next process."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Computational Approaches",
+    "question": "_________ deals with extracting valuable information from large data sets by unnoticed patterns and discovering underlying relationships within the data.",
+    "options": {
+      "A": "Pipelining",
+      "B": "Performance testing",
+      "C": "Backtracking",
+      "D": "Data mining"
+    },
+    "correct_answer": "D",
+    "explanation": "Data mining relies on computational tools and algorithms to uncover hidden relationships, patterns, and trends stored in massive data architectures."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Algorithms",
+    "question": "_________ are sets of commands that the computer can follow to carry out calculations or other problem solving tasks.",
+    "options": {
+      "A": "Refinements",
+      "B": "Algorithms",
+      "C": "Modeling",
+      "D": "Simulations"
+    },
+    "correct_answer": "B",
+    "explanation": "Algorithms are formal, clear, and executable sets of computational instructions used to process datasets or execute tasks."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Flowcharts",
+    "question": "The _________ symbol is used in complex flowcharts to connect independent elements across multiple pages.",
+    "options": {
+      "A": "declaration",
+      "B": "on-page connector",
+      "C": "link connector",
+      "D": "flowline"
+    },
+    "correct_answer": "C",
+    "explanation": "A link connector (or off-page connector) connects disjoint components separated across different layout pages in multi-page flowcharts."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Flowcharts",
+    "question": "The _________ symbol is used to show a complex process or a well-known operation.",
+    "options": {
+      "A": "preparation",
+      "B": "declaration",
+      "C": "merge",
+      "D": "display"
+    },
+    "correct_answer": "A",
+    "explanation": "The preparation symbol represents setup initialization stages, complex processes, or custom predefined operations inside flowcharting guidelines."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Flowcharts",
+    "question": "The _________ symbol is used to combine various paths into a single path.",
+    "options": {
+      "A": "link connector",
+      "B": "merge",
+      "C": "alternate process",
+      "D": "summing junction"
+    },
+    "correct_answer": "B",
+    "explanation": "The merge shape explicitly consolidates branching logical routes into a singular unified stream."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Control Structures",
+    "question": "_________ is used for a loop with a condition at the bottom.",
+    "options": {
+      "A": "REPEAT-UNTIL",
+      "B": "WHILE",
+      "C": "SEQUENCE",
+      "D": "CALL"
+    },
+    "correct_answer": "A",
+    "explanation": "REPEAT-UNTIL (and do-while structural models) evaluate the termination condition at the bottom, guaranteeing that the loop executes at least once."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Pseudocode",
+    "question": "Pseudocode statements should be language _________.",
+    "options": {
+      "A": "dependent",
+      "B": "explicit",
+      "C": "specific",
+      "D": "independent"
+    },
+    "correct_answer": "D",
+    "explanation": "Pseudocode uses standard human language structures to layout logic completely independent of target programming syntax environments."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Control Structures",
+    "question": "_________ is used for a loop with a condition at its beginning.",
+    "options": {
+      "A": "SEQUENCE",
+      "B": "WHILE",
+      "C": "CALL",
+      "D": "REPEAT-UNTIL"
+    },
+    "correct_answer": "B",
+    "explanation": "A WHILE loop verifies entry constraints upfront at the top before enabling execution of the enclosed block."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Program Objects",
+    "question": "What is the purpose of using the struct keyword in programming?",
+    "options": {
+      "A": "To declare a variable with a specific data type",
+      "B": "To define a structure, grouping items of possibly different types into a single type",
+      "C": "To create an array of similar data elements",
+      "D": "To perform mathematical calculations in a program"
+    },
+    "correct_answer": "B",
+    "explanation": "Structures allow developers to combine disparate basic data fields under a single identifier definition."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Program Objects",
+    "question": "How does the use of structures contribute to organising data in programming?",
+    "options": {
+      "A": "By facilitating mathematical operations",
+      "B": "By specifying the return type of a function",
+      "C": "By allowing the creation of user-defined data types with different elements",
+      "D": "By enabling the declaration of arrays"
+    },
+    "correct_answer": "C",
+    "explanation": "Structures map composite abstractions into personalized user-defined collection fields."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Abstraction",
+    "question": "How does abstraction contribute to software design and maintenance?",
+    "options": {
+      "A": "By simplifying the interface and hiding internal complexities.",
+      "B": "By creating redundancy in the software architecture",
+      "C": "By increasing the intricacy of the code structure",
+      "D": "By exposing all implementation details to external users for transparency"
+    },
+    "correct_answer": "A",
+    "explanation": "Isolating complex inner operations keeps top-level service boundaries manageable and straightforward."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Abstraction",
+    "question": "In the context of a car's ignition system, how does abstraction work to simplify the user's interaction?",
+    "options": {
+      "A": "The driver manually adjusts the air-fuel mixture for optimal combustion",
+      "B": "The brake pedal serves as a low-level abstraction for controlling the car's speed",
+      "C": "The driver directly manipulates the fuel injection system to start the engine",
+      "D": "The ignition key is a high-level abstraction that simplifies the complex process of starting the car"
+    },
+    "correct_answer": "D",
+    "explanation": "The key acts as an abstract interaction point that triggers starter relays and ignition coils without forcing the driver to handle them manually."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Abstraction",
+    "question": "What is the primary purpose of abstraction in software development?",
+    "options": {
+      "A": "To create redundancy in the code structure",
+      "B": "To increase the complexity of an application",
+      "C": "To expose all internal details to external users",
+      "D": "To hide the internal details of an application from the outer world"
+    },
+    "correct_answer": "D",
+    "explanation": "Encapsulating structural mechanics protects backend features and exposes only safe, clean public handles."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Data Types",
+    "question": "A biomedical system processes high-precision sensor readings (e.g., 98.4567°C) and computes averages for diagnosis. During testing, rounding errors appear when integer types are used. Which design decision best resolves this issue while maintaining computational integrity?",
+    "options": {
+      "A": "Using short integers to reduce memory overhead",
+      "B": "Using floating-point representation for fractional accuracy",
+      "C": "Using integer variables with scaled multiplication factors",
+      "D": "Using character encoding to preserve numeric symbols"
+    },
+    "correct_answer": "B",
+    "explanation": "Floating-point variables keep trailing fraction values intact, preventing accuracy degradation across sensor reading streams."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Object-Oriented Programming",
+    "question": "In a modular hospital management system, a malfunctioning patient-record object is replaced without affecting billing or scheduling modules. The team attributes this to a key system property. Which reasoning best explains this behaviour?",
+    "options": {
+      "A": "Objects avoid maintaining internal state data",
+      "B": "Objects share memory locations for consistency",
+      "C": "Objects dynamically correct external dependencies",
+      "D": "Objects operate as independent, replaceable units"
+    },
+    "correct_answer": "D",
+    "explanation": "Encapsulated instances operate as standalone modules, ensuring single component upgrades don't cause cascading structural failures."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Problem-Solving Life Cycle",
+    "question": "A student team developing a payroll system begins coding immediately before defining variables or designing logic. The system later fails due to inconsistent data handling. When restructuring their approach, which sequence most appropriately addresses the issue?",
+    "options": {
+      "A": "Analysing requirements, defining data, designing logic, then coding",
+      "B": "Designing logic before understanding system requirements",
+      "C": "Defining variables after implementation testing",
+      "D": "Coding first, then refining through debugging cycles"
+    },
+    "correct_answer": "A",
+    "explanation": "Systematic design workflows mandate requirement planning and structured specifications ahead of typing code inputs."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Data Types",
+    "question": "A systems programmer chooses a union instead of a structure to represent multiple sensor states in an embedded system. During testing, only one sensor value appears valid at any time. What underlying behaviour explains this observation?",
+    "options": {
+      "A": "All members share a single memory location at different times",
+      "B": "Each member is stored independently in separate memory blocks",
+      "C": "Memory is dynamically expanded to accommodate all values",
+      "D": "Access to members is restricted by syntax rules"
+    },
+    "correct_answer": "A",
+    "explanation": "Unions match all properties onto overlapping storage addresses, meaning assigning a new value instantly updates all variables inside."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Abstraction",
+    "question": "A driving simulation abstracts vehicle operation for training new drivers. The trainee interacts only with steering and pedals without needing knowledge of engine combustion processes. What conceptual design principle is being demonstrated?",
+    "options": {
+      "A": "Measurement of system performance variables",
+      "B": "Representation of electrical signals in the engine",
+      "C": "Detailed modelling of internal mechanical processes",
+      "D": "Simplification by exposing only relevant functionality"
+    },
+    "correct_answer": "D",
+    "explanation": "Exposing only immediate control utilities isolates users from interacting with intricate subsystem dependencies."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Code Reuse",
+    "question": "A software team imports a tested library function for calculating geometric areas instead of rewriting the logic. During maintenance, updates to the module improve performance across all dependent systems. What is the primary advantage demonstrated?",
+    "options": {
+      "A": "Reusing validated code to improve clarity and scalability",
+      "B": "Automatically converting logic into diagrams",
+      "C": "Preventing variable usage in main program",
+      "D": "Eliminating memory usage during execution"
+    },
+    "correct_answer": "A",
+    "explanation": "Consolidating helper code packages cuts debug cycles down and standardizes updates across external connections seamlessly."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Compilation",
+    "question": "After compiling a C program, a debugger shows memory addresses instead of variable names like userAge. A junior developer is confused about this transformation. What explanation best clarifies this behaviour?",
+    "options": {
+      "A": "Variable identifiers are replaced with memory addresses",
+      "B": "Variables are converted into class methods",
+      "C": "Variables are removed after execution completes",
+      "D": "Variable names are stored as executable instructions"
+    },
+    "correct_answer": "A",
+    "explanation": "Compilers translate clean symbolic variable names down into raw computational hardware reference registers."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Control Structures",
+    "question": "A logistics algorithm iterates through a list of delivery points, accumulating total distance travelled. The design uses a loop that processes each item sequentially. What concept is primarily being applied?",
+    "options": {
+      "A": "Declaration of variables for storage allocation",
+      "B": "Modular grouping of independent functions",
+      "C": "Iterative control structure for repeated execution",
+      "D": "Abstract representation of data structures"
+    },
+    "correct_answer": "C",
+    "explanation": "Loops provide execution structures to cycle tasks across indices step-by-step."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Algorithm Representation",
+    "question": "A development team must document a frequently changing fraud detection algorithm. They avoid graphical tools because updates are frequent and structural changes are complex. Which reasoning best supports their choice?",
+    "options": {
+      "A": "Need for visual representation of process flow",
+      "B": "Preference for symbolic diagram conventions",
+      "C": "Flexibility of text-based representation for rapid updates",
+      "D": "Requirement for hardware-level system mapping"
+    },
+    "correct_answer": "C",
+    "explanation": "Text structures change and edit faster than adjusting graphics layout blocks every single time an adjustment is committed."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Syntax",
+    "question": "While reviewing C code, a compiler flags missing semicolons in several lines. The programmer realises each line represents a fundamental execution unit. What structural property defines such units?",
+    "options": {
+      "A": "Grouping within curly brackets",
+      "B": "Single expression terminated properly",
+      "C": "Inclusion of decision-making keywords",
+      "D": "Requirement of multiple variable declarations"
+    },
+    "correct_answer": "B",
+    "explanation": "A statement represents a complete logical instruction to a computer, which in languages like C must be explicitly terminated with a semicolon."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Recursion",
+    "question": "What is the term for a recursive function that does not have pending operations to be performed upon return from a recursive call?",
+    "options": {
+      "A": "Tail-recursive function",
+      "B": "Nested recursive function",
+      "C": "Recursive accumulator",
+      "D": "Accumulative function"
+    },
+    "correct_answer": "A",
+    "explanation": "Tail recursion places the recursive execution call at the very end of the thread line, allowing smart compilers to drop parent frame allocations entirely."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Arrays",
+    "question": "If you omit the size of the array in the initialization of a 2D array, how is the size determined?",
+    "options": {
+      "A": "The size is set to the product of the number of rows and columns",
+      "B": "Omitting the size is not allowed for 2D arrays",
+      "C": "The size is inferred from the number of rows",
+      "D": "The size is determined based on the number of columns"
+    },
+    "correct_answer": "D",
+    "explanation": "C arrays let you drop the row count dimension index if you define contents explicitly, but you must keep the explicit column count field intact."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Arrays",
+    "question": "Consider the following declaration of a 2D array: int matrix[][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} }; What is the size of the second dimension of this 2D array?",
+    "options": {
+      "A": "4",
+      "B": "2",
+      "C": "The size cannot be determined",
+      "D": "3"
+    },
+    "correct_answer": "D",
+    "explanation": "The second parameter index `matrix[][3]` specifies exactly 3 elements within every index slice row allocation."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Architecture",
+    "question": "What does software architecture primarily encompass in a system?",
+    "options": {
+      "A": "Only the functionalities of the software",
+      "B": "Only the individual components of the program",
+      "C": "Only the properties of the system's components",
+      "D": "The structure, components, and relationships within a system"
+    },
+    "correct_answer": "D",
+    "explanation": "Architecture charts high-level plans that detail component structures along with how they interface with one another."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Architecture",
+    "question": "Why is a well-defined software architecture crucial for software engineers?",
+    "options": {
+      "A": "To efficiently analyse the design, structure, and relationships within the system",
+      "B": "To focus solely on individual component functionalities",
+      "C": "To limit the analysis to the properties of system components",
+      "D": "To streamline the development process without considering relationships."
+    },
+    "correct_answer": "A",
+    "explanation": "A structural blueprint ensures engineers maintain systematic perspectives on component interfaces and connections."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Design Concepts",
+    "question": "What is the term for a solution to a recurring design problem in a specific domain that can be reused multiple times?",
+    "options": {
+      "A": "Iterative solution",
+      "B": "Design prototype",
+      "C": "Design pattern",
+      "D": "Unique solution"
+    },
+    "correct_answer": "C",
+    "explanation": "Design patterns serve as reusable template layouts to help solve classic structural programming scenarios safely."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Testing",
+    "question": "Which software testing approach focuses on testing independent units or components to identify bugs or errors?",
+    "options": {
+      "A": "Unit Testing",
+      "B": "System Testing",
+      "C": "Acceptance Testing",
+      "D": "Integration Testing"
+    },
+    "correct_answer": "A",
+    "explanation": "Unit checks target atomic isolated features or functions before staging comprehensive modular interactions."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Testing",
+    "question": "Why is the test environment setup phase important in the software testing life cycle?",
+    "options": {
+      "A": "It ensures the accuracy of test case execution",
+      "B": "It establishes a controlled and stable environment for testing activities",
+      "C": "It determines the overall project schedule",
+      "D": "It defines the roles and responsibilities of the testing team"
+    },
+    "correct_answer": "B",
+    "explanation": "Isolating server parameters keeps variable noise low, making sure your tests measure true application logic cleanly."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Debugging Tools",
+    "question": "Which of the following is NOT a widely used debugger for identifying and resolving bugs?",
+    "options": {
+      "A": "Valgrind",
+      "B": "Photoshop",
+      "C": "WinDbg",
+      "D": "Radare2"
+    },
+    "correct_answer": "B",
+    "explanation": "Photoshop is an image editing software workspace, not an engineering execution debugging system."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Problem-Solving",
+    "question": "A university in Abuja is automating GPA computation and timetable allocation. The GPA module consistently applies known formulas, while the timetable module requires handling unpredictable constraints like lecturer availability conflicts. Based on this, how should the development team classify the GPA computation task when selecting solution strategies?",
+    "options": {
+      "A": "Routine problem solvable using predefined algorithms",
+      "B": "Undecidable problem due to multiple constraints",
+      "C": "Ill-defined problem lacking clear inputs",
+      "D": "Non-routine problem requiring adaptive heuristics"
+    },
+    "correct_answer": "A",
+    "explanation": "Tasks that resolve cleanly with exact formulas scale perfectly using structured algorithmic execution streams."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Computability Theory",
+    "question": "During code review in a Lagos startup, an engineer questions whether a recursive fraud-detection module will always terminate for all inputs. The team debates whether this can be proven for every possible case. What theoretical issue does this concern reflect?",
+    "options": {
+      "A": "The Halting Problem involving undecidability",
+      "B": "A routine runtime optimisation task",
+      "C": "A decidable verification problem with finite checks",
+      "D": "A divide-and-conquer design issue"
+    },
+    "correct_answer": "A",
+    "explanation": "The Halting Problem is Alan Turing's classic discovery proving that you cannot create a master program capable of predicting whether any random program will stop or loop endlessly."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Problem Analysis",
+    "question": "A software team in Kaduna is designing a student portal. Before coding, they analyse user needs, identify constraints, and define goals. Later, another team directly begins coding without this step. Which interpretation best evaluates the first team’s approach?",
+    "options": {
+      "A": "Breaking inputs and outputs replaces initial analysis",
+      "B": "Writing code early improves understanding of system needs",
+      "C": "Testing code early eliminates need for understanding",
+      "D": "Identifying goals and constraints supports correct problem framing"
+    },
+    "correct_answer": "D",
+    "explanation": "Outlining your targets and explicit limitations guarantees you align your structural architecture with the real problems you are meant to solve."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Decomposition",
+    "question": "While processing large datasets of student records, a developer splits the dataset into smaller chunks, processes each independently, and then combines the results. However, another developer suggests testing random subsets instead. Which reasoning best justifies the first approach?",
+    "options": {
+      "A": "It relies on trial-and-error to approximate results",
+      "B": "It systematically reduces complexity through decomposition",
+      "C": "It applies greedy selection at each stage",
+      "D": "It focuses on sub-goal identification only"
+    },
+    "correct_answer": "B",
+    "explanation": "Decomposition strips out processing overhead by breaking giant operations into atomic, parallel blocks."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Life Cycle",
+    "question": "A fintech firm structures its fraud detection workflow as: analysing transaction patterns, designing detection logic, implementing code, and reviewing outcomes. A junior engineer rearranges the order, placing evaluation before implementation. What is the most critical flaw in this rearrangement?",
+    "options": {
+      "A": "It assumes evaluation improves understanding first",
+      "B": "It replaces algorithm design with testing",
+      "C": "It removes the need for planning entirely",
+      "D": "It disrupts the logical dependency between execution and evaluation"
+    },
+    "correct_answer": "D",
+    "explanation": "You cannot validate or run checks on modules that have not been compiled or generated yet."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Search Strategies",
+    "question": "A student locked out of a lab system attempts multiple password combinations sequentially until access is granted. Another student instead analyses password patterns. How should the first approach be evaluated in algorithmic terms?",
+    "options": {
+      "A": "It explores possibilities exhaustively without guidance",
+      "B": "It systematically guarantees optimal solution",
+      "C": "It uses analogy from previous solutions",
+      "D": "It applies heuristic optimisation to reduce search space"
+    },
+    "correct_answer": "A",
+    "explanation": "Sequential brute-forcing sweeps choices blindly until a matching variable satisfies constraints."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Optimization Algorithms",
+    "question": "In designing a delivery routing system, a developer selects the nearest next location at each step. The route later proves inefficient overall. What explains this outcome?",
+    "options": {
+      "A": "Local optimisation ensures global optimality",
+      "B": "Trial-and-error guarantees better exploration",
+      "C": "Divide-and-conquer was incorrectly applied",
+      "D": "Greedy decisions may ignore future consequences"
+    },
+    "correct_answer": "D",
+    "explanation": "Greedy paths look only at the most optimal immediate next step, which can end up trapping the system in inefficient pathways overall."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Algorithm Properties",
+    "question": "A development team notices inconsistent results because different programmers interpret algorithm steps differently. Which property is most directly violated, affecting system correctness?",
+    "options": {
+      "A": "Effective computational capability",
+      "B": "Ordered execution sequence",
+      "C": "Finite number of steps",
+      "D": "Unambiguous instruction definition"
+    },
+    "correct_answer": "D",
+    "explanation": "Algorithms must have clear, definite descriptions to ensure execution patterns stay predictable across different developer implementations."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Algorithm Representation",
+    "question": "Before implementing a payroll system, a team creates diagrams showing decision paths and data flow. Later, another team argues this step is unnecessary. What is the strongest justification for the initial approach?",
+    "options": {
+      "A": "It replaces the need for algorithm design",
+      "B": "It performs execution before planning",
+      "C": "It simplifies coding syntax directly",
+      "D": "It improves conceptual clarity through visual representation"
+    },
+    "correct_answer": "D",
+    "explanation": "Flow diagrams give developers a clear birds-eye view of how logic branches out, helping prevent hidden design gaps before writing any code."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Data Processing",
+    "question": "In a billing system, a function computes total cost using input price and tax rate. When reviewing system stages, where does this operation logically belong?",
+    "options": {
+      "A": "Temporary storage in memory registers",
+      "B": "Transformation of input into output values",
+      "C": "Data acquisition from user interface",
+      "D": "Final presentation of computed result"
+    },
+    "correct_answer": "B",
+    "explanation": "Applying formulas to raw attributes changes inputs into finished output values."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Understanding Computational Problems",
+    "question": "While trying to understand a computational problem, answers must also be provided to three main questions that include one of the following. Which is it?",
+    "options": {
+      "A": "How good is the computer programmer?",
+      "B": "How fast can the computer solve the problem?",
+      "C": "What processes are involved?",
+      "D": "What type of functional testing will be implemented?"
+    },
+    "correct_answer": "C",
+    "explanation": "When analyzing a computational problem, you must define the inputs, the outputs, and the processes/mechanisms required to transform those inputs into outputs."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Introduction to Problem-Solving",
+    "question": "A/An _________ is a procedure of steps used to solve a given problem.",
+    "options": {
+      "A": "flowchart",
+      "B": "algorithm",
+      "C": "function",
+      "D": "pseudocode"
+    },
+    "correct_answer": "B",
+    "explanation": "An algorithm is formally defined as a step-by-step, finite set of well-defined instructions or procedures designed to solve a specific problem."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Introduction to Problem-Solving",
+    "question": "Computer programs are also known as ________",
+    "options": {
+      "A": "central processor",
+      "B": "input/output operation",
+      "C": "documentation",
+      "D": "codes"
+    },
+    "correct_answer": "D",
+    "explanation": "Computer programs are written in programming languages and are widely referred to as source code, or simply 'codes' or 'software'."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Problem-Solving Strategies",
+    "question": "A problem solving strategy that filters out the unneeded attributes of the problem to be solved so that we can concentrate on the important parts is known as _________",
+    "options": {
+      "A": "means-ends analysis",
+      "B": "abstraction",
+      "C": "analogy",
+      "D": "heuristics"
+    },
+    "correct_answer": "B",
+    "explanation": "Abstraction is the core computational thinking pillar focused on hiding unnecessary or irrelevant details to minimize complexity and focus strictly on essential characteristics."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Understanding Problems and Problem Types",
+    "question": "Which of the following is not an attribute of routine problems?",
+    "options": {
+      "A": "Can usually be solved using various unconventional approaches.",
+      "B": "Is solely about identifying the most appropriate algorithm to apply to the problem.",
+      "C": "Provides a question that needs an answer, in addition to some required facts or numbers.",
+      "D": "Can be solved with algorithms."
+    },
+    "correct_answer": "A",
+    "explanation": "Routine problems are predictable, well-defined, and follow established patterns solved directly by algorithms. Unconventional or creative approaches are characteristic of non-routine or ill-defined problems."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Problem-Solving Strategies",
+    "question": "A problem solving strategy where decisions are made without stopping to think about the next course of action is known as _________",
+    "options": {
+      "A": "means-ends analysis",
+      "B": "analogy",
+      "C": "heuristics",
+      "D": "abstraction"
+    },
+    "correct_answer": "C",
+    "explanation": "Heuristics are rule-of-thumb strategies, mental shortcuts, or intuitive methods that allow fast decision-making without an exhaustive or systematic cognitive search for the next absolute best step."
+  }
+]

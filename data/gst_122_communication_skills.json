@@ -1,0 +1,522 @@
+[
+  {
+    "course_code": "GST 122",
+    "topic": "Letter Writing",
+    "question": "The closing part of a letter should mainly ___.",
+    "options": {
+      "A": "replace the greeting",
+      "B": "introduce unrelated arguments",
+      "C": "leave a final impression",
+      "D": "list every punctuation mark"
+    },
+    "correct_answer": "C",
+    "explanation": "The conclusion or complimentary close of a letter is designed to round off the communication smoothly and leave a polite, lasting final impression on the recipient."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "Early writing stages should concentrate mainly on ____.",
+    "options": {
+      "A": "discovering and clarifying ideas",
+      "B": "designing the title page",
+      "C": "memorising definitions",
+      "D": "counting commas only"
+    },
+    "correct_answer": "A",
+    "explanation": "Initial stages of writing (pre-writing and drafting) prioritize brainstorming, discovering expression pathways, and clarifying ideas rather than technical mechanics."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph that teaches how photosynthesis works is most likely ___.",
+    "options": {
+      "A": "fictional",
+      "B": "informal",
+      "C": "expository",
+      "D": "narrative"
+    },
+    "correct_answer": "C",
+    "explanation": "Expository writing functions to explain, inform, or describe a specific technical or factual topic, such as a biological process."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "Choose the option that best conveys the meaning of the underlined word: The committee reached a unanimous decision after hours of discussion.",
+    "options": {
+      "A": "uncertain",
+      "B": "divided",
+      "C": "complete agreement",
+      "D": "partial"
+    },
+    "correct_answer": "C",
+    "explanation": "'Unanimous' indicates a state where everyone involved is in complete, collective agreement without dissent."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Critical Thinking and Logic",
+    "question": "A writer presents a general principle and applies it to a specific case. This reasoning is ___.",
+    "options": {
+      "A": "interrogative",
+      "B": "deductive",
+      "C": "connotative",
+      "D": "descriptive"
+    },
+    "correct_answer": "B",
+    "explanation": "Deductive reasoning works from a broad, general rule or premise down to a specific, logical conclusion."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Sentence Structure and Syntax",
+    "question": "Choose the option that rearranges the sentence correctly: 'After the lecture ended, eagerly the students questions asked the professor many.'",
+    "options": {
+      "A": "The professor asked eagerly the students many questions after ended the lecture.",
+      "B": "Eagerly after the lecture ended asked the students the professor many questions.",
+      "C": "After eagerly the lecture ended the professor asked many students questions.",
+      "D": "The students eagerly asked the professor many questions after the lecture ended."
+    },
+    "correct_answer": "D",
+    "explanation": "Option D follows a logically coherent syntactic order, placing the subject, adverb, verb, and objects in a clear temporal sequence."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Letter Writing",
+    "question": "In a formal letter, the body is important because it ___.",
+    "options": {
+      "A": "replaces the address",
+      "B": "shortens the date",
+      "C": "carries the main message",
+      "D": "decorates the page"
+    },
+    "correct_answer": "C",
+    "explanation": "The body of a letter serves as its central core, holding the essential message, purpose, and detailed points of the communication."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph on online learning and classroom learning focuses on unreliable internet versus face-to-face interaction. This is mainly ___.",
+    "options": {
+      "A": "summary",
+      "B": "chronology",
+      "C": "repetition",
+      "D": "contrast"
+    },
+    "correct_answer": "D",
+    "explanation": "Highlighting distinct differences, such as connection issues versus in-person interaction, relies on contrast to build the paragraph."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Letter Writing",
+    "question": "A job application letter uses slang, jokes, and casual abbreviations. The main problem is ___.",
+    "options": {
+      "A": "wrong paragraph length",
+      "B": "weak spelling only",
+      "C": "excessive chronology",
+      "D": "poor tone"
+    },
+    "correct_answer": "D",
+    "explanation": "Professional letters require a formal register. Mixing in slang and jokes results in an inappropriate, poor tone for corporate environments."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "A student’s draft has ideas, but many spelling and punctuation errors. These should be handled mainly during ___.",
+    "options": {
+      "A": "topic selection",
+      "B": "brainstorming",
+      "C": "editing",
+      "D": "pre-writing"
+    },
+    "correct_answer": "C",
+    "explanation": "Mechanical problems like spelling mistakes, grammar errors, and incorrect punctuation are addressed during the editing and proofreading phase."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph comparing online learning and classroom learning focuses on their shared flexibility. This is mainly ___.",
+    "options": {
+      "A": "definition",
+      "B": "narration",
+      "C": "contrast",
+      "D": "comparison"
+    },
+    "correct_answer": "D",
+    "explanation": "Focusing on shared attributes or similarities between two distinct entities means developing the text through comparison."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "A writer uses technical vocabulary for a general audience without explanation. The likely effect is ___.",
+    "options": {
+      "A": "stronger unity",
+      "B": "better spelling",
+      "C": "reader confusion",
+      "D": "clearer communication"
+    },
+    "correct_answer": "C",
+    "explanation": "Dropping specialized terms (jargon) into a text without defining them confuses a general audience who lacks background knowledge on the topic."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "A student wants to argue that school uniforms should remain compulsory. The most suitable essay type is ___.",
+    "options": {
+      "A": "narrative",
+      "B": "personal diary",
+      "C": "descriptive",
+      "D": "argumentative"
+    },
+    "correct_answer": "D",
+    "explanation": "Taking a firm stance on a debatable policy issue and supporting it with evidence requires an argumentative essay structure."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "Argumentative writing differs from persuasive writing because argumentative writing relies more heavily on ____.",
+    "options": {
+      "A": "emotional appeal",
+      "B": "personal memories",
+      "C": "facts and logic",
+      "D": "humour and suspense"
+    },
+    "correct_answer": "C",
+    "explanation": "While persuasive writing uses emotional hooks, argumentative writing stands on objective proof, verified facts, and logical deductions."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "A thesis statement is most useful because it ___.",
+    "options": {
+      "A": "announces the writer’s central position",
+      "B": "replaces the conclusion",
+      "C": "lists punctuation rules",
+      "D": "hides the essay’s purpose"
+    },
+    "correct_answer": "A",
+    "explanation": "A thesis statement acts as the foundation of an essay by stating the author's primary argument or central perspective right from the start."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "Choose the option that best conveys the meaning of the underlined portion: Her explanation was overly elaborate, making it difficult for others to follow.",
+    "options": {
+      "A": "unclear due to silence",
+      "B": "too detailed and complicated",
+      "C": "simple and effective",
+      "D": "brief and direct"
+    },
+    "correct_answer": "B",
+    "explanation": "'Elaborate' indicates that something is highly intricate, deeply detailed, or complex, making it tricky to process easily."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Reading Comprehension",
+    "question": "Based on the passage provided, what was the major impact of the printing press?",
+    "options": {
+      "A": "It reduced the number of books available.",
+      "B": "It made handwritten texts more valuable.",
+      "C": "It increased access to knowledge and ideas.",
+      "D": "It limited communication to religious groups"
+    },
+    "correct_answer": "C",
+    "explanation": "The text states that mass production allowed information to spread quickly and boosted literacy rates, which increased overall access to knowledge and new ideas."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "A writer wants readers to support a charity by appealing to compassion and reason. This is closest to ___.",
+    "options": {
+      "A": "spatial description",
+      "B": "classification writing",
+      "C": "persuasive writing",
+      "D": "proofreading"
+    },
+    "correct_answer": "C",
+    "explanation": "Blending logical rationale with emotional appeals to motivate an audience to act or change their view fits persuasive writing."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "A writer chooses technical terms while addressing medicine specialists. This choice is acceptable because ____.",
+    "options": {
+      "A": "Simple language is forbidden",
+      "B": "grammar no longer matters",
+      "C": "jargon is always required",
+      "D": "the audience can understand the terms"
+    },
+    "correct_answer": "D",
+    "explanation": "Using technical jargon is perfectly appropriate when your specific target audience possesses the professional training to understand those terms."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Structure",
+    "question": "The sentence that introduces the controlling idea of a paragraph is the ___.",
+    "options": {
+      "A": "closing sentence",
+      "B": "salutation",
+      "C": "dependent clause",
+      "D": "topic sentence"
+    },
+    "correct_answer": "D",
+    "explanation": "The topic sentence sets the core focus, presenting the main idea and parameter constraints for the rest of the paragraph."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "Choose the option that best conveys the meaning of the underlined word: The speaker’s argument was flawed, which weakened its impact.",
+    "options": {
+      "A": "perfect",
+      "B": "defective",
+      "C": "lengthy",
+      "D": "convincing"
+    },
+    "correct_answer": "B",
+    "explanation": "A 'flawed' argument contains logic gaps, errors, or inaccuracies, meaning it is fundamentally defective."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph divides leaders into democratic, authoritarian, and laissez-faire types. This is development by ___.",
+    "options": {
+      "A": "dialogue",
+      "B": "narration",
+      "C": "punctuation",
+      "D": "classification"
+    },
+    "correct_answer": "D",
+    "explanation": "Breaking a broad topic down into clear, distinct sub-groups based on shared traits is known as paragraph development by classification."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A student writes, 'The policy failed because no funds were released.' This shows ____.",
+    "options": {
+      "A": "cause and effect",
+      "B": "comparison",
+      "C": "definition",
+      "D": "classification"
+    },
+    "correct_answer": "A",
+    "explanation": "Linking a result (policy failure) directly to its source trigger (withheld funds) establishes a clear cause-and-effect relationship."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Structure",
+    "question": "A paragraph begins: 'Poor drainage causes flooding in many urban areas.' The remaining sentences discuss football, cinema, and mobile phones. The paragraph lacks ___.",
+    "options": {
+      "A": "pronunciation",
+      "B": "capitalisation",
+      "C": "tense",
+      "D": "unity"
+    },
+    "correct_answer": "D",
+    "explanation": "Paragraph unity demands that every sentence supports the central topic sentence. Introducing completely random subjects breaks this unity."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Reading Comprehension",
+    "question": "Based on the passage provided, what can be inferred about noise regulations?",
+    "options": {
+      "A": "They exist but are not always effectively applied.",
+      "B": "They are unnecessary in urban areas.",
+      "C": "They are perfectly implemented everywhere.",
+      "D": "They only apply to construction workers."
+    },
+    "correct_answer": "A",
+    "explanation": "The text states that although rules have been set up, 'enforcement remains inconsistent,' meaning they exist but are not always effectively applied."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Structure",
+    "question": "A writer produces a grammatically correct essay, but every paragraph introduces an unrelated idea. The main weakness is ___.",
+    "options": {
+      "A": "diction",
+      "B": "unity",
+      "C": "punctuation",
+      "D": "spelling"
+    },
+    "correct_answer": "B",
+    "explanation": "An essay lacks unity when its constituent blocks jump around into unrelated tangents instead of supporting a single theme."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Critical Thinking and Logic",
+    "question": "A speaker says, 'Every student who uses social media fails examinations.' This weakens the argument because it is ___.",
+    "options": {
+      "A": "deductively sound",
+      "B": "overgeneralised",
+      "C": "strongly evidenced",
+      "D": "carefully qualified"
+    },
+    "correct_answer": "B",
+    "explanation": "Claiming an absolute outcome for an entire group without accounting for variations creates a logical fallacy known as an overgeneralization."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph about market sanitation gives three examples of dirty stalls, blocked gutters, and poor waste disposal. The paragraph is developed mainly by ____.",
+    "options": {
+      "A": "contrast",
+      "B": "examples",
+      "C": "classification",
+      "D": "definition"
+    },
+    "correct_answer": "B",
+    "explanation": "Listing specific real-world instances (stalls, gutters, waste) to support a core point means expanding the paragraph through examples or illustration."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "During revision, a writer notices that the introduction promises to discuss unemployment, but the body focuses mostly on fashion. The best action is to _____.",
+    "options": {
+      "A": "remove all examples",
+      "B": "change the handwriting style",
+      "C": "add more adjectives",
+      "D": "realign the body with the thesis"
+    },
+    "correct_answer": "D",
+    "explanation": "To fix a structural disconnect, you must realign the body text with your core thesis statement so the content delivers on what the introduction promises."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph explains how to prepare a dish by arranging the steps from washing ingredients to serving. The organising pattern is ___.",
+    "options": {
+      "A": "time sequence",
+      "B": "definition",
+      "C": "contrast",
+      "D": "spatial order"
+    },
+    "correct_answer": "A",
+    "explanation": "Organizing steps based on when they happen in real time uses a time sequence or chronological arrangement pattern."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "For classification to be effective, categories should be ___.",
+    "options": {
+      "A": "random and humorous",
+      "B": "overlapping and vague",
+      "C": "complete and distinct",
+      "D": "emotional and brief"
+    },
+    "correct_answer": "C",
+    "explanation": "Proper classification requires sorting items into complete, distinct, and mutually exclusive categories to prevent confusion."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "A narrative essay becomes confusing because a childhood scene suddenly appears between two present-day events without any signal. The writer needs better use of ____.",
+    "options": {
+      "A": "dictionary meaning",
+      "B": "flashback control",
+      "C": "syllable division",
+      "D": "formal salutation"
+    },
+    "correct_answer": "B",
+    "explanation": "Shifting back in time requires clear narrative signals and smooth flashback control so readers don't lose track of the timeline."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A writer defines 'democracy' before discussing types of democratic systems. The definition helps because it ___.",
+    "options": {
+      "A": "replaces all supporting paragraphs",
+      "B": "creates a shared basis for discussion",
+      "C": "delays the argument unnecessarily",
+      "D": "removes the need for examples"
+    },
+    "correct_answer": "B",
+    "explanation": "Defining key abstract terms early on ensures writer and reader share a common vocabulary baseline before diving into deeper arguments."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "A student describes a festival by mentioning the smell of grilled fish, the drumbeats, bright costumes, and the rough ground underfoot. This is mainly ____.",
+    "options": {
+      "A": "argumentative writing",
+      "B": "technical writing",
+      "C": "expository writing",
+      "D": "descriptive writing"
+    },
+    "correct_answer": "D",
+    "explanation": "Using rich sensory details (sights, sounds, smells, and textures) to paint a vivid picture of a scene is the hallmark of descriptive writing."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "Choose the option that best conveys the meaning of the underlined portion: The manager’s response to the crisis was measured and pragmatic, ensuring stability in the organisation.",
+    "options": {
+      "A": "emotional and impulsive",
+      "B": "harsh and critical",
+      "C": "cautious and practical",
+      "D": "indifferent and careless"
+    },
+    "correct_answer": "C",
+    "explanation": "'Pragmatic' means addressing problems with sensible, realistic, and practical solutions rather than relying on theory or emotion."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Structure",
+    "question": "Which sentence best shows coherence?",
+    "options": {
+      "A": "The road was flooded, honesty, calendar, pavement.",
+      "B": "The road was flooded; therefore, motorists were advised to use another route.",
+      "C": "The road was flooded. Blue shirts are popular in June.",
+      "D": "The road was flooded. Meanwhile, the committee approved the budget."
+    },
+    "correct_answer": "B",
+    "explanation": "Coherence means ideas connect logically. Using the transition 'therefore' establishes a clear, sensible link between the flood and its consequence."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "In argumentative writing, a claim becomes stronger when supported with ____.",
+    "options": {
+      "A": "rumours and insults",
+      "B": "personal attacks",
+      "C": "evidence and reasoning",
+      "D": "exaggeration and fear"
+    },
+    "correct_answer": "C",
+    "explanation": "Valid, objective arguments rely on solid proof, data, and sound analytical reasoning rather than emotional manipulation or logical fallacies."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A writer describes a classroom from the door to the windows and then to the teacher’s table. This arrangement uses ____.",
+    "options": {
+      "A": "analogy",
+      "B": "spatial order",
+      "C": "cause and effect",
+      "D": "persuasion"
+    },
+    "correct_answer": "B",
+    "explanation": "Arranging descriptive details based on physical position or physical location layout means organizing by spatial order."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "A student begins an essay by listing scattered ideas, grouping them, and deciding which points should come first. This activity is best described as ____.",
+    "options": {
+      "A": "proofreading",
+      "B": "outlining",
+      "C": "summarising",
+      "D": "publishing"
+    },
+    "correct_answer": "B",
+    "explanation": "Sorting ideas, clustering related notes, and arranging them into a structural roadmap is the definition of outlining."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Sentence Structure and Syntax",
+    "question": "Choose the option that rearranges the sentence correctly: 'Across the river, under the bright evening sky, quietly the fishermen their nets cast.'",
+    "options": {
+      "A": "Quietly across the river cast their nets the fishermen under the bright evening sky.",
+      "B": "The fishermen quietly cast their nets across the river under the bright evening sky.",
+      "C": "Under the sky the fishermen across the river quietly their nets cast bright evening.",
+      "D": "Across quietly the fishermen cast their nets the river under the bright sky evening."
+    },
+    "correct_answer": "B",
+    "explanation": "Option B uses standard, natural English word order: Subject (The fishermen) + Adverb/Verb (quietly cast) + Object (their nets) + Prepositional modifiers."
+  }
+]
