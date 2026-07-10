@@ -7,22 +7,54 @@
     <link rel="stylesheet" href="css/quiz.css">
 <!-- High-Visibility Filled SVG Favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ffffff'/%3E%3Cg transform='matrix(0.9, 0, 0, 0.9, 5, 5)'%3E%3Cpath d='M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 12.5v5c0 1.25 1.5 2.5 6 2.5s6-1.25 6-2.5v-5' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.5 11v6' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E">
+<script>
+    // Pull global sync preference before DOM paint
+    const savedTheme = localStorage.getItem("miva-theme") || 
+                       (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+        document.documentElement.setAttribute("data-theme", "light");
+    }
+</script>
 </head>
 <body>
 
-    <header class="quiz-header">
-        <div class="quiz-header-container">
-            <a href="index.html" class="btn-back" id="quitBtn">← 🛑 Quit Quiz</a>
-            <div class="active-meta">
-                <h1 id="courseTitleDisplay">Loading Exam...</h1>
-                <span id="courseCodeDisplay" class="badge-code">---</span>
+   <header style="border-bottom: 1px solid var(--border-color); background-color: var(--bg-card, #ffffff); transition: background 0.3s; position: sticky; top: 0; z-index: 100;">
+    <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 12px 16px; box-sizing: border-box; gap: 16px;">
+        
+        <div class="logo-group-wrapper" style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
+            <div class="logo-group" style="display: flex; align-items: center; gap: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                    <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path>
+                    <path d="M6 12.5v5c0 1.25 1.5 2.5 6 2.5s6-1.25 6-2.5v-5"></path>
+                    <path d="M21.5 11v6"></path>
+                </svg>
+                <span class="logo-text" style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">MivaPrep</span>
             </div>
-            <div class="score-tracker" id="scoreTrackerWrapper">
-                Score: <span id="currentScore">0</span> / <span id="totalAttempted">0</span>
-            </div>
+            <a href="index.html" class="btn-back" id="quitBtn" style="text-decoration: none; font-weight: 600; font-size: 0.9rem; color: var(--text-secondary, #64748b); white-space: nowrap;">
+                ← 🛑 Quit Quiz
+            </a>
         </div>
-    </header>
 
+        <div class="active-meta" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; flex: 1; min-width: 0; padding: 0 8px;">
+            <span id="courseTitleDisplay" style="font-weight: 700; font-size: 1.05rem; color: var(--primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%;">
+                Exam Lab Simulator
+            </span>
+            <span class="badge-code" style="font-size: 0.75rem; color: var(--text-secondary, #64748b); background-color: var(--bg-app, #f1f5f9); padding: 2px 6px; border-radius: 4px; margin-top: 2px; font-weight: 600;">
+                ---
+            </span>
+        </div>
+
+        <div class="header-actions" style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
+            <button id="themeToggleBtn" style="background: none; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1.1rem; cursor: pointer; padding: 6px 10px; display: flex; align-items: center; justify-content: center;" title="Toggle UI Theme">🌓</button>
+            <button class="btn" onclick="window.location.href='index.html'" style="font-weight: 600; border-radius: 8px; cursor: pointer; padding: 8px 14px; background-color: var(--primary, #4a154b); color: white; border: none; font-size: 0.9rem; white-space: nowrap;">
+                New Practice
+            </button>
+        </div>
+        
+    </div>
+</header>
     <main class="quiz-container">
         
         <div class="tracker-bar-wrapper">
@@ -60,5 +92,30 @@
     </main>
 
     <script src="js/quiz-engine.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggleBtn = document.getElementById("themeToggleBtn");
+
+            // 1. Instantly parse global preferences from local database
+            const activeTheme = localStorage.getItem("miva-theme") || 
+                                (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", activeTheme);
+
+            // 2. Active event hook to alternate root canvas presentation layouts safely
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener("click", () => {
+                    const currentTheme = document.documentElement.getAttribute("data-theme");
+                    const targetTheme = currentTheme === "light" ? "dark" : "light";
+                    
+                    document.documentElement.setAttribute("data-theme", targetTheme);
+                    localStorage.setItem("miva-theme", targetTheme);
+                    console.log(`Quiz Workspace layout shifted to: ${targetTheme}`);
+                });
+            }
+        });
+    </script>
+    
+   <script src="/js/quiz.js"></script>
+</body>
 </body>
 </html>

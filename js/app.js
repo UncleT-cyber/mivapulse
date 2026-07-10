@@ -1,120 +1,143 @@
 /* ==========================================================================
-   MIVA PREP - UNIVERSAL GATEWAY ARCHITECTURE CONTROLLER (app.js)
+   MIVA PREP - HOMEPAGE PORTAL ENGINE WITH PERSISTENT THEME CONTROLLER (app.js)
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+    // DOM Elements for Course Selector Matrix
     const levelSelect = document.getElementById("levelSelect");
     const courseSelect = document.getElementById("courseSelect");
-    const simulatorForm = document.getElementById("simulatorForm");
+    const configModal = document.getElementById("configModal");
+    
+    // Look for BOTH possible launcher variants (the specific submission button OR the parent config form wrapper)
+    const startSimulationBtn = document.getElementById("startSimulationBtn") || document.getElementById("buildMockBtn");
+    const mockConfigForm = document.getElementById("mockConfigForm") || document.querySelector("#configModal form");
 
-    if (!levelSelect && !courseSelect && !simulatorForm) {
-        return;
-    }
+    let globalManifest = null;
 
-    let globalManifest = [];
-
-    // Fetch the registry manifest configurations
-    fetch('data/manifest.json')
-        .then(res => {
-            if (!res.ok) throw new Error(`HTTP network response code: ${res.status}`);
-            return res.json();
-        })
-        .then(data => {
-            globalManifest = data.levels || [];
-            
-            levelSelect.innerHTML = '<option value="" disabled selected>-- Choose your level --</option>';
-            globalManifest.forEach(level => {
-                const opt = document.createElement("option");
-                opt.value = level.id;
-                opt.textContent = level.name;
-                levelSelect.appendChild(opt);
-            });
-        })
-        .catch(err => console.error("Manifest Registry Load Error: ", err));
-
-    levelSelect.addEventListener("change", () => {
-        const selectedLevelId = levelSelect.value;
-        const matchedLevel = globalManifest.find(l => l.id === selectedLevelId);
-
-        courseSelect.innerHTML = '<option value="" disabled selected>-- Choose a course --</option>';
-        
-        if (matchedLevel && matchedLevel.courses && matchedLevel.courses.length > 0) {
-            courseSelect.removeAttribute("disabled");
-            matchedLevel.courses.forEach(course => {
-                const opt = document.createElement("option");
+    // 1. FETCH & RENDER DYNAMIC ACADEMIC MANIFEST
+    if (levelSelect && courseSelect) {
+        fetch("data/manifest.json")
+            .then(res => {
+                if (!res.ok) throw new Error("Failed to load level matrix catalog.");
+                return res.json();
+            })
+            .then(data => {
+                globalManifest = data;
                 
-                let fileName = course.file;
-                if (fileName && !fileName.endsWith('.json')) {
-                    fileName += '.json';
-                }
+                // Clear existing placeholder options
+                levelSelect.innerHTML = '<option value="" disabled selected>Select your Level...</option>';
+                
+                // Populate level dropdown dynamically from JSON
+                data.levels.forEach(level => {
+                    const opt = document.createElement("option");
+                    opt.value = level.id;
+                    opt.textContent = level.name;
+                    levelSelect.appendChild(opt);
+                });
+            })
+            .catch(err => console.error("Manifest Initialization Error:", err));
 
-                opt.value = JSON.stringify({ file: fileName, code: course.code });
-                opt.textContent = `${course.code} - ${course.title}`;
-                courseSelect.appendChild(opt);
-            });
-        } else {
-            courseSelect.setAttribute("disabled", "true");
-        }
-    });
+        // Listen for Level changes to update Course options dynamically
+        levelSelect.addEventListener("change", (e) => {
+            const selectedLevelId = e.target.value;
+            courseSelect.innerHTML = '<option value="" disabled selected>Select a course...</option>';
+            courseSelect.disabled = true;
 
-    const launchSimulation = () => {
-        // Clear old inline errors if any exist
-        const oldError = document.getElementById("modalValidationError");
-        if (oldError) oldError.remove();
+            if (!globalManifest) return;
 
-        // Premium Custom Validation Check
-        if (!levelSelect.value || !courseSelect.value || courseSelect.value === "") {
-            const errorMsg = document.createElement("div");
-            errorMsg.id = "modalValidationError";
-            errorMsg.style.color = "#dc2626";
-            errorMsg.style.backgroundColor = "#fee2e2";
-            errorMsg.style.padding = "10px";
-            errorMsg.style.borderRadius = "6px";
-            errorMsg.style.marginBottom = "14px";
-            errorMsg.style.fontSize = "13px";
-            errorMsg.style.fontWeight = "600";
-            errorMsg.style.textAlign = "center";
-            errorMsg.textContent = "⚠️ Please select both an Academic Level and Course Module.";
-            
-            simulatorForm.insertBefore(errorMsg, document.getElementById("buildMockBtn"));
-            return;
-        }
-
-        try {
-            const metaData = JSON.parse(courseSelect.value);
-            const questionLimitEl = document.getElementById("questionLimit");
-            const limit = questionLimitEl ? questionLimitEl.value : "all";
-            
-            const checkedModeInput = document.querySelector('input[name="quizMode"]:checked');
-            const selectedMode = checkedModeInput ? checkedModeInput.value : "practice";
-
-            window.location.href = `quiz.html?course=${encodeURIComponent(metaData.file)}&code=${encodeURIComponent(metaData.code)}&limit=${limit}&mode=${selectedMode}`;
-        
-        } catch (parseError) {
-            console.error("Payload routing conversion error:", parseError);
-        }
-    };
-
-    if (simulatorForm) {
-        simulatorForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            launchSimulation();
+            const targetLevel = globalManifest.levels.find(l => l.id === selectedLevelId);
+            if (targetLevel && targetLevel.courses.length > 0) {
+                targetLevel.courses.forEach(course => {
+                    const opt = document.createElement("option");
+                    opt.value = course.file;
+                    opt.setAttribute("data-code", course.code);
+                    opt.setAttribute("data-title", course.title);
+                    opt.textContent = `${course.code} - ${course.title}`;
+                    courseSelect.appendChild(opt);
+                });
+                courseSelect.disabled = false;
+            } else {
+                courseSelect.innerHTML = '<option value="" disabled>No active courses found for this tier.</option>';
+            }
         });
     }
 
-    document.addEventListener("click", (e) => {
-        if (e.target && e.target.textContent && e.target.textContent.includes("Build My Mock")) {
+    // 2. CENTRALIZED ROUTER ROUTING CONTROLLER FUNCTION
+    function launchSimulation(e) {
+        // CRITICAL FIX: Stop the browser from submitting forms natively and kicking you back to index.html
+        if (e && typeof e.preventDefault === "function") {
             e.preventDefault();
-            launchSimulation();
         }
-    });
+
+        const file = courseSelect.value;
+        const selectedOpt = courseSelect.options[courseSelect.selectedIndex];
+        
+        if (!file || courseSelect.selectedIndex === 0) {
+            alert("Please select a target examination module to launch simulation.");
+            return false;
+        }
+
+        const code = selectedOpt.getAttribute("data-code");
+        const title = selectedOpt.getAttribute("data-title");
+        
+        // Match the current input names inside your updated configuration modal
+        const selectedMode = document.querySelector('input[name="examMode"]:checked')?.value || 
+                             document.querySelector('input[name="simMode"]:checked')?.value || "practice";
+                             
+        const selectedLimit = document.getElementById("questionQuantitySelect")?.value || 
+                              document.querySelector('input[name="questionLimit"]:checked')?.value || "10";
+
+        // Build dynamic routing parameters matching your simulation page entry points
+        const destinationUrl = `quiz.html?course=${encodeURIComponent(file)}&code=${encodeURIComponent(code)}&title=${encodeURIComponent(title)}&mode=${selectedMode}&limit=${selectedLimit}`;
+        
+        console.log("Routing into simulation engine path layout:", destinationUrl);
+        window.location.href = destinationUrl;
+        return false;
+    }
+
+    // Attach listeners to both form actions or direct button clicks to lock down form submission completely
+    if (mockConfigForm) {
+        mockConfigForm.addEventListener("submit", launchSimulation);
+    }
+    if (startSimulationBtn) {
+        startSimulationBtn.addEventListener("click", launchSimulation);
+    }
+
+    // 3. CORE THEME CONTROLLER ENGINE (Late-Night Dark Mode Toggle)
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    
+    const savedTheme = localStorage.getItem("miva-theme") || 
+                       (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+    if (savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+        document.documentElement.setAttribute("data-theme", "light");
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener("click", () => {
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            let newTheme = "light";
+            
+            if (currentTheme === "light") {
+                newTheme = "dark";
+            }
+            
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("miva-theme", newTheme);
+            console.log(`System UI context shifted to: ${newTheme} mode.`);
+        });
+    }
 });
 
-function openConfigModal() { document.getElementById("configModal").classList.remove("hidden"); }
-function closeConfigModal() { 
-    const oldError = document.getElementById("modalValidationError");
-    if (oldError) oldError.remove();
-    document.getElementById("configModal").classList.add("hidden"); 
-}
-function scrollToDepartments() { document.getElementById("departmentSection").scrollIntoView({ behavior: 'smooth' }); }
-function handleOutsideClick(e) { if (e.target.id === "configModal") closeConfigModal(); }
+/* Global Window helper methods to open/close the config modal gracefully */
+window.openConfigModal = function() {
+    const modal = document.getElementById("configModal");
+    if (modal) modal.classList.remove("hidden");
+};
+
+window.closeConfigModal = function() {
+    const modal = document.getElementById("configModal");
+    if (modal) modal.classList.add("hidden");
+};

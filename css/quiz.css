@@ -1,16 +1,18 @@
 /* ==========================================================================
-   MIVA PREP - EXAM SIMULATOR STYLESHEET (QUIZ INTERFACE)
+   1. EXAM SIMULATOR CORE GLOBAL DESIGN ENGINE VARIABLES
    ========================================================================== */
-
 :root {
-    --bg-primary: #f8fafc;
+    /* Light Mode Default States */
+    --bg-app: #f8fafc;
     --bg-card: #ffffff;
-    --text-main: #1e1b4b;
-    --text-muted: #64748b;
+    --text-primary: #1e1b4b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
     
     /* Branding Schemes */
     --primary: #4a154b;
     --primary-light: #632064;
+    --miva-purple-light: #faf5ff;
     --accent: #e91e63;
     
     /* Validation Interaction Colors */
@@ -24,6 +26,25 @@
     --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+[data-theme="dark"] {
+    /* Night Shift Theme Context Switch */
+    --bg-app: #0f172a;          /* Sleek midnight blue/slate background */
+    --bg-card: #1e293b;         /* Elevated container slate gray */
+    --text-primary: #f8fafc;    /* High contrast crisp white */
+    --text-secondary: #94a3b8;  /* Readable muted gray text */
+    --border-color: #334155;    /* Darker border breaks */
+    
+    --primary: #c084fc;         /* Vibrant bright purple for high visibility */
+    --primary-light: #e9d5ff;
+    --miva-purple-light: #3b0764;/* Dark rich purple base for highlighted options */
+    
+    --success-light: #064e3b;   /* Low luminance validation wrappers */
+    --error-light: #4c0519;
+}
+
+/* ==========================================================================
+   2. RE-DOCKING FRAME LAYOUT SETUPS
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -32,21 +53,29 @@
 }
 
 body {
-    background-color: var(--bg-primary);
-    color: var(--text-main);
+    background-color: var(--bg-app);
+    color: var(--text-primary);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Quiz Frame Navigation Header */
+/* Typography Color Links */
+h1, h2, h3, .question-text, strong { color: var(--text-primary); }
+p, .tracker-text, .explanation-box p { color: var(--text-secondary); }
+
+/* ==========================================================================
+   3. SIMULATOR NAVIGATION TIMELINE LAYER
+   ========================================================================== */
 .quiz-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
     padding: 1.25rem 1.5rem;
     position: sticky;
     top: 0;
     z-index: 10;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .quiz-header-container {
@@ -65,14 +94,9 @@ body {
     font-size: 0.95rem;
     transition: var(--transition);
 }
+.btn-back:hover { color: var(--accent); }
 
-.btn-back:hover {
-    color: var(--accent);
-}
-
-.active-meta {
-    text-align: center;
-}
+.active-meta { text-align: center; }
 
 #courseTitleDisplay {
     font-size: 1.25rem;
@@ -82,23 +106,26 @@ body {
 
 .badge-code {
     font-size: 0.8rem;
-    background-color: #f1f5f9;
-    color: var(--text-muted);
+    background-color: var(--bg-app);
+    color: var(--text-secondary);
     padding: 0.15rem 0.5rem;
     border-radius: 4px;
     font-weight: 600;
+    border: 1px solid var(--border-color);
 }
 
 .score-tracker {
     font-weight: 700;
-    background-color: #faf5ff;
-    border: 1px solid #f3e8ff;
+    background-color: var(--miva-purple-light);
+    border: 1px solid var(--border-color);
     padding: 0.4rem 0.8rem;
     border-radius: 8px;
-    color: var(--primary);
+    color: var(--text-primary);
 }
 
-/* Simulator Container Framework */
+/* ==========================================================================
+   4. SIMULATOR ARCHITECTURE FRAMEWORK CONTAINER
+   ========================================================================== */
 .quiz-container {
     max-width: 800px;
     width: 100%;
@@ -107,22 +134,18 @@ body {
     flex: 1;
 }
 
-/* Progress Tracker Layout */
-.tracker-bar-wrapper {
-    margin-bottom: 2rem;
-}
-
+/* Tracker Timeline Bar Wrapper Elements */
+.tracker-bar-wrapper { margin-bottom: 2rem; }
 .tracker-text {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
 }
 
 .tracker-track {
-    background-color: #e2e8f0;
+    background-color: var(--border-color);
     height: 6px;
     border-radius: 50px;
     overflow: hidden;
@@ -135,14 +158,17 @@ body {
     transition: width 0.3s ease;
 }
 
-/* Question Structure Card Component */
+/* ==========================================================================
+   5. INTERACTIVE EXAM INTERACTION LAYOUT COMPONENTS
+   ========================================================================== */
 .question-card {
     background-color: var(--bg-card);
-    border: 1px solid #edf2f7;
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 2.5rem;
     box-shadow: var(--shadow-md);
     margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .topic-tag {
@@ -151,7 +177,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     color: var(--accent);
-    background-color: #fff1f2;
+    background-color: var(--brand-light, #fff1f2);
     padding: 0.25rem 0.75rem;
     border-radius: 50px;
     margin-bottom: 1.25rem;
@@ -162,11 +188,9 @@ body {
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.4;
-    color: var(--text-main);
     margin-bottom: 2rem;
 }
 
-/* Option Input Button Row Items */
 .options-container {
     display: flex;
     flex-direction: column;
@@ -176,13 +200,13 @@ body {
 .option-btn {
     width: 100%;
     text-align: left;
-    background-color: #ffffff;
-    border: 2px solid #e2e8f0;
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
     border-radius: 8px;
     padding: 1.1rem 1.5rem;
     font-size: 1.05rem;
     font-weight: 500;
-    color: var(--text-main);
+    color: var(--text-primary);
     cursor: pointer;
     transition: var(--transition);
     display: flex;
@@ -191,31 +215,31 @@ body {
 }
 
 .option-btn:hover:not([disabled]) {
-    border-color: var(--primary-light);
-    background-color: #faf5ff;
+    border-color: var(--primary);
+    background-color: var(--miva-purple-light);
 }
 
-.option-btn[disabled] {
-    cursor: not-allowed;
-}
+.option-btn[disabled] { cursor: not-allowed; }
 
-/* User Selection Interactive Modifiers */
+/* Dynamic Selected Validation State Overrides */
 .option-btn.correct {
     border-color: var(--success) !important;
     background-color: var(--success-light) !important;
-    color: #065f46;
+    color: var(--text-primary) !important;
 }
 
 .option-btn.incorrect {
     border-color: var(--error) !important;
     background-color: var(--error-light) !important;
-    color: #991b1b;
+    color: var(--text-primary) !important;
 }
 
-/* Bottom Explanatory Drawer Layout */
+/* ==========================================================================
+   6. BOTOM RECONCILIATION EXPLANATORY PANEL LAYOUT
+   ========================================================================== */
 .feedback-panel {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 1.5rem 2rem;
     box-shadow: var(--shadow-md);
@@ -234,17 +258,12 @@ body {
     font-weight: 700;
 }
 
-.feedback-panel.correct-panel .feedback-title {
-    color: var(--success);
-}
-
-.feedback-panel.incorrect-panel .feedback-title {
-    color: var(--error);
-}
+.feedback-panel.correct-panel .feedback-title { color: var(--success); }
+.feedback-panel.incorrect-panel .feedback-title { color: var(--error); }
 
 .btn-next {
-    background-color: var(--text-main);
-    color: #ffffff;
+    background-color: var(--text-primary);
+    color: var(--bg-card);
     border: none;
     padding: 0.6rem 1.2rem;
     border-radius: 6px;
@@ -252,13 +271,13 @@ body {
     cursor: pointer;
     transition: var(--transition);
 }
-
 .btn-next:hover {
     background-color: var(--accent);
+    color: #ffffff;
 }
 
 .explanation-box {
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid var(--border-color);
     padding-top: 1rem;
     font-size: 0.95rem;
     line-height: 1.5;
@@ -270,35 +289,17 @@ body {
     margin-bottom: 0.25rem;
 }
 
-.explanation-box p {
-    color: var(--text-muted);
-}
-
-/* Helper Class Configuration state rules */
-.hidden {
-    display: none !important;
-}
+/* Functional Utility Support Anchors */
+.hidden { display: none !important; }
 
 @keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
+/* Responsive Adaptive Viewports Modifiers */
 @media (max-width: 640px) {
-    .question-card {
-        padding: 1.5rem;
-    }
-    .question-text {
-        font-size: 1.2rem;
-    }
-    .quiz-header-container {
-        flex-direction: column;
-        text-align: center;
-    }
+    .question-card { padding: 1.5rem; }
+    .question-text { font-size: 1.2rem; }
+    .quiz-header-container { flex-direction: column; text-align: center; }
 }
