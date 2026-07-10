@@ -111,16 +111,23 @@ function renderQuestion(state, dom, quizMode, courseCode) {
     if (dom.qText) dom.qText.textContent = cur.question;
 
     Object.entries(cur.options).forEach(([key, val]) => {
-        if (!val) return;
-        const btn = document.createElement("button");
-        btn.className = "option-btn";
-        btn.innerHTML = `<strong>${key}:</strong> ${val}`;
+    if (!val) return;
+    const btn = document.createElement("button");
+    btn.className = "option-btn";
+    btn.innerHTML = `<strong>${key}:</strong> ${val}`;
+    
+    btn.addEventListener("click", () => {
+        if (state.hasAnswered) return;
         
-        btn.addEventListener("click", () => {
-            if (state.hasAnswered) return;
-            state.hasAnswered = true;
-            state.attempted++;
+        // ---> ADD THIS EXACT LINE HERE FOR THE GAMIFIED FEEL:
+        btn.classList.add("selected-pop");
+        
+        state.hasAnswered = true;
+        state.attempted++;
+        // ... the rest of your click handler code continues below smoothly
             
+        
+
             // 🌟 Record the selection data for the final summary matrix
             state.userAnswers.push({
                 questionText: cur.question,

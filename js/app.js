@@ -141,3 +141,56 @@ window.closeConfigModal = function() {
     const modal = document.getElementById("configModal");
     if (modal) modal.classList.add("hidden");
 };
+
+// ==========================================================================
+// MOBILE COMPACT TOAST INTERCEPTOR LAYOUT OVERRIDE
+// ==========================================================================
+window.alert = function(message) {
+    console.warn("Intercepted browser alert:", message);
+    
+    let toast = document.getElementById("custom-app-toast");
+    
+    if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "custom-app-toast";
+        toast.style.cssText = `
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            background-color: #1e1b4b;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            z-index: 9999999; /* Forces layer positioning above your modal overlays */
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            pointer-events: none;
+            border-left: 4px solid #a855f7;
+            font-family: sans-serif;
+            text-align: center;
+            
+            /* The Layout Magic: Fixes the text stretching */
+            width: 88%;                 /* Scales to match the device layout frame */
+            max-width: 340px;           /* Prevents desktop over-stretching */
+            white-space: normal;        /* Allows sentence structures to break into clean rows */
+            line-height: 1.4;
+        `;
+        document.body.appendChild(toast);
+    }
+    
+    // Inject validation message and slide it safely into visual focus
+    toast.textContent = message;
+    toast.style.opacity = "1";
+    toast.style.transform = "translateX(-50%) translateY(0)";
+    
+    // Automatically animate it out of view after 3.5 seconds
+    setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateX(-50%) translateY(-20px)";
+    }, 3500);
+};
+

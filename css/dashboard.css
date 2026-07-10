@@ -554,3 +554,76 @@ header, .app-nav {
         padding-top: 0 !important;
     }
 }
+
+/* ==========================================================================
+   PREMIUM MOBILE CONFIGURATION MODAL ENGINE
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Limit the modal size and isolate it cleanly on mobile */
+    .modal-overlay {
+        padding: 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: fixed !important;
+        z-index: 99999 !important;
+    }
+
+    .modal-card {
+        width: 100% !important;
+        max-width: 380px !important;
+        max-height: 82vh !important;       /* Clean mobile viewport containment box */
+        padding: 20px 16px !important;
+        border-radius: 16px !important;
+        background: #1e293b !important;    /* Sleek slate-dark backing card layer */
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+    }
+
+    /* 2. Force internal scroll mechanics so no fields are ever cut off */
+    .modal-card form,
+    .modal-card .modal-body {
+        overflow-y: auto !important;       /* Dynamic inner scrolling */
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+        max-height: 100% !important;
+        padding-right: 4px !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 3. Dropdown Menu Premium Dark Styling Override */
+    .modal-card select {
+        width: 100% !important;
+        padding: 12px 16px !important;
+        background-color: #0f172a !important; /* Deep dark choice background */
+        color: #f8fafc !important;            /* Crisp text readability color */
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 10px !important;
+        font-size: 0.95rem !important;
+        font-weight: 500 !important;
+        cursor: pointer !important;
+        appearance: none !important;          /* Disarms native gray iOS/Android styling overlays */
+        -webkit-appearance: none !important;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 14px center !important;
+        background-size: 16px !important;
+    }
+
+    /* Avoid default white text issues when selection trays open on mobile */
+    .modal-card select option {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+    }
+
+    /* 4. Compact the interactive mode selection panels */
+    .modal-card .mode-option,
+    .modal-card div[class*="mode"] {
+        padding: 12px !important;
+        border-radius: 10px !important;
+        margin-bottom: 4px !important;
+    }
+}
