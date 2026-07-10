@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miva Prep - Exam Simulator</title>
-    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/quiz.css">
     <script>
     // Ensure dark theme is initialized instantly on startup
     const globalTheme = localStorage.getItem("miva-theme") || "dark"; 
@@ -80,8 +81,29 @@
             <div class="topic-tag" id="questionTopic">Topic Layer</div>
             <h2 class="question-text" id="questionText">The active question string will render here dynamically from the file.</h2>
             
-            <div class="options-container" id="optionsContainer">
-                </div>
+            <div class="options-container" id="optionsContainer"></div>
+
+<div id="essayWorkspaceContainer" style="display: none; width: 100%; flex-direction: column; gap: 16px; margin-top: 12px;">
+    <textarea id="essayResponseInput" 
+              placeholder="Type your comprehensive architectural synthesis or essay answer here..." 
+              style="width: 100%; height: 220px; padding: 16px; border-radius: 12px; background: var(--bg-app, #f1f5f9); color: var(--text-main, #0f172a); border: 1px solid var(--border-color, rgba(0,0,0,0.15)); font-size: 1rem; line-height: 1.5; resize: vertical; box-sizing: border-box; font-family: inherit; transition: border 0.2s;">
+    </textarea>
+    
+    <button id="submitEssayBtn" 
+        onclick="handleEssayEvaluation()" 
+        class="btn btn-primary" 
+        style="background-color: #b794f4; color: #ffffff; width: 100%; padding: 14px; border-radius: 12px; font-weight: 700; cursor: pointer;">
+    Submit to Nexus AI for Evaluation
+</button>
+</div>
+
+<div id="aiFeedbackContainer" style="display: none; margin-top: 20px; padding: 18px; border-radius: 12px; background: rgba(74, 21, 75, 0.06); border: 1px solid rgba(74, 21, 75, 0.25); box-sizing: border-box;">
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+        <span style="font-size: 1.2rem;">🤖</span>
+        <h4 style="color: var(--primary, #4a154b); margin: 0; font-weight: 700; font-size: 1.05rem;">Nexus AI Grade Analysis:</h4>
+    </div>
+    <p id="aiFeedbackText" style="color: var(--text-main, #0f172a); font-size: 0.95rem; margin: 0; line-height: 1.6; white-space: pre-line;"></p>
+</div>
         </section>
 
         <section class="feedback-panel hidden" id="feedbackPanel">
@@ -120,8 +142,7 @@
             }
         });
     </script>
-    
-   <script src="/js/quiz.js"></script>
+
    <div id="custom-confirm-modal" style="
     display: none; 
     position: fixed; 

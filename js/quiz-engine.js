@@ -3,7 +3,6 @@
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 🌟 Added 'userAnswers' array to log choices chronologically
     const examState = { questions: [], currentIndex: 0, score: 0, attempted: 0, hasAnswered: false, userAnswers: [] };
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -100,7 +99,26 @@ function renderQuestion(state, dom, quizMode, courseCode) {
     }
     if (dom.options) dom.options.innerHTML = "";
 
+    // Locate the newly added Essay & AI DOM nodes from quiz.html
+    const essayWorkspace = document.getElementById("essayWorkspaceContainer");
+    const aiFeedbackBox = document.getElementById("aiFeedbackContainer");
+    const aiFeedbackText = document.getElementById("aiFeedbackText");
+    const essayInput = document.getElementById("essayResponseInput");
+    const essaySubmitBtn = document.getElementById("essaySubmitBtn");
+
+    // Clear and hide essay components on every fresh card draw
+    if (essayWorkspace) essayWorkspace.style.display = "none";
+    if (aiFeedbackBox) aiFeedbackBox.style.display = "none";
+    if (essayInput) essayInput.value = "";
+
     const cur = state.questions[state.currentIndex];
+    
+    // Safety check: if no question data found, break early
+    if (!cur) {
+        if (dom.qText) dom.qText.textContent = "Error: Question stream exhausted.";
+        return;
+    }
+
     const curNum = state.currentIndex + 1;
     const total = state.questions.length;
 
@@ -110,145 +128,230 @@ function renderQuestion(state, dom, quizMode, courseCode) {
     if (dom.topic) dom.topic.textContent = cur.topic || "Core Concept";
     if (dom.qText) dom.qText.textContent = cur.question;
 
-    Object.entries(cur.options).forEach(([key, val]) => {
-    if (!val) return;
-    const btn = document.createElement("button");
-    btn.className = "option-btn";
-    btn.innerHTML = `<strong>${key}:</strong> ${val}`;
-    
-    btn.addEventListener("click", () => {
-        if (state.hasAnswered) return;
-        
-        // ---> ADD THIS EXACT LINE HERE FOR THE GAMIFIED FEEL:
-        btn.classList.add("selected-pop");
-        
-        state.hasAnswered = true;
-        state.attempted++;
-        // ... the rest of your click handler code continues below smoothly
+    /* ==========================================================================
+       BRANCH A: ADVANCED ESSAY EVALUATION ENGINE WITH NEXUS AI
+       ========================================================================== */
+    if (cur.type === "essay") {
+        if (dom.options) dom.options.style.display = "none"; // Hide MCQ grid
+        if (essayWorkspace) essayWorkspace.style.display = "flex"; // Reveal textarea container
+
+        // Bind the active question data context directly onto your submit button
+        if (essaySubmitBtn) {
+            essaySubmitBtn.textContent = "Submit to Nexus AI for Evaluation";
+            essaySubmitBtn.disabled = false;
+            essaySubmitBtn.style.opacity = "1";
             
-        
+            essaySubmitBtn.onclick = function() {
+                processEssayEvaluation(cur, state, dom);
+            };
+        }
+        return; // Break execution out early since we don't have MCQ options to loop over
+    }
 
-            // 🌟 Record the selection data for the final summary matrix
-            state.userAnswers.push({
-                questionText: cur.question,
-                options: cur.options,
-                chosenKey: key,
-                correctKey: cur.correct_answer,
-                explanation: cur.explanation || "No concept breakdown provided."
-            });
+    /* ==========================================================================
+       BRANCH B: STANDARD MULTIPLE CHOICE LOGIC (YOUR ORIGINAL ENGINE RULES)
+       ========================================================================== */
+    if (dom.options) dom.options.style.display = "grid"; // Ensure MCQ grid is visible if coming from an essay card
 
-            const allBtns = dom.options.querySelectorAll(".option-btn");
-            allBtns.forEach(b => b.setAttribute("disabled", "true"));
-
-            const isCorrect = (key === cur.correct_answer);
-            if (isCorrect) state.score++;
-
-            if (quizMode === "practice") {
-                if (isCorrect) {
-                    btn.classList.add("correct");
-                    if (dom.fbTitle) dom.fbTitle.textContent = "Correct Answer! 🎉";
-                    if (dom.feedback) dom.feedback.className = "feedback-panel correct-panel";
-                } else {
-                    btn.classList.add("incorrect");
-                    if (dom.fbTitle) dom.fbTitle.textContent = `Incorrect. Correct answer was ${cur.correct_answer}`;
-                    if (dom.feedback) dom.feedback.className = "feedback-panel incorrect-panel";
-                    allBtns.forEach(b => { 
-                        if (b.innerHTML.startsWith(`<strong>${cur.correct_answer}:</strong>`)) b.classList.add("correct"); 
-                    });
-                }
-                if (dom.explanation) dom.explanation.textContent = cur.explanation || "No explanation provided.";
-                if (dom.score) dom.score.textContent = state.score;
-                if (dom.attempted) dom.attempted.textContent = state.attempted;
+    if (cur.options) {
+        Object.entries(cur.options).forEach(([key, val]) => {
+            if (!val) return;
+            const btn = document.createElement("button");
+            btn.className = "option-btn";
+            btn.innerHTML = `<strong>${key}:</strong> ${val}`;
+            
+            btn.addEventListener("click", () => {
+                if (state.hasAnswered) return;
                 
-                if (dom.feedback) {
-                    dom.feedback.classList.remove("hidden");
-                    dom.feedback.style.display = "block";
-                }
-                
-            } else {
-                // 📝 EXAM MODE: Highlight choice, skip feedback completely, auto-advance
-                btn.style.backgroundColor = "#f3e8ff"; 
-                btn.style.borderColor = "#a855f7";
-                btn.style.color = "#6b21a8";
+                btn.classList.add("selected-pop");
+                state.hasAnswered = true;
+                state.attempted++;
 
-                if (dom.feedback) {
-                    dom.feedback.classList.add("hidden");
-                    dom.feedback.style.display = "none";
-                }
+                state.userAnswers.push({
+                    questionText: cur.question,
+                    options: cur.options,
+                    chosenKey: key,
+                    correctKey: cur.correct_answer,
+                    explanation: cur.explanation || "No concept breakdown provided."
+                });
 
-                setTimeout(() => {
-                    state.currentIndex++;
-                    if (state.currentIndex < state.questions.length) {
-                        renderQuestion(state, dom, quizMode, courseCode);
+                const allBtns = dom.options.querySelectorAll(".option-btn");
+                allBtns.forEach(b => b.setAttribute("disabled", "true"));
+
+                const isCorrect = (key === cur.correct_answer);
+                if (isCorrect) state.score++;
+
+                if (quizMode === "practice") {
+                    if (isCorrect) {
+                        btn.classList.add("correct");
+                        if (dom.fbTitle) dom.fbTitle.textContent = "Correct Answer! 🎉";
+                        if (dom.feedback) dom.feedback.className = "feedback-panel correct-panel";
                     } else {
-                        renderTerminalView(state, dom, courseCode);
+                        btn.classList.add("incorrect");
+                        if (dom.fbTitle) dom.fbTitle.textContent = `Incorrect. Correct answer was ${cur.correct_answer}`;
+                        if (dom.feedback) dom.feedback.className = "feedback-panel incorrect-panel";
+                        allBtns.forEach(b => { 
+                            if (b.innerHTML.startsWith(`<strong>${cur.correct_answer}:</strong>`)) b.classList.add("correct"); 
+                        });
                     }
-                }, 400);
-            }
+                    if (dom.explanation) dom.explanation.textContent = cur.explanation || "No explanation provided.";
+                    if (dom.score) dom.score.textContent = state.score;
+                    if (dom.attempted) dom.attempted.textContent = state.attempted;
+                    
+                    if (dom.feedback) {
+                        dom.feedback.classList.remove("hidden");
+                        dom.feedback.style.display = "block";
+                    }
+                    
+                } else {
+                    btn.style.backgroundColor = "#f3e8ff"; 
+                    btn.style.borderColor = "#a855f7";
+                    btn.style.color = "#6b21a8";
+
+                    if (dom.feedback) {
+                        dom.feedback.classList.add("hidden");
+                        dom.feedback.style.display = "none";
+                    }
+
+                    setTimeout(() => {
+                        state.currentIndex++;
+                        if (state.currentIndex < state.questions.length) {
+                            renderQuestion(state, dom, quizMode, courseCode);
+                        } else {
+                            renderTerminalView(state, dom, courseCode);
+                        }
+                    }, 400);
+                }
+            });
+            if (dom.options) dom.options.appendChild(btn);
         });
-        if (dom.options) dom.options.appendChild(btn);
-    });
+    }
 }
 
+
+
+/* ==========================================================================
+   RENDER TERMINAL VIEW (HYBRID MULTI-CHOICE & ESSAY ANALYTICS BREAKDOWN)
+   ========================================================================== */
 function renderTerminalView(state, dom, courseCode) {
+    // 1. Instantly close active input fields and AI feedback components
+    const essayWorkspace = document.getElementById("essayWorkspaceContainer");
+    const aiFeedbackBox = document.getElementById("aiFeedbackContainer");
+    if (essayWorkspace) essayWorkspace.style.setProperty("display", "none", "important");
+    if (aiFeedbackBox) aiFeedbackBox.style.setProperty("display", "none", "important");
+
+    // Clean old display markup out of the option wrapper space
     dom.options.innerHTML = "";
     if (dom.feedback) {
         dom.feedback.classList.add("hidden");
-        dom.feedback.style.display = "none";
+        dom.feedback.style.display = "none"; 
     }
     if (dom.topic) dom.topic.textContent = "Simulation Assessment Review";
     
     const noticeBanner = document.getElementById("examModeNotice");
     if (noticeBanner) noticeBanner.classList.add("hidden");
 
-    const correctCount = state.score;
-    const incorrectCount = state.attempted - state.score;
-    const accuracyPercent = state.attempted > 0 ? Math.round((correctCount / state.attempted) * 100) : 0;
-    
-    if (dom.qText) dom.qText.textContent = `Review completed for ${courseCode}. Below is your performance analysis breakdown.`;
-    
-    // GitHub Routing Parameters
-    const githubUser = "UncleT-cyber"; 
-    const repoName = "mivaprep";
-    const issueTitle = encodeURIComponent(`Metrics Log Checkpoint - ${courseCode}`);
-    const issueBody = encodeURIComponent(`Simulation Results Summary:\n- Course: ${courseCode}\n- Accuracy: ${accuracyPercent}%\n- Correct: ${correctCount}\n- Total Attempted: ${state.attempted}`);
-    const githubUrl = `https://github.com/${githubUser}/${repoName}/issues/new?title=${issueTitle}&body=${issueBody}`;
-
-    // 🌟 BUILD INTERACTIVE HTML STRINGS FOR EVERY ANSWERED QUESTION
     let reviewRowsHtml = "";
-    state.userAnswers.forEach((ans, i) => {
-        const statusClass = (ans.chosenKey === ans.correctKey) ? "review-correct" : "review-incorrect";
-        const badgeText = (ans.chosenKey === ans.correctKey) ? "✅ Correct" : "❌ Incorrect";
-        
-        let optionsListHtml = "";
-        Object.entries(ans.options).forEach(([k, v]) => {
-            if (!v) return;
-            let matchStyle = "";
-            if (k === ans.correctKey) {
-                matchStyle = "color: #10b981; font-weight: 700; background-color: #ecfdf5; border-radius:4px; padding: 2px 6px;";
-            } else if (k === ans.chosenKey && ans.chosenKey !== ans.correctKey) {
-                matchStyle = "color: #ef4444; font-weight: 700; background-color: #fef2f2; border-radius:4px; padding: 2px 6px;";
+    let globalItemCounter = 1;
+
+    // ==========================================================================
+    // 📊 TRACK & PROCESS STREAM A: MULTIPLE CHOICE QUESTIONS (FROM STATE OBJECT)
+    // ==========================================================================
+    let mcqAttempted = 0;
+    let mcqCorrect = 0;
+
+    if (state && Array.isArray(state.userAnswers) && state.userAnswers.length > 0) {
+        state.userAnswers.forEach((ans) => {
+            // Check if this answer isn't an essay placeholder hidden inside state
+            const isEssayInState = (ans.options && ans.options["Your Submission"]) || ans.chosenKey === "Review Pending";
+            
+            if (!isEssayInState) {
+                mcqAttempted++;
+                const isCorrect = ans.chosenKey === ans.correctKey;
+                if (isCorrect) mcqCorrect++;
+
+                const badgeColor = isCorrect ? "#10b981" : "#ef4444";
+                const badgeText = isCorrect ? "✅ Correct" : "❌ Incorrect";
+
+                let optionsListHtml = "";
+                if (ans.options) {
+                    Object.entries(ans.options).forEach(([k, v]) => {
+                        if (!v) return;
+                        let matchStyle = "";
+                        if (k === ans.correctKey) {
+                            matchStyle = "color: #10b981; font-weight: 700; background-color: #ecfdf5; border-radius:4px; padding: 2px 6px;";
+                        } else if (k === ans.chosenKey && !isCorrect) {
+                            matchStyle = "color: #ef4444; font-weight: 700; background-color: #fef2f2; border-radius:4px; padding: 2px 6px;";
+                        }
+                        optionsListHtml += `<li style="margin-bottom: 6px; ${matchStyle}"><strong>${k}:</strong> ${v}</li>`;
+                    });
+                }
+
+                reviewRowsHtml += `
+                    <div class="review-card mcq-card" style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; background: white; display: flex; flex-direction: column; gap: 0.75rem; border-left: 5px solid ${badgeColor} !important; margin-bottom: 1rem; text-align: left;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem;">
+                            <strong style="color: #4a154b;">Question ${globalItemCounter} (Multiple Choice)</strong>
+                            <span style="font-weight: 700; font-size: 0.85rem; color: ${badgeColor};">${badgeText}</span>
+                        </div>
+                        <p style="font-weight: 600; color: #1e293b; margin: 0;">${ans.questionText || "Multiple Choice Question Item"}</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin: 0; font-size: 0.95rem; color: #334155;">${optionsListHtml}</ul>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #64748b; padding: 0.75rem; border-radius: 4px; font-size: 0.9rem; color: #475569;">
+                            <strong>Explanation:</strong> ${ans.explanation || "No clarification metadata provided."}
+                        </div>
+                    </div>
+                `;
+                globalItemCounter++;
             }
-            optionsListHtml += `<li style="margin-bottom: 6px; ${matchStyle}"><strong>${k}:</strong> ${v}</li>`;
         });
+    }
+
+    // ==========================================================================
+    // 📝 TRACK & PROCESS STREAM B: ESSAY SUBMISSIONS (FROM BACKEND CACHE)
+    // ==========================================================================
+    const essayList = window.essaySubmissionsList || [];
+    const totalEssays = essayList.length;
+    
+    essayList.forEach((item) => {
+        let formattedAiFeedback = item.aiEvaluation
+            ? item.aiEvaluation.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br>")
+            : "No structured critique payload logged.";
 
         reviewRowsHtml += `
-            <div class="review-card ${statusClass}" style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; background: white; display: flex; flex-direction: column; gap: 0.75rem;">
+            <div class="review-card review-essay" style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; background: white; display: flex; flex-direction: column; gap: 0.75rem; border-left: 5px solid #4a154b !important; margin-bottom: 1rem; text-align: left;">
                 <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem;">
-                    <strong style="color: #4a154b;">Question ${i + 1}</strong>
-                    <span style="font-weight: 700; font-size: 0.85rem;" class="status-badge">${badgeText}</span>
+                    <strong style="color: #4a154b;">Question ${globalItemCounter} (Essay Response)</strong>
+                    <span style="font-weight: 700; font-size: 0.85rem; color: #4a154b;">📝 Evaluation Logged</span>
                 </div>
-                <p style="font-weight: 600; color: #1e293b; margin: 0;">${ans.questionText}</p>
-                <ul style="list-style-type: none; padding-left: 0; margin: 0;">
-                    ${optionsListHtml}
-                </ul>
-                <div style="background-color: #f8fafc; border-left: 3px solid #64748b; padding: 0.75rem; border-radius: 4px; font-size: 0.9rem; color: #475569;">
-                    <strong>Concept Breakdown:</strong> ${ans.explanation}
+                <p style="font-weight: 600; color: #1e293b; margin: 0;">${item.questionText || "Essay Prompt Case Study"}</p>
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1rem;">
+                    <strong style="color: #475569; font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Your Written Response:</strong>
+                    <p style="color: #1e293b; margin: 0; white-space: pre-wrap; font-style: italic;">"${item.submissionText}"</p>
+                </div>
+                <div style="background-color: #f5f3ff; border-left: 3px solid #7c3aed; padding: 1rem; border-radius: 4px; font-size: 0.9rem; color: #1e293b;">
+                    <strong style="color: #6d28d9; display: block; margin-bottom: 0.5rem;">🤖 Nexus AI Assessment Breakdown:</strong>
+                    <div style="line-height: 1.5;">${formattedAiFeedback}</div>
                 </div>
             </div>
         `;
+        globalItemCounter++;
     });
 
+    // ==========================================================================
+    // 📈 MATH RATIO CALCULATOR FOR THE STATS LABELS
+    // ==========================================================================
+    const mcqIncorrect = mcqAttempted - mcqCorrect;
+    const accuracyPercent = mcqAttempted > 0 ? Math.round((mcqCorrect / mcqAttempted) * 100) : 100;
+
+    if (dom.qText) dom.qText.textContent = `Review completed for ${courseCode || "COS 301"}. Below is your session analysis breakdown.`;
+
+    // 🌟 PASTE IT HERE (Right before analyticsWrapper is created)
+    const githubUser = "UncleT-cyber"; 
+    const repoName = "mivaprep";
+    const issueTitle = encodeURIComponent(`Metrics Log Checkpoint - ${courseCode || "COS 301"}`);
+    const issueBody = encodeURIComponent(`Simulation Results Summary:\n- MCQ Accuracy: ${accuracyPercent}%\n- MCQ Attempted: ${mcqAttempted}\n- Essays Submitted: ${totalEssays}`);
+    const githubUrl = `https://github.com/${githubUser}/${repoName}/issues/new?title=${issueTitle}&body=${issueBody}`;
+
+    // 3. CREATE DYNAMIC LAYOUT WITH CONDITIONAL CHART TRACKERS
     const analyticsWrapper = document.createElement("div");
     analyticsWrapper.className = "analytics-container";
     analyticsWrapper.innerHTML = `
@@ -256,51 +359,300 @@ function renderTerminalView(state, dom, courseCode) {
             .analytics-container { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.75rem; }
             .chart-frame { background-color: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 2rem 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
             .chart-row { display: flex; align-items: center; gap: 1rem; }
-            .chart-label { width: 90px; font-size: 0.9rem; font-weight: 700; color: #4a154b; }
+            .chart-label { width: 95px; font-size: 0.9rem; font-weight: 700; color: #4a154b; text-align: left; }
             .chart-track-bg { flex: 1; background-color: #e2e8f0; height: 28px; border-radius: 6px; overflow: hidden; position: relative; }
             .chart-fill-bar { height: 100%; display: flex; align-items: center; padding-left: 0.75rem; color: white; font-size: 0.85rem; font-weight: 700; transition: width 1s ease; width: 0%; }
             .fill-correct { background: #10b981; }
             .fill-incorrect { background: #ef4444; }
-            .accuracy-badge-box { text-align: center; font-size: 1.5rem; font-weight: 800; color: #e91e63; margin: 0.5rem 0; }
-            .action-button-stack { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1rem; }
-            .btn-terminal { padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; display: block; font-size: 14px; }
-            .review-card.review-correct { border-left: 5px solid #10b981 !important; }
-            .review-card.review-incorrect { border-left: 5px solid #ef4444 !important; }
-            .review-card.review-correct .status-badge { color: #10b981; }
-            .review-card.review-incorrect .status-badge { color: #ef4444; }
+            .fill-essay { background: #4a154b; }
+            .accuracy-badge-box { text-align: center; font-size: 1.4rem; font-weight: 800; color: #4a154b; margin: 0.5rem 0; }
         </style>
 
-        <div class="accuracy-badge-box">Accuracy Rating: ${accuracyPercent}%</div>
-        <div class="chart-frame">
-            <div class="chart-row">
-                <span class="chart-label">Correct</span>
-                <div class="chart-track-bg"><div id="barCorrect" class="chart-fill-bar fill-correct">${correctCount} Answers</div></div>
-            </div>
-            <div class="chart-row">
-                <span class="chart-label">Incorrect</span>
-                <div class="chart-track-bg"><div id="barIncorrect" class="chart-fill-bar fill-incorrect">${incorrectCount} Answers</div></div>
-            </div>
+        <div class="accuracy-badge-box">
+            ${mcqAttempted > 0 ? `MCQ Accuracy Rating: ${accuracyPercent}%` : `Assessment Session Complete`}
         </div>
         
-        <div class="action-button-stack">
-            <a href="${githubUrl}" target="_blank" rel="noopener noreferrer" class="btn-terminal" style="background-color: #24292e;">🐙 Submit Feedback to GitHub</a>
-            <button onclick="window.location.reload()" class="btn-terminal" style="background-color: #4a154b;">🔄 Start New Session</button>
-            <a href="index.html" class="btn-terminal" style="background-color: #64748b;">🏠 Exit to Home Landing</a>
+        <div class="chart-frame">
+            ${mcqAttempted > 0 ? `
+            <div class="chart-row">
+                <span class="chart-label">MCQ Right</span>
+                <div class="chart-track-bg"><div id="barCorrect" class="chart-fill-bar fill-correct">0 Answers</div></div>
+            </div>
+            <div class="chart-row">
+                <span class="chart-label">MCQ Wrong</span>
+                <div class="chart-track-bg"><div id="barIncorrect" class="chart-fill-bar fill-incorrect">0 Answers</div></div>
+            </div>
+            ` : ''}
+            
+            ${totalEssays > 0 ? `
+            <div class="chart-row">
+                <span class="chart-label">Essays</span>
+                <div class="chart-track-bg"><div id="barEssay" class="chart-fill-bar fill-essay">0 Submissions</div></div>
+            </div>
+            ` : ''}
         </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1rem;">
+    <a href="${githubUrl}" target="_blank" rel="noopener noreferrer" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; text-decoration: none; display: block; font-size: 14px; background-color: #24292e;">🐙 Submit Feedback to GitHub</a>
+    
+    <button onclick="window.location.reload()" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; cursor: pointer; display: block; font-size: 14px; background-color: #4a154b;">🔄 Start New Session</button>
+    <a href="index.html" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; text-decoration: none; display: block; font-size: 14px; background-color: #64748b;">🏠 Exit to Home Landing</a>
+</div>
 
         <div id="simulationReviewStack" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem;">
-            <h3 style="color: #4a154b; margin: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;">Simulation Item Review Log</h3>
-            ${reviewRowsHtml}
+            <h3 style="color: #4a154b; margin: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; text-align: left;">Simulation Item Review Log</h3>
+            ${(mcqAttempted + totalEssays) > 0 ? reviewRowsHtml : `<p style="color: #64748b; font-style: italic; text-align: left;">No processed questions or answers found in active session memory.</p>`}
         </div>
     `;
 
     if (dom.options) dom.options.appendChild(analyticsWrapper);
 
+    // ==========================================================================
+    // 🏎️ TIMEOUT TRIGGERED CSS ANIMATION RENDERING
+    // ==========================================================================
     setTimeout(() => {
-        const totalAnswers = state.attempted || 1;
-        const correctBar = document.getElementById("barCorrect");
-        const incorrectBar = document.getElementById("barIncorrect");
-        if (correctBar) correctBar.style.width = `${(correctCount / totalAnswers) * 100}%`;
-        if (incorrectBar) incorrectBar.style.width = `${(incorrectCount / totalAnswers) * 100}%`;
+        if (mcqAttempted > 0) {
+            const correctBar = document.getElementById("barCorrect");
+            const incorrectBar = document.getElementById("barIncorrect");
+            
+            if (correctBar) {
+                correctBar.style.width = `${(mcqCorrect / mcqAttempted) * 100}%`;
+                correctBar.textContent = `${mcqCorrect} Correct`;
+            }
+            if (incorrectBar) {
+                incorrectBar.style.width = `${(mcqIncorrect / mcqAttempted) * 100}%`;
+                incorrectBar.textContent = `${mcqIncorrect} Incorrect`;
+            }
+        }
+        
+        const essayBar = document.getElementById("barEssay");
+        if (essayBar && totalEssays > 0) {
+            essayBar.style.width = "100%";
+            essayBar.textContent = `${totalEssays} Submitted`;
+        }
     }, 100);
+}
+
+
+
+/* ==========================================================================
+   NEXUS AI COGNITIVE PIPELINE FOR ESSAY ASSESSMENTS
+   ========================================================================== */
+async function processEssayEvaluation(curQuestion, state, dom) {
+    const essayInput = document.getElementById("essayResponseInput");
+    const essaySubmitBtn = document.getElementById("essaySubmitBtn");
+    const aiFeedbackBox = document.getElementById("aiFeedbackContainer");
+    const aiFeedbackText = document.getElementById("aiFeedbackText");
+
+    const studentSubmission = essayInput ? essayInput.value.trim() : "";
+
+    if (!studentSubmission) {
+        alert("Please compose an academic response before submitting for evaluation.");
+        return;
+    }
+
+    if (essaySubmitBtn) {
+        essaySubmitBtn.textContent = "Analyzing Response Integrity via Nexus AI...";
+        essaySubmitBtn.disabled = true;
+        essaySubmitBtn.style.opacity = "0.5";
+    }
+
+    try {
+        const response = await fetch("/api/evaluate-essay", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                question: curQuestion.question,
+                expectedCriteria: curQuestion.key_points_expected || [],
+                submission: studentSubmission
+            })
+        });
+
+        if (!response.ok) throw new Error("Evaluation network connection fault.");
+        const data = await response.json();
+
+        if (aiFeedbackText) aiFeedbackText.innerHTML = data.evaluation;
+        if (aiFeedbackBox) aiFeedbackBox.style.display = "block";
+
+        state.userAnswers.push({
+            questionText: curQuestion.question,
+            options: { "Your Submission": studentSubmission },
+            chosenKey: "Review Pending",
+            correctKey: "Review Pending",
+            explanation: curQuestion.explanation || "No data criteria breakdown provided."
+        });
+
+        if (dom.feedback) {
+            if (dom.fbTitle) dom.fbTitle.textContent = "Evaluation Processed Successfully";
+            if (dom.explanation) dom.explanation.textContent = curQuestion.explanation || "";
+            dom.feedback.className = "feedback-panel correct-panel";
+            dom.feedback.classList.remove("hidden");
+            dom.feedback.style.display = "block";
+        }
+
+        if (dom.feedback) {
+            if (dom.fbTitle) dom.fbTitle.textContent = "Evaluation Processed Successfully";
+            if (dom.explanation) dom.explanation.textContent = curQuestion.explanation || "";
+            dom.feedback.className = "feedback-panel correct-panel";
+            dom.feedback.classList.remove("hidden");
+            dom.feedback.style.display = "block";
+        }
+
+        // ====== FORCE NEXT QUESTION BUTTON TO SHOW ======
+        if (dom.btnNext) {
+            dom.btnNext.style.setProperty("display", "block", "important");
+            dom.btnNext.classList.remove("hidden");
+        }
+
+    } catch (err) {
+        console.error("AI Node Interruption Error: ", err);
+        if (aiFeedbackText) aiFeedbackText.textContent = "Nexus AI communication failure. (Note: Serverless functions require netlify dev to run locally).";
+        if (aiFeedbackBox) aiFeedbackBox.style.display = "block";
+    } finally {
+        if (essaySubmitBtn) {
+            essaySubmitBtn.textContent = "Submit to Nexus AI for Evaluation";
+            essaySubmitBtn.disabled = false;
+            essaySubmitBtn.style.opacity = "1";
+        }
+    }
+}
+
+window.handleEssayEvaluation = async function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentMode = urlParams.get("mode") || "practice";
+
+    const submissionField = document.getElementById("essayResponseInput");
+    const submissionText = submissionField ? submissionField.value.trim() : "";
+    
+    if (!submissionText) {
+        alert("Please write a response before submitting!");
+        return;
+    }
+
+    // Initialize an array sequence to keep track of submissions cleanly
+    if (!window.essaySubmissionsList) {
+        window.essaySubmissionsList = [];
+    }
+
+    const activeQuestionElement = document.querySelector(".quiz-question-text") || document.querySelector("h2") || document.querySelector("h3");
+    const questionText = activeQuestionElement ? activeQuestionElement.textContent.trim() : "Essay Examination Question";
+
+    // Create a base log object placeholder immediately
+    const entryIndex = window.essaySubmissionsList.length;
+    const currentEntry = {
+        questionText: questionText,
+        submissionText: submissionText,
+        aiEvaluation: "Review Pending Analysis"
+    };
+    window.essaySubmissionsList.push(currentEntry);
+
+    // Backup to your legacy object cache map to preserve standard routing behavior
+    if (!window.examAnswersCache) window.examAnswersCache = {};
+    window.examAnswersCache[entryIndex] = submissionText;
+
+    // ==========================================
+    // 📝 BRANCH PATHWAY A: EXAM MODE EXECUTION
+    // ==========================================
+    if (currentMode === "exam" || currentMode === "simulation") {
+        if (submissionField) submissionField.disabled = true;
+
+        const nextBtn = document.getElementById("nextQuestionBtn") || document.getElementById("next-btn") || document.querySelector(".next-btn");
+        if (nextBtn) {
+            nextBtn.style.display = "block"; 
+            nextBtn.classList.remove("hidden");
+        }
+        
+        const submitBtn = document.getElementById("submitEssayBtn");
+        if (submitBtn) {
+            submitBtn.innerHTML = "✅ Answer Saved Successfully";
+            submitBtn.style.backgroundColor = "#10b981";
+            submitBtn.disabled = true;
+        }
+        return;
+    }
+
+    // ==========================================
+    // 🎓 BRANCH PATHWAY B: PRACTICE MODE POPUP
+    // ==========================================
+    const modalOverlay = document.createElement("div");
+    modalOverlay.className = "nexus-modal-overlay";
+    modalOverlay.id = "nexus-evaluation-modal";
+    
+    modalOverlay.innerHTML = `
+        <div class="nexus-modal-card">
+            <div class="nexus-loader-container" id="nexus-modal-loading-state">
+                <div class="nexus-spinner"></div>
+                <p class="nexus-loader-text">🤖 Nexus AI is thoroughly analyzing your architectural synthesis...</p>
+            </div>
+            <div class="nexus-modal-body hidden" id="nexus-modal-result-state">
+                <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-primary);">🤖 Nexus AI Assessment Review</h3>
+                <hr style="border: 0; border-top: 1px solid var(--border-color); margin-bottom: 1rem;">
+                <div id="nexus-modal-text-content"></div>
+                <button class="nexus-modal-close-btn" onclick="
+                    document.getElementById('nexus-evaluation-modal').remove(); 
+                    const optionsGrid = document.getElementById('optionsContainer');
+                    if (optionsGrid) optionsGrid.style.setProperty('display', 'grid', 'important');
+                    const nativeNextBtn = document.getElementById('btnNext');
+                    if (nativeNextBtn) nativeNextBtn.click();
+                ">Close Review and Continue</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modalOverlay);
+
+    try {
+        const response = await fetch('/api/evaluate-essay', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                question: questionText,
+                expectedCriteria: "Demonstrates coherent architectural synthesis, clear analytical formatting, and algorithmic context.",
+                submission: submissionText
+            })
+        });
+
+        if (!response.ok) throw new Error("Ollama connection timeout.");
+        const data = await response.json();
+
+        // 🌟 SAVE REAL REAL AI EVALUATION DIRECTLY TO ENTRY FOR THE TERMINAL DISPLAY
+        currentEntry.aiEvaluation = data.evaluation;
+
+        document.getElementById("nexus-modal-loading-state").classList.add("hidden");
+        const resultState = document.getElementById("nexus-modal-result-state");
+        resultState.classList.remove("hidden");
+        
+        let cleanHtmlOutput = data.evaluation
+            .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+            .replace(/\n/g, "<br>");
+
+        document.getElementById("nexus-modal-text-content").innerHTML = cleanHtmlOutput;
+
+        const nextBtn = document.getElementById("nextQuestionBtn") || document.getElementById("next-btn") || document.querySelector(".next-btn");
+        if (nextBtn) {
+            nextBtn.style.display = "block"; 
+            nextBtn.classList.remove("hidden");
+        }
+
+    } catch (error) {
+        console.error("Nexus AI Frontend Invocation Error:", error);
+        currentEntry.aiEvaluation = "Evaluation connection offline or timed out.";
+        const loadingState = document.getElementById("nexus-modal-loading-state");
+        if (loadingState) {
+            loadingState.innerHTML = `
+                <p style="color: #ef4444; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">⚠️ Evaluation Connection Interrupted</p>
+                <button class="nexus-modal-close-btn" style="align-self: center;" onclick="document.getElementById('nexus-evaluation-modal').remove()">Dismiss</button>
+            `;
+        }
+    }
+};
+
+// ==========================================================================
+// 🔗 BINDING THE DISPATCH EVENTS INTERNALLY
+// ==========================================================================
+// Find your 'Submit to Nexus AI for Evaluation' purple action button element 
+// Replace 'submitEssayBtn' with the actual ID you set on that button node element
+const processEssayBtn = document.getElementById("submitEssayBtn") || document.querySelector("button[onclick*='evaluate']");
+if (processEssayBtn) {
+    processEssayBtn.removeAttribute("onclick"); // Clean out legacy inline execution assignments
+    processEssayBtn.addEventListener("click", handleEssayEvaluation);
 }

@@ -381,3 +381,35 @@ p, .tracker-text, .explanation-box p { color: var(--text-secondary); }
 #nextBtn.selected-pop {
     animation: cardPop 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
+
+/* Ensure essay text input is perfectly visible and readable in dark mode */
+#essayResponseInput {
+    color: #ffffff !important; /* Forces text to show bright white */
+    background-color: #1e293b !important; /* Gives the input field a distinct slate-dark cavity */
+    border: 2px solid #334155 !important;
+    padding: 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+#essayResponseInput:focus {
+    border-color: #a855f7 !important; /* Glow purple when active */
+}
+
+#aiFeedbackText p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+#aiFeedbackText ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    list-style-type: disc;
+}
+
+#aiFeedbackText li {
+    margin-bottom: 0.4rem;
+}
+

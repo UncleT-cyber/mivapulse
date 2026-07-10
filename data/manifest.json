@@ -21,12 +21,16 @@
       ]
     },
     {
-      "id": "300L",
-      "name": "300 Level (Penultimate Year)",
-      "courses": [
-        { "code": "", "title": "N/A", "file": "300L/csc_301_dsa.json" }
-      ]
-    },
+  "id": "300L",
+  "name": "300 Level (Penultimate Year)",
+  "courses": [
+    { 
+      "code": "COS 301", 
+      "title": "Data Structures & Algorithms", 
+      "file": "300L/cos_301_data_structures.json" 
+    }
+  ]
+},
     {
       "id": "400L",
       "name": "400 Level (Senior)",

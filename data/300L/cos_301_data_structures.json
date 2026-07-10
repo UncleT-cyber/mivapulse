@@ -1,0 +1,23 @@
+[
+  {
+    "id": "COS 301",
+    "type": "essay",
+    "question": "Which of the following is a routine problem solvable using predefined algorithms?",
+    "key_points_expected": [
+      "Deterministic routine task matches",
+      "Undecidable multi-constraint problem"
+    ],
+    "explanation": "Predefined algorithms map out deterministic routine tasks cleanly."
+  },
+  {
+    "id": "COS 301",
+    "type": "essay",
+    "question": "Critically analyze the trade-offs between monolithic architectures and microservices in banking faculties.",
+    "key_points_expected": [
+      "Scalability vectors",
+      "Network latency overhead",
+      "Data consistency models"
+    ],
+    "explanation": "Focus heavily on system partitioning constraints."
+  }
+]

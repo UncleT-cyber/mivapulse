@@ -631,30 +631,199 @@ header, .app-nav {
 /* ==========================================================================
    LIGHT MODE: REFINED HIGH-VISIBILITY CREAM NAVBAR
    ========================================================================== */
-:root[data-theme="light"] {
-    /* A richer, elegant cream that stands out cleanly against white page blocks */
+[data-theme="light"] {
     --nav-bg-light: #faf5eb;      
-    
-    /* A warm, subtle gray-gold divider line to define the boundary */
     --nav-border-light: #e6dcce; 
-    
-    /* Crisp dark slate text color for the logo and link elements */
     --nav-text-light: #0f172a;
 }
 
-/* Apply the structural properties explicitly to your top layout elements */
-:root[data-theme="light"] header,
-:root[data-theme="light"] .navbar,
-:root[data-theme="light"] nav,
-:root[data-theme="light"] .quiz-header {
+[data-theme="light"] header,
+[data-theme="light"] .navbar,
+[data-theme="light"] nav,
+[data-theme="light"] .quiz-header {
     background-color: var(--nav-bg-light) !important;
-    border-bottom: 2px solid var(--nav-border-light) !important; /* Thickened slightly for crisp visibility */
-    box-shadow: 0 4px 20px rgba(45, 35, 20, 0.04) !important; /* Soft, warm shadow signature */
+    border-bottom: 2px solid var(--nav-border-light) !important; 
+    box-shadow: 0 4px 20px rgba(45, 35, 20, 0.04) !important; 
 }
 
-/* Ensure branding text and icons inside the cream nav remain sharply readable */
-:root[data-theme="light"] header *,
-:root[data-theme="light"] .navbar *,
-:root[data-theme="light"] .quiz-header * {
-    color: var(--nav-text-light) && !matches(.btn-hero-main, button[class*="main"], .btn, [style*="background"]) !important;
+[data-theme="light"] header :not(.btn),
+[data-theme="light"] .navbar :not(.btn),
+[data-theme="light"] .quiz-header :not(.btn) {
+    color: var(--nav-text-light);
+}
+
+/* ==========================================================================
+   FOOTER: SIGNATURE BRAND PURPLE OVERRIDE
+   ========================================================================== */
+footer, 
+.footer, 
+.site-footer {
+    background-color: #4c1d5c !important; 
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+footer p, 
+footer span, 
+footer a,
+.footer * {
+    color: rgba(255, 255, 255, 0.7) !important; 
+}
+
+footer strong, 
+footer b,
+.footer strong {
+    color: #ffffff !important; 
+}
+
+/* ==========================================================================
+   NEXUS AI ESSAY EVALUATION THEME ADAPTATION
+   ========================================================================== */
+.nexus-ai-grade-analysis, 
+#evaluation-output-container,
+[class*="GradeAnalysis"] {
+    color: var(--text-primary) !important; 
+    line-height: 1.6;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.nexus-ai-grade-analysis strong, 
+#evaluation-output-container strong {
+    color: var(--brand-primary) !important; 
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   FORCE HIGH-CONTRAST VISIBILITY FOR AI RESULTS WINDOW
+   ========================================================================== */
+/* Targets the wrapper component box directly and forces it to be fully opaque */
+.nexus-ai-grade-analysis, 
+#evaluation-output-container,
+[class*="GradeAnalysis"],
+[class*="evaluation"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    background-color: var(--bg-card) !important; /* Forces it to use your clean card slate/white */
+    border: 1px solid var(--border-color) !important;
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+}
+
+/* Forces the raw paragraph text inside to accept the primary theme color variables */
+.nexus-ai-grade-analysis p,
+#evaluation-output-container p,
+.nexus-ai-grade-analysis div,
+#evaluation-output-container div,
+[class*="GradeAnalysis"] * {
+    color: var(--text-primary) !important; /* Resolves the dim dark slate blend */
+    opacity: 1 !important;
+    font-weight: 500 !important;
+}
+
+/* High-contrast colors for markdown highlights inside the assessment response tray */
+.nexus-ai-grade-analysis strong,
+#evaluation-output-container strong,
+.nexus-ai-grade-analysis b,
+#evaluation-output-container b {
+    color: var(--brand-primary) !important; 
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}
+
+/* ==========================================================================
+   NEXUS EVALUATION MODAL & LOADER
+   ========================================================================== */
+.nexus-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+}
+
+.nexus-modal-card {
+    background-color: var(--bg-card, #1e293b);
+    border: 1px solid var(--border-color, #334155);
+    width: 90%;
+    max-width: 650px;
+    max-height: 85vh;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    animation: nexusPopUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nexus-modal-body {
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding-right: 8px;
+    color: var(--text-primary, #f8fafc) !important;
+    line-height: 1.6;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* Clear typography visibility for markup inside the modal */
+.nexus-modal-body strong {
+    color: var(--brand-primary, #c084fc) !important;
+    font-weight: 700;
+}
+
+.nexus-modal-close-btn {
+    background-color: var(--brand-primary, #4a154b);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    align-self: flex-end;
+    transition: var(--transition, all 0.2s);
+}
+.nexus-modal-close-btn:hover {
+    opacity: 0.9;
+}
+
+/* Loading Ring Indicator Spinner */
+.nexus-loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.nexus-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(192, 132, 252, 0.1);
+    border-top: 5px solid var(--brand-primary, #c084fc);
+    border-radius: 50%;
+    animation: nexusSpin 1s linear infinite;
+}
+
+.nexus-loader-text {
+    color: var(--text-secondary, #94a3b8);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+@keyframes nexusSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes nexusPopUp {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
 }
