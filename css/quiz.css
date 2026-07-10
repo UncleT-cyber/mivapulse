@@ -303,3 +303,17 @@ p, .tracker-text, .explanation-box p { color: var(--text-secondary); }
     .question-text { font-size: 1.2rem; }
     .quiz-header-container { flex-direction: column; text-align: center; }
 }
+
+@media (max-width: 768px) {
+    /* Hide the non-essential "New Practice" action button in the quiz view header on mobile */
+    .quiz-header .header-actions button.btn,
+    .quiz-header .header-actions a.btn,
+    header button[onclick*="location.href='index.html'"] {
+        display: none !important;
+    }
+    
+    /* Make sure the center text breaks gracefully without pushing layout containers */
+    .active-meta {
+        max-width: 45% !important;
+    }
+}
