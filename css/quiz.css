@@ -312,46 +312,7 @@ p, .tracker-text, .explanation-box p { color: var(--text-secondary); }
         display: none !important;
     }
 
-@media (max-width: 768px) {
-    /* Compress the structural card bounds */
-    .modal-card {
-        width: 92% !important;
-        max-height: 80vh !important;       /* Confines card height cleanly within the phone view */
-        padding: 16px !important;          /* Eliminates bulky desktop padding */
-        display: flex !important;
-        flex-direction: column !important;
-        overflow: hidden !important;        /* Keeps the card layout from overflowing */
-    }
-
-    /* Force the modal form component to handle vertical scrolls independently */
-    .modal-card form,
-    .modal-card .modal-body {
-        overflow-y: auto !important;       /* Unlocks scrolling for the cut-off fields */
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 10px !important;              /* Snaps items closer together */
-        max-height: 100% !important;
-        padding-right: 4px !important;
-    }
-
-    /* Shrink the size of options layout panels (Study vs Exam cards) */
-    .modal-card .mode-option,
-    .modal-card div[class*="mode"] {
-        padding: 10px !important;
-        margin-bottom: 4px !important;
-    }
-
-    /* Tighten typography to salvage interface spacing */
-    .modal-card label {
-        font-size: 0.8rem !important;
-        margin-bottom: 2px !important;
-    }
     
-    .modal-card select {
-        padding: 8px 12px !important;
-        font-size: 0.85rem !important;
-    }
-}    
 
 @media (max-width: 768px) {
     /* Target the exact form wrapper card and scale it down */

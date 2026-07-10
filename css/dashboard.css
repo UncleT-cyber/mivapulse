@@ -496,6 +496,47 @@ header, .app-nav {
     }
 }
 
+@media (max-width: 768px) {
+    /* Compress the structural card bounds */
+    .modal-card {
+        width: 92% !important;
+        max-height: 80vh !important;       /* Confines card height cleanly within the phone view */
+        padding: 16px !important;          /* Eliminates bulky desktop padding */
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;        /* Keeps the card layout from overflowing */
+    }
+
+    /* Force the modal form component to handle vertical scrolls independently */
+    .modal-card form,
+    .modal-card .modal-body {
+        overflow-y: auto !important;       /* Unlocks scrolling for the cut-off fields */
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;              /* Snaps items closer together */
+        max-height: 100% !important;
+        padding-right: 6px !important;
+    }
+
+    /* Shrink the size of options layout panels (Study vs Exam cards) */
+    .modal-card .mode-option,
+    .modal-card div[class*="mode"] {
+        padding: 10px !important;
+        margin-bottom: 4px !important;
+    }
+
+    /* Tighten typography to salvage interface spacing */
+    .modal-card label {
+        font-size: 0.8rem !important;
+        margin-bottom: 2px !important;
+    }
+    
+    .modal-card select {
+        padding: 10px 15px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
 /* ==========================================================================
    MOBILE HERO CONTAINER CARD SPACE ADJUSTMENT
    ========================================================================== */
