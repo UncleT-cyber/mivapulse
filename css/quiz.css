@@ -311,9 +311,52 @@ p, .tracker-text, .explanation-box p { color: var(--text-secondary); }
     header button[onclick*="location.href='index.html'"] {
         display: none !important;
     }
-    
+
+@media (max-width: 768px) {
+    /* Target the exact form wrapper card and scale it down */
+    .modal-card {
+        max-height: 80vh !important;       /* Tighten viewport window limit to 80% */
+        width: 92% !important;              /* Keep it slim on the sides */
+        padding: 14px 16px !important;      /* Greatly reduce large empty padding spaces */
+        margin: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Reduce font size and margins of titles to save precious vertical space */
+    .modal-header h3 {
+        font-size: 1.1rem !important;
+        margin: 0 !important;
+    }
+
+    /* Shrink the size of form input fields and choice panels slightly */
+    .modal-card select,
+    .modal-card .select-box,
+    .modal-card button {
+        padding: 10px 12px !important;     /* Trim down bulky fields */
+        margin-bottom: 12px !important;    /* Pull elements closer together */
+        font-size: 0.9rem !important;       /* Clean, legible but compact text */
+    }
+
+    /* target option rows (like Study Mode/Exam Selection blocks) and shrink their padding */
+    .modal-card .mode-option, 
+    .modal-card div[class*="Mode"] {
+        padding: 10px !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* Force the body of the form to scroll elegantly if anything spills over */
+    .modal-card form,
+    .modal-card .modal-body {
+        overflow-y: auto !important;
+        max-height: 100% !important;
+        padding-right: 4px;
+    }
+}
+
     /* Make sure the center text breaks gracefully without pushing layout containers */
     .active-meta {
         max-width: 45% !important;
     }
 }
+
