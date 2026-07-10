@@ -50,8 +50,8 @@ To evaluate complex 300L/400L written scripts, implement **one** of the followin
 
 #### ⚡ Option A: Local AI Loopback (Recommended for offline study)
 Run an open-source model directly on your local hardware bypassing strict cross-origin resource limitations:
-```bash
 OLLAMA_ORIGINS="*" OLLAMA_HOST="127.0.0.1" ollama serve
+
 🌐 Option B: Cloud AI Engine Integration (No local installation needed)
 If you prefer not to tax your laptop's local RAM/GPU or are working through restricted networking environments (such as a Cellular Mobile Hotspot using Carrier-Grade NAT / CGNAT which blocks incoming connections), update your host router configuration:
 
