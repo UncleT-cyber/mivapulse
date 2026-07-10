@@ -627,3 +627,34 @@ header, .app-nav {
         margin-bottom: 4px !important;
     }
 }
+
+/* ==========================================================================
+   LIGHT MODE: REFINED HIGH-VISIBILITY CREAM NAVBAR
+   ========================================================================== */
+:root[data-theme="light"] {
+    /* A richer, elegant cream that stands out cleanly against white page blocks */
+    --nav-bg-light: #faf5eb;      
+    
+    /* A warm, subtle gray-gold divider line to define the boundary */
+    --nav-border-light: #e6dcce; 
+    
+    /* Crisp dark slate text color for the logo and link elements */
+    --nav-text-light: #0f172a;
+}
+
+/* Apply the structural properties explicitly to your top layout elements */
+:root[data-theme="light"] header,
+:root[data-theme="light"] .navbar,
+:root[data-theme="light"] nav,
+:root[data-theme="light"] .quiz-header {
+    background-color: var(--nav-bg-light) !important;
+    border-bottom: 2px solid var(--nav-border-light) !important; /* Thickened slightly for crisp visibility */
+    box-shadow: 0 4px 20px rgba(45, 35, 20, 0.04) !important; /* Soft, warm shadow signature */
+}
+
+/* Ensure branding text and icons inside the cream nav remain sharply readable */
+:root[data-theme="light"] header *,
+:root[data-theme="light"] .navbar *,
+:root[data-theme="light"] .quiz-header * {
+    color: var(--nav-text-light) && !matches(.btn-hero-main, button[class*="main"], .btn, [style*="background"]) !important;
+}
