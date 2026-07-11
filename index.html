@@ -42,9 +42,9 @@
             <p class="hero-subtitle">Rigorous mock examinations crafted specifically for Miva faculties, paired with deep concept breakdowns.</p>
             
             <div class="hero-cta-group">
-                <button class="btn-hero-main" onclick="openConfigModal()">Start Exam Practice</button>
-                <span class="cta-caption">Simulate COS102, CSC106, MTH102, and more</span>
-            </div>
+    <button class="btn-hero-main" onclick="if(window.triggerHaptic) window.triggerHaptic(20); openConfigModal()">Start Exam Practice</button>
+    <span class="cta-caption">Simulate COS102, CSC106, MTH102, and more</span>
+</div>
         </div>
     </section>
 <div class="live-counter-portal" style="display: flex; align-items: center; justify-content: center; gap: 8px; margin: 10px auto 0 auto; font-size: 0.95rem; color: #a0aec0; font-weight: 500;">
@@ -132,7 +132,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" id="buildMockBtn" class="btn-submit-config">Build My Mock</button>
+                    <button type="submit" id="buildMockBtn" class="btn-submit-config" onclick="if(window.triggerHaptic) window.triggerHaptic(20);">Build My Mock</button>
                 </form>
 
             </div>

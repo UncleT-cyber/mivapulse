@@ -88,7 +88,7 @@
     </textarea>
     
     <button id="submitEssayBtn" 
-        onclick="handleEssayEvaluation()" 
+        onclick="if(window.triggerHaptic) window.triggerHaptic(20); handleEssayEvaluation()" 
         class="btn btn-primary" 
         style="background-color: #b794f4; color: #ffffff; width: 100%; padding: 14px; border-radius: 12px; font-weight: 700; cursor: pointer;">
     Submit to Nexus AI for Evaluation
@@ -106,9 +106,9 @@
 
         <section class="feedback-panel hidden" id="feedbackPanel">
             <div class="feedback-status-row">
-                <span id="feedbackTitle" class="feedback-title">Correct Answer!</span>
-                <button id="btnNext" class="btn-next">Next Question →</button>
-            </div>
+    <span id="feedbackTitle" class="feedback-title">Correct Answer!</span>
+    <button id="btnNext" class="btn-next" onclick="if(window.triggerHaptic) window.triggerHaptic(15);">Next Question →</button>
+</div>
             <div class="explanation-box">
                 <strong>Concept Breakdown:</strong>
                 <p id="explanationText">Detailed data structural analytics explanation goes here.</p>
@@ -173,7 +173,7 @@
                 flex: 1; padding: 12px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.15);
                 background: transparent; color: #f8fafc; font-weight: 600; cursor: pointer; font-size: 0.9rem;
             ">Cancel</button>
-            <button id="confirm-ok-btn" style="
+            <button id="confirm-ok-btn" onclick="if(window.triggerHaptic) window.triggerHaptic(15);" style="
                 flex: 1; padding: 12px; border-radius: 10px; border: none;
                 background: #ef4444; color: white; font-weight: 600; cursor: pointer; font-size: 0.9rem;
                 box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);

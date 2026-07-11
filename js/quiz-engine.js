@@ -433,7 +433,43 @@ function renderTerminalView(state, dom, courseCode) {
             <h3 style="color: #4a154b; margin: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; text-align: left;">Simulation Item Review Log</h3>
             ${(mcqAttempted + totalEssays) > 0 ? reviewRowsHtml : `<p style="color: #64748b; font-style: italic; text-align: left;">No processed questions or answers found in active session memory.</p>`}
         </div>
+
+        <!-- Floating Back to Top Button injected right into the layout -->
+        <button id="backToTopBtn" onclick="if(window.triggerHaptic) window.triggerHaptic(15); window.scrollTo({top: 0, behavior: 'smooth'});" style="
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #b794f4;
+            color: #ffffff;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(183, 148, 244, 0.4);
+            display: none;
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        ">
+            ↑
+        </button>
     `;
+
+                // Add this globally or right after your review screen mounts/renders
+window.addEventListener('scroll', () => {
+    const btn = document.getElementById("backToTopBtn");
+    if (btn) {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "flex";
+        } else {
+            btn.style.display = "none";
+        }
+    }
+});
 
     if (dom.options) dom.options.appendChild(analyticsWrapper);
 

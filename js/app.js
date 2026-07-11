@@ -1,3 +1,12 @@
+// Initialize global haptic feedback for mobile devices
+if (typeof window !== 'undefined') {
+  window.triggerHaptic = (pattern = 15) => {
+    if (navigator.vibrate) {
+      navigator.vibrate(pattern);
+    }
+  };
+}
+
 /* ==========================================================================
    MIVA PREP - HOMEPAGE PORTAL ENGINE WITH PERSISTENT THEME CONTROLLER (app.js)
    ========================================================================== */
