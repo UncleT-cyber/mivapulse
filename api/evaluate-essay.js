@@ -74,11 +74,9 @@ ${submission}
             .map(p => `<p style="margin: 0 0 6px 0 !important; padding: 0 !important; font-size: 0.85rem; line-height: 1.35; color: #d1d5db; display: block;">${p.replace(/\n/g, '<br>')}</p>`)
             .join('');
 
-        // Building a flat, ultra-tight HTML template to strangle frontend spacing rules
+        // 1. Build the template as usual
         const formattedEvaluationHtml = `
-<div style="font-family: inherit; color: #e5e7eb; text-align: left; margin: 0 !important; padding: 0 !important; display: block; line-height: 1.3;">
-    
-    <!-- 1. Header Metrics Block (Using a tight table layout to lock rows together) -->
+<div style="font-family: inherit; color: #e5e7eb; text-align: left; margin: 0 !important; padding: 0 !important; display: block; line-height: 1.3; height: auto !important;">
     <table style="width: 100%; border-collapse: collapse; margin: 0 0 8px 0 !important; background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 6px;">
         <tr>
             <td style="padding: 6px 10px; vertical-align: middle;">
@@ -91,8 +89,6 @@ ${submission}
             </td>
         </tr>
     </table>
-
-    <!-- 2. Detailed Scores Mini Table -->
     <table style="width: 100%; border-collapse: collapse; margin: 0 0 10px 0 !important; font-size: 0.78rem; background: rgba(255,255,255,0.02); border-radius: 4px;">
         <tr>
             <td style="padding: 3px 4px; color: #9ca3af;">Content: <strong style="color: #fff;">${rubrics.contentScore}/${rubrics.contentMax}</strong></td>
@@ -103,43 +99,34 @@ ${submission}
             <td style="padding: 3px 4px; color: #9ca3af;">Style: <strong style="color: #fff;">${rubrics.styleScore}/${rubrics.styleMax}</strong></td>
         </tr>
     </table>
-
-    <!-- 3. Status Assessment -->
     <div style="margin: 0 0 10px 0 !important; padding: 0 !important; display: block;">
         <h3 style="color: #38bdf8; font-size: 0.88rem; margin: 0 0 3px 0 !important; padding: 0 !important; font-weight: 600; line-height: 1.2;">📢 Status Assessment</h3>
-        <p style="font-size: 0.83rem; line-height: 1.35; color: #e5e7eb; margin: 0 !important; padding: 0 !important;">
-            ${rubrics.statusAssessment}
-        </p>
+        <p style="font-size: 0.83rem; line-height: 1.35; color: #e5e7eb; margin: 0 !important; padding: 0 !important;">${rubrics.statusAssessment}</p>
     </div>
-
-    <!-- 4. Strengths -->
     <div style="margin: 0 0 10px 0 !important; padding: 0 !important; display: block;">
         <h3 style="color: #4ade80; font-size: 0.88rem; margin: 0 0 3px 0 !important; padding: 0 !important; font-weight: 600; line-height: 1.2;">🎯 Strengths</h3>
         <ul style="padding-left: 14px !important; margin: 0 !important; font-size: 0.83rem; line-height: 1.35; color: #d1d5db;">
             ${rubrics.strengths.map(s => `<li style="margin: 0 0 2px 0 !important; padding: 0 !important;">${s}</li>`).join('')}
         </ul>
     </div>
-
-    <!-- 5. Areas for Improvement -->
     <div style="margin: 0 0 12px 0 !important; padding: 0 !important; display: block;">
         <h3 style="color: #f87171; font-size: 0.88rem; margin: 0 0 3px 0 !important; padding: 0 !important; font-weight: 600; line-height: 1.2;">⚠️ Areas for Improvement</h3>
         <ul style="padding-left: 14px !important; margin: 0 !important; font-size: 0.83rem; line-height: 1.35; color: #d1d5db;">
             ${rubrics.weaknesses.map(w => `<li style="margin: 0 0 2px 0 !important; padding: 0 !important;">${w}</li>`).join('')}
         </ul>
     </div>
-
-    <!-- 6. Topic Masterclass -->
     <div style="background: rgba(30, 41, 59, 0.4); padding: 8px 10px !important; border-radius: 6px; border-left: 3px solid #3b82f6; margin: 0 !important; display: block;">
-        <h3 style="color: #60a5fa; font-size: 0.88rem; margin: 0 0 4px 0 !important; padding: 0 !important; font-weight: 600; line-height: 1.2;">
-            📖 Topic Masterclass
-        </h3>
+        <h3 style="color: #60a5fa; font-size: 0.88rem; margin: 0 0 4px 0 !important; padding: 0 !important; font-weight: 600; line-height: 1.2;">📖 Topic Masterclass</h3>
         ${deepDiveParagraphs}
     </div>
-
 </div>
         `.trim();
 
-        return res.status(200).json({ evaluation: formattedEvaluationHtml });
+        // 2. CRITICAL STEP: Strip out every single newline character and collapse spaces
+        // This stops the frontend parser from injecting accidental break elements into our HTML framework.
+        const cleanedEvaluationHtml = formattedEvaluationHtml.replace(/\n/g, '').replace(/\s+/g, ' ');
+
+        return res.status(200).json({ evaluation: cleanedEvaluationHtml });
 
     } catch (error) {
         console.error("Groq Cloud Invocation Error: ", error);
