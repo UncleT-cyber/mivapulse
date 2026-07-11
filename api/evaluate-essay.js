@@ -7,16 +7,13 @@ export default async function handler(req, res) {
         const { question, expectedCriteria, submission } = req.body;
         const apiKey = process.env.GROQ_API_KEY; 
 
-        // 1. The Strict, Realistic System Rubric
-        const systemPrompt = `You are a realistic, completely unbiased university professor grading essays. 
-Your job is to evaluate the student's submission strictly based on the question and expected criteria. 
+        const systemPrompt = `You are an expert university professor grading essays. Your task is to provide an objective grade and a deeply detailed, constructive pedagogical analysis to help the student learn.
 
 Grading Guidelines:
-- If a submission is empty, completely meaningless, or brief gibberish, you MUST grade it strictly (fail it with very low marks).
-- Do not give courtesy points just for trying. Award marks only for actual substance, depth, and structural alignment with the criteria.
-- Be fair: if a student actually provides meaningful, accurate paragraphs, score them appropriately.
+- Be realistic and unbiased. If a submission is empty or completely off-topic, award 0 marks for the categories.
+- Crucially, even if a student scores 0, your explanation fields MUST be highly detailed, thorough, and educational. Use the "weaknesses" section to explain the concepts they missed, what they should have written, and how to master the topic based on the expected criteria.
 
-You MUST respond with a raw JSON object matching this exact structure, with no markdown formatting and no conversational text outside the JSON:
+You MUST respond with a raw JSON object matching this exact structure, with no markdown styling outside the text values:
 {
   "contentScore": 0,
   "contentMax": 40,
@@ -28,8 +25,14 @@ You MUST respond with a raw JSON object matching this exact structure, with no m
   "styleMax": 20,
   "totalScore": 0,
   "letterGrade": "F",
-  "strengths": ["Point 1", "Point 2"],
-  "weaknesses": ["Point 1", "Point 2"]
+  "generalOverview": "A thorough, 2-3 sentence academic paragraph summarizing the state of the submission.",
+  "strengths": [
+    "A deeply detailed analysis explaining any positive attempt or potential, mapping back to the criteria."
+  ],
+  "weaknesses": [
+    "A thorough, multi-sentence breakdown of the first major missing concept, explaining what they should have included to meet the criteria.",
+    "A thorough, multi-sentence breakdown of structural or analytical gaps, offering a detailed explanation of the target concept so they can learn from it."
+  ]
 }`;
 
         const userPrompt = `
@@ -43,7 +46,6 @@ ${expectedCriteria}
 ${submission}
 `.trim();
 
-        // 2. Fetching from Groq with strict JSON constraints
         const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
             method: 'POST',
             headers: { 
@@ -56,8 +58,8 @@ ${submission}
                     { role: 'system', content: systemPrompt },
                     { role: 'user', content: userPrompt }
                 ],
-                temperature: 0.1, // Dropped to 0.1 for high consistency and strict unbiased grading
-                response_format: { type: "json_object" }, // Forces Groq to output pure JSON
+                temperature: 0.3, // Slightly raised to 0.3 to unlock deeper writing and richer explanations
+                response_format: { type: "json_object" },
                 stream: false
             })
         });
@@ -67,11 +69,9 @@ ${submission}
         }
 
         const data = await response.json();
-        
-        // 3. Parse Groq's structured JSON response
         const rubrics = JSON.parse(data.choices[0].message.content);
 
-        // 4. Generate a clean HTML UI structure to send straight to your current frontend component
+        // Re-injecting the detailed paragraphs back into your custom styled container
         const formattedEvaluationHtml = `
 <div class="evaluation-container">
     <div style="text-align: center; margin-bottom: 20px;">
@@ -82,28 +82,29 @@ ${submission}
     <hr style="border-color: #374151; margin: 15px 0;" />
 
     <h3 style="color: #c084fc; font-size: 1.1rem; margin-bottom: 10px;">Grading Breakdown:</h3>
-    <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
+    <ul style="list-style: none; padding-left: 0; line-height: 1.8; margin-bottom: 15px;">
         <li><strong>Content:</strong> ${rubrics.contentScore} / ${rubrics.contentMax}</li>
         <li><strong>Organization and Structure:</strong> ${rubrics.orgScore} / ${rubrics.orgMax}</li>
         <li><strong>Analytical Depth and Context:</strong> ${rubrics.depthScore} / ${rubrics.depthMax}</li>
         <li><strong>Writing Style and Conventions:</strong> ${rubrics.styleScore} / ${rubrics.styleMax}</li>
     </ul>
 
+    <p style="line-height: 1.6; color: #e5e7eb; margin-bottom: 15px;">${rubrics.generalOverview}</p>
+
     <hr style="border-color: #374151; margin: 15px 0;" />
 
-    <h3 style="color: #c084fc; font-size: 1.1rem; margin-bottom: 5px;">Strengths:</h3>
-    <ul style="padding-left: 20px; line-height: 1.6; margin-bottom: 15px;">
-        ${rubrics.strengths.map(s => `<li>${s}</li>`).join('')}
+    <h3 style="color: #c084fc; font-size: 1.1rem; margin-bottom: 8px;">Strengths:</h3>
+    <ul style="padding-left: 20px; line-height: 1.6; margin-bottom: 15px; color: #e5e7eb;">
+        ${rubrics.strengths.map(s => `<li style="margin-bottom: 8px;">${s}</li>`).join('')}
     </ul>
 
-    <h3 style="color: #f87171; font-size: 1.1rem; margin-bottom: 5px;">Areas for Improvement:</h3>
-    <ul style="padding-left: 20px; line-height: 1.6;">
-        ${rubrics.weaknesses.map(w => `<li>${w}</li>`).join('')}
+    <h3 style="color: #f87171; font-size: 1.1rem; margin-bottom: 8px;">Constructive Critique & Missing Concepts:</h3>
+    <ul style="padding-left: 20px; line-height: 1.6; color: #e5e7eb;">
+        ${rubrics.weaknesses.map(w => `<li style="margin-bottom: 8px;">${w}</li>`).join('')}
     </ul>
 </div>
         `.trim();
 
-        // 5. Send it back using your original payload key so the UI matches up natively!
         return res.status(200).json({ evaluation: formattedEvaluationHtml });
 
     } catch (error) {
