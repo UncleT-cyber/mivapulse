@@ -7,13 +7,13 @@ export default async function handler(req, res) {
         const { question, expectedCriteria, submission } = req.body;
         const apiKey = process.env.GROQ_API_KEY; 
 
-        const systemPrompt = `You are an expert university professor grading essays. Your task is to provide an objective grade and a deeply detailed, constructive pedagogical analysis to help the student learn.
+        const systemPrompt = `You are a world-class academic mentor and tough university examiner. Your task is to provide an objective score while using any weaknesses as a deep teaching opportunity to ensure the student thoroughly masters the core topic.
 
-Grading Guidelines:
-- Be realistic and unbiased. If a submission is empty or completely off-topic, award 0 marks for the categories.
-- Crucially, even if a student scores 0, your explanation fields MUST be highly detailed, thorough, and educational. Use the "weaknesses" section to explain the concepts they missed, what they should have written, and how to master the topic based on the expected criteria.
+Grading & Mentorship Protocol:
+1. Be highly realistic and unbiased with the numerical scores. 
+2. In the "topicDeepDive" section, analyze where the student struggled, look into the specific subject matter or architectural topic, and write a thorough, detailed explanation of the ideal theoretical concept. Teach it so clearly that a student who failed completely understands exactly how the mechanism works.
 
-You MUST respond with a raw JSON object matching this exact structure, with no markdown styling outside the text values:
+You MUST respond with a raw JSON object matching this exact structure, with no markdown styling outside text values:
 {
   "contentScore": 0,
   "contentMax": 40,
@@ -25,14 +25,9 @@ You MUST respond with a raw JSON object matching this exact structure, with no m
   "styleMax": 20,
   "totalScore": 0,
   "letterGrade": "F",
-  "generalOverview": "A thorough, 2-3 sentence academic paragraph summarizing the state of the submission.",
-  "strengths": [
-    "A deeply detailed analysis explaining any positive attempt or potential, mapping back to the criteria."
-  ],
-  "weaknesses": [
-    "A thorough, multi-sentence breakdown of the first major missing concept, explaining what they should have included to meet the criteria.",
-    "A thorough, multi-sentence breakdown of structural or analytical gaps, offering a detailed explanation of the target concept so they can learn from it."
-  ]
+  "strengths": ["A clear, high-value point regarding what they got right."],
+  "weaknesses": ["A precise critique pointing out what was structurally or argumentatively missing."],
+  "topicDeepDive": "A comprehensive, highly detailed educational breakdown of the target topic. Go deep into the subject matter, explain the core concepts, theory, or architectural designs they failed to grasp or fully articulate, and explain why it works that way so they truly learn the concept."
 }`;
 
         const userPrompt = `
@@ -58,7 +53,7 @@ ${submission}
                     { role: 'system', content: systemPrompt },
                     { role: 'user', content: userPrompt }
                 ],
-                temperature: 0.3, // Slightly raised to 0.3 to unlock deeper writing and richer explanations
+                temperature: 0.4, // Unlocks maximum descriptive capability for the topic tutorial
                 response_format: { type: "json_object" },
                 stream: false
             })
@@ -71,37 +66,53 @@ ${submission}
         const data = await response.json();
         const rubrics = JSON.parse(data.choices[0].message.content);
 
-        // Re-injecting the detailed paragraphs back into your custom styled container
+        // A beautifully compacted mobile layout that keeps the reading space clean
         const formattedEvaluationHtml = `
-<div class="evaluation-container">
-    <div style="text-align: center; margin-bottom: 20px;">
-        <span style="font-size: 2.5rem; font-weight: bold; color: #a855f7;">${rubrics.totalScore}/100</span>
-        <div style="font-size: 1.2rem; color: #9ca3af; margin-top: 5px;">Grade: <strong>${rubrics.letterGrade}</strong></div>
+<div class="evaluation-container" style="font-family: inherit; color: #e5e7eb;">
+    
+    <!-- Ultra-Compact Header Score Row -->
+    <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(168, 85, 247, 0.1); padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; border: 1px solid rgba(168, 85, 247, 0.2);">
+        <div>
+            <div style="font-size: 0.85rem; color: #9ca3af; text-transform: uppercase; tracking-wider;">Overall Score</div>
+            <span style="font-size: 1.8rem; font-weight: bold; color: #c084fc;">${rubrics.totalScore}<span style="font-size: 1rem; color: #6b7280;">/100</span></span>
+        </div>
+        <div style="text-align: right;">
+            <div style="font-size: 0.85rem; color: #9ca3af; text-transform: uppercase;">Grade</div>
+            <span style="font-size: 1.6rem; font-weight: bold; color: #f43f5e;">${rubrics.letterGrade}</span>
+        </div>
     </div>
 
-    <hr style="border-color: #374151; margin: 15px 0;" />
+    <!-- Compact 2x2 Grid for Categorized Scores -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 15px; font-size: 0.85rem; background: rgba(255,255,255,0.02); padding: 10px; border-radius: 6px;">
+        <div><span style="color: #9ca3af;">Content:</span> <strong style="color: #fff;">${rubrics.contentScore}/${rubrics.contentMax}</strong></div>
+        <div><span style="color: #9ca3af;">Structure:</span> <strong style="color: #fff;">${rubrics.orgScore}/${rubrics.orgMax}</strong></div>
+        <div><span style="color: #9ca3af;">Depth:</span> <strong style="color: #fff;">${rubrics.depthScore}/${rubrics.depthMax}</strong></div>
+        <div><span style="color: #9ca3af;">Style:</span> <strong style="color: #fff;">${rubrics.styleScore}/${rubrics.styleMax}</strong></div>
+    </div>
 
-    <h3 style="color: #c084fc; font-size: 1.1rem; margin-bottom: 10px;">Grading Breakdown:</h3>
-    <ul style="list-style: none; padding-left: 0; line-height: 1.8; margin-bottom: 15px;">
-        <li><strong>Content:</strong> ${rubrics.contentScore} / ${rubrics.contentMax}</li>
-        <li><strong>Organization and Structure:</strong> ${rubrics.orgScore} / ${rubrics.orgMax}</li>
-        <li><strong>Analytical Depth and Context:</strong> ${rubrics.depthScore} / ${rubrics.depthMax}</li>
-        <li><strong>Writing Style and Conventions:</strong> ${rubrics.styleScore} / ${rubrics.styleMax}</li>
+    <hr style="border-color: #27272a; margin: 12px 0;" />
+
+    <!-- Core Critiques -->
+    <h3 style="color: #c084fc; font-size: 1rem; margin: 0 0 4px 0;">🎯 Strengths</h3>
+    <ul style="padding-left: 18px; margin: 0 0 12px 0; font-size: 0.9rem; line-height: 1.5; color: #d1d5db;">
+        ${rubrics.strengths.map(s => `<li>${s}</li>`).join('')}
     </ul>
 
-    <p style="line-height: 1.6; color: #e5e7eb; margin-bottom: 15px;">${rubrics.generalOverview}</p>
-
-    <hr style="border-color: #374151; margin: 15px 0;" />
-
-    <h3 style="color: #c084fc; font-size: 1.1rem; margin-bottom: 8px;">Strengths:</h3>
-    <ul style="padding-left: 20px; line-height: 1.6; margin-bottom: 15px; color: #e5e7eb;">
-        ${rubrics.strengths.map(s => `<li style="margin-bottom: 8px;">${s}</li>`).join('')}
+    <h3 style="color: #f87171; font-size: 1rem; margin: 0 0 4px 0;">⚠️ Areas for Improvement</h3>
+    <ul style="padding-left: 18px; margin: 0 0 15px 0; font-size: 0.9rem; line-height: 1.5; color: #d1d5db;">
+        ${rubrics.weaknesses.map(w => `<li>${w}</li>`).join('')}
     </ul>
 
-    <h3 style="color: #f87171; font-size: 1.1rem; margin-bottom: 8px;">Constructive Critique & Missing Concepts:</h3>
-    <ul style="padding-left: 20px; line-height: 1.6; color: #e5e7eb;">
-        ${rubrics.weaknesses.map(w => `<li style="margin-bottom: 8px;">${w}</li>`).join('')}
-    </ul>
+    <!-- Master Deep Dive Tutorial Section -->
+    <div style="background: rgba(30, 41, 59, 0.5); padding: 14px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 15px;">
+        <h3 style="color: #60a5fa; font-size: 1rem; margin: 0 0 6px 0; display: flex; align-items: center; gap: 6px;">
+            📖 Topic Masterclass
+        </h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: #e5e7eb; margin: 0;">
+            ${rubrics.topicDeepDive}
+        </p>
+    </div>
+
 </div>
         `.trim();
 
