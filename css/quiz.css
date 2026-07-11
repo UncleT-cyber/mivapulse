@@ -443,14 +443,37 @@ main, .quiz-container, .dashboard-container {
     padding-top: 20px !important; /* Forces the first question down just enough to clear the navbar */
 }
 
-@media (max-width: 400px) {
-    /* Hide the redundant "Exam..." tracking text and dot when space gets critically tight */
-    .nav-title-text, .nav-divider {
-        display: none !important;
+@media (max-width: 480px) {
+    /* 1. Reset the nav container to stop item collision */
+    .nav-container {
+        padding: 12px 14px !important;
+        gap: 4px !important;
     }
-    /* Let the container pack down neatly around just the badge */
+
+    /* 2. Fix the center course pill from sliding under the buttons */
     .active-meta {
-        max-width: fit-content !important;
+        max-width: 85px !important; /* Forces it to stay compact */
         padding: 4px 6px !important;
+        margin: 0 auto !important; /* Keeps it locked dead center */
+        overflow: hidden;
+    }
+
+    /* 3. Drop the 'Exam...' title text completely to make room for the badge */
+    #courseTitleDisplay, 
+    .active-meta span:nth-child(2) { 
+        display: none !important; 
+    }
+
+    /* 4. Enforce clean block alignment on the right actions container */
+    .header-actions {
+        gap: 6px !important; /* Reduces gap between Theme and Quit on mobile */
+    }
+
+    /* 5. Clean up the theme toggle button structure */
+    #themeToggleBtn {
+        padding: 4px 8px !important;
+        font-size: 0.95rem !important;
+        width: 32px !important;
+        height: 32px !important;
     }
 }
