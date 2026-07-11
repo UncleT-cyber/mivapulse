@@ -449,14 +449,21 @@ async function processEssayEvaluation(curQuestion, state, dom) {
     const studentSubmission = essayInput ? essayInput.value.trim() : "";
 
     if (!studentSubmission) {
-        alert("Please compose an academic response before submitting for evaluation.");
+        // Grab the custom modal and its text element
+        const validationModal = document.getElementById("validationModal");
+        
+        if (validationModal) {
+            // Dynamically update the text to match your academic prompt
+            const modalDesc = validationModal.querySelector("p");
+            if (modalDesc) {
+                modalDesc.textContent = "Please compose an academic response before submitting for evaluation.";
+            }
+            
+            // Show the custom modal interface cleanly
+            validationModal.classList.remove("hidden");
+            validationModal.style.display = "flex";
+        }
         return;
-    }
-
-    if (essaySubmitBtn) {
-        essaySubmitBtn.textContent = "Analyzing Response Integrity via Nexus AI...";
-        essaySubmitBtn.disabled = true;
-        essaySubmitBtn.style.opacity = "0.5";
     }
 
     try {
@@ -526,10 +533,16 @@ window.handleEssayEvaluation = async function() {
     const submissionField = document.getElementById("essayResponseInput");
     const submissionText = submissionField ? submissionField.value.trim() : "";
     
-    if (!submissionText) {
-        alert("Please write a response before submitting!");
-        return;
+    // Check for empty essay content submission
+if (!submissionText || !submissionText.trim()) {
+    // Grab your custom validation modal element
+    const validationModal = document.getElementById("validationModal");
+    if (validationModal) {
+        validationModal.classList.remove("hidden");
+        validationModal.style.display = "flex";
     }
+    return;
+}
 
     // Initialize an array sequence to keep track of submissions cleanly
     if (!window.essaySubmissionsList) {
@@ -658,3 +671,29 @@ if (processEssayBtn) {
     processEssayBtn.removeAttribute("onclick"); // Clean out legacy inline execution assignments
     processEssayBtn.addEventListener("click", handleEssayEvaluation);
 }
+
+// Dismiss custom validation modal layer
+const closeValidationBtn = document.getElementById("closeValidationBtn");
+if (closeValidationBtn) {
+    closeValidationBtn.addEventListener("click", () => {
+        const validationModal = document.getElementById("validationModal");
+        if (validationModal) {
+            validationModal.classList.add("hidden");
+            validationModal.style.display = "none";
+        }
+    });
+}
+
+// Append this close handler explicitly to the window ecosystem
+window.addEventListener("click", (e) => {
+    const modal = document.getElementById("validationModal");
+    const closeBtn = document.getElementById("closeValidationBtn");
+    
+    // If they click the close button OR tap outside the card structure on the overlay blur
+    if (e.target === closeBtn || e.target === modal) {
+        if (modal) {
+            modal.style.display = "none";
+            modal.classList.add("hidden");
+        }
+    }
+});

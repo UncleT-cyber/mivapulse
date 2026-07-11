@@ -47,7 +47,10 @@
             </div>
         </div>
     </section>
-
+<div class="live-counter-portal" style="display: flex; align-items: center; justify-content: center; gap: 8px; margin: 10px auto 0 auto; font-size: 0.95rem; color: #a0aec0; font-weight: 500;">
+    <span class="pulse-dot" style="width: 8px; height: 8px; background-color: #48bb78; border-radius: 50%; display: inline-block; box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7); animation: pulse 2s infinite;"></span>
+    <span id="liveUserCount">132 Miva students practicing right now</span>
+</div>
     <div id="configModal" class="modal-overlay hidden" onclick="handleOutsideClick(event)">
         <div class="modal-card">
             <div class="modal-header">
@@ -57,15 +60,30 @@
             <div class="modal-body">
                 
                 <form id="simulatorForm">
+                    <!-- NEW: Faculty/Department Dropdown (Sits beautifully at the top) -->
                     <div class="form-group">
-                        <label for="levelSelect">Academic Level</label>
+                        <label for="facultySelect">Select Faculty / Department</label>
                         <div class="custom-select-wrapper">
-                            <select id="levelSelect" required>
-                                <option value="" disabled selected>-- Choose your level --</option>
+                            <select id="facultySelect" required>
+                                <option value="" disabled selected>-- Choose your faculty --</option>
+                                <option value="cybersecurity">Cybersecurity</option>
+                                <option value="public-health">Public Health Science</option>
+                                <option value="software-engineering">Software Engineering</option>
                             </select>
                         </div>
                     </div>
 
+                    <!-- Academic Level Dropdown (Maintained layout, options will now be managed dynamically) -->
+                    <div class="form-group">
+                        <label for="levelSelect">Academic Level</label>
+                        <div class="custom-select-wrapper">
+                            <select id="levelSelect" required disabled>
+                                <option value="" disabled selected>-- Select a faculty first --</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Course Module Dropdown (Maintained layout and classes) -->
                     <div class="form-group">
                         <label for="courseSelect">Select Course Module</label>
                         <div class="custom-select-wrapper">
@@ -75,6 +93,7 @@
                         </div>
                     </div>
 
+                    <!-- Question Quantity Dropdown (Untouched) -->
                     <div class="form-group">
                         <label for="questionLimit">Question Quantity</label>
                         <div class="custom-select-wrapper">
@@ -89,6 +108,7 @@
                         </div>
                     </div>
 
+                    <!-- Exam Mode Selection (Untouched) -->
                     <div class="form-group">
                         <label style="margin-bottom: 12px; display: block; font-weight: bold; color: #1a202c;">Exam Mode</label>
                         <div class="mode-options-grid">
@@ -120,15 +140,16 @@
     </div>
 
     <main class="dashboard-container" id="departmentSection">
-        <div class="section-title-block">
-            <h2>Built Specifically for School of Computing</h2>
+        <!-- Added style attribute to pull the block up into a tighter layout -->
+        <div class="section-title-block" style="margin-top: -8px;">
+            <h2>Built Specifically for Miva University Students</h2>
             <p>Tailored preparation parameters engineered for your core program curriculum.</p>
         </div>
 
         <div class="department-grid">
             <div class="dept-card">
                 <div class="dept-icon">🔒</div>
-                <h3>Cyber Security</h3>
+                <h3>Cybersecurity</h3>
                 <p>Designed to reinforce foundational problem solving, computing logic, and secure code architecture across core modules.</p>
                 <span class="dept-badge">Supported Program</span>
             </div>
@@ -139,11 +160,11 @@
                 <span class="dept-badge">Supported Program</span>
             </div>
             <div class="dept-card">
-                <div class="dept-icon">🧠</div>
-                <h3>Computer Science</h3>
-                <p>Engineered around rigorous discrete mathematical reasoning, computational analytics, and abstraction concepts.</p>
-                <span class="dept-badge">Supported Program</span>
-            </div>
+    <div class="dept-icon">🌍</div>
+    <h3>Public Health</h3>
+    <p>Grounded in epidemiological methodology, biostatistical analysis, and health policy frameworks to address global systemic health challenges.</p>
+    <span class="dept-badge">Supported Program</span>
+</div>
             
         </div>
     </main>
@@ -151,7 +172,7 @@
     <footer class="app-footer">
         <div class="footer-container">
             <p>&copy; 2026 Miva Prep. All rights reserved.</p>
-            <p class="footer-attribution">Handcrafted by <strong>Anthony A.</strong> | Cyber Security Major | Miva Open University</p>
+            <p class="footer-attribution">Handcrafted by <strong>Anthony A.</strong> | Cybersecurity Major | Miva Open University</p>
         </div>
     </footer>
 

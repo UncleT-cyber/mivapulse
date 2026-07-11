@@ -3,19 +3,20 @@
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // DOM Elements for Course Selector Matrix
+    // DOM Elements for Course Selector Matrix (Enhanced for Faculty/Department segmentation)
+    const facultySelect = document.getElementById("facultySelect");
     const levelSelect = document.getElementById("levelSelect");
     const courseSelect = document.getElementById("courseSelect");
     const configModal = document.getElementById("configModal");
     
     // Look for BOTH possible launcher variants (the specific submission button OR the parent config form wrapper)
     const startSimulationBtn = document.getElementById("startSimulationBtn") || document.getElementById("buildMockBtn");
-    const mockConfigForm = document.getElementById("mockConfigForm") || document.querySelector("#configModal form");
+    const mockConfigForm = document.getElementById("mockConfigForm") || document.querySelector("#configModal form") || document.getElementById("simulatorForm");
 
     let globalManifest = null;
 
     // 1. FETCH & RENDER DYNAMIC ACADEMIC MANIFEST
-    if (levelSelect && courseSelect) {
+    if (facultySelect && levelSelect && courseSelect) {
         fetch("data/manifest.json")
             .then(res => {
                 if (!res.ok) throw new Error("Failed to load level matrix catalog.");
@@ -24,32 +25,80 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(data => {
                 globalManifest = data;
                 
-                // Clear existing placeholder options
-                levelSelect.innerHTML = '<option value="" disabled selected>Select your Level...</option>';
-                
-                // Populate level dropdown dynamically from JSON
-                data.levels.forEach(level => {
+                // Faculty dropdown is hardcoded in HTML to match folder values, 
+                // so we prepare level and course to start securely disabled.
+                levelSelect.innerHTML = '<option value="" disabled selected>-- Select a faculty first --</option>';
+                levelSelect.disabled = true;
+                courseSelect.innerHTML = '<option value="" disabled selected>-- Select a level first --</option>';
+                courseSelect.disabled = true;
+            })
+            .catch(err => console.error("Manifest Initialization Error:", err));
+
+// 🟢 LIVE USER COUNT SIMULATOR
+function initLiveUserCounter() {
+    const counterEl = document.getElementById("liveUserCount");
+    if (!counterEl) return;
+
+    // Set a realistic baseline number for your departments
+    let currentUsers = Math.floor(Math.random() * (180 - 120 + 1)) + 120; // Starts between 120 and 180
+    counterEl.textContent = `${currentUsers} Miva students practicing right now`;
+
+    // Make it fluctuate naturally every 3 to 6 seconds
+    setInterval(() => {
+        const change = Math.floor(Math.random() * 7) - 3; // Ticks up or down by -3 to +3
+        currentUsers += change;
+
+        // Keep it within a realistic bound
+        if (currentUsers < 90) currentUsers += 5;
+        if (currentUsers > 250) currentUsers -= 5;
+
+        counterEl.textContent = `${currentUsers} Miva students practicing right now`;
+    }, Math.floor(Math.random() * (6000 - 3000 + 1)) + 3000);
+}
+
+// Call it right away
+initLiveUserCounter();
+
+        // Listen for Faculty changes to update Level options dynamically
+        facultySelect.addEventListener("change", (e) => {
+            const selectedFacultyId = e.target.value;
+            
+            levelSelect.innerHTML = '<option value="" disabled selected>Select your Level...</option>';
+            levelSelect.disabled = true;
+            courseSelect.innerHTML = '<option value="" disabled selected>-- Select a level first --</option>';
+            courseSelect.disabled = true;
+
+            if (!globalManifest) return;
+
+            const targetFaculty = globalManifest.faculties.find(f => f.id === selectedFacultyId);
+            if (targetFaculty && targetFaculty.levels) {
+                targetFaculty.levels.forEach(level => {
                     const opt = document.createElement("option");
                     opt.value = level.id;
                     opt.textContent = level.name;
                     levelSelect.appendChild(opt);
                 });
-            })
-            .catch(err => console.error("Manifest Initialization Error:", err));
+                levelSelect.disabled = false;
+            }
+        });
 
         // Listen for Level changes to update Course options dynamically
         levelSelect.addEventListener("change", (e) => {
+            const selectedFacultyId = facultySelect.value;
             const selectedLevelId = e.target.value;
+            
             courseSelect.innerHTML = '<option value="" disabled selected>Select a course...</option>';
             courseSelect.disabled = true;
 
             if (!globalManifest) return;
 
-            const targetLevel = globalManifest.levels.find(l => l.id === selectedLevelId);
+            const targetFaculty = globalManifest.faculties.find(f => f.id === selectedFacultyId);
+            const targetLevel = targetFaculty?.levels.find(l => l.id === selectedLevelId);
+
             if (targetLevel && targetLevel.courses.length > 0) {
                 targetLevel.courses.forEach(course => {
                     const opt = document.createElement("option");
-                    opt.value = course.file;
+                    opt.value = course.file; // Securely passes "cybersecurity/100L/filename.json" straight from manifest
                     opt.setAttribute("data-code", course.code);
                     opt.setAttribute("data-title", course.title);
                     opt.textContent = `${course.code} - ${course.title}`;
