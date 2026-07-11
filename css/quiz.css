@@ -489,3 +489,7 @@ body {
     margin: 0;
 }
 
+.quiz-container {
+    transition: opacity 0.15s ease;
+    will-change: opacity; /* Optimizes hardware rendering on iOS/Android browsers */
+}

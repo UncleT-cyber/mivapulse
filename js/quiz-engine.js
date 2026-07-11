@@ -76,21 +76,49 @@ document.addEventListener("DOMContentLoaded", () => {
             if (dom.title) dom.title.textContent = "Exam Lab Simulator";
             renderQuestion(examState, dom, quizMode, courseCode);
             const mask = document.getElementById("loading-mask");
-if (mask) mask.remove();
+            if (mask) mask.remove();
         })
         .catch(err => { if (dom.qText) dom.qText.textContent = `Initialization Error: ${err.message}`; });
 
+   // ===================================================
+    // 🛠️ THE NEXT BUTTON SMOOTH TRANSITION & SCROLL FIX
+    // ===================================================
     if (dom.btnNext) {
         dom.btnNext.addEventListener("click", () => {
             examState.currentIndex++;
+            
+            // Grabs your main question box component
+            const quizContainer = document.querySelector('.quiz-container') || dom.options.parentElement;
+
             if (examState.currentIndex < examState.questions.length) {
-                renderQuestion(examState, dom, quizMode, courseCode);
+                if (quizContainer) {
+                    // 1. Start sleek fade out
+                    quizContainer.style.opacity = '0';
+                    quizContainer.style.transition = 'opacity 0.15s ease';
+                    
+                    setTimeout(() => {
+                        // 2. Snap viewport back up while hidden
+                        window.scrollTo({ top: 0, behavior: 'instant' });
+                        
+                        // 3. Load the new question strings into the HTML elements
+                        renderQuestion(examState, dom, quizMode, courseCode);
+                        
+                        // 4. Fade the new question back in beautifully
+                        quizContainer.style.opacity = '1';
+                    }, 150);
+                } else {
+                    // Instant fallback if layout container cannot be located by script
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                    renderQuestion(examState, dom, quizMode, courseCode);
+                }
             } else {
+                // Handle final results view transition cleanly
+                window.scrollTo({ top: 0, behavior: 'instant' });
                 renderTerminalView(examState, dom, courseCode);
             }
         });
     }
-});
+}); // <-- Keep this trailing bracket! It safely closes your whole script wrapper.
 
 function renderQuestion(state, dom, quizMode, courseCode) {
     state.hasAnswered = false;
