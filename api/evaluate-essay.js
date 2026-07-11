@@ -6,11 +6,16 @@ export default async function handler(req, res) {
 
     try {
         const { question, expectedCriteria, submission } = req.body;
+        
+        // Pulls your secret key securely from the Vercel environment variables we just set up
+        const apiKey = process.env.GROQ_API_KEY; 
 
-        // 2. Formulate the evaluation prompt text
-        const promptText = `
-You are an expert academic evaluator. Please grade the following student essay submission.
+        // 2. Clear instructions to ensure structured, academic responses
+        const systemPrompt = `You are an expert academic evaluator. You grade student essay submissions based strictly on the provided question and expected criteria.
+        
+Provide a constructive breakdown, specific highlights of strengths and weaknesses, and close with a final letter grade. Keep your layout clean, structured, and easy for a student to read.`;
 
+        const userPrompt = `
 [Question]
 ${question}
 
@@ -19,42 +24,40 @@ ${expectedCriteria}
 
 [Student Submission]
 ${submission}
-
-Provide a constructive breakdown and a final letter grade.
 `.trim();
 
-        // 3. Smart Endpoint Selector
-        // If running locally, hit localhost. If live on Vercel, hit your public DuckDNS address.
-        const ollamaHost = process.env.VERCEL_ENV 
-            ? "http://nexus-mentor.duckdns.org:11434" 
-            : "http://127.0.0.1:11434";
-
-        // 4. Send the request to Ollama's native generation API
-        const response = await fetch(`${ollamaHost}/api/generate`, {
+        // 3. Connect to Groq's high-speed global cloud pipeline
+        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
             method: 'POST',
             headers: { 
+                'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json' 
             },
             body: JSON.stringify({
-                model: 'llama3.2:latest', // <-- Updated to perfectly match your downloaded model!
-                prompt: promptText,
+                model: 'llama-3.1-8b-instant', // Free tier powerhouse with ultra-high limits!
+                messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: userPrompt }
+                ],
+                temperature: 0.3, // Keeps the grading rubric stable and objective
                 stream: false
             })
         });
 
         if (!response.ok) {
-            throw new Error(`Ollama Node responded with status code: ${response.status}`);
+            throw new Error(`Groq API responded with status code: ${response.status}`);
         }
 
         const data = await response.json();
         
-        // 5. Safely return Ollama's generated critique back to your UI
-        return res.status(200).json({ evaluation: data.response });
+        // 4. Extract the critique string and output it exactly matching your original frontend layout
+        const aiCritique = data.choices[0].message.content;
+        return res.status(200).json({ evaluation: aiCritique });
 
     } catch (error) {
-        console.error("Ollama Node Invocation Error: ", error);
+        console.error("Groq Cloud Invocation Error: ", error);
         return res.status(500).json({ 
-            error: "Internal Server Error during Ollama evaluation", 
+            error: "Internal Server Error during cloud evaluation", 
             details: error.message 
         });
     }
