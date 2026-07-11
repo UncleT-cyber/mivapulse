@@ -75,6 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
             examState.questions = processedQuestions;
             if (dom.title) dom.title.textContent = "Exam Lab Simulator";
             renderQuestion(examState, dom, quizMode, courseCode);
+            const mask = document.getElementById("loading-mask");
+if (mask) mask.remove();
         })
         .catch(err => { if (dom.qText) dom.qText.textContent = `Initialization Error: ${err.message}`; });
 
