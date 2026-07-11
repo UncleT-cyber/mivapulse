@@ -66,6 +66,17 @@ ${submission}
         const data = await response.json();
         const rubrics = JSON.parse(data.choices[0].message.content);
 
+        // --- NEW: CLEAN UP GAPS AND FORMAT THE PARAGRAPHS SAFELY ---
+        // 1. Remove extreme consecutive newline artifacts (\n\n\n\n...)
+        let deepDiveCleaned = rubrics.topicDeepDive.replace(/\n{3,}/g, '\n\n').trim();
+        
+        // 2. Convert standard dual newlines into clean, short margin paragraph blocks
+        let deepDiveHtml = deepDiveCleaned
+            .split('\n\n')
+            .map(para => `<p style="margin: 0 0 8px 0; padding: 0; font-size: 0.85rem; line-height: 1.5; color: #e5e7eb;">${para.replace(/\n/g, '<br>')}</p>`)
+            .join('');
+        // -----------------------------------------------------------
+
         // We wrap everything tightly to override the frontend's heavy vertical spacing rules
         const formattedEvaluationHtml = `
 <div style="font-family: inherit; color: #e5e7eb; display: block; padding: 0; margin: 0; text-align: left;">
@@ -107,12 +118,11 @@ ${submission}
 
     <!-- Master Deep Dive Tutorial Section -->
     <div style="background: rgba(30, 41, 59, 0.4); padding: 10px 12px; border-radius: 6px; border-left: 3px solid #3b82f6; margin: 0; text-align: left;">
-        <h3 style="color: #60a5fa; font-size: 0.95rem; margin: 0 0 4px 0; padding: 0; font-weight: 600;">
+        <h3 style="color: #60a5fa; font-size: 0.95rem; margin: 0 0 6px 0; padding: 0; font-weight: 600;">
             📖 Topic Masterclass
         </h3>
-        <p style="font-size: 0.85rem; line-height: 1.5; color: #e5e7eb; margin: 0; padding: 0;">
-            ${rubrics.topicDeepDive}
-        </p>
+        <!-- Render the pre-processed and formatted paragraph blocks safely -->
+        ${deepDiveHtml}
     </div>
 
 </div>
