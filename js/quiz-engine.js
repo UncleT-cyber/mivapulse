@@ -663,18 +663,18 @@ if (!submissionText || !submissionText.trim()) {
                 <div class="nexus-spinner"></div>
                 <p class="nexus-loader-text">🤖 Nexus AI is thoroughly analyzing your architectural synthesis...</p>
             </div>
-            <div class="nexus-modal-body hidden" id="nexus-modal-result-state">
-                <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-primary);">🤖 Nexus AI Assessment Review</h3>
-                <hr style="border: 0; border-top: 1px solid var(--border-color); margin-bottom: 1rem;">
-                <div id="nexus-modal-text-content"></div>
-                <button class="nexus-modal-close-btn" onclick="
-                    document.getElementById('nexus-evaluation-modal').remove(); 
-                    const optionsGrid = document.getElementById('optionsContainer');
-                    if (optionsGrid) optionsGrid.style.setProperty('display', 'grid', 'important');
-                    const nativeNextBtn = document.getElementById('btnNext');
-                    if (nativeNextBtn) nativeNextBtn.click();
-                ">Close Review and Continue</button>
-            </div>
+            <div class="nexus-modal-body hidden" id="nexus-modal-result-state" style="padding-bottom: 2.5rem !important;">
+    <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-primary);">🤖 Nexus AI Assessment Review</h3>
+    <hr style="border: 0; border-top: 1px solid var(--border-color); margin-bottom: 1rem;">
+    <div id="nexus-modal-text-content"></div>
+    <button class="nexus-modal-close-btn" onclick="
+        document.getElementById('nexus-evaluation-modal').remove(); 
+        const optionsGrid = document.getElementById('optionsContainer');
+        if (optionsGrid) optionsGrid.style.setProperty('display', 'grid', 'important');
+        const nativeNextBtn = document.getElementById('btnNext');
+        if (nativeNextBtn) nativeNextBtn.click();
+    ">Close Review and Continue</button>
+</div>
         </div>
     `;
     document.body.appendChild(modalOverlay);
