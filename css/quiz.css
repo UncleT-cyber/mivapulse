@@ -477,3 +477,15 @@ main, .quiz-container, .dashboard-container {
         height: 32px !important;
     }
 }
+
+
+/* Apply this to index.html's styling to fix the pull-down gap */
+html {
+    background-color: #1a202c !important; /* Change this hex code to match your exact header background color */
+}
+
+body {
+    background-color: #0f172a !important; /* This matches your main content background below the header */
+    margin: 0;
+}
+
