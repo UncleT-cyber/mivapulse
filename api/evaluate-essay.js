@@ -11,32 +11,25 @@ export default async function handler(req, res) {
 
 Grading & Mentorship Protocol:
 1. Be highly realistic, hyper-critical, and completely unbiased with the numerical scores. If the submission lacks depth or structure, grade it strictly.
-2. In the "Status Assessment" section, explicitly address their pass/fail standing. If they failed (below 50/100), give them a stark reality check on their conceptual gaps and a direct mandate on where they must sit up. If they passed but have weak margins, expose their fragile spots. If they aced it, validate their mastery but give them a higher-level thought experiment.
-3. Structure your response using clean, standard Markdown headers (###).
+2. In the "statusAssessment" section, analyze whether they passed or failed. Give a direct reality check on their conceptual gaps and a direct mandate on where they must sit up immediately.
 
-Your response must strictly follow this text layout:
-### 📊 Academic Evaluation
-**Overall Score:** [Score]/100
-**Letter Grade:** [Grade]
-
-| Metric | Score |
-| :--- | :--- |
-| Content | [Score]/40 |
-| Structure | [Score]/20 |
-| Depth | [Score]/20 |
-| Style | [Score]/20 |
-
-### 📢 Status Assessment
-[Direct, conversational breakdown analyzing whether they passed or failed, what that means for their actual comprehension of the course material, and a blunt reality check on where they need to sit up immediately to bridge the knowledge gap.]
-
-### 🎯 Strengths
-* [A clear, high-value point regarding what they got right.]
-
-### ⚠️ Areas for Improvement
-* [A precise critique pointing out what was structurally or argumentatively missing.]
-
-### 📖 Topic Masterclass
-[Write a comprehensive, highly detailed educational breakdown of the target topic. Go deep into the subject matter, explain the core concepts, theory, or architectural designs they failed to grasp, and explain why it works that way so they truly learn the concept. Do not add excessive vertical paragraph breaks.]`;
+You MUST respond with a raw JSON object matching this exact structure, with no markdown formatting inside the values:
+{
+  "contentScore": 0,
+  "contentMax": 40,
+  "orgScore": 0,
+  "orgMax": 20,
+  "depthScore": 0,
+  "depthMax": 20,
+  "styleScore": 0,
+  "styleMax": 20,
+  "totalScore": 0,
+  "letterGrade": "F",
+  "statusAssessment": "Direct analysis of their pass/fail standing and a blunt reality check on where they need to sit up immediately.",
+  "strengths": ["A clear point regarding what they got right."],
+  "weaknesses": ["A precise critique pointing out what was missing."],
+  "topicDeepDive": "A comprehensive, highly detailed educational breakdown of the target topic."
+}`;
 
         const userPrompt = `
 [Question]
@@ -62,6 +55,7 @@ ${submission}
                     { role: 'user', content: userPrompt }
                 ],
                 temperature: 0.3, 
+                response_format: { type: "json_object" },
                 stream: false
             })
         });
@@ -71,12 +65,84 @@ ${submission}
         }
 
         const data = await response.json();
-        const evaluationText = data.choices[0].message.content;
+        const rubrics = JSON.parse(data.choices[0].message.content);
 
-        return res.status(200).json({ evaluation: evaluationText });
+        // Standardize paragraphs for the masterclass block to control spacing
+        const deepDiveParagraphs = rubrics.topicDeepDive
+            .split('\n\n')
+            .filter(p => p.trim().length > 0)
+            .map(p => `<p style="margin: 0 0 8px 0; padding: 0; font-size: 0.85rem; line-height: 1.4; color: #d1d5db;">${p.replace(/\n/g, '<br>')}</p>`)
+            .join('');
+
+        // Building a flat, tight HTML template to prevent frontend flex stretching
+        const formattedEvaluationHtml = `
+<div style="font-family: inherit; color: #e5e7eb; text-align: left; margin: 0; padding: 0; display: block;">
+    
+    <!-- 1. Header Metrics Block (Traditional Table Layout to avoid Flex/Grid stretching gaps) -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 6px;">
+        <tr>
+            <td style="padding: 8px 12px; vertical-align: middle;">
+                <div style="font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; margin: 0;">Overall Score</div>
+                <span style="font-size: 1.4rem; font-weight: bold; color: #c084fc;">${rubrics.totalScore}<span style="font-size: 0.85rem; color: #6b7280;">/100</span></span>
+            </td>
+            <td style="padding: 8px 12px; text-align: right; vertical-align: middle;">
+                <div style="font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; margin: 0;">Grade</div>
+                <span style="font-size: 1.4rem; font-weight: bold; color: #f43f5e;">${rubrics.letterGrade}</span>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 2. Detailed Scores Mini Table -->
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 0.8rem; background: rgba(255,255,255,0.02); border-radius: 4px;">
+        <tr>
+            <td style="padding: 4px 6px; color: #9ca3af;">Content: <strong style="color: #fff;">${rubrics.contentScore}/${rubrics.contentMax}</strong></td>
+            <td style="padding: 4px 6px; color: #9ca3af;">Structure: <strong style="color: #fff;">${rubrics.orgScore}/${rubrics.orgMax}</strong></td>
+        </tr>
+        <tr>
+            <td style="padding: 4px 6px; color: #9ca3af;">Depth: <strong style="color: #fff;">${rubrics.depthScore}/${rubrics.depthMax}</strong></td>
+            <td style="padding: 4px 6px; color: #9ca3af;">Style: <strong style="color: #fff;">${rubrics.styleScore}/${rubrics.styleMax}</strong></td>
+        </tr>
+    </table>
+
+    <!-- 3. Status Assessment -->
+    <div style="margin: 0 0 12px 0; padding: 0;">
+        <h3 style="color: #38bdf8; font-size: 0.9rem; margin: 0 0 4px 0; padding: 0; font-weight: 600;">📢 Status Assessment</h3>
+        <p style="font-size: 0.85rem; line-height: 1.4; color: #e5e7eb; margin: 0; padding: 0;">
+            ${rubrics.statusAssessment}
+        </p>
+    </div>
+
+    <!-- 4. Strengths -->
+    <div style="margin: 0 0 12px 0; padding: 0;">
+        <h3 style="color: #4ade80; font-size: 0.9rem; margin: 0 0 4px 0; padding: 0; font-weight: 600;">🎯 Strengths</h3>
+        <ul style="padding-left: 16px; margin: 0; font-size: 0.85rem; line-height: 1.4; color: #d1d5db;">
+            ${rubrics.strengths.map(s => `<li style="margin-bottom: 2px;">${s}</li>`).join('')}
+        </ul>
+    </div>
+
+    <!-- 5. Areas for Improvement -->
+    <div style="margin: 0 0 12px 0; padding: 0;">
+        <h3 style="color: #f87171; font-size: 0.9rem; margin: 0 0 4px 0; padding: 0; font-weight: 600;">⚠️ Areas for Improvement</h3>
+        <ul style="padding-left: 16px; margin: 0; font-size: 0.85rem; line-height: 1.4; color: #d1d5db;">
+            ${rubrics.weaknesses.map(w => `<li style="margin-bottom: 2px;">${w}</li>`).join('')}
+        </ul>
+    </div>
+
+    <!-- 6. Topic Masterclass -->
+    <div style="background: rgba(30, 41, 59, 0.4); padding: 10px 12px; border-radius: 6px; border-left: 3px solid #3b82f6; margin: 0; display: block;">
+        <h3 style="color: #60a5fa; font-size: 0.9rem; margin: 0 0 6px 0; padding: 0; font-weight: 600;">
+            📖 Topic Masterclass
+        </h3>
+        ${deepDiveParagraphs}
+    </div>
+
+</div>
+        `.trim();
+
+        return res.status(200).json({ evaluation: formattedEvaluationHtml });
 
     } catch (error) {
-        console.error("Groq Invocation Error: ", error);
+        console.error("Groq Cloud Invocation Error: ", error);
         return res.status(500).json({ 
             error: "Internal Server Error during cloud evaluation", 
             details: error.message 
