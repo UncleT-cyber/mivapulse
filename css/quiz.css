@@ -1,3 +1,15 @@
+/* 1. Only remove margins from the root elements, nothing else */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Target the main content area right below your header and push it down safely */
+main, .quiz-container, .dashboard-container {
+    padding-top: 24px !important; /* Adjust this number to get the exact perfect gap you want */
+    margin-top: 0;
+}
+
 /* ==========================================================================
    1. EXAM SIMULATOR CORE GLOBAL DESIGN ENGINE VARIABLES
    ========================================================================== */
@@ -413,3 +425,20 @@ p, .tracker-text, .explanation-box p { color: var(--text-secondary); }
     margin-bottom: 0.4rem;
 }
 
+/* 1. Unblock sticky positioning by clearing rogue container constraints */
+html, body, .dashboard-container, .quiz-container {
+    overflow: visible !important;
+}
+
+/* 2. Force the header to stay pinned on scroll over all contents */
+header {
+    position: -webkit-sticky !important; /* Safari support */
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important; /* Ensures elements pass underneath it, not over it */
+}
+
+/* Target the main content area right below your sticky header */
+main, .quiz-container, .dashboard-container {
+    padding-top: 20px !important; /* Forces the first question down just enough to clear the navbar */
+}
