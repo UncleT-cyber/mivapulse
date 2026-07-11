@@ -67,70 +67,70 @@ ${submission}
         const data = await response.json();
         const rubrics = JSON.parse(data.choices[0].message.content);
 
-        // Standardize paragraphs for the masterclass block to control spacing
+        // Standardize paragraphs for the masterclass block to control spacing tightly
         const deepDiveParagraphs = rubrics.topicDeepDive
             .split('\n\n')
             .filter(p => p.trim().length > 0)
-            .map(p => `<p style="margin: 0 0 8px 0; padding: 0; font-size: 0.85rem; line-height: 1.4; color: #d1d5db;">${p.replace(/\n/g, '<br>')}</p>`)
+            .map(p => `<p style="margin: 0 0 6px 0 !important; padding: 0 !important; font-size: 0.85rem; line-height: 1.35; color: #d1d5db; display: block;">${p.replace(/\n/g, '<br>')}</p>`)
             .join('');
 
-        // Building a flat, tight HTML template to prevent frontend flex stretching
+        // Building a flat, ultra-tight HTML template to strangle frontend spacing rules
         const formattedEvaluationHtml = `
-<div style="font-family: inherit; color: #e5e7eb; text-align: left; margin: 0; padding: 0; display: block;">
+<div style="font-family: inherit; color: #e5e7eb; text-align: left; margin: 0 !important; padding: 0 !important; display: block; line-height: 1.3;">
     
-    <!-- 1. Header Metrics Block (Traditional Table Layout to avoid Flex/Grid stretching gaps) -->
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 6px;">
+    <!-- 1. Header Metrics Block (Using a tight table layout to lock rows together) -->
+    <table style="width: 100%; border-collapse: collapse; margin: 0 0 8px 0 !important; background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 6px;">
         <tr>
-            <td style="padding: 8px 12px; vertical-align: middle;">
-                <div style="font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; margin: 0;">Overall Score</div>
-                <span style="font-size: 1.4rem; font-weight: bold; color: #c084fc;">${rubrics.totalScore}<span style="font-size: 0.85rem; color: #6b7280;">/100</span></span>
+            <td style="padding: 6px 10px; vertical-align: middle;">
+                <div style="font-size: 0.68rem; color: #9ca3af; text-transform: uppercase; margin: 0; padding: 0;">Overall Score</div>
+                <span style="font-size: 1.3rem; font-weight: bold; color: #c084fc; line-height: 1;">${rubrics.totalScore}<span style="font-size: 0.8rem; color: #6b7280;">/100</span></span>
             </td>
-            <td style="padding: 8px 12px; text-align: right; vertical-align: middle;">
-                <div style="font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; margin: 0;">Grade</div>
-                <span style="font-size: 1.4rem; font-weight: bold; color: #f43f5e;">${rubrics.letterGrade}</span>
+            <td style="padding: 6px 10px; text-align: right; vertical-align: middle;">
+                <div style="font-size: 0.68rem; color: #9ca3af; text-transform: uppercase; margin: 0; padding: 0;">Grade</div>
+                <span style="font-size: 1.3rem; font-weight: bold; color: #f43f5e; line-height: 1;">${rubrics.letterGrade}</span>
             </td>
         </tr>
     </table>
 
     <!-- 2. Detailed Scores Mini Table -->
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 0.8rem; background: rgba(255,255,255,0.02); border-radius: 4px;">
+    <table style="width: 100%; border-collapse: collapse; margin: 0 0 10px 0 !important; font-size: 0.78rem; background: rgba(255,255,255,0.02); border-radius: 4px;">
         <tr>
-            <td style="padding: 4px 6px; color: #9ca3af;">Content: <strong style="color: #fff;">${rubrics.contentScore}/${rubrics.contentMax}</strong></td>
-            <td style="padding: 4px 6px; color: #9ca3af;">Structure: <strong style="color: #fff;">${rubrics.orgScore}/${rubrics.orgMax}</strong></td>
+            <td style="padding: 3px 4px; color: #9ca3af;">Content: <strong style="color: #fff;">${rubrics.contentScore}/${rubrics.contentMax}</strong></td>
+            <td style="padding: 3px 4px; color: #9ca3af;">Structure: <strong style="color: #fff;">${rubrics.orgScore}/${rubrics.orgMax}</strong></td>
         </tr>
         <tr>
-            <td style="padding: 4px 6px; color: #9ca3af;">Depth: <strong style="color: #fff;">${rubrics.depthScore}/${rubrics.depthMax}</strong></td>
-            <td style="padding: 4px 6px; color: #9ca3af;">Style: <strong style="color: #fff;">${rubrics.styleScore}/${rubrics.styleMax}</strong></td>
+            <td style="padding: 3px 4px; color: #9ca3af;">Depth: <strong style="color: #fff;">${rubrics.depthScore}/${rubrics.depthMax}</strong></td>
+            <td style="padding: 3px 4px; color: #9ca3af;">Style: <strong style="color: #fff;">${rubrics.styleScore}/${rubrics.styleMax}</strong></td>
         </tr>
     </table>
 
     <!-- 3. Status Assessment -->
-    <div style="margin: 0 0 12px 0; padding: 0;">
-        <h3 style="color: #38bdf8; font-size: 0.9rem; margin: 0 0 4px 0; padding: 0; font-weight: 600;">📢 Status Assessment</h3>
-        <p style="font-size: 0.85rem; line-height: 1.4; color: #e5e7eb; margin: 0; padding: 0;">
+    <div style="margin: 0 0 10px 0 !important; padding: 0 !important; display: block;">
+        <h3 style="color: #38bdf8; font-size: 0.88rem; margin: 0 0 3px 0 !important; padding: 0 !important; font-weight: 600; line-height: 1.2;">📢 Status Assessment</h3>
+        <p style="font-size: 0.83rem; line-height: 1.35; color: #e5e7eb; margin: 0 !important; padding: 0 !important;">
             ${rubrics.statusAssessment}
         </p>
     </div>
 
     <!-- 4. Strengths -->
-    <div style="margin: 0 0 12px 0; padding: 0;">
-        <h3 style="color: #4ade80; font-size: 0.9rem; margin: 0 0 4px 0; padding: 0; font-weight: 600;">🎯 Strengths</h3>
-        <ul style="padding-left: 16px; margin: 0; font-size: 0.85rem; line-height: 1.4; color: #d1d5db;">
-            ${rubrics.strengths.map(s => `<li style="margin-bottom: 2px;">${s}</li>`).join('')}
+    <div style="margin: 0 0 10px 0 !important; padding: 0 !important; display: block;">
+        <h3 style="color: #4ade80; font-size: 0.88rem; margin: 0 0 3px 0 !important; padding: 0 !important; font-weight: 600; line-height: 1.2;">🎯 Strengths</h3>
+        <ul style="padding-left: 14px !important; margin: 0 !important; font-size: 0.83rem; line-height: 1.35; color: #d1d5db;">
+            ${rubrics.strengths.map(s => `<li style="margin: 0 0 2px 0 !important; padding: 0 !important;">${s}</li>`).join('')}
         </ul>
     </div>
 
     <!-- 5. Areas for Improvement -->
-    <div style="margin: 0 0 12px 0; padding: 0;">
-        <h3 style="color: #f87171; font-size: 0.9rem; margin: 0 0 4px 0; padding: 0; font-weight: 600;">⚠️ Areas for Improvement</h3>
-        <ul style="padding-left: 16px; margin: 0; font-size: 0.85rem; line-height: 1.4; color: #d1d5db;">
-            ${rubrics.weaknesses.map(w => `<li style="margin-bottom: 2px;">${w}</li>`).join('')}
+    <div style="margin: 0 0 12px 0 !important; padding: 0 !important; display: block;">
+        <h3 style="color: #f87171; font-size: 0.88rem; margin: 0 0 3px 0 !important; padding: 0 !important; font-weight: 600; line-height: 1.2;">⚠️ Areas for Improvement</h3>
+        <ul style="padding-left: 14px !important; margin: 0 !important; font-size: 0.83rem; line-height: 1.35; color: #d1d5db;">
+            ${rubrics.weaknesses.map(w => `<li style="margin: 0 0 2px 0 !important; padding: 0 !important;">${w}</li>`).join('')}
         </ul>
     </div>
 
     <!-- 6. Topic Masterclass -->
-    <div style="background: rgba(30, 41, 59, 0.4); padding: 10px 12px; border-radius: 6px; border-left: 3px solid #3b82f6; margin: 0; display: block;">
-        <h3 style="color: #60a5fa; font-size: 0.9rem; margin: 0 0 6px 0; padding: 0; font-weight: 600;">
+    <div style="background: rgba(30, 41, 59, 0.4); padding: 8px 10px !important; border-radius: 6px; border-left: 3px solid #3b82f6; margin: 0 !important; display: block;">
+        <h3 style="color: #60a5fa; font-size: 0.88rem; margin: 0 0 4px 0 !important; padding: 0 !important; font-weight: 600; line-height: 1.2;">
             📖 Topic Masterclass
         </h3>
         ${deepDiveParagraphs}
