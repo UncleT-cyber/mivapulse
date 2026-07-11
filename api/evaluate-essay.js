@@ -53,7 +53,7 @@ ${submission}
                     { role: 'system', content: systemPrompt },
                     { role: 'user', content: userPrompt }
                 ],
-                temperature: 0.4, // Unlocks maximum descriptive capability for the topic tutorial
+                temperature: 0.4, 
                 response_format: { type: "json_object" },
                 stream: false
             })
@@ -66,49 +66,51 @@ ${submission}
         const data = await response.json();
         const rubrics = JSON.parse(data.choices[0].message.content);
 
-        // A beautifully compacted mobile layout that keeps the reading space clean
+        // We wrap everything tightly to override the frontend's heavy vertical spacing rules
         const formattedEvaluationHtml = `
-<div class="evaluation-container" style="font-family: inherit; color: #e5e7eb;">
+<div style="font-family: inherit; color: #e5e7eb; display: block; padding: 0; margin: 0; text-align: left;">
     
     <!-- Ultra-Compact Header Score Row -->
-    <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(168, 85, 247, 0.1); padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; border: 1px solid rgba(168, 85, 247, 0.2);">
+    <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(168, 85, 247, 0.1); padding: 10px 14px; border-radius: 8px; margin: 0 0 10px 0; border: 1px solid rgba(168, 85, 247, 0.2); line-height: 1.2;">
         <div>
-            <div style="font-size: 0.85rem; color: #9ca3af; text-transform: uppercase; tracking-wider;">Overall Score</div>
-            <span style="font-size: 1.8rem; font-weight: bold; color: #c084fc;">${rubrics.totalScore}<span style="font-size: 1rem; color: #6b7280;">/100</span></span>
+            <div style="font-size: 0.75rem; color: #9ca3af; text-transform: uppercase; margin: 0; padding: 0;">Overall Score</div>
+            <span style="font-size: 1.6rem; font-weight: bold; color: #c084fc; margin: 0; padding: 0;">${rubrics.totalScore}<span style="font-size: 0.9rem; color: #6b7280;">/100</span></span>
         </div>
         <div style="text-align: right;">
-            <div style="font-size: 0.85rem; color: #9ca3af; text-transform: uppercase;">Grade</div>
-            <span style="font-size: 1.6rem; font-weight: bold; color: #f43f5e;">${rubrics.letterGrade}</span>
+            <div style="font-size: 0.75rem; color: #9ca3af; text-transform: uppercase; margin: 0; padding: 0;">Grade</div>
+            <span style="font-size: 1.5rem; font-weight: bold; color: #f43f5e; margin: 0; padding: 0;">${rubrics.letterGrade}</span>
         </div>
     </div>
 
-    <!-- Compact 2x2 Grid for Categorized Scores -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 15px; font-size: 0.85rem; background: rgba(255,255,255,0.02); padding: 10px; border-radius: 6px;">
+    <!-- Compact Grid for Categorized Scores -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 0 0 12px 0; font-size: 0.8rem; background: rgba(255,255,255,0.03); padding: 8px 10px; border-radius: 6px; line-height: 1.3;">
         <div><span style="color: #9ca3af;">Content:</span> <strong style="color: #fff;">${rubrics.contentScore}/${rubrics.contentMax}</strong></div>
         <div><span style="color: #9ca3af;">Structure:</span> <strong style="color: #fff;">${rubrics.orgScore}/${rubrics.orgMax}</strong></div>
         <div><span style="color: #9ca3af;">Depth:</span> <strong style="color: #fff;">${rubrics.depthScore}/${rubrics.depthMax}</strong></div>
         <div><span style="color: #9ca3af;">Style:</span> <strong style="color: #fff;">${rubrics.styleScore}/${rubrics.styleMax}</strong></div>
     </div>
 
-    <hr style="border-color: #27272a; margin: 12px 0;" />
+    <!-- Content Blocks Wrapped To Avoid Global Modal Spacing Rules -->
+    <div style="margin: 0 0 10px 0; padding: 0;">
+        <h3 style="color: #c084fc; font-size: 0.95rem; margin: 0 0 4px 0; padding: 0; font-weight: 600;">🎯 Strengths</h3>
+        <ul style="padding-left: 16px; margin: 0; font-size: 0.85rem; line-height: 1.4; color: #d1d5db;">
+            ${rubrics.strengths.map(s => `<li style="margin-bottom: 3px;">${s}</li>`).join('')}
+        </ul>
+    </div>
 
-    <!-- Core Critiques -->
-    <h3 style="color: #c084fc; font-size: 1rem; margin: 0 0 4px 0;">🎯 Strengths</h3>
-    <ul style="padding-left: 18px; margin: 0 0 12px 0; font-size: 0.9rem; line-height: 1.5; color: #d1d5db;">
-        ${rubrics.strengths.map(s => `<li>${s}</li>`).join('')}
-    </ul>
-
-    <h3 style="color: #f87171; font-size: 1rem; margin: 0 0 4px 0;">⚠️ Areas for Improvement</h3>
-    <ul style="padding-left: 18px; margin: 0 0 15px 0; font-size: 0.9rem; line-height: 1.5; color: #d1d5db;">
-        ${rubrics.weaknesses.map(w => `<li>${w}</li>`).join('')}
-    </ul>
+    <div style="margin: 0 0 12px 0; padding: 0;">
+        <h3 style="color: #f87171; font-size: 0.95rem; margin: 0 0 4px 0; padding: 0; font-weight: 600;">⚠️ Areas for Improvement</h3>
+        <ul style="padding-left: 16px; margin: 0; font-size: 0.85rem; line-height: 1.4; color: #d1d5db;">
+            ${rubrics.weaknesses.map(w => `<li style="margin-bottom: 3px;">${w}</li>`).join('')}
+        </ul>
+    </div>
 
     <!-- Master Deep Dive Tutorial Section -->
-    <div style="background: rgba(30, 41, 59, 0.5); padding: 14px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 15px;">
-        <h3 style="color: #60a5fa; font-size: 1rem; margin: 0 0 6px 0; display: flex; align-items: center; gap: 6px;">
+    <div style="background: rgba(30, 41, 59, 0.4); padding: 10px 12px; border-radius: 6px; border-left: 3px solid #3b82f6; margin: 0; text-align: left;">
+        <h3 style="color: #60a5fa; font-size: 0.95rem; margin: 0 0 4px 0; padding: 0; font-weight: 600;">
             📖 Topic Masterclass
         </h3>
-        <p style="font-size: 0.9rem; line-height: 1.6; color: #e5e7eb; margin: 0;">
+        <p style="font-size: 0.85rem; line-height: 1.5; color: #e5e7eb; margin: 0; padding: 0;">
             ${rubrics.topicDeepDive}
         </p>
     </div>
