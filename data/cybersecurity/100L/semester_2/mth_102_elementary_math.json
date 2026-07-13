@@ -1,1982 +1,1506 @@
 [
   {
-    "question": "What is the domain of the function $f(x) = \\frac{1}{x-3}$?",
-    "options": [
-      "A) $\\mathbb{R} \\setminus \\{3\\}$ or $(-\\infty, 3) \\cup (3, \\infty)$",
-      "B) $[3, \\infty)$",
-      "C) $\\mathbb{R} \\setminus \\{0\\}$ or $(-\\infty, 0) \\cup (0, \\infty)$",
-      "D) $\\mathbb{R}$"
-    ],
-    "answer": "A",
-    "explanation": "Think of a function like a math machine where you put a number in, and it spits a new number out! The 'domain' is just a list of all the safe numbers you are allowed to plug into the machine without breaking it. For this fraction, the only way to break the machine is to make the bottom equal to 0, because dividing by zero is impossible! If we choose $x = 3$, the bottom becomes $3 - 3 = 0$. Oh no, the machine breaks! So, $x$ can be absolutely any number in the whole wide world, except for 3. We write this as all real numbers except 3."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "What is the domain of the function $f(x)=\\frac{1}{x-3}$?",
+    "options": {
+      "A": "$\\mathbb{R}\\setminus\\{3\\}$",
+      "B": "$[3,\\infty)$",
+      "C": "$\\mathbb{R}\\setminus\\{0\\}$",
+      "D": "$\\mathbb{R}$"
+    },
+    "correct_answer": "A",
+    "explanation": "The denominator of a rational function cannot be zero. Since $x-3=0$ when $x=3$, this value is excluded from the domain. Therefore, the domain is all real numbers except $3$, that is, $\\mathbb{R}\\setminus\\{3\\}$."
   },
   {
-    "question": "Evaluate $\\lim_{x \\to 2} (3x^2 - 5x + 1)$.",
-    "options": [
-      "A) 7",
-      "B) 5",
-      "C) 1",
-      "D) 3"
-    ],
-    "answer": "D",
-    "explanation": "A limit is like looking ahead to see where a path is leading as you walk closer and closer to a certain point. Here, we want to know what value our math expression gets close to as $x$ walks closer and closer to the number 2. Since this expression has no jumps, holes, or fractions to break it, we can find the exact destination simply by plugging in 2 for $x$! Let's do the arithmetic together step-by-step: First, $3 \\times (2)^2$ becomes $3 \\times 4 = 12$. Next, we subtract $5 \\times 2$, which is 10, leaving us with $12 - 10 = 2$. Finally, we add 1, which gives us $2 + 1 = 3$!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $\\displaystyle\\lim_{x\\to2}(3x^{2}-5x+1)$.",
+    "options": {
+      "A": "$7$",
+      "B": "$5$",
+      "C": "$1$",
+      "D": "$3$"
+    },
+    "correct_answer": "D",
+    "explanation": "Since polynomials are continuous everywhere, substitute $x=2$ directly: $$3(2)^2-5(2)+1=12-10+1=3.$$ Therefore, the limit is $3$."
   },
   {
-    "question": "What is $\\lim_{x \\to 0} \\frac{\\sin x}{x}$?",
-    "options": [
-      "A) 0",
-      "B) $\\infty$",
-      "C) 1",
-      "D) Does not exist"
-    ],
-    "answer": "C",
-    "explanation": "Imagine you are tracking two values as $x$ shrinks smaller and smaller towards 0. If you try to plug 0 directly into $\\frac{\\sin x}{x}$, you get $\\frac{0}{0}$, which looks like a mystery! But if you look closely on a graph as $x$ gets super close to 0, the top value $(\\sin x)$ and the bottom value $(x)$ become almost identical twins in size. Because they match so perfectly as they shrink, dividing one by the other gives you exactly 1!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $\\displaystyle\\lim_{x\\to0}\\frac{\\sin x}{x}$.",
+    "options": {
+      "A": "$0$",
+      "B": "$\\infty$",
+      "C": "$1$",
+      "D": "Does not exist"
+    },
+    "correct_answer": "C",
+    "explanation": "This is a standard trigonometric limit. As $x\\to0$ (with $x$ measured in radians), $$\\lim_{x\\to0}\\frac{\\sin x}{x}=1.$$"
   },
   {
-    "question": "A function $f(x)$ is continuous at $x = a$ if which condition holds?",
-    "options": [
-      "A) $f(a)$ exists",
-      "B) $f(x)$ is defined for all $x$",
-      "C) $\\lim_{x \\to a} f(x) = f(a)$",
-      "D) $\\lim_{x \\to a} f(x)$ exists"
-    ],
-    "answer": "C",
-    "explanation": "Imagine drawing a line on a piece of paper with a pencil. If a line is 'continuous,' it means you can draw the whole thing smoothly without ever lifting your pencil! No holes, no gaps, and no sudden jumps. For a math graph to be perfectly smooth at a point $x = a$, the path you are walking on from the sides must point directly to the actual spot where the point sits. In math terms, the limit (the path destination) must match the function value (the actual point) perfectly."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "A function $f(x)$ is continuous at $x=a$ if which of the following conditions holds?",
+    "options": {
+      "A": "$f(a)$ exists.",
+      "B": "$f(x)$ is defined for all real numbers.",
+      "C": "$\\displaystyle\\lim_{x\\to a}f(x)=f(a)$.",
+      "D": "$\\displaystyle\\lim_{x\\to a}f(x)$ exists."
+    },
+    "correct_answer": "C",
+    "explanation": "A function is continuous at $x=a$ if the limit exists, the function value exists, and both are equal. Hence, the required condition is $$\\lim_{x\\to a}f(x)=f(a).$$"
   },
   {
-    "question": "What is the derivative of $f(x) = 5x^4 - 3x^2 + 7$?",
-    "options": [
-      "A) $20x^3 - 6x + 7$",
-      "B) $5x^3 - 3x$",
-      "C) $20x^4 - 6x^2$",
-      "D) $20x^3 - 6x$"
-    ],
-    "answer": "D",
-    "explanation": "A derivative is a tool that tells us how fast something is changing at any moment. To find it for powers of $x$, we use a fun shortcut called the Power Rule! Imagine the exponent number is a little slider that jumps down to the front to multiply the big number, and then the exponent loses 1 point. Let's look at $5x^4$: the 4 jumps down, multiplies 5 to make 20, and the power shrinks to 3, giving us $20x^3$. For $-3x^2$: the 2 jumps down, multiplies $-3$ to make $-6$, and the power shrinks to 1, giving us $-6x$. The number 7 is constant and never changes, so its speed of change is 0. Putting it together gives $20x^3 - 6x$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Find the derivative of $f(x)=5x^{4}-3x^{2}+7$.",
+    "options": {
+      "A": "$20x^{3}-6x+7$",
+      "B": "$5x^{3}-3x$",
+      "C": "$20x^{4}-6x^{2}$",
+      "D": "$20x^{3}-6x$"
+    },
+    "correct_answer": "D",
+    "explanation": "Apply the power rule term by term: $$\\frac{d}{dx}(5x^{4})=20x^{3},\\qquad \\frac{d}{dx}(-3x^{2})=-6x,\\qquad \\frac{d}{dx}(7)=0.$$ Hence, $$f'(x)=20x^{3}-6x.$$"
   },
   {
-    "question": "Using the product rule, what is the derivative of $f(x) = x^2 \\sin x$?",
-    "options": [
-      "A) $2x \\sin x - x^2 \\cos x$",
-      "B) $2x \\sin x + x^2 \\cos x$",
-      "C) $2x \\cos x$",
-      "D) $x^2 \\cos x$"
-    ],
-    "answer": "B",
-    "explanation": "When you have two different math terms multiplied together, like a team of two friends ($x^2$ and $\\sin x$), they have to take turns being differentiated! The Product Rule says: 'The first friend stays the same while we find the derivative of the second, plus the second friend stays the same while we find the derivative of the first.' The derivative of $x^2$ is $2x$, and the derivative of $\\sin x$ is $\\cos x$. Taking turns gives us: $(x^2 \\times \\cos x) + (\\sin x \\times 2x)$. Rearranging it neatly looks like $2x \\sin x + x^2 \\cos x$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Using the product rule, find the derivative of $f(x)=x^{2}\\sin x$.",
+    "options": {
+      "A": "$2x\\sin x-x^{2}\\cos x$",
+      "B": "$2x\\sin x+x^{2}\\cos x$",
+      "C": "$2x\\cos x$",
+      "D": "$x^{2}\\cos x$"
+    },
+    "correct_answer": "B",
+    "explanation": "Using the product rule, $$\\frac{d}{dx}(uv)=u'v+uv'.$$ Let $u=x^{2}$ and $v=\\sin x$. Then $$u'=2x,\\qquad v'=\\cos x.$$ Therefore, $$f'(x)=2x\\sin x+x^{2}\\cos x.$$"
   },
   {
-    "question": "Using the quotient rule, find the derivative of $f(x) = \\frac{x^2}{x+1}$.",
-    "options": [
-      "A) $\\frac{x^2+2x}{(x+1)^2}$",
-      "B) $\\frac{2x}{x+1}$",
-      "C) $\\frac{x^2}{(x+1)^2}$",
-      "D) $\\frac{2x(x+1)-x^2}{(x+1)^2}$"
-    ],
-    "answer": "A",
-    "explanation": "When finding the derivative of a fraction, we can use a poem rule: 'Low d-High minus High d-Low, over the square of what's below!' 'Low' is the bottom part $(x+1)$ and 'High' is the top part $(x^2)$. The derivative of the top is $2x$, and the derivative of the bottom is 1. Let's plug them into the poem: Bottom times top's derivative is $(x+1)(2x) = 2x^2 + 2x$. Top times bottom's derivative is $(x^2)(1) = x^2$. Subtracting them gives $(2x^2 + 2x) - x^2 = x^2 + 2x$. Finally, we put it over the bottom squared, which gives us $\\frac{x^2+2x}{(x+1)^2}$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Using the quotient rule, find the derivative of $f(x)=\\dfrac{x^{2}}{x+1}$.",
+    "options": {
+      "A": "$\\dfrac{x^{2}+2x}{(x+1)^{2}}$",
+      "B": "$\\dfrac{2x}{x+1}$",
+      "C": "$\\dfrac{x^{2}}{(x+1)^{2}}$",
+      "D": "$\\dfrac{2x(x+1)-x^{2}}{(x+1)^{2}}$"
+    },
+    "correct_answer": "A",
+    "explanation": "Using the quotient rule, $$\\left(\\frac{u}{v}\\right)'=\\frac{vu'-uv'}{v^{2}},$$ where $u=x^{2}$ and $v=x+1$. Thus, $$f'(x)=\\frac{(x+1)(2x)-x^{2}(1)}{(x+1)^{2}}=\\frac{x^{2}+2x}{(x+1)^{2}}.$$ Option D is the unsimplified form, while Option A is the simplified equivalent and is therefore the best answer."
   },
   {
-    "question": "What is the derivative of $f(x) = e^{3x}$?",
-    "options": [
-      "A) $3e^x$",
-      "B) $3e^{3x}$",
-      "C) $e^{3x+1}$",
-      "D) $e^{3x}$"
-    ],
-    "answer": "B",
-    "explanation": "The exponential function $e^x$ is a magical math creature because its derivative is exactly itself! It never changes when you differentiate it. However, if there is a number hiding inside with the $x$, like the 3 in $3x$, we have to use the Chain Rule. This rule says you keep the magical $e^{3x}$ exactly as it is, but then you must multiply it by the derivative of the inside power. The derivative of $3x$ is 3. So, we multiply them together to get $3e^{3x}$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Find the derivative of $f(x)=e^{3x}$.",
+    "options": {
+      "A": "$3e^{x}$",
+      "B": "$3e^{3x}$",
+      "C": "$e^{3x+1}$",
+      "D": "$e^{3x}$"
+    },
+    "correct_answer": "B",
+    "explanation": "Apply the Chain Rule. If $f(x)=e^{u}$, then $f'(x)=e^{u}\\cdot u'$. Here, $u=3x$ and $u'=3$. Therefore, $$\\frac{d}{dx}\\left(e^{3x}\\,dx\\right)=3e^{3x}.$$"
   },
   {
-    "question": "Using the chain rule, find the derivative of $f(x) = (2x + 1)^5$.",
-    "options": [
-      "A) $(2x + 1)^4$",
-      "B) $2(2x + 1)^5$",
-      "C) $5(2x + 1)^4$",
-      "D) $10(2x + 1)^4$"
-    ],
-    "answer": "D",
-    "explanation": "Imagine this function is like a wrapped present box. It has an outer layer (the power of 5) and an inside layer $(2x + 1)$. The Chain Rule tells us to unwrap the outside layer first while leaving the inside untouched, then multiply by the derivative of the inside! Differentiating the outside layer means the 5 rolls down to the front and turns into a power of 4, giving $5(2x + 1)^4$. Next, look inside: the derivative of $2x + 1$ is just 2. Now multiply the two parts together: $5 \\times 2 = 10$, which leaves us with $10(2x + 1)^4$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Using the Chain Rule, find the derivative of $f(x)=(2x+1)^{5}$.",
+    "options": {
+      "A": "$(2x+1)^{4}$",
+      "B": "$2(2x+1)^{5}$",
+      "C": "$5(2x+1)^{4}$",
+      "D": "$10(2x+1)^{4}$"
+    },
+    "correct_answer": "D",
+    "explanation": "Let $u=2x+1$. Then $f(x)=u^{5}$. Using the Chain Rule, $$\\frac{d}{dx}(u^{5})=5u^{4}\\cdot\\frac{du}{dx}=5(2x+1)^{4}(2)=10(2x+1)^{4}.$$"
   },
   {
-    "question": "What is the derivative of $f(x) = \\ln(x^2 + 1)$?",
-    "options": [
-      "A) $2x$",
-      "B) $\\frac{2x}{x^2+1}$",
-      "C) $\\frac{1}{x^2+1}$",
-      "D) $\\frac{2x}{x}$"
-    ],
-    "answer": "B",
-    "explanation": "The natural log function $\\ln()$ has a simple rule for its derivative: you take whatever is living inside the parentheses, flip it upside down to make it the bottom of a fraction, and put its derivative on top! The stuff inside is $x^2 + 1$, so it goes directly to the bottom. The derivative of $x^2 + 1$ is $2x$, so $2x$ goes on the top. Putting them together gives us $\\frac{2x}{x^2+1}$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Find the derivative of $f(x)=\\ln(x^{2}+1)$.",
+    "options": {
+      "A": "$2x$",
+      "B": "$\\dfrac{2x}{x^{2}+1}$",
+      "C": "$\\dfrac{1}{x^{2}+1}$",
+      "D": "$\\dfrac{2x}{x}$"
+    },
+    "correct_answer": "B",
+    "explanation": "For $f(x)=\\ln(u)$, $$\\frac{d}{dx}[\\ln(u)]=\\frac{u'}{u}.$$ Here, $u=x^{2}+1$ and $u'=2x$. Hence, $$f'(x)=\\frac{2x}{x^{2}+1}.$$"
   },
   {
-    "question": "At a critical point of a function $f(x)$, which condition must be satisfied?",
-    "options": [
-      "A) $f'(x) = 0$ or $f'(x)$ does not exist",
-      "B) $f(x)$ is undefined",
-      "C) $f(x) = 0$",
-      "D) $f''(x) = 0$"
-    ],
-    "answer": "A",
-    "explanation": "Imagine you are hiking up and down a hilly landscape. A 'critical point' is any special location where you are standing completely flat on top of a hill, flat at the very bottom of a valley, or at a sharp pointy peak where your feet can't balance flatly. In math, a flat spot means the derivative (slope) is exactly 0. A sharp pointy spot means the derivative doesn't exist. So, critical points happen whenever the derivative is 0 or completely missing!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "At a critical point of a function $f(x)$, which condition must hold?",
+    "options": {
+      "A": "$f'(x)=0$ or $f'(x)$ does not exist",
+      "B": "$f(x)$ is undefined",
+      "C": "$f(x)=0$",
+      "D": "$f''(x)=0$"
+    },
+    "correct_answer": "A",
+    "explanation": "A critical point occurs at a point in the domain of the function where the first derivative is either zero or does not exist. Such points are candidates for local maxima, local minima, or stationary points."
   },
   {
-    "question": "Find the critical points of $f(x) = x^3 - 3x^2 + 2$.",
-    "options": [
-      "A) $x = -1$ and $x = 2$",
-      "B) $x = 0$ and $x = 2$",
-      "C) $x = 1$ and $x = 3$",
-      "D) only $x = 0$"
-    ],
-    "answer": "B",
-    "explanation": "To find the special flat spots (critical points) of this function, we need to find its derivative and see where it equals 0. First, let's find the derivative using our power rule shortcut: $f'(x) = 3x^2 - 6x$. Next, let's set this equal to 0 to solve a puzzle: $3x^2 - 6x = 0$. We can pull out a common factor of $3x$ to simplify it: $3x(x - 2) = 0$. For this multiplication to equal 0, either $3x = 0$ (which means $x = 0$) or $x - 2 = 0$ (which means $x = 2$). So our critical points are at $x = 0$ and $x = 2$!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Find the critical points of $f(x)=x^{3}-3x^{2}+2$.",
+    "options": {
+      "A": "$x=-1$ and $x=2$",
+      "B": "$x=0$ and $x=2$",
+      "C": "$x=1$ and $x=3$",
+      "D": "Only $x=0$"
+    },
+    "correct_answer": "B",
+    "explanation": "Differentiate the function: $$f'(x)=3x^{2}-6x=3x(x-2).$$ Setting $f'(x)=0$ gives $$3x(x-2)=0,$$ so the critical points occur at $$x=0\\quad\\text{and}\\quad x=2.$$"
   },
   {
-    "question": "An inflection point occurs where which condition is satisfied?",
-    "options": [
-      "A) $f(x) = 0$",
-      "B) $f''(x) > 0$",
-      "C) $f''(x) = 0$ and the concavity changes",
-      "D) $f'(x) = 0$"
-    ],
-    "answer": "C",
-    "explanation": "Think of a curvy road. Sometimes the road curves like a happy smiley face (concave up), and sometimes it curves like a sad frowny face (concave down). An 'inflection point' is the exact spot on the road where the curve switches from a smile to a frown, or from a frown to a smile! At this turning point, the second derivative $f''(x)$ equals 0 as it transitions between positive and negative values."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "An inflection point occurs when which condition is satisfied?",
+    "options": {
+      "A": "$f(x)=0$",
+      "B": "$f''(x)>0$",
+      "C": "$f''(x)=0$ and the concavity changes",
+      "D": "$f'(x)=0$"
+    },
+    "correct_answer": "C",
+    "explanation": "An inflection point is a point where the graph changes concavity (from concave up to concave down, or vice versa). A necessary test is that $$f''(x)=0$$ or is undefined, and the sign of the second derivative changes across the point."
   },
   {
-    "question": "For the function $f(x) = x^3$, what is the concavity when $x > 0$?",
-    "options": [
-      "A) Concave down",
-      "B) Linear",
-      "C) Neither concave up nor down",
-      "D) Concave up"
-    ],
-    "answer": "D",
-    "explanation": "To check if a graph curves like a bowl pointing up (concave up) or a bowl pointing down (concave down), we use the second derivative. Let's find it for $f(x) = x^3$: the first derivative is $3x^2$, and differentiating again gives the second derivative, $6x$. If we plug in any positive number for $x$ (meaning $x > 0$), then $6x$ will always be a positive, happy number! Positive means it curves upward like a smiley face, so it is concave up."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "For the function $f(x)=x^{3}$, determine the concavity when $x>0$.",
+    "options": {
+      "A": "Concave down",
+      "B": "Linear",
+      "C": "Neither concave up nor concave down",
+      "D": "Concave up"
+    },
+    "correct_answer": "D",
+    "explanation": "Differentiate twice: $$f'(x)=3x^{2},\\qquad f''(x)=6x.$$ Since $6x>0$ for all $x>0$, the graph is concave upward on the interval $(0,\\infty)$."
   },
   {
-    "question": "What is $\\lim_{x \\to \\infty} \\frac{2x^2+3x}{x^2-1}$?",
-    "options": [
-      "A) 0",
-      "B) 2",
-      "C) 3",
-      "D) $\\infty$"
-    ],
-    "answer": "B",
-    "explanation": "Imagine $x$ is a gigantic number, like a billion trillion! When a number is that massive, the terms with the highest powers do all the heavy lifting, while the smaller terms don't matter at all. On top, $2x^2$ is much bigger than $3x$. On the bottom, $x^2$ is much bigger than $-1$. So, we can ignore the little guys and just look at the champions: $\\frac{2x^2}{x^2}$. The $x^2$ parts cancel each other out completely, leaving us with a final value of 2!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $\\displaystyle\\lim_{x\\to\\infty}\\frac{2x^{2}+3x}{x^{2}-1}$.",
+    "options": {
+      "A": "$0$",
+      "B": "$2$",
+      "C": "$3$",
+      "D": "$\\infty$"
+    },
+    "correct_answer": "B",
+    "explanation": "Divide both the numerator and denominator by $x^{2}$: $$\\lim_{x\\to\\infty}\\frac{2+\\frac{3}{x}}{1-\\frac{1}{x^{2}}}=\\frac{2+0}{1-0}=2.$$ Therefore, the limit is $2$."
   },
   {
-    "question": "The graph of $y = x^2$ has which shape?",
-    "options": [
-      "A) A straight line",
-      "B) A hyperbola",
-      "C) A parabola opening upward",
-      "D) A parabola opening downward"
-    ],
-    "answer": "C",
-    "explanation": "If you plug numbers into $y = x^2$ and map them out, you get a beautiful U-shaped curve. For example, if $x$ is 2, $y$ is 4. If $x$ is $-2$, $y$ is also positive 4! Because squaring negative numbers always makes them positive, both sides of the graph curve high up into the sky. This perfect U-shape is called a parabola opening upward."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "What is the shape of the graph of $y=x^{2}$?",
+    "options": {
+      "A": "A straight line",
+      "B": "A hyperbola",
+      "C": "A parabola opening upward",
+      "D": "A parabola opening downward"
+    },
+    "correct_answer": "C",
+    "explanation": "The graph of the quadratic function $y=x^{2}$ is a parabola with vertex at $(0,0)$. Since the coefficient of $x^{2}$ is positive, the parabola opens upward."
   },
   {
-    "question": "What is the derivative of $f(x) = \\cos(2x)$?",
-    "options": [
-      "A) $-2 \\sin(2x)$",
-      "B) $-\\sin(2x)$",
-      "C) $\\cos(2x)$",
-      "D) $2 \\sin(2x)$"
-    ],
-    "answer": "A",
-    "explanation": "The standard rule tells us that the derivative of $\\cos(x)$ is $-\\sin(x)$. But since we have a 2 tucked inside with the $x$, we have to use the Chain Rule! First, differentiate the outside to get $-\\sin(2x)$. Next, look inside at $2x$; its derivative is 2. Finally, multiply them together to get your final answer: $-2\\sin(2x)$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Find the derivative of $f(x)=\\cos(2x)$.",
+    "options": {
+      "A": "$-2\\sin(2x)$",
+      "B": "$-\\sin(2x)$",
+      "C": "$\\cos(2x)$",
+      "D": "$2\\sin(2x)$"
+    },
+    "correct_answer": "A",
+    "explanation": "Using the Chain Rule, $$\\frac{d}{dx}[\\cos(u)]=-\\sin(u)\\cdot u'.$$ Let $u=2x$, so $u'=2$. Hence, $$\\frac{d}{dx}[\\cos(2x)]=-2\\sin(2x).$$"
   },
   {
-    "question": "For curve sketching, horizontal asymptotes are found by evaluating which limit?",
-    "options": [
-      "A) $\\lim_{x \\to \\pm\\infty} f(x)$",
-      "B) $\\lim_{x \\to 0} f(x)$",
-      "C) $f'(x) = 0$",
-      "D) $\\lim_{x \\to a} f(x) where f(a) is undefined$"
-    ],
-    "answer": "A",
-    "explanation": "A horizontal asymptote is a flat, horizontal line at the edge of a graph that the function approaches as you walk infinitely far to the left or right. To discover where this flat line is hiding, you need to see what value the function settles down to when $x$ grows into an infinitely huge positive number $(\\infty)$ or an infinitely small negative number $(-\\infty)$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "For curve sketching, horizontal asymptotes are determined by evaluating which limit?",
+    "options": {
+      "A": "$\\displaystyle\\lim_{x\\to\\pm\\infty}f(x)$",
+      "B": "$\\displaystyle\\lim_{x\\to0}f(x)$",
+      "C": "$f'(x)=0$",
+      "D": "$\\displaystyle\\lim_{x\\to a}f(x)$ where $f(a)$ is undefined"
+    },
+    "correct_answer": "A",
+    "explanation": "Horizontal asymptotes describe the end behavior of a function. They are obtained by evaluating $$\\lim_{x\\to\\infty}f(x)\\quad\\text{and}\\quad\\lim_{x\\to-\\infty}f(x).$$"
   },
   {
+    "course_code": "MTH 102",
+    "topic": "",
     "question": "Vertical asymptotes occur at values of $x$ where which condition holds?",
-    "options": [
-      "A) The function approaches $\\pm\\infty$ as $x$ approaches that value",
-      "B) The derivative equals zero",
-      "C) The function equals zero",
-      "D) The second derivative is undefined"
-    ],
-    "answer": "A",
-    "explanation": "Imagine an invisible wall on a graph. As your function path walks closer and closer to this wall, it suddenly shoots straight up into the sky toward positive infinity or plunges straight down into the ground toward negative infinity! That invisible vertical wall is called a vertical asymptote."
+    "options": {
+      "A": "The function approaches $\\pm\\infty$ as $x$ approaches that value.",
+      "B": "The derivative equals zero.",
+      "C": "The function equals zero.",
+      "D": "The second derivative is undefined."
+    },
+    "correct_answer": "A",
+    "explanation": "A vertical asymptote occurs at $x=a$ if at least one of the limits $$\\lim_{x\\to a^-}f(x)\\quad\\text{or}\\quad\\lim_{x\\to a^+}f(x)$$ is equal to $\\pm\\infty$."
   },
   {
-    "question": "What is the second derivative of $f(x) = 4x^3 - 6x^2 + 2x$?",
-    "options": [
-      "A) $24x^2 - 12x$",
-      "B) $12x - 6$",
-      "C) $24x - 12$",
-      "D) $12x^2 - 12x + 2$"
-    ],
-    "answer": "C",
-    "explanation": "Finding a second derivative simply means finding the derivative twice in a row! Let's do it step-by-step. First round: use the power rule on $4x^3 - 6x^2 + 2x$ to get the first derivative, which is $12x^2 - 12x + 2$. Second round: differentiate this new expression! The derivative of $12x^2$ is $24x$, the derivative of $-12x$ is $-12$, and the derivative of 2 is 0. Putting it together gives $24x - 12$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Find the second derivative of $f(x)=4x^{3}-6x^{2}+2x$.",
+    "options": {
+      "A": "$24x^{2}-12x$",
+      "B": "$12x-6$",
+      "C": "$24x-12$",
+      "D": "$12x^{2}-12x+2$"
+    },
+    "correct_answer": "C",
+    "explanation": "Differentiate twice: $$f'(x)=12x^{2}-12x+2,$$ and $$f''(x)=24x-12.$$ Therefore, the second derivative is $24x-12$."
   },
   {
-    "question": "The Fundamental Theorem of Calculus states that if $F'(x) = f(x)$, then $\\int_a^b f(x)\\,dx$ equals what?",
-    "options": [
-      "A) $f(b) - f(a)$",
-      "B) $F(b) + F(a)$",
-      "C) $F(a) - F(b)$",
-      "D) $F(b) - F(a)$"
-    ],
-    "answer": "D",
-    "explanation": "This famous rule is like a magical bridge between derivatives and integrals. It says that if you want to find the accumulated value of a function from a starting gate $a$ to an ending gate $b$, all you have to do is find its antiderivative function $F(x)$, plug the ending gate into it $F(b)$, and subtract the value when you plug the starting gate into it $F(a)$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "The Fundamental Theorem of Calculus states that if $F'(x)=f(x)$, then $\\displaystyle\\int_{a}^{b}f(x)\\,dx$ is equal to:",
+    "options": {
+      "A": "$f(b)-f(a)$",
+      "B": "$F(b)+F(a)$",
+      "C": "$F(a)-F(b)$",
+      "D": "$F(b)-F(a)$"
+    },
+    "correct_answer": "D",
+    "explanation": "If $F$ is an antiderivative of $f$, then the Fundamental Theorem of Calculus states that $$\\int_{a}^{b}f(x)\\,dx=F(b)-F(a).$$"
   },
   {
-    "question": "What is $\\int_{1}^{3} (2x+ 1) \\, dx$?",
-    "options": [
-      "A) 8",
-      "B) 10",
-      "C) 12",
-      "D) 6"
-    ],
-    "answer": "B",
-    "explanation": "Let's solve this integration puzzle step-by-step! First, we need to find the backwards-derivative (antiderivative) of $(2x + 1)$. The antiderivative of $2x$ is $x^2$, and the antiderivative of 1 is $x$, giving us $x^2 + x$. Now, we use our starting gate (1) and ending gate (3). Plug 3 into our expression: $3^2 + 3 = 9 + 3 = 12$. Next, plug 1 into our expression: $1^2 + 1 = 1 + 1 = 2$. Finally, subtract the starting gate value from the ending gate value: $12 - 2 = 10$!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $\\displaystyle\\int_{1}^{3}(2x+1)\\,dx$.",
+    "options": {
+      "A": "$8$",
+      "B": "$10$",
+      "C": "$12$",
+      "D": "$6$"
+    },
+    "correct_answer": "B",
+    "explanation": "An antiderivative of $2x+1$ is $x^{2}+x$. Thus, $$\\int_{1}^{3}(2x+1)\\,dx=[x^{2}+x]_{1}^{3}=(9+3)-(1+1)=12-2=10.$$"
   },
   {
-    "question": "What is $\\int_{0}^{\\pi/2} \\cos x \\, dx$?",
-    "options": [
-      "A) $\\frac{\\pi}{2}$",
-      "B) 1",
-      "C) $\\pi$",
-      "D) 0"
-    ],
-    "answer": "B",
-    "explanation": "First, find the antiderivative of $\\cos x$. We ask ourselves: 'Whose derivative is $\\cos x$?' The answer is $\\sin x$! Now we plug in our gates from 0 to $\\frac{\\pi}{2}$. First, plug in the top value: $\\sin(\\frac{\\pi}{2}) = 1$. Next, plug in the bottom value: $\\sin(0) = 0$. Subtract them to finish the problem: $1 - 0 = 1$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $\\displaystyle\\int_{0}^{\\pi/2}\\cos x\\,dx$.",
+    "options": {
+      "A": "$\\dfrac{\\pi}{2}$",
+      "B": "$1$",
+      "C": "$\\pi$",
+      "D": "$0$"
+    },
+    "correct_answer": "B",
+    "explanation": "Since $$\\int\\cos x\\,dx=\\sin x+C,$$ we have $$\\int_{0}^{\\pi/2}\\cos x\\,dx=[\\sin x]_{0}^{\\pi/2}=1-0=1.$$"
   },
   {
-    "question": "Using partial fractions, $\\int \\frac{1}{x^2-1} \\, dx$ can be written as which sum of integrals?",
-    "options": [
-      "A) $\\int \\frac{1}{x-1} \\, dx + \\int \\frac{1}{x+1} \\, dx$",
-      "B) $\\frac{1}{2} \\int \\frac{1}{x-1} \\, dx - \\frac{1}{2} \\int \\frac{1}{x+1} \\, dx$",
-      "C) $2 \\int \\frac{1}{x-1} \\, dx$",
-      "D) $\\int \\frac{1}{x-1} \\, dx - \\int \\frac{1}{x+1} \\, dx$"
-    ],
-    "answer": "B",
-    "explanation": "The bottom of our fraction factors into $(x-1)(x+1)$. We want to split this giant fraction up into two smaller, easier fractions: $\\frac{A}{x-1} + \\frac{B}{x+1}$. If you solve the algebra puzzle to find the values of $A$ and $B$, you discover that $A = \\frac{1}{2}$ and $B = -\\frac{1}{2}$. Splitting them into separate integrals gives us $\\frac{1}{2} \\int \\frac{1}{x-1} \\, dx - \\frac{1}{2} \\int \\frac{1}{x+1} \\, dx$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Using partial fractions, $\\displaystyle\\int\\frac{1}{x^{2}-1}\\,dx$ can be written as which sum of integrals?",
+    "options": {
+      "A": "$\\displaystyle\\int\\frac{1}{x-1}\\,dx+\\int\\frac{1}{x+1}\\,dx$",
+      "B": "$\\displaystyle\\frac{1}{2}\\int\\frac{1}{x-1}\\,dx-\\frac{1}{2}\\int\\frac{1}{x+1}\\,dx$",
+      "C": "$\\displaystyle2\\int\\frac{1}{x-1}\\,dx$",
+      "D": "$\\displaystyle\\int\\frac{1}{x-1}\\,dx-\\int\\frac{1}{x+1}\\,dx$"
+    },
+    "correct_answer": "B",
+    "explanation": "Factor the denominator as $$x^{2}-1=(x-1)(x+1).$$ Then, $$\\frac{1}{x^{2}-1}=\\frac{1}{2(x-1)}-\\frac{1}{2(x+1)}.$$ Therefore, $$\\int\\frac{1}{x^{2}-1}\\,dx=\\frac{1}{2}\\int\\frac{1}{x-1}\\,dx-\\frac{1}{2}\\int\\frac{1}{x+1}\\,dx.$$"
   },
   {
-    "question": "The area under the curve $y = f(x)$ from $x = a$ to $x = b$ is given by which integral?",
-    "options": [
-      "A) $f(b) - f(a)$",
-      "B) $\\int_{a}^{b} x \\, dx$",
-      "C) $\\int f(x) \\, dx$",
-      "D) $\\int_{a}^{b} f(x) \\, dx$ (if $f(x) \\ge 0$)"
-    ],
-    "answer": "D",
-    "explanation": "Imagine drawing a wavy line on a graph above the flat x-axis. If you want to paint the region trapped underneath that curve between a starting wall $a$ and an ending wall $b$, a definite integral calculates the exact amount of paint space (area) you need! We write this space accumulation as $\\int_{a}^{b} f(x) \\, dx$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "The area under the curve $y=f(x)$ from $x=a$ to $x=b$ is given by which integral?",
+    "options": {
+      "A": "$f(b)-f(a)$",
+      "B": "$\\displaystyle\\int_{a}^{b}x\\,dx$",
+      "C": "$\\displaystyle\\int f(x)\\,dx$",
+      "D": "$\\displaystyle\\int_{a}^{b}f(x)\\,dx$, provided $f(x)\\ge0$ on $[a,b]$"
+    },
+    "correct_answer": "D",
+    "explanation": "If $f(x)\\ge0$ on the interval $[a,b]$, then the area bounded by the curve, the $x$-axis, and the vertical lines $x=a$ and $x=b$ is $$\\int_{a}^{b}f(x)\\,dx.$$"
   },
   {
-    "question": "Using integration by parts, what is $\\int x e^x \\, dx$?",
-    "options": [
-      "A) $x e^x - e^x + C$",
-      "B) $e^x + C$",
-      "C) $\\frac{x^2 e^x}{2} + C$",
-      "D) $x e^x + C$"
-    ],
-    "answer": "A",
-    "explanation": "Integration by parts is a technique used when two different types of terms are multiplied together inside an integral. The special formula is $\\int u \\, dv = uv - \\int v \\, du$. Let's choose $u = x$ (which means its derivative is $du = dx$) and $dv = e^x dx$ (which integrates to $v = e^x$). Now, assemble the pieces using the formula: $x \\times e^x - \\int e^x \\, dx$. Since the integral of $e^x$ is just $e^x$, the final piece is $x e^x - e^x + C$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Using integration by parts, evaluate $\\displaystyle\\int xe^{x}\\,dx$.",
+    "options": {
+      "A": "$xe^{x}-e^{x}+C$",
+      "B": "$e^{x}+C$",
+      "C": "$\\dfrac{x^{2}e^{x}}{2}+C$",
+      "D": "$xe^{x}+C$"
+    },
+    "correct_answer": "A",
+    "explanation": "Using integration by parts with $$u=x,\\qquad dv=e^{x}\\,dx,$$ we obtain $$du=dx,\\qquad v=e^{x}.$$ Therefore, $$\\int xe^{x}\\,dx=xe^{x}-\\int e^{x}\\,dx=xe^{x}-e^{x}+C=e^{x}(x-1)+C.$$"
   },
   {
-    "question": "What is the area between the curve $y = 4 - x^2$ and the x-axis from $x = -2$ to $x = 2$?",
-    "options": [
-      "A) 16",
-      "B) $\\frac{32}{3}$",
-      "C) 8",
-      "D) $\\frac{16}{3}$"
-    ],
-    "answer": "B",
-    "explanation": "To find this space, we calculate the definite integral $\\int_{-2}^{2} (4 - x^2) \\, dx$. First, let's find the antiderivative, which is $4x - \\frac{x^3}{3}$. Now let's plug in our boundaries. Putting 2 into the expression gives $4(2) - \\frac{2^3}{3} = 8 - \\frac{8}{3} = \\frac{16}{3}$. Putting $-2$ into the expression gives $4(-2) - \\frac{(-2)^3}{3} = -8 - (-\\frac{8}{3}) = -\\frac{16}{3}$. Subtracting the bottom result from the top result gives $\\frac{16}{3} - (-\\frac{16}{3}) = \\frac{16}{3} + \\frac{16}{3} = \\frac{32}{3}$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Find the area between the curve $y=4-x^{2}$ and the $x$-axis from $x=-2$ to $x=2$.",
+    "options": {
+      "A": "$16$",
+      "B": "$\\dfrac{32}{3}$",
+      "C": "$8$",
+      "D": "$\\dfrac{16}{3}$"
+    },
+    "correct_answer": "B",
+    "explanation": "Since $4-x^{2}\\ge0$ on $[-2,2]$, the required area is $$\\int_{-2}^{2}(4-x^{2})\\,dx=\\left[4x-\\frac{x^{3}}{3}\\right]_{-2}^{2}=\\frac{32}{3}.$$"
   },
   {
-    "question": "Evaluate $\\int_{-1}^{1} x^3 \\, dx$.",
-    "options": [
-      "A) $\\frac{1}{2}$",
-      "B) 2",
-      "C) $-\\frac{1}{2}$",
-      "D) 0"
-    ],
-    "answer": "D",
-    "explanation": "Let's look at this geometrically! The function $x^3$ is an 'odd' function, which means its graph looks like a perfect slide that goes below the ground on the negative side and above the ground on the positive side. When we integrate from $-1$ to $1$, the below-ground area on the left is exactly the same size as the above-ground area on the right. The negative area cancels out the positive area perfectly, leaving us with a total sum of 0!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $\\displaystyle\\int_{-1}^{1}x^{3}\\,dx$.",
+    "options": {
+      "A": "$\\dfrac{1}{2}$",
+      "B": "$2$",
+      "C": "$-\\dfrac{1}{2}$",
+      "D": "$0$"
+    },
+    "correct_answer": "D",
+    "explanation": "Since $x^3$ is an odd function, its graph is symmetric about the origin. Therefore, the integral over the symmetric interval $[-1,1]$ is zero: $$\\int_{-1}^{1}x^3\\,dx=0.$$ Alternatively, $$\\int x^3\\,dx=\\frac{x^4}{4}+C,$$ so $$\\left[\\frac{x^4}{4}\\right]_{-1}^{1}=\\frac14-\\frac14=0.$$"
   },
   {
-    "question": "Find the volume generated when the region under $y = x$ from $x = 0$ to $x = 2$ is rotated about the x-axis.",
-    "options": [
-      "A) $4\\pi$",
-      "B) $2\\pi$",
-      "C) $\\frac{8\\pi}{3}$",
-      "D) $\\frac{8\\pi}{9}$"
-    ],
-    "answer": "C",
-    "explanation": "Imagine taking a flat triangle shape on a graph and spinning it around the x-axis super fast like a toy top! It forms a solid 3D cone shape. To find its volume, we use the formula $V = \\pi \\int_{a}^{b} [f(x)]^2 dx$. Plugging in our line $y=x$ gives $V = \\pi \\int_{0}^{2} x^2 dx$. The antiderivative of $x^2$ is $\\frac{x^3}{3}$. Evaluating this from 0 to 2 gives $\\frac{2^3}{3} - 0 = \\frac{8}{3}$. Multiply this by $\\pi$ to get the total volume: $\\frac{8\\pi}{3}$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Find the volume generated when the region under $y=x$ from $x=0$ to $x=2$ is rotated about the $x$-axis.",
+    "options": {
+      "A": "$4\\pi$",
+      "B": "$2\\pi$",
+      "C": "$\\dfrac{8\\pi}{3}$",
+      "D": "$\\dfrac{8\\pi}{9}$"
+    },
+    "correct_answer": "C",
+    "explanation": "Using the Disk Method, $$V=\\pi\\int_{0}^{2}(x)^2\\,dx=\\pi\\left[\\frac{x^3}{3}\\right]_0^2=\\pi\\left(\\frac83\\right)=\\frac{8\\pi}{3}.$$"
   },
   {
-    "question": "Using substitution, evaluate $\\int 2x(x^2 + 1)^3 \\, dx$ by letting $u = x^2 + 1$.",
-    "options": [
-      "A) $2(x^2 + 1)^4 + C$",
-      "B) $\\frac{(x^2+1)^3}{3} + C$",
-      "C) $(x^2 + 1)^4 + C$",
-      "D) $\\frac{(x^2+1)^4}{4} + C$"
-    ],
-    "answer": "D",
-    "explanation": "Substitution is like using a nickname to simplify a long expression. Let's give $x^2 + 1$ the nickname '$u$'. The derivative of this nickname is $du = 2x \\, dx$. Notice that $2x \\, dx$ is already sitting perfectly inside our integral! So we can swap everything out to make a tiny new integral: $\\int u^3 \\, du$. Finding the antiderivative of $u^3$ is easy using the power rule: $\\frac{u^4}{4} + C$. Now, swap the nickname back for its real name to get the final answer: $\\frac{(x^2 + 1)^4}{4} + C$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Using substitution with $u=x^2+1$, evaluate $$\\int 2x(x^2+1)^3\\,dx.$$",
+    "options": {
+      "A": "$2(x^2+1)^4+C$",
+      "B": "$\\dfrac{(x^2+1)^3}{3}+C$",
+      "C": "$(x^2+1)^4+C$",
+      "D": "$\\dfrac{(x^2+1)^4}{4}+C$"
+    },
+    "correct_answer": "D",
+    "explanation": "Let $$u=x^2+1,$$ so $$du=2x\\,dx.$$ The integral becomes $$\\int u^3\\,du=\\frac{u^4}{4}+C.$$ Substituting back gives $$\\frac{(x^2+1)^4}{4}+C.$$"
   },
   {
-    "question": "Evaluate $\\int (3x^2 - 4x + 5) \\, dx$.",
-    "options": [
-      "A) $x^3 - 2x^2 + C$",
-      "B) $6x - 4 + C$",
-      "C) $3x^3 - 4x^2 + 5x + C$",
-      "D) $x^3 - 2x^2 + 5x + C$"
-    ],
-    "answer": "D",
-    "explanation": "To integrate this entire expression, we look at each term one-by-one and apply the reverse power rule. For $3x^2$: raise the power to 3 and divide by 3, which simplifies to $x^3$. For $-4x$: raise the power to 2 and divide by 2, which gives $-2x^2$. For 5: since it has no $x$, it simply gains an $x$ to become $5x$. Finally, we add an arbitrary constant $+ C$ at the very end to include all possible shifts, giving us $x^3 - 2x^2 + 5x + C$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $$\\int(3x^2-4x+5)\\,dx.$$",
+    "options": {
+      "A": "$x^3-2x^2+C$",
+      "B": "$6x-4+C$",
+      "C": "$3x^3-4x^2+5x+C$",
+      "D": "$x^3-2x^2+5x+C$"
+    },
+    "correct_answer": "D",
+    "explanation": "Integrate each term separately: $$\\int3x^2\\,dx=x^3,\\qquad \\int(-4x)\\,dx=-2x^2,\\qquad \\int5\\,dx=5x.$$ Hence, $$\\int(3x^2-4x+5)\\,dx=x^3-2x^2+5x+C.$$"
   },
   {
-    "question": "Evaluate $\\int x e^{x^2} \\, dx$ using substitution.",
-    "options": [
-      "A) $e^{x^2} + C$",
-      "B) $2e^{x^2} + C$",
-      "C) $\\frac{1}{2} e^{x^2} + C$",
-      "D) $x^2 e^{x^2} + C$"
-    ],
-    "answer": "C",
-    "explanation": "Let's give the power $x^2$ a quick nickname, $u$. Differentiating both sides tells us that $du = 2x \\, dx$. We have an $x \\, dx$ in our integral, which is exactly half of $du$, so $\\frac{1}{2} du = x \\, dx$. Let's rewrite our integral using the new nickname: $\\frac{1}{2} \\int e^u du$. Since the antiderivative of $e^u$ is just $e^u$, this becomes $\\frac{1}{2}e^u + C$. Replacing $u$ back with $x^2$ gives $\\frac{1}{2} e^{x^2} + C$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Using substitution, evaluate $$\\int xe^{x^2}\\,dx.$$",
+    "options": {
+      "A": "$e^{x^2}+C$",
+      "B": "$2e^{x^2}+C$",
+      "C": "$\\dfrac12e^{x^2}+C$",
+      "D": "$x^2e^{x^2}+C$"
+    },
+    "correct_answer": "C",
+    "explanation": "Let $$u=x^2,$$ so $$du=2x\\,dx$$ and $$x\\,dx=\\frac12du.$$ Therefore, $$\\int xe^{x^2}\\,dx=\\frac12\\int e^u\\,du=\\frac12e^u+C=\\frac12e^{x^2}+C.$$"
   },
   {
-    "question": "Find the area under the curve $y = x^2$ from $x = 0$ to $x = 3$.",
-    "options": [
-      "A) 9",
-      "B) 6",
-      "C) 3",
-      "D) 27"
-    ],
-    "answer": "A",
-    "explanation": "To find the space under this curve, we need to solve the definite integral $\\int_{0}^{3} x^2 \\, dx$. The antiderivative of $x^2$ is $\\frac{x^3}{3}$. Now let's evaluate it at our boundaries! First, plug in 3: $\\frac{3^3}{3} = \\frac{27}{3} = 9$. Next, plug in 0: \\frac{0^3}{3} = 0. Subtracting the two values gives $9 - 0 = 9$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Find the area under the curve $y=x^2$ from $x=0$ to $x=3$.",
+    "options": {
+      "A": "$9$",
+      "B": "$6$",
+      "C": "$3$",
+      "D": "$27$"
+    },
+    "correct_answer": "A",
+    "explanation": "The required area is $$\\int_0^3x^2\\,dx=\\left[\\frac{x^3}{3}\\right]_0^3=\\frac{27}{3}-0=9.$$"
   },
   {
-    "question": "The Fundamental Theorem of Calculus states that if $F'(x) = f(x)$, then $\\int_{a}^{b} f(x) \\, dx$ equals what?",
-    "options": [
-      "A) $F(b) + F(a)$",
-      "B) $F(b) - F(a)$",
-      "C) $F(a) - F(b)$",
-      "D) $f(b) - f(a)$"
-    ],
-    "answer": "B",
-    "explanation": "This theorem is the gold standard for calculating area under curves. It says if you want to sum up values from point $a$ to point $b$, you find the backwards-derivative function $F$, plug the final point into it $F(b)$, and subtract the value of the starting point $F(a)$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "The Fundamental Theorem of Calculus states that if $F'(x)=f(x)$, then $$\\int_a^bf(x)\\,dx$$ equals:",
+    "options": {
+      "A": "$F(b)+F(a)$",
+      "B": "$F(b)-F(a)$",
+      "C": "$F(a)-F(b)$",
+      "D": "$f(b)-f(a)$"
+    },
+    "correct_answer": "B",
+    "explanation": "If $F$ is an antiderivative of $f$, then $$\\int_a^bf(x)\\,dx=F(b)-F(a).$$"
   },
   {
-    "question": "Evaluate $\\int e^{3x} \\, dx$.",
-    "options": [
-      "A) $3e^{3x} + C$",
-      "B) $\\frac{e^{3x}}{x} + C$",
-      "C) $\\frac{1}{3} e^{3x} + C$",
-      "D) $e^{3x} + C$"
-    ],
-    "answer": "C",
-    "explanation": "Integrating the exponential function $e^x$ keeps it exactly the same. But when there is a multiplier like 3 inside, integration does the opposite of differentiation. Instead of multiplying by 3, we divide by 3! So, the result becomes $\\frac{1}{3} e^{3x} + C$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $$\\int e^{3x}\\,dx.$$",
+    "options": {
+      "A": "$3e^{3x}+C$",
+      "B": "$\\dfrac{e^{3x}}{x}+C$",
+      "C": "$\\dfrac13e^{3x}+C$",
+      "D": "$e^{3x}+C$"
+    },
+    "correct_answer": "C",
+    "explanation": "Using the substitution $u=3x$, we have $$du=3dx$$ and $$dx=\\frac13du.$$ Therefore, $$\\int e^{3x}\\,dx=\\frac13\\int e^u\\,du=\\frac13e^{3x}+C.$$"
   },
   {
-    "question": "What is $\\int e^x \\, dx$?",
-    "options": [
-      "A) $e^{x+1} + C$",
-      "B) $e^x + C$",
-      "C) $\\frac{e^x}{x} + C$",
-      "D) $x e^x + C$"
-    ],
-    "answer": "B",
-    "explanation": "The exponential function $e^x$ is completely unique in the world of math. It is its own derivative and its own antiderivative! Integrating it changes absolutely nothing, so the answer is simply $e^x + C$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $$\\int e^x\\,dx.$$",
+    "options": {
+      "A": "$e^{x+1}+C$",
+      "B": "$e^x+C$",
+      "C": "$\\dfrac{e^x}{x}+C$",
+      "D": "$xe^x+C$"
+    },
+    "correct_answer": "B",
+    "explanation": "The exponential function is its own derivative and antiderivative. Hence, $$\\int e^x\\,dx=e^x+C.$$"
   },
   {
-    "question": "If $F'(x) = f(x)$, what is $\\int f(x) \\, dx$?",
-    "options": [
-      "A) $F(x) + C$",
-      "B) $f(x) + C$",
-      "C) $F(x)$",
-      "D) $\\frac{d}{dx}[f(x)]$"
-    ],
-    "answer": "A",
-    "explanation": "The integral sign $\\int$ asks you to go backwards in time and find the original function before it was differentiated. Since we are told that the derivative of $F(x)$ is $f(x)$, going backwards from $f(x)$ takes us right back to $F(x)$. We add an arbitrary constant $+ C$ to ensure we capture any parallel shifts."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "If $F'(x)=f(x)$, then what is $$\\int f(x)\\,dx$$?",
+    "options": {
+      "A": "$F(x)+C$",
+      "B": "$f(x)+C$",
+      "C": "$F(x)$",
+      "D": "$\\dfrac{d}{dx}[f(x)]$"
+    },
+    "correct_answer": "A",
+    "explanation": "Since $F'(x)=f(x)$, $F(x)$ is an antiderivative of $f(x)$. Therefore, $$\\int f(x)\\,dx=F(x)+C,$$ where $C$ is the constant of integration."
   },
   {
-    "question": "What is $\\int \\sec^2 x \\, dx$?",
-    "options": [
-      "A) $\\cot x + C$",
-      "B) $\\sec x + C$",
-      "C) $-\\tan x + C$",
-      "D) $\\tan x + C$"
-    ],
-    "answer": "D",
-    "explanation": "Integration is just a game of jeopardy where we ask: 'Whose derivative is this expression?' We already know from differentiation rules that the derivative of $\\tan x$ is $\\sec^2 x$. Therefore, the backwards integral of $\\sec^2 x$ must be $\\tan x + C$!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $$\\int\\sec^2x\\,dx.$$",
+    "options": {
+      "A": "$\\cot x+C$",
+      "B": "$\\sec x+C$",
+      "C": "$-\\tan x+C$",
+      "D": "$\\tan x+C$"
+    },
+    "correct_answer": "D",
+    "explanation": "Since $$\\frac{d}{dx}(\\tan x)=\\sec^2x,$$ it follows that $$\\int\\sec^2x\\,dx=\\tan x+C.$$"
   },
   {
-    "question": "What is $\\int \\frac{1}{x} \\, dx$ for $x > 0$?",
-    "options": [
-      "A) $\\frac{1}{x^2} + C$",
-      "B) $-\\frac{1}{x^2} + C$",
-      "C) $\\ln |x| + C$",
-      "D) $x \\ln x + C$"
-    ],
-    "answer": "C",
-    "explanation": "If we try to use the regular power rule on $x^{-1}$, we would add 1 to the power to get 0 and divide by 0, which breaks math completely! Instead, we ask: 'What function has a derivative of $\\frac{1}{x}$?' The answer is the natural logarithm function, $\\ln|x|$. So, $\\int \\frac{1}{x} \\, dx = \\ln |x| + C$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $$\\int\\frac{1}{x}\\,dx,$$ where $x>0$.",
+    "options": {
+      "A": "$\\dfrac{1}{x^2}+C$",
+      "B": "$-\\dfrac{1}{x^2}+C$",
+      "C": "$\\ln|x|+C$",
+      "D": "$x\\ln x+C$"
+    },
+    "correct_answer": "C",
+    "explanation": "The antiderivative of $\\dfrac1x$ is the natural logarithm. Therefore, $$\\int\\frac1x\\,dx=\\ln|x|+C.$$ Since $x>0$, this is equivalent to $$\\ln x+C.$$"
   },
   {
-    "question": "Evaluate the definite integral $\\int_{0}^{2} x^2 \\, dx$.",
-    "options": [
-      "A) $\\frac{4}{3}$",
-      "B) $\\frac{8}{3}$",
-      "C) 4",
-      "D) 8"
-    ],
-    "answer": "B",
-    "explanation": "First, find the antiderivative of $x^2$, which is $\\frac{x^3}{3}$. Now let's evaluate it across our bounds from 0 to 2. Plug in 2 to get $\\frac{2^3}{3} = \\frac{8}{3}$. Plug in 0 to get $\\frac{0^3}{3} = 0$. Subtracting them gives $\\frac{8}{3} - 0 = \\frac{8}{3}$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate the definite integral $$\\int_0^2x^2\\,dx.$$",
+    "options": {
+      "A": "$\\dfrac43$",
+      "B": "$\\dfrac83$",
+      "C": "$4$",
+      "D": "$8$"
+    },
+    "correct_answer": "B",
+    "explanation": "An antiderivative of $x^2$ is $$\\frac{x^3}{3}.$$ Hence, $$\\int_0^2x^2\\,dx=\\left[\\frac{x^3}{3}\\right]_0^2=\\frac83.$$"
   },
   {
-    "question": "The volume of a solid of revolution when $y = f(x)$ is rotated about the x-axis from $x = a$ to $x = b$ is given by which formula?",
-    "options": [
-      "A) $V = \\int_{a}^{b} [f(x)]^2 \\, dx$",
-      "B) $V = 2\\pi \\int_{a}^{b} f(x) \\, dx$",
-      "C) $V = \\pi \\int_{a}^{b} [f(x)]^2 \\, dx$",
-      "D) $V = \\pi \\int_{a}^{b} f(x) \\, dx$"
-    ],
-    "answer": "C",
-    "explanation": "Imagine slicing a 3D rounded solid into super thin coin shapes (disks). The face of each thin disk is a circle, and the area of any circle is $\\pi r^2$. Here, the radius is the height of the function, $f(x)$. So the area of each slice face is $\\pi [f(x)]^2$. To find the total volume, we add up all these thin slices by integrating across the bounds: $V = \\pi \\int_{a}^{b} [f(x)]^2 \\, dx$."
-  },  
-  {
-    "question": "According to the informal definition of limits, what is the meaning of the notation $\\lim_{x \\to a} f(x) = L$?",
-    "options": [
-      "A) $f(x)$ is exactly equal to $L$ for all values of $x$.",
-      "B) $f(x)$ gets closer and closer to $L$ as $x$ gets closer and closer to $a$ (where $x \\neq a$).",
-      "C) $f(x)$ goes to $a$ as $x$ goes to $L$.",
-      "D) The function is undefined when $x$ is near $a$."
-    ],
-    "answer": "B",
-    "explanation": "Imagine walking along a path on a graph. The notation $\\lim_{x \\to a} f(x) = L$ is a fancy way of saying: 'As your feet walk closer and closer to the horizontal coordinate $a$, your vertical altitude gets closer and closer to the height level $L$.' You don't have to step exactly on $a$; it's all about where the path is leading you!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "The volume of the solid generated when the region under $y=f(x)$ from $x=a$ to $x=b$ is rotated about the $x$-axis is given by which formula?",
+    "options": {
+      "A": "$V=\\displaystyle\\int_a^b[f(x)]^2\\,dx$",
+      "B": "$V=2\\pi\\displaystyle\\int_a^bf(x)\\,dx$",
+      "C": "$V=\\pi\\displaystyle\\int_a^b[f(x)]^2\\,dx$",
+      "D": "$V=\\pi\\displaystyle\\int_a^bf(x)\\,dx$"
+    },
+    "correct_answer": "C",
+    "explanation": "Using the Disk Method, the volume is $$V=\\pi\\int_a^b[f(x)]^2\\,dx,$$ where $f(x)$ is the radius of each disk."
   },
   {
-    "question": "What is an alternative notation used to represent 'the limit of $f(x)$ as $x$ approaches $a$ is $L$'?",
-    "options": [
-      "A) $f(a) = L$",
-      "B) $f(x) \\to L$ as $x \\to a$",
-      "C) $x \\to L$ as $f(x) \\to a$",
-      "D) $\\sqrt{f(x)} = L$"
-    ],
-    "answer": "B",
-    "explanation": "The arrow symbol $\\to$ simply means 'approaches' or 'heads toward.' So writing $f(x) \\to L$ as $x \\to a$ is just a shortcut sentence that means: 'The function value heads toward $L$ as the input value heads toward $a$.'"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "According to the informal definition of limits, what does the notation $\\displaystyle \\lim_{x \\to a} f(x)=L$ mean?",
+    "options": {
+      "A": "$f(x)=L$ for every value of $x$.",
+      "B": "$f(x)$ approaches $L$ as $x$ approaches $a$ (with $x\\neq a$).",
+      "C": "$x$ approaches $L$ as $f(x)$ approaches $a$.",
+      "D": "The function is undefined near $x=a$."
+    },
+    "correct_answer": "B",
+    "explanation": "The notation $$\\lim_{x\\to a}f(x)=L$$ means that as the input value $x$ gets arbitrarily close to $a$ (without necessarily being equal to $a$), the function value $f(x)$ gets arbitrarily close to $L$. The actual value of $f(a)$ may or may not equal $L$."
   },
   {
-    "question": "When substituting $x = 2$ directly into the expression $\\frac{x^2 - 2x}{x^2 - 4}$, what form is obtained?",
-    "options": [
-      "A) $0.5$",
-      "B) $\\frac{2}{4}$",
-      "C) $\\frac{0}{0}$",
-      "D) $\\infty$"
-    ],
-    "answer": "C",
-    "explanation": "Let's replace every $x$ with the number 2 and calculate: The top becomes $2^2 - 2(2) = 4 - 4 = 0$. The bottom becomes $2^2 - 4 = 4 - 4 = 0$. Putting them together creates the fraction $\\frac{0}{0}$. This is an indeterminate form, which is a math mystery that requires further simplifying to solve!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Which of the following is an equivalent way to express $\\displaystyle \\lim_{x\\to a}f(x)=L$?",
+    "options": {
+      "A": "$f(a)=L$",
+      "B": "$f(x)\\to L$ as $x\\to a$",
+      "C": "$x\\to L$ as $f(x)\\to a$",
+      "D": "$\\sqrt{f(x)}=L$"
+    },
+    "correct_answer": "B",
+    "explanation": "The statement '$f(x)\\to L$ as $x\\to a$' is equivalent to writing $$\\lim_{x\\to a}f(x)=L.$$ Both notations describe the same limiting behavior."
   },
   {
-    "question": "Why is guessing a limit solely by substituting successive numerical values dangerous?",
-    "options": [
-      "A) Numerical values are always inaccurate.",
-      "B) It cannot be used for rational expressions.",
-      "C) It can suggest a completely wrong answer due to functions behaving differently at much smaller unexamined scales.",
-      "D) It only works when the limit equals infinity."
-    ],
-    "answer": "C",
-    "explanation": "Imagine looking at a smooth field from far away; it might look perfectly flat. But when you zoom in really close, you might find a tiny hidden crack! Functions can be sneaky like that too. If you only look at numbers like 0.1 or 0.01, a function might look like it's heading to 1, but if it suddenly changes behavior at 0.00001, your guess would be completely wrong!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "What is obtained by directly substituting $x=2$ into $$\\frac{x^2-2x}{x^2-4}?$$",
+    "options": {
+      "A": "$0.5$",
+      "B": "$\\dfrac24$",
+      "C": "$\\dfrac00$",
+      "D": "$\\infty$"
+    },
+    "correct_answer": "C",
+    "explanation": "Substituting $x=2$ gives $$\\frac{2^2-2(2)}{2^2-4}=\\frac{4-4}{4-4}=\\frac00.$$ This is an indeterminate form, meaning the limit cannot be determined by direct substitution alone."
   },
   {
-    "question": "In the formal $\\epsilon$-$\\delta$ definition of a limit, what does the positive real number $\\epsilon$ represent?",
-    "options": [
-      "A) The distance between $x$ and $a$.",
-      "B) The target value of the independent variable.",
-      "C) How close we demand the function value $f(x)$ to be to the limit $L$.",
-      "D) The slope of the tangent line at $a$."
-    ],
-    "answer": "C",
-    "explanation": "Think of a target game where you want to land your output directly on the bulls-eye height $L$. The number $\\epsilon$ (epsilon) is a tiny error window set by a referee. It defines how close your output height must stay to the bulls-eye target to win the limit challenge."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Why can estimating a limit using only numerical values be misleading?",
+    "options": {
+      "A": "Numerical methods are always inaccurate.",
+      "B": "Numerical methods cannot be applied to rational functions.",
+      "C": "A function may behave differently arbitrarily close to the point, leading to an incorrect conclusion.",
+      "D": "Numerical methods only work when the limit is infinite."
+    },
+    "correct_answer": "C",
+    "explanation": "Checking only a few nearby values may suggest an incorrect limit because a function's behavior can change extremely close to the point of interest. A rigorous proof or algebraic analysis is often required."
   },
   {
-    "question": "Geometrically on a real number line, what does the expression $|x - y|$ measure?",
-    "options": [
-      "A) The ratio of $x$ to $y$.",
-      "B) The physical distance between the points $x$ and $y$.",
-      "C) The midpoint between $x$ and $y$.",
-      "D) The product of $x$ and $y$."
-    ],
-    "answer": "B",
-    "explanation": "If you are standing at position 5 on a ruler and your friend is standing at position 2, the gap between you is $5 - 2 = 3$ steps. If we do it backwards, $2 - 5 = -3$. The absolute value bars $| |$ wipe away negative signs because distance can never be negative. So $|x - y|$ simply measures the physical distance between those two points."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "In the formal $\\varepsilon$-$\\delta$ definition of a limit, what does the positive number $\\varepsilon$ represent?",
+    "options": {
+      "A": "The distance between $x$ and $a$.",
+      "B": "The target value of the independent variable.",
+      "C": "The desired closeness of $f(x)$ to the limit $L$.",
+      "D": "The slope of the tangent line at $x=a$."
+    },
+    "correct_answer": "C",
+    "explanation": "The quantity $\\varepsilon>0$ specifies how close the function values must be to the limit $L$. It represents the allowable error in the output values."
   },
   {
-    "question": "In the limit notation $\\lim_{x \\to a} f(x)$, what type of variable is $x$ considered because the final answer does not depend on its name?",
-    "options": [
-      "A) Free variable",
-      "B) Dummy or bound variable",
-      "C) Independent constant",
-      "D) Parametric limit"
-    ],
-    "answer": "B",
-    "explanation": "The variable $x$ is called a 'dummy' or 'bound' variable because its actual letter name doesn't affect the final answer. If you change every $x$ to a $t$ or a $z$, the limit calculation behaves exactly the same way and leads to the same destination number."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Geometrically, what does the expression $|x-y|$ represent on the real number line?",
+    "options": {
+      "A": "The ratio of $x$ to $y$.",
+      "B": "The distance between $x$ and $y$.",
+      "C": "The midpoint of $x$ and $y$.",
+      "D": "The product of $x$ and $y$."
+    },
+    "correct_answer": "B",
+    "explanation": "The absolute value $$|x-y|$$ measures the distance between the numbers $x$ and $y$ on the real number line. Since distance is never negative, absolute value is used."
   },
   {
-    "question": "In the expression $\\lim_{x \\to a} f(x)$, why is $a$ called a free variable?",
-    "options": [
-      "A) Because it can be replaced by any word without changing the problem.",
-      "B) Because assigning a different numerical value to $a$ alters the answer to the limit question.",
-      "C) Because it is unrestricted by the laws of real numbers.",
-      "D) Because it is always equal to $0$."
-    ],
-    "answer": "B",
-    "explanation": "The variable $a$ is 'free' because it is a chosen destination point. If you decide to look at where the graph goes as $x$ approaches 5, you will get one answer. If you change $a$ to 10, you are looking at a completely different spot on the graph and will get a brand new answer!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "In the notation $\\displaystyle\\lim_{x\\to a}f(x)$, what type of variable is $x$?",
+    "options": {
+      "A": "Free variable",
+      "B": "Dummy (or bound) variable",
+      "C": "Independent constant",
+      "D": "Parameter"
+    },
+    "correct_answer": "B",
+    "explanation": "The variable $x$ is called a dummy or bound variable because its name is irrelevant. Replacing $x$ with another symbol such as $t$ or $u$ does not change the meaning of the limit."
   },
   {
-    "question": "What is the limit of any constant function $c$ as $x \\to a$?",
-    "options": [
-      "A) $a$",
-      "B) $0$",
-      "C) $c$",
-      "D) Undefined"
-    ],
-    "answer": "C",
-    "explanation": "A constant function is like a straight flat shelf that stays at the exact same height everywhere. No matter where you walk along the floor (as $x \\to a$), the height of the shelf never changes; it is always exactly $c$!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Why is $a$ regarded as a free variable (or parameter) in the expression $\\displaystyle\\lim_{x\\to a}f(x)$?",
+    "options": {
+      "A": "Because it can be replaced by any word.",
+      "B": "Because changing the value of $a$ changes the limit being evaluated.",
+      "C": "Because it is unrestricted by the real numbers.",
+      "D": "Because it is always equal to $0$."
+    },
+    "correct_answer": "B",
+    "explanation": "The value $a$ specifies the point at which the limit is being evaluated. Choosing a different value of $a$ generally changes the limit problem and may produce a different answer."
   },
   {
-    "question": "What is $\\lim_{x \\to a} x$ equal to according to the identity limit rule?",
-    "options": [
-      "A) $1$",
-      "B) $a$",
-      "C) $0$",
-      "D) $\\infty$"
-    ],
-    "answer": "B",
-    "explanation": "The function here is just $x$ itself. So if we ask: 'What value does $x$ approach as $x$ approaches $a$?', the answer is literally in the question! It approaches $a$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "If $c$ is a constant, what is $$\\lim_{x\\to a}c?$$",
+    "options": {
+      "A": "$a$",
+      "B": "$0$",
+      "C": "$c$",
+      "D": "Undefined"
+    },
+    "correct_answer": "C",
+    "explanation": "A constant function has the same value everywhere. Therefore, regardless of the value of $a$, $$\\lim_{x\\to a}c=c.$$"
   },
   {
-    "question": "If $\\lim_{x \\to a} f(x) = L$ and $\\lim_{x \\to a} g(x) = M$, what is $\\lim_{x \\to a} [f(x) + g(x)]$ according to the Sum Rule?",
-    "options": [
-      "A) $L \\cdot M$",
-      "B) $L + M$",
-      "C) $\\frac{L}{M}$",
-      "D) $L - M$"
-    ],
-    "answer": "B",
-    "explanation": "The Sum Rule is a friendly rule that says limits can be split up. If one path leads to a height of $L$ and another path leads to a height of $M$, then the combined path of both functions added together will lead to a total height of $L + M$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Evaluate $$\\lim_{x\\to a}x.$$",
+    "options": {
+      "A": "$1$",
+      "B": "$a$",
+      "C": "$0$",
+      "D": "$\\infty$"
+    },
+    "correct_answer": "B",
+    "explanation": "The identity function returns its input. Therefore, as $x$ approaches $a$, the function value also approaches $a$, giving $$\\lim_{x\\to a}x=a.$$"
   },
   {
-    "question": "Under what condition can the Quotient Rule for limits ($\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{L}{M}$) be directly applied?",
-    "options": [
-      "A) Only if $L = 0$",
-      "B) Provided that the limit of the denominator, $M$, is not equal to $0$.",
-      "C) Only if $L$ and $M$ are positive integers.",
-      "D) If the functions are polynomials of the same degree."
-    ],
-    "answer": "B",
-    "explanation": "When dividing two limit destinations, you can just divide the answers to get $\\frac{L}{M}$. But there is one big catch: the destination on the bottom $(M)$ cannot be 0, because dividing any number by zero breaks the rules of mathematics entirely!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "If $$\\lim_{x\\to a}f(x)=L$$ and $$\\lim_{x\\to a}g(x)=M,$$ what is $$\\lim_{x\\to a}[f(x)+g(x)]?$$",
+    "options": {
+      "A": "$LM$",
+      "B": "$L+M$",
+      "C": "$\\dfrac{L}{M}$",
+      "D": "$L-M$"
+    },
+    "correct_answer": "B",
+    "explanation": "By the Sum Rule for limits, $$\\lim_{x\\to a}[f(x)+g(x)]=\\lim_{x\\to a}f(x)+\\lim_{x\\to a}g(x)=L+M.$$"
   },
   {
-    "question": "According to the Limits and Inequalities Theorem, if $f(x) \\le g(x) $ for all $x$ near $a$, what relation holds between their limits?",
-    "options": [
-      "A) $\\lim f(x) > \\lim g(x)$",
-      "B) $\\lim f(x) \\le \\lim g(x)$",
-      "C) $\\lim f(x) = 0$",
-      "D) $\\lim g(x) = 0$"
-    ],
-    "answer": "B",
-    "explanation": "Imagine two flying birds, and the first bird is always flying below or at the exact same height as the second bird. If they both fly towards the same wall line $a$, the destination height of the lower bird can never cross above the destination height of the higher bird. So, its limit must stay less than or equal to the second bird's limit."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Under what condition can the Quotient Rule for limits be applied?",
+    "options": {
+      "A": "Only when $L=0$.",
+      "B": "Provided that $M\\neq0$.",
+      "C": "Only when $L$ and $M$ are positive integers.",
+      "D": "Only for polynomials of the same degree."
+    },
+    "correct_answer": "B",
+    "explanation": "If $$\\lim_{x\\to a}f(x)=L\\quad\\text{and}\\quad\\lim_{x\\to a}g(x)=M,$$ then $$\\lim_{x\\to a}\\frac{f(x)}{g(x)}=\\frac{L}{M},$$ provided that $$M\\neq0.$$"
   },
   {
-    "question": "What is another widely accepted mathematical name for the Sandwich Theorem?",
-    "options": [
-      "A) Mean Value Theorem",
-      "B) Squeeze Theorem",
-      "C) Rolle's Theorem",
-      "D) Intermediate Value Theorem"
-    ],
-    "answer": "B",
-    "explanation": "Think of a tasty sandwich where you have a piece of cheese trapped right in the middle of two slices of bread. The name 'Squeeze Theorem' describes this perfectly because the outer functions trap and squeeze the middle function into the exact same location!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Suppose $f(x)\\le g(x)$ for all $x$ sufficiently close to $a$. What does the Limits and Inequalities Theorem imply?",
+    "options": {
+      "A": "$\\displaystyle\\lim_{x\\to a}f(x)>\\lim_{x\\to a}g(x)$",
+      "B": "$\\displaystyle\\lim_{x\\to a}f(x)\\le\\lim_{x\\to a}g(x)$",
+      "C": "$\\displaystyle\\lim_{x\\to a}f(x)=0$",
+      "D": "$\\displaystyle\\lim_{x\\to a}g(x)=0$"
+    },
+    "correct_answer": "B",
+    "explanation": "If $f(x)\\le g(x)$ near $a$ and both limits exist, then their limits preserve the inequality: $$\\lim_{x\\to a}f(x)\\le\\lim_{x\\to a}g(x).$$"
   },
   {
-    "question": "In the Sandwich Theorem, if $f(x) \\le g(x) \\le h(x)$ and $\\lim_{x \\to a} f(x) = \\lim_{x \\to a} h(x) = L$, what can be concluded about $g(x)$?",
-    "options": [
-      "A) $\\lim_{x \\to a} g(x)$ does not exist.",
-      "B) $\\lim_{x \\to a} g(x) = L$.",
-      "C) $\\lim_{x \\to a} g(x) = 0$.",
-      "D) $g(x)$ is a constant function."
-    ],
-    "answer": "B",
-    "explanation": "Imagine three friends walking down a narrow hallway. Friend $g$ is trapped right in the middle between friend $f$ and friend $h$. If friend $f$ and friend $h$ both walk into the exact same doorway at height $L$, then friend $g$ has no choice but to get squeezed right into that exact same doorway $L$ too!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Which theorem is another name for the Sandwich Theorem?",
+    "options": {
+      "A": "Mean Value Theorem",
+      "B": "Squeeze Theorem",
+      "C": "Rolle's Theorem",
+      "D": "Intermediate Value Theorem"
+    },
+    "correct_answer": "B",
+    "explanation": "The Sandwich Theorem is more commonly known as the **Squeeze Theorem** because a function is 'squeezed' between two other functions having the same limit."
   },
   {
-    "question": "If $p(x)$ is a polynomial function and $c$ is any real number, what is $\\lim_{x \\to c} p(x)$?",
-    "options": [
-      "A) $0$",
-      "B) $p(c)$",
-      "C) $\\infty$",
-      "D) $p'(c)$"
-    ],
-    "answer": "B",
-    "explanation": "Polynomial functions are the friendliest functions because they are perfectly smooth paths with no traps, jumps, or holes. Because of this, their limit path always leads directly to the actual point on the graph. You can find the answer immediately just by plugging the target number $c$ straight into the function, which gives $p(c)$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "If $$f(x)\\le g(x)\\le h(x)$$ near $a$ and $$\\lim_{x\\to a}f(x)=\\lim_{x\\to a}h(x)=L,$$ what can be concluded?",
+    "options": {
+      "A": "$\\displaystyle\\lim_{x\\to a}g(x)$ does not exist.",
+      "B": "$\\displaystyle\\lim_{x\\to a}g(x)=L$.",
+      "C": "$\\displaystyle\\lim_{x\\to a}g(x)=0$.",
+      "D": "$g(x)$ is constant."
+    },
+    "correct_answer": "B",
+    "explanation": "By the Squeeze (Sandwich) Theorem, if $$f(x)\\le g(x)\\le h(x)$$ and both outer functions approach the same limit $L$, then $$\\lim_{x\\to a}g(x)=L.$$"
   },
   {
-    "question": "A rational function $R(x)$ is defined as what mathematical relationship?",
-    "options": [
-      "A) The product of two trigonometric functions.",
-      "B) The ratio or quotient of two polynomial functions.",
-      "C) The derivative of an exponential function.",
-      "D) The square root of a linear polynomial."
-    ],
-    "answer": "B",
-    "explanation": "Think of the word 'rational'—it has the word 'ratio' hidden inside it! A ratio is just a fraction. So a rational function is simply a fraction formed by placing one polynomial function on the top and another polynomial function on the bottom."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "If $p(x)$ is a polynomial and $c$ is any real number, what is $$\\lim_{x\\to c}p(x)?$$",
+    "options": {
+      "A": "$0$",
+      "B": "$p(c)$",
+      "C": "$\\infty$",
+      "D": "$p'(c)$"
+    },
+    "correct_answer": "B",
+    "explanation": "Polynomial functions are continuous for every real number. Therefore, the limit of a polynomial at any point is simply its value at that point: $$\\lim_{x\\to c}p(x)=p(c).$$"
   },
   {
-    "question": "What is the primary action or process of computing a mathematical derivative called?",
-    "options": [
-      "A) Integration",
-      "B) Continuity analysis",
-      "C) Rationalization",
-      "D) Differentiation"
-    ],
-    "answer": "D",
-    "explanation": "When we want to compute a derivative to find how fast a function is changing, the name of that action or process is called 'differentiation.'"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "A rational function $R(x)$ is defined as:",
+    "options": {
+      "A": "The product of two trigonometric functions.",
+      "B": "The quotient (ratio) of two polynomial functions.",
+      "C": "The derivative of an exponential function.",
+      "D": "The square root of a linear polynomial."
+    },
+    "correct_answer": "B",
+    "explanation": "A rational function is any function that can be written in the form $$R(x)=\\frac{p(x)}{q(x)},$$ where $p(x)$ and $q(x)$ are polynomials and $q(x)\\neq0$."
   },
   {
-    "question": "The derivative of a function $f(x)$ with respect to $x$ serves as a mathematical measure of what property?",
-    "options": [
-      "A) The total area under the function's curve.",
-      "B) The continuous domain boundary.",
-      "C) The rate at which the function changes with respect to the change in the variable $x$.",
-      "D) The maximum coordinate interval length."
-    ],
-    "answer": "C",
-    "explanation": "Think of the speedometer in a car. It tells you exactly how fast your position is changing at that precise second. A derivative does the exact same thing for a graph: it measures the instantaneous rate of change (how fast the height goes up or down) as you change your horizontal step $x$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "What is the mathematical process of finding the derivative of a function called?",
+    "options": {
+      "A": "Integration",
+      "B": "Continuity analysis",
+      "C": "Rationalization",
+      "D": "Differentiation"
+    },
+    "correct_answer": "D",
+    "explanation": "The process of computing the derivative of a function is called **differentiation**."
   },
   {
-    "question": "What is the derivative of a constant function $c$ with respect to $x$ ($\\frac{dc}{dx}$)?",
-    "options": [
-      "A) $1$",
-      "B) $c$",
-      "C) $0$",
-      "D) $x$"
-    ],
-    "answer": "C",
-    "explanation": "A constant function is a flat, stationary number like 5. Since it stays exactly the same forever, its speed of change is zero. Because a derivative measures speed of change, the derivative of any constant number is always exactly 0!"
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "The derivative of a function $f(x)$ with respect to $x$ measures which quantity?",
+    "options": {
+      "A": "The total area under the curve.",
+      "B": "The domain of the function.",
+      "C": "The instantaneous rate of change of the function with respect to $x$.",
+      "D": "The maximum value of the function."
+    },
+    "correct_answer": "C",
+    "explanation": "The derivative measures the instantaneous rate of change of a function with respect to its independent variable. Geometrically, it represents the slope of the tangent line to the curve at a given point."
   },
   {
-    "question": "According to the Sum Rule of differentiation, if $u$ and $v$ are differentiable functions of $x$, what is $(u \\pm v)'$?",
-    "options": [
-      "A) $u' \\cdot v'$",
-      "B) $u' \\pm v'$",
-      "C) $u \\cdot v' \\pm v \\cdot u'$",
-      "D) $\\frac{u'}{v'}$"
-    ],
-    "answer": "B",
-    "explanation": "The Sum and Difference Rule is very nice and straightforward! It says if you have separate terms added or subtracted together, you can find their derivatives individually step-by-step and keep the same plus or minus signs between them: $u' \\pm v'$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "What is $$\\frac{dc}{dx},$$ where $c$ is a constant?",
+    "options": {
+      "A": "$1$",
+      "B": "$c$",
+      "C": "$0$",
+      "D": "$x$"
+    },
+    "correct_answer": "C",
+    "explanation": "A constant does not change as $x$ changes. Therefore, its rate of change is zero: $$\\frac{dc}{dx}=0.$$"
   },
   {
-    "question": "Which calculus rule states that the derivative of a product of two functions is the first function times the derivative of the second plus the second function times the derivative of the first?",
-    "options": [
-      "A) Sum Rule",
-      "B) Quotient Rule",
-      "C) Product Rule",
-      "D) Chain Rule"
-    ],
-    "answer": "C",
-    "explanation": "When two functions are multiplied together, they form a 'product.' The special rule we use to differentiate them while taking turns is called the Product Rule."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "If $u$ and $v$ are differentiable functions, what is the derivative of $(u\\pm v)$?",
+    "options": {
+      "A": "$u'v'$",
+      "B": "$u'\\pm v'$",
+      "C": "$uv'\\pm vu'$",
+      "D": "$\\dfrac{u'}{v'}$"
+    },
+    "correct_answer": "B",
+    "explanation": "The Sum and Difference Rule states that the derivative of a sum or difference is the sum or difference of the derivatives: $$\\frac{d}{dx}(u\\pm v)=u'\\pm v'.$$"
   },
   {
-    "question": "What is the correct algebraic statement for the Quotient Rule of differentiation where $v \\neq 0$?",
-    "options": [
-      "A) $(\\frac{u}{v})' = \\frac{u' - v'}{v^2}$",
-      "B) $(\\frac{u}{v})' = \\frac{v u' - u v'}{v^2}$",
-      "C) $(\\frac{u}{v})' = \\frac{u v' + v u'}{v}$",
-      "D) $(\\frac{u}{v})' = \\frac{u' v'}{v^2}$"
-    ],
-    "answer": "B",
-    "explanation": "A quotient is a fraction with a top function $u$ and a bottom function $v$. The Quotient Rule formula tracks this by doing: (Bottom $\\times$ derivative of Top) minus (Top $\\times$ derivative of Bottom), all divided by the (Bottom squared). This matches option B perfectly."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Which differentiation rule states that the derivative of the product of two functions is the first function times the derivative of the second plus the second function times the derivative of the first?",
+    "options": {
+      "A": "Sum Rule",
+      "B": "Quotient Rule",
+      "C": "Product Rule",
+      "D": "Chain Rule"
+    },
+    "correct_answer": "C",
+    "explanation": "The Product Rule states that $$\\frac{d}{dx}[u(x)v(x)]=u(x)v'(x)+v(x)u'(x).$$"
   },
   {
-    "question": "If a function is differentiable at a given point $x = a$, what does this automatically imply about its continuity at that point?",
-    "options": [
-      "A) It must be discontinuous at $x = a$.",
-      "B) It must be continuous at $x = a$.",
-      "C) It must have a sharp corner at $x = a$.",
-      "D) Its graph must oscillate infinitely at $x = a$."
-    ],
-    "answer": "B",
-    "explanation": "To have a derivative (to be differentiable), a graph must be perfectly smooth at that spot. You can't have a smooth slope if there is a giant gap, jump, or hole in the road! Therefore, being differentiable automatically guarantees that the path is connected and continuous."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Which formula correctly states the Quotient Rule for differentiation, assuming $v(x)\\neq0$?",
+    "options": {
+      "A": "\\left(\\dfrac{u}{v}\\right)'=\\dfrac{u'-v'}{v^2}",
+      "B": "\\left(\\dfrac{u}{v}\\right)'=\\dfrac{vu'-uv'}{v^2}",
+      "C": "\\left(\\dfrac{u}{v}\\right)'=\\dfrac{uv'+vu'}{v}",
+      "D": "\\left(\\dfrac{u}{v}\\right)'=\\dfrac{u'v'}{v^2}"
+    },
+    "correct_answer": "B",
+    "explanation": "The Quotient Rule is given by $$\\frac{d}{dx}\\left(\\frac{u}{v}\\right)=\\frac{vu'-uv'}{v^2},\\qquad v(x)\\neq0.$$"
   },
   {
-    "question": "Is the converse true: If a function is continuous at $x = a$, must it be differentiable at $x = a$?",
-    "options": [
-      "A) Yes, continuity always guarantees differentiability.",
-      "B) No, a function can be continuous but fail to be differentiable due to corners, cusps, or vertical tangents.",
-      "C) No, continuous functions are never differentiable.",
-      "D) Yes, but only for polynomial functions."
-    ],
-    "answer": "B",
-    "explanation": "Imagine the tip of a sharp pyramid or the bottom of a sharp 'V' shape. The path is completely connected (continuous), so you can walk on it without lifting your pencil. But if you stand right on the sharp point, which way does the slope face? It is impossible to say because it's too sharp! So, a connected line is not always differentiable."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "If a function is differentiable at $x=a$, what must also be true?",
+    "options": {
+      "A": "The function is discontinuous at $x=a$.",
+      "B": "The function is continuous at $x=a$.",
+      "C": "The graph has a sharp corner at $x=a$.",
+      "D": "The graph oscillates infinitely near $x=a$."
+    },
+    "correct_answer": "B",
+    "explanation": "Differentiability implies continuity. Therefore, if a function is differentiable at $x=a$, it must also be continuous at $x=a$."
   },
   {
-    "question": "Which rule is applied when finding the derivative of a composition of functions, written as $f(g(x))$?",
-    "options": [
-      "A) Product Rule",
-      "B) Chain Rule",
-      "C) Power Rule",
-      "D) Sandwich Rule"
-    ],
-    "answer": "B",
-    "explanation": "A composite function $f(g(x))$ is like a set of nested Russian nesting dolls, where one function lives inside another function. To differentiate these layered functions from the outside-in, we use the Chain Rule."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Is the converse true? If a function is continuous at $x=a$, must it also be differentiable at $x=a$?",
+    "options": {
+      "A": "Yes, continuity always implies differentiability.",
+      "B": "No. A function may be continuous but not differentiable because of a corner, cusp, or vertical tangent.",
+      "C": "No. Continuous functions are never differentiable.",
+      "D": "Yes, but only for polynomial functions."
+    },
+    "correct_answer": "B",
+    "explanation": "Continuity alone does not guarantee differentiability. For example, the function $$f(x)=|x|$$ is continuous at $x=0$ but is not differentiable there because its graph has a sharp corner."
   },
   {
-    "question": "Under the Fundamental Theorem of Calculus, if $F$ is an antiderivative of $f$ on the interval $[a, b]$, then $\\int_{a}^{b} f(x) dx$ equals what?",
-    "options": [
-      "A) $F'(b) - F'(a)$",
-      "B) $F(b) + F(a)$",
-      "C) $F(b) - F(a)$",
-      "D) $F(a) - F(b)$"
-    ],
-    "answer": "C",
-    "explanation": "This rule tells us how to evaluate a definite integral across a bounded interval from $a$ to $b$. You simply take the backwards-derivative function $F$, find its value at the end point $F(b)$, and subtract its value at the start point $F(a)$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "Which differentiation rule is used to differentiate a composite function of the form $f(g(x))$?",
+    "options": {
+      "A": "Product Rule",
+      "B": "Chain Rule",
+      "C": "Power Rule",
+      "D": "Sandwich Rule"
+    },
+    "correct_answer": "B",
+    "explanation": "The Chain Rule is used for composite functions. It states that $$\\frac{d}{dx}[f(g(x))]=f'(g(x))\\,g'(x).$$"
   },
   {
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "According to the Fundamental Theorem of Calculus, if $F$ is an antiderivative of $f$ on $[a,b]$, then $$\\int_a^bf(x)\\,dx$$ equals:",
+    "options": {
+      "A": "$F'(b)-F'(a)$",
+      "B": "$F(b)+F(a)$",
+      "C": "$F(b)-F(a)$",
+      "D": "$F(a)-F(b)$"
+    },
+    "correct_answer": "C",
+    "explanation": "The Fundamental Theorem of Calculus states that $$\\int_a^bf(x)\\,dx=F(b)-F(a),$$ where $F'(x)=f(x).$"
+  },
+  {
+    "course_code": "MTH 102",
+    "topic": "",
     "question": "What is an indefinite integral?",
-    "options": [
-      "A) An integral evaluated over an infinite boundary.",
-      "B) An antiderivative of a function without specified integration bounds.",
-      "C) The slope of a secant line.",
-      "D) A limit evaluated using numerical grids."
-    ],
-    "answer": "B",
-    "explanation": "An indefinite integral is like a general search command to find the backwards-derivative formula. It doesn't have any specific starting or ending boundaries written on the top or bottom of the integration sign, so the output is a general formula family with a $+ C$ attached."
+    "options": {
+      "A": "An integral evaluated over an infinite interval.",
+      "B": "An antiderivative of a function without specified limits of integration.",
+      "C": "The slope of a secant line.",
+      "D": "A limit evaluated numerically."
+    },
+    "correct_answer": "B",
+    "explanation": "An indefinite integral represents the family of all antiderivatives of a function. It is written without limits of integration and always includes the constant of integration: $$\\int f(x)\\,dx=F(x)+C.$$"
   },
   {
-    "question": "What geometric property does a definite integral over a positive function on $[a, b]$ represent?",
-    "options": [
-      "A) The arc length of the curve.",
-      "B) The slope of the tangent line.",
-      "C) The area of the region caught between the x-axis, the graph of the function, and the lines $x=a$ and $x=b$.",
-      "D) The curvature radius."
-    ],
-    "answer": "C",
-    "explanation": "Imagine the space trapped between a curved roof, a flat floor (the x-axis), a left wall $(x=a)$, and a right wall $(x=b)$. A definite integral measures the exact area of this trapped room!"
-  },
-  {
-    "question": "What type of mathematical sum approximates the area under a curve by adding up the areas of multiple thin rectangles?",
-    "options": [
-      "A) Taylor sum",
-      "B) Fibonacci sum",
-      "C) Riemann sum",
-      "D) Fourier sum"
-    ],
-    "answer": "C",
-    "explanation": "Before calculus was invented, mathematicians estimated tricky curved spaces by filling them up with lots of thin vertical rectangles, which are easy to measure. Adding up the areas of all these little rectangular slices is called a Riemann sum."
-  },
-  {
-    "question": "According to Cavalieri's principle, if two solids have the same height and horizontal slices at any given height have identical cross-sectional areas, what can be said about their volumes?",
-    "options": [
-      "A) The solid on the left is twice as large.",
-      "B) Both solids have the exact same total volume.",
-      "C) The volume depends on the slope of the sides.",
-      "D) Their volumes are entirely unrelated."
-    ],
-    "answer": "B",
-    "explanation": "Imagine a straight stack of 50 coins. Now, push the stack sideways so it tilts crookedly. Did you add or remove any coins? No! The horizontal size of each coin stays the same, and the height stays the same, so the total volume remains completely identical! That is Cavalieri's principle."
-  },
-  {
-    "question": "The formula $V = 2\\pi \\int_{a}^{b} x f(x) dx$ represents the volume of a solid of revolution using which integration method?",
-    "options": [
-      "A) Method of Washers",
-      "B) Method of Disks",
-      "C) Method of Cylindrical Shells",
-      "D) Method of Cross-sectional Pyramids"
-    ],
-    "answer": "C",
-    "explanation": "Imagine an onion made of many thin, concentric layers nested inside each other. The formula $2\\pi \\times \\text{radius} \\times \\text{height}$ adds up the volume of these thin vertical circular layers (shells) to find the total volume of a 3D solid. This strategy is called the Method of Cylindrical Shells."
-  },
-  {
-    "question": "If you split the interval of integration of a definite integral into two parts, such that $a < c < b$, which property holds true?",
-    "options": [
-      "A) $\\int_{a}^{b} f(x) dx = \\int_{a}^{c} f(x) dx \\cdot \\int_{c}^{b} f(x) dx$",
-      "B) $\\int_{a}^{b} f(x) dx = \\int_{a}^{c} f(x) dx + \\int_{c}^{b} f(x) dx$",
-      "C) $\\int_{a}^{b} f(x) dx = \\int_{a}^{c} f(x) dx - \\int_{c}^{b} f(x) dx$",
-      "D) The integral becomes undefined."
-    ],
-    "answer": "B",
-    "explanation": "Imagine walking a total distance from house $a$ to house $b$. If you decide to stop at a bench $c$ along the way, your total walk is just the distance from $a$ to $c$ plus the distance from $c$ to $b$. Area works the exact same way: you can slice it down the middle and add the two pieces together!"
-  },
-  {
-    "question": "What is the derivative of $\\sin \\theta$ with respect to $\\theta$?",
-    "options": [
-      "A) $-\\sin \\theta$",
-      "B) $\\cos \\theta$",
-      "C) $-\\cos \\theta$",
-      "D) $\\tan \\theta$"
-    ],
-    "answer": "B",
-    "explanation": "This is a basic rule of trigonometry in calculus. The derivative of a sine wave tells us its speed of change, and that speed maps out a perfect cosine wave: $\\cos \\theta$."
-  },
-  {
-    "question": "What is the derivative of $\\cos \\theta$ with respect to $\\theta$?",
-    "options": [
-      "A) $\\sin \\theta$",
-      "B) $-\\sin \\theta$",
-      "C) $\\cos \\theta$",
-      "D) $-\\cos \\theta$"
-    ],
-    "answer": "B",
-    "explanation": "Be careful with this one! When you differentiate the cosine function, its rate of change moves in the opposite direction, creating a negative sine wave: $-\\sin \\theta$."
-  },
-  {
-    "question": "What fundamental limit in trigonometry is evaluated as $\\lim_{\\theta \\to 0} \\frac{\\sin \\theta}{\\theta}$?",
-    "options": [
-      "A) $0$",
-      "B) $\\infty$",
-      "C) $1$",
-      "D) Undefined"
-    ],
-    "answer": "C",
-    "explanation": "As an angle $\\theta$ gets super close to 0, the side length of its sine triangle and the arc length of the angle itself become practically identical in value. Since the top and bottom values match perfectly as they shrink, their ratio simplifies to exactly 1."
-  },
-  {
-    "question": "What is the limit $\\lim_{\\theta \\to 0} \\cos \\theta$ equal to?",
-    "options": [
-      "A) $0$",
-      "B) $1$",
-      "C) $-1$",
-      "D) Undefined"
-    ],
-    "answer": "B",
-    "explanation": "Since the cosine function has a smooth, solid path with no fraction breaks at 0, we can find the answer directly by plug evaluation. Looking at a unit circle or a graph, the value of $\\cos(0)$ is exactly 1."
-  },
-  {
-    "question": "According to the Power Rule for differentiation, what is the derivative of $x^n$ with respect to $x$ for any real number $n$?",
-    "options": [
-      "A) $n x^n$",
-      "B) $n x^{n-1}$",
-      "C) $\\frac{x^{n+1}}{n+1}$",
-      "D) $x^{n-1}$"
-    ],
-    "answer": "B",
-    "explanation": "The Power Rule is a simple 2-step pattern for finding derivatives: Step 1: Multiply by the exponent power $n$ by bringing it down to the front. Step 2: Subtract 1 from the exponent power. This gives us $n x^{n-1}$."
-  },
-  {
-    "question": "What is the derivative of the function $f(x) = x$ with respect to $x$?",
-    "options": [
-      "A) $0$",
-      "B) $x$",
-      "C) $1$",
-      "D) $x^2$"
-    ],
-    "answer": "C",
-    "explanation": "The function $y = x$ is a perfect straight diagonal line. For every step you take to the right, the height goes up by exactly one step. Since the slope is 1 everywhere, its derivative (which measures slope) is a constant 1."
-  },
-  {
-    "question": "A function whose rate of growth or decay is directly proportional to its current value is modeled by what type of equation?",
-    "options": [
-      "A) Linear growth function",
-      "B) Polynomial growth function",
-      "C) Exponential growth or decay function",
-      "D) Trigonometric wave function"
-    ],
-    "answer": "C",
-    "explanation": "Imagine a colony of bacteria. If you have a few bacteria, it grows slowly. If you have a million bacteria, it grows incredibly fast because there are way more individuals reproducing! When growth speed depends directly on current population size, it grows in a booming pattern called an exponential function."
-  },
-  {
-    "question": "If a function never takes on negative values, what does the Limits and Inequalities theorem declare about its limit?",
-    "options": [
-      "A) Its limit must be strictly negative.",
-      "B) Its limit will also never be negative (it must be $\\ge 0$).",
-      "C) Its limit must be exactly $0$.",
-      "D) Its limit must be infinity."
-    ],
-    "answer": "B",
-    "explanation": "If a path stays completely above the ground level (meaning it is always positive or zero), it can never lead you to a destination that is underneath the ground level. So, its limit destination must also be greater than or equal to 0."
-  },
-  {
-    "question": "When an integration problem contains a nested function, which technique is typically deployed to simplify it by changing variables?",
-    "options": [
-      "A) Slicing method",
-      "B) Method of substitution (u-substitution)",
-      "C) Riemann summation",
-      "D) Rational expansion"
-    ],
-    "answer": "B",
-    "explanation": "When an integral looks too scary and complex with inner structures, we use a technique called u-substitution. It allows us to give a complicated inside part a simple short nickname like '$u$', turning a big messy problem into an easy elementary one."
-  },
-  {
-    "question": "What type of function is defined as a correspondence from a domain set to a range set such that each element in the domain maps to exactly one element in the range?",
-    "options": [
-      "A) An indeterminate form",
-      "B) A function of a real variable",
-      "C) An inverse relation",
-      "D) A dummy partition"
-    ],
-    "answer": "B",
-    "explanation": "A true mathematical function is like a reliable machine: every single input button you press must lead to exactly one clear output result. If you press a button and it gives you two different outputs at the same time, it's a broken relation, not a well-defined function!"
-  },
-  {
-    "question": "What does it mean if a function is described as 'one-to-one'?",
-    "options": [
-      "A) It maps all inputs to a single output.",
-      "B) To each value in the range, there corresponds exactly one value in the domain.",
-      "C) Its graph is a straight line passing through $(1,1)$.",
-      "D) It can only accept integer inputs."
-    ],
-    "answer": "B",
-    "explanation": "Imagine a dance class where every single person has exactly one partner, and no two people share a partner. A 'one-to-one' function means that every single separate input points to its own separate, unique output value. No two inputs ever share the same output height!"
-  },
-  {
-    "question": "What is the limit of the product of a constant and a function, $\\lim_{x \\to a} [c \\cdot f(x)]$, according to limit properties?",
-    "options": [
-      "A) $0$",
-      "B) $c \\cdot \\lim_{x \\to a} f(x)$",
-      "C) $c + \\lim_{x \\to a} f(x)$",
-      "D) $[\\lim_{x \\to a} f(x)]^c$"
-    ],
-    "answer": "B",
-    "explanation": "Constants are just fixed numbers multiplying an expression. Limits allow constant multipliers to take a back seat! You can pull the constant multiplier out to the front, evaluate the limit destination of the function first, and then multiply the final answer by that constant."
-  },
-  {
-    "question": "If a limit is evaluated from the right side only ($x \\to a^+$), what type of limit is it?",
-    "options": [
-      "A) Two-sided limit",
-      "B) Left-sided limit",
-      "C) Right-handed or one-sided limit",
-      "D) Infinite limit"
-    ],
-    "answer": "C",
-    "explanation": "The little plus sign inside $x \\to a^+$ means you are walking along the graph towards coordinate $a$ coming exclusively from the positive side (the right-hand side, where values are slightly bigger than $a$). This is called a right-handed or one-sided limit."
-  },
-  {
-    "question": "Under what condition does the normal two-sided limit $\\lim_{x \\to a} f(x) = L$ exist?",
-    "options": [
-      "A) Only if the right limit is larger than the left limit.",
-      "B) If and only if both the left-sided limit and the right-sided limit exist and are equal to $L$.",
-      "C) Only if the function is a polynomial.",
-      "D) If the function value at $a$ is zero."
-    ],
-    "answer": "B",
-    "explanation": "Imagine two people walking towards a meeting spot from opposite directions. For them to successfully meet up at the exact same location $L$, the person walking from the left and the person walking from the right must both be heading to the exact same spot! If they point to different spots, the limit fails to exist."
-  },
-  {
-    "question": "What are the three essential conditions required for a function $f(x)$ to be continuous at a point $x = c$?",
-    "options": [
-      "A) $f(c) = 0$, $\\lim f(x) = 0$, and $c = 0$.",
-      "B) $f(c)$ is defined, $\\lim_{x \\to c} f(x)$ exists, and $\\lim_{x \\to c} f(x) = f(c)$.",
-      "C) The function is a ratio, a product, and a sum.",
-      "D) The derivative exists, the integral exists, and the bounds are finite."
-    ],
-    "answer": "B",
-    "explanation": "To have a perfectly continuous line with no gaps or breaks at a spot $c$, three things must happen: 1) There must be a real point sitting at that coordinate, 2) The side paths must lead cleanly to a clear destination, and 3) The side paths must connect perfectly with that real point. This keeps the path seamless!"
-  },
-  {
-    "question": "Why is the absolute value function $f(x) = |x|$ not differentiable at the origin $x = 0$?",
-    "options": [
-      "A) Because it is discontinuous at $x = 0$.",
-      "B) Because its graph features a sharp corner at $(0,0)$, causing the left and right limits of the difference quotient to disagree.",
-      "C) Because it goes to infinity at the origin.",
-      "D) Because it is a rational function."
-    ],
-    "answer": "B",
-    "explanation": "The graph of $|x|$ looks like a perfect sharp letter 'V'. As you walk down from the left, the slope is a steep down-hill $(-1)$. As you walk up to the right, the slope is a steep up-hill $(+1)$. Right at the bottom corner, the two slopes clash sharply! Because it is a sharp corner rather than a smooth hill, it has no defined derivative there."
-  },
-  {
-    "question": "What is the derivative of the product of three functions, $(u v w)'$?",
-    "options": [
-      "A) $u' v' w'$",
-      "B) $u'vw + uv'w + uvw'$",
-      "C) $u' + v' + w'$",
-      "D) $uvw(u' + v' + w')$"
-    ],
-    "answer": "B",
-    "explanation": "When three function friends are multiplied together, they all need to take turns being differentiated! We create three copies of the group, and in each copy, only one single friend gets differentiated while the other two stay exactly the same. Then we add them all up: $u'vw + uv'w + uvw'$."
-  },
-  {
-    "question": "What is the second derivative of a function?",
-    "options": [
-      "A) The square of the first derivative.",
-      "B) The derivative of the first derivative function.",
-      "C) The integral of the derivative.",
-      "D) The inverse function of the derivative."
-    ],
-    "answer": "B",
-    "explanation": "Imagine the first derivative tells you how fast your car is changing position (speed). The second derivative simply measures how fast that speed itself is changing (acceleration)! It's just taking the derivative of your first derivative."
-  },
-  {
-    "question": "If $f(x) = x^2$, what is its second derivative $f''(x)$?",
-    "options": [
-      "A) $2x$",
-      "B) $x$",
-      "C) $2$",
-      "D) $0$"
-    ],
-    "answer": "C",
-    "explanation": "Let's do this in two simple rounds! Round 1: Find the first derivative of $x^2$ using the power rule. The 2 rolls to the front, giving us $2x$. Round 2: Differentiate $2x$. The derivative of a constant times $x$ is just the constant number, which leaves us with 2!"
-  },
-  {
-    "question": "The notation $\\int c \\cdot f(x) dx = c \\int f(x) dx$ demonstrates which property of integration?",
-    "options": [
-      "A) Additivity property",
-      "B) Linearity or Constant Multiple Property",
-      "C) Chain substitution property",
-      "D) Bound inversion property"
-    ],
-    "answer": "B",
-    "explanation": "This rule shows that fixed scalar multipliers can jump completely outside the integration sandbox! Since constants behave linearly under integration, this is called the Linearity or Constant Multiple Property."
-  },
-  {
-    "question": "What is the integral of a sum of two functions, $\\int [f(x) + g(x)] dx$?",
-    "options": [
-      "A) $\\int f(x) dx \\cdot \\int g(x) dx$",
-      "B) $\\int f(x) dx + \\int g(x) dx$",
-      "C) $\\int f(x) dx - \\int g(x) dx$",
-      "D) $\\frac{\\int f(x) dx}{\\int g(x) dx}$"
-    ],
-    "answer": "B",
-    "explanation": "Integration is very polite with addition! If you have two separate functions added together inside an integral, you can completely split them up into two individual integrations and sum the final answers together."
-  },
-  {
-    "question": "What is the value of a definite integral when its upper and lower bounds of integration are identical, i.e., $\\int_{a}^{a} f(x) dx$?",
-    "options": [
-      "A) $a$",
-      "B) $f(a)$",
-      "C) $0$",
-      "D) Undefined"
-    ],
-    "answer": "C",
-    "explanation": "An integral measures the area of a space between two walls. If the starting wall is at position $a$ and the ending wall is also at position $a$, your room has a width of exactly zero! A room with zero width contains absolutely no space, so its area is 0."
-  },
-  {
-    "question": "What rule happens if you invert the bounds of integration, changing $\\int_{a}^{b} f(x) dx$ to an integration from $b$ to $a$?",
-    "options": [
-      "A) The value stays exactly the same.",
-      "B) The value becomes zero.",
-      "C) The value changes sign: $\\int_{b}^{a} f(x) dx = -\\int_{a}^{b} f(x) dx$.",
-      "D) The integral becomes a derivative."
-    ],
-    "answer": "C",
-    "explanation": "Integrating from $a$ to $b$ means moving forward from left to right. If you reverse the gates and integrate from $b$ back to $a$, you are walking backwards! Walking backwards in integration flips the math sign to its exact opposite, turning positive answers negative, and negative answers positive."
-  },
-  {
-    "question": "To find the area between the graphs of two functions $f(x)$ and $g(x)$ where $f(x) \\ge g(x)$ on $[a, b]$, what integral is evaluated?",
-    "options": [
-      "A) $\\int_{a}^{b} [f(x) + g(x)] dx$",
-      "B) $\\int_{a}^{b} [f(x) - g(x)] dx$",
-      "C) $\\int_{a}^{b} [g(x) - f(x)] dx$",
-      "D) $\\int_{a}^{b} [f(x) \\cdot g(x)] dx$"
-    ],
-    "answer": "B",
-    "explanation": "Imagine you want to measure the thickness of a mattress trapped between a top blanket curve $f(x)$ and a bottom sheet curve $g(x)$. To find the size of the inside space, you find the height of the mattress everywhere by subtracting the bottom function from the top function: $f(x) - g(x)$."
-  },
-  {
-    "question": "When computing the volume of a solid of revolution by slicing perpendicular to the axis of rotation, if the cross-section is a circular disk with radius $R(x)$, what is the area of that slice?",
-    "options": [
-      "A) $2\\pi R(x)$",
-      "B) $\\pi [R(x)]^2$",
-      "C) $\\frac{1}{3} \\pi [R(x)]^2$",
-      "D) $2\\pi x R(x)$"
-    ],
-    "answer": "B",
-    "explanation": "When you slice a perfectly round solid column sideways, the face of that flat slice is a standard circle. The basic area formula for any circle you learn in geometry is $\\pi r^2$. Since our radius is named $R(x)$, the face area is simply $\\pi [R(x)]^2$."
-  },
-  {
-    "question": "If a cross-section slice of a revolved solid has an outer radius $R_{out}$ and an inner radius $R_{in}$ (forming a ring structure), what is this shape called?",
-    "options": [
-      "A) Cylindrical shell",
-      "B) Washer or Annulus",
-      "C) Disk slice",
-      "D) Pyramid element"
-    ],
-    "answer": "B",
-    "explanation": "Imagine a flat circular metal ring, like a round donut or a small hardware piece you put under a screw bolt. In geometry, a circle with a hollow circle hole cut out of the middle is called an annulus, or a washer!"
-  },
-  {
-    "question": "What is the cross-sectional area of a washer slice with outer radius $R_{out}$ and inner radius $R_{in}$?",
-    "options": [
-      "A) $\\pi (R_{out} - R_{in})^2$",
-      "B) $\\pi (R_{out}^2 - R_{in}^2)$",
-      "C) $2\\pi (R_{out} + R_{in})$",
-      "D) $\\pi R_{out}^2 + \\pi R_{in}^2$"
-    ],
-    "answer": "B",
-    "explanation": "To find the solid area of a ring face, you first find the area of the whole big circle $(\\pi R_{out}^2)$ and subtract the empty open area of the inner hole $(\\pi R_{in}^2)$. Pulling out the common factor $\\pi$ leaves us with $\\pi (R_{out}^2 - R_{in}^2)$."
-  },
-  {
-    "question": "What is the derivative of the function $f(x) = x^3$?",
-    "options": [
-      "A) $x^2$",
-      "B) $3x$",
-      "C) $3x^2$",
-      "D) $\\frac{1}{4}x^4$"
-    ],
-    "answer": "C",
-    "explanation": "Let's use our favorite Power Rule tool on $x^3$! Step 1: Take the exponent number 3 and roll it down to the front to be a multiplier. Step 2: Decrease the exponent score by 1 point (changing 3 to 2). This leaves us with a derivative of $3x^2$."
-  },
-  {
-    "question": "According to the course material, what is the derivative of $x^n$ when $n$ is a negative integer exponent?",
-    "options": [
-      "A) It cannot be differentiated.",
-      "B) $n x^{n-1}$",
-      "C) $-n x^{n+1}$",
-      "D) $n x^{-n}$"
-    ],
-    "answer": "B",
-    "explanation": "The Power Rule is incredibly robust! It doesn't care if a power is a positive number, a fraction, or a cold negative integer; the rule works exactly the same way. The power always jumps to the front, and then loses 1 point: $n x^{n-1}$."
-  },
-  {
-    "question": "What is the derivative of $f(x) = \\frac{1}{x} = x^{-1}$?",
-    "options": [
-      "A) $\\ln x$",
-      "B) $-1 \\cdot x^{-2} = -\\frac{1}{x^2}$",
-      "C) $1$",
-      "D) $-\\frac{1}{x^2}$"
-    ],
-    "answer": "B",
-    "explanation": "Let's apply the power rule to $x^{-1}$. Step 1: Bring the power $-1$ down to the very front to be a multiplier. Step 2: Subtract 1 from the power, which gives $-1 - 1 = -2$. This gives us $-1 \\cdot x^{-2}$. We can rewrite this neatly as a fraction: $-\\frac{1}{x^2}$."
+    "course_code": "MTH 102",
+    "topic": "",
+    "question": "If $f(x)\\ge0$ on the interval $[a,b]$, what does the definite integral $$\\int_a^bf(x)\\,dx$$ represent geometrically?",
+    "options": {
+      "A": "The arc length of the curve.",
+      "B": "The slope of the tangent line.",
+      "C": "The area enclosed by the graph of $f(x)$, the $x$-axis, and the vertical lines $x=a$ and $x=b$.",
+      "D": "The radius of curvature."
+    },
+    "correct_answer": "C",
+    "explanation": "When $f(x)\\ge0$ on $[a,b]$, the definite integral $$\\int_a^bf(x)\\,dx$$ gives the area of the region bounded by the curve $y=f(x)$, the $x$-axis, and the vertical lines $x=a$ and $x=b$."
   },
   {
     "question": "Does the Power Rule formula $\\frac{d}{dx}(x^n) = n x^{n-1}$ also apply to rational exponents (like $n = \\frac{1}{2}$)?",
-    "options": [
-      "A) No, it only works for whole integers.",
-      "B) Yes, the textbook states that the rule is fully valid for all rational exponents.",
-      "C) Only if the rational exponent is negative.",
-      "D) Only if $x$ is a negative value."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "No, it only works for whole integers.",
+      "B": "Yes, the textbook states that the rule is fully valid for all rational exponents.",
+      "C": "Only if the rational exponent is negative.",
+      "D": "Only if $x$ is a negative value."
+    },
+    "correct_answer": "B",
     "explanation": "Yes, it does! The Power Rule is a universal pattern that works beautifully for fractions and rational numbers too. No matter what number is up in the exponent seat, it always follows the exact same front-drop and subtract-one behavior."
   },
   {
     "question": "What is the derivative of $f(x) = \\sqrt{x} = x^{1/2}$?",
-    "options": [
-      "A) $\\frac{1}{2\\sqrt{x}}$",
-      "B) $\\frac{2}{\\sqrt{x}}$",
-      "C) $\\frac{1}{2}x^{1/2}$",
-      "D) $-\\frac{1}{2\\sqrt{x}}$"
-    ],
-    "answer": "A",
+    "options": {
+      "A": "$\\frac{1}{2\\sqrt{x}}$",
+      "B": "$\\frac{2}{\\sqrt{x}}$",
+      "C": "$\\frac{1}{2}x^{1/2}$",
+      "D": "$-\\frac{1}{2\\sqrt{x}}$"
+    },
+    "correct_answer": "A",
     "explanation": "Let's treat $\\sqrt{x}$ as $x^{1/2}$ and apply the power rule pattern. Step 1: The exponent $\\frac{1}{2}$ moves down to the front. Step 2: Subtract 1 from the exponent: $\\frac{1}{2} - 1 = -\\frac{1}{2}$. This leaves us with $\\frac{1}{2}x^{-1/2}$. A negative fraction power means it lives as a square root on the bottom of a fraction, which simplifies perfectly to $\\frac{1}{2\\sqrt{x}}$."
   },
   {
     "question": "If you are differentiating a polynomial function, how do you compute its total derivative?",
-    "options": [
-      "A) By multiplying all terms together first.",
-      "B) By differentiating each term individually in turn and summing them.",
-      "C) By applying the Quotient Rule to each exponent.",
-      "D) Polynomials cannot be differentiated."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "By multiplying all terms together first.",
+      "B": "By differentiating each term individually in turn and summing them.",
+      "C": "By applying the Quotient Rule to each exponent.",
+      "D": "Polynomials cannot be differentiated."
+    },
+    "correct_answer": "B",
     "explanation": "A polynomial is just a simple chain of power terms added or subtracted together. To find its derivative, you don't need any complex tricks; you just walk down the line, compute the derivative of each individual term one-by-one, and add up your results!"
   },
   {
     "question": "What is the derivative of the polynomial $p(x) = 4x^3 + 3x^2 - 5x + 7$?",
-    "options": [
-      "A) $12x^2 + 6x - 5$",
-      "B) $4x^2 + 3x - 5$",
-      "C) $12x^3 + 6x^2 - 5x$",
-      "D) $0$"
-    ],
-    "answer": "A",
+    "options": {
+      "A": "$12x^2 + 6x - 5$",
+      "B": "$4x^2 + 3x - 5$",
+      "C": "$12x^3 + 6x^2 - 5x$",
+      "D": "$0$"
+    },
+    "correct_answer": "A",
     "explanation": "Let's differentiate this polynomial term-by-term: For $4x^3$: $3 \\times 4 = 12$, power drops to 2 $\\rightarrow 12x^2$. For $3x^2$: $2 \\times 3 = 6$, power drops to 1 $\\rightarrow 6x$. For $-5x$: the slope of a line with $x$ is just the number $\\rightarrow -5$. For 7: constants don't change, so its rate is 0. Adding them together gives $12x^2 + 6x - 5$."
   },
   {
     "question": "What standard notation represents the third derivative of a function $f(x)$?",
-    "options": [
-      "A) $f'(x)$",
-      "B) $f''(x)$",
-      "C) $f'''(x)$",
-      "D) $f^3(x)$"
-    ],
-    "answer": "C",
+    "options": {
+      "A": "$f'(x)$",
+      "B": "$f''(x)$",
+      "C": "$f'''(x)$",
+      "D": "$f^3(x)$"
+    },
+    "correct_answer": "C",
     "explanation": "We use small prime tick marks to count how many times we have differentiated a function. One mark $f'(x)$ is the first derivative, two marks $f''(x)$ is the second derivative, and three marks $f'''(x)$ is the third derivative!"
   },
   {
     "question": "In the exponential growth model $X(t) = X_0 e^{kt}$, what does $X_0$ represent?",
-    "options": [
-      "A) The final amount at infinity.",
-      "B) The initial value or quantity at time $t = 0$.",
-      "C) The constant rate of growth.",
-      "D) The half-life time window."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "The final amount at infinity.",
+      "B": "The initial value or quantity at time $t = 0$.",
+      "C": "The constant rate of growth.",
+      "D": "The half-life time window."
+    },
+    "correct_answer": "B",
     "explanation": "Imagine starting a stopwatch at time $t = 0$. If we plug 0 into our equation, the power becomes $k \\times 0 = 0$. Since any number to the power of 0 equals 1, the equation becomes $X_0 \\times 1 = X_0$. This proves that $X_0$ is the starting amount of items you have at the very beginning!"
   },
   {
     "question": "If the constant $k$ in the model $X(t) = X_0 e^{kt}$ is strictly negative ($k < 0$), what physical process does the function describe?",
-    "options": [
-      "A) Exponential Growth",
-      "B) Exponential Decay",
-      "C) Linear Oscillation",
-      "D) Infinite Summation"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "Exponential Growth",
+      "B": "Exponential Decay",
+      "C": "Linear Oscillation",
+      "D": "Infinite Summation"
+    },
+    "correct_answer": "B",
     "explanation": "When the exponent constant $k$ is negative, it acts like a shrink ray on the values over time. Instead of multiplying and growing larger, the quantity continuously divides and drops smaller and smaller towards zero. This shrinking process is called exponential decay."
   },
   {
     "question": "What is 'doubling time' in an exponential growth process?",
-    "options": [
-      "A) The time required for the growth rate $k$ to multiply by two.",
-      "B) The specific amount of time needed for the moving quantity to double its size.",
-      "C) The total lifecycle duration.",
-      "D) The square root of the initial value."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "The time required for the growth rate $k$ to multiply by two.",
+      "B": "The specific amount of time needed for the moving quantity to double its size.",
+      "C": "The total lifecycle duration.",
+      "D": "The square root of the initial value."
+    },
+    "correct_answer": "B",
     "explanation": "The name explains it perfectly! If you start with 10 bacteria, the doubling time is the exact number of minutes or hours you have to wait on the clock until your population grows to twice its size, reaching exactly 20 bacteria."
   },
   {
     "question": "What is 'half-life' (or half-time) in an exponential decay process?",
-    "options": [
-      "A) Half of the total existence time.",
-      "B) The time taken for a decaying substance to decrease to exactly half of its initial quantity.",
-      "C) The reciprocal of the growth rate.",
-      "D) The point where decay stops entirely."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "Half of the total existence time.",
+      "B": "The time taken for a decaying substance to decrease to exactly half of its initial quantity.",
+      "C": "The reciprocal of the growth rate.",
+      "D": "The point where decay stops entirely."
+    },
+    "correct_answer": "B",
     "explanation": "Imagine you have a big bowl of ice cream melting away. The 'half-life' is the exact duration of time it takes for half of your ice cream to disappear, leaving you with exactly 50% of what you started with."
   },
   {
     "question": "What notation is used for the integration symbol?",
-    "options": [
-      "A) $\\lim$",
-      "B) $\\int$",
-      "C) $\\partial$",
-      "D) $\\sum$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$\\lim$",
+      "B": "$\\int$",
+      "C": "$\\partial$",
+      "D": "$\\sum$"
+    },
+    "correct_answer": "B",
     "explanation": "The integration sign looks like a tall, elegant, stretched-out letter 'S' ($\\int$). It was designed that way because integration is a tool that calculates a total sum of infinite tiny parts, and 'S' stands for Sum!"
   },
   {
     "question": "In the expression $\\int f(x) dx$, what is the function $f(x)$ called?",
-    "options": [
-      "A) Integrand",
-      "B) Derivative factor",
-      "C) Integral boundary",
-      "D) Dummy function"
-    ],
-    "answer": "A",
+    "options": {
+      "A": "Integrand",
+      "B": "Derivative factor",
+      "C": "Integral boundary",
+      "D": "Dummy function"
+    },
+    "correct_answer": "A",
     "explanation": "When a function is placed inside the integration brackets to be processed and integrated, it gets a special name. We call that target function the 'integrand.'"
   },
   {
     "question": "Why is an arbitrary constant $+ C$ added to the result of an indefinite integral?",
-    "options": [
-      "A) To make the expression longer.",
-      "B) Because the derivative of any constant is zero, meaning an entire family of parallel functions shares the exact same derivative.",
-      "C) To account for numerical mistakes.",
-      "D) It is only required for trigonometric expressions."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "To make the expression longer.",
+      "B": "Because the derivative of any constant is zero, meaning an entire family of parallel functions shares the exact same derivative.",
+      "C": "To account for numerical mistakes.",
+      "D": "It is only required for trigonometric expressions."
+    },
+    "correct_answer": "B",
     "explanation": "Imagine three functions: $x^2 + 5$, $x^2 + 20$, and $x^2 - 100$. If you differentiate them, the constant numbers vanish to 0, so all three have the exact same derivative: $2x$. When we go backwards via integration from $2x$, we can't tell what the original constant was! So we write $+ C$ as a placeholder for any mystery number that might have been there."
   },
   {
     "question": "What is the indefinite integral $\\int x^n dx$ for any integer $n \\neq -1$?",
-    "options": [
-      "A) $n x^{n-1} + C$",
-      "B) $\\frac{x^{n+1}}{n+1} + C$",
-      "C) $x^{n+1} + C$",
-      "D) $\\frac{x^n}{n} + C$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$n x^{n-1} + C$",
+      "B": "$\\frac{x^{n+1}}{n+1} + C$",
+      "C": "$x^{n+1} + C$",
+      "D": "$\\frac{x^n}{n} + C$"
+    },
+    "correct_answer": "B",
     "explanation": "Integration is the exact opposite of differentiation! To do the Power Rule backwards, we reverse the steps: Step 1: Add 1 to the exponent power to get $n+1$. Step 2: Divide by that exact new exponent value. This gives us the formula $\\frac{x^{n+1}}{n+1} + C$."
   },
   {
     "question": "What is the integral of a constant $\\int c \\, dx$?",
-    "options": [
-      "A) $0$",
-      "B) $c + C$",
-      "C) $cx + C$",
-      "D) $\\frac{c^2}{2} + C$"
-    ],
-    "answer": "C",
+    "options": {
+      "A": "$0$",
+      "B": "$c + C$",
+      "C": "$cx + C$",
+      "D": "$\\frac{c^2}{2} + C$"
+    },
+    "correct_answer": "C",
     "explanation": "We are looking for a function whose derivative is just a constant number $c$. If we differentiate $cx$, the $x$ drops away and leaves us with exactly $c$. Therefore, integrating a constant gives us a linear term: $cx + C$."
   },
   {
     "question": "What is the evaluated result of $\\int x^2 dx$?",
-    "options": [
-      "A) $2x + C$",
-      "B) $\\frac{x^3}{3} + C$",
-      "C) $3x^3 + C$",
-      "D) $\\frac{x^2}{2} + C$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$2x + C$",
+      "B": "$\\frac{x^3}{3} + C$",
+      "C": "$3x^3 + C$",
+      "D": "$\\frac{x^2}{2} + C$"
+    },
+    "correct_answer": "B",
     "explanation": "Let's use our reverse power rule pattern on $x^2$. Step 1: Add 1 to the exponent score, which changes 2 to 3. Step 2: Divide by that new number 3. Putting it together gives us $\\frac{x^3}{3}$, and don't forget our friendly constant $+ C$ at the end!"
   },
   {
     "question": "If you change the variable of integration from $x$ to $u$, what must you also replace alongside the terms?",
-    "options": [
-      "A) The integration symbol $\\int$ must be removed.",
-      "B) The differential term $dx$ must be properly converted into its equivalent $du$ format.",
-      "C) The constant $C$ must become zero.",
-      "D) Nothing else changes."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "The integration symbol $\\int$ must be removed.",
+      "B": "The differential term $dx$ must be properly converted into its equivalent $du$ format.",
+      "C": "The constant $C$ must become zero.",
+      "D": "Nothing else changes."
+    },
+    "correct_answer": "B",
     "explanation": "When doing substitution, you are completely changing languages from 'Language $x$' to 'Language $u$'. The little differential tag at the back ($dx$) tracks the size of our steps. If you switch variables, you must also calculate the exchange rate for the step sizes and change $dx$ into its proper $du$ counterpart."
   },
   {
     "question": "In u-substitution, if you pick $u = 1 + x^2$, what is the differential relation $du$?",
-    "options": [
-      "A) $du = dx$",
-      "B) $du = 2x \\, dx$",
-      "C) $du = x^2 \\, dx$",
-      "D) $du = 2 \\, dx$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$du = dx$",
+      "B": "$du = 2x \\, dx$",
+      "C": "$du = x^2 \\, dx$",
+      "D": "$du = 2 \\, dx$"
+    },
+    "correct_answer": "B",
     "explanation": "To find the step relation $du$, we find the derivative of our choice formula with respect to $x$. The derivative of 1 is 0, and the derivative of $x^2$ is $2x$. This means $\\frac{du}{dx} = 2x$. If we swing the $dx$ over to the other side to write it in differential form, it becomes $du = 2x \\, dx$."
   },
   {
     "question": "What type of three-dimensional solid is formed by taking a flat two-dimensional region and rotating it fully around a straight line axis?",
-    "options": [
-      "A) Pyramid solid",
-      "B) Solid of Revolution",
-      "C) Linear prism",
-      "D) Riemann cube"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "Pyramid solid",
+      "B": "Solid of Revolution",
+      "C": "Linear prism",
+      "D": "Riemann cube"
+    },
+    "correct_answer": "B",
     "explanation": "Imagine taking a cardboard shape, gluing it to a straw, and spinning the straw between your hands super fast! The spinning flat shape traces out a round, symmetrical 3D object in space. Because it was made by spinning (revolving) a shape around an axis line, it is called a Solid of Revolution."
   },
   {
     "question": "The general strategy of dividing a complex solid into many thin horizontal parallel slices to sum their volumes via integration is called what?",
-    "options": [
-      "A) Chain method",
-      "B) Method of Slicing",
-      "C) Linear evaluation",
-      "D) Intermediate estimation"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "Chain method",
+      "B": "Method of Slicing",
+      "C": "Linear evaluation",
+      "D": "Intermediate estimation"
+    },
+    "correct_answer": "B",
     "explanation": "Imagine a loaf of bread. It has an organic, curvy shape that is hard to measure all at once. But if you slice it into thin pieces, each slice looks like a flat plate whose volume is easy to calculate! Adding up all these plate pieces to find the total volume is called the Method of Slicing."
   },
   {
     "question": "What is a main requirement for a function to have a well-defined limit at infinity ($\\lim_{x \\to \\infty} f(x) = L$)?",
-    "options": [
-      "A) The function must grow infinitely large.",
-      "B) As $x$ increases without bound, $f(x)$ must stabilize closer and closer to a specific single value $L$.",
-      "C) The function must oscillate regularly.",
-      "D) The function must equal zero everywhere."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "The function must grow infinitely large.",
+      "B": "As $x$ increases without bound, $f(x)$ must stabilize closer and closer to a specific single value $L$.",
+      "C": "The function must oscillate regularly.",
+      "D": "The function must equal zero everywhere."
+    },
+    "correct_answer": "B",
     "explanation": "Imagine a spaceship flying towards the right edge of a screen forever. For it to have a limit at infinity, it can't keep flying up and down wildly. The rocket path must flatten out and stay closer and closer to a single stable altitude line named $L$ as time goes on."
   },
   {
     "question": "What is the limit $\\lim_{x \\to \\infty} \\frac{1}{x}$ equal to?",
-    "options": [
-      "A) $\\infty$",
-      "B) $1$",
-      "C) $0$",
-      "D) $-1$"
-    ],
-    "answer": "C",
+    "options": {
+      "A": "$\\infty$",
+      "B": "$1$",
+      "C": "$0$",
+      "D": "$-1$"
+    },
+    "correct_answer": "C",
     "explanation": "Imagine you have 1 pizza to share, and the number of people coming to your party ($x$) grows bigger and bigger. If 10 people show up, everyone gets a small slice. If a million people show up, the crumbs you get are practically invisible! As $x$ goes to infinity, the share size drops closer and closer to 0."
   },
   {
     "question": "If you are evaluating $\\lim_{x \\to 0} x \\cos(\\pi x)$, which theorem helps resolve the limit by bounding the function between $-x$ and $x$?",
-    "options": [
-      "A) Quotient Theorem",
-      "B) Sandwich (Squeeze) Theorem",
-      "C) Chain Theorem",
-      "D) Fundamental Theorem"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "Quotient Theorem",
+      "B": "Sandwich (Squeeze) Theorem",
+      "C": "Chain Theorem",
+      "D": "Fundamental Theorem"
+    },
+    "correct_answer": "B",
     "explanation": "The cosine wave is trapped between a floor of $-1$ and a ceiling of $+1$. If we multiply it by $x$, the whole expression gets trapped between a floor of $-x$ and a ceiling of $x$. As $x$ goes to 0, both the floor and the ceiling close in and meet at 0, squeezing the middle function to 0. This is the Sandwich (Squeeze) Theorem."
   },
   {
     "question": "What can be said about the continuity of polynomial functions according to the course material?",
-    "options": [
-      "A) They are continuous everywhere (for all real numbers).",
-      "B) They are only continuous at $x = 0$.",
-      "C) They are completely discontinuous.",
-      "D) They are only continuous at positive integer points."
-    ],
-    "answer": "A",
+    "options": {
+      "A": "They are continuous everywhere (for all real numbers).",
+      "B": "They are only continuous at $x = 0$.",
+      "C": "They are completely discontinuous.",
+      "D": "They are only continuous at positive integer points."
+    },
+    "correct_answer": "A",
     "explanation": "Polynomial functions are excellent paths because they never have fractions that cause division by zero, and they never have sudden break-apart points. Their graphs are perfectly smooth lines that continue forever across all real numbers without a single hole or jump."
   },
   {
     "question": "Under what circumstance can a rational function $R(x) = \\frac{P(x)}{Q(x)}$ be discontinuous?",
-    "options": [
-      "A) It is always discontinuous everywhere.",
-      "B) At any point $x$ where the denominator polynomial $Q(x)$ equals zero.",
-      "C) Only when $x$ approaches infinity.",
-      "D) When the numerator polynomial is linear."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "It is always discontinuous everywhere.",
+      "B": "At any point $x$ where the denominator polynomial $Q(x)$ equals zero.",
+      "C": "Only when $x$ approaches infinity.",
+      "D": "When the numerator polynomial is linear."
+    },
+    "correct_answer": "B",
     "explanation": "A rational function is a fraction. Fractions are perfectly fine and continuous everywhere, except at specific inputs that cause the bottom denominator $Q(x)$ to equal 0. Dividing by zero breaks math, creating an automatic gap, break, or infinite asymptote wall on our graph!"
   },
   {
     "question": "If a function is defined in pieces, such as $f(x) = \\begin{cases} x+1 & x < 1 \\\\ 3 & x = 1 \\\\ x^2+1 & x > 1 \\end{cases}$, it is commonly referred to as what type of function?",
-    "options": [
-      "A) Polynomial function",
-      "B) Piecewise-defined function",
-      "C) Constant-only function",
-      "D) Inverse composition"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "Polynomial function",
+      "B": "Piecewise-defined function",
+      "C": "Constant-only function",
+      "D": "Inverse composition"
+    },
+    "correct_answer": "B",
     "explanation": "This function is like a playground game with different rules depending on where you stand! If you are on the left, follow rule 1. If you are right in the center, follow rule 2. Because it is built out of separate analytical pieces stitched together, it is called a piecewise-defined function."
   },
   {
     "question": "What is the limit $\\lim_{x \\to 1^-} f(x)$ if $f(x) = x + 1$ for $x < 1$?",
-    "options": [
-      "A) $1$",
-      "B) $2$",
-      "C) $0$",
-      "D) Undefined"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$1$",
+      "B": "$2$",
+      "C": "$0$",
+      "D": "Undefined"
+    },
+    "correct_answer": "B",
     "explanation": "The little minus sign on $1^-$ tells us we are walking towards 1 from the left-hand side, where numbers are slightly less than 1 (like 0.99). The rule for inputs less than 1 is $x + 1$. As $x$ reaches the gate of 1 along this path, the height level approaches $1 + 1 = 2$."
   },
   {
     "question": "What is the limit $\\lim_{x \\to a} [f(x) - g(x)]$ according to the Difference Rule for limits?",
-    "options": [
-      "A) $\\lim f(x) \\cdot \\lim g(x)$",
-      "B) $\\lim f(x) - \\lim g(x)$",
-      "C) $\\lim f(x) + \\lim g(x)$",
-      "D) $0$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$\\lim f(x) \\cdot \\lim g(x)$",
+      "B": "$\\lim f(x) - \\lim g(x)$",
+      "C": "$\\lim f(x) + \\lim g(x)$",
+      "D": "$0$"
+    },
+    "correct_answer": "B",
     "explanation": "The Difference Rule means you can evaluate limit destinations separately. If you want to know where the difference between two paths leads, you can find the destination of the first path and subtract the destination of the second path."
   },
   {
     "question": "What notation represents the first derivative of $y$ with respect to $x$ in Leibniz notation?",
-    "options": [
-      "A) $y'$",
-      "B) $\\frac{dy}{dx}$",
-      "C) $\\dot{y}$",
-      "D) $df/dx$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$y'$",
+      "B": "$\\frac{dy}{dx}$",
+      "C": "$\\dot{y}$",
+      "D": "$df/dx$"
+    },
+    "correct_answer": "B",
     "explanation": "Leibniz notation is a beautiful fractional shorthand format for derivatives. It uses $dy$ to mean a tiny change in vertical height, and $dx$ to mean a tiny change in horizontal distance. Writing it as $\\frac{dy}{dx}$ explicitly displays the rise-over-run slope formula!"
   },
   {
     "question": "What notation represents the second derivative of $y$ with respect to $x$ in Leibniz notation?",
-    "options": [
-      "A) $\\frac{d^2y}{dx^2}$",
-      "B) $\\frac{dy^2}{dx^2}$",
-      "C) $y''$",
-      "D) $(\\frac{dy}{dx})^2$"
-    ],
-    "answer": "A",
+    "options": {
+      "A": "$\\frac{d^2y}{dx^2}$",
+      "B": "$\\frac{dy^2}{dx^2}$",
+      "C": "$y''$",
+      "D": "$(\\frac{dy}{dx})^2$"
+    },
+    "correct_answer": "A",
     "explanation": "When we take a derivative a second time using Leibniz notation, we write it as $\\frac{d^2y}{dx^2}$. The 2 on the top $d$ means 'apply the differentiation operation twice,' and the 2 on the bottom $dx$ means 'with respect to steps in variable $x$ twice.'"
   },
   {
     "question": "What is the derivative of the function $f(x) = 7x^2$?",
-    "options": [
-      "A) $7x$",
-      "B) $14x$",
-      "C) $14x^2$",
-      "D) $2x$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$7x$",
+      "B": "$14x$",
+      "C": "$14x^2$",
+      "D": "$2x$"
+    },
+    "correct_answer": "B",
     "explanation": "Let's apply our power rule shortcut here. The exponent power 2 jumps down to the front and multiplies the big number 7 that is already sitting there, which gives $2 \\times 7 = 14$. Then the power of $x$ drops by 1 point (from 2 to 1), leaving us with exactly $14x$."
   },
   {
     "question": "Applying the Chain Rule to $y = (3x^2 + 1)^5$, what is $\\frac{dy}{dx}$?",
-    "options": [
-      "A) $5(3x^2 + 1)^4$",
-      "B) $5(3x^2 + 1)^4 \\cdot (6x) = 30x(3x^2 + 1)^4$",
-      "C) $30x^4$",
-      "D) $(6x)^5$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$5(3x^2 + 1)^4$",
+      "B": "$5(3x^2 + 1)^4 \\cdot (6x) = 30x(3x^2 + 1)^4$",
+      "C": "$30x^4$",
+      "D": "$(6x)^5$"
+    },
+    "correct_answer": "B",
     "explanation": "Think of this function as an onion with two layers. Outer layer: a power of 5. Inner layer: $3x^2 + 1$. Step 1: Differentiate the outer layer by dropping the 5 to the front and lowering the power to 4, keeping the inside exactly the same: $5(3x^2 + 1)^4$. Step 2: Multiply by the derivative of the inside layer. The derivative of $3x^2 + 1$ is $6x$. Multiplying them together gives $5 \\times 6x \\times (3x^2 + 1)^4 = 30x(3x^2 + 1)^4$."
   },
   {
     "question": "What is the indefinite integral of the zero function, $\\int 0 \\, dx$?",
-    "options": [
-      "A) $0$",
-      "B) $C$ (an arbitrary constant)",
-      "C) $x + C$",
-      "D) Undefined"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$0$",
+      "B": "$C$ (an arbitrary constant)",
+      "C": "$x + C$",
+      "D": "Undefined"
+    },
+    "correct_answer": "B",
     "explanation": "We are looking for a mystery function whose speed of change is always zero. What kind of thing never changes at all? A constant number! Since the derivative of any fixed number is 0, the backwards-derivative integral of 0 is just a placeholder constant, written as $C$."
   },
   {
     "question": "If $\\int_{1}^{3} f(x) dx = 5$, what is the value of $\\int_{3}^{1} f(x) dx$?",
-    "options": [
-      "A) $5$",
-      "B) $0$",
-      "C) $-5$",
-      "D) $15$"
-    ],
-    "answer": "C",
+    "options": {
+      "A": "$5$",
+      "B": "$0$",
+      "C": "$-5$",
+      "D": "$15$"
+    },
+    "correct_answer": "C",
     "explanation": "The first integral calculates area while moving forward from gate 1 to gate 3, which equals positive 5. If we switch the numbers and integrate from gate 3 backwards to gate 1, we are moving in reverse! Moving in reverse multiplies the final value by $-1$, so our answer flips to $-5$."
   },
   {
     "question": "When approximating an area under a function, what happens to the Riemann sum approximation as the number of partition slices $n$ approaches infinity?",
-    "options": [
-      "A) It becomes increasingly inaccurate.",
-      "B) It converges exactly to the precise definite integral value.",
-      "C) It approaches infinity.",
-      "D) It drops to zero."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "It becomes increasingly inaccurate.",
+      "B": "It converges exactly to the precise definite integral value.",
+      "C": "It approaches infinity.",
+      "D": "It drops to zero."
+    },
+    "correct_answer": "B",
     "explanation": "If you only use 3 wide rectangles to fill a curvy shape, you will have lots of empty spaces sticking out. But if you cut the space into a million ultra-thin needle-like rectangles, the stepping gaps become completely unnoticeable! As the number of slices reaches infinity, your approximation turns perfectly seamless and gives you the exact area value."
   },
   {
     "question": "What is the derivative of $f(x) = -x$?",
-    "options": [
-      "A) $1$",
-      "B) $-1$",
-      "C) $0$",
-      "D) $-x^2$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$1$",
+      "B": "$-1$",
+      "C": "$0$",
+      "D": "$-x^2$"
+    },
+    "correct_answer": "B",
     "explanation": "The function $y = -x$ is a straight line that goes downward from left to right. For every single step you take to the right, the height level drops by exactly 1 unit. Since the slope is always $-1$, its derivative is exactly $-1$."
   },
   {
     "question": "If $u, v, w$ are separate terms added together as $u + v - w$, what is the derivative with respect to $x$?",
-    "options": [
-      "A) $u' \\cdot v' - w'$",
-      "B) $u' + v' - w'$",
-      "C) $u'v'w'$",
-      "D) $0$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$u' \\cdot v' - w'$",
+      "B": "$u' + v' - w'$",
+      "C": "$u'v'w'$",
+      "D": "$0$"
+    },
+    "correct_answer": "B",
     "explanation": "Calculus derivatives are very clean and linear. If individual math terms are just linked together with simple plus or minus operations, you can find the derivative of each component separately and keep the same symbols between them: $u' + v' - w'$."
   },
   {
     "question": "In the study of limits, what name is given to expressions like $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$ that do not point directly to a clear numerical answer?",
-    "options": [
-      "A) Definite forms",
-      "B) Continuous boundaries",
-      "C) Indeterminate forms",
-      "D) Dummy evaluations"
-    ],
-    "answer": "C",
+    "options": {
+      "A": "Definite forms",
+      "B": "Continuous boundaries",
+      "C": "Indeterminate forms",
+      "D": "Dummy evaluations"
+    },
+    "correct_answer": "C",
     "explanation": "The word 'indeterminate' means 'you cannot determine the value yet.' When a limit evaluation yields fractions like $\\frac{0}{0}$, it is a structural tie or a riddle. It tells you that a real number answer is hiding inside, but you need to use factoring or tricks to unpack it!"
   },
   {
     "question": "What is the derivative of the identity function squared, $f(x) = x^2$?",
-    "options": [
-      "A) $1$",
-      "B) $x$",
-      "C) $2x$",
-      "D) $\\frac{1}{3}x^3$"
-    ],
-    "answer": "C",
+    "options": {
+      "A": "$1$",
+      "B": "$x$",
+      "C": "$2x$",
+      "D": "$\\frac{1}{3}x^3$"
+    },
+    "correct_answer": "C",
     "explanation": "Let's look at $x^2$ and execute our basic power rule shortcut. The little power of 2 floats down to the front line to become a multiplier, and then the exponent loses 1 point (dropping from 2 down to 1). This leaves us with exactly $2x^1$, which we write as $2x$."
   },
   {
     "question": "If you evaluate the indefinite integral $\\int 5x^4 dx$, what do you get?",
-    "options": [
-      "A) $20x^3 + C$",
-      "B) $x^5 + C$",
-      "C) $\\frac{5}{4}x^5 + C$",
-      "D) $5x^5 + C$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$20x^3 + C$",
+      "B": "$x^5 + C$",
+      "C": "$\\frac{5}{4}x^5 + C$",
+      "D": "$5x^5 + C$"
+    },
+    "correct_answer": "B",
     "explanation": "Let's perform the reverse power rule on $5x^4$! First, look at the power 4 and increase it by 1 point to get 5. Next, divide our expression by that new number 5: $\\frac{5x^5}{5}$. The 5 on the top and the 5 on the bottom cancel out completely, leaving us with a clean $x^5 + C$."
   },
   {
     "question": "What is the derivative of a constant times $x$, i.e., $\\frac{d}{dx}(cx)$?",
-    "options": [
-      "A) $c$",
-      "B) $0$",
-      "C) $cx$",
-      "D) $c^2$"
-    ],
-    "answer": "A",
+    "options": {
+      "A": "$c$",
+      "B": "$0$",
+      "C": "$cx$",
+      "D": "$c^2$"
+    },
+    "correct_answer": "A",
     "explanation": "The graph of $y = cx$ is a straight line passing through the center with a steepness slope of $c$. Since a derivative measures the slope of a line, the answer is just the constant coefficient number $c$."
   },
   {
     "question": "What does the symbol $\\to$ represent in limit descriptions?",
-    "options": [
-      "A) 'Is equal to'",
-      "B) 'Approaches' or 'goes to'",
-      "C) 'Is greater than'",
-      "D) 'Divided by'"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "'Is equal to'",
+      "B": "'Approaches' or 'goes to'",
+      "C": "'Is greater than'",
+      "D": "'Divided by'"
+    },
+    "correct_answer": "B",
     "explanation": "In limit notation, the arrow symbol is an action sign that means 'approaches,' 'gets closer and closer to,' or 'tends toward.' It tracks values as they head towards a target point."
   },
   {
     "question": "If $\\lim_{x \\to c} f(x) = 4$, what is $\\lim_{x \\to c} [f(x)]^2$ according to the Power Property of limits?",
-    "options": [
-      "A) $4$",
-      "B) $8$",
-      "C) $16$",
-      "D) $2$"
-    ],
-    "answer": "C",
+    "options": {
+      "A": "$4$",
+      "B": "$8$",
+      "C": "$16$",
+      "D": "$2$"
+    },
+    "correct_answer": "C",
     "explanation": "The Power Property for limits says that if a function path is heading towards a specific target value, then squaring the entire function simply squares the final destination target number! Since our function is heading to 4, squaring it gives $4^2 = 4 \\times 4 = 16$."
   },
   {
     "question": "The domain of a function refers to what?",
-    "options": [
-      "A) The set of all possible output values.",
-      "B) The set of all valid input values for which the function is defined.",
-      "C) The highest maximum point on its graph.",
-      "D) The integral bound sequence."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "The set of all possible output values.",
+      "B": "The set of all valid input values for which the function is defined.",
+      "C": "The highest maximum point on its graph.",
+      "D": "The integral bound sequence."
+    },
+    "correct_answer": "B",
     "explanation": "Think of a game console. It can accept game discs, but if you try to insert a slice of bread, the console will break! The 'domain' of a function is a complete list of all the safe, acceptable inputs you can plug in without causing division by zero or breaking math laws."
   },
   {
     "question": "The range of a function refers to what?",
-    "options": [
-      "A) The set of all valid input arguments.",
-      "B) The set of all actual output values generated by the function.",
-      "C) The width of the integration partition.",
-      "D) The total number of terms in its polynomial."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "The set of all valid input arguments.",
+      "B": "The set of all actual output values generated by the function.",
+      "C": "The width of the integration partition.",
+      "D": "The total number of terms in its polynomial."
+    },
+    "correct_answer": "B",
     "explanation": "If the domain is a list of everything you can plug into a machine, the 'range' is a complete list of all the different outcomes (outputs) that spit out of the machine on the other side!"
   },
   {
     "question": "When a function contains a jump or a break at a point, it is described as being what at that point?",
-    "options": [
-      "A) Continuous",
-      "B) Discontinuous",
-      "C) Differentiable",
-      "D) Rational"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "Continuous",
+      "B": "Discontinuous",
+      "C": "Differentiable",
+      "D": "Rational"
+    },
+    "correct_answer": "B",
     "explanation": "If a path has a giant step-down jump, a broken gap, or an open hole, you can't walk across it smoothly without lifting your foot. In math, any broken or disconnected graph line is described as being 'discontinuous' at that location."
   },
   {
     "question": "What is the first step in algebraically evaluating a limit that presents a $\\frac{0}{0}$ form via common algebraic factoring?",
-    "options": [
-      "A) Change the limits to infinity.",
-      "B) Factor the numerator and denominator to cancel out the zero-causing shared terms.",
-      "C) Integrate the expression immediately.",
-      "D) Square the entire fraction."
-    ],
-    "answer": "B",
+    "options": {
+      "A": "Change the limits to infinity.",
+      "B": "Factor the numerator and denominator to cancel out the zero-causing shared terms.",
+      "C": "Integrate the expression immediately.",
+      "D": "Square the entire fraction."
+    },
+    "correct_answer": "B",
     "explanation": "When an expression turns into a messy $\\frac{0}{0}$ fraction, the zeros are being caused by a shared hidden term on the top and bottom. The best first step is to use factoring to break both parts down, locate that matching culprit term, and cancel it out to reveal the true number destination!"
   },
   {
     "question": "What is the limit $\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$?",
-    "options": [
-      "A) $0$",
-      "B) $2$",
-      "C) $4$",
-      "D) Undefined"
-    ],
-    "answer": "C",
+    "options": {
+      "A": "$0$",
+      "B": "$2$",
+      "C": "$4$",
+      "D": "Undefined"
+    },
+    "correct_answer": "C",
     "explanation": "If you plug 2 in directly, you get a messy $\\frac{0}{0}$ error. Let's use factoring to clear it up! The top part $x^2 - 4$ can be factored into $(x - 2)(x + 2)$. So our fraction becomes $\\frac{(x - 2)(x + 2)}{x - 2}$. Notice that $(x - 2)$ is sitting on the top and bottom, so we can cancel them out! This leaves us with a clean expression: $x + 2$. Now, let's plug in our target 2: $2 + 2 = 4$."
   },
   {
     "question": "What is the derivative of a constant function f(x) = 100?",
-    "options": [
-      "A) $100$",
-      "B) $1$",
-      "C) $0$",
-      "D) $100x$"
-    ],
-    "answer": "C",
+    "options": {
+      "A": "$100$",
+      "B": "$1$",
+      "C": "$0$",
+      "D": "$100x$"
+    },
+    "correct_answer": "C",
     "explanation": "The function height is locked at 100 and never moves up or down. Since it has absolutely zero movement or speed of change, its derivative (which measures change rate) is exactly 0."
   },
   {
     "question": "If you integrate a function over a single point, $\\int_{5}^{5} (x^3 + 2x) dx$, what is the result?",
-    "options": [
-      "A) $5$",
-      "B) $0$",
-      "C) $125$",
-      "D) Undefined"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$5$",
+      "B": "$0$",
+      "C": "$125$",
+      "D": "Undefined"
+    },
+    "correct_answer": "B",
     "explanation": "Integration measures the area of a box. If the left side boundary wall is at 5 and the right side boundary wall is also at 5, the box has a width of exactly 0. Any shape with a width of zero occupies zero space, so the area answer is 0."
   },
   {
     "question": "Which branch of calculus is primarily concerned with computing rates of change and slopes of curves?",
-    "options": [
-      "A) Integral Calculus",
-      "B) Differential Calculus",
-      "C) Multi-grid Matrix Calculus",
-      "D) Set Theory"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "Integral Calculus",
+      "B": "Differential Calculus",
+      "C": "Multi-grid Matrix Calculus",
+      "D": "Set Theory"
+    },
+    "correct_answer": "B",
     "explanation": "Calculus is split into two main sister fields. The branch that focuses on finding speeds of change, slopes, and derivatives is called Differential Calculus."
   },
   {
     "question": "Which branch of calculus is primarily focused on accumulation, areas under curves, and volumes of solids?",
-    "options": [
-      "A) Differential Calculus",
-      "B) Integral Calculus",
-      "C) Numerical Factoring",
-      "D) Algebraic Continuity"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "Differential Calculus",
+      "B": "Integral Calculus",
+      "C": "Numerical Factoring",
+      "D": "Algebraic Continuity"
+    },
+    "correct_answer": "B",
     "explanation": "The second sister field of calculus deals with putting tiny puzzle pieces together to calculate totals, accumulated amounts, areas, and volumes. This branch is called Integral Calculus."
   },
   {
     "question": "What is the value of the limit $\\lim_{x \\to 3} \\frac{x^2 - 9}{x - 3}$?",
-    "options": [
-      "A) $3$",
-      "B) $6$",
-      "C) $0$",
-      "D) Undefined"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$3$",
+      "B": "$6$",
+      "C": "$0$",
+      "D": "Undefined"
+    },
+    "correct_answer": "B",
     "explanation": "Direct substitution gives $\\frac{0}{0}$, so let's factor the top! $x^2 - 9$ splits cleanly into $(x - 3)(x + 3)$. If we write it out as a fraction: $\\frac{(x - 3)(x + 3)}{x - 3}$. We can cross off the matching $(x - 3)$ pieces from the top and bottom. That simplifies the whole function down to just $x + 3$. Now plug in the target value 3: $3 + 3 = 6$!"
   },
   {
     "question": "Evaluate the limit $\\lim_{x \\to 1} \\frac{x^2 + 2x - 3}{x - 1}$.",
-    "options": [
-      "A) $2$",
-      "B) $4$",
-      "C) $1$",
-      "D) $0$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$2$",
+      "B": "$4$",
+      "C": "$1$",
+      "D": "$0$"
+    },
+    "correct_answer": "B",
     "explanation": "Let's factor the quadratic equation on top! We need two numbers that multiply to make $-3$ and add together to make $+2$. Those numbers are $+3$ and $-1$, so the top becomes $(x - 1)(x + 3)$. Putting it over the bottom gives $\\frac{(x - 1)(x + 3)}{x - 1}$. Cancel out the matching $(x - 1)$ brackets to leave yourself with just $x + 3$. Now let's evaluate at the gate $x = 1$: $1 + 3 = 4$."
   },
   {
     "question": "Find the value of $\\lim_{x \\to 2} (3x^2 - 5x + 4)$.",
-    "options": [
-      "A) $4$",
-      "B) $6$",
-      "C) $8$",
-      "D) $10$"
-    ],
-    "answer": "B",
+    "options": {
+      "A": "$4$",
+      "B": "$6$",
+      "C": "$8$",
+      "D": "$10$"
+    },
+    "correct_answer": "B",
     "explanation": "This is a simple polynomial function with no denominators or math hazards, so we can find the exact destination path by plugging in 2 for $x$. Step 1: $3 \\times (2^2) = 3 \\times 4 = 12$. Step 2: Subtract $5 \\times 2$, which means $12 - 10 = 2$. Step 3: Add the constant 4 to the running total, which gives $2 + 4 = 6$."
-  },
-  {
-    "question": "Evaluate $\\lim_{x \\to 0} \\frac{5x^3 - 2x^2}{x^2}$.",
-    "options": [
-      "A) $5$",
-      "B) $0$",
-      "C) $-2$",
-      "D) Undefined"
-    ],
-    "answer": "C",
-    "explanation": "Let's pull out a common factor of $x^2$ from the terms on the top floor: $x^2(5x - 2)$. Now, look at our fraction expression: $\\frac{x^2(5x - 2)}{x^2}$. The $x^2$ on top and bottom cancel each other out completely, leaving a clean formula of $5x - 2$. Finally, let's plug in $x = 0$: $5(0) - 2 = 0 - 2 = -2$."
-  },
-  {
-    "question": "Determine the limit: $\\lim_{x \\to \\infty} \\frac{4x^2 - 5x}{2x^2 + 7}$.",
-    "options": [
-      "A) $0$",
-      "B) $2$",
-      "C) $\\infty$",
-      "D) $-\\frac{5}{7}$"
-    ],
-    "answer": "B",
-    "explanation": "When $x$ grows into an unimaginably huge number heading to infinity, the smaller terms $(-5x$ and $+7)$ become insignificant. We only need to compare the biggest power terms on the top and bottom: $\\frac{4x^2}{2x^2}$. The $x^2$ terms cancel out, leaving us with the simple ratio fraction $\\frac{4}{2}$, which equals exactly 2!"
-  },
-  {
-    "question": "Find $\\lim_{x \\to \\infty} \\frac{3x + 2}{x^2 - 4}$.",
-    "options": [
-      "A) $3$",
-      "B) $0$",
-      "C) $\\infty$",
-      "D) $-\\frac{1}{2}$"
-    ],
-    "answer": "B",
-    "explanation": "Let's look at the highest powers. The top has a power of $x^1$, but the bottom has a much stronger power of $x^2$. This means as $x$ grows towards infinity, the bottom floor grows exponentially faster than the top floor. When the bottom of a fraction becomes infinitely heavier than the top, the value of the whole fraction gets crushed down to 0."
-  },
-  {
-    "question": "Compute the derivative of $f(x) = 5x^4 - 3x^2 + 7x - 2$ with respect to $x$.",
-    "options": [
-      "A) $20x^3 - 6x + 7$",
-      "B) $5x^3 - 3x + 7$",
-      "C) $20x^4 - 6x^2 + 7$",
-      "D) $20x^3 - 6x$"
-    ],
-    "answer": "A",
-    "explanation": "Let's use the Power Rule on each link of the chain one-by-one! Term 1: For $5x^4$, $4 \\times 5 = 20$, power drops to 3 $\\rightarrow 20x^3$. Term 2: For $-3x^2$, $2 \\times -3 = -6$, power drops to 1 $\\rightarrow -6x$. Term 3: For $7x$, the derivative is just the number coefficient $\\rightarrow 7$. Term 4: For $-2$, it is a constant, so its derivative is 0. Stitching them together gives $20x^3 - 6x + 7$."
-  },
-  {
-    "question": "If $f(x) = \\frac{1}{x^3}$, what is $f'(x)$?",
-    "options": [
-      "A) $\\frac{1}{3x^2}$",
-      "B) $-3x^{-4}$",
-      "C) $-3x^{-2}$",
-      "D) $3x^2$"
-    ],
-    "answer": "B",
-    "explanation": "Before using our power rule shortcut, let's rewrite the fraction to make it look like a regular power term. Moving $x^3$ up from the bottom floor converts it into a negative power: $x^{-3}$. Now, use the power rule! Bring the power $-3$ down to the front as a multiplier, and then subtract 1 from the power: $-3 - 1 = -4$. This leaves us with a derivative of $-3x^{-4}$."
-  },
-  {
-    "question": "Find the derivative of $y = \\sqrt{x^3}$ with respect to $x$.",
-    "options": [
-      "A) $\\frac{3}{2}\\sqrt{x}$",
-      "B) $\\frac{1}{2\\sqrt{x^3}}$",
-      "C) $\\frac{3}{2}x^2$",
-      "D) $\\frac{2}{3}\\sqrt{x}$"
-    ],
-    "answer": "A",
-    "explanation": "First, let's transform the radical sign into a fractional exponent format. A square root of a cube can be written as $x^{3/2}$. Now, apply our Power Rule pattern! Bring the exponent fraction $\\frac{3}{2}$ down to the front to be a multiplier, and then subtract 1 from the exponent score: $\\frac{3}{2} - 1 = \\frac{1}{2}$. This leaves us with $\\frac{3}{2}x^{1/2}$. Since a power of $\\frac{1}{2}$ is just a square root, it can be written beautifully as $\\frac{3}{2}\\sqrt{x}$."
-  },
-  {
-    "question": "Using the Product Rule, find the derivative of $f(x) = x^2 \\sin x$.",
-    "options": [
-      "A) $2x \\cos x$",
-      "B) $2x \\sin x + x^2 \\cos x$",
-      "C) $2x \\sin x - x^2 \\cos x$",
-      "D) $x^2 \\sin x + 2x \\cos x$"
-    ],
-    "answer": "B",
-    "explanation": "The Product Rule tells two function terms multiplied together to take turns being differentiated: (Derivative of 1st term $\\times$ 2nd term left alone) + (1st term left alone $\\times$ derivative of 2nd term). The derivative of $x^2$ is $2x$, and the derivative of $\\sin x$ is $\\cos x$. Assembling the taking-turns layout gives us $(2x \\times \\sin x) + (x^2 \\times \\cos x) = 2x \\sin x + x^2 \\cos x$."
-  },
-  {
-    "question": "Find the derivative of $y = \\frac{x}{x + 1}$ using the Quotient Rule.",
-    "options": [
-      "A) $\\frac{1}{(x + 1)^2}$",
-      "B) $\\frac{2x + 1}{(x + 1)^2}$",
-      "C) $\\frac{1}{x + 1}$",
-      "D) $\\frac{-1}{(x + 1)^2}$"
-    ],
-    "answer": "A",
-    "explanation": "Let's use our fraction quotient shortcut rule: $\\frac{\\text{Bottom} \\times \\text{top'} - \\text{Top} \\times \\text{bottom'}}{\\text{Bottom}^2}$. The top is $x$ (its derivative is 1), and the bottom is $x + 1$ (its derivative is 1). Let's plug them in: $\\frac{(x + 1)(1) - (x)(1)}{(x + 1)^2}$. Simplifying the top floor gives $x + 1 - x$, which leaves just a clean number 1 on top! So the final answer is $\\frac{1}{(x + 1)^2}$."
-  },
-  {
-    "question": "Find the derivative of the composite function $y = (2x^3 + 5)^4$ using the Chain Rule.",
-    "options": [
-      "A) $4(2x^3 + 5)^3$",
-      "B) $24x^2(2x^3 + 5)^3$",
-      "C) $6x^2(2x^3 + 5)^3$",
-      "D) $8x^2(2x^3 + 5)^4$"
-    ],
-    "answer": "B",
-    "explanation": "Think of this function as a two-layer surprise box. Layer 1 (Outside): an overall power of 4. Layer 2 (Inside): the formula $2x^3 + 5$. Step 1: Differentiate the outside power first by bringing the 4 down and lowering the power score to 3, leaving the inside completely untouched: $4(2x^3 + 5)^3$. Step 2: Multiply by the derivative of the inside formula. The derivative of $2x^3 + 5$ is $6x^2$. Combine them together: $4 \\times 6x^2 \\times (2x^3 + 5)^3 = 24x^2(2x^3 + 5)^3$."
-  },
-  {
-    "question": "If $f(x) = \\cos(4x)$, find $f'(x)$.",
-    "options": [
-      "A) $-\\sin(4x)$",
-      "B) $4\\sin(4x)$",
-      "C) $-4\\sin(4x)$",
-      "D) $-4\\cos(4x)$"
-    ],
-    "answer": "C",
-    "explanation": "The base rule is that the derivative of $\\cos(x)$ is $-\\sin(x)$. But since there is a 4 tucked inside with the $x$, the Chain Rule requires us to multiply by the derivative of that inner part! The derivative of $4x$ is 4. So, we multiply our outside derivative by 4 to get: $-4\\sin(4x)$."
-  },
-  {
-    "question": "Find the second derivative $y''$ of the function $y = x^4 - 2x^3$.",
-    "options": [
-      "A) $4x^3 - 6x^2$",
-      "B) $12x^2 - 12x$",
-      "C) $12x^2 - 6x$",
-      "D) $24x - 12$"
-    ],
-    "answer": "B",
-    "explanation": "To get the second derivative, we just need to run our power rule pattern in two consecutive rounds! Round 1 (First Derivative): Differentiating $x^4 - 2x^3$ gives $4x^3 - 6x^2$. Round 2 (Second Derivative): Now differentiate that new answer! The derivative of $4x^3$ is $12x^2$, and the derivative of $-6x^2$ is $-12x$. Combining them gives $12x^2 - 12x$."
-  },
-  {
-    "question": "Evaluate the indefinite integral $\\int (6x^2 - 4x + 3) dx$.",
-    "options": [
-      "A) $2x^3 - 2x^2 + 3x + C$",
-      "B) $12x - 4 + C$",
-      "C) $6x^3 - 4x^2 + 3x + C$",
-      "D) $2x^3 - 4x^2 + C$"
-    ],
-    "answer": "A",
-    "explanation": "Let's perform reverse power rules term-by-term. For $6x^2$: raise the power to 3 and divide by 3 $\\rightarrow \\frac{6x^3}{3} = 2x^3$. For $-4x$: raise the power to 2 and divide by 2 $\\rightarrow \\frac{-4x^2}{2} = -2x^2$. For 3: since it is a standalone number, it simply gains an $x \\rightarrow 3x$. Stitching them together and adding our placeholder constant gives $2x^3 - 2x^2 + 3x + C$."
-  },
-  {
-    "question": "Evaluate the definite integral $\\int_{1}^{3} 3x^2 dx$.",
-    "options": [
-      "A) $8$",
-      "B) $26$",
-      "C) $27$",
-      "D) $28$"
-    ],
-    "answer": "B",
-    "explanation": "First, find the antiderivative of $3x^2$. Raising the power to 3 and dividing by 3 gives $\\frac{3x^3}{3} = x^3$. Now, we plug our interval boundaries (1 and 3) into $x^3$. Top boundary evaluation: $3^3 = 3 \\times 3 \\times 3 = 27$. Bottom boundary evaluation: $1^3 = 1 \\times 1 \\times 1 = 1$. Subtract the bottom result from the top result to finish: $27 - 1 = 26$."
-  },
-  {
-    "question": "Evaluate $\\int_{0}^{2} (4 - 2x) dx$.",
-    "options": [
-      "A) $0$",
-      "B) $2$",
-      "C) $4$",
-      "D) $8$"
-    ],
-    "answer": "C",
-    "explanation": "First, let's find the backwards-derivative formula for $(4 - 2x)$. The antiderivative of 4 is $4x$, and the antiderivative of $-2x$ is $-x^2$, giving us the formula $4x - x^2$. Now let's evaluate this at our boundaries 0 and 2. Plug in 2: $4(2) - 2^2 = 8 - 4 = 4$. Plug in 0: $4(0) - 0^2 = 0$. Subtracting the two gives $4 - 0 = 4$."
-  },
-  {
-    "question": "Use u-substitution to evaluate $\\int 2x(x^2 + 1)^3 dx$.",
-    "options": [
-      "A) $\\frac{(x^2 + 1)^4}{4} + C$",
-      "B) $(x^2 + 1)^4 + C$",
-      "C) $\\frac{x^2(x^2 + 1)^4}{4} + C$",
-      "D) $2x^2(x^2 + 1)^3 + C$"
-    ],
-    "answer": "A",
-    "explanation": "Let's give the inside formula $x^2 + 1$ a short shortcut nickname: $u$. Finding its derivative gives $du = 2x \\, dx$. Notice that $2x \\, dx$ is already sitting perfectly inside our integral! We can swap terms out to make an easy new integral: $\\int u^3 du$. The antiderivative of $u^3$ is $\\frac{u^4}{4} + C$. Now, change the nickname back to its real name to get your final answer: $\\frac{(x^2 + 1)^4}{4} + C$."
-  },
-  {
-    "question": "Evaluate the definite integral $\\int_{0}^{\\pi/2} \\cos x \\, dx$.",
-    "options": [
-      "A) $0$",
-      "B) $1$",
-      "C) $-1$",
-      "D) $\\pi/2$"
-    ],
-    "answer": "B",
-    "explanation": "First, we look for our antiderivative by asking: 'Whose derivative is $\\cos x$?' The answer is $\\sin x$! Now, we evaluate $\\sin x$ at our boundaries from 0 to $\\frac{\\pi}{2}$. Plugging in the top boundary gives $\\sin(\\frac{\\pi}{2}) = 1$. Plugging in the bottom boundary gives $\\sin(0) = 0$. Subtracting them gives $1 - 0 = 1$."
-  },
-  {
-    "question": "Find the area of the region bounded by the curve $y = x^2$, the x-axis, and the lines $x = 0$ and $x = 3$.",
-    "options": [
-      "A) $3$",
-      "B) $9$",
-      "C) $27$",
-      "D) $6$"
-    ],
-    "answer": "B",
-    "explanation": "To find this space area, we set up a definite integral from 0 to 3: $\\int_{0}^{3} x^2 dx$. The antiderivative of $x^2$ is $\\frac{x^3}{3}$. Now let's calculate the values at our bounds! Plug in 3: $\\frac{3^3}{3} = \\frac{27}{3} = 9$. Plug in 0: \\frac{0^3}{3} = 0. Subtracting the bottom value from the top value gives $9 - 0 = 9$."
-  },
-  {
-    "question": "Find the area of the region enclosed between the curves $y = 2x$ and $y = x^2$. (Note: Intersection points are at $x=0$ and $x=2$)",
-    "options": [
-      "A) $\\frac{4}{3}$",
-      "B) $\\frac{2}{3}$",
-      "C) $2$",
-      "D) $4$"
-    ],
-    "answer": "A",
-    "explanation": "Between the intersection walls 0 and 2, the line $2x$ sits higher up than the parabola curve $x^2$. To find the enclosed space, we integrate the difference from 0 to 2: $\\int_{0}^{2} (2x - x^2) dx$. The antiderivative is $x^2 - \\frac{x^3}{3}$. Let's evaluate at our boundaries! Plug in 2: $2^2 - \\frac{2^3}{3} = 4 - \\frac{8}{3} = \\frac{12}{3} - \\frac{8}{3} = \\frac{4}{3}$. Plug in 0: $0^2 - \\frac{0^3}{3} = 0$. Subtracting them gives a final area of $\\frac{4}{3}$."
-  },
-  {
-    "question": "A solid is generated by revolving the region bounded by $y = x$ from $x = 0$ to $x = 2$ around the x-axis. Find its volume using the disk method.",
-    "options": [
-      "A) $\\frac{8\\pi}{3}$",
-      "B) $4\\pi$",
-      "C) $\\frac{4\\pi}{3}$",
-      "D) $2\\pi$"
-    ],
-    "answer": "A",
-    "explanation": "The Disk Method formula for finding volume is $V = \\pi \\int_{a}^{b} [R(x)]^2 dx$. Our radius line function is $R(x) = x$, and our bounds are from 0 to 2, so the equation is $V = \\pi \\int_{0}^{2} x^2 dx$. The antiderivative of $x^2$ is $\\frac{x^3}{3}$. Let's evaluate this at our boundaries: plugging in 2 gives $\\frac{2^3}{3} = \\frac{8}{3}$, and plugging in 0 gives 0. Multiplying the result by $\\pi$ gives the total volume: $\\frac{8\\pi}{3}$."
-  },
-  {
-    "question": "A bacterial culture grows according to the exponential model $X(t) = 100 e^{0.05 t}$. What is the initial population size at $t = 0$?",
-    "options": [
-      "A) $0$",
-      "B) $5$",
-      "C) $100$",
-      "D) $100e$"
-    ],
-    "answer": "C",
-    "explanation": "To find the initial size at the very start of our timeline, we set the time clock $t = 0$ and plug it into our formula: $X(0) = 100 \\times e^{0.05 \\times 0} = 100 \\times e^0$. Since any real number raised to a power of 0 is always exactly 1, this simplifies beautifully to $100 \\times 1 = 100$ bacteria!"
-  },
-  {
-    "question": "If a substance decays exponentially such that its quantity is modeled by $X(t) = X_0 e^{-0.1t}$, find the rate of change of the substance with respect to time $\\frac{dX}{dt}$.",
-    "options": [
-      "A) $-0.1 X_0 e^{-0.1t}$",
-      "B) $X_0 e^{-0.1t}$",
-      "C) $-0.1t X_0$",
-      "D) $-X_0 e^{-0.1t}$"
-    ],
-    "answer": "A",
-    "explanation": "To find the rate of change, we take the derivative with respect to time $t$. The $X_0$ is just a starting number multiplier, so it stays out front. The derivative of $e^{-0.1t}$ keeps the exponential exactly the same, but the Chain Rule requires us to multiply it by the derivative of the power expression, which is $-0.1$. Bringing it all together out front gives us $-0.1 X_0 e^{-0.1t}$."
-  },
-  {
-    "question": "If $\\int_{2}^{5} f(x)dx = 7$ and $\\int_{5}^{8} f(x)dx = 3$, find $\\int_{2}^{8} f(x)dx$.",
-    "options": [
-      "A) $4$",
-      "B) $10$",
-      "C) $21$",
-      "D) $0$"
-    ],
-    "answer": "B",
-    "explanation": "Think of this like building a train track across two sections. Section 1 goes from mile 2 to mile 5 and accumulates an area of 7. Section 2 continues immediately from mile 5 to mile 8 and accumulates an area of 3. To find the total combined area from the absolute start (2) to the absolute finish (8), we just add the two sections together: $7 + 3 = 10$!"
   }
 ]

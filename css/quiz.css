@@ -493,3 +493,19 @@ body {
     transition: opacity 0.15s ease;
     will-change: opacity; /* Optimizes hardware rendering on iOS/Android browsers */
 }
+
+/* Prevent long LaTeX or text from stretching the option elements */
+.options-container *,
+.options-container button,
+.options-container div {
+  white-space: normal !important;
+  word-break: break-all !important;
+  overflow-wrap: anywhere !important;
+}
+
+/* Prevent long LaTeX or text in the question from stretching the card */
+.question-text {
+  white-space: normal !important;
+  word-break: break-all !important;
+  overflow-wrap: anywhere !important;
+}
