@@ -65,7 +65,15 @@ ${submission}
         }
 
         const data = await response.json();
-        const rubrics = JSON.parse(data.choices[0].message.content);
+       // Clean out any accidental markdown wrapper code blocks injected by the LLM
+        let rawContent = data.choices[0].message.content.trim();
+        if (rawContent.startsWith("```json")) {
+            rawContent = rawContent.substring(7, rawContent.length - 3).trim();
+        } else if (rawContent.startsWith("```")) {
+            rawContent = rawContent.substring(3, rawContent.length - 3).trim();
+        }
+
+        const rubrics = JSON.parse(rawContent);
 
         // Standardize paragraphs for the masterclass block, using adaptive text colors
         const deepDiveParagraphs = rubrics.topicDeepDive

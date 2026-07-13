@@ -7,35 +7,88 @@
         {
           "id": "100L",
           "name": "100 Level (Freshman)",
-          "courses": [
-            { "code": "COS 102", "title": "Problem Solving", "file": "cybersecurity/100L/cos_102_problem_solving.json" },
-            { "code": "CSC 106", "title": "Introduction to Web Technologies", "file": "cybersecurity/100L/csc_106_web_technologies.json" },
-            { "code": "GST 112", "title": "Nigerian Peoples and Culture", "file": "cybersecurity/100L/gst_112_nigerian_peoples.json" },
-            { "code": "GST 122", "title": "Communication Skills II", "file": "cybersecurity/100L/gst_122_communication_skills.json" },
-            { "code": "MTH 102", "title": "Elementary Mathematics II", "file": "cybersecurity/100L/mth_102_elementary_math.json" },
-            { "code": "PHY 102", "title": "General Physics II", "file": "cybersecurity/100L/phy_102_general_physics.json" },
-            { "code": "PHY 108", "title": "Physics Practical II", "file": "cybersecurity/100L/phy_108_physics_practical.json" }
+          "semesters": [
+            {
+              "id": "semester_1",
+              "name": "1st Semester",
+              "courses": [
+                { "code": "COS 101", "title": "Introduction to Computing", "file": "cybersecurity/100L/semester_1/cos_101_intro_to_computing.json" },
+                { "code": "GST 127", "title": "Enviromental and Sustainable Development", "file": "cybersecurity/100L/semester_1/gst_127_env_and_sus_dev.json" },
+                { "code": "GST 111", "title": "Communication Skills in English", "file": "cybersecurity/100L/semester_1/gst_111_communication_skills.json" },
+                { "code": "GST 121", "title": "Use of Library, Study Skills and ICT", "file": "cybersecurity/100L/semester_1/gst_121_use_of_library.json" },
+                { "code": "MTH 101", "title": "Elementary Mathematics II", "file": "cybersecurity/100L/semester_1/mth_101_elementary_math.json" },
+                { "code": "PHY 101", "title": "General Physics I", "file": "cybersecurity/100L/semester_1/phy_101_general_physics.json" },
+                { "code": "PHY 107", "title": "Physics Practical I", "file": "cybersecurity/100L/semester_1/phy_107_physics_practical.json" },
+                { "code": "STA 111", "title": "Descriptive Statistics", "file": "cybersecurity/100L/semester_1/sta_111_descriptivate_stat.json" }
+              ]
+            },
+            {
+              "id": "semester_2",
+              "name": "2nd Semester",
+              "courses": [
+                { "code": "COS 102", "title": "Problem Solving", "file": "cybersecurity/100L/semester_2/cos_102_problem_solving.json" },
+                { "code": "CSC 106", "title": "Introduction to Web Technologies", "file": "cybersecurity/100L/semester_2/csc_106_web_technologies.json" },
+                { "code": "GST 112", "title": "Nigerian Peoples and Culture", "file": "cybersecurity/100L/semester_2/gst_112_nigerian_peoples.json" },
+                { "code": "GST 122", "title": "Communication Skills II", "file": "cybersecurity/100L/semester_2/gst_122_communication_skills.json" },
+                { "code": "MTH 102", "title": "Elementary Mathematics II", "file": "cybersecurity/100L/semester_2/mth_102_elementary_math.json" },
+                { "code": "PHY 102", "title": "General Physics II", "file": "cybersecurity/100L/semester_2/phy_102_general_physics.json" },
+                { "code": "PHY 108", "title": "Physics Practical II", "file": "cybersecurity/100L/semester_2/phy_108_physics_practical.json" }
+              ]
+            }
           ]
         },
         {
           "id": "200L",
           "name": "200 Level (Sophomore)",
-          "courses": [
-            { "code": "CSC 201", "title": "Java Programming", "file": "cybersecurity/200L/csc_201_java.json" }
+          "semesters": [
+            {
+              "id": "semester_1",
+              "name": "1st Semester",
+              "courses": [
+                { "code": "CSC 201", "title": "Java Programming", "file": "cybersecurity/200L/csc_201_java.json" }
+              ]
+            },
+            {
+              "id": "semester_2",
+              "name": "2nd Semester",
+              "courses": []
+            }
           ]
         },
         {
           "id": "300L",
           "name": "300 Level (Penultimate Year)",
-          "courses": [
-            { "code": "COS 301", "title": "Data Structures & Algorithms", "file": "cybersecurity/300L/cos_301_data_structures.json" }
+          "semesters": [
+            {
+              "id": "semester_1",
+              "name": "1st Semester",
+              "courses": []
+            },
+            {
+              "id": "semester_2",
+              "name": "2nd Semester",
+              "courses": [
+                { "code": "COS 301", "title": "Data Structures & Algorithms", "file": "cybersecurity/300L/semester_2/cos_301_data_structures.json" }
+              ]
+            }
           ]
         },
         {
           "id": "400L",
           "name": "400 Level (Senior)",
-          "courses": [
-            { "code": "CSC 401", "title": "Artificial Intelligence", "file": "cybersecurity/400L/csc_401_ai.json" }
+          "semesters": [
+            {
+              "id": "semester_1",
+              "name": "1st Semester",
+              "courses": [
+                { "code": "CSC 401", "title": "Artificial Intelligence", "file": "cybersecurity/400L/csc_401_ai.json" }
+              ]
+            },
+            {
+              "id": "semester_2",
+              "name": "2nd Semester",
+              "courses": []
+            }
           ]
         }
       ]
@@ -47,22 +100,34 @@
         {
           "id": "100L",
           "name": "100 Level (Freshman)",
-          "courses": []
+          "semesters": [
+            { "id": "semester_1", "name": "1st Semester", "courses": [] },
+            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          ]
         },
         {
           "id": "200L",
           "name": "200 Level (Sophomore)",
-          "courses": []
+          "semesters": [
+            { "id": "semester_1", "name": "1st Semester", "courses": [] },
+            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          ]
         },
         {
           "id": "300L",
           "name": "300 Level (Penultimate Year)",
-          "courses": []
+          "semesters": [
+            { "id": "semester_1", "name": "1st Semester", "courses": [] },
+            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          ]
         },
         {
           "id": "400L",
           "name": "400 Level (Senior)",
-          "courses": []
+          "semesters": [
+            { "id": "semester_1", "name": "1st Semester", "courses": [] },
+            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          ]
         }
       ]
     },
@@ -73,22 +138,34 @@
         {
           "id": "100L",
           "name": "100 Level (Freshman)",
-          "courses": []
+          "semesters": [
+            { "id": "semester_1", "name": "1st Semester", "courses": [] },
+            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          ]
         },
         {
           "id": "200L",
           "name": "200 Level (Sophomore)",
-          "courses": []
+          "semesters": [
+            { "id": "semester_1", "name": "1st Semester", "courses": [] },
+            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          ]
         },
         {
           "id": "300L",
           "name": "300 Level (Penultimate Year)",
-          "courses": []
+          "semesters": [
+            { "id": "semester_1", "name": "1st Semester", "courses": [] },
+            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          ]
         },
         {
           "id": "400L",
           "name": "400 Level (Senior)",
-          "courses": []
+          "semesters": [
+            { "id": "semester_1", "name": "1st Semester", "courses": [] },
+            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          ]
         }
       ]
     }

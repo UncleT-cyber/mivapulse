@@ -171,6 +171,19 @@
   {
     "course_code": "GST 112",
     "topic": "Human Rights and Society",
+    "question": "Which practice demonstrates the correct implementation of web accessibility standards when constructing HTML user forms?",
+    "options": {
+      "A": "Relying entirely on placeholder attribute text values to define form field input constraints.",
+      "B": "Using explicit 'for' attributes on &lt;label&gt; elements mapped to matching input 'id' fields alongside semantic ARIA landmarks.",
+      "C": "Removing visual borders using CSS styles to keep the interactive focus state hidden.",
+      "D": "Using non-semantic generic &lt;div&gt; blocks to build multi-choice input selections without text tags."
+    },
+    "correct_answer": "B",
+    "explanation": "Accessible web architecture mandates pairing form field tags explicitly with input nodes using matching 'id' values. This guarantees screen readers can interpret input targets, while placeholders do not satisfy accessibility rules."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Human Rights and Society",
     "question": "How do socio-economic inequalities intersect with the perpetuation of human rights abuses in society?",
     "options": {
       "A": "Socio-economic privileges protect lower-income citizens from legal exploitation.",
@@ -817,5 +830,655 @@
     },
     "correct_answer": "B",
     "explanation": "When public value campaigns fail due to corruption and a lack of official accountability, it points directly to institutional inefficiency and governance failure."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Early Nigerian Cultures - Nok Culture",
+    "question": "The oldest recognizable evidence of an organized society in Nigeria belongs to which culture?",
+    "options": {
+      "A": "Igbo Ukwu culture",
+      "B": "Nok culture",
+      "C": "Ife culture",
+      "D": "Benin culture"
+    },
+    "correct_answer": "B",
+    "explanation": "According to the text, while there are isolated collections of ancient tools from the Stone Age, the oldest recognizable evidence of an organized society belongs to the Nok culture (c. 500 BCE - c. 200 CE)."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Early Nigerian Cultures - Nok Culture",
+    "question": "How were the famous fine terra-cotta figurines of the Nok culture first discovered in the 1930s?",
+    "options": {
+      "A": "By British archaeologists during a planned excavation",
+      "B": "Accidentally by tin miners on the Jos Plateau",
+      "C": "By local farmers clearing forests in Kaduna",
+      "D": "By Portuguese traders exploring the Benue River"
+    },
+    "correct_answer": "B",
+    "explanation": "The text states that the ancient Nok culture produced fine terra-cotta figurines, which were accidentally discovered by tin miners on the Jos Plateau in the 1930s."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Early Nigerian Cultures - Nok Culture",
+    "question": "Which of the following is NOT a distinctive feature of Nok art as described in the course summary?",
+    "options": {
+      "A": "Naturalism and stylized treatment of the mouth and eyes",
+      "B": "Relative proportions of the human head, body, and feet",
+      "C": "Strict geometric abstraction without animal forms",
+      "D": "Distortions of human facial features"
+    },
+    "correct_answer": "C",
+    "explanation": "Distinctive features of Nok art include naturalism, stylized treatment of the mouth and eyes, relative proportions of the human head, body, and feet, distortions of the human facial features, and treatment of animal forms. Strict geometric abstraction without animal forms is incorrect."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Early Nigerian Cultures - Igbo Ukwu",
+    "question": "The bronzes discovered at Igbo Ukwu have been dated by archaeologists to approximately which century?",
+    "options": {
+      "A": "5th century BCE",
+      "B": "9th century CE",
+      "C": "15th century CE",
+      "D": "19th century CE"
+    },
+    "correct_answer": "B",
+    "explanation": "The text states that the bronzes discovered at Igbo Ukwu near the southwestern city of Onitsha have been dated to about the 9th century CE."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Early Nigerian Cultures - Igbo Ukwu",
+    "question": "The presence of colored glass beads at Igbo Ukwu suggests ancient trade links extending to which areas?",
+    "options": {
+      "A": "Venice and India",
+      "B": "Ghana and Mali",
+      "C": "Portugal and Great Britain",
+      "D": "Songhai and Baghdad"
+    },
+    "correct_answer": "A",
+    "explanation": "The text highlights that some of the colored glass beads found at Igbo Ukwu may have come from Venice and India via trade routes through Egypt, the Nile valley, and the Chad basin."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Early Nigerian Cultures - Igbo Ukwu",
+    "question": "The Igbo Ukwu bronzes are believed to be part of the burial chamber furniture of a leader who was a forerunner to the:",
+    "options": {
+      "A": "Oba of Benin",
+      "B": "Eze Nri",
+      "C": "Attah of Igala",
+      "D": "Alaafin of Oyo"
+    },
+    "correct_answer": "B",
+    "explanation": "The text states that the bronzes were part of the furniture in the burial chamber of a high personage, possibly a forerunner of the eze nri, a priest-king who held religious power."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Kingdoms and Empires - Kanem-Borno",
+    "question": "Which pastoral group is credited with establishing a centralized state over the Sao in the Lake Chad basin?",
+    "options": {
+      "A": "Ancestors of the Kanuri",
+      "B": "The Fulani Bororo",
+      "C": "The Tuareg nomads",
+      "D": "The Jukun Wapa"
+    },
+    "correct_answer": "A",
+    "explanation": "According to the course details, a pastoral group who were ancestors of the Kanuri established a centralized state over those referred to collectively as the Sao."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Kingdoms and Empires - Kanem-Borno",
+    "question": "Despite embracing Islam, the structure of the Kanem-Borno monarchy remained traditional, granting considerable power to:",
+    "options": {
+      "A": "The Islamic Alkali",
+      "B": "The queen mother and other female officials",
+      "C": "Foreign Arab merchants",
+      "D": "The military cavalry generals"
+    },
+    "correct_answer": "B",
+    "explanation": "The text notes that though the rulers of Borno embraced Islam, the structure of the monarchy remained traditional, with the queen mother and other female officials exercising considerable power."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Kingdoms and Empires - Hausaland",
+    "question": "According to the Bayajidda legend, how did the mythical Middle Eastern ancestor win the favor of the Queen of Daura?",
+    "options": {
+      "A": "By introducing Islam to the city-state",
+      "B": "By helping her defeat the military force of Borno",
+      "C": "By killing a sacred snake called 'sarki' that deprived people of water",
+      "D": "By establishing the trans-Saharan trade route"
+    },
+    "correct_answer": "C",
+    "explanation": "The text explains that Bayajidda killed a sacred snake 'sarki' which had for years deprived the people of water from a well, leading the Queen of Daura to marry him."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Kingdoms and Empires - Hausaland",
+    "question": "Islam was introduced into Hausaland in the 14th century from which empire?",
+    "options": {
+      "A": "The Songhai Empire",
+      "B": "The Mali Empire",
+      "C": "The Ghana Empire",
+      "D": "The Kanem Empire"
+    },
+    "correct_answer": "B",
+    "explanation": "The text states that Islam, which was introduced from the Mali empire in the 14th century, strengthened both the monarchical system and the commercial contacts in Hausaland."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Kingdoms and Empires - Yorubaland and Benin",
+    "question": "Which ancient city flourished between the 11th and 15th centuries and is universally claimed by Yoruba monarchies as their ancestral home of descent?",
+    "options": {
+      "A": "Oyo",
+      "B": "Ife",
+      "C": "Ibadan",
+      "D": "Abeokuta"
+    },
+    "correct_answer": "B",
+    "explanation": "The text mentions that Ife flourished between the 11th and 15th centuries, and all the monarchies of Yoruba states claim descent from Ife as a way of establishing legitimacy."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Kingdoms and Empires - Yorubaland and Benin",
+    "question": "What strategic asset allowed the Kingdom of Oyo to dominate western Yorubaland and the dry gap to the coast?",
+    "options": {
+      "A": "A highly trained naval fleet",
+      "B": "A powerful cavalry force",
+      "C": "Monopoly over iron smelting technology",
+      "D": "The deployment of firearms bought from Portuguese traders"
+    },
+    "correct_answer": "B",
+    "explanation": "The text notes that by the 17th century, Oyo had built up a cavalry force with which it dominated people in western Yorubaland and the dry gap to the coast."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Kingdoms and Empires - Yorubaland and Benin",
+    "question": "What artistic feature characterized the royal palace of Benin starting from the 15th century?",
+    "options": {
+      "A": "Potsherd pavements covering the courtyard floors",
+      "B": "Naturalistic bronze sculptures and bronze door panels",
+      "C": "Woven multi-colored textile tapestries",
+      "D": "Large unfired clay structures decorated with cowries"
+    },
+    "correct_answer": "B",
+    "explanation": "According to the text, Benin art was characterized by naturalistic bronze sculptures and bronze door panels that covered the outside of the royal palace."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Kingdoms and Empires - Igboland and Delta States",
+    "question": "How did the traditional precolonial political structure of the Igbo differ from Oyo or Benin?",
+    "options": {
+      "A": "It was governed by a centralized baseline military autocracy",
+      "B": "It was a decentralized society organized in self-contained villages or federations",
+      "C": "It was completely ruled by Islamic Sharia law codes",
+      "D": "It relied entirely on foreign-born merchant kings"
+    },
+    "correct_answer": "B",
+    "explanation": "The text highlights that the Igbo characteristic decentralized society consisted of self-contained villages or federations of village communities with societies of elders and age grade associations sharing functions."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Sokoto Jihad",
+    "question": "Who led the group of Muslim intellectuals that launched the 1804 Jihad in northern Nigeria?",
+    "options": {
+      "A": "Muhammad Al-Amin al-Kanemi",
+      "B": "Usman dan Fodio",
+      "C": "Mallam Dendo",
+      "D": "Muhammad Bello"
+    },
+    "correct_answer": "B",
+    "explanation": "The text explicitly states that a group of Muslim intellectuals, most of them Fulani, were led by Usman dan Fodio, who called on his followers to rise up in 1804."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Sokoto Jihad",
+    "question": "Which distinguished scholar and statesman led the defense of Borno against the Fulani Jihadists?",
+    "options": {
+      "A": "Shehu Muhammad al-Amin al-Kanemi",
+      "B": "Abdullahi of Gwandu",
+      "C": "Mai Ahmad",
+      "D": "Tsoede"
+    },
+    "correct_answer": "A",
+    "explanation": "The text states that the rulers of Borno invited Shehu Muhammad al-Amin al-Kanemi, a distinguished scholar and statesman, to lead their defense against the Fulani jihad."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "The Collapse of Oyo",
+    "question": "The collapse of the Oyo empire forced large groups of Yoruba to migrate southwards to establish which new capital and defense centers?",
+    "options": {
+      "A": "Ife and Daura",
+      "B": "Present-day Oyo, Ibadan, and Ijaye",
+      "C": "Warri and Calabar",
+      "D": "Idah and Wukari"
+    },
+    "correct_answer": "B",
+    "explanation": "The text documents that large groups of people from Oyo had to migrate southward, where they established a new capital (at present-day Oyo) and other centers such as Ibadan and Ijaye."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Nigeria's Cultural Heritage",
+    "question": "According to Fulani custom, what is the 'sharo' ordeal undergone by rival suitors?",
+    "options": {
+      "A": "A long confinement in fattening rooms",
+      "B": "The ordeal of caning to test young manhood",
+      "C": "An intense wrestling competition",
+      "D": "A test of memory regarding Quranic recitations"
+    },
+    "correct_answer": "B",
+    "explanation": "The text describes the custom of sharo as a test of young manhood where rival suitors underwent the ordeal of caning as a means of eliminating those who were less persistent."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Background to Nigeria's Cultural Diversity",
+    "question": "Which historic international meeting paved the way for the British colonization and effective occupation of Nigeria?",
+    "options": {
+      "A": "The London Amalgamation Committee of 1914",
+      "B": "The Berlin Conference of 1884-85",
+      "C": "The Selbourne Council of 1898",
+      "D": "The West African Merchant Assembly"
+    },
+    "correct_answer": "B",
+    "explanation": "The text points out that it was the convocation of the Berlin Conference of 1884-85 where the British got the imprimatur from European collaborators to occupy the area that became Nigeria."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Background to Nigeria's Cultural Diversity",
+    "question": "Who headed the 1898 Niger Committee that recommended the installment amalgamation of the Southern and Northern Protectorates?",
+    "options": {
+      "A": "Lord Lugard",
+      "B": "Lord Selbourne",
+      "C": "Sir George Goldie",
+      "D": "Dr. Kenneth Kenechukwu"
+    },
+    "correct_answer": "B",
+    "explanation": "The text states that the Niger Committee of 1898 was headed by Lord Selbourne, and it recommended an installment amalgamation process."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Background to Nigeria's Cultural Diversity",
+    "question": "On what specific date did the third and final phase of the amalgamation of Nigeria take place?",
+    "options": {
+      "A": "January 1, 1900",
+      "B": "May 1, 1906",
+      "C": "January 1, 1914",
+      "D": "October 1, 1960"
+    },
+    "correct_answer": "C",
+    "explanation": "The text identifies that the installmental amalgamation took place in three phases, with the last and final phase taking place on January 1, 1914."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Culture: Conceptual Perspectives",
+    "question": "What term is used to describe the lifelong process of learning to fit into or adapt to a specific culture?",
+    "options": {
+      "A": "Cultural socialization",
+      "B": "Cultural imperialism",
+      "C": "Cross-cultural synchronization",
+      "D": "Cultural dogmatism"
+    },
+    "correct_answer": "A",
+    "explanation": "The text explicitly defines the process of learning to fit in or adapt to a culture as 'cultural socialization'."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Culture: Conceptual Perspectives",
+    "question": "When a 'superior' culture superimposes itself over an 'inferior' culture by force, this dynamic is known as:",
+    "options": {
+      "A": "Cultural socialization",
+      "B": "Cultural adaptation",
+      "C": "Cultural imperialism",
+      "D": "Cross-cultural encounter"
+    },
+    "correct_answer": "C",
+    "explanation": "According to the course materials, while socialization and adaptation are voluntary, 'cultural imperialism essentially comes in the form of the super-imposition of a superior culture over an inferior culture.'"
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Niger Delta",
+    "question": "Which of the following ethnic groups is NOT categorized under the Niger Delta region in Study Session 2?",
+    "options": {
+      "A": "The Ijaw",
+      "B": "The Urhobo",
+      "C": "The Kanuri",
+      "D": "The Itsekiri"
+    },
+    "correct_answer": "C",
+    "explanation": "The text defines the Niger Delta people as including the Ijaw, Ndoki, Odual, Isoko, Urhobo, Abual, and Itsekiri. The Kanuri are a northern ethnic group."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Niger Delta",
+    "question": "What is the primary socio-political trait and basic political unit shared by almost all Niger Delta communities except the Itsekiri?",
+    "options": {
+      "A": "An expansive empire system with an autocrat ruler",
+      "B": "A democratic republican spirit with the village as the basic unit",
+      "C": "Strict adherence to theocratic Islamic law",
+      "D": "A centralized military caste system"
+    },
+    "correct_answer": "B",
+    "explanation": "The text notes that the most common political trait of the Niger Delta people is the democratic republican spirit, and the basic political unit is the village, with the Itsekiri being the only kingdom exception to fragmentation."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Niger Delta",
+    "question": "What is the Supreme God called in the traditional religious belief of the Isoko and Urhobo people?",
+    "options": {
+      "A": "Tamara",
+      "B": "Oghene",
+      "C": "Oritsenebuwe",
+      "D": "Chukwu"
+    },
+    "correct_answer": "B",
+    "explanation": "The text details that in Isoko and Urhobo, the Supreme God is called Oghene, while the Ijaw call him Tamara or Egbesu, and the Itsekiri call him Oritsenebuwe."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Niger Delta",
+    "question": "Which widely revered goddess is known as the 'bride of the seas' across the Niger Delta region?",
+    "options": {
+      "A": "Olokun (Umalokun or 'mami water')",
+      "B": "Inikpi",
+      "C": "Osun",
+      "D": "Ana"
+    },
+    "correct_answer": "A",
+    "explanation": "The text states that Olokun, also called Umalokun or 'mami water', is the most generally known goddess in the Niger Delta region and is well known as the bride of the seas."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Niger Delta",
+    "question": "The Ijaw people are highly regarded for their professional skills in which therapeutic area?",
+    "options": {
+      "A": "Magic and complex sorcery",
+      "B": "Masseurs and physiotherapists",
+      "C": "Divination and herbalism",
+      "D": "Iron smelting and metallurgy"
+    },
+    "correct_answer": "B",
+    "explanation": "The text notes: 'in the Niger Delta region, the Ijaw are best known as professional masseurs and physiotherapists, but they know next to nothing about magic, divination, and herbalism.'"
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Rain Forest",
+    "question": "The cultures of the Rain Forest Region of Nigeria are categorized into four main groups, which are:",
+    "options": {
+      "A": "Hausa, Fulani, Kanuri, and Nupe",
+      "B": "Yoruba, Western Igbo, Eastern Igbo, and Edoid",
+      "C": "Tiv, Idoma, Birom, and Jukun",
+      "D": "Ijaw, Itsekiri, Isoko, and Urhobo"
+    },
+    "correct_answer": "B",
+    "explanation": "The text explicitly categorizes the cultures of the Rain Forest Region into four main groups: the Yoruba, the Western Igbo, the Eastern Igbo, and the Edoid."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Rain Forest",
+    "question": "In the village democracies of Igboland, who is the oldest male lineage member who acts as a link to ancestors and controls the Ofo?",
+    "options": {
+      "A": "The Oba",
+      "B": "The Baale",
+      "C": "The Okpara",
+      "D": "The Alkali"
+    },
+    "correct_answer": "C",
+    "explanation": "The text states that every lineage in Igboland is headed by an Okpara, the oldest male member, who controls the Ofo that symbolises justice and authority."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Rain Forest",
+    "question": "What is the Supreme God called among the Benin people?",
+    "options": {
+      "A": "Olodumare",
+      "B": "Osanobua",
+      "C": "Abasi",
+      "D": "Aondo"
+    },
+    "correct_answer": "B",
+    "explanation": "The text notes that the Supreme God is called Olodumare or Olorun in Yorubaland, Osanobua among the Benin, and Chukwu in Igboland."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Rain Forest",
+    "question": "Which of the following is an example of a powerful lesser deity worshipped in Igboland?",
+    "options": {
+      "A": "Sango",
+      "B": "Amadioha (or Amadiora)",
+      "C": "Ogun",
+      "D": "Orunmila"
+    },
+    "correct_answer": "B",
+    "explanation": "The text contrasts Yoruba lesser deities like Sango and Ogun with powerful Igbo lesser deities like Amadioha (Amadiora), Idemili, and Ani."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Guinea Savannah",
+    "question": "Which region is known as the home to an overwhelming majority (about 70%) of Nigeria's cultural or ethnic groups?",
+    "options": {
+      "A": "The Mangrove Swamp Forest",
+      "B": "The Rain Forest Region",
+      "C": "The Guinea Savannah Region",
+      "D": "The Coastal Delta Outlets"
+    },
+    "correct_answer": "C",
+    "explanation": "The text emphasizes that there is a general tendency to believe that about seventy per cent of the peoples and cultures of Nigeria are found in the Guinea Savannah region."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Guinea Savannah",
+    "question": "Which few ethnic groups in the Guinea Savannah developed elaborate centralized monarchical structures dating back to antiquity?",
+    "options": {
+      "A": "The Tiv, Gwari, and Mumuye",
+      "B": "The Igala, Nupe, and Jukun",
+      "C": "The Birom, Higgi, and Koro",
+      "D": "The Bassa, Kurama, and Holma"
+    },
+    "correct_answer": "B",
+    "explanation": "The text explicitly states: 'Only a few ethnic groups such as the Igala, the Nupe and the Jukun had developed elaborate monarchical structures dating back to antiquity.'"
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Guinea Savannah",
+    "question": "The Nupe, Koto, and Tiv areas within the Guinea Savannah are collectively referred to as the:",
+    "options": {
+      "A": "West African rice belt",
+      "B": "West African yam belt",
+      "C": "Trans-Saharan trade corridor",
+      "D": "Tin production basin"
+    },
+    "correct_answer": "B",
+    "explanation": "The text documents that farming is the major occupation, and the Nupe, the Koto, and the Tiv constitute what is called the 'West African yam belt'."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Regions of Nigeria - Guinea Savannah",
+    "question": "According to traditional beliefs in the Guinea Savannah, which group restricts witchcraft beliefs exclusively to men?",
+    "options": {
+      "A": "The Nupe ethnic group",
+      "B": "The Gwari ethnic group",
+      "C": "The Tiv ethnic group",
+      "D": "The Kurama ethnic group"
+    },
+    "correct_answer": "C",
+    "explanation": "The text records that 'in the Tiv ethnic group only men are believed to be witches, while the witches of the Nupe and Gwari are almost invariably women.'"
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Northern Nigeria - Hausa",
+    "question": "What are the seven original Hausa states founded by Bawo's children called?",
+    "options": {
+      "A": "Banza Bokwai",
+      "B": "Hausa Bokwai",
+      "C": "Sefawa Dynasty",
+      "D": "Sokoto Caliphate"
+    },
+    "correct_answer": "B",
+    "explanation": "The text notes that Bawo's seven children became the founders of the original Hausa states known as 'Hausa Bokwai'."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Northern Nigeria - Fulani",
+    "question": "What are the two distinct categories of Fulani described in northern Nigerian history?",
+    "options": {
+      "A": "Jukun Wanu and Jukun Wapa",
+      "B": "Fulani Bororo (cattle rearers) and Fulani Gida (town dwellers)",
+      "C": "Ebira Koto and Ebira Tao",
+      "D": "Manga and Tumari"
+    },
+    "correct_answer": "B",
+    "explanation": "The text highlights two categories: the Fulani Bororo whose main occupation is cattle rearing, and the Fulani Gida who are town dwellers engaged in urban crafts and trade."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Northern Nigeria - Kanuri",
+    "question": "By what name do the Hausa neighbors predominantly refer to the Kanuri ethnic group?",
+    "options": {
+      "A": "Beri Beri",
+      "B": "Banza Bokwai",
+      "C": "Fulani Gida",
+      "D": "Aku Wukari"
+    },
+    "correct_answer": "A",
+    "explanation": "The text explicitly states that the Kanuri are also known and referred to as 'Beri Beri' by their Hausa neighbors."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Northern Nigeria - Nupe",
+    "question": "The foundational formation of the Nupe Kingdom is historically attributed to which heroic prince raised at the Palace of Attah Igala?",
+    "options": {
+      "A": "Bayajidda",
+      "B": "Tsoede (also known as Edegi)",
+      "C": "Mallam Dendo",
+      "D": "Ali Ghaji"
+    },
+    "correct_answer": "B",
+    "explanation": "The text traces the formation of the Nupe Kingdom largely to Tsoede (or Edegi), born in 1465, who was the son of a Nupe mother and an Igala father."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Northern Nigeria - Jukun",
+    "question": "The homeland Jukun people who live around the traditional capital city of Wukari are called the:",
+    "options": {
+      "A": "Jukun Wanu",
+      "B": "Jukun Wapa",
+      "C": "Ebira Tao",
+      "D": "Da Gwoms"
+    },
+    "correct_answer": "B",
+    "explanation": "The text divides the Jukuns into two major groups: the Jukun Wanu (riverine fishermen) and the Jukun Wapa (the homeland Jukun that live around Wukari)."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Northern Nigeria - Ebira",
+    "question": "What is the official title given to the paramount traditional ruler of Ebiraland located in Okene?",
+    "options": {
+      "A": "Etsu Nupe",
+      "B": "Ohinoyi of Ebiraland",
+      "C": "Aku of Wukari",
+      "D": "Attah of Igala"
+    },
+    "correct_answer": "B",
+    "explanation": "The text establishes that the throne of the paramount ruler of Ebiraland is known as the 'Ohinoyi of Ebiraland' and is located in Okene."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Northern Nigeria - Igala",
+    "question": "Which brave royal daughter was sacrificed to ensure the victory of the Igala Kingdom over the Jukun forces near Idah?",
+    "options": {
+      "A": "Omonide",
+      "B": "Inikpi",
+      "C": "Umaale",
+      "D": "Mami Water"
+    },
+    "correct_answer": "B",
+    "explanation": "The text notes that Ayegba Om' Idoko joined forces to defeat the Jukun near Idah after sacrificing his daughter, Inikpi."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Northern Nigeria - Birom",
+    "question": "In what year was the colonial administration-backed stool of the Gbong Gwom Jos established as the paramount ruler for the Birom?",
+    "options": {
+      "A": "1804",
+      "B": "1914",
+      "C": "1935",
+      "D": "1946"
+    },
+    "correct_answer": "C",
+    "explanation": "The text points out that the stool of the paramount ruler for the entire Birom land, known as Gbong Gwom Jos, was established in 1935."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Northern Nigeria - Idoma",
+    "question": "The British colonial government officially created the paramount stool of Och'Idoma in 1946 at which headquarters town?",
+    "options": {
+      "A": "Otukpo",
+      "B": "Gboko",
+      "C": "Wukari",
+      "D": "Idah"
+    },
+    "correct_answer": "A",
+    "explanation": "The text documents the creation of the seat of the paramount ruler of Idomaland, Och'Idoma, in 1946 at Otukpo."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Northern Nigeria - Tiv",
+    "question": "What is the name of the large indigenous Christian Mission based in Tivland mentioned in the text?",
+    "options": {
+      "A": "Qadiri Brotherhood",
+      "B": "NKST (Nongu u Kristu u i ser u sha Tar)",
+      "C": "Ogboni Christian Mission",
+      "D": "Universal Sudan Mission"
+    },
+    "correct_answer": "B",
+    "explanation": "The text cites NKST (Nongu u Kristu u i ser u sha Tar) as one of the largest indigenous Christian Missions in Nigeria, proving the impact of Christianity in Tivland."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Southern Nigeria - Yoruba",
+    "question": "In the administration of the Old Oyo Empire, who served as the Prime Minister, Chancellor, and leader of the Oyomesi council?",
+    "options": {
+      "A": "The Are Ona Kakanfo",
+      "B": "The Bashorun",
+      "C": "The lyase",
+      "D": "The Ologbotsere"
+    },
+    "correct_answer": "B",
+    "explanation": "According to the text, the leader of the Oyomesi council was known as the Bashorun, who acted as the prime minister and chancellor of the kingdom."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Southern Nigeria - Igbo",
+    "question": "Which academic perspective aligns with the historical view that the core ancestral centers of early Igbo settlements are located at the Nri-Awka-Orlu complex?",
+    "options": {
+      "A": "The Egyptian migration theory",
+      "B": "The Lost Tribes of Israel theory",
+      "C": "The Nri-Awka ancestral core settlement view",
+      "D": "The Islamic Jihad displacement theory"
+    },
+    "correct_answer": "C",
+    "explanation": "The text indicates that many Igbos accept the tradition that they first lived in the area known as the Nri-Awka-Orlu complex, popularised by G.I. Jones, K.O. Dike, and others."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Southern Nigeria - Bini",
+    "question": "What is the name of the prominent cultural festival celebrated by the Bini people to express their rich heritage?",
+    "options": {
+      "A": "Echane festival",
+      "B": "Igue festival",
+      "C": "Mandyang festival",
+      "D": "Ofala festival"
+    },
+    "correct_answer": "B",
+    "explanation": "The text lists the Igue festival as the prominent cultural festival celebrated by the Bini people."
+  },
+  {
+    "course_code": "GST 112",
+    "topic": "Ethnic Groups in Southern Nigeria - Itsekiri",
+    "question": "Who is the traditional prime minister and chief adviser to the Olu of Warri in the compact political organization of the Itsekiri?",
+    "options": {
+      "A": "The Iyatsere",
+      "B": "The Ologbotsere",
+      "C": "The Uwangue",
+      "D": "The Iyase"
+    },
+    "correct_answer": "B",
+    "explanation": "The text explicitly defines the Ologbotsere as the prime minister and chief adviser to the Olu within the Itsekiri political structure."
   }
 ]

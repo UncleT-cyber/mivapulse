@@ -51,7 +51,7 @@
     <span class="pulse-dot" style="width: 8px; height: 8px; background-color: #48bb78; border-radius: 50%; display: inline-block; box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7); animation: pulse 2s infinite;"></span>
     <span id="liveUserCount">132 Miva students practicing right now</span>
 </div>
-    <div id="configModal" class="modal-overlay hidden" onclick="handleOutsideClick(event)">
+    <div id="configModal" class="modal-overlay hidden" onclick="if(event.target === this) window.closeConfigModal();">
         <div class="modal-card">
             <div class="modal-header">
                 <h3>Configure Mock Simulator</h3>
@@ -62,10 +62,10 @@
                 <form id="simulatorForm">
                     <!-- NEW: Faculty/Department Dropdown (Sits beautifully at the top) -->
                     <div class="form-group">
-                        <label for="facultySelect">Select Faculty / Department</label>
+                        <label for="facultySelect">Department</label>
                         <div class="custom-select-wrapper">
                             <select id="facultySelect" required>
-                                <option value="" disabled selected>-- Choose your faculty --</option>
+                                <option value="" disabled selected>-- Choose your Department --</option>
                                 <option value="cybersecurity">Cybersecurity</option>
                                 <option value="public-health">Public Health Science</option>
                                 <option value="software-engineering">Software Engineering</option>
@@ -82,6 +82,16 @@
                             </select>
                         </div>
                     </div>
+
+                    <!-- Insert this between Level and Course elements -->
+<div class="form-group">
+    <label for="semesterSelect">Academic Semester</label>
+    <div class="custom-select-wrapper">
+        <select id="semesterSelect" required disabled>
+            <option value="" disabled selected>-- Select a level first --</option>
+        </select>
+    </div>
+</div>
 
                     <!-- Course Module Dropdown (Maintained layout and classes) -->
                     <div class="form-group">

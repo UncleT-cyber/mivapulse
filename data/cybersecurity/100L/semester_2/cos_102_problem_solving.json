@@ -843,5 +843,655 @@
     },
     "correct_answer": "C",
     "explanation": "Heuristics are rule-of-thumb strategies, mental shortcuts, or intuitive methods that allow fast decision-making without an exhaustive or systematic cognitive search for the next absolute best step."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Introduction to Problem Solving",
+    "question": "What is considered a vital, initial prerequisite milestone before formulating a solution plan?",
+    "options": {
+      "A": "Writing source code immediately",
+      "B": "Thoroughly understanding and comprehending the problem",
+      "C": "Creating a final software test suite",
+      "D": "Compiling data modules into structural clusters"
+    },
+    "correct_answer": "B",
+    "explanation": "According to the course material, it is crucial to thoroughly understand and comprehend a problem before attempting to build a solution plan or design an algorithm."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Introduction to Problem Solving",
+    "question": "Which of the following serves as structured tools specifically used for creating solution plans?",
+    "options": {
+      "A": "Network firewalls and load balancers",
+      "B": "Algorithms, pseudocode, and flowcharts",
+      "C": "Database schemas and index queries",
+      "D": "Operating system kernels and drive drivers"
+    },
+    "correct_answer": "B",
+    "explanation": "Algorithms, pseudocode, and flowcharts are specifically highlighted as foundational tools utilized to conceptualize, design, and structure solution plans."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Introduction to Problem Solving",
+    "question": "What problem-solving strategy involves breaking down a complex problem into simpler, smaller, and more manageable parts?",
+    "options": {
+      "A": "Heuristics",
+      "B": "Trial-and-error",
+      "C": "Problem decomposition",
+      "D": "Unconditional branching"
+    },
+    "correct_answer": "C",
+    "explanation": "Problem decomposition is the core practice of dividing a complex, overwhelming problem into smaller, simpler component parts to achieve effective and structured problem-solving."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Introduction to Problem Solving",
+    "question": "Which of the following options defines an algorithm based on the course summary?",
+    "options": {
+      "A": "An informal narrative describing user system preferences",
+      "B": "An ordered, unambiguous set of instructions for problem-solving",
+      "C": "A collection of object variables containing encapsulated parameters",
+      "D": "A non-linear software execution map used exclusively for interface design"
+    },
+    "correct_answer": "B",
+    "explanation": "The text explicitly defines algorithms as ordered, unambiguous sets of instructions designed to solve problems in a structured manner."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Problem Solving Strategies",
+    "question": "Which strategy prioritizes choosing immediate, optimal options at each step when solving a problem?",
+    "options": {
+      "A": "Divide and conquer algorithms",
+      "B": "Recursive operations",
+      "C": "Greedy algorithms",
+      "D": "Structured data encapsulation"
+    },
+    "correct_answer": "C",
+    "explanation": "Greedy algorithms are defined as strategies that prioritize immediate, local optimal choices at each step, though they may not always yield the absolute best overall global solution."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Problem Solving Strategies",
+    "question": "What are the four explicit problem-solving strategies examined during Weeks 1-4?",
+    "options": {
+      "A": "Encapsulation, Abstraction, Polymorphism, and Inheritance",
+      "B": "Brainstorming, Heuristics, Trial-and-error, and Means-ends analysis",
+      "C": "Branching, Looping, Interfacing, and Exception handling",
+      "D": "Unit, Integration, System, and Acceptance testing"
+    },
+    "correct_answer": "B",
+    "explanation": "The course summary explicitly lists brainstorming, heuristics, trial-and-error, and means-ends analysis as the four core problem-solving strategies."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Problem Solving Approaches",
+    "question": "What is a main limitation of relying solely on a greedy algorithm approach?",
+    "options": {
+      "A": "It can never be mapped into a visual flowchart design",
+      "B": "It may not always provide the absolute best possible global solution",
+      "C": "It inherently lacks languages independence",
+      "D": "It strictly prevents the initialization of variables"
+    },
+    "correct_answer": "B",
+    "explanation": "Because greedy algorithms focus strictly on immediate, localized optimal choices, the course notes that this approach may fail to achieve the overall global optimum."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Algorithm Design Characteristics",
+    "question": "Which of the following is identified as a key characteristic of an effective algorithm?",
+    "options": {
+      "A": "Platform dependence",
+      "B": "Infinite execution loops",
+      "C": "Language independence",
+      "D": "Ambiguity of execution directions"
+    },
+    "correct_answer": "C",
+    "explanation": "The key characteristics of algorithms mentioned include input, unambiguity, finiteness, effectiveness, and language independence."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Algorithm Design Factors",
+    "question": "Which factor must be considered during algorithm design to enable performance and scalability?",
+    "options": {
+      "A": "Unconditional branching statements",
+      "B": "Non-standardized formatting rules",
+      "C": "Modularity, correctness, maintainability, robustness, and simplicity",
+      "D": "High coupling and low modularity metrics"
+    },
+    "correct_answer": "C",
+    "explanation": "The summary lists modularity, correctness, maintainability, functionality, robustness, simplicity, and extensibility as vital factors to weigh during design."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Introduction to Problem Solving",
+    "question": "In Case Study 2 of Weeks 1-4, what was the primary challenge for the city-based food delivery company?",
+    "options": {
+      "A": "Selecting secure database encryption keys",
+      "B": "Route optimization to minimize delivery times and fuel costs",
+      "C": "Automating continuous software deployment cycles",
+      "D": "Hiding internal component classes from external users"
+    },
+    "correct_answer": "B",
+    "explanation": "Case Study 2 outlines a food delivery service exploring greedy algorithms or divide and conquer techniques specifically for urban route optimization."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Flowchart Concepts",
+    "question": "What is the fundamental definition of a flowchart?",
+    "options": {
+      "A": "A text-based explanation using basic English programming logic",
+      "B": "A graphical representation of computer program operations",
+      "C": "An objective block containing private variable classes",
+      "D": "A test plan detailing system verification boundaries"
+    },
+    "correct_answer": "B",
+    "explanation": "Flowcharts are defined as graphical or visual representations of the structural steps and operations within a computer program."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Flowchart Concepts",
+    "question": "Which three core symbols are specifically highlighted as key components in flowchart creation?",
+    "options": {
+      "A": "Class, interface, and package symbols",
+      "B": "Process, start/stop, and decision symbols",
+      "C": "Module, function, and structure symbols",
+      "D": "Encapsulation, public, and private symbols"
+    },
+    "correct_answer": "B",
+    "explanation": "The text lists process, start/stop, and decision symbols as the key foundational shapes used to construct flowcharts."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Pseudocode Concepts",
+    "question": "How is pseudocode described in relation to natural language and formal code?",
+    "options": {
+      "A": "It is a graphical model that maps interface functions",
+      "B": "It acts as a bridge between the English language and programming",
+      "C": "It is a fully compiled executable system binary",
+      "D": "It is a formal mathematical syntax detailing internal hardware constraints"
+    },
+    "correct_answer": "B",
+    "explanation": "The summary notes that pseudocode acts as an accessible transition step and bridge between standard English and functional programming code."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Pseudocode Concepts",
+    "question": "What is an inherent disadvantage or limitation of utilizing pseudocode?",
+    "options": {
+      "A": "It completely lacks logical flexibility",
+      "B": "It forces developers to build language-dependent solutions",
+      "C": "It features non-standardized formats and reduced visual clarity compared to flowcharts",
+      "D": "It requires special compiler installation to verify steps"
+    },
+    "correct_answer": "C",
+    "explanation": "The text identifies non-standardized formats and a lack of visual clarity relative to flowcharts as notable drawbacks of pseudocode."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Object-Oriented Programming",
+    "question": "How are real-world object states and behaviors reflected inside a computer program?",
+    "options": {
+      "A": "Through modules and functional flowcharts",
+      "B": "Through variables and methods",
+      "C": "Through simple and compound statement configurations",
+      "D": "Through recursive base cases and exit parameters"
+    },
+    "correct_answer": "B",
+    "explanation": "In object-oriented programming, an object's real-world state is represented via variables, while its behaviors are implemented using methods."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Object-Oriented Programming",
+    "question": "What programming concept refers to the practice of hiding the implementation details of an object from the user?",
+    "options": {
+      "A": "Functional decomposition",
+      "B": "Data encapsulation",
+      "C": "Unconditional branching",
+      "D": "System compatibility testing"
+    },
+    "correct_answer": "B",
+    "explanation": "Data encapsulation is defined as hiding an object's internal implementation details, ensuring users interact only through a clean set of public methods."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Object-Oriented Programming",
+    "question": "Which components are explicitly mentioned as the primary tools used to manage access to class members?",
+    "options": {
+      "A": "Flowchart decision symbols",
+      "B": "Pseudocode rule indices",
+      "C": "Access specifiers like public and private",
+      "D": "Cohesion and coupling algorithms"
+    },
+    "correct_answer": "C",
+    "explanation": "Access specifiers (such as public and private) are utilized within classes to manage, govern, and restrict access to internal members."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Object-Oriented Programming",
+    "question": "What are the core benefits listed for Object-Oriented Programming?",
+    "options": {
+      "A": "High coupling and decreased visual layout complexity",
+      "B": "Modularity, code reusability, and object independence",
+      "C": "Non-standardized formats and unlimited branching control",
+      "D": "Reduced abstraction boundaries and automated regression testing"
+    },
+    "correct_answer": "B",
+    "explanation": "The text lists modularity, code reusability, and the complete functional independence of objects as major advantages of OOP."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Abstraction and Functions",
+    "question": "What is the primary objective of the principle of abstraction in software engineering?",
+    "options": {
+      "A": "To maximize structural coupling between system modules",
+      "B": "To simplify complex systems by allowing users to interact only with high-level functionalities",
+      "C": "To eliminate the use of conditional statement blocks",
+      "D": "To replace all text-based pseudocode files with graphical models"
+    },
+    "correct_answer": "B",
+    "explanation": "Abstraction simplifies inherently complex systems by shielding internal intricacies, enabling users to focus exclusively on high-level functionality."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Functions and Modules",
+    "question": "What differentiates a module from a function in large-scale programming projects?",
+    "options": {
+      "A": "Modules avoid public access parameters completely",
+      "B": "Modules encompass multiple functions and classes suitable for large projects",
+      "C": "Modules can only handle recursive calculations",
+      "D": "Modules strictly terminate with a single statement semicolon"
+    },
+    "correct_answer": "B",
+    "explanation": "While a function handles a specific task, a module is a larger structural unit that encompasses multiple functions and classes to break down massive projects."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Program Control and Branching",
+    "question": "Which of the following statement types describes unconditional branching?",
+    "options": {
+      "A": "The 'if-else' evaluation statement",
+      "B": "The 'goto' statement",
+      "C": "The compound assignment block",
+      "D": "The modular function parameter interface"
+    },
+    "correct_answer": "B",
+    "explanation": "The course summary explicitly references the 'goto' statement as a mechanism for executing unconditional branching to alter control flow."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Program Control and Branching",
+    "question": "What type of statement structure allows for multi-path decision-making via conditional branching?",
+    "options": {
+      "A": "Semicolon terminated simple statements",
+      "B": "Independent non-functional module indices",
+      "C": "'if,' 'if-else,' and 'if-else-if' statements",
+      "D": "Unchecked execution routines"
+    },
+    "correct_answer": "C",
+    "explanation": "Conditional branching alters program control using targeted decision-making blocks like 'if', 'if-else', and 'if-else-if'."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Programming Statements and Blocks",
+    "question": "What is the key visual and structural differentiator of a compound statement in code?",
+    "options": {
+      "A": "It is always preceded by a start/stop flowchart circle",
+      "B": "It is enclosed within curly brackets",
+      "C": "It is written entirely in basic non-standard pseudocode",
+      "D": "It can never accept parameter input elements"
+    },
+    "correct_answer": "B",
+    "explanation": "The summary differentiates between simple statements ending in a semicolon and compound statements, which are enclosed inside curly brackets."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Programming Statements and Blocks",
+    "question": "Why are code blocks highly utilized when tackling complex programming problems?",
+    "options": {
+      "A": "They enforce global dependencies across all software systems",
+      "B": "They break down complex problems into smaller, more manageable units",
+      "C": "They eliminate the need for functional software testing operations",
+      "D": "They transform private classes into completely open public frameworks"
+    },
+    "correct_answer": "B",
+    "explanation": "Blocks group compound statements to help organize execution flow, breaking down complex programming tasks into highly manageable architectural units."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Recursion",
+    "question": "What occurs internally when a recursive function executes a task?",
+    "options": {
+      "A": "An object calls its parent class instantiation variables",
+      "B": "A function calls itself to break a problem into subproblems",
+      "C": "The program jumps unconditionally to a 'goto' label",
+      "D": "The compiler transforms text layouts into flowcharts"
+    },
+    "correct_answer": "B",
+    "explanation": "In recursion, a function handles repetitive tasks by calling itself repeatedly to solve smaller subproblems, then merges the final results."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Recursion",
+    "question": "What critical component must be included in every recursive function to prevent an infinite call loop?",
+    "options": {
+      "A": "A private access specifier flag",
+      "B": "An exit condition",
+      "C": "A graphical flowchart model map",
+      "D": "A non-functional system usability metric"
+    },
+    "correct_answer": "B",
+    "explanation": "A recursive function must have a clear exit condition (or base case) to halt self-invocation and prevent infinite loops that crash execution memory."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Recursion",
+    "question": "Which problem-solving methodology is inherently enabled by recursion, directly boosting overall algorithm efficiency?",
+    "options": {
+      "A": "Heuristic brainstorming analysis",
+      "B": "Divide-and-conquer algorithms",
+      "C": "Unconditional program statement branching",
+      "D": "Non-functional acceptance validation"
+    },
+    "correct_answer": "B",
+    "explanation": "The text notes that recursion provides elegant, concise code and enables divide-and-conquer strategies, which significantly improve algorithmic efficiency."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Decomposition and Modularization",
+    "question": "What principle specifies that independent modules should focus strictly on a single operational task?",
+    "options": {
+      "A": "The multiple parameter inheritance law",
+      "B": "The single responsibility principle",
+      "C": "The non-standardized flowchart rule",
+      "D": "The greedy local optimization strategy"
+    },
+    "correct_answer": "B",
+    "explanation": "The single responsibility principle dictates that each independent software module should focus entirely on a single, clear purpose."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Decomposition and Modularization",
+    "question": "Which two metrics are highlighted as the primary factors for measuring module independence?",
+    "options": {
+      "A": "Finiteness and language independence",
+      "B": "Input parameters and exit conditions",
+      "C": "Cohesion and coupling",
+      "D": "Simple statements and compound blocks"
+    },
+    "correct_answer": "C",
+    "explanation": "Cohesion (internal module strength) and coupling (inter-module dependency) are the two key metrics used to measure module independence."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Testing",
+    "question": "How many distinct sequential phases comprise the Software Testing Life Cycle (STLC)?",
+    "options": {
+      "A": "Three phases",
+      "B": "Six phases",
+      "C": "Twelve phases",
+      "D": "Eight phases"
+    },
+    "correct_answer": "B",
+    "explanation": "The text explicitly states that the Software Testing Life Cycle (STLC) consists of six structured phases, running from requirement analysis to test cycle closure."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Testing",
+    "question": "Which of the following testing methodologies falls under the category of functional software testing?",
+    "options": {
+      "A": "Usability testing",
+      "B": "Unit, integration, system, and acceptance testing",
+      "C": "Performance and capacity testing",
+      "D": "Security and environment compatibility testing"
+    },
+    "correct_answer": "B",
+    "explanation": "The course summary categorizes functional testing methods as unit, integration, system, and acceptance testing, which verify that the software performs its intended actions."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Testing",
+    "question": "What is the primary focus of non-functional software testing methods?",
+    "options": {
+      "A": "Verifying that simple statements terminate with a semicolon",
+      "B": "User experience, security, performance, and compatibility across environments",
+      "C": "Ensuring a function calls itself via valid exit criteria",
+      "D": "Tracking greedy localized path optimization routines"
+    },
+    "correct_answer": "B",
+    "explanation": "Non-functional testing evaluates aspects beyond raw mechanics, such as user experience, performance, security, and cross-environment compatibility."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Testing",
+    "question": "What are the first and final phases of the Software Testing Life Cycle?",
+    "options": {
+      "A": "Test planning and defect resolution",
+      "B": "Requirement analysis and test cycle closure",
+      "C": "Flowchart design and source code compiling",
+      "D": "Data encapsulation and variable initialization"
+    },
+    "correct_answer": "B",
+    "explanation": "The text mentions that the STLC spans from initial requirement analysis through to final test cycle closure."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Recursion",
+    "question": "In Case Study 1 of Weeks 9-12, what practical analogy was used to demonstrate recursive operations?",
+    "options": {
+      "A": "Optimizing inner city delivery truck routes",
+      "B": "Packing a suitcase efficiently via a pack_suitcase() function",
+      "C": "Verifying customer transaction security for a mobile bank application",
+      "D": "Structuring access specifiers within a digital book database"
+    },
+    "correct_answer": "B",
+    "explanation": "Case Study 1 uses the practical analogy of packing a suitcase with a recursive function to break down item volumes into manageable sub-steps."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Testing",
+    "question": "In Case Study 2 of Weeks 9-12, what application was used to demonstrate a structured STLC process?",
+    "options": {
+      "A": "A robotic airline flight navigation deck",
+      "B": "A mobile banking app scenario",
+      "C": "An open source compiling system tool",
+      "D": "An industrial manufacturing facility production system"
+    },
+    "correct_answer": "B",
+    "explanation": "Case Study 2 outlines applying the STLC systematically to test a mobile banking app to ensure it meets quality requirements."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Introduction to Problem Solving",
+    "question": "What problem-solving strategy utilizes experiential, rule-of-thumb techniques to find practical solutions?",
+    "options": {
+      "A": "Strict mathematical recursion",
+      "B": "Heuristics",
+      "C": "Unconditional code branching",
+      "D": "Functional regression testing"
+    },
+    "correct_answer": "B",
+    "explanation": "Heuristics rely on rule-of-thumb techniques and practical shortcuts to navigate challenges efficiently."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Introduction to Problem Solving",
+    "question": "What problem-solving strategy involves testing random solutions sequentially until one works?",
+    "options": {
+      "A": "Divide and conquer algorithms",
+      "B": "Means-ends analysis",
+      "C": "Trial-and-error",
+      "D": "Object encapsulation"
+    },
+    "correct_answer": "C",
+    "explanation": "Trial-and-error is a basic strategy where multiple options are tested sequentially until a working solution is found."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Introduction to Problem Solving",
+    "question": "Which strategy evaluates the current state against a target goal to systematically bridge the remaining gap?",
+    "options": {
+      "A": "Means-ends analysis",
+      "B": "Brainstorming",
+      "C": "Object classification",
+      "D": "Modular separation"
+    },
+    "correct_answer": "A",
+    "explanation": "Means-ends analysis focuses on identifying the differences between the current status and the final target goal, then taking steps to close that gap."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Algorithm Design Factors",
+    "question": "The design factor 'robustness' ensures that an algorithm can:",
+    "options": {
+      "A": "Run using only public class access identifiers",
+      "B": "Handle unexpected inputs or errors gracefully without failing",
+      "C": "Be translated directly into a visual flowchart graphic",
+      "D": "Execute without requiring an explicit base exit condition"
+    },
+    "correct_answer": "B",
+    "explanation": "Robustness refers to an algorithm's ability to handle edge cases, unexpected inputs, and errors gracefully without crashing."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Algorithm Design Factors",
+    "question": "The algorithm design factor 'maintainability' refers to how easily an algorithm can be:",
+    "options": {
+      "A": "Compiled into binary code across different computer operating systems",
+      "B": "Modified, updated, and corrected over time by developers",
+      "C": "Executed without utilizing any function variables or methods",
+      "D": "Converted into a simple single-line statement block"
+    },
+    "correct_answer": "B",
+    "explanation": "Maintainability measures how easily developers can read, modify, fix, and update code over its operational lifespan."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Flowchart Concepts",
+    "question": "Which symbol is traditionally used to represent a decision point in a standard flowchart?",
+    "options": {
+      "A": "A sharp rectangular box shape",
+      "B": "A diamond or conditional decision shape",
+      "C": "An elongated structural parallel line block",
+      "D": "A simple oval terminal container symbol"
+    },
+    "correct_answer": "B",
+    "explanation": "In standard flowcharting, diamonds or decision shapes represent conditional checkpoints where evaluation dictates different paths."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Flowchart Concepts",
+    "question": "What does a rectangular box symbol typically represent in a software flowchart?",
+    "options": {
+      "A": "The absolute start or termination stop of a program runtime",
+      "B": "A generic operational step or data processing instruction",
+      "C": "A conditional decision point that branches execution paths",
+      "D": "A private database object variable container"
+    },
+    "correct_answer": "B",
+    "explanation": "Rectangles are standard process symbols used to indicate calculations, value assignments, or standard operational steps."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Pseudocode Concepts",
+    "question": "Why is language independence considered a key advantage of writing pseudocode?",
+    "options": {
+      "A": "It enables direct execution on CPU hardware architectures",
+      "B": "It allows logic design without being bound to the strict syntax of a specific programming language",
+      "C": "It enforces data encapsulation rules automatically",
+      "D": "It guarantees that software contains no non-functional performance flaws"
+    },
+    "correct_answer": "B",
+    "explanation": "Language independence allows developers to focus entirely on the core logic without worrying about the strict syntax rules of specific programming languages."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Object-Oriented Programming",
+    "question": "What is a class in the context of object-oriented program development?",
+    "options": {
+      "A": "A single statement that must terminate with an explicit semicolon",
+      "B": "A blueprint or template that defines the variables and methods of an object",
+      "C": "A recursive execution routine lacking a base exit condition",
+      "D": "A graphical shape used to illustrate conditional decision branches"
+    },
+    "correct_answer": "B",
+    "explanation": "A class acts as a foundational template or blueprint from which individual program objects, including their states and behaviors, are instantiated."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Object-Oriented Programming",
+    "question": "Which access specifier allows class members to be accessed from anywhere outside that class?",
+    "options": {
+      "A": "Private",
+      "B": "Public",
+      "C": "Encapsulated",
+      "D": "Conditional"
+    },
+    "correct_answer": "B",
+    "explanation": "Members marked with a public access specifier are open and accessible from external classes and functions within the codebase."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Object-Oriented Programming",
+    "question": "Which access specifier restricts access to class members to only the containing class itself?",
+    "options": {
+      "A": "Public",
+      "B": "Private",
+      "C": "Global",
+      "D": "Modular"
+    },
+    "correct_answer": "B",
+    "explanation": "The private access specifier enforces encapsulation by locking access down strictly to the internal methods of the containing class."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Decomposition and Modularization",
+    "question": "High coupling between software modules is undesirable because it means that:",
+    "options": {
+      "A": "Modules have a single, highly focused operational responsibility",
+      "B": "Modules are heavily dependent on each other, making changes difficult",
+      "C": "Functions can execute tasks without declaring internal parameters",
+      "D": "Recursive functions will experience infinite looping errors"
+    },
+    "correct_answer": "B",
+    "explanation": "High coupling means modules are tightly intertwined, meaning changes to one module often break functionality in others, reducing maintainability."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Decomposition and Modularization",
+    "question": "High cohesion within a single software module indicates that:",
+    "options": {
+      "A": "The module contains non-standardized flowchart structures",
+      "B": "All internal elements of the module are closely related and focused on a single task",
+      "C": "The module depends heavily on external private classes to run",
+      "D": "The module uses unconditional 'goto' statements exclusively"
+    },
+    "correct_answer": "B",
+    "explanation": "High cohesion is a desirable trait indicating that all internal elements and routines of a module work closely together toward a clear, single task."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Testing",
+    "question": "Which functional software testing method focuses on validating individual functions or code blocks in isolation?",
+    "options": {
+      "A": "System testing",
+      "B": "Unit testing",
+      "C": "Acceptance testing",
+      "D": "Usability testing"
+    },
+    "correct_answer": "B",
+    "explanation": "Unit testing is the functional testing practice where individual, isolated code blocks, methods, or functions are checked for correctness."
+  },
+  {
+    "course_code": "COS 102",
+    "topic": "Software Testing",
+    "question": "Which functional testing tier ensures that separate independent modules interact correctly when combined?",
+    "options": {
+      "A": "Unit testing",
+      "B": "Integration testing",
+      "C": "Compatibility testing",
+      "D": "Security testing"
+    },
+    "correct_answer": "B",
+    "explanation": "Integration testing focuses specifically on verifying the interfaces and data communication between combined modules to catch connection issues."
   }
 ]

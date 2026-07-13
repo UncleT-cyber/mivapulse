@@ -69,8 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             
             if (limitParam !== "all") {
-                processedQuestions = processedQuestions.slice(0, parseInt(limitParam, 10));
-            }
+    // Parse the value, but fall back to 10 if it's NaN or missing
+    const limitValue = parseInt(limitParam, 10) || 10; 
+    processedQuestions = processedQuestions.slice(0, limitValue);
+}
 
             examState.questions = processedQuestions;
             if (dom.title) dom.title.textContent = "Exam Lab Simulator";
@@ -162,6 +164,52 @@ function renderQuestion(state, dom, quizMode, courseCode) {
        BRANCH A: ADVANCED ESSAY EVALUATION ENGINE WITH NEXUS AI
        ========================================================================== */
     if (cur.type === "essay") {
+        // Direct URL check to isolate exam mode safely without breaking script scopes
+        const checkParams = new URLSearchParams(window.location.search);
+        const currentActiveMode = checkParams.get("mode") ? checkParams.get("mode").toLowerCase().trim() : "practice";
+
+        if (currentActiveMode === "exam") {
+            // 🧼 1. Wipe out all text strings so absolutely nothing shows behind the alert
+            if (dom.qText) dom.qText.textContent = "";
+            if (dom.topic) dom.topic.textContent = "";
+            if (dom.qNum) dom.qNum.textContent = "";
+            if (dom.qTotal) dom.qTotal.textContent = "";
+            
+            // Hide the header/metadata and layout containers completely
+            const headerMetadata = document.querySelector(".quiz-header") || 
+                                   document.querySelector("[style*='QUESTION']") || 
+                                   (dom.qNum ? dom.qNum.parentElement : null);
+                                   
+            if (headerMetadata) headerMetadata.style.setProperty("display", "none", "important");
+            if (dom.progressFill && dom.progressFill.parentElement) {
+                dom.progressFill.parentElement.style.setProperty("display", "none", "important");
+            }
+
+            // Hide the "Exam Simulation Mode Active" top purple notice box
+            const noticeBanner = document.getElementById("examModeNotice") || document.querySelector(".exam-notice-banner");
+            if (noticeBanner) noticeBanner.style.setProperty("display", "none", "important");
+            if (essayWorkspace) essayWorkspace.style.setProperty("display", "none", "important");
+
+            // 🎨 2. Render ONLY the beautifully isolated alert card inside the options slot
+            if (dom.options) {
+                dom.options.style.display = "block"; 
+                dom.options.innerHTML = `
+                    <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 8px; padding: 35px; text-align: center; margin: 5px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); animation: fadeIn 0.2s ease-out;">
+                        <div style="font-size: 2.5rem; margin-bottom: 10px;">⚠️</div>
+                        <h3 style="color: #f87171; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px;">Simulation Mode Unavailable</h3>
+                        <p style="color: #9ca3af; font-size: 0.88rem; line-height: 1.5; margin: 0 0 22px 0; max-width: 400px; margin-left: auto; margin-right: auto;">
+                            Comprehensive multi-metric essay evaluations are exclusively optimized for interactive <strong>Practice Mode</strong> to support session-by-session pacing.
+                        </p>
+                        <button onclick="window.location.href='index.html'" style="background: #a855f7; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-weight: bold; font-size: 0.88rem; cursor: pointer; transition: background 0.2s; box-shadow: 0 2px 4px rgba(168,85,247,0.3); width: 100%; max-width: 250px;">
+    🔄 Return to Dashboard
+</button>
+                    </div>
+                `;
+            }
+            return; // Clean break out of engine rendering loops
+        }
+
+        // --- Standard Working Practice Mode Flow Continues Safely ---
         if (dom.options) dom.options.style.display = "none"; // Hide MCQ grid
         if (essayWorkspace) essayWorkspace.style.display = "flex"; // Reveal textarea container
 
@@ -264,13 +312,11 @@ function renderQuestion(state, dom, quizMode, courseCode) {
    RENDER TERMINAL VIEW (HYBRID MULTI-CHOICE & ESSAY ANALYTICS BREAKDOWN)
    ========================================================================== */
 function renderTerminalView(state, dom, courseCode) {
-    // 1. Instantly close active input fields and AI feedback components
     const essayWorkspace = document.getElementById("essayWorkspaceContainer");
     const aiFeedbackBox = document.getElementById("aiFeedbackContainer");
     if (essayWorkspace) essayWorkspace.style.setProperty("display", "none", "important");
     if (aiFeedbackBox) aiFeedbackBox.style.setProperty("display", "none", "important");
 
-    // Clean old display markup out of the option wrapper space
     dom.options.innerHTML = "";
     if (dom.feedback) {
         dom.feedback.classList.add("hidden");
@@ -284,15 +330,11 @@ function renderTerminalView(state, dom, courseCode) {
     let reviewRowsHtml = "";
     let globalItemCounter = 1;
 
-    // ==========================================================================
-    // 📊 TRACK & PROCESS STREAM A: MULTIPLE CHOICE QUESTIONS (FROM STATE OBJECT)
-    // ==========================================================================
     let mcqAttempted = 0;
     let mcqCorrect = 0;
 
     if (state && Array.isArray(state.userAnswers) && state.userAnswers.length > 0) {
         state.userAnswers.forEach((ans) => {
-            // Check if this answer isn't an essay placeholder hidden inside state
             const isEssayInState = (ans.options && ans.options["Your Submission"]) || ans.chosenKey === "Review Pending";
             
             if (!isEssayInState) {
@@ -335,53 +377,70 @@ function renderTerminalView(state, dom, courseCode) {
         });
     }
 
-    // ==========================================================================
-    // 📝 TRACK & PROCESS STREAM B: ESSAY SUBMISSIONS (FROM BACKEND CACHE)
-    // ==========================================================================
-    const essayList = window.essaySubmissionsList || [];
-    const totalEssays = essayList.length;
-    
-    essayList.forEach((item) => {
-        let formattedAiFeedback = item.aiEvaluation
-            ? item.aiEvaluation.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br>")
-            : "No structured critique payload logged.";
+    const urlParams = new URLSearchParams(window.location.search);
+    const activeQuizMode = urlParams.get("mode") ? urlParams.get("mode").toLowerCase().trim() : "practice";
 
-        reviewRowsHtml += `
-            <div class="review-card review-essay" style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; background: white; display: flex; flex-direction: column; gap: 0.75rem; border-left: 5px solid #4a154b !important; margin-bottom: 1rem; text-align: left;">
-                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem;">
-                    <strong style="color: #4a154b;">Question ${globalItemCounter} (Essay Response)</strong>
-                    <span style="font-weight: 700; font-size: 0.85rem; color: #4a154b;">📝 Evaluation Logged</span>
-                </div>
-                <p style="font-weight: 600; color: #1e293b; margin: 0;">${item.questionText || "Essay Prompt Case Study"}</p>
-                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1rem;">
-                    <strong style="color: #475569; font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Your Written Response:</strong>
-                    <p style="color: #1e293b; margin: 0; white-space: pre-wrap; font-style: italic;">"${item.submissionText}"</p>
-                </div>
-                <div style="background-color: #f5f3ff; border-left: 3px solid #7c3aed; padding: 1rem; border-radius: 4px; font-size: 0.9rem; color: #1e293b;">
-                    <strong style="color: #6d28d9; display: block; margin-bottom: 0.5rem;">🤖 Nexus AI Assessment Breakdown:</strong>
-                    <div style="line-height: 1.5;">${formattedAiFeedback}</div>
-                </div>
-            </div>
-        `;
-        globalItemCounter++;
-    });
+    if (activeQuizMode === "exam" || activeQuizMode === "simulation") {
+        const totalQuestionsList = state.questions || [];
+        totalQuestionsList.forEach((q, idx) => {
+            if (q.type === "essay") {
+                const cachedResponseText = (window.essaySubmissionsList && window.essaySubmissionsList.find(e => e.questionText === q.question))
+                    ? window.essaySubmissionsList.find(e => e.questionText === q.question).submissionText
+                    : (window.examAnswersCache ? window.examAnswersCache[idx] : "") || "No response recorded.";
 
-    // ==========================================================================
-    // 📈 MATH RATIO CALCULATOR FOR THE STATS LABELS
-    // ==========================================================================
+                reviewRowsHtml += `
+                    <div class="review-card review-essay" style="border: 1px solid #312e81; border-radius: 8px; padding: 1.25rem; background: #1e1b4b; display: flex; flex-direction: column; gap: 0.75rem; border-left: 5px solid #fbbf24 !important; margin-bottom: 1rem; text-align: left;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #312e81; padding-bottom: 0.5rem;">
+                            <strong style="color: #a5b4fc;">Question ${globalItemCounter} (Essay Evaluation Frame)</strong>
+                            <span style="font-weight: 700; font-size: 0.85rem; color: #fbbf24;">💾 Saved for Grading</span>
+                        </div>
+                        <p style="font-weight: 600; color: #ffffff; margin: 0;">${q.question || "Essay Prompt Assignment"}</p>
+                        <div style="background-color: rgba(255,255,255,0.04); border: 1px solid #312e81; border-radius: 6px; padding: 1rem;">
+                            <strong style="color: #a5b4fc; font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Your Submitted Response:</strong>
+                            <p style="color: #e0e7ff; margin: 0; white-space: pre-wrap; font-style: italic;">"${cachedResponseText}"</p>
+                        </div>
+                    </div>
+                `;
+                globalItemCounter++;
+            }
+        });
+    } else {
+        const essayList = window.essaySubmissionsList || [];
+        essayList.forEach((item) => {
+            let formattedAiFeedback = item.aiEvaluation
+                ? item.aiEvaluation.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br>")
+                : "No structured critique payload logged.";
+
+            reviewRowsHtml += `
+                <div class="review-card review-essay" style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; background: white; display: flex; flex-direction: column; gap: 0.75rem; border-left: 5px solid #4a154b !important; margin-bottom: 1rem; text-align: left;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem;">
+                        <strong style="color: #4a154b;">Question ${globalItemCounter} (Essay Response)</strong>
+                        <span style="font-weight: 700; font-size: 0.85rem; color: #4a154b;">📝 Evaluation Logged</span>
+                    </div>
+                    <p style="font-weight: 600; color: #1e293b; margin: 0;">${item.questionText || "Essay Prompt Case Study"}</p>
+                    <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1rem;">
+                        <strong style="color: #475569; font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Your Written Response:</strong>
+                        <p style="color: #1e293b; margin: 0; white-space: pre-wrap; font-style: italic;">"${item.submissionText}"</p>
+                    </div>
+                    <div style="background-color: #f5f3ff; border-left: 3px solid #7c3aed; padding: 1rem; border-radius: 4px; font-size: 0.9rem; color: #1e293b;">
+                        <strong style="color: #6d28d9; display: block; margin-bottom: 0.5rem;">🤖 Nexus AI Assessment Breakdown:</strong>
+                        <div style="line-height: 1.5;">${formattedAiFeedback}</div>
+                    </div>
+                </div>
+            `;
+            globalItemCounter++;
+        });
+    }
+
+    const totalEssays = (window.essaySubmissionsList || []).length;
     const mcqIncorrect = mcqAttempted - mcqCorrect;
     const accuracyPercent = mcqAttempted > 0 ? Math.round((mcqCorrect / mcqAttempted) * 100) : 100;
 
     if (dom.qText) dom.qText.textContent = `Review completed for ${courseCode || "COS 301"}. Below is your session analysis breakdown.`;
 
-    // 🌟 PASTE IT HERE (Right before analyticsWrapper is created)
-    const githubUser = "UncleT-cyber"; 
-    const repoName = "mivaprep";
-    const issueTitle = encodeURIComponent(`Metrics Log Checkpoint - ${courseCode || "COS 301"}`);
-    const issueBody = encodeURIComponent(`Simulation Results Summary:\n- MCQ Accuracy: ${accuracyPercent}%\n- MCQ Attempted: ${mcqAttempted}\n- Essays Submitted: ${totalEssays}`);
-    const githubUrl = `https://github.com/${githubUser}/${repoName}/issues/new?title=${issueTitle}&body=${issueBody}`;
+    // 🌟 MIVACIRCLE (YIKORA) FEEDBACK PIPELINE LINK
+    const yikoraPostUrl = "https://app.yikora.com/post/1fa9ed28-bf93-437a-9842-559403a5dbe7";
 
-    // 3. CREATE DYNAMIC LAYOUT WITH CONDITIONAL CHART TRACKERS
     const analyticsWrapper = document.createElement("div");
     analyticsWrapper.className = "analytics-container";
     analyticsWrapper.innerHTML = `
@@ -423,59 +482,32 @@ function renderTerminalView(state, dom, courseCode) {
         </div>
         
         <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1rem;">
-    <a href="${githubUrl}" target="_blank" rel="noopener noreferrer" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; text-decoration: none; display: block; font-size: 14px; background-color: #24292e;">🐙 Submit Feedback to GitHub</a>
-    
-    <button onclick="window.location.reload()" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; cursor: pointer; display: block; font-size: 14px; background-color: #4a154b;">🔄 Start New Session</button>
-    <a href="index.html" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; text-decoration: none; display: block; font-size: 14px; background-color: #64748b;">🏠 Exit to Home Landing</a>
-</div>
+            <a href="${yikoraPostUrl}" target="_blank" rel="noopener noreferrer" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; text-decoration: none; display: block; font-size: 14px; background-color: #0284c7; box-shadow: 0 2px 4px rgba(2,132,199,0.3);">💬 Share Feedback on MivaCircle (Yikora)</a>
+            <button onclick="window.location.reload()" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; cursor: pointer; display: block; font-size: 14px; background-color: #4a154b;">🔄 Start New Session</button>
+            <a href="index.html" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; text-decoration: none; display: block; font-size: 14px; background-color: #64748b;">🏠 Exit to Home Landing</a>
+        </div>
 
         <div id="simulationReviewStack" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem;">
             <h3 style="color: #4a154b; margin: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; text-align: left;">Simulation Item Review Log</h3>
             ${(mcqAttempted + totalEssays) > 0 ? reviewRowsHtml : `<p style="color: #64748b; font-style: italic; text-align: left;">No processed questions or answers found in active session memory.</p>`}
         </div>
 
-        <!-- Floating Back to Top Button injected right into the layout -->
-        <button id="backToTopBtn" onclick="if(window.triggerHaptic) window.triggerHaptic(15); window.scrollTo({top: 0, behavior: 'smooth'});" style="
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #b794f4;
-            color: #ffffff;
-            border: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 14px rgba(183, 148, 244, 0.4);
-            display: none;
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-        ">
-            ↑
-        </button>
+        <button id="backToTopBtn" onclick="if(window.triggerHaptic) window.triggerHaptic(15); window.scrollTo({top: 0, behavior: 'smooth'});" style="position: fixed; bottom: 24px; right: 24px; width: 48px; height: 48px; border-radius: 50%; background: #b794f4; color: #ffffff; border: none; font-size: 1.2rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 14px rgba(183, 148, 244, 0.4); display: none; z-index: 9999; align-items: center; justify-content: center; transition: all 0.2s ease;">↑</button>
     `;
 
-                // Add this globally or right after your review screen mounts/renders
-window.addEventListener('scroll', () => {
-    const btn = document.getElementById("backToTopBtn");
-    if (btn) {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            btn.style.display = "flex";
-        } else {
-            btn.style.display = "none";
+    window.addEventListener('scroll', () => {
+        const btn = document.getElementById("backToTopBtn");
+        if (btn) {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
         }
-    }
-});
+    });
 
     if (dom.options) dom.options.appendChild(analyticsWrapper);
 
-    // ==========================================================================
-    // 🏎️ TIMEOUT TRIGGERED CSS ANIMATION RENDERING
-    // ==========================================================================
     setTimeout(() => {
         if (mcqAttempted > 0) {
             const correctBar = document.getElementById("barCorrect");
