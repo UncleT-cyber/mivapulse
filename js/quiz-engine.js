@@ -272,14 +272,27 @@ function renderQuestion(state, dom, quizMode, courseCode) {
                             if (b.innerHTML.startsWith(`<strong>${cur.correct_answer}:</strong>`)) b.classList.add("correct"); 
                         });
                     }
-                    if (dom.explanation) dom.explanation.textContent = cur.explanation || "No explanation provided.";
-                    if (dom.score) dom.score.textContent = state.score;
-                    if (dom.attempted) dom.attempted.textContent = state.attempted;
-                    
-                    if (dom.feedback) {
-                        dom.feedback.classList.remove("hidden");
-                        dom.feedback.style.display = "block";
-                    }
+                    if (dom.explanation) {
+    dom.explanation.textContent = cur.explanation || "No explanation provided.";
+}
+
+if (dom.feedback) {
+    dom.feedback.classList.remove("hidden");
+    dom.feedback.style.display = "block";
+}
+
+// FIX: Run MathJax on the explanation panel right after it becomes visible
+const isMathCourse = cur.course_code && cur.course_code.toUpperCase().startsWith("MTH");
+const hasExplanationMath = cur.explanation && cur.explanation.includes('$');
+
+if (isMathCourse || hasExplanationMath) {
+    if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+        // Wait a brief moment for the browser to draw the visible block before scanning
+        setTimeout(() => {
+            window.MathJax.typesetPromise([dom.feedback]).catch((err) => console.log("MathJax Breakdown Error:", err));
+        }, 50);
+    }
+}
                     
                 } else {
                     btn.style.backgroundColor = "#f3e8ff"; 
@@ -304,7 +317,22 @@ function renderQuestion(state, dom, quizMode, courseCode) {
             if (dom.options) dom.options.appendChild(btn);
         });
     }
-}
+    /* ==========================================================================
+       FUTURE-PROOF MATHJAX DYNAMIC RENDERING TRIGGER (MCQ + ESSAY SAFE)
+       ========================================================================== */
+    // Checks if the course code starts with "MTH" (captures MTH 102, 201, 302, etc.) OR contains '$'
+    const isMathCourse = cur.course_code && cur.course_code.toUpperCase().startsWith("MTH");
+    const hasMathSymbols = cur.question && cur.question.includes('$');
+
+    if (isMathCourse || hasMathSymbols) {
+        if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+            requestAnimationFrame(() => {
+                window.MathJax.typesetPromise([document.body]).catch((err) => console.log("MathJax error:", err));
+            });
+        }
+    }
+
+} // <-- This is the absolute final closing bracket of the renderQuestion function
 
 
 

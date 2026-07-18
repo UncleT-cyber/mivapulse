@@ -68,7 +68,8 @@
               "id": "semester_2",
               "name": "2nd Semester",
               "courses": [
-                { "code": "COS 301", "title": "Data Structures & Algorithms", "file": "cybersecurity/300L/semester_2/cos_301_data_structures.json" }
+                { "code": "COS 301", "title": "Data Structures & Algorithms", "file": "cybersecurity/300L/semester_2/cos_301_data_structures.json" },
+                { "code": "MTH 301", "title": "Data & Essaytest", "file": "cybersecurity/300L/semester_2/mth_301_data_testessay.json" }
               ]
             }
           ]

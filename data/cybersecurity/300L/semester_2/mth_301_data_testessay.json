@@ -1,0 +1,26 @@
+[
+  {
+    "id": "MTH_301_E1",
+    "course_code": "MTH 301",
+    "type": "essay",
+    "question": "Let $V$ be a finite-dimensional vector space over $\\mathbb{R}$, and let $T: V \\rightarrow V$ be a linear transformation. Prove that if $\\lambda$ is an eigenvalue of $T$, then $\\lambda^k$ is an eigenvalue of $T^k$ for any integer $k \\ge 1$.",
+    "key_points_expected": [
+      "Definition of eigenvalue expression $Tv = \\lambda v$",
+      "Application of mathematical induction or operator composition $T^k v = \\lambda^k v$",
+      "Requirement of a non-zero eigenvector $v \\neq 0$"
+    ],
+    "explanation": "By definition, $Tv = \\lambda v$ for some $v \\neq 0$. Applying $T$ repeatedly yields $T(Tv) = T(\\lambda v) = \\lambda T(v) = \\lambda^2 v$. Repeating this process $k$ times proves $T^k v = \\lambda^k v$ cleanly."
+  },
+  {
+    "id": "MTH_301_E2",
+    "course_code": "MTH 301",
+    "type": "essay",
+    "question": "Evaluate the complex line integral $\\oint_C \\frac{e^{2z}}{z^2 + 1} dz$ where $C$ is the positively oriented circle defined by $|z| = 2$.",
+    "key_points_expected": [
+      "Identification of singularities at $z = i$ and $z = -i$",
+      "Application of Cauchy's Residue Theorem",
+      "Calculation of individual residues inside the boundary"
+    ],
+    "explanation": "The poles lie at $z = \\pm i$, which both sit comfortably inside the contour circle $|z| = 2$. Using $\\oint_C f(z) dz = 2\\pi i \\sum \\text{Res}$, the individual residues evaluate to $\\frac{e^{2i}}{2i}$ and $\\frac{e^{-2i}}{-2i}$, summing beautifully to $\\pi \\sin(2)$."
+  }
+]

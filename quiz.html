@@ -24,6 +24,20 @@
         document.documentElement.setAttribute("data-theme", "light");
     }
 </script>
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$']],
+            displayMath: [['$$', '$$']],
+            processEscapes: true
+        },
+        options: {
+            ignoreHtmlClass: 'no-math',
+            processHtmlClass: 'math-tex'
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
 </head>
 <body>
 <div id="loading-mask" style="position: fixed; inset: 0; background: #0f172a; z-index: 9999; display: flex; align-items: center; justify-content: center; color: white;">

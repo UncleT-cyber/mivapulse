@@ -221,9 +221,20 @@ p, .tracker-text, .explanation-box p { color: var(--text-secondary); }
     color: var(--text-primary);
     cursor: pointer;
     transition: var(--transition);
+    
+    /* 1. FIX COLON AND TEXT WRAPPING ILLEGALLY */
     display: flex;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 0.5rem;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+/* 2. FORCE THE 'A:' LETTER WRAPPER TO NEVER SPLIT OR SHRINK */
+.option-btn strong {
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: inline-block;
 }
 
 .option-btn:hover:not([disabled]) {
@@ -506,6 +517,36 @@ body {
 /* Prevent long LaTeX or text in the question from stretching the card */
 .question-text {
   white-space: normal !important;
-  word-break: break-all !important;
-  overflow-wrap: anywhere !important;
+  word-break: normal !important;        /* Changed from break-all */
+  overflow-wrap: break-word !important; /* Changed from anywhere */
+}
+
+/* ==========================================================================
+   ISOLATED SAFETY FIX FOR THE CONCEPT BREAKDOWN BLOWOUT
+   ========================================================================== */
+.feedback-panel mjx-container,
+.feedback-panel div,
+.feedback-panel p {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: normal !important;
+}
+
+/* Force block-style standalone math to wrap inside the breakdown card */
+.feedback-panel mjx-container[display="true"] {
+    display: block !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    padding: 6px 0 !important;
+}
+
+/* ==========================================================================
+   ISOLATED FIX TO PREVENT OPTION BUTTON TEXT FROM BREAKING WORDS
+   ========================================================================== */
+.option-btn, 
+.options-container button {
+    word-break: normal !important;       /* Prevents splitting normal words like colum-ns */
+    overflow-wrap: break-word !important;   /* Only wraps at natural word boundaries */
+    white-space: normal !important;      /* Allows text to drop cleanly to the next line */
 }
