@@ -522,6 +522,40 @@ body {
 }
 
 /* ==========================================================================
+   ISOLATED OPTION TEXT FLOW PATCH (STOPS EQUATION COLUMNS IN MCQ)
+   ========================================================================== */
+.options-container button,
+.option-btn {
+    display: block !important; /* Overrides the rogue flex grid layout */
+}
+
+/* Force math variables to stay strictly inline within the text flow */
+.options-container button mjx-container,
+.option-btn mjx-container {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin: 0 4px !important;
+    width: auto !important;
+}
+
+/* ==========================================================================
+   ISOLATED FIX FOR MAIN QUESTION TEXT FLOW AND GAP REDUCTION
+   ========================================================================== */
+.question-text, 
+#question-container,
+.quiz-card div {
+    white-space: normal !important;
+}
+
+/* Force block-level equations inside the question area to sit closer to the text */
+.question-text mjx-container[display="true"],
+#question-container mjx-container[display="true"] {
+    margin: 8px 0 !important;   /* Slashing the massive vertical spacing gaps */
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+/* ==========================================================================
    ISOLATED SAFETY FIX FOR THE CONCEPT BREAKDOWN BLOWOUT
    ========================================================================== */
 .feedback-panel mjx-container,
