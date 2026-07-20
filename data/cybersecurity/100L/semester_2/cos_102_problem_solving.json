@@ -961,19 +961,7 @@
     "correct_answer": "C",
     "explanation": "The summary lists modularity, correctness, maintainability, functionality, robustness, simplicity, and extensibility as vital factors to weigh during design."
   },
-  {
-    "course_code": "COS 102",
-    "topic": "Introduction to Problem Solving",
-    "question": "In Case Study 2 of Weeks 1-4, what was the primary challenge for the city-based food delivery company?",
-    "options": {
-      "A": "Selecting secure database encryption keys",
-      "B": "Route optimization to minimize delivery times and fuel costs",
-      "C": "Automating continuous software deployment cycles",
-      "D": "Hiding internal component classes from external users"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 2 outlines a food delivery service exploring greedy algorithms or divide and conquer techniques specifically for urban route optimization."
-  },
+
   {
     "course_code": "COS 102",
     "topic": "Flowchart Concepts",
@@ -1273,32 +1261,7 @@
     "correct_answer": "B",
     "explanation": "The text mentions that the STLC spans from initial requirement analysis through to final test cycle closure."
   },
-  {
-    "course_code": "COS 102",
-    "topic": "Recursion",
-    "question": "In Case Study 1 of Weeks 9-12, what practical analogy was used to demonstrate recursive operations?",
-    "options": {
-      "A": "Optimizing inner city delivery truck routes",
-      "B": "Packing a suitcase efficiently via a pack_suitcase() function",
-      "C": "Verifying customer transaction security for a mobile bank application",
-      "D": "Structuring access specifiers within a digital book database"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 1 uses the practical analogy of packing a suitcase with a recursive function to break down item volumes into manageable sub-steps."
-  },
-  {
-    "course_code": "COS 102",
-    "topic": "Software Testing",
-    "question": "In Case Study 2 of Weeks 9-12, what application was used to demonstrate a structured STLC process?",
-    "options": {
-      "A": "A robotic airline flight navigation deck",
-      "B": "A mobile banking app scenario",
-      "C": "An open source compiling system tool",
-      "D": "An industrial manufacturing facility production system"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 2 outlines applying the STLC systematically to test a mobile banking app to ensure it meets quality requirements."
-  },
+  
   {
     "course_code": "COS 102",
     "topic": "Introduction to Problem Solving",
