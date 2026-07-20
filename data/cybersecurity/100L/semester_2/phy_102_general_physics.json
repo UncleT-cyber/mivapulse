@@ -959,19 +959,7 @@
     "correct_answer": "B",
     "explanation": "Case Study 2 notes that dielectrics are beneficial in high-voltage configurations because they reduce electric field strength, preventing breakdown and short circuits."
   },
-  {
-    "course_code": "PHY 102",
-    "topic": "Case Studies",
-    "question": "What is the primary practical objective of studying resonance in speakers as highlighted in Case Study 1 (Weeks 5-8)?",
-    "options": {
-      "A": "To create stable high-voltage DC transformers",
-      "B": "To enhance sound system design for high-quality audio",
-      "C": "To safely isolate bare wires from structural hazards",
-      "D": "To map out the concentric fields around an iron core"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 1 for Weeks 5-8 aims to investigate the impact of resonance on speakers to optimize system design for high-quality audio outputs."
-  },
+  
   {
     "course_code": "PHY 102",
     "topic": "Case Studies",
@@ -1050,19 +1038,7 @@
     "correct_answer": "B",
     "explanation": "Case Study 1 for Weeks 9-12 describes wireless connectivity as a process where oscillating electric fields generate corresponding magnetic fields to form propagating waves."
   },
-  {
-    "course_code": "PHY 102",
-    "topic": "Case Studies",
-    "question": "What is the primary engineering objective outlined in Case Study 2 (Weeks 9-12)?",
-    "options": {
-      "A": "Calculating the magnetic dipole moment of an electron",
-      "B": "Designing high-performance capacitors with electric flux",
-      "C": "Eliminating heat losses inside ideal step-up transformers",
-      "D": "Measuring the conduction resistance of residential wiring"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 2 for Weeks 9-12 focuses specifically on understanding and applying electric flux parameters to optimize high-performance capacitor designs."
-  },
+  
   {
     "course_code": "PHY 102",
     "topic": "Electromotive Force (EMF)",

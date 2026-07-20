@@ -1442,19 +1442,7 @@
     "correct_answer": "C",
     "explanation": "Choosing a modern tool depends on active criteria like scalability, language, support, and goals—not historical milestones like the creation date of ARPANET."
   },
-  {
-    "course_code": "CSC 106",
-    "topic": "Case Studies: JavaScript & Frameworks",
-    "question": "In Case Study 1 (Weeks 5-8), which specialized search library is integrated into the site's code to run a product recommendation engine?",
-    "options": {
-      "A": "Stripe",
-      "B": "Algolia",
-      "C": "Django",
-      "D": "WordPress"
-    },
-    "correct_answer": "B",
-    "explanation": "The e-commerce recommendation case study integrates the Algolia library to build an indexing system that delivers personalized product suggestions."
-  },
+  
   {
     "course_code": "CSC 106",
     "topic": "Case Studies: JavaScript & Frameworks",
