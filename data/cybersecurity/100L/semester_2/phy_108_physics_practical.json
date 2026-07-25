@@ -1,5 +1,317 @@
 [
   {
+    "course_code": "PHY 108",
+    "topic": "Stress-Strain Analysis",
+    "question": "In stress–strain analysis, the region where Hooke’s law is valid is the:",
+    "options": {
+      "A": "Linear region",
+      "B": "Plastic region",
+      "C": "Yield region",
+      "D": "Fracture region"
+    },
+    "correct_answer": "A",
+    "explanation": "Hooke's law states that stress is directly proportional to strain, which produces a straight-line (linear) relationship on a stress–strain graph. Therefore, it is valid in the linear region."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Stress-Strain Analysis",
+    "question": "Which of the following correctly identifies the main difference between the Proportionality Limit and the Elastic Limit on a stress–strain graph?",
+    "options": {
+      "A": "Hooke's Law is strictly valid up to the proportionality limit, but not necessarily up to the elastic limit.",
+      "B": "The material permanently deforms as soon as it passes the proportionality limit.",
+      "C": "The stress-strain graph remains a perfect straight line all the way up to the elastic limit.",
+      "D": "The material loses its ability to return to its original shape immediately after the proportionality limit."
+    },
+    "correct_answer": "A",
+    "explanation": "The limit of proportionality is the exact point where stress and strain cease to be linearly proportional (where Hooke's law ends). The elastic limit is the point beyond which permanent deformation occurs. Between these two points, a material may still behave elastically even if the relationship is no longer strictly linear."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Elasticity and Hooke's Law",
+    "question": "For the wire to obey Hooke's law throughout the experiment, the applied load must remain below the _______________.",
+    "options": {
+      "A": "elastic limit",
+      "B": "ultimate stress",
+      "C": "yield point",
+      "D": "fracture point"
+    },
+    "correct_answer": "A",
+    "explanation": "To obey Hooke's law and return to its original length without permanent extension, the applied load on the wire must not exceed its elastic limit."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Elasticity and Hooke's Law",
+    "question": "According to Hooke's Law, the force applied to a material is directly proportional to the extension produced, provided that which boundary condition is not exceeded?",
+    "options": {
+      "A": "The plastic limit",
+      "B": "The limit of proportionality",
+      "C": "The ultimate tensile limit",
+      "D": "The fracture limit"
+    },
+    "correct_answer": "B",
+    "explanation": "Direct proportionality ($F \\propto e$) strictly holds true only up to the limit of proportionality."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Stress-Strain Analysis",
+    "question": "Which point on the elasticity graph represents the maximum force or stress that a material can withstand before necking and eventual failure?",
+    "options": {
+      "A": "Proportional Limit",
+      "B": "Yield point ($F_{y}$)",
+      "C": "Ultimate Tensile Strength ($F_{u}$)",
+      "D": "Fracture Point"
+    },
+    "correct_answer": "C",
+    "explanation": "The Ultimate Tensile Strength (UTS) is the maximum stress level a material can sustain before cross-sectional necking begins, leading to fracture."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Elasticity Laboratory Techniques",
+    "question": "The extension of the wire should be measured only after the pointer has _______________.",
+    "options": {
+      "A": "come to rest",
+      "B": "reached maximum extension",
+      "C": "been unloaded",
+      "D": "begun oscillating"
+    },
+    "correct_answer": "A",
+    "explanation": "Waiting for the pointer to completely come to rest eliminates dynamic oscillations and ensures an accurate, static reading of extension."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Calorimetry and Heat",
+    "question": "A substance with a specific heat capacity of $4200\\text{ J kg}^{-1}{^\\circ}\\text{C}^{-1}$ absorbs $84\\text{ kJ}$ of heat. If its initial temperature is $18^{\\circ}\\text{C}$ and its mass is $2.0\\text{ kg}$, determine its final temperature.",
+    "options": {
+      "A": "$28^{\\circ}\\text{C}$",
+      "B": "$20^{\\circ}\\text{C}$",
+      "C": "$18^{\\circ}\\text{C}$",
+      "D": "$10^{\\circ}\\text{C}$"
+    },
+    "correct_answer": "A",
+    "explanation": "Using $Q = mc\\Delta T$: $\\Delta T = \\frac{Q}{mc} = \\frac{84000}{2.0 \\times 4200} = \\frac{84000}{8400} = 10^{\\circ}\\text{C}$. The final temperature is $T_f = T_i + \\Delta T = 18^{\\circ}\\text{C} + 10^{\\circ}\\text{C} = 28^{\\circ}\\text{C}$."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Calorimetry and Heat",
+    "question": "The heat lost by the hot solid is ideally equal to _______________.",
+    "options": {
+      "A": "the heat gained by the calorimeter and water",
+      "B": "the latent heat of vaporization",
+      "C": "the heat supplied electrically",
+      "D": "the surrounding heat loss"
+    },
+    "correct_answer": "A",
+    "explanation": "According to the principle of conservation of energy in calorimetry (assuming no heat loss to surroundings), heat lost by the hot solid equals the heat gained by the colder components (water + calorimeter)."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Calorimetry and Heat",
+    "question": "Which of the following defines specific heat capacity?",
+    "options": {
+      "A": "The heat required to raise 1kg of a substance by 1°C",
+      "B": "The heat required to raise temperature of any mass",
+      "C": "The heat required to change phase at constant temperature",
+      "D": "The ratio of heat gained to heat lost"
+    },
+    "correct_answer": "A",
+    "explanation": "Specific heat capacity is defined as the amount of heat energy required to raise the temperature of a unit mass ($1\\text{ kg}$) of a substance by $1^{\\circ}\\text{C}$ (or $1\\text{ K}$)."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Capacitors and Circuits",
+    "question": "Which precaution is important when charging a capacitor experimentally?",
+    "options": {
+      "A": "Observe correct polarity connections",
+      "B": "Short-circuit the capacitor continuously",
+      "C": "Remove the resistor from the circuit",
+      "D": "Use broken leads"
+    },
+    "correct_answer": "A",
+    "explanation": "Polarized capacitors (like electrolytic capacitors) can be damaged or explode if connected in reverse polarity; maintaining correct polarity is essential."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Capacitors and Circuits",
+    "question": "The current in a discharging capacitor circuit",
+    "options": {
+      "A": "Decreases exponentially",
+      "B": "Increases linearly",
+      "C": "Remains constant",
+      "D": "Becomes infinite"
+    },
+    "correct_answer": "A",
+    "explanation": "The discharge current follows $I(t) = I_0 e^{-t/RC}$, which decreases exponentially over time."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Capacitors and Circuits",
+    "question": "Why is it important to allow the capacitor to discharge fully before repeating the experiment?",
+    "options": {
+      "A": "To ensure accurate readings",
+      "B": "To save energy",
+      "C": "To reduce time constant",
+      "D": "To increase voltage"
+    },
+    "correct_answer": "A",
+    "explanation": "Any residual charge left on the capacitor would alter the initial conditions ($V_0 = 0$) of subsequent trials, leading to inaccurate measurements."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Capacitors and Circuits",
+    "question": "At time ($t = RC$) during charging, the charge on a capacitor is approximately",
+    "options": {
+      "A": "63% of its final value",
+      "B": "100% of its final value",
+      "C": "25% of its final value",
+      "D": "10% of its final value"
+    },
+    "correct_answer": "A",
+    "explanation": "At one time constant ($t = \\tau = RC$), the charge reaches $q(t) = Q_{max}(1 - e^{-1}) \\approx 0.632 Q_{max}$, or approximately 63% of its maximum value."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Capacitors and Circuits",
+    "question": "During charging of a capacitor, the charge on the capacitor eventually reaches _______________.",
+    "options": {
+      "A": "A maximum constant value",
+      "B": "Negative infinity",
+      "C": "Zero",
+      "D": "A minimum value"
+    },
+    "correct_answer": "A",
+    "explanation": "As time progresses ($t \\to \\infty$), the capacitor voltage matches the supply voltage, bringing the current to zero and holding the accumulated charge at a maximum constant value ($Q = CV$)."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Kirchhoff's Laws",
+    "question": "The combination of KCL and KVL allows us to _______________.",
+    "options": {
+      "A": "Solve any linear circuit",
+      "B": "Ignore resistors",
+      "C": "Determine magnetic flux",
+      "D": "Measure capacitance"
+    },
+    "correct_answer": "A",
+    "explanation": "Kirchhoff's Current Law (KCL) and Kirchhoff's Voltage Law (KVL) together provide the fundamental set of independent equations necessary to analyze and solve any linear electrical circuit."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Experimental Error Analysis",
+    "question": "A student measures length as $20.5 \\pm 0.1\\text{ cm}$ and time as $2.00 \\pm 0.05\\text{ s}$. The percentage error in velocity is approximately _______________.",
+    "options": {
+      "A": "0.48%",
+      "B": "2.5%",
+      "C": "3%",
+      "D": "0.15%"
+    },
+    "correct_answer": "C",
+    "explanation": "Velocity $v = \\frac{L}{t}$. Percentage error in $v$ is $\\frac{\\Delta v}{v} \\times 100\\% = \\left(\\frac{\\Delta L}{L} + \\frac{\\Delta t}{t}\\right) \\times 100\\% = \\left(\\frac{0.1}{20.5} + \\frac{0.05}{2.00}\\right) \\times 100\\% = (0.488\\% + 2.5\\%) \\approx 2.988\\% \\approx 3\\%$."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Kirchhoff's Voltage Law (KVL)",
+    "question": "In a series circuit with resistor voltage drops of 3V, 5V, and 4V, the source emf is",
+    "options": {
+      "A": "12 V",
+      "B": "4 V",
+      "C": "3 V",
+      "D": "8 V"
+    },
+    "correct_answer": "A",
+    "explanation": "By KVL, the total emf in a single closed series loop equals the sum of individual voltage drops: $E = 3\\text{V} + 5\\text{V} + 4\\text{V} = 12\\text{V}$."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Kirchhoff's Voltage Law (KVL)",
+    "question": "The instrument commonly used to measure potential difference across a resistor in a KVL experiment is",
+    "options": {
+      "A": "Voltmeter",
+      "B": "Ammeter",
+      "C": "Galvanometer",
+      "D": "Wheatstone bridge"
+    },
+    "correct_answer": "A",
+    "explanation": "A voltmeter is connected in parallel across a component to measure potential difference (voltage drop)."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Kirchhoff's Voltage Law (KVL)",
+    "question": "For a closed loop containing a source of emf $E$ and voltage drops $V_{1}$ and $V_{2}$, Kirchhoff's voltage law gives:",
+    "options": {
+      "A": "$E - V_1 - V_2 = 0$",
+      "B": "$V_1 - V_2 = E$",
+      "C": "$E + V_1 + V_2 = 0$",
+      "D": "$V_1 + V_2 = 0$"
+    },
+    "correct_answer": "A",
+    "explanation": "KVL states that the algebraic sum of all potential differences around any closed loop is zero. Traversing in the loop direction gives $E - V_1 - V_2 = 0$."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Kirchhoff's Voltage Law (KVL)",
+    "question": "In the verification of Kirchhoff voltage law, the algebraic sum of potential differences around a closed loop is",
+    "options": {
+      "A": "Equal to zero",
+      "B": "Equal to current",
+      "C": "Equal to resistance",
+      "D": "Equal to charge"
+    },
+    "correct_answer": "A",
+    "explanation": "According to KVL, $\\sum V = 0$ around any closed electrical loop."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Kirchhoff's Current Law (KCL)",
+    "question": "Kirchhoff's Current Law (KCL) is based on conservation of ____________.",
+    "options": {
+      "A": "Charge",
+      "B": "Momentum",
+      "C": "Energy",
+      "D": "Capacitance of a capacitor"
+    },
+    "correct_answer": "A",
+    "explanation": "KCL states that total current entering a node equals total current leaving it, which reflects the principle of conservation of electric charge."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Kirchhoff's Current Law (KCL)",
+    "question": "A major precaution in a KCL experiment is to ensure that all connections are ____________.",
+    "options": {
+      "A": "firm and tight",
+      "B": "heated continuously",
+      "C": "randomly arranged",
+      "D": "loosely connected"
+    },
+    "correct_answer": "A",
+    "explanation": "Loose connections introduce unwanted contact resistance, fluctuating current readings, and open circuit faults."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Kirchhoff's Current Law (KCL)",
+    "question": "If currents entering a node are 3A and 5A, the current leaving must be ____________.",
+    "options": {
+      "A": "8A",
+      "B": "5A",
+      "C": "0",
+      "D": "2A"
+    },
+    "correct_answer": "A",
+    "explanation": "By KCL, $\\sum I_{\\text{in}} = \\sum I_{\\text{out}}$. Therefore, $I_{\\text{out}} = 3\\text{A} + 5\\text{A} = 8\\text{A}$."
+  },
+  {
+    "course_code": "PHY 108",
+    "topic": "Experimental Error Analysis",
+    "question": "In an experiment, a student obtains a gradient of $15.8\\ \\Omega$ while the accepted resistance is $16.0\\ \\Omega$. The percentage error is ____________.",
+    "options": {
+      "A": "1.25%",
+      "B": "2%",
+      "C": "1.5%",
+      "D": "0.25%"
+    },
+    "correct_answer": "A",
+    "explanation": "Percentage Error $= \\frac{|\\text{Experimental} - \\text{Accepted}|}{\\text{Accepted}} \\times 100\\% = \\frac{|15.8 - 16.0|}{16.0} \\times 100\\% = \\frac{0.2}{16.0} \\times 100\\% = 1.25\\%$."
+  },
+  {
     "question": "A straight-line graph passing through the origin for a V-I plot confirms that the conductor is:",
     "options": [
       "A) ohmic",
@@ -506,8 +818,8 @@
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 1 (Weeks 1-4)",
-    "question": "According to Case Study 1, what is the primary objective of gathering multiple ruler measurements of a straight line?",
+    "topic": "Measurement Accuracy and Estimation",
+    "question": "What is the primary objective of gathering multiple ruler measurements of a straight line?",
     "options": {
       "A": "To mathematically change the slope-intercept form",
       "B": "To determine the absolute thermal expansion of the ruler",
@@ -515,11 +827,11 @@
       "D": "To verify that the ruler behaves as a non-ohmic conductor"
     },
     "correct_answer": "C",
-    "explanation": "Case Study 1 specifies that the primary objective is to ascertain the most likely length of a straight line through the calculation of an average from multiple measurements."
+    "explanation": "The primary objective of taking multiple repeated measurements of a straight line is to ascertain its most likely true length by calculating the mean."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 1 (Weeks 1-4)",
+    "topic": "Error Mitigation in Experimental Physics",
     "question": "How does calculating the average of multiple independent measurements benefit a physics experiment?",
     "options": {
       "A": "It removes the need to use a graph.",
@@ -528,7 +840,7 @@
       "D": "It isolates the x-intercept from the y-intercept."
     },
     "correct_answer": "C",
-    "explanation": "As stated in Case Study 1, taking the average enhances the accuracy of the estimation by effectively mitigating the influence of inherent errors in the measurement process."
+    "explanation": "Calculating the average of repeated independent observations enhances overall accuracy by mitigating the impact of random and inherent experimental errors."
   },
   {
     "course_code": "PHY 108",
@@ -623,8 +935,8 @@
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 1-4)",
-    "question": "According to Case Study 2, what primary function do resistors serve within standard electronic circuits?",
+    "topic": "Resistor Functionality",
+    "question": "What primary function do resistors serve within standard electronic circuits?",
     "options": {
       "A": "They act as one-way valves for light waves.",
       "B": "They are crucial components used to control current flow.",
@@ -632,12 +944,12 @@
       "D": "They track the atomic orientation of magnetic moments."
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 outlines that ohmic resistors serve as crucial components in electronic circuits to control current flow through materials."
+    "explanation": "Ohmic resistors serve as crucial components in electronic circuits to control current flow through materials."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 1-4)",
-    "question": "Which ohmic materials are highlighted in Case Study 2 as being commonly used to manufacture electrical transmission wires?",
+    "topic": "Transmission Wire Materials",
+    "question": "Which ohmic materials are commonly used to manufacture electrical transmission wires?",
     "options": {
       "A": "Silicon and germanium",
       "B": "Copper or aluminum",
@@ -645,12 +957,12 @@
       "D": "Carbon and asbestos"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 states that transmission wires are commonly composed of ohmic materials such as copper or aluminum."
+    "explanation": "Transmission wires are commonly composed of ohmic materials such as copper or aluminum due to their high conductivity."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 1-4)",
-    "question": "Which pair of ohmic materials is explicitly mentioned as being used in the heating elements of appliances like toasters and stoves?",
+    "topic": "Heating Element Materials",
+    "question": "Which pair of ohmic materials is explicitly used in the heating elements of appliances like toasters and stoves?",
     "options": {
       "A": "Copper and aluminum",
       "B": "Nichrome or tungsten",
@@ -658,12 +970,12 @@
       "D": "Silicon and plastic"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 notes that appliances like toasters and stoves utilize heating elements made of ohmic materials like nichrome or tungsten."
+    "explanation": "Appliances like toasters and stoves utilize heating elements made of ohmic materials with higher resistance, such as nichrome or tungsten."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 1-4)",
-    "question": "According to Case Study 2, why do light bulbs display non-ohmic behavior as they operate?",
+    "topic": "Non-Ohmic Behavior in Incandescent Bulbs",
+    "question": "Why do light bulbs display non-ohmic behavior as they operate?",
     "options": {
       "A": "Their resistance increases as they heat up.",
       "B": "Their resistance drops instantly to absolute zero.",
@@ -671,12 +983,12 @@
       "D": "They obey Boyle's Law under constant light."
     },
     "correct_answer": "A",
-    "explanation": "Case Study 2 explains that light bulbs are non-ohmic conductors where resistance increases as they heat up, resulting in a brighter glow."
+    "explanation": "Incandescent light bulbs are non-ohmic conductors where filament resistance increases as operating temperature rises."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 1-4)",
-    "question": "Which electronic component is described in the text as permitting a one-way current flow due to varying resistance in different directions?",
+    "topic": "Diode Characteristics",
+    "question": "Which electronic component permits a one-way current flow due to varying resistance in different directions?",
     "options": {
       "A": "A carbon resistor",
       "B": "A diode",
@@ -684,12 +996,12 @@
       "D": "A copper conduit"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 explicitly states that diodes permit one-way current flow due to their varying resistance in different directions."
+    "explanation": "Diodes permit one-way current flow because their effective resistance varies significantly depending on the polarity of the applied voltage."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 1-4)",
-    "question": "Based on Case Study 2, what primary dual functionalities do transistors offer in electronic systems?",
+    "topic": "Transistor Functionality",
+    "question": "What primary dual functionalities do transistors offer in electronic systems?",
     "options": {
       "A": "Heating elements and cooling reservoirs",
       "B": "Amplifiers or switches",
@@ -697,7 +1009,7 @@
       "D": "Pressure sensors and vacuum valves"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 defines transistors as acting as amplifiers or switches, offering versatile functionalities with resistance influenced by input parameters."
+    "explanation": "Transistors primarily function as amplifiers or switches in electronic systems, offering versatile control over current flow based on input parameters."
   },
   {
     "course_code": "PHY 108",
@@ -922,8 +1234,8 @@
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 1 (Weeks 5-8)",
-    "question": "According to Case Study 1, why was a strategic bank of capacitors deployed in the targeted industrial facility?",
+    "topic": "Power Factor Correction and Voltage Stability",
+    "question": "Why are strategic capacitor banks deployed in large industrial facilities?",
     "options": {
       "A": "To completely eliminate the need for ohmic conduits",
       "B": "To solve issues regarding voltage swings and anaemic power factors",
@@ -931,12 +1243,12 @@
       "D": "To verify Boyle's gas law on the factory floor"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 1 details a facility plagued by voltage swings and anaemic power factors, where a strategic bank of capacitors was deployed to handle these specific challenges."
+    "explanation": "Capacitor banks are deployed in industrial facilities to counteract inductive loads, thereby stabilizing voltage swings and improving poor power factors."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 1 (Weeks 5-8)",
-    "question": "In Case Study 1, by what percentage were mischievous voltage fluctuations reduced after installing the capacitor bank?",
+    "topic": "Industrial Power Factor Improvement",
+    "question": "By what percentage can unwanted voltage fluctuations typically be subdued after installing a properly sized capacitor bank in an industrial network?",
     "options": {
       "A": "10%",
       "B": "20%",
@@ -944,12 +1256,12 @@
       "D": "95%"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 1 states that following deployment, 'Voltage fluctuations, those mischievous imps, were subdued by a staggering 20%.'"
+    "explanation": "Installing dedicated capacitor banks helps smooth out transient load variations, reducing voltage fluctuations by approximately 20%."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 1 (Weeks 5-8)",
-    "question": "What change did the industrial facility experience in its power factor after the capacitor deployment described in Case Study 1?",
+    "topic": "Capacitor Bank Application",
+    "question": "What change in power factor can an industrial facility experience after deploying a strategic capacitor bank?",
     "options": {
       "A": "It dropped from 0.95 down to 0.8.",
       "B": "It rose from a sickly 0.8 to a robust 0.95.",
@@ -957,7 +1269,7 @@
       "D": "It fluctuated exponentially toward infinity."
     },
     "correct_answer": "B",
-    "explanation": "Case Study 1 reports that the power factor, 'once a sickly 0.8, was invigorated to a robust 0.95.'"
+    "explanation": "Capacitive reactive power compensates for lagging inductive loads, effectively raising a poor power factor (e.g., 0.8) to an efficient target value (e.g., 0.95)."
   },
   {
     "course_code": "PHY 108",
@@ -1000,8 +1312,8 @@
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 5-8)",
-    "question": "According to Case Study 2, how does the novel food packaging system utilize Boyle's Law to slow down food spoilage?",
+    "topic": "Boyle's Law in Vacuum Packaging",
+    "question": "How do advanced food packaging systems utilize Boyle's Law to slow down food spoilage?",
     "options": {
       "A": "By heating the food elements using tungsten wiring",
       "B": "By using a vacuum pump to whisk away air, creating a low-pressure haven",
@@ -1009,12 +1321,12 @@
       "D": "By increasing internal humidity using high-specific heat coolants"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 states that a vacuum pump whisks away air, creating a low-pressure haven that slows down spoilage based on Boyle's Law principles."
+    "explanation": "Vacuum packaging pumps whisk away air to establish a low-pressure environment, slowing down aerobic spoilage based on Boyle's Law principles."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 5-8)",
-    "question": "What device component in Case Study 2 maintains the ideal low-pressure environment if pressure inside the packaging rises?",
+    "topic": "Pressure Regulation in Sealed Systems",
+    "question": "What device component maintains an ideal low-pressure environment if pressure inside sealed packaging rises?",
     "options": {
       "A": "A composite wing layer",
       "B": "A vigilant sensor and valve that opens slightly",
@@ -1022,12 +1334,12 @@
       "D": "A high magnetic moment transistor"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 explains that 'the vigilant sensor keeps tabs on the pressure, and if it rises, the valve opens slightly, maintaining the ideal low-pressure environment.'"
+    "explanation": "A sensor continually monitors internal pressure, triggering a pressure valve to open slightly whenever pressure rises to preserve optimal low-pressure conditions."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 5-8)",
-    "question": "What were the astounding results of testing the Boyle's Law packaging system on fruits, vegetables, and meat?",
+    "topic": "Boyle's Law Packaging Performance",
+    "question": "What are the observed results of testing low-pressure Boyle's Law packaging systems on fresh produce and meat?",
     "options": {
       "A": "Food stayed fresh up to 10% longer with 5% waste reduction.",
       "B": "Food stayed fresh up to 30% longer, and waste was slashed by 20%.",
@@ -1035,7 +1347,7 @@
       "D": "The packaging became completely rigid and unbendable."
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 states: 'The results were astounding: food stayed fresh up to 30% longer, and waste was slashed by 20%.'"
+    "explanation": "Controlled low-pressure environments can extend food freshness by up to 30% and reduce food spoilage waste by 20%."
   },
   {
     "course_code": "PHY 108",
@@ -1156,8 +1468,8 @@
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 1 (Weeks 9-12)",
-    "question": "According to Case Study 1, how did XYZ Corporation successfully design more efficient smartphone speakers?",
+    "topic": "Magnetic Moments in Transducers",
+    "question": "How can engineers design more efficient audio drivers and smartphone speakers?",
     "options": {
       "A": "By utilizing materials with a very high Young's modulus",
       "B": "By implementing a material with a very high magnetic moment",
@@ -1165,11 +1477,11 @@
       "D": "By removing all internal non-ohmic transistors"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 1 for Weeks 9-12 states that XYZ Corporation developed a new speaker that uses a material with a very high magnetic moment to increase efficiency."
+    "explanation": "A material with a high magnetic moment allows speaker voice coils and transducers to generate stronger electromagnetic forces, boosting efficiency."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 1 (Weeks 9-12)",
+    "topic": "Acoustic Efficiency and Magnetism",
     "question": "Why does a material with a very high magnetic moment make a smartphone speaker more efficient?",
     "options": {
       "A": "It prevents the speaker from heating up via cooking properties.",
@@ -1178,7 +1490,7 @@
       "D": "It forces the current to adhere strictly to Ohm's Law."
     },
     "correct_answer": "B",
-    "explanation": "As stated in Case Study 1, the high magnetic moment speaker is more efficient 'because the new material can produce more sound with less energy.'"
+    "explanation": "Materials with a high magnetic moment require less electrical current to create strong mechanical displacements, allowing transducers to produce greater acoustic volume using less power."
   },
   {
     "course_code": "PHY 108",
@@ -1234,8 +1546,8 @@
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 9-12)",
-    "question": "According to Case Study 2, why is Young's modulus vital in the engineering design of aircraft wings?",
+    "topic": "Aerospace Elasticity Applications",
+    "question": "Why is Young's modulus vital in the engineering design of aircraft wings?",
     "options": {
       "A": "It determines the thermal capacity when flying through clouds.",
       "B": "It allows wings to maintain structural integrity after bending during flight.",
@@ -1243,12 +1555,12 @@
       "D": "It allows the wings to behave as active ohmic capacitors."
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 states that Young's modulus 'is crucial in selecting materials that allow wings to maintain structural integrity after bending during flight.'"
+    "explanation": "Evaluating Young's modulus ensures that aeronautical materials can withstand mechanical stress and flex under aerodynamic loads without undergoing permanent deformation."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 9-12)",
-    "question": "What practical experimental methodology is cited in Case Study 2 for determining a material's Young's modulus?",
+    "topic": "Mechanical Testing Methods",
+    "question": "What practical experimental methodology is used to determine a material's Young's modulus?",
     "options": {
       "A": "A vacuum chamber pressure test",
       "B": "A tensile test, measuring the force required to stretch a material",
@@ -1256,12 +1568,12 @@
       "D": "Plotting multiple ruler averages on a matrix"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 notes: 'Engineers typically determine Young's modulus through methods like tensile tests, where the force required to stretch a material is measured.'"
+    "explanation": "Tensile testing measures the amount of applied force required to stretch a specimen to determine its stress-to-strain ratio (Young's modulus)."
   },
   {
     "course_code": "PHY 108",
-    "topic": "Case Study 2 (Weeks 9-12)",
-    "question": "What engineering materials decision was implemented for the Boeing 787 Dreamliner wings to boost fuel efficiency and range?",
+    "topic": "Composite Material Engineering",
+    "question": "What engineering materials decision was implemented for Boeing 787 Dreamliner wings to boost fuel efficiency and range?",
     "options": {
       "A": "Using heavy pure tungsten sheets instead of nichrome elements",
       "B": "Opting for composite materials with a higher Young's modulus than traditional aluminium",
@@ -1269,6 +1581,6 @@
       "D": "Coating the aircraft body with high specific heat water reserves"
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 highlights that 'engineers opted for composite materials with a higher Young's modulus than traditional aluminium,' resulting in lighter, more efficient wings."
+    "explanation": "Selecting advanced composite materials with a higher stiffness-to-weight ratio (higher Young's modulus than traditional aluminum) reduces structural mass and improves fuel efficiency."
   }
 ]

@@ -1,6 +1,617 @@
 [
   {
     "course_code": "GST 122",
+    "topic": "Communication Skills in Marketing Teams",
+    "question": "What is the primary objective of investing in communication skills within a corporate marketing team?",
+    "options": {
+      "A": "To cut down the financial budget of the advertising department",
+      "B": "To showcase how investing in communication skills can elevate team collaboration",
+      "C": "To re-brand the logos and signs using semiotic theory",
+      "D": "To replace spoken communication with written emails completely"
+    },
+    "correct_answer": "B",
+    "explanation": "Investing in communication skills elevates team collaboration and fosters a dynamic, productive work environment."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Team Collaboration Methodology",
+    "question": "Which of the following elements forms a core part of a practical methodology for transforming team collaboration?",
+    "options": {
+      "A": "Financial auditing, payroll adjustments, and downsizings",
+      "B": "Skill-building sessions, Practical Application, and Feedback Mechanism",
+      "C": "Deductive arguments, vocabulary drills, and syllabic counting",
+      "D": "Pre-writing, summary writing, and post-writing editing"
+    },
+    "correct_answer": "B",
+    "explanation": "A structured program for enhancing workplace collaboration relies on skill-building sessions, real-world practical application, and effective feedback mechanisms."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Communication Training Outcomes",
+    "question": "What specific team achievement results from honing communication and collaboration skills during a major corporate milestone?",
+    "options": {
+      "A": "The seamless launch of a new product",
+      "B": "The restructuring of the corporate board of directors",
+      "C": "The complete elimination of grammatical errors in coding",
+      "D": "An overall reduction in public speaking hours"
+    },
+    "correct_answer": "A",
+    "explanation": "By honing communication skills, team members can effectively collaborate to navigate high-stakes projects like launching a new product."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Rule of Proximity in Work Environments",
+    "question": "What linguistic concept is directly examined when evaluating workplace project assignments and team allocations?",
+    "options": {
+      "A": "The rules of denotative lexicon",
+      "B": "The Rule of Proximity Agreement",
+      "C": "Syllabic stress patterns",
+      "D": "Active listening vs passive hearing"
+    },
+    "correct_answer": "B",
+    "explanation": "Workplace project assignments can be analyzed using the Rule of Proximity Agreement to see how syntax influences perceptions of duty and relationship."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Evaluating Workplace Scenarios",
+    "question": "What components comprise an effective methodology for analyzing workplace language scenarios?",
+    "options": {
+      "A": "Grammatical parsing, sentence stress mapping, and vocal tests",
+      "B": "Scenario setup, Variation in Proximity, and Participant Response",
+      "C": "Brainstorming, editing, and technical proofreading",
+      "D": "Central thesis formulation, deductive logic, and counterarguments"
+    },
+    "correct_answer": "B",
+    "explanation": "Evaluating linguistic impact in practical scenarios involves establishing a scenario setup, applying variations in proximity/structure, and evaluating participant responses."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Impact of Linguistic Choices on Teams",
+    "question": "According to workplace communication analysis, how do grammatical choices impact project teams?",
+    "options": {
+      "A": "They dictate the visual color scheme of promotional materials.",
+      "B": "They influence how team members attribute responsibility, success, or challenges.",
+      "C": "They eliminate the necessity for feedback mechanisms.",
+      "D": "They increase the time spent on reading comprehension tasks."
+    },
+    "correct_answer": "B",
+    "explanation": "Linguistic choices significantly influence how team members attribute responsibility, success, or challenges in collaborative tasks."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Business Proposal Optimization Methodology",
+    "question": "What methodology is applied to systematically optimize the creation of a formal business proposal?",
+    "options": {
+      "A": "Auditory listening drills and participant feedback forms",
+      "B": "Pre-writing phase, writing phase, and post-writing phase",
+      "C": "Deductive reasoning framework and counterargument refutation",
+      "D": "Vocabulary substitution using context clues"
+    },
+    "correct_answer": "B",
+    "explanation": "Optimizing a formal business proposal requires systematically working through the pre-writing phase, drafting phase, and post-writing refinement phase."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Core Reading Strategies",
+    "question": "Which of the following is explicitly categorized as an active reading strategy for critical comprehension?",
+    "options": {
+      "A": "Brainstorming and outlining",
+      "B": "Context clues, fact-opinion distinction, and drawing inferences",
+      "C": "Sentence stress manipulation and phonetic accenting",
+      "D": "Vocal control adjustment and eye contact"
+    },
+    "correct_answer": "B",
+    "explanation": "Essential reading comprehension strategies include utilizing context clues, distinguishing facts from opinions, and drawing logical inferences."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Critical Analysis Exercise Framework",
+    "question": "What are the core components of a framework designed to develop critical reading and analysis skills?",
+    "options": {
+      "A": "Pre-writing, writing, and post-writing review",
+      "B": "Reading tasks, Critical analysis exercises, and Feedback and Reflection",
+      "C": "Vocal tracking, stress analysis, and structural layout",
+      "D": "Scenario creation, proximity shifts, and feedback logging"
+    },
+    "correct_answer": "B",
+    "explanation": "Developing critical reading abilities relies on structured reading tasks, targeted critical analysis exercises, and feedback with reflection."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Deconstructing Sentence Structure",
+    "question": "In oral communication, what primary concept focuses on deconstructing spoken sentences by shifting emphasis?",
+    "options": {
+      "A": "The Art of Public Speaking: Beyond Words",
+      "B": "The Power of Stress: Deconstructing a Sentence",
+      "C": "Impact of Reading Strategies on Critical Analysis",
+      "D": "Navigating Proximity in Team Project Assignments"
+    },
+    "correct_answer": "B",
+    "explanation": "Deconstructing sentence stress examines how moving emphasis across words fundamentally alters the meaning conveyed in speech."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Sentence Stress Analysis Example",
+    "question": "Which specific sample sentence is frequently analyzed to demonstrate how varying stress patterns alter implied meaning?",
+    "options": {
+      "A": "I never said we should write a business report.",
+      "B": "I didn't say you should bring coffee.",
+      "C": "Effective communication is crucial for marketing teams.",
+      "D": "Hearing is passive while active listening is voluntary."
+    },
+    "correct_answer": "B",
+    "explanation": "The sentence 'I didn't say you should bring coffee' serves as a benchmark example where shifting stress onto any word changes the implied statement."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Nature of Sentence Stress",
+    "question": "What does linguistic analysis conclude regarding the nature of sentence stress in speech?",
+    "options": {
+      "A": "It is completely static and irrelevant to everyday context.",
+      "B": "It showcases an ability to influence the listener's perception and understanding of the speaker's message.",
+      "C": "It acts as a substitute for written letter writing conventions.",
+      "D": "It eliminates the need for deductive logical arguments."
+    },
+    "correct_answer": "B",
+    "explanation": "Sentence stress is dynamic and heavily dictates how a listener perceives, interprets, and understands a speaker's intended message."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Multimodal Public Speaking",
+    "question": "In effective public speaking, what does comprehensive communication examine beyond literal text content?",
+    "options": {
+      "A": "How pre-writing structures optimize business proposals",
+      "B": "How language, vocal variety, and physical aspects contribute to effective communication beyond literal text content",
+      "C": "How the proximity rule creates confusion in project allocations",
+      "D": "How context clues change our reading comprehension strategies"
+    },
+    "correct_answer": "B",
+    "explanation": "Beyond spoken or written words, oral delivery depends heavily on word selection, vocal variety, and non-verbal physical presence."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Public Speaking Language Techniques",
+    "question": "Which language elements are specifically analyzed to measure their direct impact on audience engagement during a presentation?",
+    "options": {
+      "A": "Prefixes, suffixes, and root compound words",
+      "B": "Diction and repetition",
+      "C": "Synonyms and formal definitions",
+      "D": "Outlining and proofreading marks"
+    },
+    "correct_answer": "B",
+    "explanation": "Strategic diction (word choice) and deliberate repetition are powerful linguistic tools for engaging and persuading an audience."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Physical Aspects of Public Speaking",
+    "question": "Which physical aspects of presentation delivery are crucial for engaging an audience during a live speech?",
+    "options": {
+      "A": "Handwriting posture and alignment",
+      "B": "Gestures, eye contact, and stage utilisation",
+      "C": "Passive hearing and deductive positioning",
+      "D": "Brainstorming maps and outline notes"
+    },
+    "correct_answer": "B",
+    "explanation": "Non-verbal delivery relies on purposeful gestures, direct eye contact, and effective stage utilization to command attention."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Presentation Delivery Impact",
+    "question": "What is vital for ensuring an oral presentation achieves maximum impact on an audience?",
+    "options": {
+      "A": "Relying exclusively on the literal words written on paper",
+      "B": "Considering not only the words spoken but also how they are delivered",
+      "C": "Avoiding vocal variety to maintain a perfectly flat monotone tone",
+      "D": "Limiting public delivery exclusively to online platforms"
+    },
+    "correct_answer": "B",
+    "explanation": "Maximum communication impact requires balancing verbal content ('what is said') with delivery dynamics ('how it is said')."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Marketing Team Communication Outcomes",
+    "question": "What corporate change occurs within a team after systematically honing their communication skills?",
+    "options": {
+      "A": "A noticeable decrease in creative output",
+      "B": "A noticeable improvement in team collaboration and project outcomes",
+      "C": "An increase in conflict and project delays",
+      "D": "A complete shift from verbal tasks to reading exercises"
+    },
+    "correct_answer": "B",
+    "explanation": "Honing professional communication skills produces noticeable improvements in team collaboration, efficiency, and project outcomes."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Rule of Proximity Workplace Context",
+    "question": "Why is the Rule of Proximity Agreement considered paramount in collaborative workplace settings?",
+    "options": {
+      "A": "It determines the physical distance between office desks.",
+      "B": "It influences the perceived accountability of team members in project assignments.",
+      "C": "It dictates the corporate dress code requirements.",
+      "D": "It measures the speed of email transmission."
+    },
+    "correct_answer": "B",
+    "explanation": "Grammatical proximity rules influence how team members perceive accountability and responsibility when reviewing shared project assignments."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Language Precision in Teams",
+    "question": "Practical workplace scenarios emphasize a strong need for what key feature in collaborative environments?",
+    "options": {
+      "A": "Highly elaborate, fancy prose styles",
+      "B": "Precise language",
+      "C": "Monotone vocal patterns",
+      "D": "Unstructured reporting frameworks"
+    },
+    "correct_answer": "B",
+    "explanation": "Collaborative environments demand precise language to prevent misunderstandings, establish clarity, and maintain workplace accountability."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Business Proposal Preparation",
+    "question": "When creating a business proposal, what does careful planning and meticulous refinement optimize?",
+    "options": {
+      "A": "A live public speech",
+      "B": "The creation of a business proposal",
+      "C": "Auditory hearing comprehension",
+      "D": "A casual personal letter"
+    },
+    "correct_answer": "B",
+    "explanation": "Thorough pre-writing planning and post-writing editing directly optimize the structure, persuasiveness, and quality of a business proposal."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Reading Strategy Outcomes",
+    "question": "Systematically applying reading strategies demonstrates a direct positive correlation with which skill?",
+    "options": {
+      "A": "Vocal control development",
+      "B": "Improved critical analysis skills",
+      "C": "Proximity concord matching",
+      "D": "Diction repetition tracking"
+    },
+    "correct_answer": "B",
+    "explanation": "Systematically practicing reading strategies like inferencing and distinguishing facts from opinions directly enhances critical analysis skills."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Sentence Stress Analysis Method",
+    "question": "What action is taken during phonetic analysis to observe shifts in spoken sentence meaning?",
+    "options": {
+      "A": "Adding structural definitions from basic workbooks",
+      "B": "Deconstructing a sentence by emphasizing different words",
+      "C": "Changing the proximity matching of the verbs",
+      "D": "Replacing nouns with synonyms"
+    },
+    "correct_answer": "B",
+    "explanation": "Deconstructing a sentence by placing vocal emphasis on different words illustrates how spoken meaning shifts dynamically."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Reasoning Patterns",
+    "question": "When a speaker draws a specific conclusion from general premises, they are utilizing which reasoning form?",
+    "options": {
+      "A": "Inductive reasoning",
+      "B": "Deductive reasoning",
+      "C": "Emotional reasoning",
+      "D": "Verbal reasoning"
+    },
+    "correct_answer": "B",
+    "explanation": "Deductive reasoning moves from general premises or universal rules down to specific, logical conclusions."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Beyond Words Public Speaking",
+    "question": "What factors contribute to effective communication in public speaking beyond the literal text content?",
+    "options": {
+      "A": "Pre-writing and post-writing checklists",
+      "B": "Language choices, vocal variety, and physical aspects",
+      "C": "Dictionary indexes and technical spellings",
+      "D": "Deductive premises and factual reading clues"
+    },
+    "correct_answer": "B",
+    "explanation": "Effective public speaking relies on non-verbal elements, including diction, vocal inflection, body language, and stage movement, alongside the written message."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Course Synthesization",
+    "question": "Ultimately, GST 122 framework shows that effective language expression combines which two broad domains?",
+    "options": {
+      "A": "Technical coding and financial reporting forms",
+      "B": "Written literacy processes and spoken delivery dynamics",
+      "C": "Rote reading and passive hearing styles",
+      "D": "Dictionary definitions and culinary experiments"
+    },
+    "correct_answer": "B",
+    "explanation": "Comprehensive communication mastery integrates both written literacy skills (planning, drafting, editing) and spoken delivery dynamics (speech, stress, active listening)."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Aims of Writing",
+    "question": "A student is writing an essay about the impact of social media on teen mental health. Their goal is to present statistics from peer-reviewed studies and expert opinions to convince the reader that social media has a net negative effect. Which of the four basic aims of writing is this student primarily pursuing?",
+    "options": {
+      "A": "To inform",
+      "B": "To persuade",
+      "C": "To express",
+      "D": "To be creative"
+    },
+    "correct_answer": "B",
+    "explanation": "The key keyword in the question is 'convince.' Whenever a writer's primary goal is to convince an audience to accept a specific viewpoint or take a certain stance using evidence (like statistics and expert opinions), the aim is persuasive writing. Informative writing only aims to share facts neutrally, expressive writing focuses on personal feelings, and creative writing focuses on artistic storytelling."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Qualities of Good Writing",
+    "question": "In a writing workshop, a peer reviewer comments that an essay 'jumps from one idea to the next without any logical flow.' Which quality of good writing is the essay most lacking?",
+    "options": {
+      "A": "Unity",
+      "B": "Cohesion",
+      "C": "Coherence",
+      "D": "Simplicity"
+    },
+    "correct_answer": "C",
+    "explanation": "Coherence refers to how well a piece of writing structurally builds connection and logical flow between thoughts, paragraphs, and sections. When an essay 'jumps' abruptly between ideas without establishing a clear path or clear transitions, the reader loses the underlying connection, meaning the text lacks coherence."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "A writer is working on the first draft of a short story. According to the writing process outlined in the material, what should be their primary focus at this stage?",
+    "options": {
+      "A": "Correcting all punctuation and spelling errors to ensure clarity.",
+      "B": "Discovering, creating, and clarifying ideas without worrying about perfection.",
+      "C": "Formatting the document according to strict publication guidelines.",
+      "D": "Researching the biography of other famous short story writers for inspiration."
+    },
+    "correct_answer": "B",
+    "explanation": "During the drafting phase of the writing process, the primary goal is getting ideas down on paper. Worrying about mechanics, formatting, or technical perfection happens later during the editing and proofreading stages."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Aims of Writing",
+    "question": "A blogger wants to write a post about their travel experience to inspire readers to visit a new city. The primary purpose of this writing is to:",
+    "options": {
+      "A": "Inform",
+      "B": "Express",
+      "C": "Persuade",
+      "D": "Create a factual record"
+    },
+    "correct_answer": "C",
+    "explanation": "The keyword here is 'inspire readers to visit.' When writing aims to motivate an audience to take a specific action, adopt an attitude, or follow a recommendation, the core purpose falls under persuasion. While travel blogs contain information and personal expression, the ultimate objective in this scenario is to convince the audience to go to that city."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Qualities of Good Writing",
+    "question": "A writer is composing an email to a potential employer. They need to decide between using the word 'utilize' or 'use.' To ensure the message is clear and effective, which quality of good writing should guide their choice?",
+    "options": {
+      "A": "Unity",
+      "B": "Conciseness",
+      "C": "Coherence",
+      "D": "Clarity"
+    },
+    "correct_answer": "D",
+    "explanation": "Choosing straightforward, ordinary words like 'use' instead of overly complicated or formal ones like 'utilize' directly enhances the clarity of the writing. It makes the message easy to read and understand instantly, which is vital when emailing a potential employer."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Qualities of Good Writing",
+    "question": "A student's essay has perfect grammar, spelling, and sentence structure but fails to convey any meaningful argument or insight about the topic. The writing is technically correct but lacks:",
+    "options": {
+      "A": "A substantial message or idea",
+      "B": "A coherent structure",
+      "C": "A clear sense of the audience",
+      "D": "Proper use of transitional words"
+    },
+    "correct_answer": "A",
+    "explanation": "Good writing requires substance, not just mechanical perfection. While grammar, spelling, and sentence structures are flawless, the core purpose of writing is to communicate an important thought, perspective, or argument. Lacking any deep insight means the writing is empty of a substantial message or idea."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Outlining and Structure",
+    "question": "When creating an outline, a writer moves from the general idea of 'Effects of Social Media' to more specific points like 'Effects on Communication' and then to even more minute details like 'Decreased face-to-face interaction.' This process is known as:",
+    "options": {
+      "A": "Structuring the conclusion.",
+      "B": "Writing a thesis statement.",
+      "C": "Identifying and organising ideas into a hierarchy.",
+      "D": "Brainstorming for a topic."
+    },
+    "correct_answer": "C",
+    "explanation": "Outlining is fundamentally an organizational step. Moving from a broad, general theme downward to specific categories and further down to sub-points creates a structured, tiered system. This specific progression from general to minute detail represents organising ideas into a hierarchy."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Qualities of Good Writing",
+    "question": "After completing a draft of an essay, a student realizes that some sentences are too long and complex, making the main point difficult to grasp. This is a problem with the quality of:",
+    "options": {
+      "A": "Unity",
+      "B": "Economy and Simplicity",
+      "C": "The thesis statement",
+      "D": "Audience awareness only"
+    },
+    "correct_answer": "B",
+    "explanation": "The keywords here are 'too long and complex.' Economy in writing means avoiding unnecessary wordiness and cutting out fluff, while simplicity means using clear, direct language instead of overly complicated structures. When sentences become overly long and wound up to the point of hiding the main message, the text directly lacks economy and simplicity."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Public Speaking",
+    "question": "Which scenario describes an informative speech?",
+    "options": {
+      "A": "A politician urging citizens to vote for a specific candidate",
+      "B": "A teacher explaining the causes of World War II to history students",
+      "C": "A salesperson convincing a customer to buy a product",
+      "D": "An activist encouraging protest participation"
+    },
+    "correct_answer": "B",
+    "explanation": "An informative speech aims to enlighten, educate, or explain a topic neutrally without trying to change the audience's mind. A history lesson explaining historical facts fits this definition."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Public Speaking",
+    "question": "A speaker delivering a demonstrative speech on how to repair a bicycle should prioritize which element?",
+    "options": {
+      "A": "Abstract theories about bicycle mechanics",
+      "B": "Statistical data on bicycle accidents",
+      "C": "Practical demonstration with visual aids",
+      "D": "Historical development of bicycles"
+    },
+    "correct_answer": "C",
+    "explanation": "A demonstrative speech focuses entirely on teaching the audience how to do something or how something works. Showing physical steps, actions, or tools visually is crucial for a step-by-step task like mechanical repair."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Vowels",
+    "question": "The vowel sound in the word 'sheep' is represented by which phonetic symbol?",
+    "options": {
+      "A": "/ɪ/",
+      "B": "/e/",
+      "C": "/i:/",
+      "D": "/æ/"
+    },
+    "correct_answer": "C",
+    "explanation": "The word 'sheep' features a long 'ee' sound, which is represented in the International Phonetic Alphabet (IPA) by the symbol /i:/ (the colon indicates a lengthened sound)."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Vowels",
+    "question": "The vowel sound in the word 'sit' is represented by which phonetic symbol?",
+    "options": {
+      "A": "/ɪ/",
+      "B": "/i:/",
+      "C": "/e/",
+      "D": "/ʌ/"
+    },
+    "correct_answer": "A",
+    "explanation": "The word 'sit' contains a short vowel sound, which is represented in the International Phonetic Alphabet (IPA) by the symbol /ɪ/."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Vowels",
+    "question": "A language learner pronounces 'ship' and 'sheep' identically. This learner most likely struggles with distinguishing:",
+    "options": {
+      "A": "Consonant sounds",
+      "B": "Long and short vowel sounds",
+      "C": "Diphthongs",
+      "D": "Stress patterns"
+    },
+    "correct_answer": "B",
+    "explanation": "The words 'ship' and 'sheep' form a minimal pair distinguished entirely by their vowel length and quality. 'Ship' uses the short vowel sound /ɪ/, while 'sheep' uses the long vowel sound /i:/."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Syllable Stress",
+    "question": "The word 'photograph' has primary stress on which syllable?",
+    "options": {
+      "A": "First syllable (pho-)",
+      "B": "Second syllable (to-)",
+      "C": "Third syllable (graph)",
+      "D": "Equal stress on all syllables"
+    },
+    "correct_answer": "A",
+    "explanation": "In the noun 'photograph', the primary emphasis is placed on the very first syllable: PHO-to-graph (/ˈfəʊ.tə.ɡrɑːf/)."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Syllable Stress",
+    "question": "When the word 'record' functions as a noun, the stress pattern is:",
+    "options": {
+      "A": "re'cord (second syllable stressed)",
+      "B": "'record (first syllable stressed)",
+      "C": "Equal stress on both syllables",
+      "D": "No stress on either syllable"
+    },
+    "correct_answer": "B",
+    "explanation": "When 'record' functions as a noun (e.g., a world record), the stress falls on the first syllable (/ˈrek.ɔːd/). When it functions as a verb, the stress shifts to the second syllable."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Consonants",
+    "question": "The consonant sound in the middle of 'measure' is represented by which symbol?",
+    "options": {
+      "A": "/ʒ/",
+      "B": "/z/",
+      "C": "/dʒ/",
+      "D": "/ʃ/"
+    },
+    "correct_answer": "A",
+    "explanation": "The word 'measure' contains the voiced postalveolar fricative sound in its middle syllable, which is represented in the International Phonetic Alphabet (IPA) by the symbol /ʒ/."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Intonation",
+    "question": "A speaker uses rising pitch at the end of the sentence 'You're coming to the party?' This intonation pattern typically indicates:",
+    "options": {
+      "A": "A statement of fact",
+      "B": "A command",
+      "C": "A question",
+      "D": "Excitement only"
+    },
+    "correct_answer": "C",
+    "explanation": "In English, a rising intonation pattern at the end of a sentence is typically used to signal a question, especially yes/no questions or declarative questions."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Accents and Dialects",
+    "question": "A student from northern Nigeria pronounces 'path' with a short 'a' sound (as in 'cat'), while a student from southern England pronounces it with a long 'a' sound (as in 'father'). This difference illustrates:",
+    "options": {
+      "A": "Intonation variation",
+      "B": "Accent difference",
+      "C": "Grammatical error",
+      "D": "Vocabulary choice"
+    },
+    "correct_answer": "B",
+    "explanation": "The variation described is an accent difference, specifically referring to regional pronunciations of the same word (known in linguistics as the TRAP-BATH split)."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Vowels",
+    "question": "The phonetic symbol /ə/ (schwa) appears in which word?",
+    "options": {
+      "A": "dog",
+      "B": "above (the first vowel)",
+      "C": "sheep",
+      "D": "moon"
+    },
+    "correct_answer": "B",
+    "explanation": "The schwa (/ə/) is the most common vowel sound in the English language and always occurs in unstressed syllables. In the word 'above' (/əˈbʌv/), the first syllable is unstressed and pronounced as a schwa."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Vowels",
+    "question": "Which word contains a diphthong?",
+    "options": {
+      "A": "cat",
+      "B": "bed",
+      "C": "time",
+      "D": "put"
+    },
+    "correct_answer": "C",
+    "explanation": "The word 'time' contains the diphthong /aɪ/, where the vowel sound glides from one vowel target to another within the same syllable."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Communication Ethics",
+    "question": "A speaker tells a joke during a funeral eulogy. While humor can be healing, this approach risks being inappropriate if it:",
+    "options": {
+      "A": "Is brief and subtle",
+      "B": "Makes light of the audience's grief",
+      "C": "References positive memories of the deceased",
+      "D": "Helps mourners remember happy times"
+    },
+    "correct_answer": "B",
+    "explanation": "When analyzing contextual and situational communication ethics, humor must respect the emotional boundaries of the audience. Minimizing or trivializing the authentic grief of attendees is inherently counterproductive and inappropriate for a funeral setting."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Public Speaking",
+    "question": "A public speaker addresses an audience of teenagers about the dangers of substance abuse. To be most effective, the speaker should:",
+    "options": {
+      "A": "Use complex medical terminology to demonstrate expertise",
+      "B": "Ignore the audience's age and deliver a standard presentation",
+      "C": "Speak only about personal experiences without evidence",
+      "D": "Consider the audience's experiences and use relatable examples"
+    },
+    "correct_answer": "D",
+    "explanation": "Effective public speaking relies heavily on audience analysis and adaptation. When speaking to teenagers, adapting content specifically to their demographic by using relatable examples makes the message most impactful."
+  },
+  {
+    "course_code": "GST 122",
     "topic": "Letter Writing",
     "question": "The closing part of a letter should mainly ___.",
     "options": {
@@ -207,19 +818,7 @@
     "correct_answer": "B",
     "explanation": "'Elaborate' indicates that something is highly intricate, deeply detailed, or complex, making it tricky to process easily."
   },
-  {
-    "course_code": "GST 122",
-    "topic": "Reading Comprehension",
-    "question": "Based on the passage provided, what was the major impact of the printing press?",
-    "options": {
-      "A": "It reduced the number of books available.",
-      "B": "It made handwritten texts more valuable.",
-      "C": "It increased access to knowledge and ideas.",
-      "D": "It limited communication to religious groups"
-    },
-    "correct_answer": "C",
-    "explanation": "The text states that mass production allowed information to spread quickly and boosted literacy rates, which increased overall access to knowledge and new ideas."
-  },
+
   {
     "course_code": "GST 122",
     "topic": "Types of Essays",
@@ -311,19 +910,7 @@
     "correct_answer": "D",
     "explanation": "Paragraph unity demands that every sentence supports the central topic sentence. Introducing completely random subjects breaks this unity."
   },
-  {
-    "course_code": "GST 122",
-    "topic": "Reading Comprehension",
-    "question": "Based on the passage provided, what can be inferred about noise regulations?",
-    "options": {
-      "A": "They exist but are not always effectively applied.",
-      "B": "They are unnecessary in urban areas.",
-      "C": "They are perfectly implemented everywhere.",
-      "D": "They only apply to construction workers."
-    },
-    "correct_answer": "A",
-    "explanation": "The text states that although rules have been set up, 'enforcement remains inconsistent,' meaning they exist but are not always effectively applied."
-  },
+
   {
     "course_code": "GST 122",
     "topic": "Paragraph Structure",
@@ -427,8 +1014,7 @@
     },
     "correct_answer": "B",
     "explanation": "Defining key abstract terms early on ensures writer and reader share a common vocabulary baseline before diving into deeper arguments."
-  },
-  {
+  },{
     "course_code": "GST 122",
     "topic": "Types of Essays",
     "question": "A student describes a festival by mentioning the smell of grilled fish, the drumbeats, bright costumes, and the rough ground underfoot. This is mainly ____.",
@@ -522,7 +1108,7 @@
   {
     "course_code": "GST 122",
     "topic": "Introduction to Communication",
-    "question": "According to the Week 1 summary, what is the primary focus of effective communication?",
+    "question": "What is the primary focus of effective communication?",
     "options": {
       "A": "Using large and sophisticated vocabulary words",
       "B": "Expressing oneself effectively and conveying meaning accurately",
@@ -530,12 +1116,12 @@
       "D": "Strictly limiting speech to professional environments"
     },
     "correct_answer": "B",
-    "explanation": "The summary explicitly highlights that communication is more about expressing ideas well and ensuring meaning is accurately conveyed rather than using fancy words or big grammar."
+    "explanation": "Communication is primarily about expressing ideas well and ensuring meaning is accurately conveyed rather than using fancy words or big grammar."
   },
   {
     "course_code": "GST 122",
     "topic": "Importance of Communication Skills",
-    "question": "In which fields or contexts is effective communication deemed crucial within the course summary?",
+    "question": "In which fields or contexts is effective communication deemed crucial?",
     "options": {
       "A": "Only during English language examinations",
       "B": "Exclusively in formal corporate boardrooms",
@@ -543,12 +1129,12 @@
       "D": "Mainly in written programming languages"
     },
     "correct_answer": "C",
-    "explanation": "The text notes that effective communication skills are crucial across your English class, job/career, personal business, other studies, and everyday life."
+    "explanation": "Effective communication skills are crucial across academic studies, job/career environments, personal business, and everyday life."
   },
   {
     "course_code": "GST 122",
     "topic": "Grammar and Cognitive Skills",
-    "question": "Paying close attention to grammar helps boost which cognitive abilities according to the summary?",
+    "question": "Paying close attention to grammar helps boost which cognitive abilities?",
     "options": {
       "A": "Rote memorization and auditory recall",
       "B": "Critical thinking and problem-solving skills",
@@ -556,7 +1142,7 @@
       "D": "Speed-reading and shorthand writing"
     },
     "correct_answer": "B",
-    "explanation": "The bullet point summary for Weeks 1-4 explicitly states that paying attention to grammar helps improve critical thinking and problem-solving."
+    "explanation": "Paying attention to grammatical structure and sentence organization helps sharpen critical thinking and problem-solving skills."
   },
   {
     "course_code": "GST 122",
@@ -569,7 +1155,7 @@
       "D": "Orthography"
     },
     "correct_answer": "B",
-    "explanation": "The summary notes that beyond words, communication involves signs and symbols, which constitutes the field of semiotics."
+    "explanation": "Beyond words, human communication incorporates non-verbal signs and symbols, which constitutes the field of semiotics."
   },
   {
     "course_code": "GST 122",
@@ -582,7 +1168,7 @@
       "D": "Their alphabetic layout and phonetic symbols"
     },
     "correct_answer": "B",
-    "explanation": "The Weeks 1-4 summary notes that effective communication requires being mindful of the broader cultural and emotional associations of words."
+    "explanation": "Effective communication requires being mindful of connotative meanings, including broader cultural and emotional associations of words."
   },
   {
     "course_code": "GST 122",
@@ -595,7 +1181,7 @@
       "D": "Semantics"
     },
     "correct_answer": "B",
-    "explanation": "The Week 3 summary defines Concord as a set of rules governing the agreement between different elements in a sentence to ensure linguistic harmony."
+    "explanation": "Concord is defined as the system of rules governing agreement between sentence components (e.g., subject-verb agreement) to maintain proper linguistic harmony."
   },
   {
     "course_code": "GST 122",
@@ -608,12 +1194,12 @@
       "D": "The sentence must omit conjunctions completely."
     },
     "correct_answer": "B",
-    "explanation": "The summary defines the Rule of Proximity Agreement as requiring the verb or noun to align with the closest subject in sentences with multiple elements."
+    "explanation": "The Rule of Proximity Agreement dictates that when a sentence features compound subjects connected by certain conjunctions, the verb agrees with whichever subject is physically nearest to it."
   },
   {
     "course_code": "GST 122",
     "topic": "Writing Strategies",
-    "question": "In the fourth week summary, a parallel is drawn between the diverse landscape of writing strategies and what external field?",
+    "question": "A parallel is often drawn between the diverse landscape of writing strategies and what external field?",
     "options": {
       "A": "The world of programming languages",
       "B": "Architectural design principles",
@@ -621,90 +1207,12 @@
       "D": "Legal litigations and briefs"
     },
     "correct_answer": "A",
-    "explanation": "The Week 4 text states that they navigated writing strategies by 'drawing parallels between the world of programming languages and the art of effective communication.'"
+    "explanation": "Writing strategies can be conceptualized by drawing parallels between structured rules in computer programming languages and formal principles of communication."
   },
   {
     "course_code": "GST 122",
-    "topic": "Case Study 1 (Weeks 1-4)",
-    "question": "What was the primary objective of Case Study 1 involving the corporate marketing team?",
-    "options": {
-      "A": "To cut down the financial budget of the advertising department",
-      "B": "To showcase how investing in communication skills can elevate team collaboration",
-      "C": "To re-brand the logos and signs using semiotic theory",
-      "D": "To replace spoken communication with written emails completely"
-    },
-    "correct_answer": "B",
-    "explanation": "The objective stated in Case Study 1 is to showcase how investing in communication skills can elevate team collaboration and foster a dynamic work environment."
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 1 Methodology",
-    "question": "Which of the following elements was part of the methodology in Case Study 1 (Transforming Marketing Team Collaboration)?",
-    "options": {
-      "A": "Financial auditing, payroll adjustments, and downsizings",
-      "B": "Skill-building sessions, Practical Application, and Feedback Mechanism",
-      "C": "Deductive arguments, vocabulary drills, and syllabic counting",
-      "D": "Pre-writing, summary writing, and post-writing editing"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 1 explicitly lists its methodology as: 'Skill-building sessions, Practical Application, and Feedback Mechanism.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 1 Conclusion",
-    "question": "What specific team achievement was highlighted in the conclusion of Case Study 1?",
-    "options": {
-      "A": "The seamless launch of a new product",
-      "B": "The restructuring of the corporate board of directors",
-      "C": "The complete elimination of grammatical errors in coding",
-      "D": "An overall reduction in public speaking hours"
-    },
-    "correct_answer": "A",
-    "explanation": "The conclusion of Case Study 1 mentions that by honing their skills, team members seamlessly navigated the challenges of launching a new product."
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 2 (Weeks 1-4)",
-    "question": "What linguistic concept is examined in Case Study 2 in relation to workplace project assignments?",
-    "options": {
-      "A": "The rules of denotative lexicon",
-      "B": "The Rule of Proximity Agreement",
-      "C": "Syllabic stress patterns",
-      "D": "Active listening vs passive hearing"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 2 is explicitly titled 'Navigating Proximity in Team Project Assignments' and explores the Rule of Proximity Agreement."
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 2 Methodology",
-    "question": "What components comprised the methodology used in Case Study 2?",
-    "options": {
-      "A": "Grammatical parsing, sentence stress mapping, and vocal tests",
-      "B": "Scenario setup, Variation in Proximity, and Participant Response",
-      "C": "Brainstorming, editing, and technical proofreading",
-      "D": "Central thesis formulation, deductive logic, and counterarguments"
-    },
-    "correct_answer": "B",
-    "explanation": "The methodology block for Case Study 2 explicitly lists 'Scenario setup, Variation in Proximity, and Participant Response.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 2 Conclusion",
-    "question": "According to the conclusion of Case Study 2, how do linguistic choices impact project teams?",
-    "options": {
-      "A": "They dictate the visual color scheme of promotional materials.",
-      "B": "They influence how team members attribute responsibility, success, or challenges.",
-      "C": "They eliminate the necessity for feedback mechanisms.",
-      "D": "They increase the time spent on reading comprehension tasks."
-    },
-    "correct_answer": "B",
-    "explanation": "The conclusion states that the application of the rule significantly impacts how team members attribute success or challenges, emphasizing the real-world implications of language on perceived responsibility."
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Acquired Skills (Weeks 1-4)",
-    "question": "Which set of competencies is NOT specifically listed as acquired after Weeks 1-4?",
+    "topic": "Acquired Skills",
+    "question": "Which set of competencies is NOT specifically considered a core language/communication skill?",
     "options": {
       "A": "Active Listening, Effective Speaking, and Persuasive Writing",
       "B": "Semiotic Awareness, Concord Proficiency, and Cultural Sensitivity",
@@ -712,12 +1220,13 @@
       "D": "Clarity in Expression, Conflict Resolution, and Conjunction Mastery"
     },
     "correct_answer": "C",
-    "explanation": "Skills like computing, auditing, and graphic design are not listed. The skills listed include Active Listening, Concord Proficiency, Semiotic Awareness, etc."
+    "explanation": "Advanced statistical computing, financial auditing, and graphic design are specialized technical/business competencies rather than core general communication skills."
   },
+  [
   {
     "course_code": "GST 122",
     "topic": "Writing Process Phases",
-    "question": "Week 5 explores two integral phases of the writing process. What are they?",
+    "question": "Which two stages serve as integral phases of the overarching writing process surrounding drafting?",
     "options": {
       "A": "Drafting and publishing",
       "B": "Pre-writing and post-writing",
@@ -725,7 +1234,7 @@
       "D": "Brainstorming and lecturing"
     },
     "correct_answer": "B",
-    "explanation": "The summary for Week 5 states: 'we explored two integral phases of the writing process—pre-writing and post-writing.'"
+    "explanation": "The overall writing process is typically divided into pre-writing (preparation), drafting (execution), and post-writing (refinement)."
   },
   {
     "course_code": "GST 122",
@@ -738,7 +1247,7 @@
       "D": "Deductive logic and counterargument mapping"
     },
     "correct_answer": "B",
-    "explanation": "The summary notes that 'Pre-writing involves researching, brainstorming, and outlining ideas, laying the foundation for the writing process.'"
+    "explanation": "Pre-writing involves researching, brainstorming, and outlining ideas, laying the foundation for the writing process."
   },
   {
     "course_code": "GST 122",
@@ -751,12 +1260,12 @@
       "D": "Public delivery and audience engagement"
     },
     "correct_answer": "B",
-    "explanation": "The summary states: 'Post-writing activities include editing and proofreading, essential steps to refine and polish the written piece for clarity and correctness.'"
+    "explanation": "Post-writing activities include editing and proofreading, essential steps to refine and polish the written piece for clarity and correctness."
   },
   {
     "course_code": "GST 122",
     "topic": "Summary Writing",
-    "question": "What is a core requirement of summary writing as outlined in Week 6?",
+    "question": "What is a core requirement of summary writing?",
     "options": {
       "A": "Expanding the text by adding personal opinions and extra context clues",
       "B": "Creating a concise, condensed version of a longer text using your own words",
@@ -764,7 +1273,7 @@
       "D": "Following a rigid structure with a central thesis and counterarguments"
     },
     "correct_answer": "B",
-    "explanation": "The Week 6 summary defines summary writing as a 'Concise and condensed version of a longer text. It requires using your own words to capture key points and main ideas.'"
+    "explanation": "Summary writing is a concise and condensed version of a longer text. It requires using your own words to capture key points and main ideas."
   },
   {
     "course_code": "GST 122",
@@ -777,12 +1286,12 @@
       "D": "Acronyms"
     },
     "correct_answer": "B",
-    "explanation": "The summary explicitly mentions that summary writing 'involves thoughtful selection of synonyms to maintain accuracy in summarization.'"
+    "explanation": "Summary writing requires thoughtful selection of synonyms to capture original meanings concisely while maintaining accuracy."
   },
   {
     "course_code": "GST 122",
     "topic": "Letter Writing",
-    "question": "How does Week 6 define letter writing?",
+    "question": "How is letter writing broadly defined in communication studies?",
     "options": {
       "A": "A structured report that conveys statistical data findings",
       "B": "The most common form of written communication for personal and professional purposes",
@@ -790,25 +1299,12 @@
       "D": "A passive, involuntary linguistic process"
     },
     "correct_answer": "B",
-    "explanation": "The summary states: 'Letter Writing is the most common form of written communication for personal and professional purposes.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Report Writing",
-    "question": "What are the characteristics of a report as defined in the Week 6 summary?",
-    "options": {
-      "A": "An unstructured collection of personal experiences and poems",
-      "B": "A structured document conveying information, analysis, and findings on a specific topic",
-      "C": "A condensed summary utilizing synonyms to replace original text definitions",
-      "D": "A speech text that outlines vocal variety and eye contact patterns"
-    },
-    "correct_answer": "B",
-    "explanation": "The summary defines Report Writing as 'a structured document conveying information, analysis, and findings on a specific topic.'"
+    "explanation": "Letter writing remains one of the most common and versatile forms of written communication for personal and professional interaction."
   },
   {
     "course_code": "GST 122",
     "topic": "Reading Skills",
-    "question": "Week 7 emphasizes the role of reading in sharpening which specific skills?",
+    "question": "Active reading directly emphasizes sharpening which specific cognitive skills?",
     "options": {
       "A": "Vocal variety and physical gestures",
       "B": "Critical thinking and analytical abilities",
@@ -816,12 +1312,12 @@
       "D": "Brainstorming and structural formatting"
     },
     "correct_answer": "B",
-    "explanation": "The text notes that in Week 7 they 'delved into the often underestimated but crucial skill of reading, emphasising its role in sharpening critical thinking and analytical abilities.'"
+    "explanation": "Engaging in purposeful reading sharpens critical thinking and analytical abilities by forcing the reader to evaluate arguments and context."
   },
   {
     "course_code": "GST 122",
     "topic": "Critical Thinking",
-    "question": "Why is critical thinking considered vital in the bullet point summary of Weeks 5-8?",
+    "question": "Why is critical thinking considered vital in academic and professional communication?",
     "options": {
       "A": "For compiling letters to professional organizations",
       "B": "For evaluating information critically and forming well-informed perspectives",
@@ -829,103 +1325,25 @@
       "D": "For altering stress syllables within complex statements"
     },
     "correct_answer": "B",
-    "explanation": "The bullet point summary for Weeks 5-8 states: 'Critical thinking is vital for evaluating information critically and forming well-informed perspectives.'"
+    "explanation": "Critical thinking is vital for evaluating information objectively, identifying logic gaps, and forming well-informed perspectives."
   },
   {
     "course_code": "GST 122",
     "topic": "Word Formation",
-    "question": "To what creative art does the summary compare word formation processes in Week 8?",
+    "question": "To what creative art is the process of word formation often compared in linguistic discussions?",
     "options": {
       "A": "Programming language compilation",
-      "B": "Culinary experimentation / experiments",
+      "B": "Culinary experimentation",
       "C": "Public architectural mapping",
       "D": "Theatrical play delivery"
     },
     "correct_answer": "B",
-    "explanation": "The Week 8 text states: 'we dived into the fascinating realm of word formation processes, akin to the art of culinary experimentation in language.'"
+    "explanation": "Word formation processes are akin to culinary experimentation because both involve combining raw elements (morphemes/ingredients) to create something new."
   },
   {
     "course_code": "GST 122",
-    "topic": "Case Study 1 (Weeks 5-8)",
-    "question": "What is the primary focus of Case Study 1 in the Weeks 5-8 section?",
-    "options": {
-      "A": "Enhancing Business Proposal Writing",
-      "B": "Evaluating Public Speaking Delivery and Body Language",
-      "C": "Analyzing the Rule of Proximity in Team Assignments",
-      "D": "Distinguishing Fact from Opinion in Daily News Stories"
-    },
-    "correct_answer": "A",
-    "explanation": "Case Study 1 in the Weeks 5-8 section is titled 'ENHANCING BUSINESS PROPOSAL WRITING.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Business Proposal Case Study Methodology",
-    "question": "What methodology is explicitly applied to optimize the business proposal in Weeks 5-8 Case Study 1?",
-    "options": {
-      "A": "Auditory listening drills and participant feedback forms",
-      "B": "Pre-writing phase, writing phase, and post-writing phase",
-      "C": "Deductive reasoning framework and counterargument refutation",
-      "D": "Vocabulary substitution using context clues"
-    },
-    "correct_answer": "B",
-    "explanation": "The methodology for Case Study 1 under Weeks 5-8 lists: 'Prewriting phase, writing phase, and post-writing phase.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 1 Conclusion (Weeks 5-8)",
-    "question": "According to Case Study 1 of Weeks 5-8, a well-crafted business proposal is the result of what combined actions?",
-    "options": {
-      "A": "Eliminating outlines and extending synonyms",
-      "B": "Meticulous pre-writing preparation and thorough post-writing refinement",
-      "C": "A combination of public speaking gestures and stage utilization",
-      "D": "Active listening skills paired with vocal variety drills"
-    },
-    "correct_answer": "B",
-    "explanation": "The conclusion explicitly states that 'a well-crafted business proposal is the result of meticulous pre-writing preparation and thorough post-writing refinement.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 2 (Weeks 5-8)",
-    "question": "What is the primary objective of Case Study 2 in the Weeks 5-8 summary?",
-    "options": {
-      "A": "To analyze how synonyms maintain accuracy in letter formats",
-      "B": "To evaluate how the systematic use of reading strategies influences critical analysis skills",
-      "C": "To establish a central thesis for academic group discussions",
-      "D": "To show how sentence stress changes a listener's baseline perception"
-    },
-    "correct_answer": "B",
-    "explanation": "The objective of Case Study 2 (Weeks 5-8) is 'to evaluate how the systematic use of reading strategies influences critical analysis skills in diverse contexts.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Reading Strategies",
-    "question": "Which of the following is explicitly listed as a reading strategy in Case Study 2 of Weeks 5-8?",
-    "options": {
-      "A": "Brainstorming and outlining",
-      "B": "Context clues, fact-opinion distinction, and drawing inferences",
-      "C": "Sentence stress manipulation and phonetic accenting",
-      "D": "Vocal control adjustment and eye contact"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 2 lists reading strategies including 'context clues, fact-opinion distinction, drawing inferences, and understanding explicit and implicit meaning.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 2 Methodology (Weeks 5-8)",
-    "question": "What are the components of the methodology used in Case Study 2 of Weeks 5-8?",
-    "options": {
-      "A": "Pre-writing, writing, and post-writing review",
-      "B": "Reading tasks, Critical analysis exercises, and Feedback and Reflection",
-      "C": "Vocal tracking, stress analysis, and structural layout",
-      "D": "Scenario creation, proximity shifts, and feedback logging"
-    },
-    "correct_answer": "B",
-    "explanation": "The text lists the methodology for Case Study 2 (Weeks 5-8) as 'Reading tasks, Critical analysis exercises, and Feedback and Reflection.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Acquired Skills (Weeks 5-8)",
-    "question": "Which competency is listed as acquired after the Weeks 5-8 lessons?",
+    "topic": "Acquired Skills",
+    "question": "Which set of competencies represents advanced mastery in the post-writing phase?",
     "options": {
       "A": "Conjunction Mastery",
       "B": "Semiotic Awareness",
@@ -933,12 +1351,12 @@
       "D": "Stage Presence and Vocal Control"
     },
     "correct_answer": "C",
-    "explanation": "Editing Expertise and Proofreading Mastery are explicitly included under the skills and competencies for Weeks 5-8."
+    "explanation": "Editing expertise and proofreading mastery are the primary technical competencies acquired for refining written drafts."
   },
   {
     "course_code": "GST 122",
     "topic": "Sentence Stress",
-    "question": "What major concept is explored in Week 9 regarding spoken communication?",
+    "question": "What major concept influences how meaning is interpreted in spoken communication?",
     "options": {
       "A": "The development of clear written reports",
       "B": "Sentence stress and how subtle variations in emphasis can entirely reshape meaning",
@@ -946,12 +1364,12 @@
       "D": "Differentiating passive hearing from structural outlining"
     },
     "correct_answer": "B",
-    "explanation": "The Week 9 text highlights that they delved into 'the nuanced world of sentence stress, uncovering how subtle variations in emphasis can entirely reshape the meaning of a sentence.'"
+    "explanation": "Sentence stress involves placing emphasis on specific words or syllables, which can shift the entire implied meaning of a spoken statement."
   },
   {
     "course_code": "GST 122",
     "topic": "Linguistic Stress Definition",
-    "question": "How is stress defined in linguistics according to the Weeks 9-12 summary?",
+    "question": "How is stress defined in linguistics?",
     "options": {
       "A": "The psychological anxiety associated with speaking publicly",
       "B": "Emphasis laid on a particular syllable or segment within a word, phrase, or sentence",
@@ -959,12 +1377,12 @@
       "D": "The rate of speech transmission during active listening exercises"
     },
     "correct_answer": "B",
-    "explanation": "The summary defines stress as laying 'its emphasis on a particular syllable or segment within a word, phrase, or sentence during speech.'"
+    "explanation": "Linguistic stress refers to the relative emphasis or prominence given to a certain syllable or word in speech."
   },
   {
     "course_code": "GST 122",
     "topic": "Public Speaking",
-    "question": "What is the definition of public speaking given in the Week 10 bullet point summary?",
+    "question": "What is the standard definition of public speaking?",
     "options": {
       "A": "Writing structured documents to convey facts to a remote corporate division",
       "B": "The act of delivering a speech or presentation to a live audience, effectively conveying information, ideas, or opinions",
@@ -972,12 +1390,12 @@
       "D": "Providing written feedback on a marketing product launch"
     },
     "correct_answer": "B",
-    "explanation": "The summary defines Public Speaking as 'the act of delivering a speech or presentation to a live audience, effectively conveying information, ideas, or opinions.'"
+    "explanation": "Public speaking is defined as delivering a oral presentation or speech directly to an audience to convey information, ideas, or arguments."
   },
   {
     "course_code": "GST 122",
     "topic": "Public Speaking Goals",
-    "question": "According to the summary, what are the primary goals/intents of delivering a speech?",
+    "question": "According to communication theory, what are the primary goals/intents of delivering a speech?",
     "options": {
       "A": "Proofreading, editing, and lexical brainstorming",
       "B": "Persuasion, information, or argumentation",
@@ -985,12 +1403,12 @@
       "D": "Creating synonyms and compound word experiments"
     },
     "correct_answer": "B",
-    "explanation": "The summary states that speeches are delivered to achieve 'the intended goals of persuasion, information, or argumentation.'"
+    "explanation": "Speeches are generally categorized by their primary objectives: to persuade, to inform, or to argue a specific stance."
   },
   {
     "course_code": "GST 122",
     "topic": "Hearing vs Listening",
-    "question": "How is the process of 'hearing' distinguished from 'listening' in Week 11?",
+    "question": "How is the process of 'hearing' distinguished from 'listening'?",
     "options": {
       "A": "Hearing is active and voluntary, while listening is completely involuntary.",
       "B": "Hearing is passive and involuntary, while listening is an active and voluntary process.",
@@ -998,12 +1416,12 @@
       "D": "Hearing requires a central thesis, whereas listening is unstructured."
     },
     "correct_answer": "B",
-    "explanation": "The text states: 'Hearing is passive and involuntary while listening is an active and voluntary process involving a conscious effort to interpret and understand.'"
+    "explanation": "Hearing is the physical, passive perception of sound, whereas listening requires active mental focus, interpretation, and understanding."
   },
   {
     "course_code": "GST 122",
     "topic": "Effective Listening Benefits",
-    "question": "Why is effective listening considered crucial for academic success in the bullet point summary?",
+    "question": "Why is effective listening considered crucial for academic success?",
     "options": {
       "A": "It removes the requirement of writing formal business proposals.",
       "B": "It aids in understanding course content, following instructions, and grasping complex concepts.",
@@ -1011,12 +1429,12 @@
       "D": "It provides a method to completely skip post-writing proofreading."
     },
     "correct_answer": "B",
-    "explanation": "The summary notes that effective listening is crucial for academic success, 'aiding in understanding course content, following instructions, and grasping complex concepts.'"
+    "explanation": "Active listening ensures accurate reception of instruction, aids comprehension of complex ideas, and prevents misunderstandings."
   },
   {
     "course_code": "GST 122",
     "topic": "Presentation Structure",
-    "question": "What structural recommendation is given for setting up a logical presentation in Week 12?",
+    "question": "What structural setup is recommended for creating a logical and persuasive oral presentation?",
     "options": {
       "A": "Avoid a central thesis and jump straight into random synonyms.",
       "B": "Establish a central thesis and structure with an introduction, main points, supporting evidence, counterarguments, and a compelling conclusion.",
@@ -1024,7 +1442,7 @@
       "D": "Use only a series of physical gestures without any explicit verbal components."
     },
     "correct_answer": "B",
-    "explanation": "The bullet point summary notes that you should 'Establish a central thesis and structure the presentation logically with an introduction, main points, supporting evidence, counterarguments, and a compelling conclusion.'"
+    "explanation": "A structured speech requires a strong central thesis followed logically by an introduction, main body points, supporting proof, handling counterarguments, and a conclusion."
   },
   {
     "course_code": "GST 122",
@@ -1037,129 +1455,25 @@
       "D": "Concordial reasoning"
     },
     "correct_answer": "B",
-    "explanation": "The bullet points for Weeks 9-12 state: 'Utilise deductive reasoning to draw specific conclusions from general premises.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 1 (Weeks 9-12)",
-    "question": "What is the title of Case Study 1 in the Weeks 9-12 section?",
-    "options": {
-      "A": "The Art of Public Speaking: Beyond Words",
-      "B": "The Power of Stress: Deconstructing a Sentence",
-      "C": "Impact of Reading Strategies on Critical Analysis",
-      "D": "Navigating Proximity in Team Project Assignments"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 1 under Weeks 9-12 is titled 'THE POWER OF STRESS: DECONSTRUCTING A SENTENCE.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 1 Sentence Analysis",
-    "question": "Which specific sample sentence is analyzed with varying stress patterns in Weeks 9-12 Case Study 1?",
-    "options": {
-      "A": "I never said we should write a business report.",
-      "B": "I didn't say you should bring coffee.",
-      "C": "Effective communication is crucial for marketing teams.",
-      "D": "Hearing is passive while active listening is voluntary."
-    },
-    "correct_answer": "B",
-    "explanation": "The methodology for Case Study 1 (Weeks 9-12) explicitly lists the sentence: 'I didn't say you should bring coffee.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Sentence Stress Case Study Conclusion",
-    "question": "What did Case Study 1 (Weeks 9-12) conclude about the nature of sentence stress?",
-    "options": {
-      "A": "It is completely static and irrelevant to everyday context.",
-      "B": "It showcases an ability to influence the listener's perception and understanding of the speaker's message.",
-      "C": "It acts as a substitute for written letter writing conventions.",
-      "D": "It eliminates the need for deductive logical arguments."
-    },
-    "correct_answer": "B",
-    "explanation": "The conclusion states that the study highlights 'the dynamic nature of sentence stress, showcasing its ability to influence the listener's perception and understanding of the speaker's message.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 2 (Weeks 9-12)",
-    "question": "What does Case Study 2 under Weeks 9-12 examine?",
-    "options": {
-      "A": "How pre-writing structures optimize business proposals",
-      "B": "How language, vocal variety, and physical aspects contribute to effective communication beyond literal text content",
-      "C": "How the proximity rule creates confusion in project allocations",
-      "D": "How context clues change our reading comprehension strategies"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 2 is titled 'THE ART OF PUBLIC SPEAKING: BEYOND WORDS' and examines how language, vocal variety, and physical aspects contribute to effective communication beyond literal words."
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Public Speaking Techniques",
-    "question": "According to Case Study 2 (Weeks 9-12) methodology, what elements of language are analyzed for audience engagement?",
-    "options": {
-      "A": "Prefixes, suffixes, and root compound words",
-      "B": "Diction and repetition",
-      "C": "Synonyms and formal definitions",
-      "D": "Outlining and proofreading marks"
-    },
-    "correct_answer": "B",
-    "explanation": "The methodology for Case Study 2 states: 'analyse the impact of language (diction and repetition) on audience engagement.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Physical Aspects of Public Speaking",
-    "question": "Which physical aspects of public speaking are explicitly investigated in Case Study 2 of Weeks 9-12?",
-    "options": {
-      "A": "Handwriting posture and alignment",
-      "B": "Gestures, eye contact, and stage utilisation",
-      "C": "Passive hearing and deductive positioning",
-      "D": "Brainstorming maps and outline notes"
-    },
-    "correct_answer": "B",
-    "explanation": "The text explicitly lists 'gestures, eye contact, and stage utilisation' as the physical aspects investigated in Case Study 2."
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 2 Conclusion (Weeks 9-12)",
-    "question": "What does Case Study 2 of Weeks 9-12 underscore as vital for a presentation's maximum impact?",
-    "options": {
-      "A": "Relying exclusively on the literal words written on paper",
-      "B": "Considering not only the words spoken but also how they are delivered",
-      "C": "Avoiding vocal variety to maintain a perfectly flat monotone tone",
-      "D": "Limiting public delivery exclusively to online platforms"
-    },
-    "correct_answer": "B",
-    "explanation": "The conclusion highlights 'the importance of considering not only the words spoken but also how they are delivered for maximum impact.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Acquired Skills (Weeks 9-12)",
-    "question": "Which of the following competencies is listed as acquired after Weeks 9-12?",
-    "options": {
-      "A": "Concord Proficiency",
-      "B": "Proofreading Mastery",
-      "C": "Vocal Control, Stage Presence, and Strategic Argumentation",
-      "D": "Letter Writing Format Optimization"
-    },
-    "correct_answer": "C",
-    "explanation": "The skills list for Weeks 9-12 explicitly features Vocal Control, Stage Presence, and Strategic Argumentation."
+    "explanation": "Deductive reasoning works top-down, applying a general principle/premise to arrive at a specific logical conclusion."
   },
   {
     "course_code": "GST 122",
     "topic": "Core Elements of Communication",
-    "question": "The personal reflection for Weeks 1-4 emphasizes that successful communication is an interconnected dance of which skills?",
+    "question": "Successful human communication relies on the interconnected dance of which core skills?",
     "options": {
       "A": "Brainstorming, outlining, editing, and publishing",
       "B": "Listening, speaking, reading, and writing",
       "C": "Diction, repetition, gestures, and stage presence",
-      "D": "Semotics, concord, proximity, and syntax"
+      "D": "Semiotics, concord, proximity, and syntax"
     },
     "correct_answer": "B",
-    "explanation": "The reflection states: 'realize the interconnectedness of language skills — listening, speaking, reading, and writing — and how they collectively contribute to successful communication.'"
+    "explanation": "The four foundational pillars of language learning and communication are listening, speaking, reading, and writing."
   },
   {
     "course_code": "GST 122",
     "topic": "Writing Impact on Outcomes",
-    "question": "The personal reflection for Weeks 5-8 underscores that writing skills heavily influence what?",
+    "question": "Strong writing skills heavily influence which real-world outcomes?",
     "options": {
       "A": "Vocal control limits and ear development",
       "B": "Professional outcomes and informed decision-making",
@@ -1167,38 +1481,25 @@
       "D": "The creation of semiotic codes and signs"
     },
     "correct_answer": "B",
-    "explanation": "The Weeks 5-8 reflection mentions that students should understand 'the role of writing skills in influencing professional outcomes and informed decision-making.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Linguistic Emphasis Awareness",
-    "question": "According to the Weeks 9-12 personal reflection, exploring sentence stress heightens awareness of what?",
-    "options": {
-      "A": "The historical origins of dictionary definitions",
-      "B": "The intricate dance between spoken words and their nuanced delivery",
-      "C": "The mechanical format of business reports",
-      "D": "The variation of proximity rules across project setups"
-    },
-    "correct_answer": "B",
-    "explanation": "The personal reflection for Weeks 9-12 states that sentence stress should heighten 'your awareness of the intricate dance between spoken words and their nuanced delivery.'"
+    "explanation": "Mastery of written expression directly impacts career trajectory, corporate clarity, professional success, and informed decision-making."
   },
   {
     "course_code": "GST 122",
     "topic": "Semiotics vs Words",
-    "question": "Based on Week 2, what does the text emphasize about communication beyond basic words?",
+    "question": "What does semiotic study contribute to our understanding of human communication beyond spoken words?",
     "options": {
-      "A": "It should avoid signs completely to protect clarity.",
-      "B": "It explores signs and symbols through semiotics.",
-      "C": "It is limited to formal code languages.",
+      "A": "It cautions against using visual cues completely.",
+      "B": "It explores how signs and symbols convey non-verbal meaning.",
+      "C": "It limits communication to digital computer codes.",
       "D": "It depends strictly on dictionary definitions."
     },
     "correct_answer": "B",
-    "explanation": "The summary notes that beyond words, we explore the realm of semiotics to see how signs and symbols play a pivotal role."
+    "explanation": "Semiotics is the study of sign systems, symbols, and non-verbal icons that communicate meaning within social contexts."
   },
   {
     "course_code": "GST 122",
     "topic": "Linguistic Harmony",
-    "question": "Linguistic harmony is achieved through which set of grammatical rules discussed in Week 3?",
+    "question": "Linguistic harmony within standard English sentences is primarily achieved through which set of grammatical rules?",
     "options": {
       "A": "Word formation processes",
       "B": "Concord",
@@ -1206,12 +1507,12 @@
       "D": "Sentence stress variations"
     },
     "correct_answer": "B",
-    "explanation": "The Week 3 summary emphasizes that Concord 'ensures linguistic harmony' by governing agreement between elements."
+    "explanation": "Concord (grammatical agreement) ensures that sentence elements match properly in number, person, or gender, preserving linguistic balance."
   },
   {
     "course_code": "GST 122",
     "topic": "Writing Strategies Parallel",
-    "question": "When navigating diverse landscapes of writing strategies, why does the text draw a parallel to programming languages?",
+    "question": "When navigating diverse writing strategies, why do educators often draw a parallel to computer programming languages?",
     "options": {
       "A": "To explain computer hardware layouts",
       "B": "To illustrate structured approaches to effective communication",
@@ -1219,46 +1520,7 @@
       "D": "To change the syllabus to information technology basics"
     },
     "correct_answer": "B",
-    "explanation": "Drawing a parallel between programming languages and writing strategies highlights the systematic, structured nature of formatting ideas for clarity."
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Case Study 1 Outcome (Weeks 1-4)",
-    "question": "What corporate change occurred within the marketing team after honing communication skills in Case Study 1?",
-    "options": {
-      "A": "A noticeable decrease in creative output",
-      "B": "A noticeable improvement in team collaboration and project outcomes",
-      "C": "An increase in conflict and project delays",
-      "D": "A complete shift from verbal tasks to reading exercises"
-    },
-    "correct_answer": "B",
-    "explanation": "The conclusion notes a 'noticeable improvement in team collaboration and project outcomes within the marketing team.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Rule of Proximity Workplace Context",
-    "question": "Why is the Rule of Proximity Agreement considered 'paramount' in workplace collaboration according to Case Study 2?",
-    "options": {
-      "A": "It determines the physical distance between office desks.",
-      "B": "It influences the perceived accountability of team members in project assignments.",
-      "C": "It dictates the corporate dress code requirements.",
-      "D": "It measures the speed of email transmission."
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 2 states that 'understanding the Rule of Proximity Agreement becomes paramount... let’s explore how this rule influences the perceived accountability of team members.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Language Precision in Teams",
-    "question": "The conclusion of Case Study 2 (Weeks 1-4) emphasizes a strong need for what feature in collaborative environments?",
-    "options": {
-      "A": "Highly elaborate, fancy prose styles",
-      "B": "Precise language",
-      "C": "Monotone vocal patterns",
-      "D": "Unstructured reporting frameworks"
-    },
-    "correct_answer": "B",
-    "explanation": "The text states that the real-world implications of linguistic choices emphasize 'the need for precise language in collaborative work environments.'"
+    "explanation": "Both writing strategies and programming rely on strict structural rules, logic, and precise syntax to convey an intended message effectively."
   },
   {
     "course_code": "GST 122",
@@ -1271,7 +1533,7 @@
       "D": "Vocal delivery"
     },
     "correct_answer": "B",
-    "explanation": "The text states that pre-writing activities (researching, brainstorming, outlining) lay 'the foundation for the writing process.'"
+    "explanation": "Pre-writing activities (brainstorming, clustering, outlining) serve as the essential planning stage for structuring raw ideas."
   },
   {
     "course_code": "GST 122",
@@ -1284,20 +1546,7 @@
       "D": "To add subjective opinions to summaries"
     },
     "correct_answer": "C",
-    "explanation": "The text states that post-writing activities are 'essential steps to refine and polish the written piece for clarity and correctness.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Characteristics of Summary Writing",
-    "question": "Summary writing explicitly forbids which of the following practices based on standard criteria?",
-    "options": {
-      "A": "Using concise expressions",
-      "B": "Unnecessarily expanding or changing core ideas via long, verbatim copies without selection",
-      "C": "Selecting thoughtful synonyms",
-      "D": "Capturing key main points"
-    },
-    "correct_answer": "B",
-    "explanation": "Summary writing requires a concise and condensed version in one's own words, focusing on capturing main ideas accurately without adding bloat."
+    "explanation": "Editing addresses structure, flow, and clarity, while proofreading fixes technical mechanics (grammar, spelling, punctuation) to polish the work."
   },
   {
     "course_code": "GST 122",
@@ -1310,25 +1559,12 @@
       "D": "Sentence Stress Map"
     },
     "correct_answer": "B",
-    "explanation": "Report writing is defined as 'a structured document conveying information, analysis, and findings on a specific topic.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Evaluating Information",
-    "question": "What tool allows a reader to evaluate information critically and form well-informed perspectives?",
-    "options": {
-      "A": "Concord rules",
-      "B": "Critical thinking",
-      "C": "Semiotic coding",
-      "D": "Word stress"
-    },
-    "correct_answer": "B",
-    "explanation": "The text highlights that 'Critical thinking is vital for evaluating information critically and forming well-informed perspectives.'"
+    "explanation": "A report is an objective, structured document designed to convey analyzed data, findings, and recommendations on a focused topic."
   },
   {
     "course_code": "GST 122",
     "topic": "Linguistic Culinary Analogy",
-    "question": "Why does Week 8 describe word formation processes as 'akin to culinary experiments'?",
+    "question": "Why are word formation processes often described as 'akin to culinary experiments'?",
     "options": {
       "A": "Because it deals exclusively with food-related vocabulary.",
       "B": "Because it combines basic linguistic elements to create entirely new words.",
@@ -1336,33 +1572,7 @@
       "D": "Because it is passive and involuntary."
     },
     "correct_answer": "B",
-    "explanation": "The summary notes word formation processes are like culinary experiments because they involve 'combining linguistic elements to create new words.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Business Proposal Preparation",
-    "question": "In Weeks 5-8 Case Study 1, what does careful planning and meticulous refinement optimize?",
-    "options": {
-      "A": "A live public speech",
-      "B": "The creation of a business proposal",
-      "C": "Auditory hearing comprehension",
-      "D": "A casual personal letter"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 1 focuses on the 'application of pre-writing and post-writing strategies to optimise the creation of a business proposal.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Reading Strategy Outcomes",
-    "question": "Weeks 5-8 Case Study 2 examines the correlation between reading strategies and which skill?",
-    "options": {
-      "A": "Vocal control development",
-      "B": "Improved critical analysis skills",
-      "C": "Proximity concord matching",
-      "D": "Diction repetition tracking"
-    },
-    "correct_answer": "B",
-    "explanation": "The conclusion of Case Study 2 aims to demonstrate the correlation between 'the systematic application of reading strategies and improved critical analysis skills.'"
+    "explanation": "Word formation (like compounding, blending, or derivation) involves taking discrete morphemic parts and mixing them to yield a distinct new lexical item."
   },
   {
     "course_code": "GST 122",
@@ -1375,84 +1585,8 @@
       "D": "It changes a report into a letter format."
     },
     "correct_answer": "B",
-    "explanation": "The Week 9 summary explicitly notes that sentence stress features variations in emphasis that 'can entirely reshape the meaning of a sentence.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Nature of Listening",
-    "question": "Unlike passive hearing, listening is defined as a conscious effort to do what?",
-    "options": {
-      "A": "Memorize words without parsing meaning",
-      "B": "Interpret and understand spoken messages",
-      "C": "Structure counterarguments using deductive patterns",
-      "D": "Deliver a speech to a live audience"
-    },
-    "correct_answer": "B",
-    "explanation": "The summary notes that listening is an active, voluntary process requiring a conscious effort to 'interpret and understand spoken messages.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Presentation Logic Components",
-    "question": "According to Week 12, a persuasive presentation must include which of the following sets of elements?",
-    "options": {
-      "A": "Synonyms, prefix changes, and spelling corrections",
-      "B": "An introduction, main points, supporting evidence, counterarguments, and a compelling conclusion",
-      "C": "A business proposal, a report format, and an attached formal letter",
-      "D": "Signs, symbols, semiotics, and proximity setups"
-    },
-    "correct_answer": "B",
-    "explanation": "The summary advises structuring the presentation logically with an 'introduction, main points, supporting evidence, counterarguments, and a compelling conclusion.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Reasoning Patterns",
-    "question": "When a speaker draws a specific conclusion from general premises, they are utilizing which reasoning form?",
-    "options": {
-      "A": "Inductive reasoning",
-      "B": "Deductive reasoning",
-      "C": "Emotional reasoning",
-      "D": "Verbal reasoning"
-    },
-    "correct_answer": "B",
-    "explanation": "The text states: 'Utilise deductive reasoning to draw specific conclusions from general premises.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Sentence Stress Case Study Method",
-    "question": "What action was taken during Weeks 9-12 Case Study 1 to observe shifts in meaning?",
-    "options": {
-      "A": "Adding structural definitions from basic workbooks",
-      "B": "Deconstructing a sentence by emphasizing different words",
-      "C": "Changing the proximity matching of the verbs",
-      "D": "Replacing nouns with synonyms"
-    },
-    "correct_answer": "B",
-    "explanation": "The methodology notes they 'deconstruct the sentence, emphasizing different words to observe shifts in meaning.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Beyond Words Public Speaking",
-    "question": "What factors contribute to effective communication in public speaking beyond the literal text content?",
-    "options": {
-      "A": "Pre-writing and post-writing checklists",
-      "B": "Language choices, vocal variety, and physical aspects",
-      "C": "Dictionary indexes and technical spellings",
-      "D": "Deductive premises and factual reading clues"
-    },
-    "correct_answer": "B",
-    "explanation": "Case Study 2 under Weeks 9-12 examines 'how language, vocal variety, and physical aspects contribute to effective communication beyond the literal content of a speech.'"
-  },
-  {
-    "course_code": "GST 122",
-    "topic": "Course Synthesization",
-    "question": "Ultimately, GST 122 framework shows that effective language expression combines which two broad domains?",
-    "options": {
-      "A": "Technical coding and financial reporting forms",
-      "B": "Written literacy processes and spoken delivery dynamics",
-      "C": "Rote reading and passive hearing styles",
-      "D": "Dictionary definitions and culinary experiments"
-    },
-    "correct_answer": "B",
-    "explanation": "The full summary covers structural text creation (writing/reading phases, summaries, reports) alongside spoken presentation skills (stress, public speaking, active listening)."
+    "explanation": "Varying stress on different words in a spoken sentence alters the pragmatics and underlying intent of the utterance without changing the words themselves."
   }
 ]
+]
+  

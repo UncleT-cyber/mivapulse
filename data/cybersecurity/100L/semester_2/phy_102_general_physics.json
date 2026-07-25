@@ -935,8 +935,8 @@
   },
   {
     "course_code": "PHY 102",
-    "topic": "Case Studies",
-    "question": "According to Case Study 1 (Weeks 1-4), what dangerous outcome can happen if conductive materials are selected without proper insulation?",
+    "topic": "Electrical Safety and Insulation",
+    "question": "What dangerous outcome can happen if conductive materials are selected for an electrical system without proper insulation?",
     "options": {
       "A": "The capacitance will expand infinitely.",
       "B": "It can easily result in electrical accidents.",
@@ -944,12 +944,12 @@
       "D": "Ohm's law will become completely invalid."
     },
     "correct_answer": "B",
-    "explanation": "Case Study 1 focuses on electrical safety, finding that using conductive materials without proper insulation can result in severe electrical accidents."
+    "explanation": "Using conductive materials without proper electrical insulation can result in short circuits, severe shocks, and other electrical accidents."
   },
   {
     "course_code": "PHY 102",
-    "topic": "Case Studies",
-    "question": "According to Case Study 2 (Weeks 1-4), why are dielectrics highly beneficial in high-voltage capacitor applications?",
+    "topic": "Dielectrics and Capacitance",
+    "question": "Why are dielectrics highly beneficial in high-voltage capacitor applications?",
     "options": {
       "A": "They completely eliminate all charges.",
       "B": "They assist in reducing electric field strength, minimizing dielectric breakdown risks.",
@@ -957,13 +957,12 @@
       "D": "They act as a perfect pathway for continuous conduction currents."
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 notes that dielectrics are beneficial in high-voltage configurations because they reduce electric field strength, preventing breakdown and short circuits."
+    "explanation": "Dielectrics are beneficial in high-voltage configurations because they reduce electric field strength for a given voltage, preventing dielectric breakdown and short circuits."
   },
-  
   {
     "course_code": "PHY 102",
-    "topic": "Case Studies",
-    "question": "Case Study 2 (Weeks 5-8) investigates how circuit impedance influences a Class-E2 resonant power converter designed for:",
+    "topic": "Resonant Converters and Wireless Power",
+    "question": "How does circuit impedance influence a Class-E2 resonant power converter designed for:",
     "options": {
       "A": "Direct contact electrostatic charging by friction.",
       "B": "Capacitive wireless power transfer.",
@@ -971,7 +970,7 @@
       "D": "Regulating back-EMF in industrial DC motors."
     },
     "correct_answer": "B",
-    "explanation": "Case Study 2 for Weeks 5-8 comprehensively explores the relationship between impedance and performance in a Class-E2 converter designed for capacitive wireless power transfer."
+    "explanation": "Impedance plays a crucial role in determining performance and efficiency in Class-E2 converters designed specifically for capacitive wireless power transfer."
   },
   {
     "course_code": "PHY 102",
@@ -1010,7 +1009,7 @@
       "D": "They eliminate the relevance of Kirchhoff's loop rules."
     },
     "correct_answer": "B",
-    "explanation": "The course summary notes that each passive component (R, L, C) exhibits unique phase relationships with the sinusoidal AC voltage across the circuit."
+    "explanation": "Each passive component (R, L, C) exhibits unique phase relationships with the sinusoidal AC voltage across the circuit."
   },
   {
     "course_code": "PHY 102",
@@ -1027,8 +1026,8 @@
   },
   {
     "course_code": "PHY 102",
-    "topic": "Case Studies",
-    "question": "According to Case Study 1 (Weeks 9-12), wireless communication devices rely heavily on the generation of electromagnetic waves via:",
+    "topic": "Electromagnetic Waves and Wireless Communication",
+    "question": "Wireless communication devices rely heavily on the generation of electromagnetic waves via:",
     "options": {
       "A": "Mechanical friction between insulating layers.",
       "B": "Oscillating electric fields creating magnetic fields.",
@@ -1036,7 +1035,7 @@
       "D": "Varying the cross-sectional area of cylindrical capacitors."
     },
     "correct_answer": "B",
-    "explanation": "Case Study 1 for Weeks 9-12 describes wireless connectivity as a process where oscillating electric fields generate corresponding magnetic fields to form propagating waves."
+    "explanation": "Wireless connectivity works because oscillating electric fields generate corresponding magnetic fields to form propagating electromagnetic waves."
   },
   
   {

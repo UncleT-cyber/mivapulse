@@ -1,4 +1,17 @@
 [
+ {
+  "course_code": "CSC 106",
+  "topic": "JavaScript & Web Frameworks",
+  "question": "Which combination of technologies is commonly paired to build dynamic user interfaces and process secure flight and payment booking transactions?",
+  "options": {
+    "A": "PHP and FTP",
+    "B": "React and Stripe",
+    "C": "HTML5 and Dial-up",
+    "D": "Algolia and Django"
+  },
+  "correct_answer": "B",
+  "explanation": "Interactive booking applications frequently combine React for building responsive, dynamic frontend interfaces with Stripe for handling secure online payment processing."
+  },
   {
     "course_code": "CSC 106",
     "topic": "Web Browser Foundations",
@@ -1442,20 +1455,7 @@
     "correct_answer": "C",
     "explanation": "Choosing a modern tool depends on active criteria like scalability, language, support, and goals—not historical milestones like the creation date of ARPANET."
   },
-  
-  {
-    "course_code": "CSC 106",
-    "topic": "Case Studies: JavaScript & Frameworks",
-    "question": "Case Study 2 (Weeks 5-8) highlights the combination of which two technologies to process secure customer flights and payment booking transactions?",
-    "options": {
-      "A": "PHP and FTP",
-      "B": "React and Stripe",
-      "C": "HTML5 and Dial-up",
-      "D": "Algolia and Django"
-    },
-    "correct_answer": "B",
-    "explanation": "The travel booking case study pairs React (for a dynamic, interactive user interface) with Stripe (for secure, reliable payment processing modules)."
-  },
+
   {
     "course_code": "CSC 106",
     "topic": "PHP Integration",
