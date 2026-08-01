@@ -1,65 +1,70 @@
-# MivaPrep 🚀
+MivaPrep 🎓
 
-**MivaPrep** is a highly scalable, dual-stream examination simulation workspace explicitly engineered to support university students through their entire academic journey—from foundational 100-Level concepts to 400-Level senior graduation requirements. 
+MivaPrep is an AI-assisted examination preparation platform built for university students. It combines multiple-choice practice tests with an AI-powered essay examiner to help students prepare for assessments and examinations.
 
-Built originally to streamline revision workflows, this platform dynamically balances quick-fire objective testing with intensive, AI-driven written exam evaluations.
+The platform was created to make studying more interactive by providing instant feedback, realistic practice, and personalized essay evaluation.
 
----
+Features
+📚 Multiple-choice practice questions
+🤖 AI Essay Examiner
+📊 Instant results and performance summary
+🌙 Dark mode
+📱 Responsive interface
+🎯 Course-based question organization
+⚡ Fast serverless backend powered by Node.js
+AI Essay Examiner
 
-## 🎓 Tailored Academic Progression Architecture
+The Essay Examiner allows students to submit essay responses and receive AI-generated feedback similar to a human examiner.
 
-The simulator is strategically split into two core assessment modules designed to evolve alongside university curriculum standards:
+Feedback includes:
 
-### 📱 100L: (Objective Testing)
-* **Target Focus:** Core Multi-Choice Questions (MCQs) across introductory courses (e.g., CSS, Architecture, core computing principles).
-* **Interactive Engine:** Features responsive option selection, real-time question progress bars, and instant submission handlers.
-* **Granular Diagnostics:** Renders a clean performance evaluation screen breaking down accurate scoring ratios (e.g., Accuracy Rating, absolute number of Correct/Incorrect choices) to identify knowledge gaps rapidly.
+Overall score
+Strengths
+Weaknesses
+Suggestions for improvement
 
-### 🧠 200L - 400L+: Advanced Stage (Critical Synthesis - Essay)
-* **Target Focus:** Case study evaluations, architectural trade-offs, and deep essay prompts (e.g., Monolithic vs. Microservices analysis).
-* **Nexus AI Evaluator:** Integrates an advanced LLM framework directly into an analytical text interface to critique and grade comprehensive open-ended student scripts.
+Note
 
----
+The AI examiner currently uses the Claude API on the free tier. Because of usage limits, essay evaluation may occasionally become temporarily unavailable until the quota resets.
 
-## ✨ Core Features
+Tech Stack
+HTML5
+CSS3
+JavaScript (ES6)
+Node.js
+Express
+Claude API
+Vercel
+Getting Started
 
-* **Dual-Stream Workspace:** Seamless toggle system between objective MCQ sessions and long-form essay submissions depending on study targets.
-* **Dynamic Fallback Environment:** Configured with advanced programming logic (`${courseCode || "COS 301"}`) ensuring fallback safety metrics across all simulated course streams without breaking application code layouts.
-* **GitHub Metrics Bridge:** An automated repository integration helper enabling students to push session analysis data directly to GitHub Issues for continuous revision tracking and historical progress auditing.
-* **Optimized Study Layout:** Engineered with a focused, high-contrast custom dark-mode theme to eliminate optical strain during intense late-night preparation marathons.
+Install dependencies
 
----
+npm install
 
-## 🛠️ Technical Stack
+Run locally
 
-* **Frontend:** Vanilla JavaScript (ES6+), HTML5 Semantic Structure, CSS3 (Modern Flexbox layouts & Custom Theme Variables).
-* **Backend:** Node.js serverless route architecture (fully optimized for localized pipelines and edge deployments like Vercel).
-* **AI Engine Framework:** Ollama / Large Language Models (Supports local execution or custom external endpoints).
+npx vercel dev
 
----
+Open
 
-## 🚀 Environment Execution & Network Configuration
+http://localhost:3000
+Environment Variables
+CLAUDE_API_KEY=your_api_key
+Project Goals
+Help students prepare for examinations.
+Improve essay-writing skills through AI feedback.
+Provide an accessible learning platform for MIVA students.
+Continue expanding support for additional courses.
+Contributing
 
-This project accommodates multiple environment profiles depending on hardware availability, network firewalls, or connectivity configurations.
+Contributions are welcome.
 
-### 1. Frontend Development Setup
-Simply run the project using your preferred local environment (e.g., VS Code **Live Server** extension, or executing `npm run dev` if binding to a Node compilation framework).
+Feel free to submit issues, feature requests, or pull requests.
 
-### 2. AI Stream Evaluation Workflows
-To evaluate complex 300L/400L written scripts, implement **one** of the following infrastructural profiles inside your backend route configuration (`/api/evaluate-essay`):
+License
 
-#### ⚡ Option A: Local AI Loopback (Recommended for offline study)
-Run an open-source model directly on your local hardware bypassing strict cross-origin resource limitations:
-OLLAMA_ORIGINS="*" OLLAMA_HOST="127.0.0.1" ollama serve
+MIT License
 
-🌐 Option B: Cloud AI Engine Integration (No local installation needed)
-If you prefer not to tax your laptop's local RAM/GPU or are working through restricted networking environments (such as a Cellular Mobile Hotspot using Carrier-Grade NAT / CGNAT which blocks incoming connections), update your host router configuration:
+Screenshots
 
-Hardcode or configure your API host variables to point straight to a managed cloud endpoint provider like Groq, DeepSeek, or OpenRouter.
-
-Pass your private provider API token directly via secure headers (Authorization: Bearer <KEY>).
-
-
----
-
-### 📤 Commit and Lock It In
+<img width="496" height="919" alt="image" src="https://github.com/user-attachments/assets/a35d056b-78d8-4977-b91f-767388348608" />
