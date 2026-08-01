@@ -1,6 +1,11 @@
 {
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.1084.0",
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "formidable": "^3.5.4",
+    "groq-sdk": "^1.4.0",
+    "mammoth": "^1.12.0",
+    "pdf-parse": "^2.4.5",
+    "tesseract.js": "^7.0.0"
   }
 }
