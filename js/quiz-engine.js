@@ -1,4 +1,40 @@
 /* ==========================================================================
+   UNIVERSAL PARSER & WILDCARD ESCAPE PIPELINE
+   ========================================================================== */
+
+// 1. Escapes raw HTML tags while preserving LaTeX delimiters
+function safeRenderText(text) {
+    if (typeof text !== 'string') return text;
+
+    // First, temporarily protect valid LaTeX delimiters ($...$ or $$...$$)
+    const mathTokens = [];
+    let cleanText = text.replace(/(\$\$[\s\S]*?\$\$|\$[^\$]+?\$)/g, (match) => {
+        mathTokens.push(match);
+        return `___MATH_TOKEN_${mathTokens.length - 1}___`;
+    });
+
+    // Escape raw angle brackets so <div> or <html> display as visible text
+    cleanText = cleanText
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+
+    // Restore LaTeX expressions back into place
+    return cleanText.replace(/___MATH_TOKEN_(\d+)___/g, (_, index) => mathTokens[index]);
+}
+
+// 2. Universal Trigger: Renders MathJax across the entire active container
+function triggerUniversalMathRender(targetElement = document.body) {
+    if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+        requestAnimationFrame(() => {
+            window.MathJax.typesetPromise([targetElement]).catch((err) => 
+                console.warn("MathJax Rendering Warning:", err)
+            );
+        });
+    }
+}
+
+/* ==========================================================================
    MIVA PREP - SECURE SIMULATION RUNTIME ENGINE WITH FINAL REVIEW (quiz-engine.js)
    ========================================================================== */
 
@@ -158,7 +194,7 @@ function renderQuestion(state, dom, quizMode, courseCode) {
     if (dom.qTotal) dom.qTotal.textContent = total;
     if (dom.progressFill) dom.progressFill.style.width = `${(curNum / total) * 100}%`;
     if (dom.topic) dom.topic.textContent = cur.topic || "Core Concept";
-    if (dom.qText) dom.qText.textContent = cur.question;
+    if (dom.qText) dom.qText.innerHTML = safeRenderText(cur.question);
 
     /* ==========================================================================
        BRANCH A: ADVANCED ESSAY EVALUATION ENGINE WITH NEXUS AI
@@ -226,7 +262,7 @@ function renderQuestion(state, dom, quizMode, courseCode) {
         return; // Break execution out early since we don't have MCQ options to loop over
     }
 
-    /* ==========================================================================
+/* ==========================================================================
        BRANCH B: STANDARD MULTIPLE CHOICE LOGIC (YOUR ORIGINAL ENGINE RULES)
        ========================================================================== */
     if (dom.options) dom.options.style.display = "grid"; // Ensure MCQ grid is visible if coming from an essay card
@@ -236,7 +272,9 @@ function renderQuestion(state, dom, quizMode, courseCode) {
             if (!val) return;
             const btn = document.createElement("button");
             btn.className = "option-btn";
-            btn.innerHTML = `<strong>${key}:</strong> ${val}`;
+            
+            // 💡 ENHANCEMENT: Safe text render for option labels
+            btn.innerHTML = `<strong>${key}:</strong> ${safeRenderText(val)}`;
             
             btn.addEventListener("click", () => {
                 if (state.hasAnswered) return;
@@ -272,28 +310,20 @@ function renderQuestion(state, dom, quizMode, courseCode) {
                             if (b.innerHTML.startsWith(`<strong>${cur.correct_answer}:</strong>`)) b.classList.add("correct"); 
                         });
                     }
+
+                    // 💡 ENHANCEMENT: Safe text render for explanations
                     if (dom.explanation) {
-    dom.explanation.textContent = cur.explanation || "No explanation provided.";
-}
+                        dom.explanation.innerHTML = safeRenderText(cur.explanation || "No explanation provided.");
+                    }
 
-if (dom.feedback) {
-    dom.feedback.classList.remove("hidden");
-    dom.feedback.style.display = "block";
-}
+                    if (dom.feedback) {
+                        dom.feedback.classList.remove("hidden");
+                        dom.feedback.style.display = "block";
+                    }
 
-// FIX: Run MathJax on the explanation panel right after it becomes visible
-const isMathCourse = cur.course_code && cur.course_code.toUpperCase().startsWith("MTH");
-const hasExplanationMath = cur.explanation && cur.explanation.includes('$');
+                    // 💡 ENHANCEMENT: Render MathJax in explanation panel when revealed
+                    triggerUniversalMathRender(dom.feedback);
 
-if (isMathCourse || hasExplanationMath) {
-    if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
-        // Wait a brief moment for the browser to draw the visible block before scanning
-        setTimeout(() => {
-            window.MathJax.typesetPromise([dom.feedback]).catch((err) => console.log("MathJax Breakdown Error:", err));
-        }, 50);
-    }
-}
-                    
                 } else {
                     btn.style.backgroundColor = "#f3e8ff"; 
                     btn.style.borderColor = "#a855f7";
@@ -314,25 +344,18 @@ if (isMathCourse || hasExplanationMath) {
                     }, 400);
                 }
             });
+
             if (dom.options) dom.options.appendChild(btn);
         });
     }
+
     /* ==========================================================================
        FUTURE-PROOF MATHJAX DYNAMIC RENDERING TRIGGER (MCQ + ESSAY SAFE)
        ========================================================================== */
-    // Checks if the course code starts with "MTH" (captures MTH 102, 201, 302, etc.) OR contains '$'
-    const isMathCourse = cur.course_code && cur.course_code.toUpperCase().startsWith("MTH");
-    const hasMathSymbols = cur.question && cur.question.includes('$');
+    // 💡 ENHANCEMENT: Clean universal math trigger on initial card draw
+    triggerUniversalMathRender(document.body);
 
-    if (isMathCourse || hasMathSymbols) {
-        if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
-            requestAnimationFrame(() => {
-                window.MathJax.typesetPromise([document.body]).catch((err) => console.log("MathJax error:", err));
-            });
-        }
-    }
-
-} // <-- This is the absolute final closing bracket of the renderQuestion function
+} // <-- Absolute final closing bracket for renderQuestion function
 
 
 

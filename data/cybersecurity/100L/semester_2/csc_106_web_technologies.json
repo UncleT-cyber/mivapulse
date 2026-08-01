@@ -1,173 +1,4 @@
 [
- {
-  "course_code": "CSC 106",
-  "topic": "JavaScript & Web Frameworks",
-  "question": "Which combination of technologies is commonly paired to build dynamic user interfaces and process secure flight and payment booking transactions?",
-  "options": {
-    "A": "PHP and FTP",
-    "B": "React and Stripe",
-    "C": "HTML5 and Dial-up",
-    "D": "Algolia and Django"
-  },
-  "correct_answer": "B",
-  "explanation": "Interactive booking applications frequently combine React for building responsive, dynamic frontend interfaces with Stripe for handling secure online payment processing."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Web Browser Foundations",
-    "question": "How do web browsers primarily fulfill their execution role in web development regarding content presentation, and how do they maintain a secure runtime environment?",
-    "options": {
-      "A": "They compile source files into server-side machine bytecode while relying entirely on network firewalls for data isolation.",
-      "B": "They interpret HTML/CSS/JS strings into visual Render Trees via engines, enforcing security through policies like the Same-Origin Policy (SOP).",
-      "C": "They cache static visual frames directly using cloud proxies and pass transport keys down to local storage configurations.",
-      "D": "They process structural database schemas using server-side script runtimes while tracking cryptographic signatures inside cookies."
-    },
-    "correct_answer": "B",
-    "explanation": "Web browsers use rendering engines to parse HTML token structures, apply CSS cascading rules, and execute JavaScript routines to construct the visual viewport representation. Security boundaries are maintained client-side via programmatic mechanisms like the Same-Origin Policy (SOP) and Sandboxing."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Architecture Layers",
-    "question": "Which set of specific core tasks structurally characterizes and distinguishes front-end development from back-end development?",
-    "options": {
-      "A": "Front-end handles layout layout trees, DOM events, and style specificity; back-end manages data persistence, server-side business logic, and API authentication.",
-      "B": "Front-end updates physical server hardware arrays; back-end builds accessible responsive forms and optimizes browser client caching.",
-      "C": "Front-end establishes network handshake routing logic; back-end handles DOM manipulation and UI hover transformations.",
-      "D": "Front-end compiles raw relational database tables; back-end tracks browser rendering engine parsing workflows."
-    },
-    "correct_answer": "A",
-    "explanation": "Front-end architecture operates within the client environment (handling presentation, UX/UI, and DOM mechanics), while back-end development governs data persistence arrays, authentication validation rules, processing pipelines, and data storage."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Network Protocols",
-    "question": "How does the Simple Mail Transfer Protocol (SMTP) handle email transmission, and which example represents a valid standard SMTP command line string?",
-    "options": {
-      "A": "It maps domain structures to IP addresses; uses standard 'GET /index.html' command protocols.",
-      "B": "It acts as an application layer routing pipeline to push email payloads; utilizes the 'EHLO' command to initiate client-server sessions.",
-      "C": "It handles bi-directional asset streaming queries; uses standard 'FETCH ALL' transaction headers.",
-      "D": "It pushes binary objects directly to relational data schemas; relies on 'UPDATE MAILBOX' database flags."
-    },
-    "correct_answer": "B",
-    "explanation": "SMTP is a text-based, push-centric application layer protocol designed to transmit email messages across networks. Connection handshakes are explicitly initialized using the ASCII text command 'EHLO' or 'HELO'."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Infrastructure",
-    "question": "How does the distributed Domain Name System (DNS) hierarchical architecture optimize name resolution efficiency?",
-    "options": {
-      "A": "By forcing every query to load from a singular server center to maintain consistency.",
-      "B": "By using a root-to-leaf look-up chain (Root, TLD, Authoritative Nameservers) combined with caching at multiple network layers.",
-      "C": "By converting HTML documents into minified network packets directly over transport layer streams.",
-      "D": "By running sorting algorithms over static routing tables inside local browser storage cookies."
-    },
-    "correct_answer": "B",
-    "explanation": "The DNS tree hierarchy prevents single-point bottlenecks by splitting zones among Root, Top-Level Domain (.com, .edu), and Authoritative servers. Extensive caching across points drastically reduces round-trip lookup loops."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "HTML Standards",
-    "question": "What role does the declaration string &lt;!DOCTYPE html&gt; fulfill at the absolute entry point of an HTML document?",
-    "options": {
-      "A": "It executes an import call to pull active modern styling variables from standard external repositories.",
-      "B": "It tells the browser's engine to render the document in 'Standards Mode' rather than triggering backwards-compatible 'Quirks Mode'.",
-      "C": "It establishes safe data compression levels for streaming code over secure transport pipelines.",
-      "D": "It constructs an active layout structure inside local storage registries to intercept server queries."
-    },
-    "correct_answer": "B",
-    "explanation": "The DOCTYPE declaration is a flag that tells the browser to process layouts using strict modern W3C system standards, preventing the engine from reverting to Quirks Mode rendering behaviors."
-  },
-  {
-  "course_code": "CSC 106",
-  "topic": "Web Accessibility",
-  "question": "Which practice demonstrates the correct implementation of web accessibility standards when constructing HTML user forms?",
-  "options": {
-    "A": "Relying entirely on placeholder attribute text values to define form field input constraints.",
-    "B": "Using explicit 'for' attributes on &lt;label&gt; elements mapped to matching input 'id' fields alongside semantic ARIA landmarks.",
-    "C": "Removing visual borders using CSS styles to keep the interactive focus state hidden.",
-    "D": "Using non-semantic generic &lt;div&gt; blocks to build multi-choice input selections without text tags."
-  },
-  "correct_answer": "B",
-  "explanation": "Accessible web architecture mandates pairing form field tags explicitly with input nodes using matching 'id' values. This guarantees screen readers can interpret input targets, while placeholders do not satisfy accessibility rules."
-},
-  {
-    "course_code": "CSC 106",
-    "topic": "CSS Specificity",
-    "question": "How do CSS Type, Class, ID, and Descendant selectors diverge in specificity, and how does this affect cascading properties?",
-    "options": {
-      "A": "Type selectors have the highest value weight; Descendants wipe out active element rules.",
-      "B": "An ID selector overrides a Class selector, which overrides a Type selector; inline rules have higher priority than standard external sheets.",
-      "C": "Descendant rules change execution priorities to equalize style weight rules across configurations.",
-      "D": "Specificity calculations rely entirely on the sequence order of style strings inside the head tag."
-    },
-    "correct_answer": "B",
-    "explanation": "CSS engine calculations evaluate priorities based on a strict weighting scale: Inline Styles [1,0,0,0], IDs [0,1,0,0], Classes/Attributes [0,0,1,0], and Types [0,0,0,1]. High-specificity rules override general matching selectors regardless of document layout order."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "CSS Box Model",
-    "question": "Which layout statement correctly outlines the directional stack sequence of layers that form the standard CSS Box Model?",
-    "options": {
-      "A": "Padding frames the outermost rim, followed directly by Margin, Content, and Border layers.",
-      "B": "The inner core is Content, wrapped successively by Padding, then the structural Border, and finally the outer Margin space.",
-      "C": "Margin represents the absolute inner core, bounded sequentially by Content, Border, and Padding tracks.",
-      "D": "The layout combines Padding and Margin inside a singular border footprint that wraps content grids."
-    },
-    "correct_answer": "B",
-    "explanation": "Every element box rendered by CSS follows this structural wrapping hierarchy from the inside out: Content (text/images) -> Padding (clear space inside the border) -> Border (outline wrapper) -> Margin (clear space outside the border boundaries)."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "JavaScript Core",
-    "question": "How do the JavaScript scope behaviors of 'var', 'let', and 'const' declarations affect modern code safety practices?",
-    "options": {
-      "A": "Both 'var' and 'let' hoist with initial block scopes; 'const' objects can have their values completely reassigned at any runtime point.",
-      "B": "'var' is globally or function-scoped and hoists with an undefined value; 'let' and 'const' are strictly block-scoped and remain in a Temporal Dead Zone until initialized.",
-      "C": "'const' shifts variable parameters directly into memory storage arrays to make calculations match server-side logic.",
-      "D": "Declaring arrays using 'let' prevents users from changing internal index entries during standard operations."
-    },
-    "correct_answer": "B",
-    "explanation": "'var' variables bypass block boundary structures and hoist as 'undefined' variables. Modern standards favor 'let' and 'const' because their strict block scoping isolates logic inside loop blocks and functions, preventing scope leakage errors."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Algorithms",
-    "question": "Which JavaScript implementation correctly calculates the combined sum of an array containing only integer values?",
-    "options": {
-      "A": "function sum(arr) { return arr.reduce((acc, curr) => acc + curr, 0); }",
-      "B": "function sum(arr) { return arr.join('+').split(); }",
-      "C": "const sum = (arr) => { for (let i in arr) { arr[i] += arr[i]; } return arr; };",
-      "D": "function sum(arr) { return Math.max(...arr) + Math.min(...arr); }"
-    },
-    "correct_answer": "A",
-    "explanation": "The Array.prototype.reduce() method iterates over each value in an array, continuously adding the current element value to an accumulator variable to calculate a final aggregate total."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Asynchronous JS",
-    "question": "Why is Asynchronous JavaScript crucial for web applications when interacting with remote web server network APIs?",
-    "options": {
-      "A": "It speeds up script compilation by running server database queries on a separate client thread.",
-      "B": "It enables non-blocking operations, allowing data fetches to run in the background without freezing the main UI thread.",
-      "C": "It compresses media objects inside the DOM tree before data payload transfer events.",
-      "D": "It forces web browsers to reload all interface nodes whenever an update event occurs."
-    },
-    "correct_answer": "B",
-    "explanation": "JavaScript is single-threaded. Asynchronous operations (like Fetch API queries or Promises) allow web applications to offload long-running network requests to the browser environment, keeping the interface smooth and responsive."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "ES6 Components",
-    "question": "Given an ES6 class named 'Product', which code block demonstrates the correct syntax for declaration, initialization, and mounting into a table layout?",
-    "options": {
-      "A": "class Product { create() { this.name = n; } } table.appendChild(Product);",
-      "B": "class Product { constructor(n, p, d) { this.n = n; this.p = p; this.d = d; } } table.innerHTML = Product.toString();",
-      "C": "class Product { constructor(name, price, desc) { this.name = name; this.price = price; this.desc = desc; } } const p = new Product('A', 10, 'B'); const row = `&lt;tr&gt;&lt;td&gt;\u0024{p.name}&lt;/td&gt;&lt;/tr&gt;`;",
-      "D": "const Product = (name) => { this.name = name; return `&lt;td&gt;\u0024{name}&lt;/td&gt;`; };"
-    },
-    "correct_answer": "C",
-    "explanation": "ES6 classes use the explicit 'constructor' method to map instantiation arguments to object instances, which can then be dynamically read inside template literal blocks to update tabular layout elements."
-  },
   {
     "course_code": "CSC 106",
     "topic": "DOM Interaction",
@@ -225,13 +56,13 @@
     "topic": "Backend Scripting",
     "question": "Which code snippet demonstrates the correct syntax for a PHP function that accepts two integer values and returns their numerical sum?",
     "options": {
-      "A": "function calculateSum(int \u0024a, int \u0024b): int { return \u0024a + \u0024b; }",
-      "B": "def calculateSum(\u0024a, \u0024b) { return \u0024a + \u0024b; }",
-      "C": "calculateSum(\u0024a, \u0024b) =\u003e { echo \u0024a + \u0024b; };",
-      "D": "void function calculateSum(\u0024a + \u0024b) { return total; }"
+      "A": "function calculateSum(int $a, int $b): int { return $a + $b; }",
+      "B": "def calculateSum($a, $b) { return $a + $b; }",
+      "C": "calculateSum($a, $b) => { echo $a + $b; };",
+      "D": "void function calculateSum($a + $b) { return total; }"
     },
     "correct_answer": "A",
-    "explanation": "PHP functions use the 'function' keyword, declare internal variable references with leading dollar signs ($), and can enforce explicit parameter types and return contracts (`: int`) in modern versions."
+    "explanation": "PHP functions use the 'function' keyword, declare internal variable references with leading dollar signs ($), and can enforce explicit parameter types and return contracts (: int) in modern versions."
   },
   {
     "course_code": "CSC 106",
@@ -364,134 +195,17 @@
     "explanation": "HyperText Transfer Protocol (HTTP) is the foundational application layer protocol used to transmit hypertext documents and assets between browser clients and web servers."
   },
   {
-  "course_code": "CSC 106",
-  "topic": "Web Development Protocols and Markup Languages",
-  "question": "Identify the missing HTML element in the sequence: &lt;!DOCTYPE html&gt; -&gt; [?] -&gt; &lt;head&gt;&lt;/head&gt;",
-  "options": {
-    "A": "&lt;script&gt;",
-    "B": "&lt;body&gt;",
-    "C": "&lt;html&gt;",
-    "D": "&lt;title&gt;"
-  },
-  "correct_answer": "C",
-  "explanation": "The &lt;html&gt; element acts as the root container element for all other nesting tags inside a standard semantic webpage structure."
-},
-  {
     "course_code": "CSC 106",
     "topic": "Web Development Protocols and Markup Languages",
-    "question": "____________ is the backbone of content structures on web pages.",
+    "question": "Identify the missing HTML element in the sequence: <!DOCTYPE html> -> [?] -> <head></head>",
     "options": {
-      "A": "Markup Languages",
-      "B": "Client-server model",
-      "C": "Use case structures",
-      "D": "High-level Models"
-    },
-    "correct_answer": "A",
-    "explanation": "Markup languages (like HTML) explicitly define the layout blueprint, hierarchical structure, and raw data semantics of web document interfaces."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Web Development Protocols and Markup Languages",
-    "question": "A versatile markup language employed in the exchange of data across systems on the web is ___________ .",
-    "options": {
-      "A": "CSS",
-      "B": "HTML",
-      "C": "XML",
-      "D": "Browser"
+      "A": "<script>",
+      "B": "<body>",
+      "C": "<html>",
+      "D": "<title>"
     },
     "correct_answer": "C",
-    "explanation": "Extensible Markup Language (XML) is designed to store, structure, and transport cross-compatible data self-descriptively across varied network architectures."
-  },
-  {
-  "course_code": "CSC 106",
-  "topic": "HyperText Markup Language (HTML)",
-  "question": "One of the following is NOT a valid native level of HTML heading elements.",
-  "options": {
-    "A": "&lt;h6&gt;",
-    "B": "&lt;h2&gt;",
-    "C": "&lt;h4&gt;",
-    "D": "&lt;h7&gt;"
-  },
-  "correct_answer": "D",
-  "explanation": "HTML specification standards officially provide exactly six hierarchical header levels, bounded from &lt;h1&gt; down through &lt;h6&gt;."
-},
-  {
-  "course_code": "CSC 106",
-  "topic": "HyperText Markup Language (HTML)",
-  "question": "Which of these is the most appropriate method to specify meta data in your HTML document?",
-  "options": {
-    "A": "&lt;body&gt; &lt;meta charset…&gt;",
-    "B": "&lt;head&gt; &lt;meta charset…&gt;",
-    "C": "&lt;title&gt; &lt;meta charset…&gt;",
-    "D": "&lt;html&gt; &lt;meta charset…&gt;"
-  },
-  "correct_answer": "B",
-  "explanation": "Document metadata tags—such as character encoding, keywords, descriptions, and viewport details—must be nested within the structural &lt;head&gt; block."
-},
-  {
-  "course_code": "CSC 106",
-  "topic": "HyperText Markup Language (HTML)",
-  "question": "Which of the following is NOT a semantic element?",
-  "options": {
-    "A": "&lt;main&gt;",
-    "B": "&lt;form&gt;",
-    "C": "&lt;article&gt;",
-    "D": "&lt;section&gt;"
-  },
-  "correct_answer": "B",
-  "explanation": "While &lt;main&gt;, &lt;article&gt;, and &lt;section&gt; are explicit semantic layout structural landmarks introduced to describe content purpose, &lt;form&gt; is a specific functional interactive interface element."
-},
-  {
-    "course_code": "CSC 106",
-    "topic": "Cascading Style Sheets (CSS)",
-    "question": "Which of these expressions represents a valid CSS class selector declaration?",
-    "options": {
-      "A": ".button {}",
-      "B": "button {}",
-      "C": ".button[]",
-      "D": "{}button.id"
-    },
-    "correct_answer": "A",
-    "explanation": "Class selectors in CSS are declared with a leading period (`.`) preceding the target class name value, followed by properties contained inside curly brackets."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Cascading Style Sheets (CSS)",
-    "question": "Which CSS property defines different styles for different screen sizes?",
-    "options": {
-      "A": "Relative Units",
-      "B": "Flexbox",
-      "C": "Media Queries",
-      "D": "Flex-start"
-    },
-    "correct_answer": "C",
-    "explanation": "Media Queries (`@media`) allow code configurations to conditionally apply custom block rules depending on device viewport profiles, matching responsive layouts."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Security and Infrastructure",
-    "question": "A developer is transferring a large configuration file to a remote server and wants to ensure that both authentication credentials and file contents remain encrypted during transit. The protocol that provides this protection is:",
-    "options": {
-      "A": "FTP",
-      "B": "SFTP",
-      "C": "Plain HTTP",
-      "D": "Unencrypted HTTPS"
-    },
-    "correct_answer": "B",
-    "explanation": "SSH File Transfer Protocol (SFTP) runs over an encrypted Secure Shell connection channel to fully secure authorization credentials and raw asset streams during active data transfers."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Security and Infrastructure",
-    "question": "When a user visits a banking website and sees the padlock icon in the browser address bar, the connection is using a protocol that encrypts communication between the browser and server. That protocol is:",
-    "options": {
-      "A": "HTTPS",
-      "B": "HTTP",
-      "C": "SFTP",
-      "D": "FTP"
-    },
-    "correct_answer": "A",
-    "explanation": "Hypertext Transfer Protocol Secure (HTTPS) wraps standard HTTP transmissions within a Transport Layer Security (TLS/SSL) encryption envelope to establish secure channel environments."
+    "explanation": "The <html> element acts as the root container element for all other nesting tags inside a standard semantic webpage structure."
   },
   {
     "course_code": "CSC 106",
@@ -519,57 +233,44 @@
     "correct_answer": "C",
     "explanation": "Extensible Markup Language (XML) is designed to store, structure, and transport cross-compatible data self-descriptively across varied network architectures."
   },
-  {
-  "course_code": "CSC 106",
-  "topic": "HyperText Markup Language (HTML)",
-  "question": "One of the following is NOT a valid native level of HTML heading elements.",
-  "options": {
-    "A": "&lt;h6&gt;",
-    "B": "&lt;h2&gt;",
-    "C": "&lt;h4&gt;",
-    "D": "&lt;h7&gt;"
-  },
-  "correct_answer": "D",
-  "explanation": "HTML specification standards officially provide exactly six hierarchical header levels, bounded from &lt;h1&gt; down through &lt;h6&gt;."
-},
-  {
-  "course_code": "CSC 106",
-  "topic": "HyperText Markup Language (HTML)",
-  "question": "Which of these is the most appropriate method to specify meta data in your HTML document?",
-  "options": {
-    "A": "&lt;body&gt; &lt;meta charset…&gt;",
-    "B": "&lt;head&gt; &lt;meta charset…&gt;",
-    "C": "&lt;title&gt; &lt;meta charset…&gt;",
-    "D": "&lt;html&gt; &lt;meta charset…&gt;"
-  },
-  "correct_answer": "B",
-  "explanation": "Document metadata tags—such as character encoding, keywords, descriptions, and viewport details—must be nested within the structural &lt;head&gt; block."
-},
   {
     "course_code": "CSC 106",
     "topic": "HyperText Markup Language (HTML)",
-    "question": "Which of the following is NOT a semantic element?",
+    "question": "One of the following is NOT a valid native level of HTML heading elements.",
     "options": {
-      "A": "&lt;main&gt;",
-      "B": "&lt;form&gt;",
-      "C": "&lt;article&gt;",
-      "D": "&lt;section&gt;"
+      "A": "<h6>",
+      "B": "<h2>",
+      "C": "<h4>",
+      "D": "<h7>"
     },
-    "correct_answer": "B",
-    "explanation": "While &lt;main&gt;, &lt;article&gt;, and &lt;section&gt; are explicit semantic layout structural landmarks introduced to describe content purpose, &lt;form&gt; is a specific functional interactive interface element. (Note: Based on specialized slide-level contexts, interactive containers may be scoped distinctly from layout landmarks)."
+    "correct_answer": "D",
+    "explanation": "HTML specification standards officially provide exactly six hierarchical header levels, bounded from <h1> down through <h6>."
   },
   {
     "course_code": "CSC 106",
-    "topic": "Cascading Style Sheets (CSS)",
-    "question": "Which of the following correctly specifies the syntax format of a standard CSS type selector?",
+    "topic": "HyperText Markup Language (HTML)",
+    "question": "Which of these is the most appropriate method to specify meta data in your HTML document?",
     "options": {
-      "A": "P ()",
-      "B": "P {}",
-      "C": "P &lt;&gt;",
-      "D": "P []"
+      "A": "<body> <meta charset…>",
+      "B": "<head> <meta charset…>",
+      "C": "<title> <meta charset…>",
+      "D": "<html> <meta charset…>"
     },
     "correct_answer": "B",
-    "explanation": "CSS type (element) selectors target HTML tag identifiers directly, binding execution declarations within standard curly braces `{}`."
+    "explanation": "Document metadata tags—such as character encoding, keywords, descriptions, and viewport details—must be nested within the structural <head> block."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "HyperText Markup Language (HTML)",
+    "question": "Which of the following is NOT a semantic HTML element?",
+    "options": {
+      "A": "<main>",
+      "B": "<div>",
+      "C": "<article>",
+      "D": "<section>"
+    },
+    "correct_answer": "B",
+    "explanation": "While <main>, <article>, and <section> explicitly convey structural meaning to both browsers and accessibility screen readers, <div> is a generic non-semantic container that carries no semantic meaning about its contents."
   },
   {
     "course_code": "CSC 106",
@@ -582,7 +283,7 @@
       "D": "{}button.id"
     },
     "correct_answer": "A",
-    "explanation": "Class selectors in CSS are declared with a leading period (`.`) preceding the target class name value, followed by properties contained inside curly brackets."
+    "explanation": "Class selectors in CSS are declared with a leading period (.) preceding the target class name value, followed by properties contained inside curly brackets."
   },
   {
     "course_code": "CSC 106",
@@ -595,7 +296,7 @@
       "D": "Flex-start"
     },
     "correct_answer": "C",
-    "explanation": "Media Queries (`@media`) allow code configurations to conditionally apply custom block rules depending on device viewport profiles, matching responsive layouts."
+    "explanation": "Media Queries (@media) allow code configurations to conditionally apply custom block rules depending on device viewport profiles, matching responsive layouts."
   },
   {
     "course_code": "CSC 106",
@@ -624,18 +325,434 @@
     "explanation": "Hypertext Transfer Protocol Secure (HTTPS) wraps standard HTTP transmissions within a Transport Layer Security (TLS/SSL) encryption envelope to establish secure channel environments."
   },
   {
-  "course_code": "CSC 106",
-  "topic": "HyperText Markup Language (HTML)",
-  "question": "To embed a product photograph so that it appears exactly where intended within the page flow, the developer must use the HTML tag that specifies the image source. That tag is:",
-  "options": {
-    "A": "&lt;p&gt;",
-    "B": "&lt;img&gt;",
-    "C": "&lt;a&gt;",
-    "D": "&lt;table&gt;"
+    "course_code": "CSC 106",
+    "topic": "JavaScript Core",
+    "question": "Which of the following functions can be efficiently executed directly by client-side JavaScript within a user form?",
+    "options": {
+      "A": "Hosting data warehouse server infrastructure",
+      "B": "Providing real-time user input form validation",
+      "C": "Physically routing fiber-optic Internet cables",
+      "D": "Rewriting the browser's lower-level network card drivers"
+    },
+    "correct_answer": "B",
+    "explanation": "JavaScript is excellent for client-side tasks like real-time form validation, providing instant feedback before data is submitted to a backend database."
   },
-  "correct_answer": "B",
-  "explanation": "The HTML `&lt;img&gt;` tag is an inline, self-closing element used to pull down and mount graphical media files inside the layout landscape using the 'src' attribute."
-},
+  {
+    "course_code": "CSC 106",
+    "topic": "JavaScript Core",
+    "question": "Modern web applications like Single-Page Applications (SPAs) and Progressive Web Apps (PWAs) rely heavily on which language for dynamic UI rendering?",
+    "options": {
+      "A": "FTP",
+      "B": "Plain HTTP",
+      "C": "JavaScript",
+      "D": "SQL"
+    },
+    "correct_answer": "C",
+    "explanation": "Modern client-side experiences such as SPAs and PWAs rely fundamentally on JavaScript to fetch data asynchronously and update application views dynamically."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "JavaScript Core",
+    "question": "To write foundational scripts in JavaScript, a student must possess basic knowledge of which core programming concepts?",
+    "options": {
+      "A": "Hardware registers and microcode compilation",
+      "B": "Variables, loops, and functions",
+      "C": "SQL injections and structural firewalls",
+      "D": "Dial-up frequencies and broadband modulation"
+    },
+    "correct_answer": "B",
+    "explanation": "A developer needs a solid grasp of basic programming components—such as variables, loops, and conditional blocks—to build foundational JavaScript features."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Events and Event Handling",
+    "question": "In web programming, occurrences like button clicks, screen scrolls, or form submissions are formally classified as:",
+    "options": {
+      "A": "Protocols",
+      "B": "Selectors",
+      "C": "Events",
+      "D": "Tags"
+    },
+    "correct_answer": "C",
+    "explanation": "Events are interactions or occurrences that happen on a web page, such as a user clicking a button, hovering, scrolling, or submitting a form."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Events and Event Handling",
+    "question": "What programmatic element must be defined in JavaScript to actively wait for and process a specific user interaction event?",
+    "options": {
+      "A": "An HTTP Request Header",
+      "B": "An Event Listener",
+      "C": "A Static Document Style",
+      "D": "An FTP Client Login"
+    },
+    "correct_answer": "B",
+    "explanation": "Event listeners listen for targeted interactions. When that specified event occurs, the listener captures it and triggers the defined response."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Events and Event Handling",
+    "question": "The structured path and sequence in which an event travels through nested HTML tree elements is referred to as event:",
+    "options": {
+      "A": "Validation",
+      "B": "Separation",
+      "C": "Propagation",
+      "D": "Encryption"
+    },
+    "correct_answer": "C",
+    "explanation": "Event propagation determines the order and path an event takes as it moves through nested DOM hierarchies, which is key for advanced UI layout management."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Document Object Models (DOMs)",
+    "question": "What does DOM stand for within standard web engineering practices?",
+    "options": {
+      "A": "Data Operation Module",
+      "B": "Document Object Model",
+      "C": "Dynamic Ownership Manager",
+      "D": "Digital Output Matrix"
+    },
+    "correct_answer": "B",
+    "explanation": "DOM stands for Document Object Model. It acts as an API that exposes HTML/XML documents as structured objects for programmatic modification."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Document Object Models (DOMs)",
+    "question": "How does a DOM internally model the structured hierarchy of an HTML or XML document?",
+    "options": {
+      "A": "As a sequential flat text file",
+      "B": "As an unorganized list of styles",
+      "C": "As a tree-like hierarchy mirroring document nodes",
+      "D": "As an isolated database query cache"
+    },
+    "correct_answer": "C",
+    "explanation": "The DOM maps out an HTML document as a tree structure of parent and child nodes, allowing developers to target and update elements precisely."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Document Object Models (DOMs)",
+    "question": "Which of the following processes utilizes DOM structures to extract structural information for automated applications like web crawlers?",
+    "options": {
+      "A": "Data encryption",
+      "B": "Brute force attacking",
+      "C": "Web data extraction/crawling",
+      "D": "Web Application Firewall filtering"
+    },
+    "correct_answer": "C",
+    "explanation": "Because DOM nodes are organized systematically, automated tools can easily traverse the DOM tree to extract information during web scraping or crawling operations."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Libraries and Frameworks",
+    "question": "What is the primary operational distinction between a code library and an application framework?",
+    "options": {
+      "A": "Libraries handle database logic, whereas frameworks only style fonts.",
+      "B": "Libraries provide pre-written code for explicit tasks, while frameworks impose an architectural blueprint.",
+      "C": "Frameworks operate solely on clients, while libraries only run on servers.",
+      "D": "There is no distinction; they are identical concepts in software production."
+    },
+    "correct_answer": "B",
+    "explanation": "Libraries are collections of helper functions that you call when needed. Frameworks reverse this control, providing an architectural blueprint that calls your code."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Libraries and Frameworks",
+    "question": "Which of the following are categorized explicitly as front-end user interface tools?",
+    "options": {
+      "A": "Django and Express.js",
+      "B": "React and Vue.js",
+      "C": "PHP and SQL",
+      "D": "Apache and Nginx"
+    },
+    "correct_answer": "B",
+    "explanation": "React and Vue.js are popular client-side user interface libraries focused entirely on building dynamic and responsive UI components."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Libraries and Frameworks",
+    "question": "Which pairing represents frameworks dedicated to streamlining robust server-side business logic and development?",
+    "options": {
+      "A": "HTML5 and CSS3",
+      "B": "Express.js and Django",
+      "C": "Stripe and Algolia",
+      "D": "FTP and SFTP"
+    },
+    "correct_answer": "B",
+    "explanation": "Express.js (Node.js) and Django (Python) are dedicated backend web frameworks used to handle server-side architecture, database interactions, and routing."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Libraries and Frameworks",
+    "question": "According to the course summary, which factor is NOT a criterion for selecting a library or framework?",
+    "options": {
+      "A": "Preferred programming language",
+      "B": "Scalability needs and community support",
+      "C": "The age of the internet's ARPANET military core",
+      "D": "Learning curve and project requirements"
+    },
+    "correct_answer": "C",
+    "explanation": "Choosing a modern tool depends on active criteria like scalability, language, support, and goals—not historical milestones like the creation date of ARPANET."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "PHP Integration",
+    "question": "What type of language is PHP (Hypertext Preprocessor) within the context of standard multi-tier web development?",
+    "options": {
+      "A": "Client-side style layout engine",
+      "B": "Server-side scripting language",
+      "C": "Browser document object API",
+      "D": "Unencrypted peer file client"
+    },
+    "correct_answer": "B",
+    "explanation": "PHP is an open-source, server-side scripting language designed to process logic on the server before rendering the final page output as HTML to the browser."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "PHP Integration",
+    "question": "How is PHP code executed inside an HTML page to build dynamic, data-driven web pages?",
+    "options": {
+      "A": "By utilizing special CSS selector classes",
+      "B": "By embedding PHP code directly inside specialized PHP tags within the document",
+      "C": "By uploading the file onto an unencrypted FTP transmission link",
+      "D": "By running an interactive script inside client-side event listeners"
+    },
+    "correct_answer": "B",
+    "explanation": "PHP logic can be seamlessly embedded directly within HTML source layouts using standard delimiters (<?php ... ?>). This code is then evaluated by the server before reaching the client."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "PHP Integration",
+    "question": "When a web browser requests an HTML file that contains embedded PHP code, what exactly does the end user receive?",
+    "options": {
+      "A": "The raw, unexecuted PHP source code alongside the database login details",
+      "B": "The processed HTML output generated after the server evaluates the PHP code",
+      "C": "A text script containing file transfer protocols",
+      "D": "An error stating that PHP cannot be safely parsed inside HTML tags"
+    },
+    "correct_answer": "B",
+    "explanation": "The server executes the embedded PHP blocks and replaces them with standard HTML output. As a result, the end user's browser only receives the clean, final HTML structure."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "PHP Integration",
+    "question": "Which of the following scenarios specifically requires dynamic content generation instead of basic static HTML files?",
+    "options": {
+      "A": "Displaying a fixed, unchangeable company biography paragraph",
+      "B": "User authentication processing, database interactions, and conditional displays",
+      "C": "Defining fixed background color rules within a stylesheet",
+      "D": "Declaring document structural encodings like UTF-8 headers"
+    },
+    "correct_answer": "B",
+    "explanation": "Static HTML files cannot adapt to individual users. Dynamic server engines (like PHP) are required to handle interactive features like logins, search results, and database lookups."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Web Security and Vulnerabilities",
+    "question": "What is the fundamental objective of web security protocols and best practices?",
+    "options": {
+      "A": "Minimizing the codebase size of backend scripts",
+      "B": "Protecting sensitive data, preventing unauthorized access, and maintaining data integrity and availability",
+      "C": "Ensuring client websites operate efficiently over legacy dial-up configurations",
+      "D": "Replacing dynamic backend scripts with client-side CSS rules"
+    },
+    "correct_answer": "B",
+    "explanation": "The primary goal of web security is protecting corporate and user assets by ensuring data confidentiality, system availability, and data integrity against cyber threats."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Web Security and Vulnerabilities",
+    "question": "Which security vulnerability occurs when malicious SQL code is injected into user input fields to compromise a backend database?",
+    "options": {
+      "A": "Cross-Site Scripting (XSS)",
+      "B": "SQL Injection",
+      "C": "Cross-Site Request Forgery (CSRF)",
+      "D": "Phishing Attack"
+    },
+    "correct_answer": "B",
+    "explanation": "An SQL Injection (SQLi) vulnerability happens when poorly sanitized input fields allow attackers to pass malicious database commands directly to the backend database server."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Web Security and Vulnerabilities",
+    "question": "What type of attack involves injecting malicious client-side scripts into trusted web pages to run unauthorized code in a victim's browser?",
+    "options": {
+      "A": "Brute Force Attack",
+      "B": "Cross-Site Scripting (XSS)",
+      "C": "SQL Injection",
+      "D": "FTP Interception"
+    },
+    "correct_answer": "B",
+    "explanation": "Cross-Site Scripting (XSS) attacks occur when malicious scripts are injected into web applications and executed within an innocent user's browser."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Web Security and Vulnerabilities",
+    "question": "What security device sits between web apps and incoming traffic, filtering and monitoring HTTP/HTTPS requests to block malicious payloads?",
+    "options": {
+      "A": "Web Application Firewall (WAF)",
+      "B": "Document Object Model Tree",
+      "C": "Asynchronous Algolia Indexer",
+      "D": "Server-side Preprocessor Engine"
+    },
+    "correct_answer": "A",
+    "explanation": "A Web Application Firewall (WAF) inspects incoming web traffic, filtering out common exploit payloads like XSS or SQL injection before they reach the underlying web server."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Emerging Web Trends",
+    "question": "What does the industry acronym PWA stand for in contemporary web engineering contexts?",
+    "options": {
+      "A": "Private Web Architecture",
+      "B": "Progressive Web Application",
+      "C": "Programmatic Preprocessor Wrapper Allocation",
+      "D": "Protocol Wide Authentication"
+    },
+    "correct_answer": "B",
+    "explanation": "PWA stands for Progressive Web Application, a design approach that brings native app-like features to standard websites."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Emerging Web Trends",
+    "question": "Which design philosophy best describes the core technical nature of Progressive Web Applications (PWAs)?",
+    "options": {
+      "A": "Isolating web platforms from mobile phone access entirely",
+      "B": "Combining the reach of web browsers with the rich features of native mobile applications",
+      "C": "Replacing all client-side JavaScript components with database logic",
+      "D": "Reverting web design standards back to unencrypted file transfers"
+    },
+    "correct_answer": "B",
+    "explanation": "PWAs combine the cross-platform reach of the web with native mobile application benefits, including offline functionality, high performance, and push notifications."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Application Architecture",
+    "question": "In multi-tier web architectures, what layer do HTML, CSS, and client-side JavaScript components form?",
+    "options": {
+      "A": "Data Access Layer",
+      "B": "Presentation Layer",
+      "C": "Business Logic Layer",
+      "D": "Hardware Storage Layer"
+    },
+    "correct_answer": "B",
+    "explanation": "The user interface components (HTML, CSS, JS) form the Presentation Layer, which is responsible for rendering content and capturing user inputs visually."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Application Architecture",
+    "question": "Languages like Python, Java, and PHP work together behind the scenes to form which foundational web architecture tier?",
+    "options": {
+      "A": "Presentation Layer",
+      "B": "Business Logic Layer",
+      "C": "Data Access Layer",
+      "D": "Physical Network Infrastructure Layer"
+    },
+    "correct_answer": "B",
+    "explanation": "Server-side systems running Python, Java, or PHP handle core application algorithms, workflows, and server-side computations within the Business Logic Layer."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Application Architecture",
+    "question": "Where are relational Database Management Systems (DBMS) placed within a standard three-tier web application architecture?",
+    "options": {
+      "A": "Presentation Layer",
+      "B": "Business Logic Layer",
+      "C": "Data Access Layer",
+      "D": "Web Application Firewall Router Layer"
+    },
+    "correct_answer": "C",
+    "explanation": "The DBMS functions within the Data Access Layer, securely storing, managing, and retrieving application data on behalf of the business logic tier."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Case Studies: Security & Health Systems",
+    "question": "In the Healthcare Information System case study, which security mechanism is added to prevent unauthorized account takeovers?",
+    "options": {
+      "A": "Migrating servers to unencrypted plain text FTP protocols",
+      "B": "Multi-factor authentication (MFA)",
+      "C": "Disabling the Web Application Firewall layer",
+      "D": "Restricting user input strictly to HTML5 canvas graphic designs"
+    },
+    "correct_answer": "B",
+    "explanation": "The healthcare case study mitigates access threats by implementing robust multi-factor authentication (MFA) to verify user identities before granting access to medical records."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Case Studies: Security & Health Systems",
+    "question": "What procedure is performed in the healthcare case study to actively find and address system weaknesses before attackers exploit them?",
+    "options": {
+      "A": "Web crawling and indexing",
+      "B": "Vulnerability assessments and penetration testing",
+      "C": "Dial-up infrastructure reconfiguration",
+      "D": "Client-side form validation loops"
+    },
+    "correct_answer": "B",
+    "explanation": "The methodology highlights proactive security testing through thorough vulnerability assessments and penetration tests to locate and remediate system weaknesses."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Web Security and Vulnerabilities",
+    "question": "What does a 'brute-force attack' involve in the context of authentication security threats?",
+    "options": {
+      "A": "Injecting malicious scripts into public web forums",
+      "B": "Systematically guessing password combinations until the correct one is discovered",
+      "C": "Intercepting plain text FTP file transmissions on local networks",
+      "D": "Modifying structural DOM tree components asynchronously"
+    },
+    "correct_answer": "B",
+    "explanation": "A brute-force attack involves automated scripts systematically guessing login credentials or keys until it finds the correct combination to break into user accounts."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "HTML Fundamentals",
+    "question": "Which section of a standard HTML document template holds metadata, page titles, and character encoding definitions?",
+    "options": {
+      "A": "<body>",
+      "B": "<head>",
+      "C": "<?php>",
+      "D": "<footer>"
+    },
+    "correct_answer": "B",
+    "explanation": "The HTML <head> tag holds metadata, configurations, and references (such as charset specifications and page titles) that aren't displayed directly in the main browser viewport."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "HTML Fundamentals",
+    "question": "Which tag pair marks the main visible content area of an HTML page, where text, images, and links are displayed to users?",
+    "options": {
+      "A": "<body>...</body>",
+      "B": "<head>...</head>",
+      "C": "<meta>...</meta>",
+      "D": "<title>...</title>"
+    },
+    "correct_answer": "A",
+    "explanation": "The <body> element wraps all visible layout components, text, forms, and multimedia elements that render on screen for the end user."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "Web Infrastructure Evolution",
+    "question": "The historical transition from early dial-up connections to widespread broadband connections represents an evolution in:",
+    "options": {
+      "A": "Server-side language syntax formatting rules",
+      "B": "Meeting growing user demands for faster, reliable network capabilities",
+      "C": "Deprecating secure HTTPS encryptions completely",
+      "D": "Replacing relational databases with plain unstyled HTML elements"
+    },
+    "correct_answer": "B",
+    "explanation": "The infrastructure shift from dial-up to high-speed broadband reflects the continuous evolution of the Internet to handle heavy workloads, multimedia streaming, and advanced data-driven applications."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "HyperText Markup Language (HTML)",
+    "question": "To embed a product photograph so that it appears exactly where intended within the page flow, the developer must use the HTML tag that specifies the image source. That tag is:",
+    "options": {
+      "A": "<p>",
+      "B": "<img>",
+      "C": "<a>",
+      "D": "<table>"
+    },
+    "correct_answer": "B",
+    "explanation": "The HTML <img> tag is an inline, self-closing element used to pull down and mount graphical media files inside the layout landscape using the 'src' attribute."
+  },
   {
     "course_code": "CSC 106",
     "topic": "Cascading Style Sheets (CSS)",
@@ -673,7 +790,7 @@
       "D": "An image map"
     },
     "correct_answer": "C",
-    "explanation": "Ordered (&lt;ol&gt;) or unordered (&lt;ul&gt;) lists provide clear document structures specifically engineered for presenting scannable items sequentially."
+    "explanation": "Ordered (<ol>) or unordered (<ul>) lists provide clear document structures specifically engineered for presenting scannable items sequentially."
   },
   {
     "course_code": "CSC 106",
@@ -780,18 +897,18 @@
     "explanation": "The DOM translates components into standardized JavaScript Objects, exposing built-in configuration methods and data properties."
   },
   {
-    "course_code": "CSC 106",
-    "topic": "Document Object Model (DOM)",
-    "question": "Tags like &lt;div&gt;, &lt;button&gt;, and &lt;a&gt; are represented as what specific category of nodes in the DOM tree?",
-    "options": {
-      "A": "semantic",
-      "B": "attribute",
-      "C": "selector",
-      "D": "element"
-    },
-    "correct_answer": "D",
-    "explanation": "Markup markup element tags translate into concrete Element Nodes inside the DOM architecture, separate from text nodes or attribute metadata links."
+  "course_code": "CSC 106",
+  "topic": "Document Object Model (DOM)",
+  "question": "Tags like \u003cdiv\u003e, \u003cbutton\u003e, and \u003ca\u003e are represented as what specific category of nodes in the DOM tree?",
+  "options": {
+    "A": "semantic",
+    "B": "attribute",
+    "C": "selector",
+    "D": "element"
   },
+  "correct_answer": "D",
+  "explanation": "Markup element tags translate into concrete Element Nodes inside the DOM architecture, separate from text nodes or attribute metadata links."
+},
   {
     "course_code": "CSC 106",
     "topic": "JavaScript Libraries and Frameworks",
@@ -884,18 +1001,18 @@
     "explanation": "For focused tasks like minor DOM manipulation or isolated network fetches, a compact utility library is ideal because it avoids the large bundle size overhead of a full framework."
   },
   {
-    "course_code": "CSC 106",
-    "topic": "Backend Programming and Development",
-    "question": "To display a different welcome banner depending on user auth status, conditional PHP logic blocks must be enclosed inside which tags?",
-    "options": {
-      "A": "&lt;?php ?&gt; tags",
-      "B": "",
-      "C": "&lt;script&gt; tags",
-      "D": "&lt;div&gt; tags only"
-    },
-    "correct_answer": "A",
-    "explanation": "The web server execution engine processes text sequences wrapped inside strict `&lt;?php ?&gt;` evaluation blocks, parsing backend conditional branches before delivery."
+  "course_code": "CSC 106",
+  "topic": "Backend Programming and Development",
+  "question": "To display a different welcome banner depending on user auth status, conditional PHP logic blocks must be enclosed inside which tags?",
+  "options": {
+    "A": "\u003c?php ?\u003e tags",
+    "B": "\u003chtml\u003e \u003c/html\u003e tags",
+    "C": "\u003cscript\u003e \u003c/script\u003e tags",
+    "D": "\u003cdiv\u003e \u003c/div\u003e tags only"
   },
+  "correct_answer": "A",
+  "explanation": "The web server execution engine processes text sequences wrapped inside strict \u003c?php ?\u003e evaluation blocks, parsing backend conditional branches before delivery."
+},
   {
     "course_code": "CSC 106",
     "topic": "Document Object Model (DOM)",
@@ -933,7 +1050,7 @@
       "D": "The click event"
     },
     "correct_answer": "B",
-    "explanation": "The browser fires a native `change` event from interactive elements like &lt;select&gt; inputs whenever a user actively commits a new value choice."
+    "explanation": "The browser fires a native `change` event from interactive elements like <select> inputs whenever a user actively commits a new value choice."
   },
   {
     "course_code": "CSC 106",
@@ -1288,419 +1405,171 @@
   },
   {
     "course_code": "CSC 106",
-    "topic": "JavaScript Core",
-    "question": "Which of the following functions can be efficiently executed directly by client-side JavaScript within a user form?",
+    "topic": "JavaScript & Web Frameworks",
+    "question": "Which combination of technologies is commonly paired to build dynamic user interfaces and process secure flight and payment booking transactions?",
     "options": {
-      "A": "Hosting data warehouse server infrastructure",
-      "B": "Providing real-time user input form validation",
-      "C": "Physically routing fiber-optic Internet cables",
-      "D": "Rewriting the browser's lower-level network card drivers"
+      "A": "PHP and FTP",
+      "B": "React and Stripe",
+      "C": "HTML5 and Dial-up",
+      "D": "Algolia and Django"
     },
     "correct_answer": "B",
-    "explanation": "JavaScript is excellent for client-side tasks like real-time form validation, providing instant feedback before data is submitted to a backend database."
+    "explanation": "Interactive booking applications frequently combine React for building responsive, dynamic frontend interfaces with Stripe for handling secure online payment processing."
   },
   {
     "course_code": "CSC 106",
-    "topic": "JavaScript Core",
-    "question": "Modern web applications like Single-Page Applications (SPAs) and Progressive Web Apps (PWAs) rely heavily on which language for dynamic UI rendering?",
+    "topic": "Web Browser Foundations",
+    "question": "How do web browsers primarily fulfill their execution role in web development regarding content presentation, and how do they maintain a secure runtime environment?",
     "options": {
-      "A": "FTP",
-      "B": "Plain HTTP",
-      "C": "JavaScript",
-      "D": "SQL"
-    },
-    "correct_answer": "C",
-    "explanation": "Modern client-side experiences such as SPAs and PWAs rely fundamentally on JavaScript to fetch data asynchronously and update application views dynamically."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "JavaScript Core",
-    "question": "To write foundational scripts in JavaScript, a student must possess basic knowledge of which core programming concepts?",
-    "options": {
-      "A": "Hardware registers and microcode compilation",
-      "B": "Variables, loops, and functions",
-      "C": "SQL injections and structural firewalls",
-      "D": "Dial-up frequencies and broadband modulation"
+      "A": "They compile source files into server-side machine bytecode while relying entirely on network firewalls for data isolation.",
+      "B": "They interpret HTML/CSS/JS strings into visual Render Trees via engines, enforcing security through policies like the Same-Origin Policy (SOP).",
+      "C": "They cache static visual frames directly using cloud proxies and pass transport keys down to local storage configurations.",
+      "D": "They process structural database schemas using server-side script runtimes while tracking cryptographic signatures inside cookies."
     },
     "correct_answer": "B",
-    "explanation": "A developer needs a solid grasp of basic programming components—such as variables, loops, and conditional blocks—to build foundational JavaScript features."
+    "explanation": "Web browsers use rendering engines to parse HTML token structures, apply CSS cascading rules, and execute JavaScript routines to construct the visual viewport representation. Security boundaries are maintained client-side via programmatic mechanisms like the Same-Origin Policy (SOP) and Sandboxing."
   },
   {
     "course_code": "CSC 106",
-    "topic": "Events and Event Handling",
-    "question": "In web programming, occurrences like button clicks, screen scrolls, or form submissions are formally classified as:",
+    "topic": "Architecture Layers",
+    "question": "Which set of specific core tasks structurally characterizes and distinguishes front-end development from back-end development?",
     "options": {
-      "A": "Protocols",
-      "B": "Selectors",
-      "C": "Events",
-      "D": "Tags"
-    },
-    "correct_answer": "C",
-    "explanation": "Events are interactions or occurrences that happen on a web page, such as a user clicking a button, hovering, scrolling, or submitting a form."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Events and Event Handling",
-    "question": "What programmatic element must be defined in JavaScript to actively wait for and process a specific user interaction event?",
-    "options": {
-      "A": "An HTTP Request Header",
-      "B": "An Event Listener",
-      "C": "A Static Document Style",
-      "D": "An FTP Client Login"
-    },
-    "correct_answer": "B",
-    "explanation": "Event listeners listen for targeted interactions. When that specified event occurs, the listener captures it and triggers the defined response."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Events and Event Handling",
-    "question": "The structured path and sequence in which an event travels through nested HTML tree elements is referred to as event:",
-    "options": {
-      "A": "Validation",
-      "B": "Separation",
-      "C": "Propagation",
-      "D": "Encryption"
-    },
-    "correct_answer": "C",
-    "explanation": "Event propagation determines the order and path an event takes as it moves through nested DOM hierarchies, which is key for advanced UI layout management."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Document Object Models (DOMs)",
-    "question": "What does DOM stand for within standard web engineering practices?",
-    "options": {
-      "A": "Data Operation Module",
-      "B": "Document Object Model",
-      "C": "Dynamic Ownership Manager",
-      "D": "Digital Output Matrix"
-    },
-    "correct_answer": "B",
-    "explanation": "DOM stands for Document Object Model. It acts as an API that exposes HTML/XML documents as structured objects for programmatic modification."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Document Object Models (DOMs)",
-    "question": "How does a DOM internally model the structured hierarchy of an HTML or XML document?",
-    "options": {
-      "A": "As a sequential flat text file",
-      "B": "As an unorganized list of styles",
-      "C": "As a tree-like hierarchy mirroring document nodes",
-      "D": "As an isolated database query cache"
-    },
-    "correct_answer": "C",
-    "explanation": "The DOM maps out an HTML document as a tree structure of parent and child nodes, allowing developers to target and update elements precisely."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Document Object Models (DOMs)",
-    "question": "Which of the following processes utilizes DOM structures to extract structural information for automated applications like web crawlers?",
-    "options": {
-      "A": "Data encryption",
-      "B": "Brute force attacking",
-      "C": "Web data extraction/crawling",
-      "D": "Web Application Firewall filtering"
-    },
-    "correct_answer": "C",
-    "explanation": "Because DOM nodes are organized systematically, automated tools can easily traverse the DOM tree to extract information during web scraping or crawling operations."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Libraries and Frameworks",
-    "question": "What is the primary operational distinction between a code library and an application framework?",
-    "options": {
-      "A": "Libraries handle database logic, whereas frameworks only style fonts.",
-      "B": "Libraries provide pre-written code for explicit tasks, while frameworks impose an architectural blueprint.",
-      "C": "Frameworks operate solely on clients, while libraries only run on servers.",
-      "D": "There is no distinction; they are identical concepts in software production."
-    },
-    "correct_answer": "B",
-    "explanation": "Libraries are collections of helper functions that you call when needed. Frameworks reverse this control, providing an architectural blueprint that calls your code."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Libraries and Frameworks",
-    "question": "Which of the following are categorized explicitly as front-end user interface tools?",
-    "options": {
-      "A": "Django and Express.js",
-      "B": "React and Vue.js",
-      "C": "PHP and SQL",
-      "D": "Apache and Nginx"
-    },
-    "correct_answer": "B",
-    "explanation": "React and Vue.js are popular client-side user interface libraries focused entirely on building dynamic and responsive UI components."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Libraries and Frameworks",
-    "question": "Which pairing represents frameworks dedicated to streamlining robust server-side business logic and development?",
-    "options": {
-      "A": "HTML5 and CSS3",
-      "B": "Express.js and Django",
-      "C": "Stripe and Algolia",
-      "D": "FTP and SFTP"
-    },
-    "correct_answer": "B",
-    "explanation": "Express.js (Node.js) and Django (Python) are dedicated backend web frameworks used to handle server-side architecture, database interactions, and routing."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Libraries and Frameworks",
-    "question": "According to the course summary, which factor is NOT a criterion for selecting a library or framework?",
-    "options": {
-      "A": "Preferred programming language",
-      "B": "Scalability needs and community support",
-      "C": "The age of the internet's ARPANET military core",
-      "D": "Learning curve and project requirements"
-    },
-    "correct_answer": "C",
-    "explanation": "Choosing a modern tool depends on active criteria like scalability, language, support, and goals—not historical milestones like the creation date of ARPANET."
-  },
-
-  {
-    "course_code": "CSC 106",
-    "topic": "PHP Integration",
-    "question": "What type of language is PHP (Hypertext Preprocessor) within the context of standard multi-tier web development?",
-    "options": {
-      "A": "Client-side style layout engine",
-      "B": "Server-side scripting language",
-      "C": "Browser document object API",
-      "D": "Unencrypted peer file client"
-    },
-    "correct_answer": "B",
-    "explanation": "PHP is an open-source, server-side scripting language designed to process logic on the server before rendering the final page output as HTML to the browser."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "PHP Integration",
-    "question": "How is PHP code executed inside an HTML page to build dynamic, data-driven web pages?",
-    "options": {
-      "A": "By utilizing special CSS selector classes",
-      "B": "By embedding PHP code directly inside specialized PHP tags within the document",
-      "C": "By uploading the file onto an unencrypted FTP transmission link",
-      "D": "By running an interactive script inside client-side event listeners"
-    },
-    "correct_answer": "B",
-    "explanation": "PHP logic can be seamlessly embedded directly within HTML source layouts using standard delimiters (`&lt;?php ... ?&gt;`). This code is then evaluated by the server before reaching the client."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "PHP Integration",
-    "question": "When a web browser requests an HTML file that contains embedded PHP code, what exactly does the end user receive?",
-    "options": {
-      "A": "The raw, unexecuted PHP source code alongside the database login details",
-      "B": "The processed HTML output generated after the server evaluates the PHP code",
-      "C": "A text script containing file transfer protocols",
-      "D": "An error stating that PHP cannot be safely parsed inside HTML tags"
-    },
-    "correct_answer": "B",
-    "explanation": "The server executes the embedded PHP blocks and replaces them with standard HTML output. As a result, the end user's browser only receives the clean, final HTML structure."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "PHP Integration",
-    "question": "Which of the following scenarios specifically requires dynamic content generation instead of basic static HTML files?",
-    "options": {
-      "A": "Displaying a fixed, unchangeable company biography paragraph",
-      "B": "User authentication processing, database interactions, and conditional displays",
-      "C": "Defining fixed background color rules within a stylesheet",
-      "D": "Declaring document structural encodings like UTF-8 headers"
-    },
-    "correct_answer": "B",
-    "explanation": "Static HTML files cannot adapt to individual users. Dynamic server engines (like PHP) are required to handle interactive features like logins, search results, and database lookups."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Web Security and Vulnerabilities",
-    "question": "What is the fundamental objective of web security protocols and best practices?",
-    "options": {
-      "A": "Minimizing the codebase size of backend scripts",
-      "B": "Protecting sensitive data, preventing unauthorized access, and maintaining data integrity and availability",
-      "C": "Ensuring client websites operate efficiently over legacy dial-up configurations",
-      "D": "Replacing dynamic backend scripts with client-side CSS rules"
-    },
-    "correct_answer": "B",
-    "explanation": "The primary goal of web security is protecting corporate and user assets by ensuring data confidentiality, system availability, and data integrity against cyber threats."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Web Security and Vulnerabilities",
-    "question": "Which security vulnerability occurs when malicious SQL code is injected into user input fields to compromise a backend database?",
-    "options": {
-      "A": "Cross-Site Scripting (XSS)",
-      "B": "SQL Injection",
-      "C": "Cross-Site Request Forgery (CSRF)",
-      "D": "Phishing Attack"
-    },
-    "correct_answer": "B",
-    "explanation": "An SQL Injection (SQLi) vulnerability happens when poorly sanitized input fields allow attackers to pass malicious database commands directly to the backend database server."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Web Security and Vulnerabilities",
-    "question": "What type of attack involves injecting malicious client-side scripts into trusted web pages to run unauthorized code in a victim's browser?",
-    "options": {
-      "A": "Brute Force Attack",
-      "B": "Cross-Site Scripting (XSS)",
-      "C": "SQL Injection",
-      "D": "FTP Interception"
-    },
-    "correct_answer": "B",
-    "explanation": "Cross-Site Scripting (XSS) attacks occur when malicious scripts are injected into web applications and executed within an innocent user's browser."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Web Security and Vulnerabilities",
-    "question": "What security device sits between web apps and incoming traffic, filtering and monitoring HTTP/HTTPS requests to block malicious payloads?",
-    "options": {
-      "A": "Web Application Firewall (WAF)",
-      "B": "Document Object Model Tree",
-      "C": "Asynchronous Algolia Indexer",
-      "D": "Server-side Preprocessor Engine"
+      "A": "Front-end handles layout trees, DOM events, and style specificity; back-end manages data persistence, server-side business logic, and API authentication.",
+      "B": "Front-end updates physical server hardware arrays; back-end builds accessible responsive forms and optimizes browser client caching.",
+      "C": "Front-end establishes network handshake routing logic; back-end handles DOM manipulation and UI hover transformations.",
+      "D": "Front-end compiles raw relational database tables; back-end tracks browser rendering engine parsing workflows."
     },
     "correct_answer": "A",
-    "explanation": "A Web Application Firewall (WAF) inspects incoming web traffic, filtering out common exploit payloads like XSS or SQL injection before they reach the underlying web server."
+    "explanation": "Front-end architecture operates within the client environment (handling presentation, UX/UI, and DOM mechanics), while back-end development governs data persistence arrays, authentication validation rules, processing pipelines, and data storage."
   },
   {
     "course_code": "CSC 106",
-    "topic": "Emerging Web Trends",
-    "question": "What does the industry acronym PWA stand for in contemporary web engineering contexts?",
+    "topic": "Network Protocols",
+    "question": "How does the Simple Mail Transfer Protocol (SMTP) handle email transmission, and which example represents a valid standard SMTP command line string?",
     "options": {
-      "A": "Private Web Architecture",
-      "B": "Progressive Web Application",
-      "C": "Programmatic Preprocessor Wrapper Allocation",
-      "D": "Protocol Wide Authentication"
+      "A": "It maps domain structures to IP addresses; uses standard 'GET /index.html' command protocols.",
+      "B": "It acts as an application layer routing pipeline to push email payloads; utilizes the 'EHLO' command to initiate client-server sessions.",
+      "C": "It handles bi-directional asset streaming queries; uses standard 'FETCH ALL' transaction headers.",
+      "D": "It pushes binary objects directly to relational data schemas; relies on 'UPDATE MAILBOX' database flags."
     },
     "correct_answer": "B",
-    "explanation": "PWA stands for Progressive Web Application, a design approach that brings native app-like features to standard websites."
+    "explanation": "SMTP is a text-based, push-centric application layer protocol designed to transmit email messages across networks. Connection handshakes are explicitly initialized using the ASCII text command 'EHLO' or 'HELO'."
   },
   {
     "course_code": "CSC 106",
-    "topic": "Emerging Web Trends",
-    "question": "Which design philosophy best describes the core technical nature of Progressive Web Applications (PWAs)?",
+    "topic": "Infrastructure",
+    "question": "How does the distributed Domain Name System (DNS) hierarchical architecture optimize name resolution efficiency?",
     "options": {
-      "A": "Isolating web platforms from mobile phone access entirely",
-      "B": "Combining the reach of web browsers with the rich features of native mobile applications",
-      "C": "Replacing all client-side JavaScript components with database logic",
-      "D": "Reverting web design standards back to unencrypted file transfers"
+      "A": "By forcing every query to load from a singular server center to maintain consistency.",
+      "B": "By using a root-to-leaf look-up chain (Root, TLD, Authoritative Nameservers) combined with caching at multiple network layers.",
+      "C": "By converting HTML documents into minified network packets directly over transport layer streams.",
+      "D": "By running sorting algorithms over static routing tables inside local browser storage cookies."
     },
     "correct_answer": "B",
-    "explanation": "PWAs combine the cross-platform reach of the web with native mobile application benefits, including offline functionality, high performance, and push notifications."
+    "explanation": "The DNS tree hierarchy prevents single-point bottlenecks by splitting zones among Root, Top-Level Domain (.com, .edu), and Authoritative servers. Extensive caching across points drastically reduces round-trip lookup loops."
   },
   {
     "course_code": "CSC 106",
-    "topic": "Application Architecture",
-    "question": "In multi-tier web architectures, what layer do HTML, CSS, and client-side JavaScript components form?",
+    "topic": "HTML Standards",
+    "question": "What role does the declaration string <!DOCTYPE html> fulfill at the absolute entry point of an HTML document?",
     "options": {
-      "A": "Data Access Layer",
-      "B": "Presentation Layer",
-      "C": "Business Logic Layer",
-      "D": "Hardware Storage Layer"
+      "A": "It executes an import call to pull active modern styling variables from standard external repositories.",
+      "B": "It tells the browser's engine to render the document in 'Standards Mode' rather than triggering backwards-compatible 'Quirks Mode'.",
+      "C": "It establishes safe data compression levels for streaming code over secure transport pipelines.",
+      "D": "It constructs an active layout structure inside local storage registries to intercept server queries."
     },
     "correct_answer": "B",
-    "explanation": "The user interface components (HTML, CSS, JS) form the Presentation Layer, which is responsible for rendering content and capturing user inputs visually."
+    "explanation": "The DOCTYPE declaration is a flag that tells the browser to process layouts using strict modern W3C system standards, preventing the engine from reverting to Quirks Mode rendering behaviors."
   },
   {
     "course_code": "CSC 106",
-    "topic": "Application Architecture",
-    "question": "Languages like Python, Java, and PHP work together behind the scenes to form which foundational web architecture tier?",
+    "topic": "Web Accessibility",
+    "question": "Which practice demonstrates the correct implementation of web accessibility standards when constructing HTML user forms?",
     "options": {
-      "A": "Presentation Layer",
-      "B": "Business Logic Layer",
-      "C": "Data Access Layer",
-      "D": "Physical Network Infrastructure Layer"
+      "A": "Relying entirely on placeholder attribute text values to define form field input constraints.",
+      "B": "Using explicit 'for' attributes on <label> elements mapped to matching input 'id' fields alongside semantic ARIA landmarks.",
+      "C": "Removing visual borders using CSS styles to keep the interactive focus state hidden.",
+      "D": "Using non-semantic generic <div> blocks to build multi-choice input selections without text tags."
     },
     "correct_answer": "B",
-    "explanation": "Server-side systems running Python, Java, or PHP handle core application algorithms, workflows, and server-side computations within the Business Logic Layer."
+    "explanation": "Accessible web architecture mandates pairing form field tags explicitly with input nodes using matching 'id' values. This guarantees screen readers can interpret input targets, while placeholders do not satisfy accessibility rules."
   },
   {
     "course_code": "CSC 106",
-    "topic": "Application Architecture",
-    "question": "Where are relational Database Management Systems (DBMS) placed within a standard three-tier web application architecture?",
+    "topic": "CSS Specificity",
+    "question": "How do CSS Type, Class, ID, and Descendant selectors diverge in specificity, and how does this affect cascading properties?",
     "options": {
-      "A": "Presentation Layer",
-      "B": "Business Logic Layer",
-      "C": "Data Access Layer",
-      "D": "Web Application Firewall Router Layer"
-    },
-    "correct_answer": "C",
-    "explanation": "The DBMS functions within the Data Access Layer, securely storing, managing, and retrieving application data on behalf of the business logic tier."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "Case Studies: Security & Health Systems",
-    "question": "In the Healthcare Information System case study, which security mechanism is added to prevent unauthorized account takeovers?",
-    "options": {
-      "A": "Migrating servers to unencrypted plain text FTP protocols",
-      "B": "Multi-factor authentication (MFA)",
-      "C": "Disabling the Web Application Firewall layer",
-      "D": "Restricting user input strictly to HTML5 canvas graphic designs"
+      "A": "Type selectors have the highest value weight; Descendants wipe out active element rules.",
+      "B": "An ID selector overrides a Class selector, which overrides a Type selector; inline rules have higher priority than standard external sheets.",
+      "C": "Descendant rules change execution priorities to equalize style weight rules across configurations.",
+      "D": "Specificity calculations rely entirely on the sequence order of style strings inside the head tag."
     },
     "correct_answer": "B",
-    "explanation": "The healthcare case study mitigates access threats by implementing robust multi-factor authentication (MFA) to verify user identities before granting access to medical records."
+    "explanation": "CSS engine calculations evaluate priorities based on a strict weighting scale: Inline Styles [1,0,0,0], IDs [0,1,0,0], Classes/Attributes [0,0,1,0], and Types [0,0,0,1]. High-specificity rules override general matching selectors regardless of document layout order."
   },
   {
     "course_code": "CSC 106",
-    "topic": "Case Studies: Security & Health Systems",
-    "question": "What procedure is performed in the healthcare case study to actively find and address system weaknesses before attackers exploit them?",
+    "topic": "CSS Box Model",
+    "question": "Which layout statement correctly outlines the directional stack sequence of layers that form the standard CSS Box Model?",
     "options": {
-      "A": "Web crawling and indexing",
-      "B": "Vulnerability assessments and penetration testing",
-      "C": "Dial-up infrastructure reconfiguration",
-      "D": "Client-side form validation loops"
+      "A": "Padding frames the outermost rim, followed directly by Margin, Content, and Border layers.",
+      "B": "The inner core is Content, wrapped successively by Padding, then the structural Border, and finally the outer Margin space.",
+      "C": "Margin represents the absolute inner core, bounded sequentially by Content, Border, and Padding tracks.",
+      "D": "The layout combines Padding and Margin inside a singular border footprint that wraps content grids."
     },
     "correct_answer": "B",
-    "explanation": "The methodology highlights proactive security testing through thorough vulnerability assessments and penetration tests to locate and remediate system weaknesses."
+    "explanation": "Every element box rendered by CSS follows this structural wrapping hierarchy from the inside out: Content (text/images) -> Padding (clear space inside the border) -> Border (outline wrapper) -> Margin (clear space outside the border boundaries)."
   },
   {
     "course_code": "CSC 106",
-    "topic": "Web Security and Vulnerabilities",
-    "question": "What does a 'brute-force attack' involve in the context of authentication security threats?",
+    "topic": "JavaScript Core",
+    "question": "How do the JavaScript scope behaviors of 'var', 'let', and 'const' declarations affect modern code safety practices?",
     "options": {
-      "A": "Injecting malicious scripts into public web forums",
-      "B": "Systematically guessing password combinations until the correct one is discovered",
-      "C": "Intercepting plain text FTP file transmissions on local networks",
-      "D": "Modifying structural DOM tree components asynchronously"
+      "A": "Both 'var' and 'let' hoist with initial block scopes; 'const' objects can have their values completely reassigned at any runtime point.",
+      "B": "'var' is globally or function-scoped and hoists with an undefined value; 'let' and 'const' are strictly block-scoped and remain in a Temporal Dead Zone until initialized.",
+      "C": "'const' shifts variable parameters directly into memory storage arrays to make calculations match server-side logic.",
+      "D": "Declaring arrays using 'let' prevents users from changing internal index entries during standard operations."
     },
     "correct_answer": "B",
-    "explanation": "A brute-force attack involves automated scripts systematically guessing login credentials or keys until it finds the correct combination to break into user accounts."
+    "explanation": "'var' variables bypass block boundary structures and hoist as 'undefined' variables. Modern standards favor 'let' and 'const' because their strict block scoping isolates logic inside loop blocks and functions, preventing scope leakage errors."
   },
   {
     "course_code": "CSC 106",
-    "topic": "HTML Fundamentals",
-    "question": "Which section of a standard HTML document template holds metadata, page titles, and character encoding definitions?",
+    "topic": "Algorithms",
+    "question": "Which JavaScript implementation correctly calculates the combined sum of an array containing only integer values?",
     "options": {
-      "A": "&lt;body&gt;",
-      "B": "&lt;head&gt;",
-      "C": "&lt;?php&gt;",
-      "D": "&lt;footer&gt;"
-    },
-    "correct_answer": "B",
-    "explanation": "The HTML &lt;head&gt; tag holds metadata, configurations, and references (such as charset specifications and page titles) that aren't displayed directly in the main browser viewport."
-  },
-  {
-    "course_code": "CSC 106",
-    "topic": "HTML Fundamentals",
-    "question": "Which tag pair marks the main visible content area of an HTML page, where text, images, and links are displayed to users?",
-    "options": {
-      "A": "&lt;body&gt;...&lt;/body&gt;",
-      "B": "&lt;head&gt;...&lt;/head&gt;",
-      "C": "&lt;meta&gt;...&lt;/meta&gt;",
-      "D": "&lt;title&gt;...&lt;/title&gt;"
+      "A": "function sum(arr) { return arr.reduce((acc, curr) => acc + curr, 0); }",
+      "B": "function sum(arr) { return arr.join('+').split(); }",
+      "C": "const sum = (arr) => { for (let i in arr) { arr[i] += arr[i]; } return arr; };",
+      "D": "function sum(arr) { return Math.max(...arr) + Math.min(...arr); }"
     },
     "correct_answer": "A",
-    "explanation": "The &lt;body&gt; element wraps all visible layout components, text, forms, and multimedia elements that render on screen for the end user."
+    "explanation": "The Array.prototype.reduce() method iterates over each value in an array, continuously adding the current element value to an accumulator variable to calculate a final aggregate total."
   },
   {
     "course_code": "CSC 106",
-    "topic": "Web Infrastructure Evolution",
-    "question": "The historical transition from early dial-up connections to widespread broadband connections represents an evolution in:",
+    "topic": "Asynchronous JS",
+    "question": "Why is Asynchronous JavaScript crucial for web applications when interacting with remote web server network APIs?",
     "options": {
-      "A": "Server-side language syntax formatting rules",
-      "B": "Meeting growing user demands for faster, reliable network capabilities",
-      "C": "Deprecating secure HTTPS encryptions completely",
-      "D": "Replacing relational databases with plain unstyled HTML elements"
+      "A": "It speeds up script compilation by running server database queries on a separate client thread.",
+      "B": "It enables non-blocking operations, allowing data fetches to run in the background without freezing the main UI thread.",
+      "C": "It compresses media objects inside the DOM tree before data payload transfer events.",
+      "D": "It forces web browsers to reload all interface nodes whenever an update event occurs."
     },
     "correct_answer": "B",
-    "explanation": "The infrastructure shift from dial-up to high-speed broadband reflects the continuous evolution of the Internet to handle heavy workloads, multimedia streaming, and advanced data-driven applications."
+    "explanation": "JavaScript is single-threaded. Asynchronous operations (like Fetch API queries or Promises) allow web applications to offload long-running network requests to the browser environment, keeping the interface smooth and responsive."
+  },
+  {
+    "course_code": "CSC 106",
+    "topic": "ES6 Components",
+    "question": "Given an ES6 class named 'Product', which code block demonstrates the correct syntax for declaration, initialization, and mounting into a table layout?",
+    "options": {
+      "A": "class Product { create() { this.name = n; } } table.appendChild(Product);",
+      "B": "class Product { constructor(n, p, d) { this.n = n; this.p = p; this.d = d; } } table.innerHTML = Product.toString();",
+      "C": "class Product { constructor(name, price, desc) { this.name = name; this.price = price; this.desc = desc; } } const p = new Product('A', 10, 'B'); const row = `<tr><td>${p.name}</td></tr>`;",
+      "D": "const Product = (name) => { this.name = name; return `<td>${name}</td>`; };"
+    },
+    "correct_answer": "C",
+    "explanation": "ES6 classes use the explicit 'constructor' method to map instantiation arguments to object instances, which can then be dynamically read inside template literal blocks to update tabular layout elements."
   }
 ]

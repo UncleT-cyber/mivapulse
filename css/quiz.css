@@ -584,3 +584,16 @@ body {
     overflow-wrap: break-word !important;   /* Only wraps at natural word boundaries */
     white-space: normal !important;      /* Allows text to drop cleanly to the next line */
 }
+
+/* Keeps MathJax display equations contained and elegantly scaled */
+.mjx-chtml {
+    font-size: 105% !important; /* Prevents oversized scaling */
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Reduces huge vertical gaps in display math */
+mjx-container[jax="CHTML"][display="true"] {
+    margin: 0.5em 0 !important;
+}

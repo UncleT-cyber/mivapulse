@@ -1,35 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miva Prep - Exam Simulator</title>
+
     <link rel="stylesheet" href="css/dashboard.css">
-<link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/quiz.css">
+
+    <!-- High-Visibility Filled SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ffffff'/%3E%3Cg transform='matrix(0.9, 0, 0, 0.9, 5, 5)'%3E%3Cpath d='M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 12.5v5c0 1.25 1.5 2.5 6 2.5s6-1.25 6-2.5v-5' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.5 11v6' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E">
+
+    <!-- 1. INSTANT THEME INITIALIZATION -->
     <script>
-    // Ensure dark theme is initialized instantly on startup
-    const globalTheme = localStorage.getItem("miva-theme") || "dark"; 
-    document.documentElement.setAttribute("data-theme", globalTheme);
-    localStorage.setItem("miva-theme", globalTheme);
-</script>
-<!-- High-Visibility Filled SVG Favicon -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ffffff'/%3E%3Cg transform='matrix(0.9, 0, 0, 0.9, 5, 5)'%3E%3Cpath d='M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 12.5v5c0 1.25 1.5 2.5 6 2.5s6-1.25 6-2.5v-5' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.5 11v6' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E">
-<script>
-    // Pull global sync preference before DOM paint
-    const savedTheme = localStorage.getItem("miva-theme") || 
-                       (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    if (savedTheme === "dark") {
-        document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-        document.documentElement.setAttribute("data-theme", "light");
+        const savedTheme = localStorage.getItem("miva-theme") || 
+                           (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        localStorage.setItem("miva-theme", savedTheme);
+    </script>
+
+    <!-- 2. MATHJAX v3 CONFIGURATION & ENGINE -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            chtml: {
+                scale: 0.95 /* Keeps display equations from scaling excessively large */
+            },
+            options: {
+                ignoreHtmlClass: 'no-math',
+                processHtmlClass: 'math-tex'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- 3. UNIVERSAL PARSER & MATH PIPELINE HELPERS -->
+    <script>
+        // Escapes raw HTML tags while preserving LaTeX delimiters ($...$ and $$...$$)
+        function safeRenderText(text) {
+            if (typeof text !== 'string') return text;
+
+            const mathTokens = [];
+            let cleanText = text.replace(/(\$\$[\s\S]*?\$\$|\$[^\$]+?\$)/g, (match) => {
+                mathTokens.push(match);
+                return `___MATH_TOKEN_${mathTokens.length - 1}___`;
+            });
+
+            cleanText = cleanText
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+
+            return cleanText.replace(/___MATH_TOKEN_(\d+)___/g, (_, index) => mathTokens[index]);
+        }
+
+        // Universal Trigger: Renders MathJax across target container safely
+        function triggerUniversalMathRender(targetElement = document.body) {
+            if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+                requestAnimationFrame(() => {
+                    window.MathJax.typesetPromise([targetElement]).catch((err) => 
+                        console.warn("MathJax Rendering Warning:", err)
+                    );
+                });
+            }
+        }
+    </script>
+
+    <!-- Put this in the <style> tag in your head -->
+<style>
+    /* Force MathJax display math (block equations) to stay compact */
+    mjx-container[jax="CHTML"][display="true"] {
+        font-size: 110% !important; /* Scale down display math so fractions/integrals stay small */
+        margin: 0.3em 0 !important;   /* Reduce vertical spacing */
     }
-</script>
+
+    /* Target inner SVG/Math Jax elements directly */
+    mjx-container[jax="CHTML"] {
+        font-size: 100% !important;
+    }
+
+    /* Keeps equations scrollable if they ever exceed container width on mobile */
+    mjx-container {
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+    }
+</style>
+
 <script>
     window.MathJax = {
         tex: {
-            inlineMath: [['$', '$']],
-            displayMath: [['$$', '$$']],
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
             processEscapes: true
+        },
+        chtml: {
+            scale: 0.85,           /* 👈 Reduces math font scale to 85% globally */
+            displayAlign: 'center'  /* Centers display math */
         },
         options: {
             ignoreHtmlClass: 'no-math',
@@ -37,7 +106,7 @@
         }
     };
 </script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+
 </head>
 <body>
 <div id="loading-mask" style="position: fixed; inset: 0; background: #0f172a; z-index: 9999; display: flex; align-items: center; justify-content: center; color: white;">
