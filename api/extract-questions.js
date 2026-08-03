@@ -170,6 +170,12 @@ ${text.slice(0, 28000)}
       questions = questions.filter(q => q.type === 'essay');
     }
 
+    // MODE A count guard: strict extraction must not exceed the number of
+    // numbered questions detected in the source. Trim any invented extras.
+    if (estimatedQuestions > 0 && questions.length > estimatedQuestions) {
+      questions = questions.slice(0, estimatedQuestions);
+    }
+
     return res.status(200).json({
       success: true,
       count: questions.length,
