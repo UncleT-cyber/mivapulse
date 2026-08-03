@@ -53,12 +53,14 @@ export default async function handler(req, res) {
     }
 
     try {
-        const urlPath = req.url || '';
+        // Safe WHATWG URL parsing replacing legacy url.parse()
+        const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+        const urlPath = parsedUrl.pathname;
 
         // GET - Fetch contributions
         if (req.method === 'GET') {
             const contributions = loadJSON(CONTRIB_PATH, true);
-            const status = req.query?.status || 'pending';
+            const status = parsedUrl.searchParams.get('status') || req.query?.status || 'pending';
             const filtered = Array.isArray(contributions) 
                 ? contributions.filter(c => !status || c.status === status)
                 : [];
