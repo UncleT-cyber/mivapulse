@@ -62,7 +62,34 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // ── QUESTION TYPE PICKER ──
+    let questionType = 'all'; // 'all' | 'mcq' | 'essay'
+    const qtypeBtns = document.querySelectorAll('.qtype-btn');
+    qtypeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            qtypeBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            questionType = btn.dataset.qtype;
+            console.log('Question type set to:', questionType);
+        });
+    });
+
     // ── LOAD VOICES (Browser TTS) ──
+    // English voices sorted with OFFLINE (localService) voices first.
+    // Chrome's network "Google" voices (localService=false) fire onstart but
+    // often produce NO audio — the #1 cause of silent TTS in Chrome. We
+    // therefore prefer and default to offline voices, which always work.
+    let englishVoices = [];
+    const isChrome = /Chrome\//.test(navigator.userAgent) && !/Edg\//.test(navigator.userAgent);
+
+    function sortVoicesLocalFirst(list) {
+        return [...list].sort((a, b) => {
+            if (a.localService !== b.localService) return a.localService ? -1 : 1;
+            if (a.default !== b.default) return a.default ? -1 : 1;
+            return a.name.localeCompare(b.name);
+        });
+    }
+
     function loadBrowserVoices() {
         if (!window.speechSynthesis) {
             console.log('Speech synthesis not supported');
@@ -70,22 +97,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         const voices = speechSynthesis.getVoices();
         console.log('Voices loaded:', voices.length);
-        
+
         if (!voices.length) {
             console.log('No voices available yet');
             return;
         }
-        
+
+        const enVoices = voices.filter(v => v.lang && v.lang.startsWith('en'));
+        englishVoices = sortVoicesLocalFirst(enVoices);
+        const localCount = englishVoices.filter(v => v.localService).length;
+        console.log('English voices:', englishVoices.length, '| offline:', localCount, '| online:', englishVoices.length - localCount);
+
         voiceSelector.innerHTML = '';
-        const enVoices = voices.filter(v => v.lang.startsWith('en'));
-        console.log('English voices:', enVoices.length);
-        
-        enVoices.forEach((v, i) => {
+        englishVoices.forEach((v, i) => {
             const opt = document.createElement('option');
             opt.value = i;
-            opt.textContent = `${v.name} (${v.lang})`;
+            const tag = v.localService ? '' : '  [online]';
+            opt.textContent = `${v.name} (${v.lang})${tag}`;
             voiceSelector.appendChild(opt);
         });
+        // Default to the best offline voice (index 0 after sort)
+        if (englishVoices.length) voiceSelector.value = '0';
     }
     if (window.speechSynthesis) {
         speechSynthesis.onvoiceschanged = loadBrowserVoices;
@@ -93,187 +125,206 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ── BROWSER TTS ENGINE (default, no API key needed) ──
+    // Chunked queue engine. Pause/Resume is implemented as STOP + REMEMBER,
+    // because Chrome's native pause()/resume() is unreliable with network
+    // voices and freezes the engine. We never call pause()/resume() at all.
     let currentUtterance = null;
     let speechPaused = false;
+    let speechQueue = [];     // chunks of text to speak in order
+    let queueIndex = 0;       // index of chunk currently being spoken
+    let speechToken = 0;      // increments to invalidate stale callbacks
+
+    // Split text into chunks of <= maxLen chars, breaking on sentence boundaries
+    function splitIntoChunks(text, maxLen = 200) {
+        const clean = text.replace(/\s+/g, ' ').trim();
+        const chunks = [];
+        let remaining = clean;
+        while (remaining.length > 0) {
+            if (remaining.length <= maxLen) {
+                chunks.push(remaining);
+                break;
+            }
+            let breakAt = -1;
+            const slice = remaining.substring(0, maxLen);
+            for (const terminator of ['. ', '? ', '! ']) {
+                breakAt = Math.max(breakAt, slice.lastIndexOf(terminator));
+            }
+            if (breakAt < maxLen * 0.5) {
+                breakAt = slice.lastIndexOf(' '); // fall back to last space
+            }
+            if (breakAt <= 0) breakAt = maxLen;
+            chunks.push(remaining.substring(0, breakAt + 1).trim());
+            remaining = remaining.substring(breakAt + 1);
+        }
+        return chunks;
+    }
+
+    // Resolve the voice the user selected in the dropdown (offline-first list)
+    function getSelectedVoice() {
+        if (!englishVoices.length) {
+            const all = speechSynthesis.getVoices();
+            return all.find(v => v.lang && v.lang.startsWith('en')) || all[0] || null;
+        }
+        const idx = parseInt(voiceSelector.value, 10);
+        if (!isNaN(idx) && englishVoices[idx]) return englishVoices[idx];
+        return englishVoices[0]; // best offline voice
+    }
+
+    // Begin speaking from the current queueIndex with a fresh token.
+    // Only cancels the engine when something is actually active — cancelling
+    // an idle engine right before speak() triggers Chrome's 'interrupted' bug.
+    function speakFromCurrentChunk() {
+        speechToken++;
+        const token = speechToken;
+        // Chrome can boot the engine in a stuck-paused state; resume clears it.
+        if (speechSynthesis.paused) speechSynthesis.resume();
+        const engineBusy = speechSynthesis.speaking || speechSynthesis.pending || speechSynthesis.paused;
+        if (engineBusy) {
+            speechSynthesis.cancel();
+            // Chrome sometimes keeps the paused flag set even after cancel — clear it
+            if (speechSynthesis.paused) speechSynthesis.resume();
+            // Brief delay lets cancel() fully flush before speaking again
+            setTimeout(() => speakChunk(token, 0), 200);
+        } else {
+            // Engine idle — speak immediately inside the user gesture (no delay)
+            speakChunk(token, 0);
+        }
+    }
 
     function speakWithBrowser(text) {
         if (!window.speechSynthesis) {
             audioStatus.textContent = 'Speech not supported in this browser.';
             return;
         }
-        
-        // Only cancel if something is actually speaking
-        if (speechSynthesis.speaking || speechSynthesis.pending) {
-            speechSynthesis.cancel();
-            // Wait longer for cancel to fully complete
-            setTimeout(() => startSpeaking(text), 500);
-        } else {
-            // Nothing speaking, start immediately
-            startSpeaking(text);
-        }
+        speechQueue = splitIntoChunks(text);
+        queueIndex = 0;
+        speechPaused = false;
+
+        const voice = getSelectedVoice();
+        console.log('TTS: starting,', speechQueue.length, 'chunks, voice:', voice ? voice.name : 'system default');
+        // IMPORTANT: speak synchronously within the user's click gesture.
+        // Chrome's autoplay policy blocks speechSynthesis.speak() if it is
+        // deferred outside the gesture (e.g. waiting for voiceschanged).
+        // If voices aren't loaded yet, Chrome falls back to the system voice,
+        // and the selected voice takes over for subsequent chunks/plays.
+        speakFromCurrentChunk();
     }
-    
-    function startSpeaking(text) {
-        console.log('startSpeaking called with text length:', text.length);
-        
-        let voices = speechSynthesis.getVoices();
-        console.log('Voices available:', voices.length);
-        
-        if (voices.length === 0) {
-            audioStatus.textContent = 'Loading voices... Please try again.';
+
+    function speakChunk(token, attempt = 0) {
+        if (token !== speechToken) return; // stale callback from old session
+
+        if (queueIndex >= speechQueue.length) {
+            audioStatus.textContent = 'Finished reading.';
+            speechPaused = false;
+            updatePlayButton(false);
+            console.log('✓ All', speechQueue.length, 'chunks read');
             return;
         }
-        
-        // Test with very short text first to ensure audio works
-        const testText = 'Hello, this is a test.';
-        console.log('Testing with short text first...');
-        
-        // Try to find a reliable voice (not Samantha which can be buggy)
-        const enVoices = voices.filter(v => v.lang.startsWith('en'));
-        console.log('English voices:', enVoices.length);
-        
-        // Prefer Google US English or Microsoft voices over Samantha
-        let selectedVoice = null;
-        const preferredVoices = ['Google US English', 'Microsoft David', 'Microsoft Zira', 'Daniel', 'Karen'];
-        for (let pref of preferredVoices) {
-            const found = enVoices.find(v => v.name.includes(pref));
-            if (found) {
-                selectedVoice = found;
-                console.log('Found preferred voice:', found.name);
-                break;
-            }
-        }
-        
-        // Fallback to first English voice if no preferred found
-        if (!selectedVoice && enVoices.length > 0) {
-            selectedVoice = enVoices[0];
-            console.log('Using fallback voice:', selectedVoice.name);
-        }
-        
-        // Truncate long text to first 1000 chars for better performance
-        const speakText = text.length > 1000 ? text.substring(0, 1000) : text;
-        console.log('Text to speak:', speakText.substring(0, 100) + '...');
-        
-        const utterance = new SpeechSynthesisUtterance(speakText);
-        if (selectedVoice) {
-            utterance.voice = selectedVoice;
-        }
-        
+
+        const chunk = speechQueue[queueIndex];
+        const utterance = new SpeechSynthesisUtterance(chunk);
+        const voice = getSelectedVoice();
+        if (voice) utterance.voice = voice;
         utterance.rate = parseFloat(currentSpeed) || 1.0;
         utterance.pitch = 1.0;
         utterance.volume = 1.0;
-        
-        utterance.onstart = () => { 
-            audioStatus.textContent = 'Reading aloud...';
-            console.log('✓ Speech started successfully');
-            // Update play button to show pause
-            if (playBtn) {
-                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
-                playBtn.classList.add('playing');
-            }
+
+        let started = false;
+        let lastActivity = Date.now();
+
+        utterance.onstart = () => {
+            if (token !== speechToken) return;
+            started = true;
+            lastActivity = Date.now();
+            audioStatus.textContent = `Reading aloud... (part ${queueIndex + 1} of ${speechQueue.length})`;
+            updatePlayButton(true);
         };
-        utterance.onend = () => { 
-            audioStatus.textContent = 'Finished reading.';
-            console.log('✓ Speech ended');
-            // Reset play button and state
-            speechPaused = false;
-            if (playBtn) {
-                playBtn.innerHTML = '<i class="fas fa-play"></i>';
-                playBtn.classList.remove('playing');
-            }
+        utterance.onend = () => {
+            if (token !== speechToken) return;
+            queueIndex++;
+            speakChunk(token, 0); // speak the next chunk
         };
-        utterance.onerror = (e) => { 
+        utterance.onerror = (e) => {
+            if (token !== speechToken) return;
+            if (e.error === 'canceled' || e.error === 'interrupted') return;
             console.error('✗ Speech error:', e.error);
-            if (e.error === 'interrupted') {
-                console.log('Speech interrupted, retrying...');
-                setTimeout(() => {
-                    const retry = new SpeechSynthesisUtterance(speakText);
-                    const voices = speechSynthesis.getVoices();
-                    const enVoices = voices.filter(v => v.lang.startsWith('en'));
-                    if (enVoices.length > 0) {
-                        const selIdx = parseInt(voiceSelector.value) || 0;
-                        retry.voice = enVoices[selIdx % enVoices.length];
-                    }
-                    retry.rate = parseFloat(currentSpeed) || 1.0;
-                    retry.onstart = () => { audioStatus.textContent = 'Reading aloud...'; };
-                    retry.onend = () => { audioStatus.textContent = 'Finished reading.'; };
-                    retry.onerror = (e2) => { 
-                        if (e2.error !== 'canceled' && e2.error !== 'interrupted') {
-                            audioStatus.textContent = 'Speech error: ' + e2.error; 
-                        }
-                    };
-                    speechSynthesis.speak(retry);
-                }, 200);
-            } else if (e.error !== 'canceled') {
-                audioStatus.textContent = 'Speech error: ' + e.error; 
+            if (e.error === 'not-allowed') {
+                // Chrome autoplay policy: needs a direct user gesture. The click
+                // that triggered this should count, but if blocked, prompt a re-click.
+                audioStatus.textContent = 'Browser blocked audio — click Play once more.';
+            } else {
+                audioStatus.textContent = 'Speech error: ' + e.error;
             }
-        };
-        
-        currentUtterance = utterance;
-        
-        try {
-            console.log('Calling speechSynthesis.speak()...');
-            speechSynthesis.speak(utterance);
-            console.log('✓ Speak called. Checking status...');
-            
-            // Check status after a moment
-            setTimeout(() => {
-                console.log('Status check - speaking:', speechSynthesis.speaking, 'paused:', speechSynthesis.paused, 'pending:', speechSynthesis.pending);
-                if (speechSynthesis.paused && !speechSynthesis.speaking) {
-                    console.log('Speech was paused, resuming...');
-                    speechSynthesis.resume();
-                }
-                if (!speechSynthesis.speaking && !speechSynthesis.pending) {
-                    console.log('⚠ Speech not started! Trying alternative method...');
-                    // Try with a very short text
-                    const testUtterance = new SpeechSynthesisUtterance('Hello');
-                    testUtterance.onstart = () => console.log('Test speech started');
-                    testUtterance.onerror = (e) => console.error('Test speech error:', e.error);
-                    speechSynthesis.speak(testUtterance);
-                }
-            }, 300);
-        } catch (err) {
-            console.error('✗ Speech exception:', err);
-            audioStatus.textContent = 'Speech error: ' + err.message;
-        }
-    }
-
-    function pauseBrowserSpeech() {
-        if (window.speechSynthesis.speaking && !speechSynthesis.paused) {
-            speechSynthesis.pause();
-            speechPaused = true;
-            audioStatus.textContent = 'Paused.';
-            console.log('Speech paused');
-        }
-    }
-
-    function resumeBrowserSpeech() {
-        if (window.speechSynthesis.paused && speechPaused) {
-            speechSynthesis.resume();
             speechPaused = false;
-            audioStatus.textContent = 'Reading aloud...';
-            console.log('Speech resumed');
-            
-            // Chrome bug workaround: if resume doesn't work, restart
-            setTimeout(() => {
-                if (speechSynthesis.paused && speechPaused) {
-                    console.log('Resume failed, restarting speech...');
-                    speechSynthesis.cancel();
-                    speechPaused = false;
-                    const text = textArea.value.trim();
-                    if (text) {
-                        speakWithBrowser(text);
-                    }
-                }
-            }, 500);
-        }
+            updatePlayButton(false);
+        };
+
+        currentUtterance = utterance;
+        speechSynthesis.speak(utterance);
+
+        // KEEP-ALIVE: Chrome can freeze mid-utterance on long sessions. If the
+        // engine stops reporting activity while an utterance is unfinished,
+        // flush and re-speak the current chunk.
+        const onBoundary = () => { lastActivity = Date.now(); };
+        utterance.addEventListener('boundary', onBoundary);
+        const heartbeat = setInterval(() => {
+            if (token !== speechToken) { clearInterval(heartbeat); return; }
+            if (!speechSynthesis.speaking && !speechSynthesis.pending) {
+                clearInterval(heartbeat); // utterance ended normally (onend handles it)
+                return;
+            }
+            if (speechSynthesis.paused) return; // user paused via our flow? no — we never pause the engine; treat as stuck below
+            if (Date.now() - lastActivity > 20000) {
+                console.log('⚠ Engine frozen mid-chunk — restarting chunk');
+                clearInterval(heartbeat);
+                speechSynthesis.cancel();
+                setTimeout(() => speakChunk(token, Math.min(attempt + 1, 2)), 250);
+            }
+        }, 5000);
+        utterance.addEventListener('end', () => clearInterval(heartbeat), { once: true });
+        utterance.addEventListener('error', () => clearInterval(heartbeat), { once: true });
+
+        // WATCHDOG: Chrome sometimes accepts speak() but never starts audio.
+        // If the utterance hasn't started within 2.5s, flush the engine and
+        // retry this chunk once.
+        setTimeout(() => {
+            if (token !== speechToken) return;
+            if (started || speechSynthesis.speaking) return; // all good
+            if (attempt >= 2) {
+                console.error('✗ Speech failed to start after retries');
+                audioStatus.textContent = 'Speech failed to start. Try changing the voice.';
+                speechPaused = false;
+                updatePlayButton(false);
+                return;
+            }
+            console.log('⚠ Utterance never started — flushing engine and retrying (attempt', attempt + 1, ')');
+            speechSynthesis.cancel();
+            if (speechSynthesis.paused) speechSynthesis.resume(); // clear stuck state
+            setTimeout(() => speakChunk(token, attempt + 1), 250);
+        }, 2500);
+    }
+
+    // Pause = stop the engine but remember exactly where we were.
+    // queueIndex still points at the interrupted chunk, so Play resumes there.
+    function pauseBrowserSpeech() {
+        if (!window.speechSynthesis || speechQueue.length === 0) return;
+        speechToken++; // kills any in-flight callbacks via the token guard
+        speechSynthesis.cancel();
+        speechPaused = true;
+        const pos = Math.min(queueIndex + 1, speechQueue.length);
+        audioStatus.textContent = `Paused at part ${pos} of ${speechQueue.length}. Press play to continue.`;
+        updatePlayButton(false);
     }
 
     function stopBrowserSpeech() {
         if (window.speechSynthesis) {
+            speechToken++;
             speechSynthesis.cancel();
             speechPaused = false;
+            speechQueue = [];
+            queueIndex = 0;
             audioStatus.textContent = 'Stopped.';
+            updatePlayButton(false);
         }
     }
 
@@ -293,43 +344,43 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (playBtn) playBtn.addEventListener('click', () => {
         const text = textArea.value.trim();
-        console.log('Play/Pause clicked. Text length:', text.length);
-        console.log('Current state - speaking:', speechSynthesis.speaking, 'paused:', speechSynthesis.paused, 'speechPaused:', speechPaused);
-        
-        if (!text) { 
-            audioStatus.textContent = 'No text to read. Extract text first.'; 
-            return; 
+        if (!text) {
+            audioStatus.textContent = 'No text to read. Extract text first.';
+            return;
         }
-        
-        // Check if speech is paused (either by API or by our flag)
-        const isPaused = speechSynthesis.paused || speechPaused;
-        const isPlaying = speechSynthesis.speaking && !speechSynthesis.paused;
-        
-        // If paused, resume
-        if (isPaused) {
-            console.log('Resuming speech...');
-            speechSynthesis.resume();
+
+        const hasRemainingQueue = speechQueue.length > 0 && queueIndex < speechQueue.length;
+
+        // Currently playing — pause (stop + remember position)
+        if (speechSynthesis.speaking || speechSynthesis.pending) {
+            pauseBrowserSpeech();
+            return;
+        }
+
+        // Paused with a queue — resume from the exact chunk we stopped at
+        if (speechPaused && hasRemainingQueue) {
             speechPaused = false;
-            audioStatus.textContent = 'Reading aloud...';
-            updatePlayButton(true);
+            speakFromCurrentChunk();
             return;
         }
-        
-        // If playing, pause
-        if (isPlaying) {
-            console.log('Pausing speech...');
-            speechSynthesis.pause();
-            speechPaused = true;
-            audioStatus.textContent = 'Paused.';
-            updatePlayButton(false);
-            return;
-        }
-        
-        // Otherwise start new speech
-        console.log('Starting new speech...');
-        speechPaused = false;
+
+        // Nothing active — start fresh from the beginning
         speakWithBrowser(text);
-        updatePlayButton(true);
+    });
+
+    // Switching voices mid-session: restart current chunk with the new voice
+    if (voiceSelector) voiceSelector.addEventListener('change', () => {
+        const voice = getSelectedVoice();
+        const label = voice ? voice.name : 'default';
+        if (speechSynthesis.speaking || speechSynthesis.pending) {
+            // Keep the queue, re-speak the current chunk with the new voice
+            audioStatus.textContent = `Switched voice: ${label}`;
+            speakFromCurrentChunk();
+        } else if (speechPaused) {
+            audioStatus.textContent = `Paused (voice: ${label}). Press play to continue.`;
+        } else {
+            audioStatus.textContent = `Voice set: ${label}`;
+        }
     });
     if (pauseBtn) pauseBtn.addEventListener('click', () => { 
         pauseBrowserSpeech(); 
@@ -412,18 +463,40 @@ document.addEventListener("DOMContentLoaded", () => {
     if (generateBtn) generateBtn.addEventListener('click', async () => {
         const text = textArea.value.trim();
         if (!text) { quizStatus.textContent = 'No text to generate from.'; return; }
-        quizStatus.textContent = 'AI is formatting questions...';
+        const typeLabel = questionType === 'mcq' ? 'MCQ' : questionType === 'essay' ? 'Essay' : 'Mixed';
+        quizStatus.textContent = `AI is formatting ${typeLabel} questions...`;
         quizStatus.style.color = 'var(--text-secondary)';
         try {
             const resp = await fetch('/api/extract-questions', {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ text })
+                body: JSON.stringify({ text, questionType })
             });
             const data = await resp.json();
             if (data.success && data.questions && data.questions.length > 0) {
-                generatedQuestions = data.questions;
-                quizStatus.textContent = `Generated ${data.questions.length} questions! Ready to study or export.`;
-                quizStatus.style.color = 'var(--success)';
+                // Enforce the chosen type on the client side as a safety net
+                let filtered = data.questions;
+                if (questionType === 'mcq') {
+                    filtered = filtered.filter(q => (q.type || 'mcq') !== 'essay');
+                } else if (questionType === 'essay') {
+                    filtered = filtered.filter(q => q.type === 'essay');
+                }
+                if (filtered.length === 0) {
+                    quizStatus.textContent = 'No questions of the selected type were found. Try "Mixed" or different content.';
+                    quizStatus.style.color = 'var(--danger)';
+                    return;
+                }
+                generatedQuestions = filtered;
+                let msg = `Extracted ${data.questions.length} questions`;
+                if (data.estimatedInSource > 0) {
+                    msg += ` (source has ~${data.estimatedInSource} numbered items)`;
+                }
+                if (data.truncated) {
+                    msg += ' — output was cut off; try a shorter document for full extraction';
+                    quizStatus.style.color = 'var(--warning, #f59e0b)';
+                } else {
+                    quizStatus.style.color = 'var(--success)';
+                }
+                quizStatus.textContent = msg + '. Ready to study or export.';
                 // Enable action buttons
                 if (launchQuizBtn) launchQuizBtn.disabled = false;
                 if (exportJsonBtn) exportJsonBtn.disabled = false;

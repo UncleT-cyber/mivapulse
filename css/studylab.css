@@ -501,6 +501,50 @@ body { padding-bottom: 80px; }
 .footer-container { max-width: 1200px; margin: 0 auto; }
 .footer-attribution { font-size: 0.75rem; color: var(--text-secondary); margin-top: 4px; }
 
+/* ── QUESTION TYPE PICKER ── */
+.qtype-picker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 14px 0;
+    flex-wrap: wrap;
+}
+.qtype-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+.qtype-options {
+    display: flex;
+    gap: 6px;
+    background: var(--bg-app);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 4px;
+}
+.qtype-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+.qtype-btn:hover { color: var(--text-primary); }
+.qtype-btn.active {
+    background: #a855f7;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(168, 85, 247, 0.35);
+}
+.qtype-btn i { font-size: 0.8rem; }
+
 /* ==========================================================================
    FIXED VIEWPORT - Prevent any horizontal movement
    ========================================================================== */
@@ -570,6 +614,9 @@ html, body {
     .speed-controls { gap: 3px; }
     .speed-btn { padding: 4px 8px; font-size: 0.7rem; }
     .generate-btn { width: 100%; justify-content: center; }
+    .qtype-picker { flex-direction: column; align-items: stretch; gap: 8px; }
+    .qtype-options { width: 100%; }
+    .qtype-btn { flex: 1; justify-content: center; padding: 8px 6px; font-size: 0.75rem; }
     .theme-toggle { display: none; }
     
     /* Mobile-specific fixes for iPhone 13 (390px) */
