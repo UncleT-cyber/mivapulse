@@ -459,27 +459,97 @@ document.addEventListener("DOMContentLoaded", () => {
         return text;
     }
 
+    // ── CHUNK SPLITTER: break long documents at question/paragraph boundaries ──
+    const CHUNK_MAX_CHARS = 13000; // safely under the API's 15k input window
+    function splitIntoChunks(text) {
+        const chunks = [];
+        let remaining = text;
+        while (remaining.length > CHUNK_MAX_CHARS) {
+            const window = remaining.slice(0, CHUNK_MAX_CHARS);
+            let cut = -1;
+            // Preferred cut: start of the last numbered question inside the window
+            const qMatches = [...window.matchAll(/(?:^|\n)\s*(?:Q(?:uestion)?\.?\s*)?\d+[\.\)]\s+/g)];
+            if (qMatches.length > 1) cut = qMatches[qMatches.length - 1].index;
+            // Fallback: paragraph break
+            if (cut < window.length * 0.4) cut = window.lastIndexOf('\n\n');
+            // Last resort: hard cut
+            if (cut < window.length * 0.3) cut = CHUNK_MAX_CHARS;
+            chunks.push(remaining.slice(0, cut));
+            remaining = remaining.slice(cut);
+        }
+        if (remaining.trim()) chunks.push(remaining);
+        return chunks;
+    }
+
+    // ── SINGLE CHUNK API CALL with rate-limit retry + countdown ──
+    const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+    async function callExtractAPI(chunkText, partLabel, onCountdown) {
+        const MAX_RETRIES = 3;
+        for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+            const resp = await fetch('/api/extract-questions', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: chunkText, questionType })
+            });
+            const data = await resp.json();
+            if (resp.status === 429) {
+                if (attempt >= MAX_RETRIES) break;
+                // Nexus AI quota refills every minute — wait it out with a visible countdown
+                const wait = 45;
+                for (let s = wait; s > 0; s--) {
+                    if (onCountdown) onCountdown(s, attempt, MAX_RETRIES - 1);
+                    await sleep(1000);
+                }
+                continue;
+            }
+            if (!resp.ok || !data.success) {
+                throw new Error(data.error || 'Generation failed. Please try again.');
+            }
+            return data;
+        }
+        throw new Error(`Nexus AI is rate-limited — part ${partLabel} could not be processed yet. Wait a minute and press Generate again.`);
+    }
+
     // ── GENERATE QUIZ QUESTIONS (AI reformats into quiz-engine format) ──
     if (generateBtn) generateBtn.addEventListener('click', async () => {
         const text = textArea.value.trim();
         if (!text) { quizStatus.textContent = 'No text to generate from.'; return; }
         const typeLabel = questionType === 'mcq' ? 'MCQ' : questionType === 'essay' ? 'Essay' : 'Mixed';
-        quizStatus.textContent = `AI is formatting ${typeLabel} questions...`;
         quizStatus.style.color = 'var(--text-secondary)';
+        generateBtn.disabled = true;
         try {
-            const resp = await fetch('/api/extract-questions', {
-                method: 'POST', headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ text, questionType })
-            });
-            const data = await resp.json();
-            if (!resp.ok || !data.success) {
-                quizStatus.textContent = data.error || 'Generation failed. Please try again.';
-                quizStatus.style.color = 'var(--danger)';
-                return;
+            const chunks = text.length > CHUNK_MAX_CHARS ? splitIntoChunks(text) : [text];
+            let merged = [];
+            let anyTruncated = false;
+
+            for (let i = 0; i < chunks.length; i++) {
+                const partLabel = chunks.length > 1 ? ` (part ${i + 1} of ${chunks.length})` : '';
+                quizStatus.textContent = `AI is formatting ${typeLabel} questions${partLabel}...`;
+                const data = await callExtractAPI(chunks[i], i + 1, (s, attempt, maxAttempts) => {
+                    quizStatus.textContent = `Nexus AI quota cooling down — retry ${attempt}/${maxAttempts} for part ${i + 1} of ${chunks.length} in ${s}s...`;
+                });
+                merged = merged.concat(data.questions || []);
+                if (data.truncated || data.inputTruncated) anyTruncated = true;
+                // Cooldown between parts so we don't burst the per-minute token quota
+                if (i < chunks.length - 1) {
+                    for (let s = 20; s > 0; s--) {
+                        quizStatus.textContent = `Part ${i + 1} done (${data.count} questions). Cooling down ${s}s before part ${i + 2} of ${chunks.length}...`;
+                        await sleep(1000);
+                    }
+                }
             }
-            if (data.success && data.questions && data.questions.length > 0) {
+
+            // De-duplicate (same question can surface at chunk boundaries)
+            const seen = new Set();
+            merged = merged.filter(q => {
+                const key = (q.question || '').toLowerCase().replace(/\s+/g, ' ').trim().slice(0, 120);
+                if (!key || seen.has(key)) return false;
+                seen.add(key);
+                return true;
+            });
+
+            if (merged.length > 0) {
                 // Enforce the chosen type on the client side as a safety net
-                let filtered = data.questions;
+                let filtered = merged;
                 if (questionType === 'mcq') {
                     filtered = filtered.filter(q => (q.type || 'mcq') !== 'essay');
                 } else if (questionType === 'essay') {
@@ -491,15 +561,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
                 generatedQuestions = filtered;
-                let msg = `Extracted ${data.questions.length} questions`;
-                if (data.estimatedInSource > 0) {
-                    msg += ` (source has ~${data.estimatedInSource} numbered items)`;
-                }
-                if (data.inputTruncated) {
-                    msg += ' — document was too long, only the first portion was processed';
-                    quizStatus.style.color = 'var(--warning, #f59e0b)';
-                } else if (data.truncated) {
-                    msg += ' — output was cut off; try a shorter document for full extraction';
+                const numberedInSource = (text.match(/(?:^|\n)\s*(?:Q(?:uestion)?\.?\s*)?\d+[\.\)]\s+/g) || []).length;
+                let msg = `Extracted ${filtered.length} questions`;
+                if (chunks.length > 1) msg += ` from ${chunks.length} document parts`;
+                if (numberedInSource > 0) msg += ` (source has ~${numberedInSource} numbered items)`;
+                if (anyTruncated) {
+                    msg += ' — a portion may have been cut off';
                     quizStatus.style.color = 'var(--warning, #f59e0b)';
                 } else {
                     quizStatus.style.color = 'var(--success)';
@@ -513,8 +580,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 quizStatus.style.color = 'var(--danger)';
             }
         } catch (err) {
-            quizStatus.textContent = 'Generation failed. Check connection.';
+            quizStatus.textContent = err.message || 'Generation failed. Check connection.';
             quizStatus.style.color = 'var(--danger)';
+        } finally {
+            generateBtn.disabled = false;
         }
     });
 
