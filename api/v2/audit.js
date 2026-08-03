@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MIVAPULSE v2 - AUDIT TRAIL API
+   MIVAPULSE v2 - AUDIT TRAIL API (Vercel Serverless Compatible)
    GET / - List audit entries
    GET /verify - Verify chain integrity
    ========================================================================== */
@@ -7,27 +7,22 @@
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Use process.cwd() for Vercel compatibility
+const AUDIT_PATH = path.join(process.cwd(), 'data', 'audit_log.json');
 
-const AUDIT_PATH = path.join(__dirname, '..', '..', '..', 'data', 'audit_log.json');
+// Safe in-memory fallback
+let inMemoryAudit = { entries: [], lastHash: '' };
 
 function loadAudit() {
     try {
-        if (!fs.existsSync(AUDIT_PATH)) {
-            return { entries: [], lastHash: '' };
+        if (fs.existsSync(AUDIT_PATH)) {
+            return JSON.parse(fs.readFileSync(AUDIT_PATH, 'utf8'));
         }
-        return JSON.parse(fs.readFileSync(AUDIT_PATH, 'utf8'));
     } catch (e) {
         console.error('loadAudit error:', e);
-        return { entries: [], lastHash: '' };
     }
-}
-
-function saveAudit(data) {
-    fs.writeFileSync(AUDIT_PATH, JSON.stringify(data, null, 2));
+    return inMemoryAudit;
 }
 
 export default async function handler(req, res) {
@@ -59,7 +54,6 @@ export default async function handler(req, res) {
         const data = loadAudit();
         const entries = data.entries || [];
         
-        // Simple verification - check if entries exist and have required fields
         let valid = true;
         let invalidEntries = [];
         
