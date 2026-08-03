@@ -19,6 +19,7 @@ export default async function handler(req, res) {
     // Groq free tier allows 12,000 tokens/minute total. Cap the input window so
     // input + prompt + output budget always stays under that limit (~4.3k + 0.6k + 4k).
     const MAX_INPUT_CHARS = 15000;
+    const MAX_QUESTIONS_PER_SESSION = 40;
     const inputTruncated = text.length > MAX_INPUT_CHARS;
     const inputWindow = text.slice(0, MAX_INPUT_CHARS);
 
@@ -40,8 +41,8 @@ You are the MivaPulse Academic Quiz Engine. You perform STRICT EXTRACTION, not i
 PRIMARY RULES — TWO MODES:
 
 MODE A — EXTRACTION (when the text CONTAINS existing questions):
-- Find EVERY question present in the text (numbered items like "1.", "Q1)", "Question 1:", etc.) and convert it into the JSON format.
-- Count carefully. If the text contains 30 numbered questions, you MUST output 30 questions.
+- Find EVERY question present in the text (numbered items like "1.", "Q1)", "Question 1:", etc.) and convert it into the JSON format, up to a maximum of ${MAX_QUESTIONS_PER_SESSION} questions.
+- Count carefully. If the text contains 30 numbered questions, you MUST output 30 questions. If it contains more than ${MAX_QUESTIONS_PER_SESSION}, output the first ${MAX_QUESTIONS_PER_SESSION}.
 - NEVER fabricate questions, options, or answers that do not exist in the source text.
 - If a question's correct answer is marked in the text (e.g. "Answer: B", bold, underline, or stated), use EXACTLY that answer.
 - If no answer is marked, infer the best answer from the content and note it in the explanation.
@@ -51,6 +52,7 @@ MODE A — EXTRACTION (when the text CONTAINS existing questions):
 MODE B — GENERATION (when the text is pure study material with NO questions):
 - Generate comprehensive MCQs from the study material — one question per key concept/fact/definition.
 - Aim for thorough coverage: create 1 question for every major concept, term, process, or fact in the material.
+- Target: generate up to ${MAX_QUESTIONS_PER_SESSION} questions — exactly ${MAX_QUESTIONS_PER_SESSION} if the material supports that many distinct questions, otherwise as many as it genuinely supports. Never exceed ${MAX_QUESTIONS_PER_SESSION}.
 - Every question must be grounded in the actual content — never invent facts not present in the text.
 - Distractors (wrong options) must be plausible and related to the topic, not obviously wrong.
 - The explanation must teach WHY the correct answer is right, based on the material.
@@ -104,6 +106,9 @@ ${inputWindow}
     // free-tier token-per-minute limit rejects the request (413/429).
     const PRIMARY_MODEL = 'llama-3.3-70b-versatile';
     const FALLBACK_MODEL = 'llama-3.1-8b-instant';
+    // Generation mode (MODE B) needs room for up to 40 questions; extraction
+    // answers are short so 4k keeps us safely under the TPM budget.
+    const maxOutputTokens = estimatedQuestions === 0 ? 8192 : 4096;
     const callGroq = (model) => groq.chat.completions.create({
       messages: [
         {
@@ -117,7 +122,7 @@ ${inputWindow}
       ],
       model,
       temperature: 0.1,
-      max_tokens: 4096,
+      max_tokens: maxOutputTokens,
       response_format: { type: 'json_object' },
     });
 
@@ -197,6 +202,11 @@ ${inputWindow}
     // numbered questions detected in the source. Trim any invented extras.
     if (estimatedQuestions > 0 && questions.length > estimatedQuestions) {
       questions = questions.slice(0, estimatedQuestions);
+    }
+
+    // Hard session cap: Smart StudyLab never returns more than 40 questions
+    if (questions.length > MAX_QUESTIONS_PER_SESSION) {
+      questions = questions.slice(0, MAX_QUESTIONS_PER_SESSION);
     }
 
     return res.status(200).json({

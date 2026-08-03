@@ -210,6 +210,13 @@ document.addEventListener("DOMContentLoaded", () => {
         speakFromCurrentChunk();
     }
 
+    // Expected speaking time for a chunk (ms) at the current rate.
+    // ~170 words/minute baseline, with a generous buffer.
+    function expectedChunkMs(chunk, rate) {
+        const words = chunk.split(/\s+/).filter(Boolean).length;
+        return Math.max(4000, (words / (170 / 60)) / rate * 1000);
+    }
+
     function speakChunk(token, attempt = 0) {
         if (token !== speechToken) return; // stale callback from old session
 
@@ -222,15 +229,36 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const chunk = speechQueue[queueIndex];
+        const rate = parseFloat(currentSpeed) || 1.0;
         const utterance = new SpeechSynthesisUtterance(chunk);
         const voice = getSelectedVoice();
         if (voice) utterance.voice = voice;
-        utterance.rate = parseFloat(currentSpeed) || 1.0;
+        utterance.rate = rate;
         utterance.pitch = 1.0;
         utterance.volume = 1.0;
 
         let started = false;
+        let finished = false;
         let lastActivity = Date.now();
+        let watchdogTimer = null;
+        let heartbeat = null;
+
+        // Central cleanup — every exit path clears BOTH timers so no stale
+        // watchdog/heartbeat can ever re-fire and re-speak an old chunk
+        // (that was the cause of the read-aloud loop).
+        const clearTimers = () => {
+            if (watchdogTimer) { clearTimeout(watchdogTimer); watchdogTimer = null; }
+            if (heartbeat) { clearInterval(heartbeat); heartbeat = null; }
+        };
+
+        // Skip this chunk and continue with the next — used when retries are
+        // exhausted so playback NEVER loops on a stuck chunk.
+        const skipAndContinue = (reason) => {
+            clearTimers();
+            console.warn('⚠ Skipping chunk', queueIndex + 1, '—', reason);
+            queueIndex++;
+            setTimeout(() => speakChunk(token, 0), 100);
+        };
 
         utterance.onstart = () => {
             if (token !== speechToken) return;
@@ -240,61 +268,65 @@ document.addEventListener("DOMContentLoaded", () => {
             updatePlayButton(true);
         };
         utterance.onend = () => {
-            if (token !== speechToken) return;
+            if (token !== speechToken || finished) return;
+            finished = true;
+            clearTimers();
             queueIndex++;
             speakChunk(token, 0); // speak the next chunk
         };
         utterance.onerror = (e) => {
             if (token !== speechToken) return;
+            clearTimers();
             if (e.error === 'canceled' || e.error === 'interrupted') return;
             console.error('✗ Speech error:', e.error);
             if (e.error === 'not-allowed') {
-                // Chrome autoplay policy: needs a direct user gesture. The click
-                // that triggered this should count, but if blocked, prompt a re-click.
                 audioStatus.textContent = 'Browser blocked audio — click Play once more.';
+                speechPaused = false;
+                updatePlayButton(false);
             } else {
-                audioStatus.textContent = 'Speech error: ' + e.error;
+                // Don't stop the whole session on one bad chunk — continue
+                skipAndContinue('speech error: ' + e.error);
             }
-            speechPaused = false;
-            updatePlayButton(false);
         };
 
         currentUtterance = utterance;
         speechSynthesis.speak(utterance);
 
-        // KEEP-ALIVE: Chrome can freeze mid-utterance on long sessions. If the
-        // engine stops reporting activity while an utterance is unfinished,
-        // flush and re-speak the current chunk.
+        // KEEP-ALIVE: Chrome can freeze mid-utterance on long sessions. Freeze
+        // detection is based on the EXPECTED duration of this chunk (scaled by
+        // rate) instead of a fixed 20s — so long chunks at slow speeds are not
+        // mistaken for freezes. Restarts are capped at 2; after that the chunk
+        // is SKIPPED so playback always moves forward, never loops.
         const onBoundary = () => { lastActivity = Date.now(); };
         utterance.addEventListener('boundary', onBoundary);
-        const heartbeat = setInterval(() => {
-            if (token !== speechToken) { clearInterval(heartbeat); return; }
+        const freezeThreshold = expectedChunkMs(chunk, rate) + 8000;
+        heartbeat = setInterval(() => {
+            if (token !== speechToken || finished) { clearTimers(); return; }
             if (!speechSynthesis.speaking && !speechSynthesis.pending) {
-                clearInterval(heartbeat); // utterance ended normally (onend handles it)
+                clearTimers(); // utterance ended normally (onend handles it)
                 return;
             }
-            if (speechSynthesis.paused) return; // user paused via our flow? no — we never pause the engine; treat as stuck below
-            if (Date.now() - lastActivity > 20000) {
-                console.log('⚠ Engine frozen mid-chunk — restarting chunk');
-                clearInterval(heartbeat);
+            if (Date.now() - lastActivity > freezeThreshold) {
+                clearTimers();
                 speechSynthesis.cancel();
-                setTimeout(() => speakChunk(token, Math.min(attempt + 1, 2)), 250);
+                if (attempt >= 2) {
+                    skipAndContinue('engine frozen twice');
+                } else {
+                    console.log('⚠ Engine frozen mid-chunk — restart', attempt + 1);
+                    setTimeout(() => speakChunk(token, attempt + 1), 250);
+                }
             }
         }, 5000);
-        utterance.addEventListener('end', () => clearInterval(heartbeat), { once: true });
-        utterance.addEventListener('error', () => clearInterval(heartbeat), { once: true });
 
         // WATCHDOG: Chrome sometimes accepts speak() but never starts audio.
-        // If the utterance hasn't started within 2.5s, flush the engine and
-        // retry this chunk once.
-        setTimeout(() => {
-            if (token !== speechToken) return;
+        // Single timer, cleared on every exit path. After 2 failed retries the
+        // chunk is skipped instead of retried forever.
+        watchdogTimer = setTimeout(() => {
+            watchdogTimer = null;
+            if (token !== speechToken || finished) return;
             if (started || speechSynthesis.speaking) return; // all good
             if (attempt >= 2) {
-                console.error('✗ Speech failed to start after retries');
-                audioStatus.textContent = 'Speech failed to start. Try changing the voice.';
-                speechPaused = false;
-                updatePlayButton(false);
+                skipAndContinue('never started after retries');
                 return;
             }
             console.log('⚠ Utterance never started — flushing engine and retrying (attempt', attempt + 1, ')');
@@ -521,13 +553,19 @@ document.addEventListener("DOMContentLoaded", () => {
             let merged = [];
             let anyTruncated = false;
 
+            const SESSION_CAP = 40; // Smart StudyLab session limit
             for (let i = 0; i < chunks.length; i++) {
+                if (merged.length >= SESSION_CAP) {
+                    // Session quota reached — skip remaining parts to save AI quota
+                    break;
+                }
                 const partLabel = chunks.length > 1 ? ` (part ${i + 1} of ${chunks.length})` : '';
                 quizStatus.textContent = `AI is formatting ${typeLabel} questions${partLabel}...`;
                 const data = await callExtractAPI(chunks[i], i + 1, (s, attempt, maxAttempts) => {
                     quizStatus.textContent = `Nexus AI quota cooling down — retry ${attempt}/${maxAttempts} for part ${i + 1} of ${chunks.length} in ${s}s...`;
                 });
                 merged = merged.concat(data.questions || []);
+                if (merged.length > SESSION_CAP) merged = merged.slice(0, SESSION_CAP);
                 if (data.truncated || data.inputTruncated) anyTruncated = true;
                 // Cooldown between parts so we don't burst the per-minute token quota
                 if (i < chunks.length - 1) {
