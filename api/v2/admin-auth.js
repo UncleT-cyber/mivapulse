@@ -3,10 +3,12 @@
    ========================================================================== */
 
 import crypto from 'crypto';
+import fs from 'fs';
+import path from 'path';
 
+const USERS_PATH = path.join(process.cwd(), 'data', 'admin_users.json');
 const JWT_SECRET = process.env.MIVAPULSE_JWT_SECRET || 'mivapulse-dev-secret-change-in-production';
 
-// In-Memory fallback store for Vercel Serverless (Read-only filesystem)
 const DEFAULT_USERS = [{
     id: 'admin_001',
     username: 'admin',
@@ -16,15 +18,29 @@ const DEFAULT_USERS = [{
     createdAt: new Date().toISOString()
 }];
 
-// Dynamic user memory store to prevent fs read/write crashes on serverless
+// In-Memory store fallback so Vercel doesn't crash on read-only fs write attempts
 let inMemoryUsers = [...DEFAULT_USERS];
 
 function loadUsers() {
+    try {
+        if (fs.existsSync(USERS_PATH)) {
+            return JSON.parse(fs.readFileSync(USERS_PATH, 'utf8'));
+        }
+    } catch (e) {
+        console.error('loadUsers file read error:', e);
+    }
     return inMemoryUsers;
 }
 
-function saveUsers(users) {
-    inMemoryUsers = users;
+function saveUsers(u) {
+    inMemoryUsers = u;
+    try {
+        if (fs.existsSync(USERS_PATH)) {
+            fs.writeFileSync(USERS_PATH, JSON.stringify(u, null, 2));
+        }
+    } catch (e) {
+        console.warn('fs.writeFileSync skipped (read-only environment)');
+    }
 }
 
 function hashPw(pw) {
@@ -68,10 +84,16 @@ export default async function handler(req, res) {
         return res.status(200).end();
     }
 
-    // Parse URL to remove query parameters safely
+    // Parse URL safely
     const urlObj = new URL(req.url, 'http://localhost');
     const urlPath = urlObj.pathname;
-    const body = req.body || {};
+
+    // Safely parse incoming payload on Vercel
+    let body = req.body;
+    if (typeof body === 'string') {
+        try { body = JSON.parse(body); } catch (e) { body = {}; }
+    }
+    body = body || {};
 
     console.log('Admin Auth API called:', req.method, urlPath);
 
