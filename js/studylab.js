@@ -472,6 +472,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify({ text, questionType })
             });
             const data = await resp.json();
+            if (!resp.ok || !data.success) {
+                quizStatus.textContent = data.error || 'Generation failed. Please try again.';
+                quizStatus.style.color = 'var(--danger)';
+                return;
+            }
             if (data.success && data.questions && data.questions.length > 0) {
                 // Enforce the chosen type on the client side as a safety net
                 let filtered = data.questions;
@@ -490,7 +495,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (data.estimatedInSource > 0) {
                     msg += ` (source has ~${data.estimatedInSource} numbered items)`;
                 }
-                if (data.truncated) {
+                if (data.inputTruncated) {
+                    msg += ' — document was too long, only the first portion was processed';
+                    quizStatus.style.color = 'var(--warning, #f59e0b)';
+                } else if (data.truncated) {
                     msg += ' — output was cut off; try a shorter document for full extraction';
                     quizStatus.style.color = 'var(--warning, #f59e0b)';
                 } else {

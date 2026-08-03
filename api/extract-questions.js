@@ -16,6 +16,12 @@ export default async function handler(req, res) {
   }
 
   try {
+    // Groq free tier allows 12,000 tokens/minute total. Cap the input window so
+    // input + prompt + output budget always stays under that limit (~4.3k + 0.6k + 4k).
+    const MAX_INPUT_CHARS = 15000;
+    const inputTruncated = text.length > MAX_INPUT_CHARS;
+    const inputWindow = text.slice(0, MAX_INPUT_CHARS);
+
     // Count numbered questions in the source so we can verify the AI extracted all of them
     const numberedMatches = text.match(/(?:^|\n)\s*(?:Q(?:uestion)?\.?\s*)?\d+[\.\)]\s+/g) || [];
     const estimatedQuestions = numberedMatches.length;
@@ -91,10 +97,14 @@ FORMAT RULES:
 DETECTED NUMBERED ITEMS IN SOURCE: ${estimatedQuestions > 0 ? `approximately ${estimatedQuestions} — use MODE A (extraction) and your output must account for all of them` : 'NONE detected — use MODE B (generation) and create questions from the study material'}.
 
 RAW EDUCATIONAL TEXT:
-${text.slice(0, 28000)}
+${inputWindow}
 `;
 
-    const chatCompletion = await groq.chat.completions.create({
+    // Model cascade: high-quality 70B first; fall back to 8B instant when the
+    // free-tier token-per-minute limit rejects the request (413/429).
+    const PRIMARY_MODEL = 'llama-3.3-70b-versatile';
+    const FALLBACK_MODEL = 'llama-3.1-8b-instant';
+    const callGroq = (model) => groq.chat.completions.create({
       messages: [
         {
           role: 'system',
@@ -105,11 +115,24 @@ ${text.slice(0, 28000)}
           content: prompt,
         },
       ],
-      model: 'llama-3.3-70b-versatile',
+      model,
       temperature: 0.1,
-      max_tokens: 8192,
+      max_tokens: 4096,
       response_format: { type: 'json_object' },
     });
+
+    let chatCompletion;
+    try {
+      chatCompletion = await callGroq(PRIMARY_MODEL);
+    } catch (rateErr) {
+      const status = rateErr?.status || rateErr?.error?.status;
+      if (status === 413 || status === 429) {
+        console.warn('Groq rate limit on primary model, falling back to', FALLBACK_MODEL);
+        chatCompletion = await callGroq(FALLBACK_MODEL);
+      } else {
+        throw rateErr;
+      }
+    }
 
     const rawOutput = chatCompletion.choices[0]?.message?.content || '{}';
     const finishReason = chatCompletion.choices[0]?.finish_reason;
@@ -181,11 +204,18 @@ ${text.slice(0, 28000)}
       count: questions.length,
       estimatedInSource: estimatedQuestions,
       truncated: finishReason === 'length',
+      inputTruncated,
       questions: questions,
     });
 
   } catch (error) {
     console.error('Groq AI Extraction Error:', error);
+    const status = error?.status || error?.error?.status;
+    if (status === 413 || status === 429) {
+      return res.status(429).json({
+        error: 'Nexus AI is temporarily rate-limited. Please wait about a minute and try again, or try a shorter document.'
+      });
+    }
     return res.status(500).json({ 
       error: 'AI formatting failed: ' + error.message 
     });
