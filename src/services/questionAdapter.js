@@ -92,7 +92,13 @@ const QuestionAdapter = (() => {
         try {
             const res = await fetch(`data/${courseCode}`);
             if (!res.ok) throw new Error(`Static file not found: ${courseCode}`);
-            const data = await res.json();
+            let data = await res.json();
+
+            // Defensive flatten: repair data files where questions are wrapped
+            // in nested arrays (e.g. a batch accidentally saved as one item).
+            if (Array.isArray(data)) {
+                data = data.flatMap(item => Array.isArray(item) ? item : [item]);
+            }
 
             let questions = data.map(q => ({
                 ..._normalizeQuestion(q),

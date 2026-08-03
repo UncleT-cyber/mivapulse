@@ -153,29 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(err => { if (dom.qText) dom.qText.textContent = `Initialization Error: ${err.message}`; });
     }
 
-    // ── STANDARD BRANCH: Load from JSON file ──
-    fetch(`data/${targetFile}`)
-        .then(res => { if (!res.ok) throw new Error("Network issue."); return res.json(); })
-        .then(data => {
-            let processedQuestions = [...data];
-            for (let i = processedQuestions.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [processedQuestions[i], processedQuestions[j]] = [processedQuestions[j], processedQuestions[i]];
-            }
-            
-            if (limitParam !== "all") {
-                const limitValue = parseInt(limitParam, 10) || 10;
-                processedQuestions = processedQuestions.slice(0, limitValue);
-            }
-
-            examState.questions = processedQuestions;
-            if (dom.title) dom.title.textContent = "Exam Lab Simulator";
-            renderQuestion(examState, dom, quizMode, courseCode);
-            const mask = document.getElementById("loading-mask");
-            if (mask) mask.remove();
-        })
-        .catch(err => { if (dom.qText) dom.qText.textContent = `Initialization Error: ${err.message}`; });
-
    // ===================================================
     // 🛠️ THE NEXT BUTTON SMOOTH TRANSITION & SCROLL FIX
     // ===================================================

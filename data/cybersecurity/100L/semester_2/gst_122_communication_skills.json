@@ -459,10 +459,10 @@
     "topic": "Phonetics and Vowels",
     "question": "The vowel sound in the word 'sheep' is represented by which phonetic symbol?",
     "options": {
-      "A": "/ɪ/",
+      "A": "/\u026a/",
       "B": "/e/",
       "C": "/i:/",
-      "D": "/æ/"
+      "D": "/\u00e6/"
     },
     "correct_answer": "C",
     "explanation": "The word 'sheep' features a long 'ee' sound, which is represented in the International Phonetic Alphabet (IPA) by the symbol /i:/ (the colon indicates a lengthened sound)."
@@ -472,13 +472,13 @@
     "topic": "Phonetics and Vowels",
     "question": "The vowel sound in the word 'sit' is represented by which phonetic symbol?",
     "options": {
-      "A": "/ɪ/",
+      "A": "/\u026a/",
       "B": "/i:/",
       "C": "/e/",
-      "D": "/ʌ/"
+      "D": "/\u028c/"
     },
     "correct_answer": "A",
-    "explanation": "The word 'sit' contains a short vowel sound, which is represented in the International Phonetic Alphabet (IPA) by the symbol /ɪ/."
+    "explanation": "The word 'sit' contains a short vowel sound, which is represented in the International Phonetic Alphabet (IPA) by the symbol /\u026a/."
   },
   {
     "course_code": "GST 122",
@@ -491,7 +491,7 @@
       "D": "Stress patterns"
     },
     "correct_answer": "B",
-    "explanation": "The words 'ship' and 'sheep' form a minimal pair distinguished entirely by their vowel length and quality. 'Ship' uses the short vowel sound /ɪ/, while 'sheep' uses the long vowel sound /i:/."
+    "explanation": "The words 'ship' and 'sheep' form a minimal pair distinguished entirely by their vowel length and quality. 'Ship' uses the short vowel sound /\u026a/, while 'sheep' uses the long vowel sound /i:/."
   },
   {
     "course_code": "GST 122",
@@ -504,7 +504,7 @@
       "D": "Equal stress on all syllables"
     },
     "correct_answer": "A",
-    "explanation": "In the noun 'photograph', the primary emphasis is placed on the very first syllable: PHO-to-graph (/ˈfəʊ.tə.ɡrɑːf/)."
+    "explanation": "In the noun 'photograph', the primary emphasis is placed on the very first syllable: PHO-to-graph (/\u02c8f\u0259\u028a.t\u0259.\u0261r\u0251\u02d0f/)."
   },
   {
     "course_code": "GST 122",
@@ -517,20 +517,20 @@
       "D": "No stress on either syllable"
     },
     "correct_answer": "B",
-    "explanation": "When 'record' functions as a noun (e.g., a world record), the stress falls on the first syllable (/ˈrek.ɔːd/). When it functions as a verb, the stress shifts to the second syllable."
+    "explanation": "When 'record' functions as a noun (e.g., a world record), the stress falls on the first syllable (/\u02c8rek.\u0254\u02d0d/). When it functions as a verb, the stress shifts to the second syllable."
   },
   {
     "course_code": "GST 122",
     "topic": "Phonetics and Consonants",
     "question": "The consonant sound in the middle of 'measure' is represented by which symbol?",
     "options": {
-      "A": "/ʒ/",
+      "A": "/\u0292/",
       "B": "/z/",
-      "C": "/dʒ/",
-      "D": "/ʃ/"
+      "C": "/d\u0292/",
+      "D": "/\u0283/"
     },
     "correct_answer": "A",
-    "explanation": "The word 'measure' contains the voiced postalveolar fricative sound in its middle syllable, which is represented in the International Phonetic Alphabet (IPA) by the symbol /ʒ/."
+    "explanation": "The word 'measure' contains the voiced postalveolar fricative sound in its middle syllable, which is represented in the International Phonetic Alphabet (IPA) by the symbol /\u0292/."
   },
   {
     "course_code": "GST 122",
@@ -561,7 +561,7 @@
   {
     "course_code": "GST 122",
     "topic": "Phonetics and Vowels",
-    "question": "The phonetic symbol /ə/ (schwa) appears in which word?",
+    "question": "The phonetic symbol /\u0259/ (schwa) appears in which word?",
     "options": {
       "A": "dog",
       "B": "above (the first vowel)",
@@ -569,7 +569,7 @@
       "D": "moon"
     },
     "correct_answer": "B",
-    "explanation": "The schwa (/ə/) is the most common vowel sound in the English language and always occurs in unstressed syllables. In the word 'above' (/əˈbʌv/), the first syllable is unstressed and pronounced as a schwa."
+    "explanation": "The schwa (/\u0259/) is the most common vowel sound in the English language and always occurs in unstressed syllables. In the word 'above' (/\u0259\u02c8b\u028cv/), the first syllable is unstressed and pronounced as a schwa."
   },
   {
     "course_code": "GST 122",
@@ -582,7 +582,7 @@
       "D": "put"
     },
     "correct_answer": "C",
-    "explanation": "The word 'time' contains the diphthong /aɪ/, where the vowel sound glides from one vowel target to another within the same syllable."
+    "explanation": "The word 'time' contains the diphthong /a\u026a/, where the vowel sound glides from one vowel target to another within the same syllable."
   },
   {
     "course_code": "GST 122",
@@ -730,7 +730,7 @@
   {
     "course_code": "GST 122",
     "topic": "The Writing Process",
-    "question": "A student’s draft has ideas, but many spelling and punctuation errors. These should be handled mainly during ___.",
+    "question": "A student\u2019s draft has ideas, but many spelling and punctuation errors. These should be handled mainly during ___.",
     "options": {
       "A": "topic selection",
       "B": "brainstorming",
@@ -797,10 +797,10 @@
     "topic": "The Writing Process",
     "question": "A thesis statement is most useful because it ___.",
     "options": {
-      "A": "announces the writer’s central position",
+      "A": "announces the writer\u2019s central position",
       "B": "replaces the conclusion",
       "C": "lists punctuation rules",
-      "D": "hides the essay’s purpose"
+      "D": "hides the essay\u2019s purpose"
     },
     "correct_answer": "A",
     "explanation": "A thesis statement acts as the foundation of an essay by stating the author's primary argument or central perspective right from the start."
@@ -818,7 +818,6 @@
     "correct_answer": "B",
     "explanation": "'Elaborate' indicates that something is highly intricate, deeply detailed, or complex, making it tricky to process easily."
   },
-
   {
     "course_code": "GST 122",
     "topic": "Types of Essays",
@@ -861,7 +860,7 @@
   {
     "course_code": "GST 122",
     "topic": "Vocabulary and Diction",
-    "question": "Choose the option that best conveys the meaning of the underlined word: The speaker’s argument was flawed, which weakened its impact.",
+    "question": "Choose the option that best conveys the meaning of the underlined word: The speaker\u2019s argument was flawed, which weakened its impact.",
     "options": {
       "A": "perfect",
       "B": "defective",
@@ -910,7 +909,6 @@
     "correct_answer": "D",
     "explanation": "Paragraph unity demands that every sentence supports the central topic sentence. Introducing completely random subjects breaks this unity."
   },
-
   {
     "course_code": "GST 122",
     "topic": "Paragraph Structure",
@@ -1014,7 +1012,8 @@
     },
     "correct_answer": "B",
     "explanation": "Defining key abstract terms early on ensures writer and reader share a common vocabulary baseline before diving into deeper arguments."
-  },{
+  },
+  {
     "course_code": "GST 122",
     "topic": "Types of Essays",
     "question": "A student describes a festival by mentioning the smell of grilled fish, the drumbeats, bright costumes, and the rough ground underfoot. This is mainly ____.",
@@ -1030,7 +1029,7 @@
   {
     "course_code": "GST 122",
     "topic": "Vocabulary and Diction",
-    "question": "Choose the option that best conveys the meaning of the underlined portion: The manager’s response to the crisis was measured and pragmatic, ensuring stability in the organisation.",
+    "question": "Choose the option that best conveys the meaning of the underlined portion: The manager\u2019s response to the crisis was measured and pragmatic, ensuring stability in the organisation.",
     "options": {
       "A": "emotional and impulsive",
       "B": "harsh and critical",
@@ -1069,7 +1068,7 @@
   {
     "course_code": "GST 122",
     "topic": "Paragraph Development",
-    "question": "A writer describes a classroom from the door to the windows and then to the teacher’s table. This arrangement uses ____.",
+    "question": "A writer describes a classroom from the door to the windows and then to the teacher\u2019s table. This arrangement uses ____.",
     "options": {
       "A": "analogy",
       "B": "spatial order",
@@ -1222,7 +1221,6 @@
     "correct_answer": "C",
     "explanation": "Advanced statistical computing, financial auditing, and graphic design are specialized technical/business competencies rather than core general communication skills."
   },
-  [
   {
     "course_code": "GST 122",
     "topic": "Writing Process Phases",
@@ -1588,5 +1586,3 @@
     "explanation": "Varying stress on different words in a spoken sentence alters the pragmatics and underlying intent of the utterance without changing the words themselves."
   }
 ]
-]
-  

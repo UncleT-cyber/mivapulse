@@ -49,9 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const retryBtn = document.getElementById('sbRetryBtn');
     const submitGlobalBtn = document.getElementById('sbSubmitToGlobal');
 
-    // Load sandbox questions
-    function loadSandboxQuestions() {
-        sandboxQuestions = QuestionAdapter.fetchQuestions({ source: 'PERSONAL_SANDBOX' });
+    // Load sandbox questions (fetchQuestions is async — must be awaited)
+    async function loadSandboxQuestions() {
+        sandboxQuestions = await QuestionAdapter.fetchQuestions({ source: 'PERSONAL_SANDBOX' });
+        if (!Array.isArray(sandboxQuestions)) sandboxQuestions = [];
         if (countEl) countEl.textContent = sandboxQuestions.length;
         if (startBtn) startBtn.disabled = sandboxQuestions.length === 0;
         renderQuestionList();
