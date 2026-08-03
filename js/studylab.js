@@ -493,7 +493,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ── CHUNK SPLITTER: break long documents at question/paragraph boundaries ──
     const CHUNK_MAX_CHARS = 13000; // safely under the API's 15k input window
-    function splitIntoChunks(text) {
+    function splitDocumentIntoParts(text) {
         const chunks = [];
         let remaining = text;
         while (remaining.length > CHUNK_MAX_CHARS) {
@@ -549,7 +549,7 @@ document.addEventListener("DOMContentLoaded", () => {
         quizStatus.style.color = 'var(--text-secondary)';
         generateBtn.disabled = true;
         try {
-            const chunks = text.length > CHUNK_MAX_CHARS ? splitIntoChunks(text) : [text];
+            const chunks = text.length > CHUNK_MAX_CHARS ? splitDocumentIntoParts(text) : [text];
             let merged = [];
             let anyTruncated = false;
 
