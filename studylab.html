@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>MivaPulse v2 — StudyLab</title>
+    <link rel="stylesheet" href="css/studylab.css?v=1785728418">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script>
+        const savedTheme = localStorage.getItem("miva-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><i class="fas fa-bolt"></i> MivaPulse</a>
+            <div class="nav-links">
+                <a href="index.html">Dashboard</a>
+                <a href="studylab.html" class="active">StudyLab</a>
+                <a href="admin.html"><i class="fas fa-shield-halved"></i></a>
+            </div>
+            <button class="theme-toggle" id="themeToggleBtn"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-flask"></i> StudyLab</h1>
+            <p>Upload notes, extract text, listen, generate quizzes, or export.</p>
+        </div>
+
+        <!-- UPLOAD -->
+        <section class="upload-section">
+            <div class="dropzone" id="studylabDropzone">
+                <i class="fas fa-cloud-arrow-up"></i>
+                <p>Drag & drop a PDF or image here</p>
+                <span>or</span>
+                <button class="browse-btn" id="studylabBrowseBtn">Browse Files</button>
+                <input type="file" id="studylabFileInput" accept=".pdf,image/*,.txt,.md" hidden>
+            </div>
+            <div class="progress-container" id="extractionProgress" style="display:none;">
+                <p id="extractionStatus">Extracting...</p>
+                <div class="progress-bar"><div class="progress-fill" id="extractionProgressBar"></div></div>
+            </div>
+        </section>
+
+        <!-- TEXT WORKSPACE -->
+        <section class="card workspace-section">
+            <div class="section-header">
+                <h3><i class="fas fa-file-lines"></i> Extracted Text</h3>
+                <span class="char-count" id="charCount">0 chars</span>
+            </div>
+            <textarea id="extractedText" placeholder="Upload a file to extract text here..."></textarea>
+        </section>
+
+        <!-- TTS PLAYER -->
+        <section class="card tts-section">
+            <h3><i class="fas fa-headphones"></i> ReadToMe</h3>
+            <p class="tts-hint"><i class="fas fa-circle-info"></i> Uses your browser's built-in speech — no API key needed.</p>
+            <div class="tts-controls">
+                <div class="tts-row">
+                    <label>Voice:</label>
+                    <select id="voiceSelector"><option>Loading voices...</option></select>
+                </div>
+                <div class="tts-row">
+                    <label>Speed:</label>
+                    <div class="speed-controls">
+                        <button class="speed-btn" data-speed="0.75">0.75x</button>
+                        <button class="speed-btn active" data-speed="1">1x</button>
+                        <button class="speed-btn" data-speed="1.25">1.25x</button>
+                        <button class="speed-btn" data-speed="1.5">1.5x</button>
+                        <button class="speed-btn" data-speed="2">2x</button>
+                    </div>
+                </div>
+                <div class="tts-buttons">
+                    <button class="tts-btn play" id="playBtn"><i class="fas fa-play"></i> Play</button>
+                    <button class="tts-btn pause" id="pauseBtn"><i class="fas fa-pause"></i> Pause</button>
+                    <button class="tts-btn stop" id="stopBtn"><i class="fas fa-stop"></i> Stop</button>
+                </div>
+                <p class="audio-status" id="audioStatus">Ready.</p>
+            </div>
+        </section>
+
+        <!-- QUIZ GENERATION -->
+        <section class="card quiz-gen-section">
+            <h3><i class="fas fa-wand-magic-sparkles"></i> AI Quiz Generator</h3>
+            <p>Let Nexus AI read your text and create quiz questions in the proper format.</p>
+            <button class="generate-btn" id="generateQuizBtn"><i class="fas fa-wand-magic-sparkles"></i> Generate Quiz Questions</button>
+            <p class="quiz-status" id="quizGenStatus"></p>
+        </section>
+
+        <!-- STICKY ACTION BAR -->
+        <div class="action-section" id="actionSection">
+            <div class="action-inner">
+                <div class="action-label"><i class="fas fa-rocket"></i> Ready?</div>
+                <div class="action-grid">
+                    <button class="action-btn study" id="launchQuizBtn" disabled>
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Launch Quiz</span>
+                    </button>
+                    <button class="action-btn export-json" id="exportJsonBtn" disabled>
+                        <i class="fas fa-file-code"></i>
+                        <span>Export JSON</span>
+                    </button>
+                    <button class="action-btn export-text" id="exportPdfBtn">
+                        <i class="fas fa-file-lines"></i>
+                        <span>Export Notes</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 MivaPulse v2. Built for students who move.</p>
+            <div class="footer-links">
+                <a href="index.html">Dashboard</a>
+                <a href="studylab.html">StudyLab</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/studylab.js"></script>
+    <script>
+        document.getElementById('extractedText').addEventListener('input', function() {
+            document.getElementById('charCount').textContent = this.value.length + ' chars';
+        });
+    </script>
+</body>
+</html>

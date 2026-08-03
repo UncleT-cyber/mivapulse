@@ -842,3 +842,58 @@ footer b,
         box-shadow: 0 0 0 0 rgba(72, 187, 120, 0);
     }
 }
+/* ==========================================================================
+   EXTRA MOBILE RESPONSIVENESS (480px and below)
+   ========================================================================== */
+@media (max-width: 480px) {
+    header, .app-nav {
+        padding: 10px 12px;
+    }
+    .nav-container {
+        gap: 4px;
+    }
+    .logo-text {
+        font-size: 1rem !important;
+    }
+    .header-actions {
+        gap: 4px;
+    }
+    .header-actions .btn {
+        padding: 6px 10px !important;
+        font-size: 0.75rem !important;
+    }
+    .hero-title {
+        font-size: 1.4rem !important;
+    }
+    .hero-subtitle {
+        font-size: 0.85rem !important;
+    }
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn-hero-main {
+        width: 100%;
+        text-align: center;
+    }
+    .department-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    .dept-card {
+        padding: 16px !important;
+    }
+    .section-title-block h2 {
+        font-size: 1.15rem !important;
+    }
+    .section-title-block p {
+        font-size: 0.82rem !important;
+    }
+}
+
+/* Tablet optimization */
+@media (min-width: 481px) and (max-width: 768px) {
+    .department-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}

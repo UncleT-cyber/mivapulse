@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MivaPulse - Admin Console</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        const savedTheme = localStorage.getItem("miva-theme") || "dark";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</head>
+<body style="margin:0;padding:0;background:var(--bg-app);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+
+<!-- FIXED NAVBAR -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg-card);border-bottom:1px solid var(--border-color);height:56px;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:100%;">
+        <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
+                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path>
+                <path d="M6 12.5v5c0 1.25 1.5 2.5 6 2.5s6-1.25 6-2.5v-5"></path>
+                <path d="M21.5 11v6"></path>
+            </svg>
+            <span style="font-weight:700;font-size:1.1rem;">MivaPulse</span>
+            <span style="font-size:0.6rem;background:#ef4444;color:#fff;padding:2px 6px;border-radius:4px;font-weight:700;letter-spacing:0.5px;">ADMIN</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:10px;">
+            <button id="themeToggleBtn" style="background:none;border:1px solid var(--border-color);border-radius:8px;font-size:1rem;cursor:pointer;padding:6px 10px;color:var(--text-primary);">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="index.html" style="text-decoration:none;padding:7px 14px;border:1px solid var(--border-color);border-radius:8px;font-size:0.82rem;font-weight:600;color:var(--text-primary);">
+                <i class="fas fa-arrow-left"></i> Dashboard
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main style="max-width:1200px;margin:0 auto;padding:76px 20px 80px;">
+
+    <!-- LOGIN SCREEN -->
+    <div id="adminLogin" style="max-width:420px;margin:60px auto;background:var(--bg-card);border:1px solid var(--border-color);border-radius:20px;padding:36px;">
+        <div style="text-align:center;margin-bottom:24px;">
+            <div style="width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,#a855f7,#7c3aed);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.8rem;color:white;box-shadow:0 4px 16px rgba(168,85,247,0.3);">
+                <i class="fas fa-shield-halved"></i>
+            </div>
+            <h3 style="margin:0 0 6px;font-size:1.3rem;font-weight:800;">Admin Console</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin:0;">Sign in to manage your platform</p>
+        </div>
+        <div style="margin-bottom:16px;">
+            <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Username</label>
+            <input type="text" id="loginUsername" style="width:100%;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-app);color:var(--text-primary);font-size:0.9rem;box-sizing:border-box;" placeholder="admin" />
+        </div>
+        <div style="margin-bottom:12px;">
+            <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Password</label>
+            <input type="password" id="loginPassword" style="width:100%;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-app);color:var(--text-primary);font-size:0.9rem;box-sizing:border-box;" placeholder="Enter password" />
+        </div>
+        <div style="text-align:right;margin-bottom:18px;">
+            <a href="#" id="forgotPasswordLink" style="font-size:0.78rem;color:#a855f7;text-decoration:none;font-weight:600;">Forgot password?</a>
+        </div>
+        <div id="loginError" style="display:none;color:#ef4444;font-size:0.85rem;margin-bottom:14px;padding:12px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;"></div>
+        <button id="loginBtn" style="width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:white;font-weight:700;cursor:pointer;font-size:0.95rem;box-shadow:0 4px 12px rgba(168,85,247,0.3);">Sign In</button>
+        <p style="text-align:center;font-size:0.72rem;color:var(--text-secondary);margin-top:16px;">Default: admin / admin123</p>
+    </div>
+
+    <!-- PASSWORD RESET SCREEN -->
+    <div id="adminResetScreen" style="display:none;max-width:420px;margin:60px auto;background:var(--bg-card);border:1px solid var(--border-color);border-radius:20px;padding:36px;">
+        <div style="text-align:center;margin-bottom:24px;">
+            <div style="width:56px;height:56px;border-radius:14px;background:rgba(168,85,247,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.5rem;color:#a855f7;"><i class="fas fa-key"></i></div>
+            <h3 style="margin:0 0 6px;">Reset Password</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin:0;" id="resetSubtitle">Enter your username to begin</p>
+        </div>
+        <div id="resetStep1">
+            <div style="margin-bottom:16px;">
+                <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Username</label>
+                <input type="text" id="resetUsername" style="width:100%;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-app);color:var(--text-primary);font-size:0.9rem;box-sizing:border-box;" />
+            </div>
+            <button id="resetNextBtn" style="width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:white;font-weight:700;cursor:pointer;font-size:0.95rem;">Next</button>
+        </div>
+        <div id="resetStep2" style="display:none;">
+            <div id="securityQuestionsContainer" style="margin-bottom:16px;"></div>
+            <button id="verifyAnswersBtn" style="width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:white;font-weight:700;cursor:pointer;font-size:0.95rem;">Verify</button>
+        </div>
+        <div id="resetStep3" style="display:none;">
+            <div style="margin-bottom:16px;">
+                <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">New Password</label>
+                <input type="password" id="resetNewPassword" style="width:100%;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-app);color:var(--text-primary);font-size:0.9rem;box-sizing:border-box;" />
+            </div>
+            <div style="margin-bottom:16px;">
+                <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Confirm Password</label>
+                <input type="password" id="resetConfirmPassword" style="width:100%;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-app);color:var(--text-primary);font-size:0.9rem;box-sizing:border-box;" />
+            </div>
+            <button id="saveNewPwBtn" style="width:100%;padding:14px;border:none;border-radius:12px;background:#10b981;color:white;font-weight:700;cursor:pointer;font-size:0.95rem;">Save New Password</button>
+        </div>
+        <div id="resetStepDone" style="display:none;text-align:center;padding:24px 0;">
+            <div style="font-size:3rem;margin-bottom:12px;">&#x2705;</div>
+            <p style="font-weight:700;font-size:1.1rem;margin-bottom:8px;">Password Reset Successful!</p>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:20px;">You can now sign in with your new password.</p>
+            <button id="backToLoginBtn" style="padding:12px 28px;border:none;border-radius:12px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:white;font-weight:700;cursor:pointer;font-size:0.9rem;">Back to Login</button>
+        </div>
+        <div id="resetError" style="display:none;color:#ef4444;font-size:0.82rem;margin-top:12px;padding:10px;background:rgba(239,68,68,0.08);border-radius:8px;"></div>
+        <div style="text-align:center;margin-top:20px;">
+            <a href="#" id="backToLoginLink" style="font-size:0.82rem;color:#a855f7;text-decoration:none;font-weight:600;"><i class="fas fa-arrow-left"></i> Back to Login</a>
+        </div>
+    </div>
+
+    <!-- ADMIN DASHBOARD -->
+    <div id="adminDashboard" style="display:none;">
+        <!-- Dashboard Header -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px;">
+            <div>
+                <h2 style="font-size:1.5rem;font-weight:800;margin:0;">Admin Console</h2>
+                <p style="font-size:0.85rem;color:var(--text-secondary);margin:4px 0 0;">Welcome back, <strong id="adminUsername" style="color:var(--text-primary);"></strong> <span style="color:#a855f7;font-weight:600;">(<span id="adminRole"></span>)</span></p>
+            </div>
+            <button id="logoutBtn" style="padding:10px 20px;border:1px solid rgba(239,68,68,0.3);border-radius:10px;background:rgba(239,68,68,0.1);color:#ef4444;font-weight:600;cursor:pointer;font-size:0.88rem;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+
+        <!-- Tabs -->
+        <div style="display:flex;gap:2px;margin-bottom:24px;border-bottom:2px solid var(--border-color);overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <button class="admin-tab active" data-tab="queue" style="padding:12px 18px;border:none;background:none;color:var(--text-secondary);font-weight:600;cursor:pointer;font-size:0.82rem;white-space:nowrap;border-bottom:2px solid #a855f7;margin-bottom:-2px;"><i class="fas fa-inbox"></i> Queue</button>
+            <button class="admin-tab" data-tab="courses" style="padding:12px 18px;border:none;background:none;color:var(--text-secondary);font-weight:600;cursor:pointer;font-size:0.82rem;white-space:nowrap;"><i class="fas fa-book"></i> Course Builder</button>
+            <button class="admin-tab" data-tab="testbank" style="padding:12px 18px;border:none;background:none;color:var(--text-secondary);font-weight:600;cursor:pointer;font-size:0.82rem;white-space:nowrap;"><i class="fas fa-database"></i> Test Bank</button>
+            <button class="admin-tab" data-tab="announcements" style="padding:12px 18px;border:none;background:none;color:var(--text-secondary);font-weight:600;cursor:pointer;font-size:0.82rem;white-space:nowrap;"><i class="fas fa-bullhorn"></i> Announcements</button>
+            <button class="admin-tab" data-tab="users" style="padding:12px 18px;border:none;background:none;color:var(--text-secondary);font-weight:600;cursor:pointer;font-size:0.82rem;white-space:nowrap;"><i class="fas fa-users"></i> Users</button>
+            <button class="admin-tab" data-tab="audit" style="padding:12px 18px;border:none;background:none;color:var(--text-secondary);font-weight:600;cursor:pointer;font-size:0.82rem;white-space:nowrap;"><i class="fas fa-history"></i> Audit</button>
+        </div>
+
+        <!-- TAB: Pending Queue -->
+        <div id="tabQueue" class="admin-tab-content">
+            <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:24px;">
+                <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 16px;display:flex;align-items:center;gap:8px;"><i class="fas fa-inbox" style="color:#a855f7;"></i> Submission Queue (<span id="queueCount">0</span> pending)</h3>
+                <div id="queueList"><p style="text-align:center;color:var(--text-secondary);font-style:italic;padding:40px;">Loading...</p></div>
+            </div>
+        </div>
+
+        <!-- TAB: Course Builder -->
+        <div id="tabCourses" class="admin-tab-content" style="display:none;">
+            <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:24px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
+                    <h3 style="font-size:1.1rem;font-weight:700;margin:0;display:flex;align-items:center;gap:8px;"><i class="fas fa-book" style="color:#a855f7;"></i> Course Builder</h3>
+                    <button id="addCourseBtn" style="padding:10px 20px;border:none;border-radius:10px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:white;font-weight:600;cursor:pointer;font-size:0.85rem;"><i class="fas fa-plus"></i> New Course</button>
+                </div>
+                <div id="courseBuilderContent">
+                    <div style="padding:16px;background:var(--bg-app);border:1px solid var(--border-color);border-radius:12px;margin-bottom:20px;">
+                        <h4 style="margin:0 0 8px;font-size:0.95rem;display:flex;align-items:center;gap:8px;"><i class="fas fa-edit" style="color:#10b981;"></i> Edit Modules</h4>
+                        <p style="font-size:0.8rem;color:var(--text-secondary);margin:0;">Organize and manage your course modules. Click Edit on any course to modify its details.</p>
+                    </div>
+                    <div id="courseList"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Test Bank Manager -->
+        <div id="tabTestbank" class="admin-tab-content" style="display:none;">
+            <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:24px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
+                    <h3 style="font-size:1.1rem;font-weight:700;margin:0;display:flex;align-items:center;gap:8px;"><i class="fas fa-database" style="color:#a855f7;"></i> Test Bank Manager</h3>
+                    <div style="display:flex;gap:8px;">
+                        <button id="importQuestionsBtn" style="padding:10px 18px;border:1px solid var(--border-color);border-radius:10px;background:none;color:var(--text-primary);font-weight:600;cursor:pointer;font-size:0.85rem;"><i class="fas fa-file-import"></i> Import</button>
+                        <button id="addQuestionBtn" style="padding:10px 20px;border:none;border-radius:10px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:white;font-weight:600;cursor:pointer;font-size:0.85rem;"><i class="fas fa-plus"></i> Add Question</button>
+                    </div>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:20px;">
+                    <div style="padding:16px;background:var(--bg-app);border:1px solid var(--border-color);border-radius:10px;text-align:center;">
+                        <div style="font-size:1.5rem;font-weight:800;color:#a855f7;" id="totalQuestionsCount">0</div>
+                        <div style="font-size:0.78rem;color:var(--text-secondary);">Total Questions</div>
+                    </div>
+                    <div style="padding:16px;background:var(--bg-app);border:1px solid var(--border-color);border-radius:10px;text-align:center;">
+                        <div style="font-size:1.5rem;font-weight:800;color:#10b981;" id="mcqCount">0</div>
+                        <div style="font-size:0.78rem;color:var(--text-secondary);">MCQ Questions</div>
+                    </div>
+                    <div style="padding:16px;background:var(--bg-app);border:1px solid var(--border-color);border-radius:10px;text-align:center;">
+                        <div style="font-size:1.5rem;font-weight:800;color:#f59e0b;" id="essayCount">0</div>
+                        <div style="font-size:0.78rem;color:var(--text-secondary);">Essay Questions</div>
+                    </div>
+                    <div style="padding:16px;background:var(--bg-app);border:1px solid var(--border-color);border-radius:10px;text-align:center;">
+                        <div style="font-size:1.5rem;font-weight:800;color:#3b82f6;" id="courseCount">0</div>
+                        <div style="font-size:0.78rem;color:var(--text-secondary);">Courses</div>
+                    </div>
+                </div>
+                <div id="testBankList">
+                    <p style="text-align:center;color:var(--text-secondary);font-style:italic;padding:30px;">Loading test bank...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Announcements -->
+        <div id="tabAnnouncements" class="admin-tab-content" style="display:none;">
+            <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:24px;">
+                <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 20px;display:flex;align-items:center;gap:8px;"><i class="fas fa-bullhorn" style="color:#a855f7;"></i> Announcement Broadcast</h3>
+                <div style="margin-bottom:20px;">
+                    <div style="margin-bottom:12px;">
+                        <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Title</label>
+                        <input type="text" id="announcementTitle" style="width:100%;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-app);color:var(--text-primary);font-size:0.9rem;box-sizing:border-box;" placeholder="e.g. Mid-semester exam schedule released" />
+                    </div>
+                    <div style="margin-bottom:12px;">
+                        <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Message</label>
+                        <textarea id="announcementMessage" rows="4" style="width:100%;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-app);color:var(--text-primary);font-size:0.9rem;box-sizing:border-box;resize:vertical;font-family:inherit;" placeholder="Type your announcement message here..."></textarea>
+                    </div>
+                    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+                        <div style="margin-bottom:0;">
+                            <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Priority</label>
+                            <select id="announcementPriority" style="padding:10px 14px;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-app);color:var(--text-primary);font-size:0.85rem;">
+                                <option value="normal">Normal</option>
+                                <option value="high">High</option>
+                                <option value="urgent">Urgent</option>
+                            </select>
+                        </div>
+                        <div style="margin-bottom:0;">
+                            <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Target</label>
+                            <select id="announcementTarget" style="padding:10px 14px;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-app);color:var(--text-primary);font-size:0.85rem;">
+                                <option value="all">All Students</option>
+                                <option value="computing">School of Computing</option>
+                                <option value="management">Management & Social Sciences</option>
+                                <option value="health">Allied Health Sciences</option>
+                            </select>
+                        </div>
+                        <button id="broadcastBtn" style="padding:12px 28px;border:none;border-radius:10px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:white;font-weight:700;cursor:pointer;font-size:0.9rem;margin-top:18px;"><i class="fas fa-paper-plane"></i> Broadcast</button>
+                    </div>
+                </div>
+                <div id="announcementStatus" style="display:none;margin-bottom:16px;padding:12px;border-radius:10px;font-size:0.85rem;"></div>
+                <h4 style="font-size:0.9rem;font-weight:700;margin:24px 0 12px;color:var(--text-secondary);">Recent Announcements</h4>
+                <div id="announcementList">
+                    <p style="text-align:center;color:var(--text-secondary);font-style:italic;padding:20px;">No announcements yet.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Users & Roles -->
+        <div id="tabUsers" class="admin-tab-content" style="display:none;">
+            <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:24px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+                    <h3 style="font-size:1.1rem;font-weight:700;margin:0;display:flex;align-items:center;gap:8px;"><i class="fas fa-users" style="color:#a855f7;"></i> Admin Users</h3>
+                    <button id="createUserBtn" style="padding:10px 20px;border:none;border-radius:10px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:white;font-weight:600;cursor:pointer;font-size:0.85rem;"><i class="fas fa-plus"></i> Create User</button>
+                </div>
+                <div id="usersList"><p style="color:var(--text-secondary);font-style:italic;">Loading...</p></div>
+            </div>
+            <div id="createUserForm" style="display:none;margin-top:16px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:24px;">
+                <h3 style="margin:0 0 16px;font-size:1rem;font-weight:700;">Create New User</h3>
+                <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;">
+                    <div style="flex:1;min-width:150px;">
+                        <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Username</label>
+                        <input type="text" id="newUsername" style="width:100%;padding:10px 12px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-app);color:var(--text-primary);font-size:0.85rem;box-sizing:border-box;" />
+                    </div>
+                    <div style="flex:1;min-width:150px;">
+                        <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Password</label>
+                        <input type="password" id="newPassword" style="width:100%;padding:10px 12px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-app);color:var(--text-primary);font-size:0.85rem;box-sizing:border-box;" />
+                    </div>
+                    <div style="flex:1;min-width:150px;">
+                        <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">Role</label>
+                        <select id="newUserRole" style="width:100%;padding:10px 12px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-app);color:var(--text-primary);font-size:0.85rem;">
+                            <option value="SuperAdmin">SuperAdmin</option>
+                            <option value="Reviewer" selected>Reviewer</option>
+                            <option value="Viewer">Viewer</option>
+                        </select>
+                    </div>
+                    <div style="display:flex;gap:8px;align-items:flex-end;">
+                        <button id="saveUserBtn" style="padding:10px 20px;border:none;border-radius:8px;background:#10b981;color:white;font-weight:600;cursor:pointer;font-size:0.85rem;">Create</button>
+                        <button id="cancelCreateBtn" style="padding:10px 20px;border:1px solid var(--border-color);border-radius:8px;background:none;color:var(--text-secondary);cursor:pointer;font-size:0.85rem;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Audit Trail -->
+        <div id="tabAudit" class="admin-tab-content" style="display:none;">
+            <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:24px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+                    <h3 style="font-size:1.1rem;font-weight:700;margin:0;display:flex;align-items:center;gap:8px;"><i class="fas fa-history" style="color:#a855f7;"></i> Audit Trail</h3>
+                    <div style="display:flex;gap:8px;">
+                        <button id="verifyChainBtn" style="padding:10px 16px;border:1px solid rgba(16,185,129,0.3);border-radius:10px;background:rgba(16,185,129,0.1);color:#10b981;font-weight:600;cursor:pointer;font-size:0.82rem;"><i class="fas fa-shield-halved"></i> Verify</button>
+                        <button id="refreshAuditBtn" style="padding:10px 16px;border:1px solid var(--border-color);border-radius:10px;background:none;color:var(--text-secondary);cursor:pointer;font-size:0.82rem;"><i class="fas fa-refresh"></i> Refresh</button>
+                    </div>
+                </div>
+                <div id="chainStatus" style="display:none;margin-bottom:14px;padding:12px;border-radius:10px;font-size:0.85rem;"></div>
+                <div id="auditList" style="max-height:500px;overflow-y:auto;"><p style="color:var(--text-secondary);font-style:italic;">Loading...</p></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer style="position:fixed;bottom:0;left:0;right:0;z-index:999;border-top:1px solid var(--border-color);padding:12px 20px;text-align:center;background:var(--bg-card);">
+    <p style="font-size:0.75rem;color:var(--text-secondary);margin:0;">&copy; 2026 MivaPulse v2. The AI Study &amp; Revision Ecosystem.</p>
+</footer>
+
+<script src="js/admin.js"></script>
+
+<!-- MODAL OVERLAY -->
+<div id="adminModal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:2000;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:28px;max-width:500px;width:90%;max-height:80vh;overflow-y:auto;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <h3 id="modalTitle" style="margin:0;font-size:1.2rem;font-weight:700;">Modal Title</h3>
+            <button id="closeModalBtn" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-secondary);padding:0;width:32px;height:32px;">&times;</button>
+        </div>
+        <div id="modalContent"></div>
+    </div>
+</div>
+</body>
+</html>

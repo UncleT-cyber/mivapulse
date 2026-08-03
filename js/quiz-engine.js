@@ -69,7 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
         examNotice: document.getElementById("examModeNotice") 
     };
 
-    if (!targetFile) {
+    // Check for StudyLab source
+    const quizSource = urlParams.get("source") || "file";
+
+    if (!targetFile && quizSource !== "studylab") {
         if (dom.qText) dom.qText.textContent = "Error: Invalid selection routing parameters.";
         return;
     }
@@ -95,6 +98,39 @@ document.addEventListener("DOMContentLoaded", () => {
         if (dom.examNotice) dom.examNotice.classList.remove("hidden"); 
     }
 
+    // ── STUDYLAB BRANCH: Load from localStorage ──
+    if (quizSource === "studylab") {
+        const studyLabData = localStorage.getItem('mivapulse_studylab_quiz');
+        if (!studyLabData) {
+            if (dom.qText) dom.qText.textContent = "No StudyLab questions found. Go back to StudyLab to generate questions first.";
+            const mask = document.getElementById("loading-mask");
+            if (mask) mask.remove();
+            return;
+        }
+        const parsed = JSON.parse(studyLabData);
+        let processedQuestions = [...(parsed.questions || [])];
+        
+        // Shuffle
+        for (let i = processedQuestions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [processedQuestions[i], processedQuestions[j]] = [processedQuestions[j], processedQuestions[i]];
+        }
+        
+        if (limitParam !== "all") {
+            const limitValue = parseInt(limitParam, 10) || 10;
+            processedQuestions = processedQuestions.slice(0, limitValue);
+        }
+
+        examState.questions = processedQuestions;
+        if (dom.title) dom.title.textContent = "StudyLab Session";
+        if (dom.code) dom.code.textContent = "STUDYLAB";
+        renderQuestion(examState, dom, quizMode, "STUDYLAB");
+        const mask = document.getElementById("loading-mask");
+        if (mask) mask.remove();
+        return;
+    }
+
+    // ── STANDARD BRANCH: Load from JSON file ──
     fetch(`data/${targetFile}`)
         .then(res => { if (!res.ok) throw new Error("Network issue."); return res.json(); })
         .then(data => {
@@ -105,10 +141,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             
             if (limitParam !== "all") {
-    // Parse the value, but fall back to 10 if it's NaN or missing
-    const limitValue = parseInt(limitParam, 10) || 10; 
-    processedQuestions = processedQuestions.slice(0, limitValue);
-}
+                const limitValue = parseInt(limitParam, 10) || 10;
+                processedQuestions = processedQuestions.slice(0, limitValue);
+            }
 
             examState.questions = processedQuestions;
             if (dom.title) dom.title.textContent = "Exam Lab Simulator";
@@ -484,7 +519,6 @@ function renderTerminalView(state, dom, courseCode) {
     }
 
     const totalEssays = (window.essaySubmissionsList || []).length;
-    const mcqIncorrect = mcqAttempted - mcqCorrect;
     const accuracyPercent = mcqAttempted > 0 ? Math.round((mcqCorrect / mcqAttempted) * 100) : 100;
 
     if (dom.qText) dom.qText.textContent = `Review completed for ${courseCode || "COS 301"}. Below is your session analysis breakdown.`;
@@ -492,47 +526,66 @@ function renderTerminalView(state, dom, courseCode) {
     // 🌟 MIVACIRCLE (YIKORA) FEEDBACK PIPELINE LINK
     const yikoraPostUrl = "https://app.yikora.com/post/1fa9ed28-bf93-437a-9842-559403a5dbe7";
 
+    // Calculate pie chart values
+    const mcqIncorrect = mcqAttempted - mcqCorrect;
+    const passPercent = mcqAttempted > 0 ? Math.round((mcqCorrect / mcqAttempted) * 100) : 0;
+    const failPercent = mcqAttempted > 0 ? 100 - passPercent : 0;
+    const passed = mcqCorrect >= Math.ceil(mcqAttempted * 0.5);
+    const gradeLabel = mcqAttempted > 0 ? (passed ? 'PASSED' : 'FAILED') : 'N/A';
+    const gradeColor = passed ? '#10b981' : '#ef4444';
+
     const analyticsWrapper = document.createElement("div");
     analyticsWrapper.className = "analytics-container";
     analyticsWrapper.innerHTML = `
         <style>
             .analytics-container { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.75rem; }
-            .chart-frame { background-color: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 2rem 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
-            .chart-row { display: flex; align-items: center; gap: 1rem; }
-            .chart-label { width: 95px; font-size: 0.9rem; font-weight: 700; color: #4a154b; text-align: left; }
-            .chart-track-bg { flex: 1; background-color: #e2e8f0; height: 28px; border-radius: 6px; overflow: hidden; position: relative; }
-            .chart-fill-bar { height: 100%; display: flex; align-items: center; padding-left: 0.75rem; color: white; font-size: 0.85rem; font-weight: 700; transition: width 1s ease; width: 0%; }
-            .fill-correct { background: #10b981; }
-            .fill-incorrect { background: #ef4444; }
-            .fill-essay { background: #4a154b; }
-            .accuracy-badge-box { text-align: center; font-size: 1.4rem; font-weight: 800; color: #4a154b; margin: 0.5rem 0; }
+            .pie-chart-wrapper { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; padding: 1.5rem; background: var(--bg-card, #fff); border: 2px solid var(--border-color, #e2e8f0); border-radius: 16px; }
+            .pie-chart-circle { width: 180px; height: 180px; border-radius: 50%; position: relative; display: flex; align-items: center; justify-content: center; transition: all 0.6s ease; }
+            .pie-chart-center { position: absolute; width: 100px; height: 100px; border-radius: 50%; background: var(--bg-card, #fff); display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: inset 0 0 10px rgba(0,0,0,0.05); }
+            .pie-percent { font-size: 1.6rem; font-weight: 800; color: var(--text-primary, #1e293b); line-height: 1; }
+            .pie-label { font-size: 0.7rem; font-weight: 600; color: var(--text-secondary, #64748b); text-transform: uppercase; letter-spacing: 0.5px; }
+            .pie-legend { display: flex; flex-direction: column; gap: 12px; }
+            .pie-legend-item { display: flex; align-items: center; gap: 10px; }
+            .pie-legend-dot { width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0; }
+            .pie-legend-text { font-size: 0.88rem; color: var(--text-primary, #1e293b); }
+            .pie-legend-count { font-weight: 700; }
+            .grade-badge { display: inline-block; padding: 6px 20px; border-radius: 8px; font-weight: 800; font-size: 1rem; letter-spacing: 1px; margin-top: 4px; }
+            .stat-pills { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+            .stat-pill { padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; }
         </style>
 
-        <div class="accuracy-badge-box">
-            ${mcqAttempted > 0 ? `MCQ Accuracy Rating: ${accuracyPercent}%` : `Assessment Session Complete`}
+        <div class="pie-chart-wrapper">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+                <div class="pie-chart-circle" id="pieChartCircle" style="background: conic-gradient(#e2e8f0 0deg, #e2e8f0 360deg);">
+                    <div class="pie-chart-center">
+                        <span class="pie-percent" id="piePercentText">0%</span>
+                        <span class="pie-label">Score</span>
+                    </div>
+                </div>
+                <div class="grade-badge" id="gradeBadge" style="background: ${gradeColor}15; color: ${gradeColor}; border: 2px solid ${gradeColor}30;">${gradeLabel}</div>
+                <div class="stat-pills">
+                    ${totalEssays > 0 ? `<span class="stat-pill" style="background:rgba(74,21,75,0.08);color:#4a154b;">${totalEssays} Essays</span>` : ''}
+                    <span class="stat-pill" style="background:rgba(100,116,139,0.08);color:#64748b;">${mcqAttempted + totalEssays} Total</span>
+                </div>
+            </div>
+            <div class="pie-legend">
+                <div class="pie-legend-item">
+                    <div class="pie-legend-dot" style="background:#10b981;"></div>
+                    <span class="pie-legend-text">Correct: <span class="pie-legend-count" id="legendCorrect">0</span></span>
+                </div>
+                <div class="pie-legend-item">
+                    <div class="pie-legend-dot" style="background:#ef4444;"></div>
+                    <span class="pie-legend-text">Incorrect: <span class="pie-legend-count" id="legendIncorrect">0</span></span>
+                </div>
+                ${totalEssays > 0 ? `
+                <div class="pie-legend-item">
+                    <div class="pie-legend-dot" style="background:#4a154b;"></div>
+                    <span class="pie-legend-text">Essays: <span class="pie-legend-count">${totalEssays}</span></span>
+                </div>` : ''}
+            </div>
         </div>
         
-        <div class="chart-frame">
-            ${mcqAttempted > 0 ? `
-            <div class="chart-row">
-                <span class="chart-label">MCQ Right</span>
-                <div class="chart-track-bg"><div id="barCorrect" class="chart-fill-bar fill-correct">0 Answers</div></div>
-            </div>
-            <div class="chart-row">
-                <span class="chart-label">MCQ Wrong</span>
-                <div class="chart-track-bg"><div id="barIncorrect" class="chart-fill-bar fill-incorrect">0 Answers</div></div>
-            </div>
-            ` : ''}
-            
-            ${totalEssays > 0 ? `
-            <div class="chart-row">
-                <span class="chart-label">Essays</span>
-                <div class="chart-track-bg"><div id="barEssay" class="chart-fill-bar fill-essay">0 Submissions</div></div>
-            </div>
-            ` : ''}
-        </div>
-        
-        <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1rem;">
+        <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.5rem;">
             <a href="${yikoraPostUrl}" target="_blank" rel="noopener noreferrer" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; text-decoration: none; display: block; font-size: 14px; background-color: #0284c7; box-shadow: 0 2px 4px rgba(2,132,199,0.3);">💬 Share Feedback on MivaCircle (Yikora)</a>
             <button onclick="window.location.reload()" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; cursor: pointer; display: block; font-size: 14px; background-color: #4a154b;">🔄 Start New Session</button>
             <a href="index.html" style="padding: 1rem; text-align: center; font-weight: 700; color: white; border: none; border-radius: 8px; text-decoration: none; display: block; font-size: 14px; background-color: #64748b;">🏠 Exit to Home Landing</a>
@@ -560,24 +613,31 @@ function renderTerminalView(state, dom, courseCode) {
     if (dom.options) dom.options.appendChild(analyticsWrapper);
 
     setTimeout(() => {
-        if (mcqAttempted > 0) {
-            const correctBar = document.getElementById("barCorrect");
-            const incorrectBar = document.getElementById("barIncorrect");
-            
-            if (correctBar) {
-                correctBar.style.width = `${(mcqCorrect / mcqAttempted) * 100}%`;
-                correctBar.textContent = `${mcqCorrect} Correct`;
-            }
-            if (incorrectBar) {
-                incorrectBar.style.width = `${(mcqIncorrect / mcqAttempted) * 100}%`;
-                incorrectBar.textContent = `${mcqIncorrect} Incorrect`;
-            }
-        }
+        // Animate pie chart
+        const pieCircle = document.getElementById("pieChartCircle");
+        const piePercent = document.getElementById("piePercentText");
+        const legendCorrect = document.getElementById("legendCorrect");
+        const legendIncorrect = document.getElementById("legendIncorrect");
         
-        const essayBar = document.getElementById("barEssay");
-        if (essayBar && totalEssays > 0) {
-            essayBar.style.width = "100%";
-            essayBar.textContent = `${totalEssays} Submitted`;
+        if (pieCircle && mcqAttempted > 0) {
+            const correctDeg = (mcqCorrect / mcqAttempted) * 360;
+            pieCircle.style.background = `conic-gradient(#10b981 0deg, #10b981 ${correctDeg}deg, #ef4444 ${correctDeg}deg, #ef4444 360deg)`;
+            
+            // Animate percentage counter
+            let currentPct = 0;
+            const targetPct = accuracyPercent;
+            const step = Math.max(1, Math.floor(targetPct / 30));
+            const counter = setInterval(() => {
+                currentPct = Math.min(currentPct + step, targetPct);
+                if (piePercent) piePercent.textContent = currentPct + '%';
+                if (currentPct >= targetPct) clearInterval(counter);
+            }, 25);
+            
+            if (legendCorrect) legendCorrect.textContent = mcqCorrect;
+            if (legendIncorrect) legendIncorrect.textContent = mcqIncorrect;
+        } else if (pieCircle) {
+            pieCircle.style.background = '#e2e8f0';
+            if (piePercent) piePercent.textContent = '—';
         }
     }, 100);
 }

@@ -1,171 +1,782 @@
 {
   "faculties": [
     {
-      "id": "cybersecurity",
-      "name": "Cybersecurity & IT",
-      "levels": [
+      "id": "computing",
+      "name": "School of Computing",
+      "departments": [
         {
-          "id": "100L",
-          "name": "100 Level (Freshman)",
-          "semesters": [
+          "id": "cybersecurity",
+          "name": "Cybersecurity",
+          "levels": [
             {
-              "id": "semester_1",
-              "name": "1st Semester",
-              "courses": [
-                { "code": "COS 101", "title": "Introduction to Computing", "file": "cybersecurity/100L/semester_1/cos_101_intro_to_computing.json" },
-                { "code": "GST 127", "title": "Enviromental and Sustainable Development", "file": "cybersecurity/100L/semester_1/gst_127_env_and_sus_dev.json" },
-                { "code": "GST 111", "title": "Communication Skills in English", "file": "cybersecurity/100L/semester_1/gst_111_communication_skills.json" },
-                { "code": "GST 121", "title": "Use of Library, Study Skills and ICT", "file": "cybersecurity/100L/semester_1/gst_121_use_of_library.json" },
-                { "code": "MTH 101", "title": "Elementary Mathematics II", "file": "cybersecurity/100L/semester_1/mth_101_elementary_math.json" },
-                { "code": "PHY 101", "title": "General Physics I", "file": "cybersecurity/100L/semester_1/phy_101_general_physics.json" },
-                { "code": "PHY 107", "title": "Physics Practical I", "file": "cybersecurity/100L/semester_1/phy_107_physics_practical.json" },
-                { "code": "STA 111", "title": "Descriptive Statistics", "file": "cybersecurity/100L/semester_1/sta_111_descriptivate_stat.json" }
+              "id": "100L",
+              "name": "100 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": [
+                    {
+                      "code": "COS_101_INTRO_TO_COMPUTING",
+                      "title": "COS_101_INTRO_TO_COMPUTING",
+                      "file": "cybersecurity/100L/semester_1/cos_101_intro_to_computing.json"
+                    },
+                    {
+                      "code": "GST_111_COMMUNICATION_SKILLS",
+                      "title": "GST_111_COMMUNICATION_SKILLS",
+                      "file": "cybersecurity/100L/semester_1/gst_111_communication_skills.json"
+                    },
+                    {
+                      "code": "GST_121_USE_OF_LIBRARY",
+                      "title": "GST_121_USE_OF_LIBRARY",
+                      "file": "cybersecurity/100L/semester_1/gst_121_use_of_library.json"
+                    },
+                    {
+                      "code": "GST_127_ENV_AND_SUS_DEV",
+                      "title": "GST_127_ENV_AND_SUS_DEV",
+                      "file": "cybersecurity/100L/semester_1/gst_127_env_and_sus_dev.json"
+                    },
+                    {
+                      "code": "MTH_101_ELEMENTARY_MATH",
+                      "title": "MTH_101_ELEMENTARY_MATH",
+                      "file": "cybersecurity/100L/semester_1/mth_101_elementary_math.json"
+                    },
+                    {
+                      "code": "PHY_101_GENERAL_PHYSICS",
+                      "title": "PHY_101_GENERAL_PHYSICS",
+                      "file": "cybersecurity/100L/semester_1/phy_101_general_physics.json"
+                    },
+                    {
+                      "code": "PHY_107_PHYSICS_PRACTICAL",
+                      "title": "PHY_107_PHYSICS_PRACTICAL",
+                      "file": "cybersecurity/100L/semester_1/phy_107_physics_practical.json"
+                    },
+                    {
+                      "code": "STA_111_DESCRIPTIVATE_STAT",
+                      "title": "STA_111_DESCRIPTIVATE_STAT",
+                      "file": "cybersecurity/100L/semester_1/sta_111_descriptivate_stat.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": [
+                    {
+                      "code": "COS 102",
+                      "title": "Control Flow & Programming Basics",
+                      "file": "cybersecurity/100L/semester_2/cos_102_problem_solving.json"
+                    },
+                    {
+                      "code": "CSC 106",
+                      "title": "DOM Interaction",
+                      "file": "cybersecurity/100L/semester_2/csc_106_web_technologies.json"
+                    },
+                    {
+                      "code": "GST 112",
+                      "title": "Colonialism and Societal Structures",
+                      "file": "cybersecurity/100L/semester_2/gst_112_nigerian_peoples.json"
+                    },
+                    {
+                      "code": "GST 122",
+                      "title": "Communication Skills in Marketing Teams",
+                      "file": "cybersecurity/100L/semester_2/gst_122_communication_skills.json"
+                    },
+                    {
+                      "code": "MTH 102",
+                      "title": "",
+                      "file": "cybersecurity/100L/semester_2/mth_102_elementary_math.json"
+                    },
+                    {
+                      "code": "PHY 102 GENERAL PHYSICS",
+                      "title": "PHY 102 GENERAL PHYSICS",
+                      "file": "cybersecurity/100L/semester_2/phy_102_general_physics.json"
+                    },
+                    {
+                      "code": "PHY 108",
+                      "title": "Stress-Strain Analysis",
+                      "file": "cybersecurity/100L/semester_2/phy_108_physics_practical.json"
+                    }
+                  ]
+                }
               ]
             },
             {
-              "id": "semester_2",
-              "name": "2nd Semester",
-              "courses": [
-                { "code": "COS 102", "title": "Problem Solving", "file": "cybersecurity/100L/semester_2/cos_102_problem_solving.json" },
-                { "code": "CSC 106", "title": "Introduction to Web Technologies", "file": "cybersecurity/100L/semester_2/csc_106_web_technologies.json" },
-                { "code": "GST 112", "title": "Nigerian Peoples and Culture", "file": "cybersecurity/100L/semester_2/gst_112_nigerian_peoples.json" },
-                { "code": "GST 122", "title": "Communication Skills II", "file": "cybersecurity/100L/semester_2/gst_122_communication_skills.json" },
-                { "code": "MTH 102", "title": "Elementary Mathematics II", "file": "cybersecurity/100L/semester_2/mth_102_elementary_math.json" },
-                { "code": "PHY 102", "title": "General Physics II", "file": "cybersecurity/100L/semester_2/phy_102_general_physics.json" },
-                { "code": "PHY 108", "title": "Physics Practical II", "file": "cybersecurity/100L/semester_2/phy_108_physics_practical.json" }
+              "id": "300L",
+              "name": "300 Level",
+              "semesters": [
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": [
+                    {
+                      "code": "COS 301 DATA STRUCTURES",
+                      "title": "COS 301 DATA STRUCTURES",
+                      "file": "cybersecurity/300L/semester_2/cos_301_data_structures.json"
+                    },
+                    {
+                      "code": "MTH 301",
+                      "title": "MTH 301",
+                      "file": "cybersecurity/300L/semester_2/mth_301_data_testessay.json"
+                    }
+                  ]
+                }
               ]
             }
           ]
         },
         {
-          "id": "200L",
-          "name": "200 Level (Sophomore)",
-          "semesters": [
+          "id": "software-engineering",
+          "name": "Software Engineering",
+          "levels": [
             {
-              "id": "semester_1",
-              "name": "1st Semester",
-              "courses": [
-                { "code": "CSC 201", "title": "Java Programming", "file": "cybersecurity/200L/csc_201_java.json" }
+              "id": "100L",
+              "name": "100 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
-              "id": "semester_2",
-              "name": "2nd Semester",
-              "courses": []
-            }
-          ]
-        },
-        {
-          "id": "300L",
-          "name": "300 Level (Penultimate Year)",
-          "semesters": [
-            {
-              "id": "semester_1",
-              "name": "1st Semester",
-              "courses": []
-            },
-            {
-              "id": "semester_2",
-              "name": "2nd Semester",
-              "courses": [
-                { "code": "COS 301", "title": "Data Structures & Algorithms", "file": "cybersecurity/300L/semester_2/cos_301_data_structures.json" },
-                { "code": "MTH 301", "title": "Data & Essaytest", "file": "cybersecurity/300L/semester_2/mth_301_data_testessay.json" }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "400L",
-          "name": "400 Level (Senior)",
-          "semesters": [
-            {
-              "id": "semester_1",
-              "name": "1st Semester",
-              "courses": [
-                { "code": "CSC 401", "title": "Artificial Intelligence", "file": "cybersecurity/400L/csc_401_ai.json" }
+              "id": "200L",
+              "name": "200 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
-              "id": "semester_2",
-              "name": "2nd Semester",
-              "courses": []
+              "id": "300L",
+              "name": "300 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "400L",
+              "name": "400 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "id": "public-health",
-      "name": "Public Health Science",
-      "levels": [
+      "id": "management",
+      "name": "Management & Social Sciences",
+      "departments": [
         {
-          "id": "100L",
-          "name": "100 Level (Freshman)",
-          "semesters": [
-            { "id": "semester_1", "name": "1st Semester", "courses": [] },
-            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          "id": "business-admin",
+          "name": "Business Administration",
+          "levels": [
+            {
+              "id": "100L",
+              "name": "100 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "200L",
+              "name": "200 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "300L",
+              "name": "300 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "400L",
+              "name": "400 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "200L",
-          "name": "200 Level (Sophomore)",
-          "semesters": [
-            { "id": "semester_1", "name": "1st Semester", "courses": [] },
-            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
-          ]
-        },
-        {
-          "id": "300L",
-          "name": "300 Level (Penultimate Year)",
-          "semesters": [
-            { "id": "semester_1", "name": "1st Semester", "courses": [] },
-            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
-          ]
-        },
-        {
-          "id": "400L",
-          "name": "400 Level (Senior)",
-          "semesters": [
-            { "id": "semester_1", "name": "1st Semester", "courses": [] },
-            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          "id": "economics",
+          "name": "Economics",
+          "levels": [
+            {
+              "id": "100L",
+              "name": "100 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "200L",
+              "name": "200 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "300L",
+              "name": "300 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "400L",
+              "name": "400 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "id": "software-engineering",
-      "name": "Software Engineering",
-      "levels": [
+      "id": "communication",
+      "name": "Communication & Media",
+      "departments": [
         {
-          "id": "100L",
-          "name": "100 Level (Freshman)",
-          "semesters": [
-            { "id": "semester_1", "name": "1st Semester", "courses": [] },
-            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          "id": "mass-comm",
+          "name": "Mass Communication",
+          "levels": [
+            {
+              "id": "100L",
+              "name": "100 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "200L",
+              "name": "200 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "300L",
+              "name": "300 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "400L",
+              "name": "400 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "200L",
-          "name": "200 Level (Sophomore)",
-          "semesters": [
-            { "id": "semester_1", "name": "1st Semester", "courses": [] },
-            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          "id": "media-studies",
+          "name": "Media & Film Studies",
+          "levels": [
+            {
+              "id": "100L",
+              "name": "100 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "200L",
+              "name": "200 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "300L",
+              "name": "300 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "400L",
+              "name": "400 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "name": "Allied Health Sciences",
+      "departments": [
+        {
+          "id": "public-health",
+          "name": "Public Health",
+          "levels": [
+            {
+              "id": "100L",
+              "name": "100 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "200L",
+              "name": "200 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "300L",
+              "name": "300 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "400L",
+              "name": "400 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "300L",
-          "name": "300 Level (Penultimate Year)",
-          "semesters": [
-            { "id": "semester_1", "name": "1st Semester", "courses": [] },
-            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          "id": "biomedical",
+          "name": "Biomedical Sciences",
+          "levels": [
+            {
+              "id": "100L",
+              "name": "100 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "200L",
+              "name": "200 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "300L",
+              "name": "300 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "400L",
+              "name": "400 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "name": "School of Education",
+      "departments": [
+        {
+          "id": "edu-foundations",
+          "name": "Foundations of Education",
+          "levels": [
+            {
+              "id": "100L",
+              "name": "100 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "200L",
+              "name": "200 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "300L",
+              "name": "300 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "400L",
+              "name": "400 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "400L",
-          "name": "400 Level (Senior)",
-          "semesters": [
-            { "id": "semester_1", "name": "1st Semester", "courses": [] },
-            { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+          "id": "curriculum",
+          "name": "Curriculum & Teaching",
+          "levels": [
+            {
+              "id": "100L",
+              "name": "100 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "200L",
+              "name": "200 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "300L",
+              "name": "300 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            },
+            {
+              "id": "400L",
+              "name": "400 Level",
+              "semesters": [
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
+              ]
+            }
           ]
         }
       ]

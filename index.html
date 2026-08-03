@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miva Prep - Premium Exam Simulator</title>
+    <title>MivaPulse - v2 - The AI Study & Revision Ecosystem</title>
     <link rel="stylesheet" href="css/dashboard.css">
     <script>
     // Ensure dark theme is initialized instantly on startup
@@ -25,12 +25,15 @@
                 <path d="M6 12.5v5c0 1.25 1.5 2.5 6 2.5s6-1.25 6-2.5v-5"></path>
                 <path d="M21.5 11v6"></path>
             </svg>
-            <span class="logo-text" style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">MivaPrep</span>
+            <span class="logo-text" style="font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em;">MivaPulse</span>
         </div>
 
-        <div class="header-actions" style="display: flex; align-items: center; gap: 12px;">
+        <div class="header-actions" style="display: flex; align-items: center; gap: 8px;">
+            <a href="studylab.html" style="font-weight:600;border-radius:8px;padding:6px 12px;text-decoration:none;font-size:0.85rem;color:var(--text-primary);border:1px solid var(--border-color);">StudyLab</a>
+            
+            <a href="admin.html" style="font-weight:600;border-radius:8px;padding:6px 12px;text-decoration:none;font-size:0.85rem;color:var(--text-primary);border:1px solid var(--border-color);">&#x1F6E1;&#xFE0F;</a>
             <button id="themeToggleBtn" style="background: none; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1.1rem; cursor: pointer; padding: 6px 10px; display: flex; align-items: center; justify-content: center;" title="Toggle UI Theme">🌓</button>
-            <button class="btn" onclick="openConfigModal()" style="font-weight: 600; border-radius: 8px; cursor: pointer; padding: 8px 16px;">Start Practice</button>
+            
         </div>
         
     </div>
@@ -39,7 +42,7 @@
     <section class="hero-section">
         <div class="hero-container">
             <h1 class="hero-title">Master your semester with <br><span class="gradient-text">hyper-focused simulation.</span></h1>
-            <p class="hero-subtitle">Rigorous mock examinations crafted specifically for Miva faculties, paired with deep concept breakdowns.</p>
+            <p class="hero-subtitle">The complete AI-powered study ecosystem for Miva University. Practice exams, audio revision, and smart document extraction across all faculties.</p>
             
             <div class="hero-cta-group">
     <button class="btn-hero-main" onclick="if(window.triggerHaptic) window.triggerHaptic(20); openConfigModal()">Start Exam Practice</button>
@@ -62,18 +65,29 @@
                 <form id="simulatorForm">
                     <!-- NEW: Faculty/Department Dropdown (Sits beautifully at the top) -->
                     <div class="form-group">
-                        <label for="facultySelect">Department</label>
+                        <label for="facultySelect">Faculty</label>
                         <div class="custom-select-wrapper">
                             <select id="facultySelect" required>
-                                <option value="" disabled selected>-- Choose your Department --</option>
-                                <option value="cybersecurity">Cybersecurity</option>
-                                <option value="public-health">Public Health Science</option>
-                                <option value="software-engineering">Software Engineering</option>
+                                <option value="" disabled selected>-- Choose your Faculty --</option>
+                                <option value="computing">School of Computing</option>
+                                <option value="management">Management & Social Sciences</option>
+                                <option value="communication">Communication & Media</option>
+                                <option value="health">Allied Health Sciences</option>
+                                <option value="education">School of Education</option>
                             </select>
                         </div>
                     </div>
 
                     <!-- Academic Level Dropdown (Maintained layout, options will now be managed dynamically) -->
+                    <div class="form-group">
+                        <label for="departmentSelect">Department</label>
+                        <div class="custom-select-wrapper">
+                            <select id="departmentSelect" required disabled>
+                                <option value="" disabled selected>-- Select a faculty first --</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label for="levelSelect">Academic Level</label>
                         <div class="custom-select-wrapper">
@@ -158,31 +172,42 @@
 
         <div class="department-grid">
             <div class="dept-card">
-                <div class="dept-icon">🔒</div>
-                <h3>Cybersecurity</h3>
-                <p>Designed to reinforce foundational problem solving, computing logic, and secure code architecture across core modules.</p>
-                <span class="dept-badge">Supported Program</span>
-            </div>
-            <div class="dept-card">
                 <div class="dept-icon">💻</div>
-                <h3>Software Engineering</h3>
-                <p>Focused on validation patterns, data structure logic rules, and client-side web compilation technologies.</p>
-                <span class="dept-badge">Supported Program</span>
+                <h3>School of Computing</h3>
+                <p>Cybersecurity, Software Engineering, IT. 100L-400L courses in programming, data structures, AI, and systems.</p>
+                <span class="dept-badge">Active</span>
             </div>
             <div class="dept-card">
-    <div class="dept-icon">🌍</div>
-    <h3>Public Health</h3>
-    <p>Grounded in epidemiological methodology, biostatistical analysis, and health policy frameworks to address global systemic health challenges.</p>
-    <span class="dept-badge">Supported Program</span>
-</div>
-            
+                <div class="dept-icon">📊</div>
+                <h3>Management & Social Sciences</h3>
+                <p>Business administration, economics, accounting, marketing, and organizational behavior across all levels.</p>
+                <span class="dept-badge">Active</span>
+            </div>
+            <div class="dept-card">
+                <div class="dept-icon">📡</div>
+                <h3>Communication & Media</h3>
+                <p>Mass communication, journalism, broadcasting, public relations, digital media production, and film.</p>
+                <span class="dept-badge">Active</span>
+            </div>
+            <div class="dept-card">
+                <div class="dept-icon">🏥</div>
+                <h3>Allied Health Sciences</h3>
+                <p>Biology, chemistry, anatomy, physiology, biochemistry, pharmacology, epidemiology, and public health.</p>
+                <span class="dept-badge">Active</span>
+            </div>
+            <div class="dept-card">
+                <div class="dept-icon">📚</div>
+                <h3>School of Education</h3>
+                <p>Foundations of education, psychology, curriculum development, teaching methods, and educational administration.</p>
+                <span class="dept-badge">Active</span>
+            </div>
         </div>
     </main>
 
     <footer class="app-footer">
         <div class="footer-container">
-            <p>&copy; 2026 Miva Prep. All rights reserved.</p>
-            <p class="footer-attribution">Handcrafted by <strong>Anthony A.</strong> | Cybersecurity Major | Miva Open University</p>
+            <p>&copy; 2026 MivaPulse v2. All rights reserved.</p>
+            <p class="footer-attribution">The AI Study &amp; Revision Ecosystem for Miva University</p>
         </div>
     </footer>
 
