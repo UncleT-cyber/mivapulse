@@ -106,9 +106,11 @@ ${inputWindow}
     // free-tier token-per-minute limit rejects the request (413/429).
     const PRIMARY_MODEL = 'llama-3.3-70b-versatile';
     const FALLBACK_MODEL = 'llama-3.1-8b-instant';
-    // Generation mode (MODE B) needs room for up to 40 questions; extraction
-    // answers are short so 4k keeps us safely under the TPM budget.
-    const maxOutputTokens = estimatedQuestions === 0 ? 8192 : 4096;
+    // Generation mode (MODE B) needs room for up to 40 questions (~160 tokens
+    // each). Groq counts max_tokens against the 12k TPM estimate, so keep
+    // prompt + input + output under the limit: 6144 fits with ~3.4k input.
+    // Extraction answers are short so 4k keeps us safely under budget there.
+    const maxOutputTokens = estimatedQuestions === 0 ? 6144 : 4096;
     const callGroq = (model) => groq.chat.completions.create({
       messages: [
         {
