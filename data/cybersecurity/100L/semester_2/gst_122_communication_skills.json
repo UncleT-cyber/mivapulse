@@ -1,142 +1,1592 @@
 [
   {
-    "question": "Sample question 1 about Communication Skills in Marketing Teams. This is a placeholder question that will be replaced with actual exam content later.",
+    "course_code": "GST 122",
+    "topic": "Communication Skills in Marketing Teams",
+    "question": "What is the primary objective of investing in communication skills within a corporate marketing team?",
     "options": {
-      "A": "Option A for question 1",
-      "B": "Option B for question 1",
-      "C": "Option C for question 1",
-      "D": "Option D for question 1"
+      "A": "To cut down the financial budget of the advertising department",
+      "B": "To showcase how investing in communication skills can elevate team collaboration",
+      "C": "To re-brand the logos and signs using semiotic theory",
+      "D": "To replace spoken communication with written emails completely"
     },
     "correct_answer": "B",
-    "explanation": "This is the explanation for question 1 about Communication Skills in Marketing Teams.",
-    "topic": "Communication Skills in Marketing Teams",
-    "course_code": "GST 122",
-    "type": "mcq"
+    "explanation": "Investing in communication skills elevates team collaboration and fosters a dynamic, productive work environment."
   },
   {
-    "question": "Sample question 2 about Communication Skills in Marketing Teams. This is a placeholder question that will be replaced with actual exam content later.",
+    "course_code": "GST 122",
+    "topic": "Team Collaboration Methodology",
+    "question": "Which of the following elements forms a core part of a practical methodology for transforming team collaboration?",
     "options": {
-      "A": "Option A for question 2",
-      "B": "Option B for question 2",
-      "C": "Option C for question 2",
-      "D": "Option D for question 2"
+      "A": "Financial auditing, payroll adjustments, and downsizings",
+      "B": "Skill-building sessions, Practical Application, and Feedback Mechanism",
+      "C": "Deductive arguments, vocabulary drills, and syllabic counting",
+      "D": "Pre-writing, summary writing, and post-writing editing"
     },
-    "correct_answer": "C",
-    "explanation": "This is the explanation for question 2 about Communication Skills in Marketing Teams.",
-    "topic": "Communication Skills in Marketing Teams",
-    "course_code": "GST 122",
-    "type": "mcq"
+    "correct_answer": "B",
+    "explanation": "A structured program for enhancing workplace collaboration relies on skill-building sessions, real-world practical application, and effective feedback mechanisms."
   },
   {
-    "question": "Sample question 3 about Communication Skills in Marketing Teams. This is a placeholder question that will be replaced with actual exam content later.",
-    "options": {
-      "A": "Option A for question 3",
-      "B": "Option B for question 3",
-      "C": "Option C for question 3",
-      "D": "Option D for question 3"
-    },
-    "correct_answer": "D",
-    "explanation": "This is the explanation for question 3 about Communication Skills in Marketing Teams.",
-    "topic": "Communication Skills in Marketing Teams",
     "course_code": "GST 122",
-    "type": "mcq"
-  },
-  {
-    "question": "Sample question 4 about Communication Skills in Marketing Teams. This is a placeholder question that will be replaced with actual exam content later.",
+    "topic": "Communication Training Outcomes",
+    "question": "What specific team achievement results from honing communication and collaboration skills during a major corporate milestone?",
     "options": {
-      "A": "Option A for question 4",
-      "B": "Option B for question 4",
-      "C": "Option C for question 4",
-      "D": "Option D for question 4"
+      "A": "The seamless launch of a new product",
+      "B": "The restructuring of the corporate board of directors",
+      "C": "The complete elimination of grammatical errors in coding",
+      "D": "An overall reduction in public speaking hours"
     },
     "correct_answer": "A",
-    "explanation": "This is the explanation for question 4 about Communication Skills in Marketing Teams.",
-    "topic": "Communication Skills in Marketing Teams",
-    "course_code": "GST 122",
-    "type": "mcq"
+    "explanation": "By honing communication skills, team members can effectively collaborate to navigate high-stakes projects like launching a new product."
   },
   {
-    "question": "Sample question 5 about Communication Skills in Marketing Teams. This is a placeholder question that will be replaced with actual exam content later.",
+    "course_code": "GST 122",
+    "topic": "Rule of Proximity in Work Environments",
+    "question": "What linguistic concept is directly examined when evaluating workplace project assignments and team allocations?",
     "options": {
-      "A": "Option A for question 5",
-      "B": "Option B for question 5",
-      "C": "Option C for question 5",
-      "D": "Option D for question 5"
+      "A": "The rules of denotative lexicon",
+      "B": "The Rule of Proximity Agreement",
+      "C": "Syllabic stress patterns",
+      "D": "Active listening vs passive hearing"
     },
     "correct_answer": "B",
-    "explanation": "This is the explanation for question 5 about Communication Skills in Marketing Teams.",
-    "topic": "Communication Skills in Marketing Teams",
-    "course_code": "GST 122",
-    "type": "mcq"
+    "explanation": "Workplace project assignments can be analyzed using the Rule of Proximity Agreement to see how syntax influences perceptions of duty and relationship."
   },
   {
-    "question": "Sample question 6 about Communication Skills in Marketing Teams. This is a placeholder question that will be replaced with actual exam content later.",
+    "course_code": "GST 122",
+    "topic": "Evaluating Workplace Scenarios",
+    "question": "What components comprise an effective methodology for analyzing workplace language scenarios?",
     "options": {
-      "A": "Option A for question 6",
-      "B": "Option B for question 6",
-      "C": "Option C for question 6",
-      "D": "Option D for question 6"
+      "A": "Grammatical parsing, sentence stress mapping, and vocal tests",
+      "B": "Scenario setup, Variation in Proximity, and Participant Response",
+      "C": "Brainstorming, editing, and technical proofreading",
+      "D": "Central thesis formulation, deductive logic, and counterarguments"
+    },
+    "correct_answer": "B",
+    "explanation": "Evaluating linguistic impact in practical scenarios involves establishing a scenario setup, applying variations in proximity/structure, and evaluating participant responses."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Impact of Linguistic Choices on Teams",
+    "question": "According to workplace communication analysis, how do grammatical choices impact project teams?",
+    "options": {
+      "A": "They dictate the visual color scheme of promotional materials.",
+      "B": "They influence how team members attribute responsibility, success, or challenges.",
+      "C": "They eliminate the necessity for feedback mechanisms.",
+      "D": "They increase the time spent on reading comprehension tasks."
+    },
+    "correct_answer": "B",
+    "explanation": "Linguistic choices significantly influence how team members attribute responsibility, success, or challenges in collaborative tasks."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Business Proposal Optimization Methodology",
+    "question": "What methodology is applied to systematically optimize the creation of a formal business proposal?",
+    "options": {
+      "A": "Auditory listening drills and participant feedback forms",
+      "B": "Pre-writing phase, writing phase, and post-writing phase",
+      "C": "Deductive reasoning framework and counterargument refutation",
+      "D": "Vocabulary substitution using context clues"
+    },
+    "correct_answer": "B",
+    "explanation": "Optimizing a formal business proposal requires systematically working through the pre-writing phase, drafting phase, and post-writing refinement phase."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Core Reading Strategies",
+    "question": "Which of the following is explicitly categorized as an active reading strategy for critical comprehension?",
+    "options": {
+      "A": "Brainstorming and outlining",
+      "B": "Context clues, fact-opinion distinction, and drawing inferences",
+      "C": "Sentence stress manipulation and phonetic accenting",
+      "D": "Vocal control adjustment and eye contact"
+    },
+    "correct_answer": "B",
+    "explanation": "Essential reading comprehension strategies include utilizing context clues, distinguishing facts from opinions, and drawing logical inferences."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Critical Analysis Exercise Framework",
+    "question": "What are the core components of a framework designed to develop critical reading and analysis skills?",
+    "options": {
+      "A": "Pre-writing, writing, and post-writing review",
+      "B": "Reading tasks, Critical analysis exercises, and Feedback and Reflection",
+      "C": "Vocal tracking, stress analysis, and structural layout",
+      "D": "Scenario creation, proximity shifts, and feedback logging"
+    },
+    "correct_answer": "B",
+    "explanation": "Developing critical reading abilities relies on structured reading tasks, targeted critical analysis exercises, and feedback with reflection."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Deconstructing Sentence Structure",
+    "question": "In oral communication, what primary concept focuses on deconstructing spoken sentences by shifting emphasis?",
+    "options": {
+      "A": "The Art of Public Speaking: Beyond Words",
+      "B": "The Power of Stress: Deconstructing a Sentence",
+      "C": "Impact of Reading Strategies on Critical Analysis",
+      "D": "Navigating Proximity in Team Project Assignments"
+    },
+    "correct_answer": "B",
+    "explanation": "Deconstructing sentence stress examines how moving emphasis across words fundamentally alters the meaning conveyed in speech."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Sentence Stress Analysis Example",
+    "question": "Which specific sample sentence is frequently analyzed to demonstrate how varying stress patterns alter implied meaning?",
+    "options": {
+      "A": "I never said we should write a business report.",
+      "B": "I didn't say you should bring coffee.",
+      "C": "Effective communication is crucial for marketing teams.",
+      "D": "Hearing is passive while active listening is voluntary."
+    },
+    "correct_answer": "B",
+    "explanation": "The sentence 'I didn't say you should bring coffee' serves as a benchmark example where shifting stress onto any word changes the implied statement."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Nature of Sentence Stress",
+    "question": "What does linguistic analysis conclude regarding the nature of sentence stress in speech?",
+    "options": {
+      "A": "It is completely static and irrelevant to everyday context.",
+      "B": "It showcases an ability to influence the listener's perception and understanding of the speaker's message.",
+      "C": "It acts as a substitute for written letter writing conventions.",
+      "D": "It eliminates the need for deductive logical arguments."
+    },
+    "correct_answer": "B",
+    "explanation": "Sentence stress is dynamic and heavily dictates how a listener perceives, interprets, and understands a speaker's intended message."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Multimodal Public Speaking",
+    "question": "In effective public speaking, what does comprehensive communication examine beyond literal text content?",
+    "options": {
+      "A": "How pre-writing structures optimize business proposals",
+      "B": "How language, vocal variety, and physical aspects contribute to effective communication beyond literal text content",
+      "C": "How the proximity rule creates confusion in project allocations",
+      "D": "How context clues change our reading comprehension strategies"
+    },
+    "correct_answer": "B",
+    "explanation": "Beyond spoken or written words, oral delivery depends heavily on word selection, vocal variety, and non-verbal physical presence."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Public Speaking Language Techniques",
+    "question": "Which language elements are specifically analyzed to measure their direct impact on audience engagement during a presentation?",
+    "options": {
+      "A": "Prefixes, suffixes, and root compound words",
+      "B": "Diction and repetition",
+      "C": "Synonyms and formal definitions",
+      "D": "Outlining and proofreading marks"
+    },
+    "correct_answer": "B",
+    "explanation": "Strategic diction (word choice) and deliberate repetition are powerful linguistic tools for engaging and persuading an audience."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Physical Aspects of Public Speaking",
+    "question": "Which physical aspects of presentation delivery are crucial for engaging an audience during a live speech?",
+    "options": {
+      "A": "Handwriting posture and alignment",
+      "B": "Gestures, eye contact, and stage utilisation",
+      "C": "Passive hearing and deductive positioning",
+      "D": "Brainstorming maps and outline notes"
+    },
+    "correct_answer": "B",
+    "explanation": "Non-verbal delivery relies on purposeful gestures, direct eye contact, and effective stage utilization to command attention."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Presentation Delivery Impact",
+    "question": "What is vital for ensuring an oral presentation achieves maximum impact on an audience?",
+    "options": {
+      "A": "Relying exclusively on the literal words written on paper",
+      "B": "Considering not only the words spoken but also how they are delivered",
+      "C": "Avoiding vocal variety to maintain a perfectly flat monotone tone",
+      "D": "Limiting public delivery exclusively to online platforms"
+    },
+    "correct_answer": "B",
+    "explanation": "Maximum communication impact requires balancing verbal content ('what is said') with delivery dynamics ('how it is said')."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Marketing Team Communication Outcomes",
+    "question": "What corporate change occurs within a team after systematically honing their communication skills?",
+    "options": {
+      "A": "A noticeable decrease in creative output",
+      "B": "A noticeable improvement in team collaboration and project outcomes",
+      "C": "An increase in conflict and project delays",
+      "D": "A complete shift from verbal tasks to reading exercises"
+    },
+    "correct_answer": "B",
+    "explanation": "Honing professional communication skills produces noticeable improvements in team collaboration, efficiency, and project outcomes."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Rule of Proximity Workplace Context",
+    "question": "Why is the Rule of Proximity Agreement considered paramount in collaborative workplace settings?",
+    "options": {
+      "A": "It determines the physical distance between office desks.",
+      "B": "It influences the perceived accountability of team members in project assignments.",
+      "C": "It dictates the corporate dress code requirements.",
+      "D": "It measures the speed of email transmission."
+    },
+    "correct_answer": "B",
+    "explanation": "Grammatical proximity rules influence how team members perceive accountability and responsibility when reviewing shared project assignments."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Language Precision in Teams",
+    "question": "Practical workplace scenarios emphasize a strong need for what key feature in collaborative environments?",
+    "options": {
+      "A": "Highly elaborate, fancy prose styles",
+      "B": "Precise language",
+      "C": "Monotone vocal patterns",
+      "D": "Unstructured reporting frameworks"
+    },
+    "correct_answer": "B",
+    "explanation": "Collaborative environments demand precise language to prevent misunderstandings, establish clarity, and maintain workplace accountability."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Business Proposal Preparation",
+    "question": "When creating a business proposal, what does careful planning and meticulous refinement optimize?",
+    "options": {
+      "A": "A live public speech",
+      "B": "The creation of a business proposal",
+      "C": "Auditory hearing comprehension",
+      "D": "A casual personal letter"
+    },
+    "correct_answer": "B",
+    "explanation": "Thorough pre-writing planning and post-writing editing directly optimize the structure, persuasiveness, and quality of a business proposal."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Reading Strategy Outcomes",
+    "question": "Systematically applying reading strategies demonstrates a direct positive correlation with which skill?",
+    "options": {
+      "A": "Vocal control development",
+      "B": "Improved critical analysis skills",
+      "C": "Proximity concord matching",
+      "D": "Diction repetition tracking"
+    },
+    "correct_answer": "B",
+    "explanation": "Systematically practicing reading strategies like inferencing and distinguishing facts from opinions directly enhances critical analysis skills."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Sentence Stress Analysis Method",
+    "question": "What action is taken during phonetic analysis to observe shifts in spoken sentence meaning?",
+    "options": {
+      "A": "Adding structural definitions from basic workbooks",
+      "B": "Deconstructing a sentence by emphasizing different words",
+      "C": "Changing the proximity matching of the verbs",
+      "D": "Replacing nouns with synonyms"
+    },
+    "correct_answer": "B",
+    "explanation": "Deconstructing a sentence by placing vocal emphasis on different words illustrates how spoken meaning shifts dynamically."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Reasoning Patterns",
+    "question": "When a speaker draws a specific conclusion from general premises, they are utilizing which reasoning form?",
+    "options": {
+      "A": "Inductive reasoning",
+      "B": "Deductive reasoning",
+      "C": "Emotional reasoning",
+      "D": "Verbal reasoning"
+    },
+    "correct_answer": "B",
+    "explanation": "Deductive reasoning moves from general premises or universal rules down to specific, logical conclusions."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Beyond Words Public Speaking",
+    "question": "What factors contribute to effective communication in public speaking beyond the literal text content?",
+    "options": {
+      "A": "Pre-writing and post-writing checklists",
+      "B": "Language choices, vocal variety, and physical aspects",
+      "C": "Dictionary indexes and technical spellings",
+      "D": "Deductive premises and factual reading clues"
+    },
+    "correct_answer": "B",
+    "explanation": "Effective public speaking relies on non-verbal elements, including diction, vocal inflection, body language, and stage movement, alongside the written message."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Course Synthesization",
+    "question": "Ultimately, GST 122 framework shows that effective language expression combines which two broad domains?",
+    "options": {
+      "A": "Technical coding and financial reporting forms",
+      "B": "Written literacy processes and spoken delivery dynamics",
+      "C": "Rote reading and passive hearing styles",
+      "D": "Dictionary definitions and culinary experiments"
+    },
+    "correct_answer": "B",
+    "explanation": "Comprehensive communication mastery integrates both written literacy skills (planning, drafting, editing) and spoken delivery dynamics (speech, stress, active listening)."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Aims of Writing",
+    "question": "A student is writing an essay about the impact of social media on teen mental health. Their goal is to present statistics from peer-reviewed studies and expert opinions to convince the reader that social media has a net negative effect. Which of the four basic aims of writing is this student primarily pursuing?",
+    "options": {
+      "A": "To inform",
+      "B": "To persuade",
+      "C": "To express",
+      "D": "To be creative"
+    },
+    "correct_answer": "B",
+    "explanation": "The key keyword in the question is 'convince.' Whenever a writer's primary goal is to convince an audience to accept a specific viewpoint or take a certain stance using evidence (like statistics and expert opinions), the aim is persuasive writing. Informative writing only aims to share facts neutrally, expressive writing focuses on personal feelings, and creative writing focuses on artistic storytelling."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Qualities of Good Writing",
+    "question": "In a writing workshop, a peer reviewer comments that an essay 'jumps from one idea to the next without any logical flow.' Which quality of good writing is the essay most lacking?",
+    "options": {
+      "A": "Unity",
+      "B": "Cohesion",
+      "C": "Coherence",
+      "D": "Simplicity"
     },
     "correct_answer": "C",
-    "explanation": "This is the explanation for question 6 about Communication Skills in Marketing Teams.",
-    "topic": "Communication Skills in Marketing Teams",
-    "course_code": "GST 122",
-    "type": "mcq"
+    "explanation": "Coherence refers to how well a piece of writing structurally builds connection and logical flow between thoughts, paragraphs, and sections. When an essay 'jumps' abruptly between ideas without establishing a clear path or clear transitions, the reader loses the underlying connection, meaning the text lacks coherence."
   },
   {
-    "question": "Sample question 7 about Communication Skills in Marketing Teams. This is a placeholder question that will be replaced with actual exam content later.",
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "A writer is working on the first draft of a short story. According to the writing process outlined in the material, what should be their primary focus at this stage?",
     "options": {
-      "A": "Option A for question 7",
-      "B": "Option B for question 7",
-      "C": "Option C for question 7",
-      "D": "Option D for question 7"
+      "A": "Correcting all punctuation and spelling errors to ensure clarity.",
+      "B": "Discovering, creating, and clarifying ideas without worrying about perfection.",
+      "C": "Formatting the document according to strict publication guidelines.",
+      "D": "Researching the biography of other famous short story writers for inspiration."
+    },
+    "correct_answer": "B",
+    "explanation": "During the drafting phase of the writing process, the primary goal is getting ideas down on paper. Worrying about mechanics, formatting, or technical perfection happens later during the editing and proofreading stages."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Aims of Writing",
+    "question": "A blogger wants to write a post about their travel experience to inspire readers to visit a new city. The primary purpose of this writing is to:",
+    "options": {
+      "A": "Inform",
+      "B": "Express",
+      "C": "Persuade",
+      "D": "Create a factual record"
+    },
+    "correct_answer": "C",
+    "explanation": "The keyword here is 'inspire readers to visit.' When writing aims to motivate an audience to take a specific action, adopt an attitude, or follow a recommendation, the core purpose falls under persuasion. While travel blogs contain information and personal expression, the ultimate objective in this scenario is to convince the audience to go to that city."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Qualities of Good Writing",
+    "question": "A writer is composing an email to a potential employer. They need to decide between using the word 'utilize' or 'use.' To ensure the message is clear and effective, which quality of good writing should guide their choice?",
+    "options": {
+      "A": "Unity",
+      "B": "Conciseness",
+      "C": "Coherence",
+      "D": "Clarity"
     },
     "correct_answer": "D",
-    "explanation": "This is the explanation for question 7 about Communication Skills in Marketing Teams.",
-    "topic": "Communication Skills in Marketing Teams",
-    "course_code": "GST 122",
-    "type": "mcq"
+    "explanation": "Choosing straightforward, ordinary words like 'use' instead of overly complicated or formal ones like 'utilize' directly enhances the clarity of the writing. It makes the message easy to read and understand instantly, which is vital when emailing a potential employer."
   },
   {
-    "question": "Sample question 8 about Communication Skills in Marketing Teams. This is a placeholder question that will be replaced with actual exam content later.",
+    "course_code": "GST 122",
+    "topic": "Qualities of Good Writing",
+    "question": "A student's essay has perfect grammar, spelling, and sentence structure but fails to convey any meaningful argument or insight about the topic. The writing is technically correct but lacks:",
     "options": {
-      "A": "Option A for question 8",
-      "B": "Option B for question 8",
-      "C": "Option C for question 8",
-      "D": "Option D for question 8"
+      "A": "A substantial message or idea",
+      "B": "A coherent structure",
+      "C": "A clear sense of the audience",
+      "D": "Proper use of transitional words"
     },
     "correct_answer": "A",
-    "explanation": "This is the explanation for question 8 about Communication Skills in Marketing Teams.",
-    "topic": "Communication Skills in Marketing Teams",
-    "course_code": "GST 122",
-    "type": "mcq"
+    "explanation": "Good writing requires substance, not just mechanical perfection. While grammar, spelling, and sentence structures are flawless, the core purpose of writing is to communicate an important thought, perspective, or argument. Lacking any deep insight means the writing is empty of a substantial message or idea."
   },
   {
-    "question": "Sample question 9 about Communication Skills in Marketing Teams. This is a placeholder question that will be replaced with actual exam content later.",
-    "options": {
-      "A": "Option A for question 9",
-      "B": "Option B for question 9",
-      "C": "Option C for question 9",
-      "D": "Option D for question 9"
-    },
-    "correct_answer": "B",
-    "explanation": "This is the explanation for question 9 about Communication Skills in Marketing Teams.",
-    "topic": "Communication Skills in Marketing Teams",
     "course_code": "GST 122",
-    "type": "mcq"
-  },
-  {
-    "question": "Sample question 10 about Communication Skills in Marketing Teams. This is a placeholder question that will be replaced with actual exam content later.",
+    "topic": "Outlining and Structure",
+    "question": "When creating an outline, a writer moves from the general idea of 'Effects of Social Media' to more specific points like 'Effects on Communication' and then to even more minute details like 'Decreased face-to-face interaction.' This process is known as:",
     "options": {
-      "A": "Option A for question 10",
-      "B": "Option B for question 10",
-      "C": "Option C for question 10",
-      "D": "Option D for question 10"
+      "A": "Structuring the conclusion.",
+      "B": "Writing a thesis statement.",
+      "C": "Identifying and organising ideas into a hierarchy.",
+      "D": "Brainstorming for a topic."
     },
     "correct_answer": "C",
-    "explanation": "This is the explanation for question 10 about Communication Skills in Marketing Teams.",
-    "topic": "Communication Skills in Marketing Teams",
+    "explanation": "Outlining is fundamentally an organizational step. Moving from a broad, general theme downward to specific categories and further down to sub-points creates a structured, tiered system. This specific progression from general to minute detail represents organising ideas into a hierarchy."
+  },
+  {
     "course_code": "GST 122",
-    "type": "mcq"
+    "topic": "Qualities of Good Writing",
+    "question": "After completing a draft of an essay, a student realizes that some sentences are too long and complex, making the main point difficult to grasp. This is a problem with the quality of:",
+    "options": {
+      "A": "Unity",
+      "B": "Economy and Simplicity",
+      "C": "The thesis statement",
+      "D": "Audience awareness only"
+    },
+    "correct_answer": "B",
+    "explanation": "The keywords here are 'too long and complex.' Economy in writing means avoiding unnecessary wordiness and cutting out fluff, while simplicity means using clear, direct language instead of overly complicated structures. When sentences become overly long and wound up to the point of hiding the main message, the text directly lacks economy and simplicity."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Public Speaking",
+    "question": "Which scenario describes an informative speech?",
+    "options": {
+      "A": "A politician urging citizens to vote for a specific candidate",
+      "B": "A teacher explaining the causes of World War II to history students",
+      "C": "A salesperson convincing a customer to buy a product",
+      "D": "An activist encouraging protest participation"
+    },
+    "correct_answer": "B",
+    "explanation": "An informative speech aims to enlighten, educate, or explain a topic neutrally without trying to change the audience's mind. A history lesson explaining historical facts fits this definition."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Public Speaking",
+    "question": "A speaker delivering a demonstrative speech on how to repair a bicycle should prioritize which element?",
+    "options": {
+      "A": "Abstract theories about bicycle mechanics",
+      "B": "Statistical data on bicycle accidents",
+      "C": "Practical demonstration with visual aids",
+      "D": "Historical development of bicycles"
+    },
+    "correct_answer": "C",
+    "explanation": "A demonstrative speech focuses entirely on teaching the audience how to do something or how something works. Showing physical steps, actions, or tools visually is crucial for a step-by-step task like mechanical repair."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Vowels",
+    "question": "The vowel sound in the word 'sheep' is represented by which phonetic symbol?",
+    "options": {
+      "A": "/ɪ/",
+      "B": "/e/",
+      "C": "/i:/",
+      "D": "/æ/"
+    },
+    "correct_answer": "C",
+    "explanation": "The word 'sheep' features a long 'ee' sound, which is represented in the International Phonetic Alphabet (IPA) by the symbol /i:/ (the colon indicates a lengthened sound)."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Vowels",
+    "question": "The vowel sound in the word 'sit' is represented by which phonetic symbol?",
+    "options": {
+      "A": "/ɪ/",
+      "B": "/i:/",
+      "C": "/e/",
+      "D": "/ʌ/"
+    },
+    "correct_answer": "A",
+    "explanation": "The word 'sit' contains a short vowel sound, which is represented in the International Phonetic Alphabet (IPA) by the symbol /ɪ/."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Vowels",
+    "question": "A language learner pronounces 'ship' and 'sheep' identically. This learner most likely struggles with distinguishing:",
+    "options": {
+      "A": "Consonant sounds",
+      "B": "Long and short vowel sounds",
+      "C": "Diphthongs",
+      "D": "Stress patterns"
+    },
+    "correct_answer": "B",
+    "explanation": "The words 'ship' and 'sheep' form a minimal pair distinguished entirely by their vowel length and quality. 'Ship' uses the short vowel sound /ɪ/, while 'sheep' uses the long vowel sound /i:/."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Syllable Stress",
+    "question": "The word 'photograph' has primary stress on which syllable?",
+    "options": {
+      "A": "First syllable (pho-)",
+      "B": "Second syllable (to-)",
+      "C": "Third syllable (graph)",
+      "D": "Equal stress on all syllables"
+    },
+    "correct_answer": "A",
+    "explanation": "In the noun 'photograph', the primary emphasis is placed on the very first syllable: PHO-to-graph (/ˈfəʊ.tə.ɡrɑːf/)."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Syllable Stress",
+    "question": "When the word 'record' functions as a noun, the stress pattern is:",
+    "options": {
+      "A": "re'cord (second syllable stressed)",
+      "B": "'record (first syllable stressed)",
+      "C": "Equal stress on both syllables",
+      "D": "No stress on either syllable"
+    },
+    "correct_answer": "B",
+    "explanation": "When 'record' functions as a noun (e.g., a world record), the stress falls on the first syllable (/ˈrek.ɔːd/). When it functions as a verb, the stress shifts to the second syllable."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Consonants",
+    "question": "The consonant sound in the middle of 'measure' is represented by which symbol?",
+    "options": {
+      "A": "/ʒ/",
+      "B": "/z/",
+      "C": "/dʒ/",
+      "D": "/ʃ/"
+    },
+    "correct_answer": "A",
+    "explanation": "The word 'measure' contains the voiced postalveolar fricative sound in its middle syllable, which is represented in the International Phonetic Alphabet (IPA) by the symbol /ʒ/."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Intonation",
+    "question": "A speaker uses rising pitch at the end of the sentence 'You're coming to the party?' This intonation pattern typically indicates:",
+    "options": {
+      "A": "A statement of fact",
+      "B": "A command",
+      "C": "A question",
+      "D": "Excitement only"
+    },
+    "correct_answer": "C",
+    "explanation": "In English, a rising intonation pattern at the end of a sentence is typically used to signal a question, especially yes/no questions or declarative questions."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Accents and Dialects",
+    "question": "A student from northern Nigeria pronounces 'path' with a short 'a' sound (as in 'cat'), while a student from southern England pronounces it with a long 'a' sound (as in 'father'). This difference illustrates:",
+    "options": {
+      "A": "Intonation variation",
+      "B": "Accent difference",
+      "C": "Grammatical error",
+      "D": "Vocabulary choice"
+    },
+    "correct_answer": "B",
+    "explanation": "The variation described is an accent difference, specifically referring to regional pronunciations of the same word (known in linguistics as the TRAP-BATH split)."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Vowels",
+    "question": "The phonetic symbol /ə/ (schwa) appears in which word?",
+    "options": {
+      "A": "dog",
+      "B": "above (the first vowel)",
+      "C": "sheep",
+      "D": "moon"
+    },
+    "correct_answer": "B",
+    "explanation": "The schwa (/ə/) is the most common vowel sound in the English language and always occurs in unstressed syllables. In the word 'above' (/əˈbʌv/), the first syllable is unstressed and pronounced as a schwa."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Phonetics and Vowels",
+    "question": "Which word contains a diphthong?",
+    "options": {
+      "A": "cat",
+      "B": "bed",
+      "C": "time",
+      "D": "put"
+    },
+    "correct_answer": "C",
+    "explanation": "The word 'time' contains the diphthong /aɪ/, where the vowel sound glides from one vowel target to another within the same syllable."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Communication Ethics",
+    "question": "A speaker tells a joke during a funeral eulogy. While humor can be healing, this approach risks being inappropriate if it:",
+    "options": {
+      "A": "Is brief and subtle",
+      "B": "Makes light of the audience's grief",
+      "C": "References positive memories of the deceased",
+      "D": "Helps mourners remember happy times"
+    },
+    "correct_answer": "B",
+    "explanation": "When analyzing contextual and situational communication ethics, humor must respect the emotional boundaries of the audience. Minimizing or trivializing the authentic grief of attendees is inherently counterproductive and inappropriate for a funeral setting."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Public Speaking",
+    "question": "A public speaker addresses an audience of teenagers about the dangers of substance abuse. To be most effective, the speaker should:",
+    "options": {
+      "A": "Use complex medical terminology to demonstrate expertise",
+      "B": "Ignore the audience's age and deliver a standard presentation",
+      "C": "Speak only about personal experiences without evidence",
+      "D": "Consider the audience's experiences and use relatable examples"
+    },
+    "correct_answer": "D",
+    "explanation": "Effective public speaking relies heavily on audience analysis and adaptation. When speaking to teenagers, adapting content specifically to their demographic by using relatable examples makes the message most impactful."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Letter Writing",
+    "question": "The closing part of a letter should mainly ___.",
+    "options": {
+      "A": "replace the greeting",
+      "B": "introduce unrelated arguments",
+      "C": "leave a final impression",
+      "D": "list every punctuation mark"
+    },
+    "correct_answer": "C",
+    "explanation": "The conclusion or complimentary close of a letter is designed to round off the communication smoothly and leave a polite, lasting final impression on the recipient."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "Early writing stages should concentrate mainly on ____.",
+    "options": {
+      "A": "discovering and clarifying ideas",
+      "B": "designing the title page",
+      "C": "memorising definitions",
+      "D": "counting commas only"
+    },
+    "correct_answer": "A",
+    "explanation": "Initial stages of writing (pre-writing and drafting) prioritize brainstorming, discovering expression pathways, and clarifying ideas rather than technical mechanics."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph that teaches how photosynthesis works is most likely ___.",
+    "options": {
+      "A": "fictional",
+      "B": "informal",
+      "C": "expository",
+      "D": "narrative"
+    },
+    "correct_answer": "C",
+    "explanation": "Expository writing functions to explain, inform, or describe a specific technical or factual topic, such as a biological process."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "Choose the option that best conveys the meaning of the underlined word: The committee reached a unanimous decision after hours of discussion.",
+    "options": {
+      "A": "uncertain",
+      "B": "divided",
+      "C": "complete agreement",
+      "D": "partial"
+    },
+    "correct_answer": "C",
+    "explanation": "'Unanimous' indicates a state where everyone involved is in complete, collective agreement without dissent."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Critical Thinking and Logic",
+    "question": "A writer presents a general principle and applies it to a specific case. This reasoning is ___.",
+    "options": {
+      "A": "interrogative",
+      "B": "deductive",
+      "C": "connotative",
+      "D": "descriptive"
+    },
+    "correct_answer": "B",
+    "explanation": "Deductive reasoning works from a broad, general rule or premise down to a specific, logical conclusion."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Sentence Structure and Syntax",
+    "question": "Choose the option that rearranges the sentence correctly: 'After the lecture ended, eagerly the students questions asked the professor many.'",
+    "options": {
+      "A": "The professor asked eagerly the students many questions after ended the lecture.",
+      "B": "Eagerly after the lecture ended asked the students the professor many questions.",
+      "C": "After eagerly the lecture ended the professor asked many students questions.",
+      "D": "The students eagerly asked the professor many questions after the lecture ended."
+    },
+    "correct_answer": "D",
+    "explanation": "Option D follows a logically coherent syntactic order, placing the subject, adverb, verb, and objects in a clear temporal sequence."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Letter Writing",
+    "question": "In a formal letter, the body is important because it ___.",
+    "options": {
+      "A": "replaces the address",
+      "B": "shortens the date",
+      "C": "carries the main message",
+      "D": "decorates the page"
+    },
+    "correct_answer": "C",
+    "explanation": "The body of a letter serves as its central core, holding the essential message, purpose, and detailed points of the communication."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph on online learning and classroom learning focuses on unreliable internet versus face-to-face interaction. This is mainly ___.",
+    "options": {
+      "A": "summary",
+      "B": "chronology",
+      "C": "repetition",
+      "D": "contrast"
+    },
+    "correct_answer": "D",
+    "explanation": "Highlighting distinct differences, such as connection issues versus in-person interaction, relies on contrast to build the paragraph."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Letter Writing",
+    "question": "A job application letter uses slang, jokes, and casual abbreviations. The main problem is ___.",
+    "options": {
+      "A": "wrong paragraph length",
+      "B": "weak spelling only",
+      "C": "excessive chronology",
+      "D": "poor tone"
+    },
+    "correct_answer": "D",
+    "explanation": "Professional letters require a formal register. Mixing in slang and jokes results in an inappropriate, poor tone for corporate environments."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "A student’s draft has ideas, but many spelling and punctuation errors. These should be handled mainly during ___.",
+    "options": {
+      "A": "topic selection",
+      "B": "brainstorming",
+      "C": "editing",
+      "D": "pre-writing"
+    },
+    "correct_answer": "C",
+    "explanation": "Mechanical problems like spelling mistakes, grammar errors, and incorrect punctuation are addressed during the editing and proofreading phase."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph comparing online learning and classroom learning focuses on their shared flexibility. This is mainly ___.",
+    "options": {
+      "A": "definition",
+      "B": "narration",
+      "C": "contrast",
+      "D": "comparison"
+    },
+    "correct_answer": "D",
+    "explanation": "Focusing on shared attributes or similarities between two distinct entities means developing the text through comparison."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "A writer uses technical vocabulary for a general audience without explanation. The likely effect is ___.",
+    "options": {
+      "A": "stronger unity",
+      "B": "better spelling",
+      "C": "reader confusion",
+      "D": "clearer communication"
+    },
+    "correct_answer": "C",
+    "explanation": "Dropping specialized terms (jargon) into a text without defining them confuses a general audience who lacks background knowledge on the topic."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "A student wants to argue that school uniforms should remain compulsory. The most suitable essay type is ___.",
+    "options": {
+      "A": "narrative",
+      "B": "personal diary",
+      "C": "descriptive",
+      "D": "argumentative"
+    },
+    "correct_answer": "D",
+    "explanation": "Taking a firm stance on a debatable policy issue and supporting it with evidence requires an argumentative essay structure."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "Argumentative writing differs from persuasive writing because argumentative writing relies more heavily on ____.",
+    "options": {
+      "A": "emotional appeal",
+      "B": "personal memories",
+      "C": "facts and logic",
+      "D": "humour and suspense"
+    },
+    "correct_answer": "C",
+    "explanation": "While persuasive writing uses emotional hooks, argumentative writing stands on objective proof, verified facts, and logical deductions."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "A thesis statement is most useful because it ___.",
+    "options": {
+      "A": "announces the writer’s central position",
+      "B": "replaces the conclusion",
+      "C": "lists punctuation rules",
+      "D": "hides the essay’s purpose"
+    },
+    "correct_answer": "A",
+    "explanation": "A thesis statement acts as the foundation of an essay by stating the author's primary argument or central perspective right from the start."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "Choose the option that best conveys the meaning of the underlined portion: Her explanation was overly elaborate, making it difficult for others to follow.",
+    "options": {
+      "A": "unclear due to silence",
+      "B": "too detailed and complicated",
+      "C": "simple and effective",
+      "D": "brief and direct"
+    },
+    "correct_answer": "B",
+    "explanation": "'Elaborate' indicates that something is highly intricate, deeply detailed, or complex, making it tricky to process easily."
+  },
+
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "A writer wants readers to support a charity by appealing to compassion and reason. This is closest to ___.",
+    "options": {
+      "A": "spatial description",
+      "B": "classification writing",
+      "C": "persuasive writing",
+      "D": "proofreading"
+    },
+    "correct_answer": "C",
+    "explanation": "Blending logical rationale with emotional appeals to motivate an audience to act or change their view fits persuasive writing."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "A writer chooses technical terms while addressing medicine specialists. This choice is acceptable because ____.",
+    "options": {
+      "A": "Simple language is forbidden",
+      "B": "grammar no longer matters",
+      "C": "jargon is always required",
+      "D": "the audience can understand the terms"
+    },
+    "correct_answer": "D",
+    "explanation": "Using technical jargon is perfectly appropriate when your specific target audience possesses the professional training to understand those terms."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Structure",
+    "question": "The sentence that introduces the controlling idea of a paragraph is the ___.",
+    "options": {
+      "A": "closing sentence",
+      "B": "salutation",
+      "C": "dependent clause",
+      "D": "topic sentence"
+    },
+    "correct_answer": "D",
+    "explanation": "The topic sentence sets the core focus, presenting the main idea and parameter constraints for the rest of the paragraph."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "Choose the option that best conveys the meaning of the underlined word: The speaker’s argument was flawed, which weakened its impact.",
+    "options": {
+      "A": "perfect",
+      "B": "defective",
+      "C": "lengthy",
+      "D": "convincing"
+    },
+    "correct_answer": "B",
+    "explanation": "A 'flawed' argument contains logic gaps, errors, or inaccuracies, meaning it is fundamentally defective."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph divides leaders into democratic, authoritarian, and laissez-faire types. This is development by ___.",
+    "options": {
+      "A": "dialogue",
+      "B": "narration",
+      "C": "punctuation",
+      "D": "classification"
+    },
+    "correct_answer": "D",
+    "explanation": "Breaking a broad topic down into clear, distinct sub-groups based on shared traits is known as paragraph development by classification."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A student writes, 'The policy failed because no funds were released.' This shows ____.",
+    "options": {
+      "A": "cause and effect",
+      "B": "comparison",
+      "C": "definition",
+      "D": "classification"
+    },
+    "correct_answer": "A",
+    "explanation": "Linking a result (policy failure) directly to its source trigger (withheld funds) establishes a clear cause-and-effect relationship."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Structure",
+    "question": "A paragraph begins: 'Poor drainage causes flooding in many urban areas.' The remaining sentences discuss football, cinema, and mobile phones. The paragraph lacks ___.",
+    "options": {
+      "A": "pronunciation",
+      "B": "capitalisation",
+      "C": "tense",
+      "D": "unity"
+    },
+    "correct_answer": "D",
+    "explanation": "Paragraph unity demands that every sentence supports the central topic sentence. Introducing completely random subjects breaks this unity."
+  },
+
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Structure",
+    "question": "A writer produces a grammatically correct essay, but every paragraph introduces an unrelated idea. The main weakness is ___.",
+    "options": {
+      "A": "diction",
+      "B": "unity",
+      "C": "punctuation",
+      "D": "spelling"
+    },
+    "correct_answer": "B",
+    "explanation": "An essay lacks unity when its constituent blocks jump around into unrelated tangents instead of supporting a single theme."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Critical Thinking and Logic",
+    "question": "A speaker says, 'Every student who uses social media fails examinations.' This weakens the argument because it is ___.",
+    "options": {
+      "A": "deductively sound",
+      "B": "overgeneralised",
+      "C": "strongly evidenced",
+      "D": "carefully qualified"
+    },
+    "correct_answer": "B",
+    "explanation": "Claiming an absolute outcome for an entire group without accounting for variations creates a logical fallacy known as an overgeneralization."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph about market sanitation gives three examples of dirty stalls, blocked gutters, and poor waste disposal. The paragraph is developed mainly by ____.",
+    "options": {
+      "A": "contrast",
+      "B": "examples",
+      "C": "classification",
+      "D": "definition"
+    },
+    "correct_answer": "B",
+    "explanation": "Listing specific real-world instances (stalls, gutters, waste) to support a core point means expanding the paragraph through examples or illustration."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "During revision, a writer notices that the introduction promises to discuss unemployment, but the body focuses mostly on fashion. The best action is to _____.",
+    "options": {
+      "A": "remove all examples",
+      "B": "change the handwriting style",
+      "C": "add more adjectives",
+      "D": "realign the body with the thesis"
+    },
+    "correct_answer": "D",
+    "explanation": "To fix a structural disconnect, you must realign the body text with your core thesis statement so the content delivers on what the introduction promises."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A paragraph explains how to prepare a dish by arranging the steps from washing ingredients to serving. The organising pattern is ___.",
+    "options": {
+      "A": "time sequence",
+      "B": "definition",
+      "C": "contrast",
+      "D": "spatial order"
+    },
+    "correct_answer": "A",
+    "explanation": "Organizing steps based on when they happen in real time uses a time sequence or chronological arrangement pattern."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "For classification to be effective, categories should be ___.",
+    "options": {
+      "A": "random and humorous",
+      "B": "overlapping and vague",
+      "C": "complete and distinct",
+      "D": "emotional and brief"
+    },
+    "correct_answer": "C",
+    "explanation": "Proper classification requires sorting items into complete, distinct, and mutually exclusive categories to prevent confusion."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "A narrative essay becomes confusing because a childhood scene suddenly appears between two present-day events without any signal. The writer needs better use of ____.",
+    "options": {
+      "A": "dictionary meaning",
+      "B": "flashback control",
+      "C": "syllable division",
+      "D": "formal salutation"
+    },
+    "correct_answer": "B",
+    "explanation": "Shifting back in time requires clear narrative signals and smooth flashback control so readers don't lose track of the timeline."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A writer defines 'democracy' before discussing types of democratic systems. The definition helps because it ___.",
+    "options": {
+      "A": "replaces all supporting paragraphs",
+      "B": "creates a shared basis for discussion",
+      "C": "delays the argument unnecessarily",
+      "D": "removes the need for examples"
+    },
+    "correct_answer": "B",
+    "explanation": "Defining key abstract terms early on ensures writer and reader share a common vocabulary baseline before diving into deeper arguments."
+  },{
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "A student describes a festival by mentioning the smell of grilled fish, the drumbeats, bright costumes, and the rough ground underfoot. This is mainly ____.",
+    "options": {
+      "A": "argumentative writing",
+      "B": "technical writing",
+      "C": "expository writing",
+      "D": "descriptive writing"
+    },
+    "correct_answer": "D",
+    "explanation": "Using rich sensory details (sights, sounds, smells, and textures) to paint a vivid picture of a scene is the hallmark of descriptive writing."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Vocabulary and Diction",
+    "question": "Choose the option that best conveys the meaning of the underlined portion: The manager’s response to the crisis was measured and pragmatic, ensuring stability in the organisation.",
+    "options": {
+      "A": "emotional and impulsive",
+      "B": "harsh and critical",
+      "C": "cautious and practical",
+      "D": "indifferent and careless"
+    },
+    "correct_answer": "C",
+    "explanation": "'Pragmatic' means addressing problems with sensible, realistic, and practical solutions rather than relying on theory or emotion."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Structure",
+    "question": "Which sentence best shows coherence?",
+    "options": {
+      "A": "The road was flooded, honesty, calendar, pavement.",
+      "B": "The road was flooded; therefore, motorists were advised to use another route.",
+      "C": "The road was flooded. Blue shirts are popular in June.",
+      "D": "The road was flooded. Meanwhile, the committee approved the budget."
+    },
+    "correct_answer": "B",
+    "explanation": "Coherence means ideas connect logically. Using the transition 'therefore' establishes a clear, sensible link between the flood and its consequence."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Types of Essays",
+    "question": "In argumentative writing, a claim becomes stronger when supported with ____.",
+    "options": {
+      "A": "rumours and insults",
+      "B": "personal attacks",
+      "C": "evidence and reasoning",
+      "D": "exaggeration and fear"
+    },
+    "correct_answer": "C",
+    "explanation": "Valid, objective arguments rely on solid proof, data, and sound analytical reasoning rather than emotional manipulation or logical fallacies."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Paragraph Development",
+    "question": "A writer describes a classroom from the door to the windows and then to the teacher’s table. This arrangement uses ____.",
+    "options": {
+      "A": "analogy",
+      "B": "spatial order",
+      "C": "cause and effect",
+      "D": "persuasion"
+    },
+    "correct_answer": "B",
+    "explanation": "Arranging descriptive details based on physical position or physical location layout means organizing by spatial order."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "The Writing Process",
+    "question": "A student begins an essay by listing scattered ideas, grouping them, and deciding which points should come first. This activity is best described as ____.",
+    "options": {
+      "A": "proofreading",
+      "B": "outlining",
+      "C": "summarising",
+      "D": "publishing"
+    },
+    "correct_answer": "B",
+    "explanation": "Sorting ideas, clustering related notes, and arranging them into a structural roadmap is the definition of outlining."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Sentence Structure and Syntax",
+    "question": "Choose the option that rearranges the sentence correctly: 'Across the river, under the bright evening sky, quietly the fishermen their nets cast.'",
+    "options": {
+      "A": "Quietly across the river cast their nets the fishermen under the bright evening sky.",
+      "B": "The fishermen quietly cast their nets across the river under the bright evening sky.",
+      "C": "Under the sky the fishermen across the river quietly their nets cast bright evening.",
+      "D": "Across quietly the fishermen cast their nets the river under the bright sky evening."
+    },
+    "correct_answer": "B",
+    "explanation": "Option B uses standard, natural English word order: Subject (The fishermen) + Adverb/Verb (quietly cast) + Object (their nets) + Prepositional modifiers."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Introduction to Communication",
+    "question": "What is the primary focus of effective communication?",
+    "options": {
+      "A": "Using large and sophisticated vocabulary words",
+      "B": "Expressing oneself effectively and conveying meaning accurately",
+      "C": "Perfect adherence to complex stylistic conventions",
+      "D": "Strictly limiting speech to professional environments"
+    },
+    "correct_answer": "B",
+    "explanation": "Communication is primarily about expressing ideas well and ensuring meaning is accurately conveyed rather than using fancy words or big grammar."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Importance of Communication Skills",
+    "question": "In which fields or contexts is effective communication deemed crucial?",
+    "options": {
+      "A": "Only during English language examinations",
+      "B": "Exclusively in formal corporate boardrooms",
+      "C": "English class, career/jobs, personal business, and other courses",
+      "D": "Mainly in written programming languages"
+    },
+    "correct_answer": "C",
+    "explanation": "Effective communication skills are crucial across academic studies, job/career environments, personal business, and everyday life."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Grammar and Cognitive Skills",
+    "question": "Paying close attention to grammar helps boost which cognitive abilities?",
+    "options": {
+      "A": "Rote memorization and auditory recall",
+      "B": "Critical thinking and problem-solving skills",
+      "C": "Visual mapping and spatial intelligence",
+      "D": "Speed-reading and shorthand writing"
+    },
+    "correct_answer": "B",
+    "explanation": "Paying attention to grammatical structure and sentence organization helps sharpen critical thinking and problem-solving skills."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Semiotics",
+    "question": "What is the study of signs and symbols in daily human interactions called?",
+    "options": {
+      "A": "Lexicography",
+      "B": "Semiotics",
+      "C": "Phonology",
+      "D": "Orthography"
+    },
+    "correct_answer": "B",
+    "explanation": "Beyond words, human communication incorporates non-verbal signs and symbols, which constitutes the field of semiotics."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Word Meaning and Associations",
+    "question": "To communicate effectively, a speaker or writer must be mindful of what aspects of words beyond literal definitions?",
+    "options": {
+      "A": "Their evolutionary roots and etymology",
+      "B": "Broader cultural and emotional associations",
+      "C": "The number of syllables they contain",
+      "D": "Their alphabetic layout and phonetic symbols"
+    },
+    "correct_answer": "B",
+    "explanation": "Effective communication requires being mindful of connotative meanings, including broader cultural and emotional associations of words."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Grammatical Concord",
+    "question": "What is defined as the set of rules governing grammatical agreement between different elements in a sentence to ensure linguistic harmony?",
+    "options": {
+      "A": "Syntax",
+      "B": "Concord",
+      "C": "Prosody",
+      "D": "Semantics"
+    },
+    "correct_answer": "B",
+    "explanation": "Concord is defined as the system of rules governing agreement between sentence components (e.g., subject-verb agreement) to maintain proper linguistic harmony."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Rule of Proximity Agreement",
+    "question": "What does the 'Rule of Proximity Agreement' require in sentences containing multiple elements?",
+    "options": {
+      "A": "The verb must always agree with the first subject mentioned.",
+      "B": "The verb or noun must align with the closest subject or element.",
+      "C": "The subject must always change to a plural form.",
+      "D": "The sentence must omit conjunctions completely."
+    },
+    "correct_answer": "B",
+    "explanation": "The Rule of Proximity Agreement dictates that when a sentence features compound subjects connected by certain conjunctions, the verb agrees with whichever subject is physically nearest to it."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Writing Strategies",
+    "question": "A parallel is often drawn between the diverse landscape of writing strategies and what external field?",
+    "options": {
+      "A": "The world of programming languages",
+      "B": "Architectural design principles",
+      "C": "Musical orchestration and notes",
+      "D": "Legal litigations and briefs"
+    },
+    "correct_answer": "A",
+    "explanation": "Writing strategies can be conceptualized by drawing parallels between structured rules in computer programming languages and formal principles of communication."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Acquired Skills",
+    "question": "Which set of competencies is NOT specifically considered a core language/communication skill?",
+    "options": {
+      "A": "Active Listening, Effective Speaking, and Persuasive Writing",
+      "B": "Semiotic Awareness, Concord Proficiency, and Cultural Sensitivity",
+      "C": "Advanced Statistical Computing, Financial Auditing, and Graphic Design",
+      "D": "Clarity in Expression, Conflict Resolution, and Conjunction Mastery"
+    },
+    "correct_answer": "C",
+    "explanation": "Advanced statistical computing, financial auditing, and graphic design are specialized technical/business competencies rather than core general communication skills."
+  },
+  [
+  {
+    "course_code": "GST 122",
+    "topic": "Writing Process Phases",
+    "question": "Which two stages serve as integral phases of the overarching writing process surrounding drafting?",
+    "options": {
+      "A": "Drafting and publishing",
+      "B": "Pre-writing and post-writing",
+      "C": "Summarizing and reporting",
+      "D": "Brainstorming and lecturing"
+    },
+    "correct_answer": "B",
+    "explanation": "The overall writing process is typically divided into pre-writing (preparation), drafting (execution), and post-writing (refinement)."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Pre-writing Phase",
+    "question": "What foundational activities are explicitly included in the pre-writing phase?",
+    "options": {
+      "A": "Editing, proofreading, and final publishing",
+      "B": "Researching, brainstorming, and outlining ideas",
+      "C": "Oral delivery, vocal control, and physical gestures",
+      "D": "Deductive logic and counterargument mapping"
+    },
+    "correct_answer": "B",
+    "explanation": "Pre-writing involves researching, brainstorming, and outlining ideas, laying the foundation for the writing process."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Post-writing Phase",
+    "question": "What essential steps are highlighted as part of post-writing activities to refine and polish written work?",
+    "options": {
+      "A": "Brainstorming and outlining",
+      "B": "Editing and proofreading",
+      "C": "Deduction and central thesis development",
+      "D": "Public delivery and audience engagement"
+    },
+    "correct_answer": "B",
+    "explanation": "Post-writing activities include editing and proofreading, essential steps to refine and polish the written piece for clarity and correctness."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Summary Writing",
+    "question": "What is a core requirement of summary writing?",
+    "options": {
+      "A": "Expanding the text by adding personal opinions and extra context clues",
+      "B": "Creating a concise, condensed version of a longer text using your own words",
+      "C": "Translating spoken emphasis and sentence stress into formal text",
+      "D": "Following a rigid structure with a central thesis and counterarguments"
+    },
+    "correct_answer": "B",
+    "explanation": "Summary writing is a concise and condensed version of a longer text. It requires using your own words to capture key points and main ideas."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Summary Writing and Vocabulary",
+    "question": "What linguistic tool involves thoughtful selection to maintain accuracy in summary writing?",
+    "options": {
+      "A": "Antonyms",
+      "B": "Synonyms",
+      "C": "Homophones",
+      "D": "Acronyms"
+    },
+    "correct_answer": "B",
+    "explanation": "Summary writing requires thoughtful selection of synonyms to capture original meanings concisely while maintaining accuracy."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Letter Writing",
+    "question": "How is letter writing broadly defined in communication studies?",
+    "options": {
+      "A": "A structured report that conveys statistical data findings",
+      "B": "The most common form of written communication for personal and professional purposes",
+      "C": "A phase of writing limited solely to pre-writing brainstorming",
+      "D": "A passive, involuntary linguistic process"
+    },
+    "correct_answer": "B",
+    "explanation": "Letter writing remains one of the most common and versatile forms of written communication for personal and professional interaction."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Reading Skills",
+    "question": "Active reading directly emphasizes sharpening which specific cognitive skills?",
+    "options": {
+      "A": "Vocal variety and physical gestures",
+      "B": "Critical thinking and analytical abilities",
+      "C": "Word-level phonetic stress memory",
+      "D": "Brainstorming and structural formatting"
+    },
+    "correct_answer": "B",
+    "explanation": "Engaging in purposeful reading sharpens critical thinking and analytical abilities by forcing the reader to evaluate arguments and context."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Critical Thinking",
+    "question": "Why is critical thinking considered vital in academic and professional communication?",
+    "options": {
+      "A": "For compiling letters to professional organizations",
+      "B": "For evaluating information critically and forming well-informed perspectives",
+      "C": "For inventing new slang words through compound mixing",
+      "D": "For altering stress syllables within complex statements"
+    },
+    "correct_answer": "B",
+    "explanation": "Critical thinking is vital for evaluating information objectively, identifying logic gaps, and forming well-informed perspectives."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Word Formation",
+    "question": "To what creative art is the process of word formation often compared in linguistic discussions?",
+    "options": {
+      "A": "Programming language compilation",
+      "B": "Culinary experimentation",
+      "C": "Public architectural mapping",
+      "D": "Theatrical play delivery"
+    },
+    "correct_answer": "B",
+    "explanation": "Word formation processes are akin to culinary experimentation because both involve combining raw elements (morphemes/ingredients) to create something new."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Acquired Skills",
+    "question": "Which set of competencies represents advanced mastery in the post-writing phase?",
+    "options": {
+      "A": "Conjunction Mastery",
+      "B": "Semiotic Awareness",
+      "C": "Editing Expertise and Proofreading Mastery",
+      "D": "Stage Presence and Vocal Control"
+    },
+    "correct_answer": "C",
+    "explanation": "Editing expertise and proofreading mastery are the primary technical competencies acquired for refining written drafts."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Sentence Stress",
+    "question": "What major concept influences how meaning is interpreted in spoken communication?",
+    "options": {
+      "A": "The development of clear written reports",
+      "B": "Sentence stress and how subtle variations in emphasis can entirely reshape meaning",
+      "C": "The chronological evolution of standard English letters",
+      "D": "Differentiating passive hearing from structural outlining"
+    },
+    "correct_answer": "B",
+    "explanation": "Sentence stress involves placing emphasis on specific words or syllables, which can shift the entire implied meaning of a spoken statement."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Linguistic Stress Definition",
+    "question": "How is stress defined in linguistics?",
+    "options": {
+      "A": "The psychological anxiety associated with speaking publicly",
+      "B": "Emphasis laid on a particular syllable or segment within a word, phrase, or sentence",
+      "C": "The formatting strictness applied during professional proposal writing",
+      "D": "The rate of speech transmission during active listening exercises"
+    },
+    "correct_answer": "B",
+    "explanation": "Linguistic stress refers to the relative emphasis or prominence given to a certain syllable or word in speech."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Public Speaking",
+    "question": "What is the standard definition of public speaking?",
+    "options": {
+      "A": "Writing structured documents to convey facts to a remote corporate division",
+      "B": "The act of delivering a speech or presentation to a live audience, effectively conveying information, ideas, or opinions",
+      "C": "Reading texts quietly to analyze explicit and implicit meanings",
+      "D": "Providing written feedback on a marketing product launch"
+    },
+    "correct_answer": "B",
+    "explanation": "Public speaking is defined as delivering a oral presentation or speech directly to an audience to convey information, ideas, or arguments."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Public Speaking Goals",
+    "question": "According to communication theory, what are the primary goals/intents of delivering a speech?",
+    "options": {
+      "A": "Proofreading, editing, and lexical brainstorming",
+      "B": "Persuasion, information, or argumentation",
+      "C": "Proximity verification and concord mapping",
+      "D": "Creating synonyms and compound word experiments"
+    },
+    "correct_answer": "B",
+    "explanation": "Speeches are generally categorized by their primary objectives: to persuade, to inform, or to argue a specific stance."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Hearing vs Listening",
+    "question": "How is the process of 'hearing' distinguished from 'listening'?",
+    "options": {
+      "A": "Hearing is active and voluntary, while listening is completely involuntary.",
+      "B": "Hearing is passive and involuntary, while listening is an active and voluntary process.",
+      "C": "Hearing focuses on written text, while listening focuses on spoken symbols.",
+      "D": "Hearing requires a central thesis, whereas listening is unstructured."
+    },
+    "correct_answer": "B",
+    "explanation": "Hearing is the physical, passive perception of sound, whereas listening requires active mental focus, interpretation, and understanding."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Effective Listening Benefits",
+    "question": "Why is effective listening considered crucial for academic success?",
+    "options": {
+      "A": "It removes the requirement of writing formal business proposals.",
+      "B": "It aids in understanding course content, following instructions, and grasping complex concepts.",
+      "C": "It directly increases the number of syllables a student can articulate per second.",
+      "D": "It provides a method to completely skip post-writing proofreading."
+    },
+    "correct_answer": "B",
+    "explanation": "Active listening ensures accurate reception of instruction, aids comprehension of complex ideas, and prevents misunderstandings."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Presentation Structure",
+    "question": "What structural setup is recommended for creating a logical and persuasive oral presentation?",
+    "options": {
+      "A": "Avoid a central thesis and jump straight into random synonyms.",
+      "B": "Establish a central thesis and structure with an introduction, main points, supporting evidence, counterarguments, and a compelling conclusion.",
+      "C": "Begin with a post-writing phase and conclude with pre-writing brainstorming.",
+      "D": "Use only a series of physical gestures without any explicit verbal components."
+    },
+    "correct_answer": "B",
+    "explanation": "A structured speech requires a strong central thesis followed logically by an introduction, main body points, supporting proof, handling counterarguments, and a conclusion."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Logical Reasoning",
+    "question": "What type of reasoning is explicitly highlighted for drawing specific conclusions from general premises?",
+    "options": {
+      "A": "Inductive reasoning",
+      "B": "Deductive reasoning",
+      "C": "Semiotic reasoning",
+      "D": "Concordial reasoning"
+    },
+    "correct_answer": "B",
+    "explanation": "Deductive reasoning works top-down, applying a general principle/premise to arrive at a specific logical conclusion."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Core Elements of Communication",
+    "question": "Successful human communication relies on the interconnected dance of which core skills?",
+    "options": {
+      "A": "Brainstorming, outlining, editing, and publishing",
+      "B": "Listening, speaking, reading, and writing",
+      "C": "Diction, repetition, gestures, and stage presence",
+      "D": "Semiotics, concord, proximity, and syntax"
+    },
+    "correct_answer": "B",
+    "explanation": "The four foundational pillars of language learning and communication are listening, speaking, reading, and writing."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Writing Impact on Outcomes",
+    "question": "Strong writing skills heavily influence which real-world outcomes?",
+    "options": {
+      "A": "Vocal control limits and ear development",
+      "B": "Professional outcomes and informed decision-making",
+      "C": "Syllabic stress structures and sentence cadence",
+      "D": "The creation of semiotic codes and signs"
+    },
+    "correct_answer": "B",
+    "explanation": "Mastery of written expression directly impacts career trajectory, corporate clarity, professional success, and informed decision-making."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Semiotics vs Words",
+    "question": "What does semiotic study contribute to our understanding of human communication beyond spoken words?",
+    "options": {
+      "A": "It cautions against using visual cues completely.",
+      "B": "It explores how signs and symbols convey non-verbal meaning.",
+      "C": "It limits communication to digital computer codes.",
+      "D": "It depends strictly on dictionary definitions."
+    },
+    "correct_answer": "B",
+    "explanation": "Semiotics is the study of sign systems, symbols, and non-verbal icons that communicate meaning within social contexts."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Linguistic Harmony",
+    "question": "Linguistic harmony within standard English sentences is primarily achieved through which set of grammatical rules?",
+    "options": {
+      "A": "Word formation processes",
+      "B": "Concord",
+      "C": "Deductive premises",
+      "D": "Sentence stress variations"
+    },
+    "correct_answer": "B",
+    "explanation": "Concord (grammatical agreement) ensures that sentence elements match properly in number, person, or gender, preserving linguistic balance."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Writing Strategies Parallel",
+    "question": "When navigating diverse writing strategies, why do educators often draw a parallel to computer programming languages?",
+    "options": {
+      "A": "To explain computer hardware layouts",
+      "B": "To illustrate structured approaches to effective communication",
+      "C": "To argue that computers communicate better than humans",
+      "D": "To change the syllabus to information technology basics"
+    },
+    "correct_answer": "B",
+    "explanation": "Both writing strategies and programming rely on strict structural rules, logic, and precise syntax to convey an intended message effectively."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Pre-writing and Outlining",
+    "question": "Which writing stage serves as the absolute foundation for organizing your thoughts before drafting text?",
+    "options": {
+      "A": "Post-writing editing",
+      "B": "Pre-writing",
+      "C": "Proofreading",
+      "D": "Vocal delivery"
+    },
+    "correct_answer": "B",
+    "explanation": "Pre-writing activities (brainstorming, clustering, outlining) serve as the essential planning stage for structuring raw ideas."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Polishing Text",
+    "question": "What is the primary function of editing and proofreading during post-writing?",
+    "options": {
+      "A": "To create new compound words from roots",
+      "B": "To change a spoken presentation's body language profile",
+      "C": "To refine and polish the written piece for clarity and correctness",
+      "D": "To add subjective opinions to summaries"
+    },
+    "correct_answer": "C",
+    "explanation": "Editing addresses structure, flow, and clarity, while proofreading fixes technical mechanics (grammar, spelling, punctuation) to polish the work."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Professional Written Formats",
+    "question": "Which format should be used when an organization requires a structured document detailing specific analytical findings on a corporate topic?",
+    "options": {
+      "A": "Personal Letter",
+      "B": "Report",
+      "C": "Word Formation Experiment",
+      "D": "Sentence Stress Map"
+    },
+    "correct_answer": "B",
+    "explanation": "A report is an objective, structured document designed to convey analyzed data, findings, and recommendations on a focused topic."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Linguistic Culinary Analogy",
+    "question": "Why are word formation processes often described as 'akin to culinary experiments'?",
+    "options": {
+      "A": "Because it deals exclusively with food-related vocabulary.",
+      "B": "Because it combines basic linguistic elements to create entirely new words.",
+      "C": "Because it is limited to the leisure industry.",
+      "D": "Because it is passive and involuntary."
+    },
+    "correct_answer": "B",
+    "explanation": "Word formation (like compounding, blending, or derivation) involves taking discrete morphemic parts and mixing them to yield a distinct new lexical item."
+  },
+  {
+    "course_code": "GST 122",
+    "topic": "Spoken Message Meaning Shift",
+    "question": "What is the transformative power of linguistic emphasis at the word or sentence level?",
+    "options": {
+      "A": "It alters the spelling of written words.",
+      "B": "It can entirely reshape the meaning of a sentence in spoken communication.",
+      "C": "It removes the need for active listening processes.",
+      "D": "It changes a report into a letter format."
+    },
+    "correct_answer": "B",
+    "explanation": "Varying stress on different words in a spoken sentence alters the pragmatics and underlying intent of the utterance without changing the words themselves."
   }
 ]
+]
+  
