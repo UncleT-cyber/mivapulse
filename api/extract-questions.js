@@ -224,8 +224,13 @@ ${inputWindow}
     console.error('Groq AI Extraction Error:', error);
     const status = error?.status || error?.error?.status;
     if (status === 413 || status === 429) {
+      const detail = String(error?.message || error?.error?.message || '');
+      const dailyExhausted = /day|daily/i.test(detail) && !/minute/i.test(detail);
       return res.status(429).json({
-        error: 'Nexus AI is temporarily rate-limited. Please wait about a minute and try again, or try a shorter document.'
+        dailyExhausted,
+        error: dailyExhausted
+          ? 'Nexus AI has used up its free daily quota from heavy use today. The limit resets at midnight Pacific Time — please try again tomorrow. (A Groq Dev key removes all these limits.)'
+          : 'Nexus AI is cooling down — the free quota refills every minute. Please wait about a minute and try again.'
       });
     }
     return res.status(500).json({ 
