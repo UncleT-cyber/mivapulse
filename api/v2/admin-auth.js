@@ -1,18 +1,12 @@
 /* ==========================================================================
-   MIVAPULSE v2 - ADMIN AUTH API (Vercel Serverless)
+   MIVAPULSE v2 - ADMIN AUTH API (Vercel Serverless Compatible)
    ========================================================================== */
 
 import crypto from 'crypto';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const USERS_PATH = path.join(__dirname, '..', '..', '..', 'data', 'admin_users.json');
 const JWT_SECRET = process.env.MIVAPULSE_JWT_SECRET || 'mivapulse-dev-secret-change-in-production';
 
+// In-Memory fallback store for Vercel Serverless (Read-only filesystem)
 const DEFAULT_USERS = [{
     id: 'admin_001',
     username: 'admin',
@@ -22,22 +16,15 @@ const DEFAULT_USERS = [{
     createdAt: new Date().toISOString()
 }];
 
+// Dynamic user memory store to prevent fs read/write crashes on serverless
+let inMemoryUsers = [...DEFAULT_USERS];
+
 function loadUsers() {
-    try {
-        if (!fs.existsSync(USERS_PATH)) {
-            const dir = path.dirname(USERS_PATH);
-            if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-            fs.writeFileSync(USERS_PATH, JSON.stringify(DEFAULT_USERS, null, 2));
-        }
-        return JSON.parse(fs.readFileSync(USERS_PATH, 'utf8'));
-    } catch (e) {
-        console.error('loadUsers error:', e);
-        return DEFAULT_USERS;
-    }
+    return inMemoryUsers;
 }
 
-function saveUsers(u) {
-    fs.writeFileSync(USERS_PATH, JSON.stringify(u, null, 2));
+function saveUsers(users) {
+    inMemoryUsers = users;
 }
 
 function hashPw(pw) {
@@ -81,7 +68,7 @@ export default async function handler(req, res) {
         return res.status(200).end();
     }
 
-    // Parse URL to remove query parameters
+    // Parse URL to remove query parameters safely
     const urlObj = new URL(req.url, 'http://localhost');
     const urlPath = urlObj.pathname;
     const body = req.body || {};
