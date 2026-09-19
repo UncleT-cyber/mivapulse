@@ -104,8 +104,8 @@ ${inputWindow}
 
     // Model cascade: high-quality 70B first; fall back to 8B instant when the
     // free-tier token-per-minute limit rejects the request (413/429).
-    const PRIMARY_MODEL = 'llama-3.3-70b-versatile';
-    const FALLBACK_MODEL = 'llama-3.1-8b-instant';
+    const PRIMARY_MODEL = 'openai/gpt-oss-120b';
+    const FALLBACK_MODEL = 'openai/gpt-oss-20b';
     // Generation mode (MODE B) needs room for up to 40 questions (~160 tokens
     // each). Groq counts max_tokens against the 12k TPM estimate, so keep
     // prompt + input + output under the limit: 6144 fits with ~3.4k input.
@@ -133,7 +133,7 @@ ${inputWindow}
       chatCompletion = await callGroq(PRIMARY_MODEL);
     } catch (rateErr) {
       const status = rateErr?.status || rateErr?.error?.status;
-      if (status === 413 || status === 429) {
+      if (status === 404 || status === 413 || status === 429) {
         console.warn('Groq rate limit on primary model, falling back to', FALLBACK_MODEL);
         chatCompletion = await callGroq(FALLBACK_MODEL);
       } else {
