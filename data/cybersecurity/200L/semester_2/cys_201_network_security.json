@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Explain the concept of the CIA Triad in cybersecurity. Provide real-world examples of how each component (Confidentiality, Integrity, Availability) is applied in organizational security policies.",
+    "options": {},
+    "correct_answer": "",
+    "explanation": "The CIA Triad is the foundation of information security. Confidentiality ensures only authorized access (e.g., encryption, access controls). Integrity ensures data accuracy and trustworthiness (e.g., checksums, digital signatures). Availability ensures systems are accessible when needed (e.g., redundancy, disaster recovery).",
+    "topic": "CIA Triad & Security Fundamentals",
+    "course_code": "CYS 201",
+    "type": "essay",
+    "key_points_expected": [
+      "Defines Confidentiality with example such as encryption or access control",
+      "Defines Integrity with example such as hashing or digital signatures",
+      "Defines Availability with example such as redundancy or failover systems",
+      "Explains how the three components work together in a security policy",
+      "Provides at least one real-world scenario for each component"
+    ]
+  },
+  {
+    "question": "Compare and contrast symmetric and asymmetric encryption. In what scenarios would you recommend each type, and what are the key trade-offs in terms of performance, key management, and security?",
+    "options": {},
+    "correct_answer": "",
+    "explanation": "Symmetric encryption (e.g., AES) uses one shared key and is fast but requires secure key distribution. Asymmetric encryption (e.g., RSA) uses a public-private key pair, solving key distribution but being slower. Hybrid approaches like TLS use both.",
+    "topic": "Cryptography & Encryption",
+    "course_code": "CYS 201",
+    "type": "essay",
+    "key_points_expected": [
+      "Explains symmetric encryption with examples (AES, DES, 3DES)",
+      "Explains asymmetric encryption with examples (RSA, ECC, Diffie-Hellman)",
+      "Compares performance differences (symmetric is faster)",
+      "Discusses key management challenges for each approach",
+      "Mentions hybrid encryption systems like TLS/SSL"
+    ]
+  },
+  {
+    "question": "What is a Distributed Denial of Service (DDoS) attack? Describe at least three different DDoS attack techniques and explain how organizations can defend against them.",
+    "options": {},
+    "correct_answer": "",
+    "explanation": "DDoS attacks overwhelm targets with traffic from multiple sources. Techniques include volumetric attacks (UDP flood), protocol attacks (SYN flood), and application layer attacks (HTTP flood). Defenses include rate limiting, CDNs, firewalls, and DDoS mitigation services.",
+    "topic": "Network Attacks & Defense",
+    "course_code": "CYS 201",
+    "type": "essay",
+    "key_points_expected": [
+      "Defines DDoS and how it differs from DoS",
+      "Describes volumetric attacks (e.g., UDP flood, DNS amplification)",
+      "Describes protocol attacks (e.g., SYN flood, Ping of Death)",
+      "Describes application layer attacks (e.g., HTTP flood, Slowloris)",
+      "Explains mitigation strategies (CDNs, rate limiting, blackholing, scrubbing centers)"
+    ]
+  },
+  {
+    "question": "Explain the principle of least privilege and its importance in cybersecurity. How would you implement this principle in a corporate network environment with 500+ employees?",
+    "options": {},
+    "correct_answer": "",
+    "explanation": "Least privilege means granting only the minimum access needed to perform a job. Implementation involves role-based access control (RBAC), regular access reviews, privilege escalation workflows, and automated provisioning/deprovisioning.",
+    "topic": "Access Control & Authorization",
+    "course_code": "CYS 201",
+    "type": "essay",
+    "key_points_expected": [
+      "Defines the principle of least privilege clearly",
+      "Explains why it reduces attack surface",
+      "Describes RBAC implementation",
+      "Mentions access review and audit processes",
+      "Discusses automated provisioning and deprovisioning tools"
+    ]
+  },
+  {
+    "question": "What is a firewall and what are the differences between packet-filtering, stateful inspection, and next-generation firewalls? Provide a use case for each type.",
+    "options": {},
+    "correct_answer": "",
+    "explanation": "Packet-filtering firewalls inspect individual packets based on rules. Stateful firewalls track connection states. Next-generation firewalls (NGFW) add deep packet inspection, intrusion prevention, and application awareness.",
+    "topic": "Firewalls & Perimeter Security",
+    "course_code": "CYS 201",
+    "type": "essay",
+    "key_points_expected": [
+      "Defines firewall and its role in network security",
+      "Explains packet-filtering firewall with use case",
+      "Explains stateful inspection firewall with use case",
+      "Explains next-generation firewall (NGFW) features",
+      "Compares the three types in terms of capability and performance overhead"
+    ]
+  }
+]

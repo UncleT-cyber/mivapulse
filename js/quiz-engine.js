@@ -207,7 +207,7 @@ function renderQuestion(state, dom, quizMode, courseCode) {
     const aiFeedbackBox = document.getElementById("aiFeedbackContainer");
     const aiFeedbackText = document.getElementById("aiFeedbackText");
     const essayInput = document.getElementById("essayResponseInput");
-    const essaySubmitBtn = document.getElementById("essaySubmitBtn");
+    const essaySubmitBtn = document.getElementById("submitEssayBtn");
 
     // Clear and hide essay components on every fresh card draw
     if (essayWorkspace) essayWorkspace.style.display = "none";
@@ -290,6 +290,9 @@ function renderQuestion(state, dom, quizMode, courseCode) {
             essaySubmitBtn.disabled = false;
             essaySubmitBtn.style.opacity = "1";
             
+            // Store current question for the global handleEssayEvaluation handler
+            window._currentEssayQuestion = cur;
+
             essaySubmitBtn.onclick = function() {
                 processEssayEvaluation(cur, state, dom);
             };
@@ -649,7 +652,7 @@ function renderTerminalView(state, dom, courseCode) {
    ========================================================================== */
 async function processEssayEvaluation(curQuestion, state, dom) {
     const essayInput = document.getElementById("essayResponseInput");
-    const essaySubmitBtn = document.getElementById("essaySubmitBtn");
+    const essaySubmitBtn = document.getElementById("submitEssayBtn");
     const aiFeedbackBox = document.getElementById("aiFeedbackContainer");
     const aiFeedbackText = document.getElementById("aiFeedbackText");
 
@@ -823,17 +826,22 @@ if (!submissionText || !submissionText.trim()) {
     document.body.appendChild(modalOverlay);
 
     try {
+        const activeQ = window._currentEssayQuestion || {};
+        const expectedCriteria = Array.isArray(activeQ.key_points_expected) 
+            ? activeQ.key_points_expected.join('; ') 
+            : (activeQ.key_points_expected || "Demonstrates coherent architectural synthesis, clear analytical formatting, and algorithmic context.");
+
         const response = await fetch('/api/evaluate-essay', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 question: questionText,
-                expectedCriteria: "Demonstrates coherent architectural synthesis, clear analytical formatting, and algorithmic context.",
+                expectedCriteria: expectedCriteria,
                 submission: submissionText
             })
         });
 
-        if (!response.ok) throw new Error("Ollama connection timeout.");
+        if (!response.ok) throw new Error("AI evaluation service unavailable.");
         const data = await response.json();
 
         // 🌟 SAVE REAL REAL AI EVALUATION DIRECTLY TO ENTRY FOR THE TERMINAL DISPLAY

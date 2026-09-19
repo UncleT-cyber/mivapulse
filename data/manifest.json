@@ -113,7 +113,13 @@
                 {
                   "id": "semester_2",
                   "name": "2nd Semester",
-                  "courses": []
+                  "courses": [
+                    {
+                      "code": "CYS 201",
+                      "title": "Network Security",
+                      "file": "cybersecurity/200L/semester_2/cys_201_network_security.json"
+                    }
+                  ]
                 }
               ]
             },
