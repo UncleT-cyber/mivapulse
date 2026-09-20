@@ -10,15 +10,24 @@ An AI-assisted examination preparation platform for university students. MivaPul
 
 ## Screenshots
 
-<div align="center">
-  <img src="screenshots/dashboard.png" alt="Dashboard" width="480" />
-  <br/><br/>
-  <img src="screenshots/quiz-practice.png" alt="Quiz Practice Mode" width="480" />
-  <br/><br/>
-  <img src="screenshots/essay-evaluation.png" alt="AI Essay Evaluation" width="480" />
-  <br/><br/>
-  <img src="screenshots/study-lab.png" alt="Study Lab" width="480" />
-</div>
+<table>
+  <tr>
+    <td align="center"><img src="screenshots/dashboard.png" alt="Dashboard" width="100%" /></td>
+    <td align="center"><img src="screenshots/quiz-practice.png" alt="Quiz Practice Mode" width="100%" /></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Dashboard — Course selection & navigation</em></td>
+    <td align="center"><em>Quiz — Practice mode with feedback</em></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/essay-evaluation.png" alt="AI Essay Evaluation" width="100%" /></td>
+    <td align="center"><img src="screenshots/study-lab.png" alt="Study Lab" width="100%" /></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Essay — AI-powered evaluation & grading</em></td>
+    <td align="center"><em>Study Lab — Document to quiz generator</em></td>
+  </tr>
+</table>
 
 ---
 
