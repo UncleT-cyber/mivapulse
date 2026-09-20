@@ -1,88 +1,157 @@
-# MivaPrep 🎓
+# MivaPulse 🎓
 
-An interactive, AI-assisted examination preparation platform built for university students. **MivaPrep** combines robust multiple-choice practice modules with an AI-powered essay examiner to deliver instant feedback, performance analytics, and realistic exam simulation.
+An AI-assisted examination preparation platform for university students. MivaPulse combines multiple-choice practice, AI-powered essay evaluation, a personal study sandbox, and a document-to-quiz generator into a single responsive web app.
 
 ---
 
-## 📸 Overview
+## Screenshots
 
 <div align="center">
-  <img width="496" alt="MivaPrep Mobile View" src="https://github.com/user-attachments/assets/a35d056b-78d8-4977-b91f-767388348608" />
+  <img src="screenshots/dashboard.png" alt="Dashboard" width="480" />
+  <br/><br/>
+  <img src="screenshots/quiz-practice.png" alt="Quiz Practice Mode" width="480" />
+  <br/><br/>
+  <img src="screenshots/essay-evaluation.png" alt="AI Essay Evaluation" width="480" />
+  <br/><br/>
+  <img src="screenshots/study-lab.png" alt="Study Lab" width="480" />
 </div>
 
 ---
 
-## ✨ Features
+## Features
 
-* **📚 Extensive Question Bank:** Course-organized multiple-choice testing for Web Development, Mathematics, Computer Science, and more.
-* **🤖 AI Essay Examiner:** Real-time AI cognitive evaluation pipeline powered by Anthropic's Claude API.
-* **📊 Deep Analytics & Summaries:** Instant scoring performance breakdowns, accuracy charts, and item-by-item review logs.
-* **⚡ Universal Rendering:** Built-in auto-escape and LaTeX/MathJax triggers to dynamically display technical code tags, mathematical formulas, and physics equations.
-* **🌙 Sleek Modern UI:** Dark-mode optimized, accessible, and fully responsive mobile UI.
+### Quiz Engine
+- Course-organized MCQ testing across faculties, departments, levels, and semesters
+- **Practice Mode** with instant feedback, explanations, and score tracking
+- **Exam Mode** simulating timed, no-hint test conditions
+- Question shuffling, configurable limits, and progress tracking
+
+### AI Essay Examiner
+- Real-time essay evaluation powered by **Groq** cloud AI
+- Structured rubric grading: Content (40), Structure (20), Depth (20), Style (20)
+- Letter grade, status assessment, strengths, weaknesses, and a topic deep-dive masterclass
+- Per-question `key_points_expected` criteria for targeted evaluation
+
+### Study Lab
+- Paste any text or upload documents (PDF, DOCX, TXT, images) to generate quiz questions
+- AI question extraction via Groq with **Essay Only**, **MCQ Only**, or **Mixed** modes
+- Built-in **ReadToMe** browser TTS player with speed controls and voice selection
+- Direct launch into quiz mode from generated questions
+
+### Personal Sandbox
+- Import questions from any course or from Study Lab-generated sets
+- Free-form practice with AI essay evaluation in a personal workspace
+- Tracks attempts, scores, and essay submissions
+
+### Admin Panel
+- Overview of all courses, question counts, and essay question distribution
+- Bulk import/export tools for question bank management
+
+### Dashboard
+- Faculty → Department → Level → Semester → Course navigation
+- Practice and Exam mode selection with configurable question limits
+- Dark/light theme toggle
+
+### Cross-Cutting
+- **MathJax v3** rendering for LaTeX formulas and physics equations
+- Dark mode with persistent theme preference (localStorage)
+- Fully responsive mobile-first UI
+- Drag-and-drop and click-to-upload file support
+- Custom haptic feedback on supported devices
+- Client-side form validation with accessible modal alerts
 
 ---
 
-## 🤖 AI Essay Examiner
+## Tech Stack
 
-The **Nexus AI Essay Examiner** evaluates student written responses in real time, delivering structured breakdowns similar to a human university examiner:
-
-* 🎯 **Overall Metric Score**
-* 💪 **Identified Key Strengths**
-* ⚠️ **Areas of Weakness**
-* 💡 **Actionable Suggestions for Improvement**
-
-> ℹ️ **Note on API Quotas:**  
-> The AI examiner currently operates on the Anthropic Claude API free tier. During high-traffic periods, essay evaluations may occasionally be temporarily throttled until the API quota resets.
+| Layer | Technology |
+|-------|-----------|
+| Frontend | HTML5, CSS3, JavaScript (ES6+) |
+| Math Rendering | MathJax v3 |
+| AI Backend | Groq API (cloud TTS and essay evaluation) |
+| Hosting | Vercel Serverless Functions |
+| Data | JSON-based course/question bank |
 
 ---
 
-## 🛠️ Tech Stack
+## Project Structure
 
-* **Frontend:** Vanilla HTML5, CSS3, JavaScript (ES6+), MathJax v3 Engine
-* **Backend:** Node.js, Express.js
-* **AI Integration:** Anthropic Claude API
-* **Deployment & Hosting:** Vercel Serverless Functions
+```
+mivapulse/
+├── index.html              # Dashboard homepage
+├── quiz.html               # Quiz engine (practice + exam)
+├── studylab.html           # Study Lab (document → quiz)
+├── sandbox.html            # Personal sandbox workspace
+├── admin.html              # Admin panel
+├── extractor.html          # Document text extractor
+├── api/
+│   ├── extract-questions.js   # Groq AI question extraction
+│   ├── evaluate-essay.js      # Groq AI essay evaluation
+│   ├── extract-text.js        # Document text extraction (PDF, DOCX, OCR)
+│   ├── export-questions.js    # JSON export endpoint
+│   └── v2/                    # Admin auth & contributions API
+├── js/
+│   ├── app.js               # Dashboard logic
+│   ├── quiz-engine.js       # Quiz runtime engine
+│   ├── studylab.js          # Study Lab + TTS player
+│   ├── sandbox.js           # Sandbox quiz logic
+│   ├── admin.js             # Admin panel logic
+│   └── extractor.js         # Client-side extraction UI
+├── css/
+│   ├── main.css             # Global styles + theme
+│   ├── quiz.css             # Quiz engine styles
+│   ├── studylab.css         # Study Lab styles
+│   ├── sandbox.css          # Sandbox styles
+│   └── admin.css            # Admin panel styles
+├── src/services/
+│   └── questionAdapter.js   # Universal question data adapter
+├── data/
+│   ├── manifest.json        # Faculty/department/level/course registry
+│   └── cybersecurity/       # Course question bank JSON files
+├── screenshots/             # App screenshots for README
+├── vercel.json              # Vercel route config
+└── package.json
+```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 1. Clone & Install Dependencies
+### Prerequisites
+- Node.js 18+
+- A [Groq API key](https://console.groq.com/keys)
+
+### 1. Clone and install
 ```bash
-git clone [https://github.com/your-username/mivaprep.git](https://github.com/your-username/mivaprep.git)
-cd mivaprep
+git clone https://github.com/UncleT-cyber/mivapulse.git
+cd mivapulse
 npm install
-2. Set Up Environment Variables
-Create a .env file in the root directory and add your API credentials:
+```
 
-Code snippet
-CLAUDE_API_KEY=your_claude_api_key_here
-3. Run Locally with Vercel CLI
-Bash
+### 2. Configure environment
+Create `.env.local` in the project root:
+```env
+GROQ_API_KEY=gsk_your_groq_api_key_here
+```
+
+### 3. Run locally
+```bash
 npx vercel dev
-Open http://localhost:3000 in your browser to view the application.
+```
+Open `http://localhost:3000` in your browser.
 
-🎯 Project Goals
-Help university students prepare effectively for semester examinations.
+---
 
-Refine critical thinking and essay-writing skills through instant AI feedback loops.
+## Contributing
 
-Provide a high-performance, accessible learning hub tailored for MIVA Open University students.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m "feat: add new feature"`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
 
-Continuously expand test modules and question banks across diverse academic disciplines.
+---
 
-🤝 Contributing
-Contributions are welcome! Whether it's reporting bugs, adding new question banks, or suggesting feature enhancements:
+## License
 
-Fork the repository
-
-Create your feature branch (git checkout -b feature/NewFeature)
-
-Commit your changes (git commit -m "feat: Add new CSC question bank")
-
-Push to the branch (git push origin feature/NewFeature)
-
-Open a Pull Request
-
-📄 License
-Distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License. See [LICENSE](LICENSE) for details.
