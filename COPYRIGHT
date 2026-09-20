@@ -1,0 +1,40 @@
+MivaPulse - AI-Assisted Exam Preparation Platform
+Copyright (c) 2026 Anthony Abah
+https://github.com/UncleT-cyber/mivapulse
+
+---
+
+LICENSE AND COPYRIGHT NOTICE
+
+This software is licensed under the MIT License.
+
+As required by the MIT License, the above copyright notice and this
+permission notice shall be included in all copies or substantial portions
+of the Software.
+
+If you fork, redistribute, or create derivative works of this software,
+you MUST:
+
+1. Retain the original copyright notice in all source files.
+2. Include this COPYRIGHT notice in the distribution.
+3. Include the LICENSE file in the distribution.
+4. Not use the original author's name, trademarks, or project name
+   to imply endorsement of your derivative work without permission.
+
+ATTRIBUTION REQUIREMENT
+
+When displaying or distributing this software (in whole or in part),
+you must provide clear credit to the original author:
+
+  Original work by Anthony Abah — https://github.com/UncleT-cyber/mivapulse
+
+This applies to but is not limited to:
+- Published distributions (npm, GitHub releases, etc.)
+- Commercial or non-commercial deployments
+- Forks and derivative works
+- Educational or demonstration use
+
+---
+
+For questions about licensing or attribution, contact:
+  https://github.com/UncleT-cyber

@@ -1,3 +1,10 @@
+/*
+ * MivaPulse - AI-Assisted Exam Preparation Platform
+ * Copyright (c) 2026 Anthony Abah. All rights reserved.
+ * https://github.com/UncleT-cyber/mivapulse
+ * Licensed under the MIT License.
+ */
+
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method Not Allowed' });

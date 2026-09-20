@@ -1,4 +1,14 @@
 {
+  "name": "mivapulse",
+  "version": "2.0.0",
+  "description": "AI-assisted examination preparation platform for university students",
+  "author": "Anthony Abah",
+  "homepage": "https://mivapulse.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UncleT-cyber/mivapulse.git"
+  },
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.1084.0",

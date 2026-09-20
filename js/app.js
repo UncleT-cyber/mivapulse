@@ -1,3 +1,10 @@
+/*
+ * MivaPulse - AI-Assisted Exam Preparation Platform
+ * Copyright (c) 2026 Anthony Abah. All rights reserved.
+ * https://github.com/UncleT-cyber/mivapulse
+ * Licensed under the MIT License.
+ */
+
 // Initialize global haptic feedback for mobile devices
 if (typeof window !== 'undefined') {
   window.triggerHaptic = (pattern = 15) => {

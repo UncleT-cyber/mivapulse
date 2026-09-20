@@ -1,3 +1,10 @@
+/*
+ * MivaPulse - AI-Assisted Exam Preparation Platform
+ * Copyright (c) 2026 Anthony Abah. All rights reserved.
+ * https://github.com/UncleT-cyber/mivapulse
+ * Licensed under the MIT License.
+ */
+
 /* ==========================================================================
    MIVAPULSE v2 - UNIVERSAL QUESTION ADAPTER LAYER
    Decouples quiz engine from static JSON files.

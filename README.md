@@ -2,6 +2,10 @@
 
 An AI-assisted examination preparation platform for university students. MivaPulse combines multiple-choice practice, AI-powered essay evaluation, a personal study sandbox, and a document-to-quiz generator into a single responsive web app.
 
+> **Original Author:** [Anthony Abah](https://github.com/UncleT-cyber) — [UncleT-cyber/mivapulse](https://github.com/UncleT-cyber/mivapulse)
+>
+> This project is open source under the [MIT License](LICENSE). If you fork or redistribute this software, you **must retain the original copyright notice** and this attribution. See [COPYRIGHT](COPYRIGHT) for full details.
+
 ---
 
 ## Screenshots
