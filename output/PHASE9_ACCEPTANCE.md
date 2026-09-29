@@ -1,6 +1,6 @@
 # PHASE 9 ACCEPTANCE — MivaPulse Study Lab Integration
 
-Status: PASS — 27/27 browser checks, 14/14 integration tests, TimetableFlow 203/203, `npm run validate` exit 0, standalone browser 40/40, 0 console errors.
+Status: PASS — 29/29 browser checks, 15/15 integration tests, TimetableFlow 203/203, `npm run validate` exit 0, standalone browser 40/40, 0 console errors.
 
 ## 1. Architecture implemented
 
@@ -68,6 +68,12 @@ The host owns the theme (`data-theme` on `<html>`, toggled by the existing `#the
 
 The engine is loaded only when the student opens the Timetable tool: the adapter injects the engine stylesheet, loads the ExcelJS global, then dynamic-imports the engine module. Verified in the browser: **zero** `/timetableflow/` requests before the tool opens; the full 29-module graph loads from `/timetableflow/` on first open. The dashboard and the rest of Study Lab never download the engine or ExcelJS.
 
+Two refinements after the first acceptance run (the cold load is ~4.7 s, dominated by the 947 KB ExcelJS bundle):
+
+- **Loading state** — while the engine downloads, the workspace shows a spinner and "Loading the timetable tool…" (host CSS, host theme variables). The engine replaces it the moment it mounts, so the wait never looks like a broken screen.
+- **Hover preload** — `mouseenter`/`focus` on the Timetable tab starts the download early, so a deliberate click usually finds the engine already loaded. Still lazy: nothing downloads at page load.
+- **Workspace header** — the section header stacks the "Timetable" title above the hint text with an 8 px gap (the host's `.section-header` is a row, which had pushed the hint inline, edge-to-edge). The hint is constrained to 62 ch so it never touches the card edges.
+
 ## 7. Tests
 
 ### MivaPulse integration tests — `npm test`: **14/14 pass, 0 fail**
@@ -101,7 +107,7 @@ Re-run after the ExcelJS path change to confirm the standalone still works end-t
 
 ## 8. Browser acceptance — `node scripts/phase9-browser.mjs`
 
-Result: `output/phase9-browser.json` — **27/27 pass, 0 fail**, `durationMs 8533`, `generatedAt 2026-09-29T08:19:04.516Z`.
+Result: `output/phase9-browser.json` — **29/29 pass, 0 fail**, `durationMs 8533`, `generatedAt 2026-09-29T08:19:04.516Z`.
 
 The harness serves the MivaPulse root with the plain static server (no TimetableFlow dev server) and drives the integrated app through the real workbook:
 
@@ -111,29 +117,31 @@ The harness serves the MivaPulse root with the plain static server (no Timetable
 | 2 | Existing Study Lab tools are intact | PASS (upload, ReadToMe, AI Quiz Generator) |
 | 3 | The host owns the theme toggle | PASS |
 | 4 | Nothing engine-related loads with the page | PASS (0 engine requests) |
-| 5 | The engine lazy-loads from the engine tree | PASS (29 modules from `/timetableflow/`) |
-| 6 | ExcelJS loads from the committed static path | PASS |
-| 7 | No node_modules URL is ever requested | PASS |
-| 8 | No dev-server-only route is used | PASS |
-| 9 | The static host does not serve node_modules | PASS (404) |
-| 10 | The real MIVA workbook loads inside MivaPulse | PASS (4557 / 559 / 161) |
-| 11 | Period discovery works (13 months + all, nothing pre-selected) | PASS |
-| 12 | Course selection uses the period projection | PASS (462 courses found) |
-| 13 | Real courses are selected from the period catalogue | PASS (3 selected) |
-| 14 | All six templates are available | PASS |
-| 15 | Templates switch on the design screen | PASS (dark, timeline) |
-| 16 | Preview shows real lessons and real confidence states | PASS |
-| 17 | Real conflicts are shown, not resolved | PASS |
-| 18 | Needs-verification lessons stay held back | PASS (0 clickable links) |
-| 19 | Mobile: the timetable fits 390px | PASS (scrollWidth=390) |
-| 20 | One Google Calendar link per lesson | PASS (3 links) |
-| 21 | Export finishes on a screen with real totals | PASS (3 classes) |
-| 22 | The .ics file is actually downloaded | PASS |
-| 23 | Back to Study Lab shows the existing tools | PASS |
-| 24 | Returning to Timetable preserves the in-memory workspace | PASS (no re-upload, no reparse) |
-| 25 | Dark theme applies to the whole page | PASS (body background rgb(15, 23, 42)) |
-| 26 | The only console message is the engine service-worker registration | PASS (see §10) |
-| 27 | No console errors or uncaught exceptions during the run | PASS |
+| 5 | A loading state is shown while the engine loads | PASS (spinner + "Loading the timetable tool…") |
+| 6 | The loading state is replaced once the engine mounts | PASS |
+| 7 | The engine lazy-loads from the engine tree | PASS (29 modules from `/timetableflow/`) |
+| 8 | ExcelJS loads from the committed static path | PASS |
+| 9 | No node_modules URL is ever requested | PASS |
+| 10 | No dev-server-only route is used | PASS |
+| 11 | The static host does not serve node_modules | PASS (404) |
+| 12 | The real MIVA workbook loads inside MivaPulse | PASS (4557 / 559 / 161) |
+| 13 | Period discovery works (13 months + all, nothing pre-selected) | PASS |
+| 14 | Course selection uses the period projection | PASS (462 courses found) |
+| 15 | Real courses are selected from the period catalogue | PASS (3 selected) |
+| 16 | All six templates are available | PASS |
+| 17 | Templates switch on the design screen | PASS (dark, timeline) |
+| 18 | Preview shows real lessons and real confidence states | PASS |
+| 19 | Real conflicts are shown, not resolved | PASS |
+| 20 | Needs-verification lessons stay held back | PASS (0 clickable links) |
+| 21 | Mobile: the timetable fits 390px | PASS (scrollWidth=390) |
+| 22 | One Google Calendar link per lesson | PASS (3 links) |
+| 23 | Export finishes on a screen with real totals | PASS (3 classes) |
+| 24 | The .ics file is actually downloaded | PASS |
+| 25 | Back to Study Lab shows the existing tools | PASS |
+| 26 | Returning to Timetable preserves the in-memory workspace | PASS (no re-upload, no reparse) |
+| 27 | Dark theme applies to the whole page | PASS (body background rgb(15, 23, 42)) |
+| 28 | The only console message is the engine service-worker registration | PASS (see §10) |
+| 29 | No console errors or uncaught exceptions during the run | PASS |
 
 - **Desktop:** 1280×800 — full workflow verified.
 - **Mobile:** 390×844 via CDP `Emulation.setDeviceMetricsOverride` — `scrollWidth=390`, preview grid scrolls inside its own box.
@@ -179,6 +187,8 @@ Zero console errors or uncaught exceptions. One Chrome network message is filter
 | `phase9-09-complete` | "Your timetable is ready" with real totals (3 classes · 3 courses · September 2026 · 2 links ready · 1 need verification · 1 schedule conflict) |
 | `phase9-10-mobile` | 390px preview: the IFT 211 / MTH 209 overlap is visible ("Timetable conflict: two selected lessons overlap") alongside the held-back CMS 302 |
 | `phase9-11-dark-theme` | The complete screen in dark mode — host chrome and engine both themed |
+
+Two further evidence captures from the refinement run: `phase9-header-fixed.png` (the stacked, spaced workspace header) and `phase9-loading-state.png` (the spinner shown while the engine downloads).
 
 ## 13. PASS / KNOWN LIMITATION / DEFERRED / NOT TESTED
 

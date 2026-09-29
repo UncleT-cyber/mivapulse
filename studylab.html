@@ -180,7 +180,12 @@
                     <h3><i class="fas fa-calendar-days"></i> Timetable</h3>
                     <p class="workspace-hint">Upload the MIVA master timetable, choose your period and courses, then export your personal timetable to your calendar.</p>
                 </div>
-                <div id="app" class="tf-mount"></div>
+                <div id="app" class="tf-mount">
+                    <div class="tf-loading" data-tf-loading>
+                        <span class="tf-loading-spinner" aria-hidden="true"></span>
+                        <p>Loading the timetable tool…</p>
+                    </div>
+                </div>
                 <div id="tf-status" class="tf-sr" role="status" aria-live="polite"></div>
             </section>
         </div>

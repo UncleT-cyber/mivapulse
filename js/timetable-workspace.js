@@ -83,7 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
         await engineLoading;
     }
 
+    /** Start the download while the cursor is on the tab, so the click feels instant. */
+    function preloadEngine() {
+        if (engineLoaded || engineLoading) return;
+        engineLoading = loadEngine()
+            .then(() => { engineLoaded = true; })
+            .catch(() => { engineLoading = null; }); // silent: the click will retry
+    }
+
     function showLoadError() {
+        timetableView.querySelector('[data-tf-loading]')?.remove();
         const previous = timetableView.querySelector('.workspace-error');
         if (previous) previous.remove();
         const message = document.createElement('p');
@@ -98,5 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showLoadError();
         });
     });
+    tabTimetable.addEventListener('mouseenter', preloadEngine);
+    tabTimetable.addEventListener('focus', preloadEngine);
     tabNotes.addEventListener('click', () => selectTool('notes'));
 });

@@ -227,9 +227,16 @@ async function main() {
     const engineRequestsBefore = networkUrls.filter((url) => url.includes('/timetableflow/')).length;
     check('Nothing engine-related loads with the page', engineRequestsBefore === 0,
       `${engineRequestsBefore} engine requests before opening the tool`);
-    await click('#tabTimetable');
+    // click and check the loading state synchronously (the engine load is async)
+    const loadingShown = await evaluate(`(() => {
+      document.getElementById('tabTimetable')?.click();
+      return !!document.querySelector('[data-tf-loading]');
+    })()`);
+    check('A loading state is shown while the engine loads', loadingShown);
     await waitFor('!!document.getElementById("tf-file")', 'the TimetableFlow upload screen', 60000);
     await sleep(600); // let the engine stylesheet and exceljs settle
+    const loadingCleared = await evaluate(`!document.querySelector('[data-tf-loading]')`);
+    check('The loading state is replaced once the engine mounts', loadingCleared);
     check('The engine lazy-loads from the engine tree',
       engineRequested('/timetableflow/public/app.js') && engineRequested('/timetableflow/src/ui/state.js'),
       [...new Set(networkUrls.filter((u) => u.includes('/timetableflow/')))].slice(0, 4).join(', '));
