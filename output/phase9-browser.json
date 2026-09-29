@@ -1,0 +1,235 @@
+{
+  "generatedAt": "2026-09-29T08:41:47.114Z",
+  "durationMs": 8148,
+  "passed": 27,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Study Lab exposes Timetable as a distinct tool",
+      "ok": true,
+      "detail": "theme=light"
+    },
+    {
+      "name": "Existing Study Lab tools are intact",
+      "ok": true,
+      "detail": "upload, ReadToMe and AI Quiz Generator all present"
+    },
+    {
+      "name": "The host owns the theme toggle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Nothing engine-related loads with the page",
+      "ok": true,
+      "detail": "0 engine requests before opening the tool"
+    },
+    {
+      "name": "The engine lazy-loads from the engine tree",
+      "ok": true,
+      "detail": "http://localhost:4363/timetableflow/public/styles.css, http://localhost:4363/timetableflow/public/vendor/exceljs.min.js, http://localhost:4363/timetableflow/public/app.js, http://localhost:4363/timetableflow/src/ui/state.js"
+    },
+    {
+      "name": "ExcelJS loads from the committed static path",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "No node_modules URL is ever requested",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "No dev-server-only route is used",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "The static host does not serve node_modules",
+      "ok": true,
+      "detail": "status=404"
+    },
+    {
+      "name": "The only console message is the engine service-worker registration on a host without one",
+      "ok": true,
+      "detail": "secure=true, scope=null, script=null, new errors=1"
+    },
+    {
+      "name": "The real MIVA workbook loads inside MivaPulse",
+      "ok": true,
+      "detail": "3 courses · 4557 lessons · 559 courses · 161 lesson links need verification"
+    },
+    {
+      "name": "Period discovery works (13 months + all dates, nothing pre-selected)",
+      "ok": true,
+      "detail": "13 months + all"
+    },
+    {
+      "name": "Course selection uses the period projection",
+      "ok": true,
+      "detail": "462 courses found"
+    },
+    {
+      "name": "Real courses are selected from the period catalogue",
+      "ok": true,
+      "detail": "3 courses selected"
+    },
+    {
+      "name": "All six templates are available",
+      "ok": true,
+      "detail": "6 templates"
+    },
+    {
+      "name": "Templates switch on the design screen",
+      "ok": true,
+      "detail": "dark, timeline"
+    },
+    {
+      "name": "Preview shows real lessons and real confidence states",
+      "ok": true,
+      "detail": "464 lessons"
+    },
+    {
+      "name": "Real conflicts are shown, not resolved",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Needs-verification lessons stay held back",
+      "ok": true,
+      "detail": "0 clickable links"
+    },
+    {
+      "name": "Mobile: the timetable fits 390px",
+      "ok": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "name": "One Google Calendar link per lesson",
+      "ok": true,
+      "detail": "3 links"
+    },
+    {
+      "name": "Export finishes on a screen with real totals",
+      "ok": true,
+      "detail": "3 classes"
+    },
+    {
+      "name": "The .ics file is actually downloaded",
+      "ok": true,
+      "detail": "timetableflow-2026-09-29.ics"
+    },
+    {
+      "name": "Back to Study Lab shows the existing tools",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Returning to Timetable preserves the in-memory workspace",
+      "ok": true,
+      "detail": "the completed timetable is still there — no re-upload, no reparse"
+    },
+    {
+      "name": "Dark theme applies to the whole page",
+      "ok": true,
+      "detail": "theme=dark, body background=rgb(15, 23, 42)"
+    },
+    {
+      "name": "No console errors or uncaught exceptions during the run",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "/tmp/mivapulse-shots/phase9-01-study-lab-timetable-entry.png",
+    "/tmp/mivapulse-shots/phase9-02-upload.png",
+    "/tmp/mivapulse-shots/phase9-03-period.png",
+    "/tmp/mivapulse-shots/phase9-04-course-selection.png",
+    "/tmp/mivapulse-shots/phase9-05-design.png",
+    "/tmp/mivapulse-shots/phase9-06-preview.png",
+    "/tmp/mivapulse-shots/phase9-07-confidence-conflict.png",
+    "/tmp/mivapulse-shots/phase9-10-mobile.png",
+    "/tmp/mivapulse-shots/phase9-08-calendar.png",
+    "/tmp/mivapulse-shots/phase9-09-complete.png",
+    "/tmp/mivapulse-shots/phase9-11-dark-theme.png"
+  ],
+  "consoleErrors": [
+    "A bad HTTP response code (404) was received when fetching the script."
+  ],
+  "notFoundUrls": [],
+  "swJsStatus": null,
+  "failedLoads": [],
+  "non200Responses": [],
+  "allRequestedUrls": [
+    "http://localhost:4363/studylab.html",
+    "http://localhost:4363/css/studylab.css?v=1785774114",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js",
+    "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js",
+    "http://localhost:4363/css/timetable-workspace.css",
+    "http://localhost:4363/js/timetable-workspace.js",
+    "http://localhost:4363/js/studylab.js?v=1785777387",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2",
+    "http://localhost:4363/timetableflow/public/styles.css",
+    "http://localhost:4363/timetableflow/public/vendor/exceljs.min.js",
+    "http://localhost:4363/timetableflow/public/app.js",
+    "http://localhost:4363/timetableflow/src/ui/state.js",
+    "http://localhost:4363/timetableflow/src/ui/screens.js",
+    "http://localhost:4363/timetableflow/src/ui/selectors.js",
+    "http://localhost:4363/timetableflow/src/app/excelAdapter.js",
+    "http://localhost:4363/timetableflow/src/student/selection.js",
+    "http://localhost:4363/timetableflow/src/student/period.js",
+    "http://localhost:4363/timetableflow/src/student/timetable.js",
+    "http://localhost:4363/timetableflow/src/render/viewModel.js",
+    "http://localhost:4363/timetableflow/src/export/ical.js",
+    "http://localhost:4363/timetableflow/src/app/messages.js",
+    "http://localhost:4363/timetableflow/src/ui/templates.js",
+    "http://localhost:4363/timetableflow/src/render/html.js",
+    "http://localhost:4363/timetableflow/src/ui/timetableBody.js",
+    "http://localhost:4363/timetableflow/src/pipeline.js",
+    "http://localhost:4363/timetableflow/src/export/google.js",
+    "http://localhost:4363/timetableflow/src/parser/courseCell.js",
+    "http://localhost:4363/timetableflow/src/export/sha256.js",
+    "http://localhost:4363/timetableflow/src/render/linkReason.js",
+    "http://localhost:4363/timetableflow/src/links/linkIndex.js",
+    "http://localhost:4363/timetableflow/src/links/resolver.js",
+    "http://localhost:4363/timetableflow/src/model/entry.js",
+    "http://localhost:4363/timetableflow/src/parser/sheets.js",
+    "http://localhost:4363/timetableflow/src/parser/timetableParser.js",
+    "http://localhost:4363/timetableflow/src/ui/grid.js",
+    "http://localhost:4363/timetableflow/src/parser/cells.js",
+    "http://localhost:4363/timetableflow/src/parser/datetime.js",
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  ],
+  "engineRequests": [
+    "http://localhost:4363/timetableflow/public/styles.css",
+    "http://localhost:4363/timetableflow/public/vendor/exceljs.min.js",
+    "http://localhost:4363/timetableflow/public/app.js",
+    "http://localhost:4363/timetableflow/src/ui/state.js",
+    "http://localhost:4363/timetableflow/src/ui/screens.js",
+    "http://localhost:4363/timetableflow/src/ui/selectors.js",
+    "http://localhost:4363/timetableflow/src/app/excelAdapter.js",
+    "http://localhost:4363/timetableflow/src/student/selection.js",
+    "http://localhost:4363/timetableflow/src/student/period.js",
+    "http://localhost:4363/timetableflow/src/student/timetable.js",
+    "http://localhost:4363/timetableflow/src/render/viewModel.js",
+    "http://localhost:4363/timetableflow/src/export/ical.js",
+    "http://localhost:4363/timetableflow/src/app/messages.js",
+    "http://localhost:4363/timetableflow/src/ui/templates.js",
+    "http://localhost:4363/timetableflow/src/render/html.js",
+    "http://localhost:4363/timetableflow/src/ui/timetableBody.js",
+    "http://localhost:4363/timetableflow/src/pipeline.js",
+    "http://localhost:4363/timetableflow/src/export/google.js",
+    "http://localhost:4363/timetableflow/src/parser/courseCell.js",
+    "http://localhost:4363/timetableflow/src/export/sha256.js",
+    "http://localhost:4363/timetableflow/src/render/linkReason.js",
+    "http://localhost:4363/timetableflow/src/links/linkIndex.js",
+    "http://localhost:4363/timetableflow/src/links/resolver.js",
+    "http://localhost:4363/timetableflow/src/model/entry.js",
+    "http://localhost:4363/timetableflow/src/parser/sheets.js",
+    "http://localhost:4363/timetableflow/src/parser/timetableParser.js",
+    "http://localhost:4363/timetableflow/src/ui/grid.js",
+    "http://localhost:4363/timetableflow/src/parser/cells.js",
+    "http://localhost:4363/timetableflow/src/parser/datetime.js"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "timetableflow",
+  "version": "0.1.0",
+  "description": "TimetableFlow - MIVA live-lesson timetable engine (standalone, future MivaPulse integration)",
+  "type": "module",
+  "license": "MIT",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./student": "./src/student/index.js",
+    "./render": "./src/render/index.js",
+    "./calendar": "./src/export/index.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "validate": "node scripts/validate-real-workbook.js",
+    "export": "node scripts/export-normalized.js",
+    "student": "node scripts/build-student-timetable.js",
+    "ui": "node scripts/serve-ui.js"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}

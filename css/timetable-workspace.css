@@ -1,0 +1,180 @@
+/* ==========================================================================
+   MivaPulse — TimetableFlow workspace (host visual adaptation)
+   ==========================================================================
+   TimetableFlow's public/styles.css defines its design tokens on :root.
+   This file re-maps those tokens onto MivaPulse's own theme variables so the
+   workspace adopts the host palette without any engine change and without
+   touching the standalone app.
+
+   Why this works: the :root[data-theme="..."] selectors (specificity 0-2-0)
+   outrank the engine's plain :root block (0-1-0), so the mapping holds no
+   matter which stylesheet loads last. The host neutral variables already
+   switch with [data-theme], so both blocks carry the same neutral mapping;
+   only color-scheme is theme-specific (it drives native form controls such
+   as the date inputs on the period screen).
+
+   Neutrals follow the host variables that studylab.css defines. Brand,
+   success, radius and shadow tokens are pinned here because studylab.html
+   loads only studylab.css (the brand/success variables live in
+   dashboard.css, which this page does not load).
+   ========================================================================== */
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --tf-host-brand: #a855f7;
+    --tf-host-brand-soft: rgba(168, 85, 247, 0.12);
+    --tf-host-success: #16a34a;
+    --tf-host-radius: 16px;
+    --tf-host-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --tf-host-shadow: 0 12px 30px -10px rgba(74, 21, 75, 0.1);
+
+    --bg: var(--bg-app);
+    --surface: var(--bg-card);
+    --surface-2: var(--bg-card);
+    --text: var(--text-primary);
+    --muted: var(--text-secondary);
+    --border: var(--border-color);
+    --border-strong: var(--border-color);
+    --brand: var(--tf-host-brand);
+    --brand-strong: var(--tf-host-brand);
+    --brand-soft: var(--tf-host-brand-soft);
+    --ok: var(--tf-host-success);
+    --ok-soft: rgba(22, 163, 74, 0.1);
+    --ok-border: rgba(22, 163, 74, 0.35);
+    --warn: #b45309;
+    --warn-soft: rgba(245, 158, 11, 0.12);
+    --warn-border: rgba(245, 158, 11, 0.4);
+    --danger: #dc2626;
+    --danger-soft: rgba(220, 38, 38, 0.08);
+    --danger-border: rgba(220, 38, 38, 0.32);
+    --radius: var(--tf-host-radius);
+    --radius-sm: 10px;
+    --shadow-sm: var(--tf-host-shadow-sm);
+    --shadow: var(--tf-host-shadow);
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --tf-host-brand: #c084fc;
+    --tf-host-brand-soft: rgba(192, 132, 252, 0.14);
+    --tf-host-success: #34d399;
+    --tf-host-radius: 16px;
+    --tf-host-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --tf-host-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.45);
+
+    --bg: var(--bg-app);
+    --surface: var(--bg-card);
+    --surface-2: var(--bg-card);
+    --text: var(--text-primary);
+    --muted: var(--text-secondary);
+    --border: var(--border-color);
+    --border-strong: var(--border-color);
+    --brand: var(--tf-host-brand);
+    --brand-strong: var(--tf-host-brand);
+    --brand-soft: var(--tf-host-brand-soft);
+    --ok: var(--tf-host-success);
+    --ok-soft: rgba(52, 211, 153, 0.12);
+    --ok-border: rgba(52, 211, 153, 0.35);
+    --warn: #fbbf24;
+    --warn-soft: rgba(251, 191, 36, 0.12);
+    --warn-border: rgba(251, 191, 36, 0.4);
+    --danger: #f87171;
+    --danger-soft: rgba(248, 113, 113, 0.1);
+    --danger-border: rgba(248, 113, 113, 0.35);
+    --radius: var(--tf-host-radius);
+    --radius-sm: 10px;
+    --shadow-sm: var(--tf-host-shadow-sm);
+    --shadow: var(--tf-host-shadow);
+}
+
+/* The engine's reset (html, body { margin: 0; padding: 0 }) would otherwise
+   wipe the host's fixed-navbar offset (body padding-top: 64px). Re-assert it
+   at higher specificity so the navbar never overlaps the workspace. */
+html body { padding-top: 64px; }
+
+/* ── Tool switcher ─────────────────────────────────────────────────────── */
+.tool-switcher {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+.tool-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: var(--text-secondary);
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.tool-tab:hover {
+    color: var(--text-primary);
+    background: var(--bg-app);
+}
+.tool-tab.active {
+    color: var(--tf-host-brand, #a855f7);
+    background: var(--tf-host-brand-soft, rgba(168, 85, 247, 0.12));
+    border-color: var(--tf-host-brand, #a855f7);
+}
+.tool-tab:focus-visible {
+    outline: 2px solid var(--tf-host-brand, #a855f7);
+    outline-offset: 2px;
+}
+
+/* ── Timetable workspace ───────────────────────────────────────────────── */
+.tool-view { width: 100%; }
+
+.timetable-card {
+    padding: 20px;
+}
+.timetable-card .section-header {
+    margin-bottom: 16px;
+}
+.timetable-card .section-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+.timetable-card .section-header h3 i { color: var(--tf-host-brand, #a855f7); }
+.workspace-hint {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* The engine renders its step navigation and screens here. Its own
+   stylesheet is injected on first use by the host adapter. */
+.tf-mount {
+    margin-top: 8px;
+}
+.tf-mount .tf-steps {
+    margin-bottom: 16px;
+}
+
+.workspace-error {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--danger-border, rgba(220, 38, 38, 0.32));
+    background: var(--danger-soft, rgba(220, 38, 38, 0.08));
+    color: var(--danger, #dc2626);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .tool-switcher { gap: 6px; }
+    .tool-tab { font-size: 0.82rem; padding: 7px 10px; }
+    .timetable-card { padding: 14px; }
+}

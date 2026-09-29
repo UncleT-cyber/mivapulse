@@ -21,6 +21,23 @@
         const savedTheme = localStorage.getItem("miva-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         document.documentElement.setAttribute("data-theme", savedTheme);
     </script>
+    <!--
+      TimetableFlow import map.
+      The TimetableFlow engine lives in the timetableflow/ tree and its browser
+      glue imports the engine through the absolute "/src/" namespace (e.g.
+      "/src/ui/state.js"). This map points that namespace at the engine tree so
+      the host loads the very same ES modules the engine's own tests cover —
+      no bundler, no copied engine, no rewritten imports. It must stay declared
+      before any module script loads.
+    -->
+    <script type="importmap">
+    {
+      "imports": {
+        "/src/": "/timetableflow/src/"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="css/timetable-workspace.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ffffff'/%3E%3Cg transform='matrix(0.9, 0, 0, 0.9, 5, 5)'%3E%3Cpath d='M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 12.5v5c0 1.25 1.5 2.5 6 2.5s6-1.25 6-2.5v-5' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.5 11v6' fill='none' stroke='%234a154b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E">
 </head>
 <body>
@@ -41,6 +58,21 @@
             <h1><i class="fas fa-flask"></i> StudyLab</h1>
             <p>Upload notes, extract text, listen, generate quizzes, or export.</p>
         </div>
+
+        <!-- TOOL SWITCHER: the existing Study Lab tools stay together (they share
+             the extracted-text workspace); Timetable is a distinct destination
+             that opens the TimetableFlow workspace in-place. -->
+        <div class="tool-switcher" role="tablist" aria-label="Study Lab tools">
+            <button type="button" class="tool-tab active" id="tabNotes" role="tab" aria-selected="true" aria-controls="notesView">
+                <i class="fas fa-file-lines"></i> Notes &amp; Quiz
+            </button>
+            <button type="button" class="tool-tab" id="tabTimetable" role="tab" aria-selected="false" aria-controls="timetableView">
+                <i class="fas fa-calendar-days"></i> Timetable
+            </button>
+        </div>
+
+        <!-- NOTES & QUIZ (existing Study Lab tools, unchanged) -->
+        <div id="notesView" class="tool-view" role="tabpanel" aria-labelledby="tabNotes">
 
         <!-- UPLOAD -->
         <section class="upload-section">
@@ -136,6 +168,22 @@
                 </div>
             </div>
         </div>
+        </div><!-- /notesView -->
+
+        <!-- TIMETABLE: the TimetableFlow workspace. The engine's DOM contract
+             requires exactly two mount elements: #app (content) and
+             #tf-status (live region). The host adapter (js/timetable-workspace.js)
+             lazy-imports the engine into #app the first time this view opens. -->
+        <div id="timetableView" class="tool-view" role="tabpanel" aria-labelledby="tabTimetable" hidden>
+            <section class="card timetable-card">
+                <div class="section-header">
+                    <h3><i class="fas fa-calendar-days"></i> Timetable</h3>
+                    <p class="workspace-hint">Upload the MIVA master timetable, choose your period and courses, then export your personal timetable to your calendar.</p>
+                </div>
+                <div id="app" class="tf-mount"></div>
+                <div id="tf-status" class="tf-sr" role="status" aria-live="polite"></div>
+            </section>
+        </div>
     </main>
 
     <footer class="footer">
@@ -148,6 +196,7 @@
         </div>
     </footer>
 
+    <script src="js/timetable-workspace.js"></script>
     <script src="js/studylab.js?v=1785777387"></script>
     <script>
         document.getElementById('extractedText').addEventListener('input', function() {

@@ -1,0 +1,4 @@
+# Generated artifacts — regenerable via `npm run export` and `npm run student`
+output/timetableflow.normalized.json
+output/student/
+output/student-*/

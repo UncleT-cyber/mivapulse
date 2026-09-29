@@ -1,0 +1,137 @@
+{
+  "generatedAt": "2026-09-29T02:32:11.447Z",
+  "durationMs": 4737,
+  "passed": 23,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "App shell loads (5 steps, reader ready)",
+      "ok": true,
+      "detail": "5 steps"
+    },
+    {
+      "name": "Invalid file is refused with honest copy",
+      "ok": true,
+      "detail": "this doesn't appear to be a supported miva timetable."
+    },
+    {
+      "name": "Error state keeps the retry affordance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Real workbook upload reports derived facts",
+      "ok": true,
+      "detail": "2 courses · 4557 lessons · 559 courses · 161 lesson links need verification"
+    },
+    {
+      "name": "The page states the privacy promise",
+      "ok": true,
+      "detail": "timetableflow reads your timetable in this browser. nothing "
+    },
+    {
+      "name": "Six courses selected from the catalogue",
+      "ok": true,
+      "detail": "6 courses selected"
+    },
+    {
+      "name": "Selection can be searched, not guessed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Templates switch on the design screen",
+      "ok": true,
+      "detail": "dark, focus, timeline"
+    },
+    {
+      "name": "Verified lesson is a real clickable join link",
+      "ok": true,
+      "detail": "https://meet.google.com/evs-xxok-vzq"
+    },
+    {
+      "name": "NSC 309 candidates are shown, none clickable",
+      "ok": true,
+      "detail": "0 clickable links, 2 candidate URLs, note=true"
+    },
+    {
+      "name": "Title mismatch explains itself under the state",
+      "ok": true,
+      "detail": "reason=title-mismatch"
+    },
+    {
+      "name": "Preview counts match the selection",
+      "ok": true,
+      "detail": "51 lessons"
+    },
+    {
+      "name": "Going back keeps the selection",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Going forward serves the same timetable",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "One Google Calendar link per lesson",
+      "ok": true,
+      "detail": "51 links"
+    },
+    {
+      "name": "Reminder choice is interactive state",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Export finishes on a screen with real totals",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "The .ics file is actually downloaded",
+      "ok": true,
+      "detail": "timetableflow-2026-09-29.ics"
+    },
+    {
+      "name": "Reload starts clean (nothing is stored anywhere)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Mobile: the upload screen fits 390px",
+      "ok": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "name": "Mobile: the loaded screen fits 390px",
+      "ok": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "name": "Mobile: the timetable preview fits 390px (grid scrolls inside its own box)",
+      "ok": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "name": "No console errors or uncaught exceptions during the run",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "/tmp/tf-shots/phase8-01-idle.png",
+    "/tmp/tf-shots/phase8-02-invalid-file.png",
+    "/tmp/tf-shots/phase8-03-loaded.png",
+    "/tmp/tf-shots/phase8-04-courses.png",
+    "/tmp/tf-shots/phase8-05-design.png",
+    "/tmp/tf-shots/phase8-06-preview.png",
+    "/tmp/tf-shots/phase8-07-calendar.png",
+    "/tmp/tf-shots/phase8-08-complete.png",
+    "/tmp/tf-shots/phase8-09-after-reload.png",
+    "/tmp/tf-shots/phase8-10-mobile-loaded.png",
+    "/tmp/tf-shots/phase8-11-mobile-preview.png"
+  ],
+  "consoleErrors": []
+}

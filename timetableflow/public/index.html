@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TimetableFlow — build your MIVA timetable</title>
+  <meta name="description" content="Upload the MIVA master timetable, pick your courses and get a personal timetable with live-lesson links and a calendar file.">
+  <link rel="stylesheet" href="/public/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232f6df6'/><rect x='6' y='9' width='20' height='17' rx='3' fill='%23fff'/><rect x='6' y='9' width='20' height='5' rx='2.5' fill='%23ff6b6b'/></svg>">
+  <link rel="manifest" href="/public/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/public/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="TimetableFlow">
+  <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+  <a class="tf-skip" href="#app">Skip to content</a>
+  <header class="tf-topbar">
+    <span class="tf-brand">TimetableFlow</span>
+    <span class="tf-brand-sub">MIVA live lessons</span>
+  </header>
+  <main id="app" class="tf-app" tabindex="-1"></main>
+  <footer class="tf-footer">
+    <p>TimetableFlow reads your timetable in this browser. Nothing is uploaded to a server.</p>
+  </footer>
+  <div id="tf-status" class="tf-sr" role="status" aria-live="polite"></div>
+  <script src="/public/vendor/exceljs.min.js"></script>
+  <script type="module" src="/public/app.js"></script>
+</body>
+</html>

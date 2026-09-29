@@ -1,0 +1,228 @@
+{
+  "generatedAt": "2026-09-29T08:16:01.989Z",
+  "durationMs": 7879,
+  "passed": 40,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "App shell loads (6 steps, reader ready)",
+      "ok": true,
+      "detail": "6 steps"
+    },
+    {
+      "name": "Invalid file is refused with honest copy",
+      "ok": true,
+      "detail": "this doesn't appear to be a supported miva timetable."
+    },
+    {
+      "name": "Error state keeps the retry affordance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Real workbook upload reports derived facts",
+      "ok": true,
+      "detail": "3 courses · 4557 lessons · 559 courses · 161 lesson links need verification"
+    },
+    {
+      "name": "The page states the privacy promise",
+      "ok": true,
+      "detail": "timetableflow reads your timetable in this browser. nothing "
+    },
+    {
+      "name": "Period options come from the workbook, with nothing pre-selected",
+      "ok": true,
+      "detail": "13 months + all, first=\"November 2024 163 lessons · 163 courses\", preselected=false"
+    },
+    {
+      "name": "The period screen states the real bounds of the upload",
+      "ok": true,
+      "detail": "contains lessons from 18 nov 2024 to 26 nov 2026."
+    },
+    {
+      "name": "Continuing without a period is refused, not guessed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A month option reports its own lesson and course counts",
+      "ok": true,
+      "detail": "november 2026 542 lessons · 540 courses 18 lesson links need verification"
+    },
+    {
+      "name": "A period past the workbook month carries an informational notice",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "The catalogue is built from the period, not the whole workbook",
+      "ok": true,
+      "detail": "540 courses found"
+    },
+    {
+      "name": "The future notice follows the student to course selection",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "An out-of-order custom range is refused with a plain reason",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A custom range projects exactly the days it covers",
+      "ok": true,
+      "detail": "1 sep 2026 – 30 sep 2026 464 lessons · 462 courses 12 lesson links need verification"
+    },
+    {
+      "name": "Six courses selected from the catalogue",
+      "ok": true,
+      "detail": "6 courses selected"
+    },
+    {
+      "name": "Selection can be searched, not guessed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Templates switch on the design screen",
+      "ok": true,
+      "detail": "dark, focus, timeline"
+    },
+    {
+      "name": "Verified lesson is a real clickable join link",
+      "ok": true,
+      "detail": "https://meet.google.com/evs-xxok-vzq"
+    },
+    {
+      "name": "NSC 309 candidates are shown, none clickable",
+      "ok": true,
+      "detail": "0 clickable links, 2 candidate URLs, note=true"
+    },
+    {
+      "name": "Title mismatch explains itself under the state",
+      "ok": true,
+      "detail": "reason=title-mismatch"
+    },
+    {
+      "name": "Preview counts match the selection",
+      "ok": true,
+      "detail": "51 lessons 7 courses 31 days 42 links ready 9 need verification 10 schedule conflicts"
+    },
+    {
+      "name": "Going back keeps the selection",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Going forward serves the same timetable",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "One Google Calendar link per lesson",
+      "ok": true,
+      "detail": "51 links"
+    },
+    {
+      "name": "Reminder choice is interactive state",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Export finishes on a screen with real totals",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "The .ics file is actually downloaded",
+      "ok": true,
+      "detail": "timetableflow-2026-09-29.ics"
+    },
+    {
+      "name": "Reload starts clean (nothing is stored anywhere)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A month inside the workbook narrows the catalogue and warns about nothing",
+      "ok": true,
+      "detail": "462 courses found"
+    },
+    {
+      "name": "The period catalogue is browsable and clickable",
+      "ok": true,
+      "detail": "ACC 101, ACC 102"
+    },
+    {
+      "name": "The preview contains only the chosen month",
+      "ok": true,
+      "detail": "1 week blocks: 2026-09"
+    },
+    {
+      "name": "Switching period clears the previous timetable from the screen",
+      "ok": true,
+      "detail": "0 week blocks still rendered"
+    },
+    {
+      "name": "The catalogue follows the period switch",
+      "ok": true,
+      "detail": "540 courses found"
+    },
+    {
+      "name": "No lesson of the previous period survives anywhere in the DOM",
+      "ok": true,
+      "detail": "0 week blocks"
+    },
+    {
+      "name": "The regenerated preview contains only the new period",
+      "ok": true,
+      "detail": "1 week blocks: 2026-11"
+    },
+    {
+      "name": "Mobile: the upload screen fits 390px",
+      "ok": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "name": "Mobile: the loaded screen fits 390px",
+      "ok": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "name": "Mobile: the period screen fits 390px",
+      "ok": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "name": "Mobile: the timetable preview fits 390px (grid scrolls inside its own box)",
+      "ok": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "name": "No console errors or uncaught exceptions during the run",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "/tmp/tf-shots/phase8-01-idle.png",
+    "/tmp/tf-shots/phase8-02-invalid-file.png",
+    "/tmp/tf-shots/phase8-03-loaded.png",
+    "/tmp/tf-shots/phase8-12-period-selection.png",
+    "/tmp/tf-shots/phase8-15-future-period-notice.png",
+    "/tmp/tf-shots/phase8-13-selected-period-course-selection.png",
+    "/tmp/tf-shots/phase8-16-custom-range.png",
+    "/tmp/tf-shots/phase8-04-courses.png",
+    "/tmp/tf-shots/phase8-05-design.png",
+    "/tmp/tf-shots/phase8-06-preview.png",
+    "/tmp/tf-shots/phase8-07-calendar.png",
+    "/tmp/tf-shots/phase8-08-complete.png",
+    "/tmp/tf-shots/phase8-09-after-reload.png",
+    "/tmp/tf-shots/phase8-14-selected-period-preview.png",
+    "/tmp/tf-shots/phase8-10-mobile-loaded.png",
+    "/tmp/tf-shots/phase8-17-mobile-period-selection.png",
+    "/tmp/tf-shots/phase8-11-mobile-preview.png"
+  ],
+  "consoleErrors": []
+}
