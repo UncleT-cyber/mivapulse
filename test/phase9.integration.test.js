@@ -29,6 +29,8 @@ import { buildStudentTimetable, linkState } from '../timetableflow/src/student/t
 import { toICalendar } from '../timetableflow/src/export/ical.js';
 import { setExcelJS, parseWorkbookBytes } from '../timetableflow/src/app/excelAdapter.js';
 import { TEMPLATES } from '../timetableflow/src/ui/templates.js';
+import { reduce } from '../timetableflow/src/ui/state.js';
+import { renderApp } from '../timetableflow/src/ui/screens.js';
 import { REFERENCE_WORKBOOK } from '../timetableflow/scripts/validate-real-workbook.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -282,4 +284,27 @@ test('15. no lesson or selected course goes missing from the uploaded timetable'
   const selection = selectCourses(september.entries, catalogue.map((course) => course.courseCode));
   assert.equal(selection.unmatched.length, 0, 'no course with lessons in the period is unmatched');
   assert.equal(selection.entries.length, september.entries.length, 'selecting the whole catalogue keeps every lesson');
+});
+
+test('16. the end screen offers add-to-calendar and an HTML download with clickable links', async () => {
+  const dataset = processWorkbook(await loadWorkbook(REFERENCE_WORKBOOK));
+  const { calendarState } = await import('../timetableflow/test/helpers/uiFlow.js');
+  let state = calendarState(dataset, ['IFT 211', 'CMS 302']);
+  state = reduce(state, { type: 'calendar/prepare', dtStamp: '2026-09-01T10:00:00.000Z' });
+
+  const html = renderApp(state);
+  assert.ok(html.includes('Download calendar (.ics)'), 'the calendar download is offered');
+  assert.ok(html.includes('Download timetable (.html)'), 'the HTML download is offered');
+  assert.ok(html.includes('Add to Google Calendar'), 'per-lesson Google links are offered');
+
+  const file = state.calendar.html;
+  const verified = state.timetable.entries.filter((entry) => linkState(entry) === 'verified');
+  assert.ok(verified.length > 0, 'the selection has verified lessons');
+  const clickable = (file.match(/<a class="link link-ok" href="https:\/\/meet\.google\.com[^"]*"/g) ?? []).length;
+  assert.equal(clickable, verified.length, 'exactly one clickable link per verified lesson');
+  const verifiedUrls = new Set(verified.map((entry) => entry.lessonUrl));
+  const heldBack = state.timetable.entries.filter((entry) => linkState(entry) === 'needs-verification' && entry.lessonUrl && !verifiedUrls.has(entry.lessonUrl));
+  for (const entry of heldBack) {
+    assert.ok(!file.includes(`href="${entry.lessonUrl}"`), 'held-back links are never clickable');
+  }
 });

@@ -151,6 +151,12 @@ export function calendarFilename(state, today = new Date().toISOString().slice(0
   return slug ? `timetableflow-${slug}-${today}.ics` : `timetableflow-${today}.ics`;
 }
 
+/** Download name for the standalone HTML timetable (clickable lesson links). */
+export function htmlFilename(state, today = new Date().toISOString().slice(0, 10)) {
+  const slug = (state.student ?? '').trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return slug ? `timetableflow-${slug}-${today}.html` : `timetableflow-${today}.html`;
+}
+
 /** Headline numbers for the completion state — all derived, none invented. */
 export function completionStats(state) {
   const summary = state.timetable?.summary;

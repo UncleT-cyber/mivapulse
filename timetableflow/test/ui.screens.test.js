@@ -248,7 +248,7 @@ test('screen 5 — calendar flow explains exactly what the student gets', () => 
   const state = calendarState(dataset, ['IFT 211', 'NSC 309', 'CSC 101']);
   const html = renderApp(state);
   assert.ok(html.includes('Your timetable is ready.'));
-  assert.ok(html.includes('Add your classes to your calendar?'));
+  assert.ok(html.includes('Add your classes to your calendar, or download your timetable.'));
   assert.ok(html.includes('Download calendar'));
   assert.ok(html.includes('Google Calendar'));
   assert.ok(html.includes('Apple Calendar'));
@@ -319,7 +319,7 @@ test('screen 6 — completion shows the real totals of the finished timetable', 
   assert.ok(text.includes(`${state.timetable.summary.courses} courses`));
   assert.ok(text.includes('September 2026'));
   assert.ok(html.includes('View timetable'));
-  assert.ok(html.includes('Download calendar again'));
+  assert.ok(html.includes('Download calendar (.ics)'));
   assert.ok(text.includes('need verification'), 'link states survive to the end');
   assertClean(html, 'complete');
 });

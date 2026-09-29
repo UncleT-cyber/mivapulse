@@ -20,7 +20,7 @@
  */
 
 import { spawn } from 'node:child_process';
-import { mkdir, readdir, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -368,6 +368,20 @@ async function main() {
     await shot('09-complete');
     const downloaded = await readdir(path.join(SHOTS, 'downloads')).catch(() => []);
     check('The .ics file is actually downloaded', downloaded.some((name) => name.endsWith('.ics')), downloaded.join(', '));
+
+    // the same end screen offers the HTML download — verified lessons keep
+    // their clickable join links in the file
+    await click('[data-action="calendar/download-html"]');
+    await sleep(900);
+    const afterHtml = await readdir(path.join(SHOTS, 'downloads')).catch(() => []);
+    const htmlFile = afterHtml.find((name) => name.endsWith('.html'));
+    check('The HTML timetable is actually downloaded', Boolean(htmlFile), afterHtml.join(', '));
+    let htmlContent = '';
+    if (htmlFile) htmlContent = await readFile(path.join(SHOTS, 'downloads', htmlFile), 'utf8').catch(() => '');
+    const clickableLinks = (htmlContent.match(/href="https?:\/\/meet\.google\.com[^"]*"/g) ?? []).length;
+    check('The downloaded HTML keeps clickable verified links',
+      htmlContent.includes('<!DOCTYPE html>') && clickableLinks > 0,
+      `${clickableLinks} clickable meet links`);
 
     // ── 11. return to Study Lab keeps the workspace ───────────────────────
     await click('#tabNotes');

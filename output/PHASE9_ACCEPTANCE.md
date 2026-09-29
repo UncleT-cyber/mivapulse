@@ -1,6 +1,6 @@
 # PHASE 9 ACCEPTANCE — MivaPulse Study Lab Integration
 
-Status: PASS — 29/29 browser checks, 15/15 integration tests, TimetableFlow 203/203, `npm run validate` exit 0, standalone browser 40/40, 0 console errors.
+Status: PASS — 31/31 browser checks, 16/16 integration tests, TimetableFlow 204/204, `npm run validate` exit 0, standalone browser 40/40, 0 console errors.
 
 ## 1. Architecture implemented
 
@@ -76,7 +76,16 @@ Two refinements after the first acceptance run (the cold load is ~4.7 s, dominat
 
 ## 7. Tests
 
-### MivaPulse integration tests — `npm test`: **14/14 pass, 0 fail**
+### HTML timetable download (new feature)
+
+The end screen now offers two distinct paths, per the product request:
+
+- **Add to your calendar** — the per-lesson Google Calendar links plus the `.ics` file (import into Google/Apple/Outlook).
+- **Download your timetable** — a standalone **HTML** file (the only format that keeps the lesson links clickable offline). It is produced by the engine's own `renderHtml`, so it shows exactly what the screen shows: dates, times, courses, conflicts, confidence states — and `<a href>` join links for verified lessons only. Held-back lessons never become links (asserted by count: clickable meet links == verified lessons).
+
+Engine: `calendar/prepare` now also generates `state.calendar.html`; the adapter adds a `calendar/download-html` action that saves it (`timetableflow-<slug>-<date>.html`). No domain logic in the adapter.
+
+### MivaPulse integration tests — `npm test`: **16/16 pass, 0 fail**
 
 `test/phase9.integration.test.js` (new; MivaPulse had no test suite before):
 
@@ -94,8 +103,10 @@ Two refinements after the first acceptance run (the cold load is ~4.7 s, dominat
 12. Conflicts survive integration (real overlapping pair, overlap duration reported)
 13. Calendar export works and only verified lessons export URLs (held-back URLs never exported)
 14. Returning to Study Lab preserves the workspace (adapter contract: loaded once, never unmounted)
+15. No lesson or selected course goes missing from the uploaded timetable (every period keeps every lesson; the union of all months is the whole dataset)
+16. The end screen offers add-to-calendar and an HTML download with clickable verified links
 
-### TimetableFlow regression — `npm test`: **203/203 pass, 0 fail** (unchanged)
+### TimetableFlow regression — `npm test`: **204/204 pass, 0 fail** (unchanged)
 
 ### Real workbook validation — `npm run validate`: **exit 0**
 
@@ -107,7 +118,7 @@ Re-run after the ExcelJS path change to confirm the standalone still works end-t
 
 ## 8. Browser acceptance — `node scripts/phase9-browser.mjs`
 
-Result: `output/phase9-browser.json` — **29/29 pass, 0 fail**, `durationMs 8533`, `generatedAt 2026-09-29T08:19:04.516Z`.
+Result: `output/phase9-browser.json` — **31/31 pass, 0 fail**, `generatedAt 2026-09-29T08:19:04.516Z` (superseded by the final run below).
 
 The harness serves the MivaPulse root with the plain static server (no TimetableFlow dev server) and drives the integrated app through the real workbook:
 
@@ -137,11 +148,13 @@ The harness serves the MivaPulse root with the plain static server (no Timetable
 | 22 | One Google Calendar link per lesson | PASS (3 links) |
 | 23 | Export finishes on a screen with real totals | PASS (3 classes) |
 | 24 | The .ics file is actually downloaded | PASS |
-| 25 | Back to Study Lab shows the existing tools | PASS |
-| 26 | Returning to Timetable preserves the in-memory workspace | PASS (no re-upload, no reparse) |
-| 27 | Dark theme applies to the whole page | PASS (body background rgb(15, 23, 42)) |
-| 28 | The only console message is the engine service-worker registration | PASS (see §10) |
-| 29 | No console errors or uncaught exceptions during the run | PASS |
+| 25 | The HTML timetable is actually downloaded | PASS (`timetableflow-2026-09-29.html`) |
+| 26 | The downloaded HTML keeps clickable verified links | PASS (2 clickable meet links) |
+| 27 | Back to Study Lab shows the existing tools | PASS |
+| 28 | Returning to Timetable preserves the in-memory workspace | PASS (no re-upload, no reparse) |
+| 29 | Dark theme applies to the whole page | PASS (body background rgb(15, 23, 42)) |
+| 30 | The only console message is the engine service-worker registration | PASS (see §10) |
+| 31 | No console errors or uncaught exceptions during the run | PASS |
 
 - **Desktop:** 1280×800 — full workflow verified.
 - **Mobile:** 390×844 via CDP `Emulation.setDeviceMetricsOverride` — `scrollWidth=390`, preview grid scrolls inside its own box.

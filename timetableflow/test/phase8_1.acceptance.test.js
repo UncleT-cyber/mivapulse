@@ -338,3 +338,47 @@ test('real workbook: periods are discovered, filtered and switchable', async () 
 function periodByIdFrom(dataset, id) {
   return periodById(dataset.entries, id);
 }
+
+test('the HTML download is a standalone page with clickable verified links', () => {
+  const july = [
+    ...lessonsOf('2044-07', { verifiedCode: 'SUM 101', conflictedCode: 'SUM 102', missingCode: 'SUM 103' }),
+    // a held-back lesson that still carries a URL (title mismatch) — the case
+    // that must never become a clickable link in the download
+    makeEntry({
+      courseCode: 'SUM 104',
+      date: '2044-07-08',
+      day: 'Thursday',
+      startTime: '09:00',
+      endTime: '10:00',
+      lessonUrl: 'https://meet.google.com/held-back-url',
+      match: { tier: 'title', rule: 'title-mismatch', ambiguous: false, titleMismatch: true, linkTitle: 'A different title', candidates: [], conflict: null },
+    }),
+  ];
+  const dataset = datasetOf(july, 'July 2044 Live Lesson Time');
+  let state = periodScreen(dataset);
+  state = reduce(state, { type: 'student/set', value: 'Ada Lovelace' });
+  state = choosePeriod(state, '2044-07');
+  state = reduce(state, { type: 'period/continue' });
+  state = toggleCourses(state, ['SUM 101', 'SUM 102', 'SUM 104']);
+  state = generate(state, GENERATED_AT);
+  state = reduce(state, { type: 'preview/confirm' });
+  state = reduce(state, { type: 'calendar/prepare', dtStamp: DT_STAMP });
+
+  const html = state.calendar.html;
+  assert.equal(typeof html, 'string', 'the HTML export is generated');
+  assert.ok(html.includes('<!DOCTYPE html>') && html.includes('</html>'), 'a complete standalone document');
+  assert.ok(html.includes('My timetable'), 'the timetable title appears');
+  assert.ok(html.includes('Ada Lovelace'), 'the student name appears in the file');
+
+  const verified = state.timetable.entries.filter((entry) => linkState(entry) === 'verified');
+  const clickable = (html.match(/<a class="link link-ok" href="https:\/\/meet\.google\.com[^"]*"/g) ?? []).length;
+  assert.equal(clickable, verified.length, 'exactly one clickable link per verified lesson');
+  // a held-back lesson whose URL is not shared with a verified lesson never
+  // appears as a clickable link (CMS 302 has both kinds, so match by count)
+  const verifiedUrls = new Set(verified.map((entry) => entry.lessonUrl));
+  const heldBack = state.timetable.entries.filter((entry) => linkState(entry) === 'needs-verification' && entry.lessonUrl && !verifiedUrls.has(entry.lessonUrl));
+  assert.ok(heldBack.length > 0, 'the selection contains a held-back lesson with a private URL');
+  for (const entry of heldBack) {
+    assert.ok(!html.includes(`href="${entry.lessonUrl}"`), 'held-back links are never clickable');
+  }
+});

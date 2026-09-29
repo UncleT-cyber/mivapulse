@@ -9,7 +9,7 @@
 
 import { initialState, reduce } from '/src/ui/state.js';
 import { renderApp } from '/src/ui/screens.js';
-import { calendarFilename } from '/src/ui/selectors.js';
+import { calendarFilename, htmlFilename } from '/src/ui/selectors.js';
 import { setExcelJS, parseWorkbookBytes } from '/src/app/excelAdapter.js';
 
 const root = document.getElementById('app');
@@ -60,6 +60,10 @@ function dispatch(action) {
     handleDownload();
     return;
   }
+  if (action.type === 'calendar/download-html') {
+    handleDownloadHtml();
+    return;
+  }
   const next = reduce(state, action);
   if (next !== state) {
     state = next;
@@ -79,6 +83,18 @@ function saveCalendar(ics, filename) {
   setTimeout(() => URL.revokeObjectURL(url), 5000);
 }
 
+function saveHtml(html, filename) {
+  const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 5000);
+}
+
 function handleDownload() {
   if (state.calendar.status !== 'ready') {
     dispatch({ type: 'calendar/prepare' });
@@ -86,6 +102,19 @@ function handleDownload() {
   }
   try {
     saveCalendar(state.calendar.ics, calendarFilename(state));
+    dispatch({ type: 'calendar/exported' });
+  } catch (error) {
+    dispatch({ type: 'calendar/failed', message: error?.message });
+  }
+}
+
+function handleDownloadHtml() {
+  if (state.calendar.status !== 'ready') {
+    dispatch({ type: 'calendar/prepare' });
+    if (state.calendar.status !== 'ready') return;
+  }
+  try {
+    saveHtml(state.calendar.html, htmlFilename(state));
     dispatch({ type: 'calendar/exported' });
   } catch (error) {
     dispatch({ type: 'calendar/failed', message: error?.message });
