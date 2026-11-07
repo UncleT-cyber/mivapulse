@@ -1,0 +1,422 @@
+[
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Financing",
+    "question": "An incorporated company raising funds by selling stock to interested stakeholders demonstrates",
+    "options": {
+      "A": "Private share placement",
+      "B": "Public offering",
+      "C": "Business angel funding",
+      "D": "Venture capital financing"
+    },
+    "correct_answer": "A",
+    "explanation": "Private share placement. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Marketing & Opportunity Recognition",
+    "question": "When an entrepreneur identifies a market gap and develops products to fill unmet consumer demands, this describes which entrepreneurial function?",
+    "options": {
+      "A": "Resource acquisition",
+      "B": "Innovation",
+      "C": "Risk bearing",
+      "D": "Opportunity perception"
+    },
+    "correct_answer": "D",
+    "explanation": "Opportunity perception. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Characteristics",
+    "question": "An entrepreneur with a high tolerance for ambiguous situations and unfamiliar information demonstrates",
+    "options": {
+      "A": "Tolerance of ambiguity",
+      "B": "Long-term involvement",
+      "C": "Self-confidence",
+      "D": "Internal locus of control"
+    },
+    "correct_answer": "A",
+    "explanation": "Tolerance of ambiguity. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Management & Intrapreneurship",
+    "question": "The primary purpose of setting explicit innovation goals within an organisation is to",
+    "options": {
+      "A": "Reduce operational costs",
+      "B": "Achieve mutually agreed objectives",
+      "C": "Increase employee supervision",
+      "D": "Standardise all processes"
+    },
+    "correct_answer": "B",
+    "explanation": "Achieve mutually agreed objectives. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Management & Intrapreneurship",
+    "question": "An entrepreneur who lacks relevant management education but possesses technical training for a venture demonstrates which dimension of distinction?",
+    "options": {
+      "A": "Time orientation differences",
+      "B": "Risk tolerance levels",
+      "C": "Management skills variation",
+      "D": "Motivation source differences"
+    },
+    "correct_answer": "C",
+    "explanation": "Management skills variation. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Financing",
+    "question": "An organisation that implements management principles solely for profit maximisation while neglecting social responsibilities would violate which fundamental concept of management?",
+    "options": {
+      "A": "Efficiency orientation",
+      "B": "Universal applicability",
+      "C": "Strategic planning",
+      "D": "Goal achievement"
+    },
+    "correct_answer": "B",
+    "explanation": "Universal applicability. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Management & Intrapreneurship",
+    "question": "An intrapreneur differs from a traditional entrepreneur primarily because the intrapreneur:",
+    "options": {
+      "A": "Bears every personal financial liability for the losses",
+      "B": "Operates within an existing organisational structure",
+      "C": "Takes independent investment decisions",
+      "D": "Establishes new legal business entities"
+    },
+    "correct_answer": "B",
+    "explanation": "Operates within an existing organisational structure. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Characteristics",
+    "question": "Which scenario BEST exemplifies entrepreneurship rather than simply small business ownership?",
+    "options": {
+      "A": "Purchasing a franchise with established operating procedures",
+      "B": "Operating a family grocery store with unchanged inventory",
+      "C": "Creating a subscription service that challenges delivery methods",
+      "D": "Expanding a retail outlet to a second location"
+    },
+    "correct_answer": "C",
+    "explanation": "Creating a subscription service that challenges delivery methods. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Financing",
+    "question": "A business angel who provides start-up funding in exchange for equity without participating in daily management is",
+    "options": {
+      "A": "Institutional investor",
+      "B": "Active board member",
+      "C": "Venture capitalist",
+      "D": "Silent equity partner"
+    },
+    "correct_answer": "D",
+    "explanation": "Silent equity partner. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Innovation & Opportunity Recognition",
+    "question": "The 'window of opportunity' concept suggests that entrepreneurs must:",
+    "options": {
+      "A": "Focus exclusively on product development",
+      "B": "Wait for perfect market conditions",
+      "C": "Only pursue established markets",
+      "D": "Enter markets within favourable time periods"
+    },
+    "correct_answer": "D",
+    "explanation": "Enter markets within favourable time periods. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Characteristics",
+    "question": "An entrepreneur who has an internal locus of control believes business outcomes depend primarily on:",
+    "options": {
+      "A": "Luck and chance events",
+      "B": "Market competition",
+      "C": "Personal actions and decisions",
+      "D": "Government policies"
+    },
+    "correct_answer": "C",
+    "explanation": "Personal actions and decisions. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Marketing & Opportunity Recognition",
+    "question": "The marketing function that involves shaping production, packaging, and delivery to satisfy consumer desires represents",
+    "options": {
+      "A": "Pricing determination",
+      "B": "Promotion strategy",
+      "C": "Distribution logistics",
+      "D": "Product development input"
+    },
+    "correct_answer": "D",
+    "explanation": "Product development input. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Business Planning & Feasibility",
+    "question": "A business plan prepared after confirming business viability focuses primarily on",
+    "options": {
+      "A": "Venture feasibility assessment",
+      "B": "Sustainability and growth",
+      "C": "Market opportunity identification",
+      "D": "Resource commitment decisions"
+    },
+    "correct_answer": "B",
+    "explanation": "Sustainability and growth. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Characteristics",
+    "question": "An entrepreneur conducting primary data collection through observation and interviews is engaged in:",
+    "options": {
+      "A": "Market survey execution",
+      "B": "Environmental scanning",
+      "C": "Secondary research compilation",
+      "D": "Market analysis reporting"
+    },
+    "correct_answer": "A",
+    "explanation": "Market survey execution. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Innovation & Opportunity Recognition",
+    "question": "An entrepreneur who encourages family support despite the risk of future obligations demonstrates which consideration in choosing a business opportunity?",
+    "options": {
+      "A": "Risk profile",
+      "B": "Support networks",
+      "C": "Financial capability",
+      "D": "Personal interest"
+    },
+    "correct_answer": "B",
+    "explanation": "Support networks. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Financing",
+    "question": "A financial institution that requires title to land as loan security is primarily concerned with which loan evaluation factor?",
+    "options": {
+      "A": "Collateral security",
+      "B": "Management capacity",
+      "C": "Repayment source",
+      "D": "Character assessment"
+    },
+    "correct_answer": "A",
+    "explanation": "Collateral security. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Management & Intrapreneurship",
+    "question": "A manager who must balance disciplined management practices with entrepreneurial vision is attempting to achieve",
+    "options": {
+      "A": "Operational excellence",
+      "B": "Innovation equilibrium",
+      "C": "Strategic balance",
+      "D": "Organisational stability"
+    },
+    "correct_answer": "C",
+    "explanation": "Strategic balance. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Business Planning & Feasibility",
+    "question": "The operations plan section of a business plan primarily describes",
+    "options": {
+      "A": "Financial projections",
+      "B": "Day-to-day business operations",
+      "C": "Marketing and sales strategies",
+      "D": "Management team qualifications"
+    },
+    "correct_answer": "B",
+    "explanation": "Day-to-day business operations. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Characteristics",
+    "question": "An entrepreneur who prioritises achieving self-determined goals over external recognition is demonstrating which motivational characteristic?",
+    "options": {
+      "A": "Power motivation",
+      "B": "Achievement motivation",
+      "C": "External motivation",
+      "D": "Financial motivation"
+    },
+    "correct_answer": "B",
+    "explanation": "Achievement motivation. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Business Planning & Feasibility",
+    "question": "A business plan that effectively communicates market potential and debt servicing capability primarily serves as:",
+    "options": {
+      "A": "Operational roadmap for daily activities",
+      "B": "Communication tool for external financing",
+      "C": "Performance measurement benchmark",
+      "D": "Marketing strategy document"
+    },
+    "correct_answer": "B",
+    "explanation": "Communication tool for external financing. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Management & Intrapreneurship",
+    "question": "A manager who consistently delivers innovation, quality, service, speed, and competitiveness is primarily managing for",
+    "options": {
+      "A": "Personal career advancement",
+      "B": "Regulatory compliance",
+      "C": "Competitive advantage",
+      "D": "Cost minimisation"
+    },
+    "correct_answer": "C",
+    "explanation": "Competitive advantage. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Innovation & Opportunity Recognition",
+    "question": "A potential entrepreneur who copies an existing successful business model while improving customer convenience is utilising which idea generation source?",
+    "options": {
+      "A": "Work experience",
+      "B": "Joint effort",
+      "C": "Franchise actual acquisition",
+      "D": "Existing business copying"
+    },
+    "correct_answer": "D",
+    "explanation": "Existing business copying. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Management & Intrapreneurship",
+    "question": "The four traditional management principles that also apply to entrepreneurship include:",
+    "options": {
+      "A": "Leading, controlling, planning, and delegating",
+      "B": "Organising, leading, controlling, and innovating",
+      "C": "Planning, organising, leading, and controlling",
+      "D": "Planning, organising, directing, and evaluating"
+    },
+    "correct_answer": "C",
+    "explanation": "Planning, organising, leading, and controlling. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Marketing & Opportunity Recognition",
+    "question": "The element of the promotional mix that involves presenting the firm's image favourably without direct media cost is",
+    "options": {
+      "A": "Advertising campaigns",
+      "B": "Personal selling",
+      "C": "Sales promotions",
+      "D": "Publicity activities"
+    },
+    "correct_answer": "D",
+    "explanation": "Publicity activities. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Financing",
+    "question": "An entrepreneur who uses internal funding for a start-up while maintaining complete operational control would be MOST accurately described as relying on:",
+    "options": {
+      "A": "Personal resources",
+      "B": "Business angel investment",
+      "C": "Venture capital financing",
+      "D": "Private share placement"
+    },
+    "correct_answer": "A",
+    "explanation": "Personal resources. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Innovation & Opportunity Recognition",
+    "question": "The primary distinction between a business idea and a business opportunity lies in:",
+    "options": {
+      "A": "Time required to implement",
+      "B": "Originality of the concept",
+      "C": "Production complexity",
+      "D": "Customer willingness to pay"
+    },
+    "correct_answer": "D",
+    "explanation": "Customer willingness to pay. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Financing",
+    "question": "A feasibility study conducted BEFORE committing resources primarily determines:",
+    "options": {
+      "A": "Workability and profitability",
+      "B": "Organisational structure",
+      "C": "Sustainability and growth strategies",
+      "D": "Operational efficiency levels"
+    },
+    "correct_answer": "A",
+    "explanation": "Workability and profitability. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Characteristics",
+    "question": "An entrepreneur's choice between sole proprietorship, partnership, or limited liability company depends primarily on",
+    "options": {
+      "A": "Type of product",
+      "B": "Market competition level",
+      "C": "Capital availability",
+      "D": "Industry regulation"
+    },
+    "correct_answer": "C",
+    "explanation": "Capital availability. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Characteristics",
+    "question": "An entrepreneur establishing membership in trade groups like MAN and NACCIMA is performing which entrepreneurial activity?",
+    "options": {
+      "A": "Technology adaptation",
+      "B": "Political administration",
+      "C": "Management control",
+      "D": "Production engineering"
+    },
+    "correct_answer": "B",
+    "explanation": "Political administration. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Innovation & Opportunity Recognition",
+    "question": "A company that designs reward systems for innovative ideas while also allowing calculated failures to be examined is successfully implementing:",
+    "options": {
+      "A": "Operational efficiency systems",
+      "B": "Cost reduction strategies",
+      "C": "Corporate innovation philosophy",
+      "D": "Competitive benchmarking"
+    },
+    "correct_answer": "C",
+    "explanation": "Corporate innovation philosophy. This is the answer identified in the university assessment feedback.",
+    "type": "mcq"
+  }
+]
