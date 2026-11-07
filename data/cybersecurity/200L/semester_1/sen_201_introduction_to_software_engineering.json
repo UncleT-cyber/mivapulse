@@ -1,0 +1,666 @@
+[
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "A lead architect is designing a banking application. The client specifies that the system must 'handle 10,000 concurrent transactions with sub-second latency'. How should this requirement be categorised?",
+    "options": {
+      "A": "A non-functional requirement defining system quality attributes.",
+      "B": "A project constraint regarding the existing technical hardware.",
+      "C": "A functional requirement defining specific system behaviours.",
+      "D": "A user story describing the end-user's interaction with the bank."
+    },
+    "correct_answer": "A",
+    "explanation": "A non-functional requirement defining system quality attributes. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 1
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "A software engineer uses 'Interviews' to gather requirements for a new hospital system. What is the main risk of using ONLY this method?",
+    "options": {
+      "A": "It is too difficult to reach a large number of diverse stakeholders",
+      "B": "It prevents the developer from asking follow-up questions for clarity",
+      "C": "It is a very expensive method compared to conducting workshops",
+      "D": "It produces data that is too structured and lacks personal insight"
+    },
+    "correct_answer": "A",
+    "explanation": "It is too difficult to reach a large number of diverse stakeholders is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 2
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "Why is 'Clear and Comprehensive Requirement Specification' vital for project communication?",
+    "options": {
+      "A": "It guarantees that no bugs will be found during the testing phase",
+      "B": "It allows developers to work without talking to the client",
+      "C": "It reduces the time spent on the design phase of the project",
+      "D": "It serves as a common reference point for all stakeholders"
+    },
+    "correct_answer": "D",
+    "explanation": "It serves as a common reference point for all stakeholders is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 3
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "Which of the following best defines 'Requirement Validation'?",
+    "options": {
+      "A": "The process of coding the requirements into a functional system.",
+      "B": "The process of gathering new requirements from the stakeholders.",
+      "C": "Ensuring requirements accurately represent the needs of the client.",
+      "D": "Identifying if the software meets the hardware's technical limits."
+    },
+    "correct_answer": "C",
+    "explanation": "Ensuring requirements accurately represent the needs of the client. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 4
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Development Lifecycle",
+    "question": "Which statement best describes the primary objective of the 'Analysis Phase' in software engineering?",
+    "options": {
+      "A": "Translating user needs into a detailed, executable technical blueprint.",
+      "B": "Writing the primary source code based on the initial user interviews.",
+      "C": "Developing the final database schema and user interface components.",
+      "D": "Evaluating gathered requirements for their feasibility and clarity."
+    },
+    "correct_answer": "D",
+    "explanation": "Evaluating gathered requirements for their feasibility and clarity. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 5
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Design & Architecture",
+    "question": "Match the architecture style with its characteristic",
+    "type": "matching",
+    "pairs": [
+      {
+        "prompt": "Microservices",
+        "answer": "Independent services"
+      },
+      {
+        "prompt": "Monolithic",
+        "answer": "Single codebase"
+      },
+      {
+        "prompt": "Layered",
+        "answer": "Organised by levels"
+      }
+    ],
+    "choices": [
+      "Independent services",
+      "Single codebase",
+      "Organised by levels"
+    ],
+    "explanation": "Microservices split a system into independently deployable services; monolithic architecture is a unified application; layered architecture separates responsibilities into levels.",
+    "assessment": 1,
+    "assessment_question": 6
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "In the context of requirements specification, what is the key difference between a 'Requirement' and a 'Constraint'?",
+    "options": {
+      "A": "Requirements define the 'how' while constraints define the 'what'",
+      "B": "Requirements are optional features while constraints are mandatory",
+      "C": "Requirements are technical while constraints are always business-led",
+      "D": "Requirements define desired functions while constraints limit design"
+    },
+    "correct_answer": "D",
+    "explanation": "Requirements define desired functions while constraints limit design is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 7
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "Establishing links between requirements and subsequent design elements to ensure every need is addressed and changes are tracked. Which concept does this describe?",
+    "options": {
+      "A": "Requirements validation",
+      "B": "Requirements elicitation",
+      "C": "Requirements traceability",
+      "D": "Requirements analysis"
+    },
+    "correct_answer": "C",
+    "explanation": "Requirements traceability is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 8
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "A developer is building a prototype to show a client how a complex navigation menu will work. What is the primary purpose of this action?",
+    "options": {
+      "A": "To complete the Implementation phase earlier than the project plan.",
+      "B": "To perform the final validation of the system's security features.",
+      "C": "To help stakeholders better express and refine their requirements.",
+      "D": "To replace the need for a formal requirements specification document."
+    },
+    "correct_answer": "C",
+    "explanation": "To help stakeholders better express and refine their requirements. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 9
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "A developer is reviewing a requirements specification document. She finds a requirement that says 'The system should be fast.' Why is this a poor requirement?",
+    "options": {
+      "A": "It is ambiguous and cannot be objectively verified",
+      "B": "It is not traceable to a specific stakeholder need",
+      "C": "It is not modifiable for future software versions",
+      "D": "It is a functional requirement instead of a non-functional one"
+    },
+    "correct_answer": "A",
+    "explanation": "It is ambiguous and cannot be objectively verified is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 10
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Development Lifecycle",
+    "question": "Arrange the following phases of the Software Development Life Cycle (SDLC) in the correct logical order for a structured approach:",
+    "options": {
+      "A": "Requirements Gathering -> Design -> Analysis -> Implementation -> Testing.",
+      "B": "Design -> Requirements Gathering -> Implementation -> Analysis -> Testing.",
+      "C": "Requirements Gathering -> Analysis -> Design -> Implementation -> Testing.",
+      "D": "Analysis -> Requirements Gathering -> Design -> Testing -> Implementation."
+    },
+    "correct_answer": "C",
+    "explanation": "Requirements Gathering -> Analysis -> Design -> Implementation -> Testing. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 11
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Engineering Fundamentals",
+    "question": "What distinguishes software engineering from simple computer programming?",
+    "options": {
+      "A": "The application of systematic engineering principles.",
+      "B": "The ability to write code without any prior documentation.",
+      "C": "The focus on creating visually appealing user interfaces.",
+      "D": "The use of high-level programming languages like Python."
+    },
+    "correct_answer": "A",
+    "explanation": "The application of systematic engineering principles. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 12
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Design & Architecture",
+    "question": "In the 'design phase', what is the logical progression of activities?",
+    "options": {
+      "A": "Creating a blueprint -> Defining architecture -> Coding features.",
+      "B": "Writing code -> Testing components -> Creating a blueprint.",
+      "C": "Identifying needs -> Analysis -> Creating a detailed blueprint.",
+      "D": "Defining architecture -> Identifying users -> Gathering needs."
+    },
+    "correct_answer": "C",
+    "explanation": "Identifying needs -> Analysis -> Creating a detailed blueprint. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 13
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Development Lifecycle",
+    "question": "A software team is working on a project where the client is unsure of the final needs and expects frequent changes. Which SDLC model is most appropriate?",
+    "options": {
+      "A": "The Agile methodology because it accommodates changing requirements",
+      "B": "The Waterfall model because it emphasises thorough documentation",
+      "C": "The Waterfall model because it follows a strict linear progression",
+      "D": "The Agile methodology because it eliminates the need for any design"
+    },
+    "correct_answer": "A",
+    "explanation": "The Agile methodology because it accommodates changing requirements is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 14
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Development Lifecycle",
+    "question": "A project manager decides to use the 'Waterfall Model' for a government project. Which condition makes this a high-risk decision?",
+    "options": {
+      "A": "The requirements are likely to change during the development.",
+      "B": "The project has a fixed budget and a very strict deadline.",
+      "C": "The project requirements are very stable and well-understood.",
+      "D": "The team is already experienced in using linear SDLC models."
+    },
+    "correct_answer": "A",
+    "explanation": "The requirements are likely to change during the development. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 15
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "Which set of 'Non-Functional Requirements' is correctly identified?",
+    "options": {
+      "A": "Platform constraints, user stories, and error logs",
+      "B": "User login, data encryption, and video streaming",
+      "C": "Creating accounts, usability, and database design",
+      "D": "Scalability, performance, and system security"
+    },
+    "correct_answer": "D",
+    "explanation": "Scalability, performance, and system security is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 16
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Development Lifecycle",
+    "question": "A team is in the 'maintenance phase' of a legacy application. A user reports a bug that crashes the system. What activity is being performed?",
+    "options": {
+      "A": "Adaptive maintenance to update the software for new hardware",
+      "B": "Corrective maintenance to fix defects and ensure functionality",
+      "C": "Preventive maintenance to stop future bugs from occurring",
+      "D": "Perfective maintenance to add new features requested by users"
+    },
+    "correct_answer": "B",
+    "explanation": "Corrective maintenance to fix defects and ensure functionality is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 17
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Engineering Fundamentals",
+    "question": "During a project, the client continues to add small features that were not in the original agreement, causing the project to exceed its timeline. What is this called?",
+    "options": {
+      "A": "Agile iteration",
+      "B": "Technical debt",
+      "C": "Scope creep",
+      "D": "Feature refinement"
+    },
+    "correct_answer": "C",
+    "explanation": "Scope creep is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 18
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Development Lifecycle",
+    "question": "Identify the correct pairing of an SDLC phase and its primary deliverable:",
+    "options": {
+      "A": "Design phase; functional prototype",
+      "B": "Implementation phase; source code",
+      "C": "Testing phase; user requirements document",
+      "D": "Analysis phase; visual wireframes"
+    },
+    "correct_answer": "B",
+    "explanation": "Implementation phase; source code is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 19
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Development Lifecycle",
+    "question": "'A structured approach to creating software that involves a series of phases with specific objectives.' What is being defined?",
+    "options": {
+      "A": "Software development process",
+      "B": "Software maintenance phase",
+      "C": "Software engineering principles",
+      "D": "Requirements specification"
+    },
+    "correct_answer": "A",
+    "explanation": "Software development process is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 1,
+    "assessment_question": 20
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Testing & Quality",
+    "question": "A bank's mobile app fails whenever 5,000 users log in simultaneously, even though all individual features work correctly. Which type of testing was likely insufficient?",
+    "options": {
+      "A": "Code review",
+      "B": "Corrective maintenance",
+      "C": "Unit testing",
+      "D": "Performance testing"
+    },
+    "correct_answer": "D",
+    "explanation": "Performance testing is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 1
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Engineering Fundamentals",
+    "question": "Which of the following is the MOST effective way to prevent 'Scope Creep' in a software project?",
+    "options": {
+      "A": "Using only high-level programming languages.",
+      "B": "Skipping the Analysis phase to start coding immediately.",
+      "C": "Increasing the number of developers on the team.",
+      "D": "Maintaining a clear and comprehensive Requirements Specification."
+    },
+    "correct_answer": "D",
+    "explanation": "Maintaining a clear and comprehensive Requirements Specification. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 2
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "A startup is developing a radical new social media app. The requirements are expected to change weekly based on user feedback. Which SDLC model should they adopt?",
+    "options": {
+      "A": "Agile methodology",
+      "B": "Monolithic architecture",
+      "C": "Waterfall model",
+      "D": "Structured analysis"
+    },
+    "correct_answer": "A",
+    "explanation": "Agile methodology is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 3
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Engineering Fundamentals",
+    "question": "A team lead notices that two developers have written overlapping code for the same function, leading to confusion. Which team management principle was likely violated?",
+    "options": {
+      "A": "Clear roles and responsibilities",
+      "B": "Active listening",
+      "C": "Performance metrics",
+      "D": "Continuous integration"
+    },
+    "correct_answer": "A",
+    "explanation": "Clear roles and responsibilities is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 4
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Testing & Quality",
+    "question": "A development team is building a flight control system where a single error could lead to catastrophic failure. Which quality attribute should be the highest priority during the design and architecture phase?",
+    "options": {
+      "A": "Scalability",
+      "B": "Usability",
+      "C": "Reliability",
+      "D": "Portability"
+    },
+    "correct_answer": "C",
+    "explanation": "Reliability is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 5
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "Why is 'Modifiable' listed as a key characteristic of a good requirements specification?",
+    "options": {
+      "A": "To ensure the document can be updated easily as the project evolves",
+      "B": "To make the document shorter and easier for developers to read",
+      "C": "To allow the client to change the project scope without notice",
+      "D": "To allow developers to skip the Testing phase when time is short"
+    },
+    "correct_answer": "A",
+    "explanation": "To ensure the document can be updated easily as the project evolves is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 6
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Testing & Quality",
+    "question": "'Quantifiable measures used to evaluate the quality, performance, and progress of software development.' This describes —-",
+    "options": {
+      "A": "software design patterns",
+      "B": "software metrics",
+      "C": "software maintenance",
+      "D": "software prototyping"
+    },
+    "correct_answer": "B",
+    "explanation": "software metrics is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 7
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Engineering Fundamentals",
+    "question": "What is the key distinction between 'Corrective Maintenance' and 'Adaptive Maintenance'?",
+    "options": {
+      "A": "Corrective fixes defects; Adaptive updates software for new environments",
+      "B": "Corrective improves performance; Adaptive fixes security leaks",
+      "C": "Corrective adds new features; Adaptive fixes bugs",
+      "D": "Corrective is done by users; Adaptive is done by developers"
+    },
+    "correct_answer": "A",
+    "explanation": "Corrective fixes defects; Adaptive updates software for new environments is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 8
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "'The process of evaluating software during or at the end of the development process to determine whether it satisfies specified business requirements.' Which concept does this match?",
+    "options": {
+      "A": "Verification",
+      "B": "Refactoring",
+      "C": "Validation",
+      "D": "Debugging"
+    },
+    "correct_answer": "C",
+    "explanation": "Validation is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 9
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Design & Architecture",
+    "question": "In software architecture, why is 'Separation of Concerns' considered a vital principle?",
+    "options": {
+      "A": "It eliminates the need for any documentation in the project",
+      "B": "It ensures that the software code is encrypted and secure",
+      "C": "It organises components by responsibility to reduce complexity",
+      "D": "It allows the system to run on multiple types of hardware"
+    },
+    "correct_answer": "C",
+    "explanation": "It organises components by responsibility to reduce complexity is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 10
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Testing & Quality",
+    "question": "A developer conducts a 'Code Review' where a peer checks his logic before it is merged. Which category of software engineering does this fall under?",
+    "options": {
+      "A": "Requirements Gathering",
+      "B": "Quality Assurance",
+      "C": "User Acceptance",
+      "D": "Deployment"
+    },
+    "correct_answer": "B",
+    "explanation": "Quality Assurance is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 11
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Testing & Quality",
+    "question": "During a standard software development life cycle (SDLC), in which order should these specific quality-related activities occur?",
+    "options": {
+      "A": "Unit Testing -> Integration Testing -> Requirements Validation -> Maintenance",
+      "B": "Requirements Validation -> Maintenance -> Unit Testing -> Integration Testing",
+      "C": "Requirements Validation -> Unit Testing -> Integration Testing -> Maintenance",
+      "D": "Unit Testing -> Requirements Validation -> Integration Testing -> Maintenance"
+    },
+    "correct_answer": "C",
+    "explanation": "Requirements Validation -> Unit Testing -> Integration Testing -> Maintenance is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 12
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Engineering Fundamentals",
+    "question": "A clinic wants to understand exactly how nurses enter patient data during a busy shift. Which method will give the most direct insight?",
+    "options": {
+      "A": "Surveys",
+      "B": "Interviews",
+      "C": "Workshops",
+      "D": "Observation"
+    },
+    "correct_answer": "D",
+    "explanation": "Observation is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 13
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Engineering Fundamentals",
+    "question": "In a Behaviour-Driven Development (BDD) environment, a developer writes a scenario: 'Given a user is on the login page, When they enter valid credentials, Then they should see the dashboard.' What is the primary benefit of this format?",
+    "options": {
+      "A": "It ensures the software is compatible with all operating systems.",
+      "B": "It improves the execution speed of the source code.",
+      "C": "It replaces the need for a central database schema.",
+      "D": "It allows non-technical stakeholders to understand system behaviour."
+    },
+    "correct_answer": "D",
+    "explanation": "It allows non-technical stakeholders to understand system behaviour. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 14
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "What is the difference between 'requirement validation' and 'requirement verification'?",
+    "options": {
+      "A": "There is no difference; they are interchangeable terms.",
+      "B": "Validation happens after coding; Verification happens before coding.",
+      "C": "Validation is technical; Verification is user-centric.",
+      "D": "Validation checks user needs; Verification checks technical correctness."
+    },
+    "correct_answer": "D",
+    "explanation": "Validation checks user needs; Verification checks technical correctness. is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 15
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Testing & Quality",
+    "question": "In test-driven development (TDD), what is the correct cycle of activities?",
+    "options": {
+      "A": "Write Test -> Run Test (Fail) -> Write Code -> Run Test (Pass).",
+      "B": "Write Code -> Write Test -> Run Test -> Refactor.",
+      "C": "Design Architecture -> Write Code -> Write Test -> Deploy.",
+      "D": "Run Test -> Refactor -> Write Test -> Write Code."
+    },
+    "correct_answer": "A",
+    "explanation": "Write Test -> Run Test (Fail) -> Write Code -> Run Test (Pass). is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 16
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Requirements Engineering",
+    "question": "An enterprise system is being moved from a local server to a cloud-based environment. The developers must ensure the system still meets its 99.9% uptime requirement. This is a task of —-",
+    "options": {
+      "A": "verification of non-functional requirements",
+      "B": "requirements elicitation",
+      "C": "unit testing individual features",
+      "D": "functional validation"
+    },
+    "correct_answer": "A",
+    "explanation": "verification of non-functional requirements is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 17
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Engineering Fundamentals",
+    "question": "A project manager is comparing two documents. Document X describes what the system should do, while Document Y describes how the internal components will interact. Identify the documents.",
+    "options": {
+      "A": "X is Requirements Specification; Y is Software Design",
+      "B": "X is Requirements Analysis; Y is Requirements Elicitation",
+      "C": "X is Software Design; Y is Requirements Specification",
+      "D": "X is System Testing; Y is Unit Testing"
+    },
+    "correct_answer": "A",
+    "explanation": "X is Requirements Specification; Y is Software Design is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 18
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Testing & Quality",
+    "question": "A tester finds a bug where the 'Submit' button does nothing. This bug is found during the integration of the UI and the Database. Which testing phase is this?",
+    "options": {
+      "A": "Unit testing",
+      "B": "Requirements gathering",
+      "C": "Integration testing",
+      "D": "Maintenance phase"
+    },
+    "correct_answer": "C",
+    "explanation": "Integration testing is the best answer because it matches the software engineering concept described in the question.",
+    "type": "mcq",
+    "assessment": 2,
+    "assessment_question": 19
+  },
+  {
+    "course_code": "SEN 201",
+    "topic": "Software Design & Architecture",
+    "question": "Match the design principle with its correct definition",
+    "type": "matching",
+    "pairs": [
+      {
+        "prompt": "Abstraction",
+        "answer": "Hiding details"
+      },
+      {
+        "prompt": "Modularity",
+        "answer": "Dividing into parts"
+      },
+      {
+        "prompt": "Encapsulation",
+        "answer": "Restricting access"
+      }
+    ],
+    "choices": [
+      "Hiding details",
+      "Dividing into parts",
+      "Restricting access"
+    ],
+    "explanation": "Abstraction hides unnecessary implementation detail; modularity decomposes systems into components; encapsulation controls access to internal state.",
+    "assessment": 2,
+    "assessment_question": 20
+  }
+]
