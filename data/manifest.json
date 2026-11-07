@@ -123,6 +123,11 @@
                       "code": "CYB 201",
                       "title": "Introduction to Cybersecurity and Strategy",
                       "file": "cybersecurity/200L/semester_1/cyb_201_introduction_to_cybersecurity_and_strategy.json"
+                    },
+                    {
+                      "code": "CYB 203",
+                      "title": "Cybercrime Law and Countermeasures",
+                      "file": "cybersecurity/200L/semester_1/cyb_203_cybercrime_law_and_countermeasures.json"
                     }
                   ]
                 },
