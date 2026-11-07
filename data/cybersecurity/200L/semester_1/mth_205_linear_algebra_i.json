@@ -472,7 +472,7 @@
       "D": "$a=8,b=3$"
     },
     "correct_answer": "A",
-    "explanation": "IMPORTANT SOURCE ERROR: The LMS marks A as incorrect, but A is mathematically correct: the first two columns are dependent; $a=9,b=5$ introduces one extra independent column, giving rank 2. B and D also yield rank 2; C gives rank 1. Thus this is a multiple-correct-answer question, not a valid single-answer MCQ.",
+    "explanation": "SOURCE GRADING ERROR: Option A ($a=9,b=5$) is mathematically correct despite being marked incorrect in the LMS. With $a=9$, row 3 is three times row 1; with $b=5$, row 4 adds one independent direction, so rank is exactly 2. Option C ($a=9,b=4$) gives rank 1; B and D give rank 3.",
     "type": "mcq"
   },
   {
