@@ -148,6 +148,11 @@
                       "code": "MTH 205",
                       "title": "Linear Algebra I",
                       "file": "cybersecurity/200L/semester_1/mth_205_linear_algebra_i.json"
+                    },
+                    {
+                      "code": "MTH 201",
+                      "title": "Mathematical Methods I",
+                      "file": "cybersecurity/200L/semester_1/mth_201_mathematical_methods_i.json"
                     }
                   ]
                 },
