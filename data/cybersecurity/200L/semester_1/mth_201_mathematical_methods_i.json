@@ -100,7 +100,7 @@
     "topic": "Mid-Semester Assessment",
     "assessment": 1,
     "assessment_question": 7,
-    "question": "If $u=\\sin^{-1}\\left(\\frac{\\sqrt{x}+\\sqrt{y}}{\\sqrt{x+y}}\\right)$, find $x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}$ using Euler's theorem.",
+    "question": "If $u=\\sin^{-1}\\left(\\frac{x+y}{\\sqrt{x}+\\sqrt{y}}\\right)$, find $x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}$ using Euler's theorem.",
     "options": {
       "A": "$u$",
       "B": "$\\cos u$",
@@ -108,7 +108,7 @@
       "D": "$\\frac12\\tan u$"
     },
     "correct_answer": "D",
-    "explanation": "The expression inside the inverse sine is homogeneous of degree $\\frac12$. Euler's theorem gives $xu_x+yu_y=\\frac12\\frac{v}{\\sqrt{1-v^2}}=\\frac12\\tan u$, where $v=\\sin u$.",
+    "explanation": "The expression $v=(x+y)/(\\sqrt{x}+\\sqrt{y})$ is homogeneous of degree $1/2$. Since $v=\\sin u$, Euler's theorem gives $x u_x+y u_y=\\frac12\\frac{v}{\\sqrt{1-v^2}}=\\frac12\\tan u$.",
     "type": "mcq"
   },
   {
