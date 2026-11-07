@@ -1,0 +1,562 @@
+[
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Compute $\\langle2,3\\rangle+\\langle-1,4\\rangle$ and determine the resulting vector's magnitude.",
+    "options": {
+      "A": "$\\langle-3,7\\rangle$",
+      "B": "$\\langle2,-1\\rangle$",
+      "C": "$\\langle1,7\\rangle$",
+      "D": "$\\langle3,1\\rangle$"
+    },
+    "correct_answer": "C",
+    "explanation": "The sum is $\\langle1,7\\rangle$, whose magnitude is $\\sqrt{50}=5\\sqrt2$. The marked option gives the vector but not the magnitude; the question and choices are inconsistent.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Compute the magnitude of the vector $\\langle6,8\\rangle$ and verify the Euclidean distance from the origin.",
+    "options": {
+      "A": "8",
+      "B": "14",
+      "C": "10",
+      "D": "12"
+    },
+    "correct_answer": "C",
+    "explanation": "$\\sqrt{6^2+8^2}=10$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Compute the sum of the vectors $\\langle1,2\\rangle$ and $\\langle3,4\\rangle$ and determine its magnitude.",
+    "options": {
+      "A": "$\\langle2,2\\rangle,2\\sqrt2$",
+      "B": "$\\langle4,6\\rangle,2\\sqrt{13}$",
+      "C": "$\\langle-2,0\\rangle,2$",
+      "D": "$\\langle3,3\\rangle,2\\sqrt3$"
+    },
+    "correct_answer": "B",
+    "explanation": "The sum is $\\langle4,6\\rangle$ and its norm is $\\sqrt{52}=2\\sqrt{13}$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Determine whether $\\{1,x,x^2\\}$ forms a basis for $P_2$ and justify your answer in terms of independence and span.",
+    "options": {
+      "A": "It is not a vector space",
+      "B": "No, it does not span",
+      "C": "Yes, it spans and is independent",
+      "D": "No, it is dependent"
+    },
+    "correct_answer": "C",
+    "explanation": "These three linearly independent monomials span all polynomials of degree at most two.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Explain why the set of polynomials of degree $\\le n$ forms a vector space.",
+    "options": {
+      "A": "They do not scale",
+      "B": "Their sum is a polynomial",
+      "C": "Their sum is constant",
+      "D": "They form matrices"
+    },
+    "correct_answer": "B",
+    "explanation": "Polynomials of degree at most $n$ are closed under addition and scalar multiplication and contain the zero polynomial; the selected option mentions only addition.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Find $3\\langle-2,5\\rangle$ and describe the resulting vector's position relative to the origin.",
+    "options": {
+      "A": "$\\langle6,-15\\rangle$",
+      "B": "$\\langle-2,5\\rangle$",
+      "C": "$\\langle-5,2\\rangle$",
+      "D": "$\\langle-6,15\\rangle$"
+    },
+    "correct_answer": "D",
+    "explanation": "Multiply each component by three. The result points in the same direction and is three times as far from the origin.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Find the unit vector in the direction of $\\langle3,4\\rangle$ and explain the normalization process.",
+    "options": {
+      "A": "$\\langle3,4\\rangle$",
+      "B": "$\\langle\\frac45,\\frac35\\rangle$",
+      "C": "$\\langle\\frac35,\\frac45\\rangle$",
+      "D": "$\\langle4,3\\rangle$"
+    },
+    "correct_answer": "C",
+    "explanation": "Divide by the norm $\\sqrt{3^2+4^2}=5$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Identify which of the following sets forms a vector subspace of $\\mathbb R^3$, satisfying closure under addition and scalar multiplication.",
+    "options": {
+      "A": "The set of all nonzero vectors",
+      "B": "The set $\\{(1,0,0)\\}$",
+      "C": "The set $\\{(0,0,0)\\}$",
+      "D": "The set $\\{(1,1,1)\\}$"
+    },
+    "correct_answer": "C",
+    "explanation": "The singleton containing the zero vector is the zero subspace.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Which definition correctly describes a vector space including closure properties and zero vector inclusion?",
+    "options": {
+      "A": "A set of matrices",
+      "B": "A set closed under addition and scalar multiplication",
+      "C": "A set of polynomial roots",
+      "D": "A set of real numbers"
+    },
+    "correct_answer": "B",
+    "explanation": "Closure is necessary, though a full vector-space definition also requires zero, additive inverses, and the remaining axioms.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Which explanation best describes scalar multiplication's effect on a vector?",
+    "options": {
+      "A": "It rotates a vector",
+      "B": "It reflects a vector",
+      "C": "It stretches or shrinks a vector",
+      "D": "It removes components"
+    },
+    "correct_answer": "C",
+    "explanation": "Scalar multiplication scales the magnitude; negative scalars also reverse direction, so the answer is simplified.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Which of the following correctly represents a 2D vector in component form and magnitude?",
+    "options": {
+      "A": "$\\langle2,-1\\rangle$",
+      "B": "$\\sqrt7$",
+      "C": "-5",
+      "D": "3"
+    },
+    "correct_answer": "A",
+    "explanation": "A two-dimensional vector has two components; its magnitude here is $\\sqrt5$, although the selected choice does not include it.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Which of the following correctly represents a 3-dimensional vector suitable for a vector space basis in $\\mathbb R^3$?",
+    "options": {
+      "A": "$\\langle1,2,3\\rangle$",
+      "B": "10",
+      "C": "5",
+      "D": "$\\sqrt2$"
+    },
+    "correct_answer": "A",
+    "explanation": "Only the first option is a vector in $\\mathbb R^3$; one vector alone does not constitute a full basis of $\\mathbb R^3$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Which of the following is a correct scalar multiplication of $\\langle2,-3\\rangle$ by 2 that preserves vector direction?",
+    "options": {
+      "A": "$\\langle4,-3\\rangle$",
+      "B": "$\\langle4,-6\\rangle$",
+      "C": "$\\langle2,-3\\rangle$",
+      "D": "$\\langle0,-6\\rangle$"
+    },
+    "correct_answer": "B",
+    "explanation": "$2\\langle2,-3\\rangle=\\langle4,-6\\rangle$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Which of the following is a valid example of a finite-dimensional vector space?",
+    "options": {
+      "A": "The set of odd numbers",
+      "B": "$\\mathbb R^3$",
+      "C": "The set of prime numbers",
+      "D": "The set of integers modulo 6"
+    },
+    "correct_answer": "B",
+    "explanation": "$\\mathbb R^3$ is a vector space of dimension three over $\\mathbb R$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Which set forms a proper subspace of $P_3$ including the zero polynomial and closed under addition?",
+    "options": {
+      "A": "$\\{x^3+x^2+1\\}$",
+      "B": "$\\{ax^2:a\\in\\mathbb R\\}$",
+      "C": "$\\{1\\}$",
+      "D": "$\\{1+x+x^2\\}$"
+    },
+    "correct_answer": "B",
+    "explanation": "All multiples of $x^2$ form a one-dimensional subspace.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Which statement correctly describes the direction of a vector in Euclidean space?",
+    "options": {
+      "A": "It is its angle with the x-axis",
+      "B": "It describes where the vector points",
+      "C": "It is its size",
+      "D": "It is its magnitude"
+    },
+    "correct_answer": "B",
+    "explanation": "Direction describes orientation, rather than magnitude.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Why are the vectors $\\langle3,4\\rangle$ and $\\langle4,3\\rangle$ considered distinct despite having the same magnitude?",
+    "options": {
+      "A": "Their components differ",
+      "B": "Their magnitudes are equal",
+      "C": "They represent the same direction",
+      "D": "They are dependent vectors"
+    },
+    "correct_answer": "A",
+    "explanation": "Their coordinate components differ, even though both norms equal five.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Why does $\\mathbb R^n$ qualify as a vector space under standard operations?",
+    "options": {
+      "A": "It has angles",
+      "B": "It closes under addition and scalar multiplication",
+      "C": "It uses decimals",
+      "D": "It contains only positive numbers"
+    },
+    "correct_answer": "B",
+    "explanation": "Standard coordinatewise operations satisfy all vector-space axioms, including closure.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Why does vector addition satisfy the commutative property in $\\mathbb R^n$?",
+    "options": {
+      "A": "Because $\\mathbf u+\\mathbf v=\\mathbf v+\\mathbf u$",
+      "B": "Because vectors repeat",
+      "C": "Because magnitudes stay constant",
+      "D": "Because scalars commute"
+    },
+    "correct_answer": "A",
+    "explanation": "Componentwise addition is commutative because real-number addition is commutative.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "Mid-Semester Assessment",
+    "question": "Why is the zero vector required to be in every subspace?",
+    "options": {
+      "A": "To equal its parent space",
+      "B": "To ensure orthogonality",
+      "C": "To satisfy closure properties",
+      "D": "To satisfy addition"
+    },
+    "correct_answer": "C",
+    "explanation": "Every subspace must contain the additive identity; the marked answer is the intended choice, though zero inclusion is a separate subspace requirement.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "In computer graphics, a transformation matrix $A$ rotates a vector by $90^\\circ$ counterclockwise about the origin in $\\mathbb R^2$. If $A^n=I$ for some positive integer $n$, what is the smallest such $n$?",
+    "options": {
+      "A": "4",
+      "B": "2",
+      "C": "6",
+      "D": "8"
+    },
+    "correct_answer": "A",
+    "explanation": "Four quarter-turns make one full rotation.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $\\mathbf a=\\langle3,-2,5\\rangle$ and $\\mathbf b=\\langle1,4,-3\\rangle$. If $\\mathbf c\\perp\\mathbf a$, $\\mathbf c\\perp\\mathbf b$, and $\\|\\mathbf c\\|=\\sqrt{1050}$, find the z-component of $\\mathbf c$ (taking the positive value).",
+    "options": {
+      "A": "$14\\sqrt5$",
+      "B": "$5\\sqrt{14}$",
+      "C": "$5\\sqrt{12}$",
+      "D": "$-5\\sqrt{14}$"
+    },
+    "correct_answer": "B",
+    "explanation": "$\\mathbf a\\times\\mathbf b=(-14,14,14)$; scaling its length to $\\sqrt{1050}$ gives positive z-coordinate $5\\sqrt{14}$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "In machine learning, PCA is used for dimensionality reduction. If a dataset in $\\mathbb R^{50}$ has an effective rank of 5 (meaning the first 5 principal components capture 99% of variance), and we project onto a 3-dimensional subspace, what is the maximum dimension of the null space of the projection matrix?",
+    "options": {
+      "A": "47",
+      "B": "48",
+      "C": "50",
+      "D": "45"
+    },
+    "correct_answer": "A",
+    "explanation": "A rank-three projection on $\\mathbb R^{50}$ has nullity $50-3=47$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $V=P_3$ and define $W_1=\\{p(x):p(0)=0\\}$ and $W_2=\\{p(x):p'(1)=0\\}$. Determine $\\dim(W_1+W_2)$.",
+    "options": {
+      "A": "2",
+      "B": "5",
+      "C": "4",
+      "D": "3"
+    },
+    "correct_answer": "C",
+    "explanation": "Each condition is one independent linear constraint, so their sum spans all four dimensions of $P_3$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Given vectors $\\mathbf u=\\langle2,-3,1\\rangle$ and $\\mathbf v=\\langle-1,2,4\\rangle$, compute $\\|\\mathbf u+2\\mathbf v\\|^2-\\|\\mathbf u-\\mathbf v\\|^2$.",
+    "options": {
+      "A": "-64",
+      "B": "40",
+      "C": "-32",
+      "D": "39"
+    },
+    "correct_answer": "D",
+    "explanation": "The squared norms are 82 and 43; their difference is 39.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $U=\\operatorname{span}\\{(1,2,-1,3),(2,4,-2,6),(-1,-2,1,-3)\\}$ and $W=\\operatorname{span}\\{(3,1,0,2),(1,-1,2,0)\\}$. If $\\dim(U+W)=k$, what is $k$?",
+    "options": {
+      "A": "5",
+      "B": "3",
+      "C": "2",
+      "D": "4"
+    },
+    "correct_answer": "B",
+    "explanation": "$U$ has dimension one; the two generators of $W$ are independent and add two new dimensions.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $V=\\{p(x)\\in P_4:p'(0)=0\\text{ and }p''(1)=0\\}$. Determine $\\dim(V)$.",
+    "options": {
+      "A": "4",
+      "B": "3",
+      "C": "2",
+      "D": "5"
+    },
+    "correct_answer": "B",
+    "explanation": "Two independent linear constraints on five polynomial coefficients leave dimension three.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $V=P_3$ and $W=\\{p(x)\\in P_3:\\int_0^1p(x)\\,dx=0\\}$. What is the dimension of $W$?",
+    "options": {
+      "A": "3",
+      "B": "1",
+      "C": "4",
+      "D": "2"
+    },
+    "correct_answer": "A",
+    "explanation": "The nonzero integral functional imposes one linear constraint on the four-dimensional space $P_3$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "A signal processing system decomposes signals into orthogonal components. If a 5-dimensional signal space is decomposed into three mutually orthogonal subspaces with dimensions 2, 2, and $k$, what is $k$?",
+    "options": {
+      "A": "3",
+      "B": "1",
+      "C": "2",
+      "D": "0"
+    },
+    "correct_answer": "B",
+    "explanation": "For an orthogonal direct-sum decomposition spanning the whole space, $2+2+k=5$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Consider vectors $\\mathbf v_1=(a,1,0)$, $\\mathbf v_2=(1,a,1)$, $\\mathbf v_3=(0,1,a)$ in $\\mathbb R^3$. For which value(s) of $a$ are these vectors linearly dependent?",
+    "options": {
+      "A": "$a=0\\text{ or }a=\\pm\\sqrt2$",
+      "B": "$a=-1\\text{ or }a=2$",
+      "C": "$a=1\\text{ only}$",
+      "D": "$a=1\\text{ or }a=-2$"
+    },
+    "correct_answer": "A",
+    "explanation": "The determinant is $a(a^2-2)$, which vanishes at $0,\\pm\\sqrt2$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $S=\\{(1,2,-1,3),(2,4,-2,7),(3,6,-3,10),(-1,-2,1,0)\\}$. Determine the maximum number of linearly independent vectors in $S$.",
+    "options": {
+      "A": "1",
+      "B": "4",
+      "C": "2",
+      "D": "3"
+    },
+    "correct_answer": "C",
+    "explanation": "All vectors lie in the span of the first two, which are independent.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Consider vectors $\\mathbf a=\\langle2,-1,3\\rangle$, $\\mathbf b=\\langle1,2,-1\\rangle$, and $\\mathbf c=\\langle3,0,5\\rangle$. If the angle between $\\mathbf a$ and $\\mathbf b$ is $\\theta_1$ and the angle between $\\mathbf a$ and $\\mathbf c$ is $\\theta_2$, which statement is correct?",
+    "options": {
+      "A": "$\\theta_1<\\theta_2$ and both are acute",
+      "B": "$\\theta_1>\\theta_2$ and both are acute",
+      "C": "$\\theta_1=\\theta_2$",
+      "D": "$\\theta_1>\\theta_2$ and $\\theta_1$ is obtuse"
+    },
+    "correct_answer": "D",
+    "explanation": "$\\mathbf a\\cdot\\mathbf b=-3<0$ makes $\\theta_1$ obtuse; $\\mathbf a\\cdot\\mathbf c=21>0$ makes $\\theta_2$ acute.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $H=\\{(x,y,z)\\in\\mathbb R^3:x^2+y^2=z^2\\}$ (a cone). Which property of vector subspaces does $H$ fail to satisfy?",
+    "options": {
+      "A": "Contains zero vector",
+      "B": "Closed under scalar multiplication",
+      "C": "Both addition and scalar multiplication",
+      "D": "Closed under addition"
+    },
+    "correct_answer": "D",
+    "explanation": "The cone contains zero and is closed under real scaling, but sums of cone vectors need not remain on the cone.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Consider the matrix $A=\\begin{pmatrix}1&2&3&4\\\\2&4&6&8\\\\3&6&a&12\\\\1&2&3&b\\end{pmatrix}$. For which values of $a$ and $b$ does $\\operatorname{rank}(A)=2$?",
+    "options": {
+      "A": "$a=9,b=5$",
+      "B": "$a=10,b=5$",
+      "C": "$a=9,b=4$",
+      "D": "$a=8,b=3$"
+    },
+    "correct_answer": "A",
+    "explanation": "IMPORTANT SOURCE ERROR: The LMS marks A as incorrect, but A is mathematically correct: the first two columns are dependent; $a=9,b=5$ introduces one extra independent column, giving rank 2. B and D also yield rank 2; C gives rank 1. Thus this is a multiple-correct-answer question, not a valid single-answer MCQ.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $V=\\{(a,b,c)\\in\\mathbb R^3:2a-b+3c=0\\}$ and $W=\\{(a,b,c)\\in\\mathbb R^3:a+2b-c=0\\}$. Determine the dimension of $V\\cap W$.",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "3",
+      "D": "2"
+    },
+    "correct_answer": "B",
+    "explanation": "Two independent homogeneous linear equations in three variables leave one free dimension.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Given subspaces $U=\\operatorname{span}\\{(1,0,1,0),(0,1,0,1)\\}$ and $V=\\operatorname{span}\\{(1,1,0,0),(0,0,1,1)\\}$ of $\\mathbb R^4$, compute $\\dim(U\\cap V)$.",
+    "options": {
+      "A": "3",
+      "B": "0",
+      "C": "2",
+      "D": "1"
+    },
+    "correct_answer": "D",
+    "explanation": "The common vectors have all four coordinates equal, giving a one-dimensional intersection.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $U,V,W$ be subspaces of $\\mathbb R^5$ with $\\dim(U)=3$, $\\dim(V)=3$, $\\dim(W)=2$. If $U\\cap V=\\{0\\}$ and $W\\subseteq U$, what is the minimum possible value of $\\dim(U+V+W)$?",
+    "options": {
+      "A": "6",
+      "B": "4",
+      "C": "5",
+      "D": "7"
+    },
+    "correct_answer": "A",
+    "explanation": "SOURCE ERROR: Such $U$ and $V$ cannot both be 3-dimensional subspaces of $\\mathbb R^5$ with trivial intersection: dimension formula would require $\\dim(U+V)=6>5$. The marked answer 6 is impossible under the stated ambient space.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $\\mathbf u=\\langle3,-4,5\\rangle$ and $\\mathbf v=\\langle-2,1,3\\rangle$. If $\\mathbf w=2\\mathbf u-3\\mathbf v$, find the magnitude of the projection of $\\mathbf w$ onto the vector $\\langle1,1,1\\rangle$.",
+    "options": {
+      "A": "$\\frac{11}{\\sqrt3}$",
+      "B": "$\\frac7{\\sqrt3}$",
+      "C": "$\\frac5{\\sqrt3}$",
+      "D": "$\\frac2{\\sqrt3}$"
+    },
+    "correct_answer": "D",
+    "explanation": "$\\mathbf w=(12,-11,1)$; its dot product with $(1,1,1)$ is 2, so the scalar projection magnitude is $2/\\sqrt3$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Consider the set $S=\\{p(x)\\in P_3:p(1)=p(-1)\\}$. Determine which of the following is true about $S$.",
+    "options": {
+      "A": "S is not a subspace",
+      "B": "S is not a subspace and has dimension 2",
+      "C": "S is a subspace with dimension 3",
+      "D": "S is a subspace with dimension 4"
+    },
+    "correct_answer": "C",
+    "explanation": "The condition is linear and imposes one independent constraint on $P_3$, so $\\dim S=3$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 205",
+    "topic": "End-of-Semester Assessment",
+    "question": "Let $B_1=\\{(1,0,1),(0,1,1),(1,1,0)\\}$ and $B_2=\\{(1,1,1),(1,1,0),(1,0,0)\\}$ be two bases of $\\mathbb R^3$. If $[v]_{B_1}=\\begin{pmatrix}2\\\\-1\\\\3\\end{pmatrix}$, find the first component of $[v]_{B_2}$.",
+    "options": {
+      "A": "5",
+      "B": "2",
+      "C": "1",
+      "D": "3"
+    },
+    "correct_answer": "C",
+    "explanation": "$v=2(1,0,1)-(0,1,1)+3(1,1,0)=(5,2,1)$. In $B_2$, its first coefficient is the z-coordinate, 1.",
+    "type": "mcq"
+  }
+]
