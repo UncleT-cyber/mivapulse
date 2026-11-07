@@ -113,6 +113,11 @@
                       "code": "COS 201",
                       "title": "Computer Programming I",
                       "file": "cybersecurity/200L/semester_1/cos_201_computer_programming_i.json"
+                    },
+                    {
+                      "code": "COS 203",
+                      "title": "Discrete Structures",
+                      "file": "cybersecurity/200L/semester_1/cos_203_discrete_structures.json"
                     }
                   ]
                 },
