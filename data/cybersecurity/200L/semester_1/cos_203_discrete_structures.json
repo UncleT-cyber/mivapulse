@@ -485,8 +485,8 @@
       "C": "Preorder traversal",
       "D": "Postorder traversal"
     },
-    "correct_answer": "D",
-    "explanation": "This is a valid postorder sequence for a BST rooted at 1, with right subtree rooted at 3 and its left subtree rooted at 2. It is not a valid inorder or preorder BST sequence.",
+    "correct_answer": "A",
+    "explanation": "No standard traversal of a binary search tree produces this sequence: it is not sorted (inorder), does not begin with the BST root in a valid preorder arrangement, and cannot form a valid postorder BST sequence (the values to the left of a subtree root would violate BST ordering).",
     "type": "mcq"
   },
   {
