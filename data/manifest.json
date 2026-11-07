@@ -118,6 +118,11 @@
                       "code": "COS 203",
                       "title": "Discrete Structures",
                       "file": "cybersecurity/200L/semester_1/cos_203_discrete_structures.json"
+                    },
+                    {
+                      "code": "CYB 201",
+                      "title": "Introduction to Cybersecurity and Strategy",
+                      "file": "cybersecurity/200L/semester_1/cyb_201_introduction_to_cybersecurity_and_strategy.json"
                     }
                   ]
                 },
