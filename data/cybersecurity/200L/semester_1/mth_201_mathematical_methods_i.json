@@ -1,0 +1,322 @@
+[
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 1,
+    "question": "Apply Leibniz theorem to find the fourth derivative of $y=x^3\\ln x$.",
+    "options": {
+      "A": "$24\\ln x$",
+      "B": "$\\frac{6}{x}$",
+      "C": "$\\frac{1}{x^2}$",
+      "D": "$-\\frac{6}{x^4}$"
+    },
+    "correct_answer": "B",
+    "explanation": "Differentiate successively: $y'=3x^2\\ln x+x^2$, $y''=6x\\ln x+5x$, $y'''=6\\ln x+11$, and $y^{(4)}=\\frac{6}{x}$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 2,
+    "question": "Find $\\frac{\\partial^2 z}{\\partial x\\partial y}$ for $z=\\ln(x^2+y^2)$.",
+    "options": {
+      "A": "$-\\frac{2xy}{(x^2+y^2)^2}$",
+      "B": "$\\frac{2xy}{(x^2+y^2)^2}$",
+      "C": "$-\\frac{4xy}{(x^2+y^2)^2}$",
+      "D": "$\\frac{2}{x^2+y^2}$"
+    },
+    "correct_answer": "C",
+    "explanation": "First, $z_y=\\frac{2y}{x^2+y^2}$. Differentiating with respect to $x$ gives $z_{xy}=-\\frac{4xy}{(x^2+y^2)^2}$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 3,
+    "question": "Differentiate $y=x^{x^x}$ using logarithmic differentiation.",
+    "options": {
+      "A": "$x^{x^x}(2\\ln x+1)$",
+      "B": "$x^{x^x}\\cdot x^x\\left[\\ln x(1+\\ln x)+\\frac1x\\right]$",
+      "C": "$x^{x^x}(1+\\ln x)$",
+      "D": "$x^{x^x}\\cdot x^x\\ln x$"
+    },
+    "correct_answer": "B",
+    "explanation": "Take logarithms: $\\ln y=x^x\\ln x$. Differentiate to obtain $\\frac{y'}y=x^x\\left[\\ln x(1+\\ln x)+\\frac1x\\right]$, then multiply by $y=x^{x^x}$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 4,
+    "question": "Compute $\\int\\sec^3 x\\,dx$ using the reduction method.",
+    "options": {
+      "A": "$\\frac13\\sec^3x+C$",
+      "B": "$\\sec x\\tan x-\\ln|\\cos x|+C$",
+      "C": "$\\frac12(\\sec^2x+\\tan x)+C$",
+      "D": "$\\frac12\\left(\\sec x\\tan x+\\ln|\\sec x+\\tan x|\\right)+C$"
+    },
+    "correct_answer": "D",
+    "explanation": "The standard reduction result is $\\int\\sec^3x\\,dx=\\frac12\\sec x\\tan x+\\frac12\\ln|\\sec x+\\tan x|+C$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 5,
+    "question": "Evaluate $\\int x^3(\\ln x)^2\\,dx$ using integration by parts.",
+    "options": {
+      "A": "$\\frac{x^4}{4}\\left[(\\ln x)^2-\\frac12\\ln x+\\frac18\\right]+C$",
+      "B": "$\\frac{x^4}{4}[(\\ln x)^2-\\ln x]+C$",
+      "C": "$x^4(\\ln x)^2-x^4+C$",
+      "D": "$\\frac{x^4}{4}(\\ln x)^2-\\frac{x^4}{16}+C$"
+    },
+    "correct_answer": "A",
+    "explanation": "Applying integration by parts twice gives $\\frac{x^4}{4}(\\ln x)^2-\\frac{x^4}{8}\\ln x+\\frac{x^4}{32}+C$, equivalent to option A.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 6,
+    "question": "Compute the $n$-th derivative of $y=\\ln(ax+b)$.",
+    "options": {
+      "A": "$\\frac{(-1)^{n-1}(n-1)!a^n}{(ax+b)^n}$",
+      "B": "$\\frac{(n-1)!}{(ax+b)^n}$",
+      "C": "$\\frac{n!a^n}{(ax+b)^n}$",
+      "D": "$\\frac{(-1)^na^n}{(ax+b)^{n+1}}$"
+    },
+    "correct_answer": "A",
+    "explanation": "Repeated differentiation gives $y^{(n)}=(-1)^{n-1}(n-1)!a^n(ax+b)^{-n}$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 7,
+    "question": "If $u=\\sin^{-1}\\left(\\frac{\\sqrt{x}+\\sqrt{y}}{\\sqrt{x+y}}\\right)$, find $x\\frac{\\partial u}{\\partial x}+y\\frac{\\partial u}{\\partial y}$ using Euler's theorem.",
+    "options": {
+      "A": "$u$",
+      "B": "$\\cos u$",
+      "C": "$\\frac12\\sin u$",
+      "D": "$\\frac12\\tan u$"
+    },
+    "correct_answer": "D",
+    "explanation": "The expression inside the inverse sine is homogeneous of degree $\\frac12$. Euler's theorem gives $xu_x+yu_y=\\frac12\\frac{v}{\\sqrt{1-v^2}}=\\frac12\\tan u$, where $v=\\sin u$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 8,
+    "question": "Find the value of $c$ for $f(x)=x(x-3)^2$ on $[0,3]$ satisfying Rolle's theorem.",
+    "options": {
+      "A": "$1$",
+      "B": "$1.5$",
+      "C": "$1.3$",
+      "D": "$2$"
+    },
+    "correct_answer": "A",
+    "explanation": "$f'(x)=(x-3)^2+2x(x-3)=3(x-3)(x-1)$. The interior point where $f'(c)=0$ is $c=1$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 9,
+    "question": "Find $\\frac{dy}{dx}$ for $y=(\\sin x)^{\\cos x}$ using logarithmic differentiation.",
+    "options": {
+      "A": "$(\\sin x)^{\\cos x}[\\cos x\\cot x+\\sin x]$",
+      "B": "$\\cos x(\\sin x)^{\\cos x-1}$",
+      "C": "$(\\sin x)^{\\cos x}[\\ln(\\sin x)-\\sin x]$",
+      "D": "$(\\sin x)^{\\cos x}[\\cos x\\cot x-\\sin x\\ln(\\sin x)]$"
+    },
+    "correct_answer": "D",
+    "explanation": "Take logarithms: $\\ln y=\\cos x\\ln(\\sin x)$. Differentiating gives $y'/y=-\\sin x\\ln(\\sin x)+\\cos x\\cot x$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 10,
+    "question": "Determine the second-order Taylor polynomial of $f(x,y)=\\cos x\\cos y$ at $(0,0)$.",
+    "options": {
+      "A": "$1+\\frac12(x^2+y^2)$",
+      "B": "$1-xy$",
+      "C": "$1-\\frac12(x^2+y^2)$",
+      "D": "$1-x^2-y^2$"
+    },
+    "correct_answer": "C",
+    "explanation": "Using $\\cos x=1-\\frac{x^2}{2}+\\cdots$ and $\\cos y=1-\\frac{y^2}{2}+\\cdots$, the terms through total degree two are $1-\\frac12(x^2+y^2)$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 11,
+    "question": "Using the reduction formula for $I_n=\\int\\tan^n x\\,dx$, express $I_4$ in terms of $x$.",
+    "options": {
+      "A": "$\\frac14\\tan^4x-\\frac12\\tan^2x+C$",
+      "B": "$\\frac13\\tan^3x-\\tan x+x+C$",
+      "C": "$\\frac13\\tan^3x+\\tan x+C$",
+      "D": "$\\tan^3x-x+C$"
+    },
+    "correct_answer": "B",
+    "explanation": "Since $\\tan^4x=\\tan^2x(\\sec^2x-1)$, integration gives $I_4=\\frac13\\tan^3x-\\tan x+x+C$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 12,
+    "question": "Evaluate $\\int e^{2x}\\sin(3x)\\,dx$ using integration by parts.",
+    "options": {
+      "A": "$\\frac{e^{2x}}{13}(2\\sin3x+3\\cos3x)+C$",
+      "B": "$\\frac{e^{2x}}{13}(3\\sin3x-2\\cos3x)+C$",
+      "C": "$\\frac{e^{2x}}5(2\\sin3x+3\\cos3x)+C$",
+      "D": "$\\frac{e^{2x}}{13}(2\\sin3x-3\\cos3x)+C$"
+    },
+    "correct_answer": "D",
+    "explanation": "The standard result is $\\int e^{ax}\\sin bx\\,dx=\\frac{e^{ax}}{a^2+b^2}(a\\sin bx-b\\cos bx)+C$. Set $a=2,b=3$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 13,
+    "question": "Find $y^{(n)}$ for $y=e^x\\sin x$ using the standard formula.",
+    "options": {
+      "A": "$e^x\\sin\\left(x+\\frac{n\\pi}{2}\\right)$",
+      "B": "$2^ne^x\\cos x$",
+      "C": "$(\\sqrt2)^ne^x\\cos\\left(x+\\frac{n\\pi}{4}\\right)$",
+      "D": "$(\\sqrt2)^ne^x\\sin\\left(x+\\frac{n\\pi}{4}\\right)$"
+    },
+    "correct_answer": "D",
+    "explanation": "For $e^x\\sin x$, the amplitude factor is $(\\sqrt{1^2+1^2})^n=(\\sqrt2)^n$ and the phase shift is $n\\pi/4$. Thus $y^{(n)}=(\\sqrt2)^ne^x\\sin(x+n\\pi/4)$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 14,
+    "question": "Obtain the Taylor series for $f(x,y)=x^y$ near $(1,1)$ up to first order.",
+    "options": {
+      "A": "$1+(x-1)+(y-1)$",
+      "B": "$1+(x-1)$",
+      "C": "$x+y-1$",
+      "D": "$1+\\ln(x)(y-1)$"
+    },
+    "correct_answer": "B",
+    "explanation": "At $(1,1)$, $f=1$, $f_x=yx^{y-1}=1$, and $f_y=x^y\\ln x=0$. The first-order Taylor polynomial is $1+(x-1)$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 15,
+    "question": "Evaluate $\\int_0^{\\pi/2}\\sin^6x\\,dx$ using Wallis' reduction formula.",
+    "options": {
+      "A": "$\\frac{5\\pi}{32}$",
+      "B": "$\\frac{15\\pi}{64}$",
+      "C": "$\\frac{3\\pi}{16}$",
+      "D": "$\\frac5{16}$"
+    },
+    "correct_answer": "A",
+    "explanation": "For even powers, $\\int_0^{\\pi/2}\\sin^{2m}x\\,dx=\\frac{(2m-1)!!}{(2m)!!}\\frac\\pi2$. For $m=3$, the value is $\\frac{5\\pi}{32}$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 16,
+    "question": "Find $\\frac{dz}{dt}$ if $z=x^2+y^2$, where $x=\\cos t+\\sin t$ and $y=\\cos t-\\sin t$.",
+    "options": {
+      "A": "$-2\\sin2t$",
+      "B": "$0$",
+      "C": "$2$",
+      "D": "$4\\cos2t$"
+    },
+    "correct_answer": "B",
+    "explanation": "$z=(\\cos t+\\sin t)^2+(\\cos t-\\sin t)^2=2(\\cos^2t+\\sin^2t)=2$, so $dz/dt=0$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 17,
+    "question": "Find $\\frac{d^3y}{dx^3}$ for $y=e^x\\cos x$ using Leibniz theorem.",
+    "options": {
+      "A": "$-2e^x\\sin x$",
+      "B": "$-2e^x\\cos x$",
+      "C": "$2e^x(\\cos x+\\sin x)$",
+      "D": "$-2e^x(\\sin x+\\cos x)$"
+    },
+    "correct_answer": "D",
+    "explanation": "Differentiate: $y'=e^x(\\cos x-\\sin x)$, $y''=-2e^x\\sin x$, and $y'''=-2e^x(\\sin x+\\cos x)$. The assessment's marked selection C was incorrect; option D is mathematically correct.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 18,
+    "question": "If $f(x,y)=\\sqrt{x^2+y^2}$, find the value of $x^2f_{xx}+2xyf_{xy}+y^2f_{yy}$.",
+    "options": {
+      "A": "$1$",
+      "B": "$0$",
+      "C": "$\\sqrt{x^2+y^2}$",
+      "D": "$x+y$"
+    },
+    "correct_answer": "B",
+    "explanation": "The function is homogeneous of degree one. Euler's theorem for second derivatives gives $x^2f_{xx}+2xyf_{xy}+y^2f_{yy}=n(n-1)f=0$ for $n=1$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 19,
+    "question": "Find the Taylor expansion of $f(x,y)=e^x\\sin y$ about $(0,0)$ up to second-order terms.",
+    "options": {
+      "A": "$1+x+y+xy$",
+      "B": "$y+\\frac12xy$",
+      "C": "$x+y+x^2$",
+      "D": "$y+xy$"
+    },
+    "correct_answer": "D",
+    "explanation": "Near zero, $e^x=1+x+\\frac{x^2}{2}+\\cdots$ and $\\sin y=y+\\cdots$. Keeping terms of total degree at most two gives $y+xy$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "Mid-Semester Assessment",
+    "assessment": 1,
+    "assessment_question": 20,
+    "question": "Using Leibniz Rule, find the $n$-th derivative $y^{(n)}$ of $y=x^2e^{ax}$.",
+    "options": {
+      "A": "$a^nx^2e^{ax}+n!$",
+      "B": "$a^ne^{ax}(x^2+2x+1)$",
+      "C": "$a^{n-2}e^{ax}[a^2x^2+2nax+n(n-1)]$",
+      "D": "$e^{ax}(a^nx^2+na^{n-1})$"
+    },
+    "correct_answer": "C",
+    "explanation": "By Leibniz rule, $y^{(n)}=e^{ax}[a^nx^2+2na^{n-1}x+n(n-1)a^{n-2}]$, which factors to option C.",
+    "type": "mcq"
+  }
+]
