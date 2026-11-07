@@ -133,6 +133,11 @@
                       "code": "ENT 211",
                       "title": "Entrepreneurship and Innovation",
                       "file": "cybersecurity/200L/semester_1/ent_211_entrepreneurship_and_innovation.json"
+                    },
+                    {
+                      "code": "CYB 207",
+                      "title": "Zero Trust Networking",
+                      "file": "cybersecurity/200L/semester_1/cyb_207_zero_trust_networking.json"
                     }
                   ]
                 },
