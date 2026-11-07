@@ -318,5 +318,325 @@
     "correct_answer": "C",
     "explanation": "By Leibniz rule, $y^{(n)}=e^{ax}[a^nx^2+2na^{n-1}x+n(n-1)a^{n-2}]$, which factors to option C.",
     "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 1,
+    "question": "Find the first-order Taylor expansion of $f(x,y)=e^{x+y}$ about $(1,-1)$.",
+    "options": {
+      "A": "$1+(x-1)-(y+1)$",
+      "B": "$e(x+y)$",
+      "C": "$1+x+y$",
+      "D": "$1+(x-1)+(y+1)$"
+    },
+    "correct_answer": "D",
+    "explanation": "At $(1,-1)$, $f=1$ and both first partial derivatives equal 1, giving $1+(x-1)+(y+1)$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 2,
+    "question": "Obtain the second-order Taylor expansion of $f(x,y)=e^{x-y}$ about $(0,0)$.",
+    "options": {
+      "A": "$1+x-y+x^2-2xy+y^2$",
+      "B": "$x-y+\\frac12(x-y)^2$",
+      "C": "$1+x-y+\\frac12x^2-xy+\\frac12y^2$",
+      "D": "$1+x-y+\\frac12x^2+\\frac12y^2$"
+    },
+    "correct_answer": "C",
+    "explanation": "Use $e^t=1+t+\\frac12t^2+\\cdots$ with $t=x-y$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 3,
+    "question": "Apply reduction formula to compute $I_n=\\int x^n e^x\\,dx$.",
+    "options": {
+      "A": "$e^x(x^n-x^{n-1})$",
+      "B": "$x^ne^x+nI_{n-1}$",
+      "C": "$\\frac{x^{n+1}e^x}{n+1}-I_{n-1}$",
+      "D": "$x^ne^x-nI_{n-1}$"
+    },
+    "correct_answer": "D",
+    "explanation": "Integration by parts with $u=x^n$ and $dv=e^x dx$ yields $I_n=x^ne^x-nI_{n-1}$ (up to a constant).",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 4,
+    "question": "Compute $\\int x^2\\cos x\\,dx$ using integration by parts.",
+    "options": {
+      "A": "$x^2\\cos x-2x\\sin x+C$",
+      "B": "$x^2\\sin x+2x\\cos x-2\\sin x+C$",
+      "C": "$x^2\\sin x-2x\\cos x+2\\sin x+C$",
+      "D": "$-x^2\\sin x+2x\\cos x+C$"
+    },
+    "correct_answer": "B",
+    "explanation": "Twice applying integration by parts yields $x^2\\sin x+2x\\cos x-2\\sin x+C$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 5,
+    "question": "Compute the second-order Taylor expansion of $f(x,y)=e^x\\sin y$ about $(0,0)$.",
+    "options": {
+      "A": "$y+xy$",
+      "B": "$y-xy$",
+      "C": "$y+x+xy$",
+      "D": "$1+x+y+xy$"
+    },
+    "correct_answer": "A",
+    "explanation": "Multiply the series $e^x=1+x+\\cdots$ and $\\sin y=y+\\cdots$; retain terms of total degree at most two.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 6,
+    "question": "Evaluate $\\int\\tan^{-1}x\\,dx$ using integration by parts.",
+    "options": {
+      "A": "$x\\tan^{-1}x-x+C$",
+      "B": "$\\frac1{1+x^2}+C$",
+      "C": "$x\\tan^{-1}x+\\frac12\\ln(1+x^2)+C$",
+      "D": "$x\\tan^{-1}x-\\frac12\\ln(1+x^2)+C$"
+    },
+    "correct_answer": "D",
+    "explanation": "Set $u=\\tan^{-1}x$, $dv=dx$; then $\\int\\tan^{-1}x\\,dx=x\\tan^{-1}x-\\int\\frac{x}{1+x^2}dx$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 7,
+    "question": "Find $\\int x\\sec^2x\\,dx$ using integration by parts.",
+    "options": {
+      "A": "$x\\sec x-\\tan x+C$",
+      "B": "$x\\tan x+\\ln|\\cos x|+C$",
+      "C": "$\\tan^2x+C$",
+      "D": "$x\\tan x-\\ln|\\cos x|+C$"
+    },
+    "correct_answer": "B",
+    "explanation": "With $u=x$ and $dv=\\sec^2x dx$, obtain $x\\tan x-\\int\\tan x dx=x\\tan x+\\ln|\\cos x|+C$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 8,
+    "question": "If $z=e^{x/y}$, find $\\frac{\\partial^2z}{\\partial y\\partial x}$.",
+    "options": {
+      "A": "$-\\frac{e^{x/y}}{y^2}\\left(1+\\frac{x}{y}\\right)$",
+      "B": "$\\frac{e^{x/y}}{y^2}$",
+      "C": "$-\\frac{xe^{x/y}}{y^3}$",
+      "D": "$\\frac{e^{x/y}}{y^2}(x-y)$"
+    },
+    "correct_answer": "A",
+    "explanation": "First $z_x=e^{x/y}/y$. Differentiating with respect to $y$ gives $z_{xy}=-e^{x/y}/y^2-xe^{x/y}/y^3$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 9,
+    "question": "Find $\\int x^3e^{x^2}\\,dx$ using integration by parts.",
+    "options": {
+      "A": "$\\frac14e^{x^2}x^4+C$",
+      "B": "$\\frac12e^{x^2}(x^2+1)+C$",
+      "C": "$x^2e^{x^2}-e^{x^2}+C$",
+      "D": "$\\frac12e^{x^2}(x^2-1)+C$"
+    },
+    "correct_answer": "D",
+    "explanation": "Set $u=x^2$ so $x^3dx=\\frac12u\\,du$. Then $\\frac12\\int ue^u du=\\frac12e^u(u-1)+C$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 10,
+    "question": "Find $\\frac{\\partial^2z}{\\partial x^2}$ if $z=\\sin(x^2+y^2)$.",
+    "options": {
+      "A": "$2\\cos(x^2+y^2)-4x^2\\sin(x^2+y^2)$",
+      "B": "$2\\cos(x^2+y^2)$",
+      "C": "$-4x^2\\sin(x^2+y^2)$",
+      "D": "$2x\\cos(x^2+y^2)$"
+    },
+    "correct_answer": "A",
+    "explanation": "$z_x=2x\\cos(x^2+y^2)$; applying the product and chain rules gives the stated second derivative.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 11,
+    "question": "Using reduction formula find $\\int\\tan^4x\\,dx$.",
+    "options": {
+      "A": "$\\frac13\\tan^3x-\\tan x+x+C$",
+      "B": "$\\frac13\\tan^3x+\\tan x+C$",
+      "C": "$\\tan^4x-\\tan^2x+x+C$",
+      "D": "$\\frac14\\tan^4x-\\frac12\\tan^2x+C$"
+    },
+    "correct_answer": "A",
+    "explanation": "Rewrite $\\tan^4x=\\tan^2x(\\sec^2x-1)$ and integrate to get $\\frac13\\tan^3x-\\tan x+x+C$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 12,
+    "question": "Using reduction formula evaluate $\\int\\cos^5x\\,dx$.",
+    "options": {
+      "A": "$\\cos x+\\frac23\\cos^3x+\\frac15\\cos^5x+C$",
+      "B": "$\\sin x-\\frac23\\sin^3x+\\frac15\\sin^5x+C$",
+      "C": "$\\frac16\\cos^6x+C$",
+      "D": "$\\sin^5x-\\sin^3x+C$"
+    },
+    "correct_answer": "B",
+    "explanation": "Write $\\cos^5x=(1-\\sin^2x)^2\\cos x$ and substitute $u=\\sin x$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 13,
+    "question": "Compute $\\frac{\\partial^2z}{\\partial x\\partial y}$ if $z=x^y$.",
+    "options": {
+      "A": "$yx^{y-1}$",
+      "B": "$x^y\\ln x$",
+      "C": "$y(y-1)x^{y-2}$",
+      "D": "$x^{y-1}(1+y\\ln x)$"
+    },
+    "correct_answer": "D",
+    "explanation": "$z_x=yx^{y-1}$, then $\\partial_y(yx^{y-1})=x^{y-1}(1+y\\ln x)$ for $x>0$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 14,
+    "question": "Compute the Laplacian $\\frac{\\partial^2u}{\\partial x^2}+\\frac{\\partial^2u}{\\partial y^2}$ for $u=\\tan^{-1}(y/x)$.",
+    "options": {
+      "A": "$\\frac1{x^2+y^2}$",
+      "B": "$-\\frac2{x^2+y^2}$",
+      "C": "$0$",
+      "D": "$1$"
+    },
+    "correct_answer": "C",
+    "explanation": "Where defined smoothly, $u_x=-y/(x^2+y^2)$ and $u_y=x/(x^2+y^2)$. Their second partials sum to zero.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 15,
+    "question": "Find $x\\frac{\\partial z}{\\partial x}+y\\frac{\\partial z}{\\partial y}$ if $z=\\ln(x^2+y^2)$.",
+    "options": {
+      "A": "$1$",
+      "B": "$\\frac2z$",
+      "C": "$2$",
+      "D": "$2z$"
+    },
+    "correct_answer": "C",
+    "explanation": "$z_x=2x/(x^2+y^2)$ and $z_y=2y/(x^2+y^2)$; the weighted sum is $2$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 16,
+    "question": "Evaluate $\\int_0^{\\pi/2}\\cos^6x\\,dx$ using reduction formula.",
+    "options": {
+      "A": "$\\frac{15}{48}$",
+      "B": "$\\frac5{16}$",
+      "C": "$\\frac{5\\pi}{32}$",
+      "D": "$\\frac{3\\pi}{16}$"
+    },
+    "correct_answer": "C",
+    "explanation": "The even-power Wallis formula gives $(5\\cdot3\\cdot1)/(6\\cdot4\\cdot2)\\cdot\\pi/2=5\\pi/32$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 17,
+    "question": "Evaluate $\\int e^{2x}\\cos3x\\,dx$ using integration by parts.",
+    "options": {
+      "A": "$\\frac{e^{2x}}{13}(3\\cos3x+2\\sin3x)+C$",
+      "B": "$\\frac{e^{2x}}{13}(2\\cos3x+3\\sin3x)+C$",
+      "C": "$\\frac{e^{2x}}5(2\\cos3x-3\\sin3x)+C$",
+      "D": "$e^{2x}(\\cos3x+\\sin3x)+C$"
+    },
+    "correct_answer": "B",
+    "explanation": "$\\int e^{ax}\\cos bx\\,dx=e^{ax}(a\\cos bx+b\\sin bx)/(a^2+b^2)+C$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 18,
+    "question": "Find the second-order Taylor polynomial for $f(x,y)=\\frac1{1+x+y}$ about $(0,0)$.",
+    "options": {
+      "A": "$1+x+y+x^2+xy+y^2$",
+      "B": "$1-x-y$",
+      "C": "$1-x-y-x^2-y^2$",
+      "D": "$1-x-y+x^2+2xy+y^2$"
+    },
+    "correct_answer": "D",
+    "explanation": "Apply $(1+t)^{-1}=1-t+t^2+\\cdots$ with $t=x+y$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 19,
+    "question": "Evaluate $\\int_0^{\\pi/2}\\sin^7x\\,dx$ using Wallis reduction formula.",
+    "options": {
+      "A": "$\\frac8{15}$",
+      "B": "$\\frac5{32}$",
+      "C": "$\\frac{16}{35}$",
+      "D": "$\\frac{35}{16}$"
+    },
+    "correct_answer": "C",
+    "explanation": "For odd powers, the reduction gives $(6/7)(4/5)(2/3)=16/35$.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "MTH 201",
+    "topic": "End-of-Semester Assessment",
+    "assessment": 2,
+    "assessment_question": 20,
+    "question": "Obtain the second-order Taylor expansion of $f(x,y)=\\ln(1+x+2y)$ about $(0,0)$.",
+    "options": {
+      "A": "$x+2y-\\frac12x^2-2xy-2y^2$",
+      "B": "$x+2y-x^2-4y^2$",
+      "C": "$1+x+2y-x^2-y^2$",
+      "D": "$x+2y-\\frac12(x+y)^2$"
+    },
+    "correct_answer": "A",
+    "explanation": "Use $\\ln(1+t)=t-\\frac12t^2+\\cdots$ with $t=x+2y$.",
+    "type": "mcq"
   }
 ]
