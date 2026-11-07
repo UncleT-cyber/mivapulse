@@ -418,5 +418,145 @@
     "correct_answer": "C",
     "explanation": "Corporate innovation philosophy. This is the answer identified in the university assessment feedback.",
     "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Marketing & Opportunity Recognition",
+    "question": "When an entrepreneur identifies a market gap and develops products to fill unmet consumer demands, this describes which entrepreneurial function?",
+    "options": {
+      "A": "Opportunity perception",
+      "B": "Risk bearing",
+      "C": "Resource acquisition",
+      "D": "Innovation"
+    },
+    "correct_answer": "A",
+    "explanation": "Opportunity perception. This is the answer identified in the university assessment feedback. Repeated in the second assessment with its original option order preserved.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Characteristics",
+    "question": "An entrepreneur who prioritises achieving self-determined goals over external recognition is demonstrating which motivational characteristic?",
+    "options": {
+      "A": "Power motivation",
+      "B": "Achievement motivation",
+      "C": "External motivation",
+      "D": "Financial motivation"
+    },
+    "correct_answer": "B",
+    "explanation": "Achievement motivation. This is the answer identified in the university assessment feedback. Repeated in the second assessment with its original option order preserved.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Management & Intrapreneurship",
+    "question": "An intrapreneur differs from a traditional entrepreneur primarily because the intrapreneur:",
+    "options": {
+      "A": "Bears every personal financial liability for the losses",
+      "B": "Operates within an existing organisational structure",
+      "C": "Takes independent investment decisions",
+      "D": "Establishes new legal business entities"
+    },
+    "correct_answer": "B",
+    "explanation": "Operates within an existing organisational structure. This is the answer identified in the university assessment feedback. Repeated in the second assessment with its original option order preserved.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Characteristics",
+    "question": "Which scenario BEST exemplifies entrepreneurship rather than simply small business ownership?",
+    "options": {
+      "A": "Creating a subscription service that challenges delivery methods",
+      "B": "Expanding a retail outlet to a second location",
+      "C": "Operating a family grocery store with unchanged inventory",
+      "D": "Purchasing a franchise with established operating procedures"
+    },
+    "correct_answer": "A",
+    "explanation": "Creating a subscription service that challenges delivery methods. This is the answer identified in the university assessment feedback. Repeated in the second assessment with its original option order preserved.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Business Planning & Feasibility",
+    "question": "A business plan prepared after confirming business viability focuses primarily on",
+    "options": {
+      "A": "Market opportunity identification",
+      "B": "Venture feasibility assessment",
+      "C": "Sustainability and growth",
+      "D": "Resource commitment decisions"
+    },
+    "correct_answer": "C",
+    "explanation": "Sustainability and growth. This is the answer identified in the university assessment feedback. Repeated in the second assessment with its original option order preserved.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Financing",
+    "question": "A financial institution that requires title to land as loan security is primarily concerned with which loan evaluation factor?",
+    "options": {
+      "A": "Management capacity",
+      "B": "Repayment source",
+      "C": "Character assessment",
+      "D": "Collateral security"
+    },
+    "correct_answer": "D",
+    "explanation": "Collateral security. This is the answer identified in the university assessment feedback. Repeated in the second assessment with its original option order preserved.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Management & Intrapreneurship",
+    "question": "A manager who must balance disciplined management practices with entrepreneurial vision is attempting to achieve",
+    "options": {
+      "A": "Innovation equilibrium",
+      "B": "Organisational stability",
+      "C": "Operational excellence",
+      "D": "Strategic balance"
+    },
+    "correct_answer": "D",
+    "explanation": "Strategic balance. This is the answer identified in the university assessment feedback. Repeated in the second assessment with its original option order preserved.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Business Planning & Feasibility",
+    "question": "A business plan that effectively communicates market potential and debt servicing capability primarily serves as:",
+    "options": {
+      "A": "Performance measurement benchmark",
+      "B": "Communication tool for external financing",
+      "C": "Operational roadmap for daily activities",
+      "D": "Marketing strategy document"
+    },
+    "correct_answer": "B",
+    "explanation": "Communication tool for external financing. This is the answer identified in the university assessment feedback. Repeated in the second assessment with its original option order preserved.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Management & Intrapreneurship",
+    "question": "An entrepreneur who lacks relevant management education but possesses technical training for a venture demonstrates which dimension of distinction?",
+    "options": {
+      "A": "Risk tolerance levels",
+      "B": "Time orientation differences",
+      "C": "Motivation source differences",
+      "D": "Management skills variation"
+    },
+    "correct_answer": "D",
+    "explanation": "Management skills variation. This is the answer identified in the university assessment feedback. Repeated in the second assessment with its original option order preserved.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "ENT 211",
+    "topic": "Entrepreneurial Financing",
+    "question": "An organisation that implements management principles solely for profit maximisation while neglecting social responsibilities would violate which fundamental concept of management?",
+    "options": {
+      "A": "Strategic planning",
+      "B": "Goal achievement",
+      "C": "Universal applicability",
+      "D": "Efficiency orientation"
+    },
+    "correct_answer": "C",
+    "explanation": "Universal applicability. This is the answer identified in the university assessment feedback. Repeated in the second assessment with its original option order preserved.",
+    "type": "mcq"
   }
 ]
