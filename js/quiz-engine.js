@@ -238,6 +238,100 @@ function renderQuestion(state, dom, quizMode, courseCode) {
     if (dom.topic) dom.topic.textContent = cur.topic || "Core Concept";
     if (dom.qText) dom.qText.innerHTML = safeRenderText(cur.question);
 
+    // MATCHING: one graded question containing several dropdown selections.
+    if (cur.type === "matching") {
+        if (dom.options) {
+            dom.options.style.display = "flex";
+            dom.options.style.flexDirection = "column";
+            dom.options.style.gap = "14px";
+        }
+        const pairs = Array.isArray(cur.pairs) ? cur.pairs : [];
+        if (!pairs.length || pairs.some(p => !p.prompt || !p.answer)) {
+            if (dom.qText) dom.qText.textContent = "This matching question has invalid data.";
+            return;
+        }
+        const choices = [...new Set(Array.isArray(cur.choices) && cur.choices.length ? cur.choices : pairs.map(p => p.answer))];
+        const selects = pairs.map((pair, index) => {
+            const row = document.createElement("div");
+            row.className = "matching-row";
+            row.style.cssText = "display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:12px 14px;border:1px solid var(--border-color,#64748b55);border-radius:10px;";
+            const label = document.createElement("label");
+            label.textContent = pair.prompt;
+            label.style.cssText = "font-weight:600;flex:1;min-width:130px;color:var(--text-primary,inherit)";
+            const select = document.createElement("select");
+            select.id = "matching-answer-" + index;
+            label.htmlFor = select.id;
+            select.setAttribute("aria-label", "Match " + pair.prompt);
+            select.style.cssText = "flex:1;min-width:180px;max-width:100%;padding:11px;border:1px solid var(--border-color,#64748b);border-radius:8px;background:var(--bg-card,#fff);color:var(--text-primary,#1e293b);font:inherit;";
+            const placeholder = document.createElement("option");
+            placeholder.value = "";
+            placeholder.textContent = "Choose a definition";
+            select.appendChild(placeholder);
+            choices.forEach(choice => {
+                const option = document.createElement("option");
+                option.value = choice;
+                option.textContent = choice;
+                select.appendChild(option);
+            });
+            row.append(label, select);
+            dom.options.appendChild(row);
+            return select;
+        });
+        const submit = document.createElement("button");
+        submit.type = "button";
+        submit.className = "option-btn";
+        submit.textContent = "Check matches";
+        submit.style.marginTop = "8px";
+        dom.options.appendChild(submit);
+        submit.addEventListener("click", () => {
+            if (state.hasAnswered) return;
+            if (selects.some(select => !select.value)) {
+                submit.textContent = "Complete all matches first";
+                return;
+            }
+            const chosen = selects.map(select => select.value);
+            const correct = pairs.map(pair => pair.answer);
+            const isCorrect = chosen.every((value, i) => value === correct[i]);
+            state.hasAnswered = true;
+            state.attempted++;
+            if (isCorrect) state.score++;
+            state.userAnswers.push({
+                type: "matching",
+                questionText: cur.question,
+                pairs: pairs.map((pair, i) => ({ prompt: pair.prompt, answer: pair.answer, chosen: chosen[i] })),
+                chosenKey: isCorrect ? "MATCH" : "MISMATCH",
+                correctKey: "MATCH",
+                explanation: cur.explanation || "Review the correct term-definition pairs."
+            });
+            selects.forEach((select, i) => {
+                select.disabled = true;
+                if (quizMode === "practice") {
+                    select.style.borderColor = chosen[i] === correct[i] ? "#10b981" : "#ef4444";
+                }
+            });
+            submit.disabled = true;
+            if (quizMode === "practice") {
+                if (dom.fbTitle) dom.fbTitle.textContent = isCorrect ? "All matches correct! 🎉" : "Some matches need correction";
+                if (dom.feedback) {
+                    dom.feedback.className = "feedback-panel " + (isCorrect ? "correct-panel" : "incorrect-panel");
+                    dom.feedback.classList.remove("hidden");
+                    dom.feedback.style.display = "block";
+                }
+                if (dom.explanation) {
+                    dom.explanation.textContent = (cur.explanation || "") + (isCorrect ? "" : " Correct matches: " + pairs.map(p => p.prompt + " — " + p.answer).join("; "));
+                }
+            } else {
+                if (dom.feedback) { dom.feedback.classList.add("hidden"); dom.feedback.style.display = "none"; }
+                setTimeout(() => {
+                    state.currentIndex++;
+                    if (state.currentIndex < state.questions.length) renderQuestion(state, dom, quizMode, courseCode);
+                    else renderTerminalView(state, dom, courseCode);
+                }, 400);
+            }
+        });
+        return;
+    }
+
     /* ==========================================================================
        BRANCH A: ADVANCED ESSAY EVALUATION ENGINE WITH NEXUS AI
        ========================================================================== */
@@ -433,6 +527,26 @@ function renderTerminalView(state, dom, courseCode) {
         state.userAnswers.forEach((ans) => {
             const isEssayInState = (ans.options && ans.options["Your Submission"]) || ans.chosenKey === "Review Pending";
             
+            if (ans.type === "matching") {
+                mcqAttempted++;
+                const isCorrect = ans.chosenKey === ans.correctKey;
+                if (isCorrect) mcqCorrect++;
+                const rows = (ans.pairs || []).map(p => {
+                    const ok = p.chosen === p.answer;
+                    return '<li style="margin:8px 0;color:#334155">' + safeRenderText(p.prompt) +
+                        ': <strong style="color:' + (ok ? '#059669' : '#dc2626') + '">' +
+                        safeRenderText(p.chosen) + '</strong>' +
+                        (ok ? '' : ' (correct: ' + safeRenderText(p.answer) + ')') + '</li>';
+                }).join("");
+                reviewRowsHtml += '<div class="review-card" style="border:1px solid #e2e8f0;border-left:5px solid ' +
+                    (isCorrect ? '#10b981' : '#ef4444') + ';border-radius:8px;padding:1.25rem;background:white;margin-bottom:1rem;text-align:left">' +
+                    '<strong style="color:#4a154b">Question ' + globalItemCounter + ' (Matching) — ' +
+                    (isCorrect ? 'Correct' : 'Incorrect') + '</strong><p style="color:#1e293b">' +
+                    safeRenderText(ans.questionText || "") + '</p><ul style="padding-left:20px">' + rows +
+                    '</ul><p style="color:#475569">' + safeRenderText(ans.explanation || "") + '</p></div>';
+                globalItemCounter++;
+                return;
+            }
             if (!isEssayInState) {
                 mcqAttempted++;
                 const isCorrect = ans.chosenKey === ans.correctKey;
