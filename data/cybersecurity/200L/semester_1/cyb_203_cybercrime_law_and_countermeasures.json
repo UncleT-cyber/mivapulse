@@ -1,0 +1,562 @@
+[
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Classification",
+    "question": "A company experiences a data breach where customer credit card information is stolen. The attackers used a combination of phishing to gain initial access and then deployed malware to move laterally across the network. This attack involves both:",
+    "options": {
+      "A": "Targeting computers and using computers",
+      "B": "Government cybercrime only",
+      "C": "DDoS and ransomware",
+      "D": "Individual cybercrime and property cybercrime"
+    },
+    "correct_answer": "A",
+    "explanation": "The attack uses computers as instruments (phishing and malware) and targets computer systems and stored data.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Impact of Cybercrime",
+    "question": "A financial institution reports that web application and API attacks increased by 257% in one year, and their average data breach cost is $5.97 million. Which effect of cybercrime does this data primarily illustrate?",
+    "options": {
+      "A": "Financial impact",
+      "B": "Reputational impact",
+      "C": "Personal impact",
+      "D": "Governmental impact"
+    },
+    "correct_answer": "A",
+    "explanation": "The cited monetary breach cost directly illustrates financial consequences; the figures are scenario data rather than verified current statistics.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Digital Forensics",
+    "question": "An investigator is building a hypothesis about how a security breach occurred. After analyzing logs, network traffic, and system images, she develops a timeline of events. What is the PRIMARY purpose of creating this timeline?",
+    "options": {
+      "A": "To calculate the total financial loss from the breach",
+      "B": "To reconstruct the sequence of events leading to the breach",
+      "C": "To identify which employees were working during the breach",
+      "D": "To make the investigation report look professional"
+    },
+    "correct_answer": "B",
+    "explanation": "A forensic timeline correlates evidence to reconstruct the order of relevant events.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Social Engineering",
+    "question": "A cybercriminal sends emails pretending to be from a legitimate bank, asking recipients to verify their account details by clicking a link. Several customers enter their login credentials, which the criminal then uses to access their accounts. This attack combines which two types of cybercrime?",
+    "options": {
+      "A": "Phishing and identity theft",
+      "B": "DDoS and hacking",
+      "C": "Malware and ransomware",
+      "D": "Virus and worm"
+    },
+    "correct_answer": "A",
+    "explanation": "The fraudulent emails are phishing, and using stolen credentials to impersonate account holders constitutes identity-related fraud.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Malware & Ransomware",
+    "question": "A company experiences a ransomware attack that encrypts all customer data. The attackers demand payment in cryptocurrency. Which combination of cybercrime categories does this attack represent?",
+    "options": {
+      "A": "Social engineering and data breach",
+      "B": "Cyber espionage and hacking",
+      "C": "Phishing and identity theft",
+      "D": "Malware attack and financial crime"
+    },
+    "correct_answer": "D",
+    "explanation": "Ransomware is malicious software used to extort payment.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Motivations",
+    "question": "A teenager creates a script that floods a school's website with traffic, causing it to crash repeatedly. The teenager does this to gain attention and recognition among peers. Which cause of cybercrime BEST explains this behaviour?",
+    "options": {
+      "A": "Easy access to confidential information",
+      "B": "Desire for quick money",
+      "C": "Negligence in system security",
+      "D": "Passion of youngsters seeking recognition"
+    },
+    "correct_answer": "D",
+    "explanation": "The stated motivation is peer attention and recognition; the attack itself is a denial of service.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Financial Cybercrime",
+    "question": "Alex invested his savings in an online platform promising extraordinary returns. The platform had a sleek website, positive testimonials, and claimed to use AI for trading. When he tried to withdraw profits, the platform cited technical issues and later vanished. Which category of cybercrime does this scenario BEST represent?",
+    "options": {
+      "A": "Online scam and financial fraud",
+      "B": "Hacking and unauthorised access",
+      "C": "Cyberstalking and harassment",
+      "D": "Identity theft and data breach"
+    },
+    "correct_answer": "A",
+    "explanation": "The platform's deceptive investment promises and disappearance indicate online investment fraud.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Countermeasures",
+    "question": "An organisation regularly conducts simulated phishing exercises where employees receive fake phishing emails to test their awareness. Employees who click on the simulated phishing links receive immediate feedback and additional training. What is the PRIMARY benefit of this practice?",
+    "options": {
+      "A": "It identifies employees who need more security training",
+      "B": "It guarantees that no real phishing attacks will succeed",
+      "C": "It reduces the need for antivirus software",
+      "D": "It replaces the need for technical security controls"
+    },
+    "correct_answer": "A",
+    "explanation": "Simulations help identify training gaps and reinforce recognition of phishing attempts.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Digital Forensics",
+    "question": "A company's internal investigation reveals that an employee leaked confidential data. The investigator must decide whether to notify the employee immediately or continue gathering evidence secretly. What is the PRIMARY risk of notifying the employee too early?",
+    "options": {
+      "A": "The employee may hire a lawyer",
+      "B": "The employee may confess to the crime",
+      "C": "The employee may destroy evidence",
+      "D": "The employee may resign voluntarily"
+    },
+    "correct_answer": "C",
+    "explanation": "Premature notification can create a risk of evidence tampering; investigations must also comply with law and organizational policy.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Social Engineering",
+    "question": "A social media user receives a friend request from a profile with mutual connections. After accepting, the user receives messages asking for financial assistance due to an emergency. The user later discovers the profile was fake and the real friend's account was compromised. What type of cybercrime does this illustrate?",
+    "options": {
+      "A": "Hacking and unauthorised access",
+      "B": "Malware distribution",
+      "C": "Denial of service attack",
+      "D": "Social engineering and identity theft"
+    },
+    "correct_answer": "D",
+    "explanation": "The attacker impersonates a trusted contact to manipulate the victim into sending money.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Countermeasures",
+    "question": "A financial institution experiences a data breach where customer login credentials are stolen. The bank implements mandatory multi-factor authentication (MFA) for all accounts. What is the PRIMARY security benefit of this measure?",
+    "options": {
+      "A": "It blocks all third-party applications from accessing customer data.",
+      "B": "It automatically detects malware on customer devices.",
+      "C": "It prevents phishing emails from reaching customers.",
+      "D": "It ensures that stolen passwords alone cannot grant account access."
+    },
+    "correct_answer": "D",
+    "explanation": "MFA requires another factor beyond the password, although phishing-resistant methods offer stronger protection than some other MFA types.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Network Attacks",
+    "question": "A company's website is taken offline by a flood of traffic from thousands of compromised IoT devices. The attackers demand payment to stop the attack. This attack combines which two categories of cybercrime?",
+    "options": {
+      "A": "Cyber espionage and malware",
+      "B": "DDoS attack and ransomware/extortion",
+      "C": "Social engineering and data breach",
+      "D": "Phishing and identity theft"
+    },
+    "correct_answer": "B",
+    "explanation": "The botnet-driven flood is a DDoS attack paired with extortion; no data-encrypting ransomware is described.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Countermeasures",
+    "question": "A company hires a former hacker to test its network security by attempting to breach it with full authorisation. The hired expert finds several vulnerabilities and reports them for remediation. What is this practice called, and what is its PRIMARY benefit?",
+    "options": {
+      "A": "Black-hat hacking; it demonstrates the company's vulnerability to attackers",
+      "B": "Phishing simulation; it trains employees to recognise fraudulent emails",
+      "C": "White-hat hacking; it identifies weaknesses before criminals exploit them",
+      "D": "Social engineering; it manipulates employees into revealing secrets"
+    },
+    "correct_answer": "C",
+    "explanation": "Authorized ethical hacking identifies exploitable weaknesses so they can be remediated.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Countermeasures",
+    "question": "A government cybersecurity agency notices that critical infrastructure systems have not been updated with security patches for over a year. An attack exploiting these vulnerabilities could disrupt power, water, or transportation services. Which cause of cybercrime vulnerability does this situation primarily represent?",
+    "options": {
+      "A": "Passion of youngsters seeking recognition",
+      "B": "Easy access to confidential information",
+      "C": "Negligence in system security maintenance",
+      "D": "Desire for quick money by attackers"
+    },
+    "correct_answer": "C",
+    "explanation": "Neglected patching leaves known weaknesses exposed to exploitation.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Impact of Cybercrime",
+    "question": "A government agency stores classified national security information on servers accessible via the internet. A foreign hacker group breaches these servers and steals sensitive data. Which effect of cybercrime is MOST directly demonstrated by this scenario?",
+    "options": {
+      "A": "Personal impact on citizens whose data was exposed",
+      "B": "Financial impact on the agency",
+      "C": "Governmental impact and national security threat",
+      "D": "Reputational damage to the government"
+    },
+    "correct_answer": "C",
+    "explanation": "The theft of classified government information creates a direct national security threat.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Digital Forensics",
+    "question": "An investigator is examining a suspect's computer and finds deleted files that may contain evidence. The files were deleted months ago, and the suspect has continued using the computer since then. What challenge does the investigator face in recovering this data?",
+    "options": {
+      "A": "Only the suspect can recover deleted files",
+      "B": "Deleted files are permanently unrecoverable after deletion",
+      "C": "Deleted files require special decryption keys",
+      "D": "The data may have been overwritten by new files"
+    },
+    "correct_answer": "D",
+    "explanation": "Continued storage use can overwrite deleted data, reducing recoverability.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Classification",
+    "question": "A nation-state attacker gains access to a country's power grid control systems and remains undetected for months, mapping the network and preparing for potential disruption. Which category of cybercrime does this BEST represent?",
+    "options": {
+      "A": "Computer-as-a-target crime",
+      "B": "Government cybercrime",
+      "C": "Individual cybercrime",
+      "D": "Property cybercrime"
+    },
+    "correct_answer": "B",
+    "explanation": "The scenario involves a state-linked threat against national critical infrastructure. The label 'government cybercrime' is a course classification rather than a universal legal category.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cyber Espionage",
+    "question": "A cybercriminal gains unauthorised access to a company's network and remains undetected for months, systematically stealing trade secrets and intellectual property. This activity is BEST classified as:",
+    "options": {
+      "A": "Cyber espionage",
+      "B": "Identity theft",
+      "C": "Phishing attack",
+      "D": "Malware distribution"
+    },
+    "correct_answer": "A",
+    "explanation": "Covert, sustained theft of proprietary information is cyber espionage.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cyber Espionage",
+    "question": "A cybercriminal gains initial access to a corporate network through a phishing email. Once inside, they spend months moving laterally, escalating privileges, and exfiltrating sensitive data without being detected. This describes which type of threat?",
+    "options": {
+      "A": "Ransomware attack",
+      "B": "Advanced Persistent Threat (APT)",
+      "C": "Script kiddie activity",
+      "D": "Denial of service attack"
+    },
+    "correct_answer": "B",
+    "explanation": "An APT typically involves sustained, stealthy access and a series of coordinated intrusion activities.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Malware & Ransomware",
+    "question": "A cybersecurity analyst discovers that malware has spread across a corporate network without any users clicking on files or opening attachments. The malware exploited a security flaw in the operating system to propagate automatically. Which type of malware is this?",
+    "options": {
+      "A": "Virus",
+      "B": "Trojan",
+      "C": "Ransomware",
+      "D": "Worm"
+    },
+    "correct_answer": "D",
+    "explanation": "A worm can self-propagate by exploiting vulnerabilities without requiring user execution of each copy.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Network Attacks",
+    "question": "An attacker sends a massive number of ICMP echo requests to a network's broadcast address with a spoofed source IP address of the intended victim. Hosts on the network respond, overwhelming the victim's system. What type of attack is this?",
+    "options": {
+      "A": "Phishing attack",
+      "B": "Fraggle attack",
+      "C": "Smurf attack",
+      "D": "SQL injection attack"
+    },
+    "correct_answer": "C",
+    "explanation": "A Smurf attack uses spoofed ICMP echo requests to a broadcast address to amplify responses toward the victim.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Malware & Ransomware",
+    "question": "A security team discovers that malware on a compromised system is hiding its processes from standard detection tools and maintaining administrator-level access even after reboots. What type of malware is this?",
+    "options": {
+      "A": "Scareware",
+      "B": "Spyware",
+      "C": "Rootkit",
+      "D": "Adware"
+    },
+    "correct_answer": "C",
+    "explanation": "Rootkits conceal malicious activity and help maintain privileged persistence.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Law & Jurisdiction",
+    "question": "A hacker in Country A attacks a server in Country B, causing financial loss to a company headquartered in Country C. Which jurisdictional principle would allow Country C to prosecute?",
+    "options": {
+      "A": "Protective principle based on national security interests",
+      "B": "Universal jurisdiction for all cybercrimes",
+      "C": "Territorial jurisdiction based on where the crime occurred",
+      "D": "Nationality principle based on the victim's nationality"
+    },
+    "correct_answer": "D",
+    "explanation": "The intended answer invokes a nationality-based connection to a victim in Country C. In actual law, victim nationality, corporate nationality, effects and statutory jurisdiction must be distinguished; a headquarters location alone does not automatically establish nationality jurisdiction.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Web Attacks",
+    "question": "A company experiences an attack where the attacker modifies the URL parameters in a web application, tricking the system into granting higher-level permissions than originally authorised. What type of attack is this?",
+    "options": {
+      "A": "Dictionary attack",
+      "B": "Privilege escalation attack",
+      "C": "Fraggle attack",
+      "D": "Smurf attack"
+    },
+    "correct_answer": "B",
+    "explanation": "Manipulating parameters to gain unauthorized higher privileges is a privilege-escalation or broken-authorization attack.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Privacy & Rights",
+    "question": "A company wants to monitor employee email to prevent data leaks but must comply with privacy laws. What is the MOST appropriate approach to balance these competing interests?",
+    "options": {
+      "A": "Prohibit all personal email use entirely",
+      "B": "Monitor only after obtaining a warrant for each employee",
+      "C": "Monitor secretly to avoid employee resistance",
+      "D": "Establish clear policies and obtain employee consent"
+    },
+    "correct_answer": "D",
+    "explanation": "Transparent, proportionate monitoring with a lawful basis and clear policies is important. Consent may not be freely given in employment relationships and is not always the correct legal basis.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Malware & Ransomware",
+    "question": "A user sees a pop-up message claiming their computer is infected with 15 viruses and demanding immediate payment to activate antivirus software. The message looks like a legitimate system notification. What type of attack is this?",
+    "options": {
+      "A": "Rootkit infection",
+      "B": "SQL injection attack",
+      "C": "Scareware attack",
+      "D": "Brute force attack"
+    },
+    "correct_answer": "C",
+    "explanation": "Scareware uses alarming, often false security warnings to pressure users into payments or unsafe actions.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Social Engineering",
+    "question": "A user receives an email claiming to be from their bank, stating their account will be locked unless they click a link and verify their credentials. The email contains the bank's logo and appears professionally written. What type of attack is this?",
+    "options": {
+      "A": "Phishing attack",
+      "B": "Brute force attack",
+      "C": "Man-in-the-Middle attack",
+      "D": "Denial of Service attack"
+    },
+    "correct_answer": "A",
+    "explanation": "The impersonated bank email attempts to trick the recipient into revealing credentials.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Countermeasures",
+    "question": "A financial institution discovers that customer credit card data was stolen because an employee emailed unencrypted files to their personal account. Which policy should have prevented this?",
+    "options": {
+      "A": "Network Security Policy",
+      "B": "Physical Security Policy",
+      "C": "Data Retention Policy",
+      "D": "Email Security Policy"
+    },
+    "correct_answer": "D",
+    "explanation": "Email and data-handling policies should restrict sending sensitive data to unapproved personal accounts and require appropriate safeguards.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Privacy & Rights",
+    "question": "A social media user posts a political opinion that the government finds critical. The government demands the platform remove the post and provide the user's identity. Which rights are most directly implicated?",
+    "options": {
+      "A": "Right to Property and Right to Free Speech",
+      "B": "Right to Privacy and Right to Employment",
+      "C": "Right to Free Speech and Right to Privacy",
+      "D": "Right to Work and Right to Property"
+    },
+    "correct_answer": "C",
+    "explanation": "Removing political expression implicates freedom of expression; identifying the user implicates privacy rights. Legal protections vary by jurisdiction.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Countermeasures",
+    "question": "After a ransomware attack, a hospital discovers that an employee used the same password for both personal social media and the hospital's patient records system. Which policy failure is most directly responsible for this vulnerability?",
+    "options": {
+      "A": "Data Retention Policy",
+      "B": "Information Security Policy",
+      "C": "Physical Security Policy",
+      "D": "Network Security Policy"
+    },
+    "correct_answer": "B",
+    "explanation": "An information security policy should address password reuse and authentication safeguards.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Law & Jurisdiction",
+    "question": "A country prosecutes a foreign national who hacked into its government systems from abroad, even though no citizen was harmed and the attacker never entered the country. Which jurisdictional principle justifies this prosecution?",
+    "options": {
+      "A": "Territorial principle",
+      "B": "Protective principle",
+      "C": "Universal jurisdiction",
+      "D": "Nationality principle"
+    },
+    "correct_answer": "B",
+    "explanation": "The protective principle can permit jurisdiction over foreign conduct threatening a state's security or core governmental interests, subject to applicable law.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Law & Jurisdiction",
+    "question": "A country criminalises possession of hacking tools, but critics argue this could criminalise legitimate security research. What is the primary concern with this substantive law?",
+    "options": {
+      "A": "The law may cause moral over-illegalization",
+      "B": "The law exceeds the country's jurisdictional authority",
+      "C": "The law conflicts with international treaties",
+      "D": "The law lacks sufficient procedural safeguards"
+    },
+    "correct_answer": "A",
+    "explanation": "Overbroad criminalization may capture legitimate dual-use security research; precise intent and authorization requirements help limit this risk.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Digital Forensics",
+    "question": "An investigator is examining a suspect's social media connections and finds they are linked to multiple individuals involved in criminal activity. What does this network analysis MOST likely indicate?",
+    "options": {
+      "A": "The connections are coincidental with no investigative value",
+      "B": "The suspect is definitely guilty of all crimes",
+      "C": "The suspect may be part of a criminal network or association",
+      "D": "The suspect's account was hacked"
+    },
+    "correct_answer": "C",
+    "explanation": "Connections may warrant further investigation but do not establish guilt.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Digital Forensics",
+    "question": "An investigator is analysing a compromised system and needs to understand what data was stolen. Which forensic process involves extracting relevant information from collected evidence?",
+    "options": {
+      "A": "Identification",
+      "B": "Collection",
+      "C": "Reporting",
+      "D": "Analysis"
+    },
+    "correct_answer": "D",
+    "explanation": "Forensic analysis examines and interprets collected evidence to identify relevant facts.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Digital Forensics",
+    "question": "Investigators discover that the attack on CyberTech involved multiple compromised accounts with different access levels. What forensic technique would BEST help map how the attacker moved through the network?",
+    "options": {
+      "A": "Interviewing only senior management about suspicious activity",
+      "B": "Correlating authentication logs and lateral movement indicators",
+      "C": "Focusing exclusively on external firewall logs",
+      "D": "Analysing only the final malware payload"
+    },
+    "correct_answer": "B",
+    "explanation": "Correlating authentication events with host and network indicators helps reconstruct lateral movement.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Privacy & Rights",
+    "question": "A company uses third-party tracking cookies on its website without informing users. Which policy area is most directly violated?",
+    "options": {
+      "A": "Data Retention Policy",
+      "B": "Physical Security Policy",
+      "C": "Privacy Policy",
+      "D": "Network Security Policy"
+    },
+    "correct_answer": "C",
+    "explanation": "Undisclosed tracking implicates privacy and transparency requirements; exact consent and notice duties vary by law.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Digital Forensics",
+    "question": "An investigator is analysing a disk image and needs to recover deleted files that may contain evidence. Which forensic tool would be MOST appropriate for this task?",
+    "options": {
+      "A": "The Sleuth Kit",
+      "B": "Metasploit",
+      "C": "Nmap",
+      "D": "Wireshark"
+    },
+    "correct_answer": "A",
+    "explanation": "The Sleuth Kit provides filesystem forensic tools, including examination of deleted file records and recoverable content.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Cybercrime Law & Jurisdiction",
+    "question": "A country enacts a law requiring all internet service providers to retain user browsing history for five years. Which type of cybercrime law is this, and what is its primary purpose?",
+    "options": {
+      "A": "Substantive law defining prohibited conduct",
+      "B": "Procedural law enabling future investigations",
+      "C": "Regulatory law ensuring service quality",
+      "D": "Preventive law deterring potential offenders"
+    },
+    "correct_answer": "B",
+    "explanation": "The assessment frames mandatory retention as an investigatory procedural measure. In practice, retention duties may be classified as regulatory or procedural depending on the legal framework.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Digital Forensics",
+    "question": "During the CyberTech Solutions investigation, investigators need to trace the origin of the attack. What is the MOST challenging aspect of identifying cybercriminals in such cases?",
+    "options": {
+      "A": "Attackers use anonymisation techniques to hide identity",
+      "B": "Attackers never use the internet to commit crimes",
+      "C": "Attackers leave obvious digital fingerprints",
+      "D": "Law enforcement has unlimited resources for every case"
+    },
+    "correct_answer": "A",
+    "explanation": "Proxies, compromised infrastructure and other anonymization techniques complicate reliable attribution.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 203",
+    "topic": "Physical Security",
+    "question": "An attacker gains physical access to a company's server room and installs a hardware keylogger between the keyboard and the computer. What type of attack is this?",
+    "options": {
+      "A": "Physical access attack",
+      "B": "Denial of Service attack",
+      "C": "SQL injection attack",
+      "D": "Man-in-the-Middle attack"
+    },
+    "correct_answer": "A",
+    "explanation": "Installing a hardware keylogger requires unauthorized physical access; it intercepts keystrokes but the most direct category among the options is a physical access attack.",
+    "type": "mcq"
+  }
+]
