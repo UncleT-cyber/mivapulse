@@ -1,0 +1,562 @@
+[
+  {
+    "course_code": "CYB 201",
+    "topic": "Business Continuity & Recovery",
+    "question": "A company needs to recover its systems after a major server failure. The management insists that the systems must be back online within 4 hours. Which metric are they defining?",
+    "options": {
+      "A": "Recovery Point Objective (RPO)",
+      "B": "Incident Response Protocol (IRP)",
+      "C": "Business Continuity Plan (BCP)",
+      "D": "Recovery Time Objective (RTO)"
+    },
+    "correct_answer": "D",
+    "explanation": "RTO defines the maximum targeted time to restore a service after disruption.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "System Hardening",
+    "question": "While all these help secure an Operating System (OS), which action represents the most critical 'first step' in OS hardening?",
+    "options": {
+      "A": "Setting up a regular backup schedule for system data",
+      "B": "Deploying an advanced Intrusion Detection System (IDS)",
+      "C": "Removing all unnecessary protocols and third-party apps",
+      "D": "Patching the base OS and configuring secure defaults"
+    },
+    "correct_answer": "D",
+    "explanation": "Applying security patches and secure baseline configurations is a foundational hardening step; minimizing unnecessary services is also important.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Testing",
+    "question": "Which of the following best describes the relationship between penetration testing and vulnerability assessment?",
+    "options": {
+      "A": "They are identical processes that use the same automated tools",
+      "B": "Penetration testing can be a part of a broader vulnerability assessment",
+      "C": "Penetration testing is only for web apps; assessment is for networks",
+      "D": "Vulnerability assessment is a sub-component of a penetration test"
+    },
+    "correct_answer": "B",
+    "explanation": "Vulnerability assessment identifies and prioritizes weaknesses, while penetration testing attempts controlled exploitation. The two may be integrated; the boundaries vary by methodology.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Principles",
+    "question": "A financial firm discovers an executive's account was used for a suspicious transaction. The executive denies involvement. Which security service is primarily needed to provide legal proof that the executive cannot deny the action?",
+    "options": {
+      "A": "User authentication",
+      "B": "System integrity",
+      "C": "Data confidentiality",
+      "D": "Non-repudiation"
+    },
+    "correct_answer": "D",
+    "explanation": "Non-repudiation provides evidence of an action's origin and integrity. An account log alone does not conclusively prove who acted.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Awareness",
+    "question": "An employee receives a pop-up window on their work laptop asking to update a security application. Following best practices, what should they do?",
+    "options": {
+      "A": "Verify the update with the IT department before taking action",
+      "B": "Restart the laptop to see if the pop-up appears again",
+      "C": "Ignore the pop-up to avoid potential malware or phishing links",
+      "D": "Click 'Update' immediately to ensure the system stays patched"
+    },
+    "correct_answer": "A",
+    "explanation": "Unexpected update prompts should be verified through trusted IT or official update channels before clicking.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Application Security",
+    "question": "A developer is building a web application and wants to follow OWASP guidelines to prevent SQL Injection. Which defensive technique is most effective?",
+    "options": {
+      "A": "Implementing strict input sanitisation and parameterised queries",
+      "B": "Implementing black-box testing during the final deployment phase",
+      "C": "Encrypting the entire database using a symmetric AES algorithm",
+      "D": "Using a vulnerability scanner to find open ports and missing patches"
+    },
+    "correct_answer": "A",
+    "explanation": "Parameterized queries are the primary defense against SQL injection; input validation provides additional protection.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Authentication",
+    "question": "A bank is designing a new login system. They decide to require a password and a fingerprint scan. How would you categorise this authentication?",
+    "options": {
+      "A": "Something you know and something you do",
+      "B": "Something you are and something you know",
+      "C": "Something you have and something you are",
+      "D": "Something you know and something you have"
+    },
+    "correct_answer": "B",
+    "explanation": "A password is knowledge-based authentication; a fingerprint is an inherence/biometric factor.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Testing",
+    "question": "A security tester is asked to evaluate a system without any knowledge of its internal code or architecture. What approach is being used?",
+    "options": {
+      "A": "Grey box testing",
+      "B": "Black box testing",
+      "C": "White box testing",
+      "D": "Vulnerability testing"
+    },
+    "correct_answer": "B",
+    "explanation": "Black-box testing evaluates a system without privileged knowledge of its internals.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Authentication",
+    "question": "What is the correct order of the two-step process for a standard user authentication procedure?",
+    "options": {
+      "A": "Verification of credentials, then Identification of the user identity",
+      "B": "Identification by presenting an identifier, then Verification of the binding",
+      "C": "Authorisation of access levels, then Identification of the user profile",
+      "D": "Presentation of biometric data, then Registration of the user account"
+    },
+    "correct_answer": "B",
+    "explanation": "The user claims an identity and then proves it with appropriate credentials.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Cryptography",
+    "question": "Which of the following pairings correctly matches the encryption type with its characteristic?",
+    "options": {
+      "A": "Symmetric: Uses two different keys for encryption and decryption",
+      "B": "Asymmetric: Sender and receiver share a single, common secret key",
+      "C": "Asymmetric: Performs encryption and decryption using two different keys",
+      "D": "Symmetric: Typically includes algorithms like RSA and Diffie-Hellman"
+    },
+    "correct_answer": "C",
+    "explanation": "Asymmetric cryptography uses a related public/private key pair. Diffie-Hellman is a key-agreement mechanism, not itself an encryption algorithm.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Cryptography",
+    "question": "You are encrypting the word 'ATTACK' using a Caesar cipher with a shift key of n=3. What will be the resulting ciphertext?",
+    "options": {
+      "A": "XTTXDL",
+      "B": "CVVCFM",
+      "C": "DWWDFN",
+      "D": "BUUBLI"
+    },
+    "correct_answer": "C",
+    "explanation": "Shifting A→D, T→W, C→F and K→N gives DWWDFN.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Access Control",
+    "question": "A company implements a policy where a user is assigned to a 'Manager' role, which then grants access to specific folders. This is an example of:",
+    "options": {
+      "A": "Mandatory Access Control (MAC)",
+      "B": "Role-Based Access Control (RBAC)",
+      "C": "Discretionary Access Control (DAC)",
+      "D": "Decentralised Access Control"
+    },
+    "correct_answer": "B",
+    "explanation": "RBAC assigns permissions to roles and grants users those permissions through role membership.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Principles",
+    "question": "Why is 'availability' considered an essential part of the CIA triad in system design?",
+    "options": {
+      "A": "It ensures that only authorised users can read the data",
+      "B": "It is because an unavailable system is as ineffective as having no system",
+      "C": "Because it provides proof that a specific user performed an action",
+      "D": "It protects the data from being modified by unauthorised users"
+    },
+    "correct_answer": "B",
+    "explanation": "Availability means authorized users can access services and information when needed.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Business Continuity & Recovery",
+    "question": "Evaluate the definitions of Backup and Archive. Which statement is technically accurate?",
+    "options": {
+      "A": "Backup is for long-term legal retention; Archive is for short-term recovery",
+      "B": "Archive involves frequent data copying; Backup involves moving old data",
+      "C": "Backup and Archive both serve the primary goal of daily data redundancy",
+      "D": "Backup is for short-term recovery; Archive is for long-term legal retention"
+    },
+    "correct_answer": "D",
+    "explanation": "Backups primarily enable restoration after loss or damage; archives primarily retain records over longer periods, including compliance needs.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Risk Management",
+    "question": "A zero-day vulnerability is discovered in an OS. Which security principle or strategy is most effective at reducing the risk before a patch is available?",
+    "options": {
+      "A": "Zero trust (Explicit verification)",
+      "B": "Periodic full-system backups",
+      "C": "Qualitative risk assessment",
+      "D": "Symmetric key encryption"
+    },
+    "correct_answer": "A",
+    "explanation": "Zero-trust access controls can reduce exposure and lateral movement, but compensating controls such as isolation, disabling affected services and vendor mitigations are often more direct zero-day defenses.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Cryptography",
+    "question": "How does a double transposition cipher differ from a simple substitution cipher?",
+    "options": {
+      "A": "Substitution replaces characters; Transposition reorders characters",
+      "B": "Substitution is a modern algorithm; Transposition is a classic cipher",
+      "C": "Substitution reorders characters; Transposition replaces characters",
+      "D": "Substitution uses two keys; Transposition uses only one secret key"
+    },
+    "correct_answer": "A",
+    "explanation": "Substitution changes symbols; transposition changes their positions. Double transposition applies rearrangement twice.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Principles",
+    "question": "An attacker manipulates input fields to run malicious code against a database. Which concept of the CIA triad is most directly violated if the attacker changes user records?",
+    "options": {
+      "A": "Integrity",
+      "B": "Authenticity",
+      "C": "Availability",
+      "D": "Confidentiality"
+    },
+    "correct_answer": "A",
+    "explanation": "Unauthorized modification of records violates integrity.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Access Control",
+    "question": "A company wants to move from a 'centralised' to a 'decentralised' access control model. What is the primary security trade-off they are making?",
+    "options": {
+      "A": "Higher resilience against failure but more difficulty in coordination",
+      "B": "Increased administrative ease but lower overall system resilience",
+      "C": "Guaranteed data confidentiality but lower overall system integrity",
+      "D": "Better coordination of attacks but higher single-point vulnerability"
+    },
+    "correct_answer": "A",
+    "explanation": "Decentralization can reduce single points of failure but increases coordination and policy-consistency challenges.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Principles",
+    "question": "Which statement correctly matches the concept of 'data integrity'?",
+    "options": {
+      "A": "Ensuring private information is not disclosed to unauthorised individuals",
+      "B": "Ensuring that individuals control what information related to them is stored",
+      "C": "Ensuring that a system performs its intended function in an unimpaired manner",
+      "D": "Ensuring that information and programs are changed only in an authorised manner"
+    },
+    "correct_answer": "D",
+    "explanation": "Integrity protects information from unauthorized or improper modification.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Risk Management",
+    "question": "An organisation uses a colour-coded chart where Red signifies high risk, Yellow is average, and Green is low. Which type of risk analysis does this represent?",
+    "options": {
+      "A": "Numerical analysis",
+      "B": "Qualitative analysis",
+      "C": "Quantitative analysis",
+      "D": "Statistical analysis"
+    },
+    "correct_answer": "B",
+    "explanation": "Qualitative risk analysis uses descriptive categories such as high, medium and low.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Malware & Threats",
+    "question": "'A sort of malware that bypasses standard authentication mechanisms to gain access to a computer system.' This describes a —--------",
+    "options": {
+      "A": "trojan horse",
+      "B": "phishing scam",
+      "C": "logic bomb",
+      "D": "backdoor"
+    },
+    "correct_answer": "D",
+    "explanation": "A backdoor provides an alternative access path that bypasses normal authentication or security controls.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Principles",
+    "question": "An employee denies sending a disparaging email to a client, even though the system logs show it originated from his account. This challenge in attribution is a —--------",
+    "options": {
+      "A": "replay issue",
+      "B": "masquerade issue",
+      "C": "repudiation issue",
+      "D": "modification issue"
+    },
+    "correct_answer": "C",
+    "explanation": "Repudiation involves denying responsibility for an action; stronger evidence and non-repudiation controls help address it.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Malware & Threats",
+    "question": "Which of the following best describes the difference between Spyware and Adware?",
+    "options": {
+      "A": "Spyware targets servers while Adware targets PCs",
+      "B": "Spyware steals data while Adware displays ads",
+      "C": "Spyware uses worms while Adware uses viruses",
+      "D": "Spyware is active while Adware is always passive"
+    },
+    "correct_answer": "B",
+    "explanation": "Spyware covertly collects information; adware displays advertising and may also track users.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Principles",
+    "question": "A government agency discovers that a malicious actor has accessed their database and changed the timestamps on several critical files to hide their tracks. Which security pillar was violated?",
+    "options": {
+      "A": "Availability",
+      "B": "Integrity",
+      "C": "Authenticity",
+      "D": "Confidentiality"
+    },
+    "correct_answer": "B",
+    "explanation": "Tampering with timestamps is an unauthorized modification and compromises integrity.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Network Attacks",
+    "question": "An attacker intercepts a valid authentication token sent from a client to a server. They wait one hour and then resend that exact token to the server to gain access. This is an example of:",
+    "options": {
+      "A": "A Modification attack",
+      "B": "A Replay attack",
+      "C": "A Denial of service",
+      "D": "A Masquerade attack"
+    },
+    "correct_answer": "B",
+    "explanation": "A replay attack reuses captured valid authentication data to impersonate a legitimate exchange.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Controls",
+    "question": "Which of the following correctly matches a security control type to its example?",
+    "options": {
+      "A": "Technical Control - Security Awareness Training",
+      "B": "Technical Control - Corporate Security Policies",
+      "C": "Physical Control - Security Guards and Locked Doors",
+      "D": "Administrative Control - Biometric Fingerprint Scanners"
+    },
+    "correct_answer": "C",
+    "explanation": "Guards and locked doors are physical security controls.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Network Attacks",
+    "question": "How does a Distributed Denial of Service (DDoS) attack differ fundamentally from a standard DoS attack?",
+    "options": {
+      "A": "DDoS is a passive attack while DoS is an active one",
+      "B": "DDoS targets the core whereas DoS targets the edge",
+      "C": "DDoS uses multiple systems to flood the target",
+      "D": "DDoS uses encryption while DoS uses raw packets"
+    },
+    "correct_answer": "C",
+    "explanation": "A distributed denial-of-service attack originates from multiple systems or sources.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Malware & Threats",
+    "question": "'An assault on system security derived from an intelligent threat that deliberately attempts to evade security services.' This is the definition of a ________",
+    "options": {
+      "A": "passive eavesdropping",
+      "B": "security mechanism",
+      "C": "cybersecurity attack",
+      "D": "cyber vulnerability"
+    },
+    "correct_answer": "C",
+    "explanation": "A cybersecurity attack is an intentional attempt to compromise security protections.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Cybersecurity Strategy",
+    "question": "A military institution is focused on 'Defending Forward.' Which of the following actions best aligns with this specific strategy?",
+    "options": {
+      "A": "Building a stronger firewall for internal data",
+      "B": "Engaging with allies to attribute and cost attacks",
+      "C": "Encrypting all outgoing email communications",
+      "D": "Mandating multi-factor authentication for staff"
+    },
+    "correct_answer": "B",
+    "explanation": "Defend Forward emphasizes proactive engagement beyond defended networks, including cooperation with partners to disrupt adversary operations; attribution alone is not the whole strategy.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Network Protocols",
+    "question": "A user visits a website and notices a 'lock' icon in the address bar and the prefix https://. What does this indicate compared to http://?",
+    "options": {
+      "A": "Communication is encrypted and secured from access",
+      "B": "The website is immune to all malware and viruses",
+      "C": "The connection uses a reliable UDP-based tunnel",
+      "D": "The website is hosted on a circuit-switched network"
+    },
+    "correct_answer": "A",
+    "explanation": "HTTPS generally uses TLS to encrypt and authenticate the connection in transit. It does not prove that the website is benign or that all data is secure from every threat. Option A is the closest answer.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Network Attacks",
+    "question": "An organisation’s server is being flooded with SYN requests, causing it to crash and deny service to legitimate customers. This is most likely -----------",
+    "options": {
+      "A": "An eavesdropping attack",
+      "B": "A data repudiation attack",
+      "C": "A denial of service attack",
+      "D": "A passive monitoring attack"
+    },
+    "correct_answer": "C",
+    "explanation": "A SYN flood exhausts connection-handling resources and can deny legitimate service.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Application Security",
+    "question": "A company implements a system that identifies, repairs, and eliminates vulnerabilities within its software suite to match Common Weakness Enumeration (CWE) standards. This is best described as ---------",
+    "options": {
+      "A": "administrative control",
+      "B": "application security",
+      "C": "physical security",
+      "D": "network security"
+    },
+    "correct_answer": "B",
+    "explanation": "Application security addresses weaknesses in software design, implementation and operation; CWE catalogs common weakness types.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Network Protocols",
+    "question": "What is the primary functional difference between a 'stateless' and 'stateful' protocol in network security?",
+    "options": {
+      "A": "Stateless protocols do not remember past interactions",
+      "B": "Stateful protocols are immune to DoS attacks",
+      "C": "Stateful protocols require more physical bandwidth",
+      "D": "Stateless protocols only operate at the Physical layer"
+    },
+    "correct_answer": "A",
+    "explanation": "Stateless protocols do not inherently maintain per-client interaction state between requests.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Network Protocols",
+    "question": "Which of the following protocol-to-layer pairings is correctly matched within the TCP/IP model?",
+    "options": {
+      "A": "HTTP — Transport layer",
+      "B": "TCP — Application layer",
+      "C": "RADIUS — Physical layer",
+      "D": "IPsec — Network layer"
+    },
+    "correct_answer": "D",
+    "explanation": "IPsec protects IP-layer traffic and is generally associated with the network/internet layer.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Social Engineering",
+    "question": "A financial analyst receives an email that appears to be from her manager, requesting an urgent wire transfer. After the transfer, it is discovered the email address was subtly altered. Which active attack was performed?",
+    "options": {
+      "A": "A Replay attack",
+      "B": "A Masquerade attack",
+      "C": "A Repudiation attack",
+      "D": "A Modification attack"
+    },
+    "correct_answer": "B",
+    "explanation": "The attacker impersonated a trusted sender; this is masquerading, commonly seen in business email compromise.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Network Protocols",
+    "question": "While sending a message through the TCP/IP stack, which is the correct order of data unit transitions as the information moves from the top layer to the bottom?",
+    "options": {
+      "A": "Segment -> Message -> Frame -> Datagram",
+      "B": "Segment -> Datagram -> Message -> Frame",
+      "C": "Message -> Datagram -> Segment -> Frame",
+      "D": "Message -> Segment -> Datagram -> Frame"
+    },
+    "correct_answer": "D",
+    "explanation": "Typical encapsulation moves from application message to transport segment, network packet/datagram, then link frame.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Network Attacks",
+    "question": "Which of the following is the most effective method for preventing a Denial of Service attack?",
+    "options": {
+      "A": "Enabling traffic filtering",
+      "B": "Implementing static routing",
+      "C": "Using circuit-switching",
+      "D": "Disabling the firewall"
+    },
+    "correct_answer": "A",
+    "explanation": "Traffic filtering and rate limiting can mitigate DoS attacks; no single measure guarantees prevention, especially against large distributed attacks.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Network Protocols",
+    "question": "When a receiver gets a data packet, what is the correct order of the decapsulation process?",
+    "options": {
+      "A": "Data Link -> Physical -> Transport -> Network",
+      "B": "Physical -> Data Link -> Network -> Transport",
+      "C": "Application -> Transport -> Network -> Physical",
+      "D": "Network -> Data Link -> Physical -> Application"
+    },
+    "correct_answer": "B",
+    "explanation": "The receiving stack processes physical signals, data-link frames, network packets and transport segments in ascending order.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Network Attacks",
+    "question": "In the context of a DDoS attack, what is the correct chronological order of the attack phases?",
+    "options": {
+      "A": "Recruitment -> Finding a Target -> Intrusion",
+      "B": "Attack -> Recruitment -> Finding a Target",
+      "C": "Intrusion -> Attack -> Finding a Target",
+      "D": "Finding a Target -> Intrusion -> Attack"
+    },
+    "correct_answer": "D",
+    "explanation": "The assessment's simplified sequence is target selection, intrusion and attack. Real DDoS campaigns can include botnet recruitment and preparation in different orders.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 201",
+    "topic": "Security Controls",
+    "question": "Which statement best distinguishes an Intrusion Detection System (IDS) from an Intrusion Prevention System (IPS)?",
+    "options": {
+      "A": "IDS monitors hardware while IPS monitors software",
+      "B": "IDS works at the edge while IPS works at the core",
+      "C": "IDS alerts on threats while IPS actively blocks them",
+      "D": "IDS records traffic while IPS encrypts all packets"
+    },
+    "correct_answer": "C",
+    "explanation": "IDS detects and alerts; an inline IPS can block or drop malicious traffic.",
+    "type": "mcq"
+  }
+]
