@@ -1,0 +1,562 @@
+[
+  {
+    "course_code": "CYB 207",
+    "topic": "Network Segmentation",
+    "question": "A ransomware attack spreads rapidly across hospital systems after initial compromise, affecting multiple departments. Investigation shows minimal internal segmentation. What contributed most to the spread?",
+    "options": {
+      "A": "Weak internal segmentation and unrestricted lateral movement",
+      "B": "Cloud storage misconfiguration",
+      "C": "Overuse of endpoint antivirus tools",
+      "D": "Strong authentication systems failure"
+    },
+    "correct_answer": "A",
+    "explanation": "Without internal segmentation, compromised hosts can reach additional systems and spread ransomware.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Access Control Models",
+    "question": "A security architect compares two access models: one assigns permissions based on job role, while the other considers user role, device status, location, and time. What is the most accurate distinction?",
+    "options": {
+      "A": "RBAC is static role-based access, ABAC uses contextual attributes",
+      "B": "RBAC uses device identity while ABAC uses passwords",
+      "C": "ABAC is only used in cloud systems, RBAC in on-prem only",
+      "D": "RBAC eliminates authentication, ABAC enforces encryption"
+    },
+    "correct_answer": "A",
+    "explanation": "RBAC assigns permissions through roles; ABAC evaluates attributes of subjects, resources, actions and context. RBAC role assignments can also change dynamically.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Network Segmentation",
+    "question": "A corporate network is divided into multiple isolated zones so that compromise in one area does not spread easily. What security technique is being applied?",
+    "options": {
+      "A": "Network aggregation",
+      "B": "Perimeter firewall expansion",
+      "C": "Micro-segmentation",
+      "D": "Centralised access pooling"
+    },
+    "correct_answer": "C",
+    "explanation": "Micro-segmentation enforces granular isolation and communication policies to constrain lateral movement.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Principles",
+    "question": "A cybersecurity team designs a system assuming attackers may already be inside the network and builds controls accordingly. What principle is being applied?",
+    "options": {
+      "A": "Open trust networking",
+      "B": "Assume breach principle",
+      "C": "Firewall-first security design",
+      "D": "Reactive perimeter defence"
+    },
+    "correct_answer": "B",
+    "explanation": "Assume breach means designing detection, containment and verification controls on the premise that compromise is possible or already present.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Network Segmentation",
+    "question": "A company suffers a breach where an attacker enters via one compromised account and later accesses sensitive databases due to unrestricted internal movement. What weakness is being demonstrated?",
+    "options": {
+      "A": "Overuse of biometric authentication",
+      "B": "Strong external encryption failure",
+      "C": "Lack of internal segmentation and access controls",
+      "D": "Excessive firewall restrictions"
+    },
+    "correct_answer": "C",
+    "explanation": "Inadequate segmentation and authorization allow a compromised account to reach unrelated sensitive resources.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Threat Detection",
+    "question": "After stealing valid employee credentials via phishing, an attacker accesses a corporate system and gradually reaches sensitive databases without triggering alerts. Security logs show movement across internal servers. How should this behaviour be classified?",
+    "options": {
+      "A": "Lateral movement within a trusted internal network",
+      "B": "Distributed denial of service propagation",
+      "C": "Encrypted ransomware deployment phase",
+      "D": "Firewall bypass misconfiguration exploitation"
+    },
+    "correct_answer": "A",
+    "explanation": "Lateral movement describes an intruder traversing additional internal hosts or services after initial access.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Access Control Models",
+    "question": "A cloud system blocks access to sensitive data unless the user role, device security posture, and login time meet defined conditions. Which access control model is being used?",
+    "options": {
+      "A": "Mandatory Access Control (MAC)",
+      "B": "Role-Based Access Control (RBAC)",
+      "C": "Attribute-Based Access Control (ABAC)",
+      "D": "Discretionary Access Control (DAC)"
+    },
+    "correct_answer": "C",
+    "explanation": "ABAC evaluates multiple attributes and contextual conditions rather than role membership alone.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Principles",
+    "question": "A cybersecurity team redesigns its architecture based on the principle that no user or device should be inherently trusted, regardless of location. Which principle does this best represent?",
+    "options": {
+      "A": "Trust cloud-hosted services over on-prem systems",
+      "B": "Never trust, always verify",
+      "C": "Trust all authenticated internal users by default",
+      "D": "Trust devices after successful firewall authentication"
+    },
+    "correct_answer": "B",
+    "explanation": "Zero Trust removes implicit trust based on network location and requires policy-based verification for access.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Privileged Access",
+    "question": "A cybersecurity policy grants a contractor temporary access to a database for only three hours to complete a maintenance task, after which access is automatically revoked. What model does this represent?",
+    "options": {
+      "A": "Open authentication access model",
+      "B": "Static role provisioning",
+      "C": "Persistent access assignment",
+      "D": "Just-in-Time (JIT) access control"
+    },
+    "correct_answer": "D",
+    "explanation": "JIT access grants limited permissions for a defined task and duration, then expires.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Perimeter Security",
+    "question": "In a corporate office, employees connect to the internal LAN and immediately gain access to file servers, HR systems, and databases without additional verification. Security analysts are reviewing risk assumptions in this setup. What underlying assumption is being made?",
+    "options": {
+      "A": "Internal network traffic is assumed to be safe and trustworthy by default",
+      "B": "External traffic is already fully encrypted and secure",
+      "C": "All endpoints are continuously monitored using AI-based tools",
+      "D": "Cloud applications enforce stricter controls than internal systems"
+    },
+    "correct_answer": "A",
+    "explanation": "This reflects implicit trust of users and traffic once they are inside the network boundary.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Principles",
+    "question": "A cloud security policy requires that every access request be evaluated using identity, device health, and behavioural context, not just login credentials. What does this approach represent?",
+    "options": {
+      "A": "Pre-approved device whitelist access model",
+      "B": "Location-based trust verification",
+      "C": "Continuous contextual validation of identity and access requests",
+      "D": "One-time authentication at login"
+    },
+    "correct_answer": "C",
+    "explanation": "Access decisions consider current identity, device posture and context rather than relying solely on a previous login.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Perimeter Security",
+    "question": "Which organisational environment is most suitable for a traditional perimeter security model?",
+    "options": {
+      "A": "Fully remote multinational workforce",
+      "B": "Smart city IoT ecosystem",
+      "C": "Single-site organisation with static infrastructure",
+      "D": "Cloud-native distributed infrastructure"
+    },
+    "correct_answer": "C",
+    "explanation": "A stable single-site environment has a more clearly defined boundary, although Zero Trust controls remain beneficial.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Perimeter Security",
+    "question": "An enterprise bank operates a traditional perimeter security model. After onboarding into the internal network, employees can access most internal systems without repeated checks. During a security audit, analysts are asked to evaluate the underlying assumption guiding this design. What best explains this model’s treatment of internal users?",
+    "options": {
+      "A": "Authentication is bypassed for all internal communication to improve performance",
+      "B": "Only privileged administrators are trusted inside the network perimeter",
+      "C": "Internal users are considered trusted once they successfully pass the network boundary",
+      "D": "All internal users are continuously authenticated for every system request"
+    },
+    "correct_answer": "C",
+    "explanation": "The traditional trust-boundary model tends to treat internal network membership as a strong trust signal.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Implementation",
+    "question": "An organisation implementing Zero Trust struggles because its legacy systems cannot support modern authentication and segmentation tools. What is the primary challenge being faced?",
+    "options": {
+      "A": "Excessive cloud adoption",
+      "B": "Overuse of modern APIs",
+      "C": "Lack of cybersecurity policies",
+      "D": "Integration with legacy infrastructure"
+    },
+    "correct_answer": "D",
+    "explanation": "Legacy applications and infrastructure may lack modern identity protocols or fine-grained enforcement interfaces.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Principles",
+    "question": "An organisation assumes its systems may already be compromised and designs its security architecture accordingly. What is the primary operational consequence of this assumption?",
+    "options": {
+      "A": "Removal of internal segmentation to simplify architecture",
+      "B": "Continuous verification, monitoring, and adaptive access control",
+      "C": "Full reliance on perimeter firewalls for containment",
+      "D": "Reduction in authentication requirements to improve usability"
+    },
+    "correct_answer": "B",
+    "explanation": "Assuming breach motivates continuous evaluation, telemetry, least privilege and containment.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Access Control Models",
+    "question": "A hospital restricts doctors so that they can only access patient records relevant to their department and role, even after login. What security principle is being enforced?",
+    "options": {
+      "A": "Least privilege access control",
+      "B": "Network perimeter reinforcement",
+      "C": "Implicit trust delegation",
+      "D": "Static firewall rule enforcement"
+    },
+    "correct_answer": "A",
+    "explanation": "Least privilege limits access to the resources necessary for authorized duties.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Identity & Access Management",
+    "question": "In a Zero Trust environment, all authentication requests from users and devices are centrally managed and enforced across systems. What is the primary role of IAM?",
+    "options": {
+      "A": "Centralise authentication and enforce access policies",
+      "B": "Replace endpoint antivirus systems",
+      "C": "Eliminate need for user authentication checks",
+      "D": "Improve network throughput efficiency"
+    },
+    "correct_answer": "A",
+    "explanation": "IAM manages identities, authentication and authorization policies across resources; enforcement can involve distributed components.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Identity & Access Management",
+    "question": "A financial application requires password entry, biometric verification, and device confirmation before granting access. What security improvement does this represent?",
+    "options": {
+      "A": "Password reuse enforcement",
+      "B": "Encryption key rotation mechanism",
+      "C": "Multi-Factor Authentication (MFA) strengthening identity assurance",
+      "D": "Device bypass authentication model"
+    },
+    "correct_answer": "C",
+    "explanation": "Multiple distinct authentication factors increase assurance and reduce reliance on passwords alone.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Perimeter Security",
+    "question": "A multinational financial institution migrates services to a hybrid cloud and enables remote staff access. Security teams struggle to define where the “secure boundary” begins and ends. What is the core limitation being exposed in the perimeter model?",
+    "options": {
+      "A": "Increased dependency on cloud storage systems",
+      "B": "Complete elimination of internal network traffic flows",
+      "C": "Difficulty maintaining a clearly defined and enforceable network perimeter",
+      "D": "Reduced effectiveness of encryption algorithms in hybrid systems"
+    },
+    "correct_answer": "C",
+    "explanation": "Hybrid cloud and remote access blur traditional network boundaries and make location-based trust unreliable.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Perimeter Security",
+    "question": "A university deploys firewalls and IDS/IPS at its network edge to protect student records and research data. During an assessment, security engineers are asked to describe the operational focus of these tools. What is their primary function in this architecture?",
+    "options": {
+      "A": "Encrypt all inter-departmental communication automatically",
+      "B": "Enforce continuous authentication for all internal users and applications",
+      "C": "Inspect, filter, and control traffic at the network entry and exit points",
+      "D": "Replace endpoint security by monitoring user behaviour inside the network"
+    },
+    "correct_answer": "C",
+    "explanation": "Edge firewalls filter traffic and IDS/IPS detect or prevent suspicious activity at monitored boundaries.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Compliance & Governance",
+    "question": "A payment processing company implements Zero Trust controls to comply with PCI DSS. Which design decision most directly supports compliance?",
+    "options": {
+      "A": "Segmenting cardholder data environments and enforcing continuous monitoring",
+      "B": "Granting broad access privileges to trusted users",
+      "C": "Removing encryption to simplify system performance",
+      "D": "Elimininating audit logs to improve system speed"
+    },
+    "correct_answer": "A",
+    "explanation": "Segmenting the cardholder data environment and monitoring access support PCI DSS security objectives; Zero Trust alone does not guarantee compliance.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Threat Detection",
+    "question": "A cybersecurity operations center in a bank notices unusual login patterns occurring outside normal working hours from trusted devices. Analysts rely on automated tools to flag such anomalies. What is the primary function of behavioural analytics here?",
+    "options": {
+      "A": "Increase storage capacity for security logs across distributed servers",
+      "B": "Compress and optimise network traffic for faster delivery",
+      "C": "Identify deviations from expected user or system behaviour patterns",
+      "D": "Improve network bandwidth allocation for peak-hour transactions"
+    },
+    "correct_answer": "C",
+    "explanation": "Behavioral analytics detects anomalous activities relative to established baselines and contextual signals.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "IoT & Emerging Threats",
+    "question": "A smart manufacturing plant introduces IoT sensors across its production line. Security analysts raise concerns about potential entry points for attackers. What is the most critical IoT-related risk?",
+    "options": {
+      "A": "Built-in enterprise firewalls preventing external intrusion",
+      "B": "High computational power enabling secure autonomous operations",
+      "C": "Strong default encryption reducing system flexibility",
+      "D": "Weak security configurations and default credentials"
+    },
+    "correct_answer": "D",
+    "explanation": "Insecure defaults, weak credentials and poor device configuration can expose IoT devices to compromise.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Privileged Access",
+    "question": "A consulting firm grants external auditors access to internal systems for a limited compliance review window. After the task, access is automatically revoked. What principle does this represent?",
+    "options": {
+      "A": "Permanent privileged access for trusted external users",
+      "B": "Temporary, context-bound access restricted to task duration",
+      "C": "Performance optimisation through reduced login overhead",
+      "D": "Removal of authentication checks for verified contractors"
+    },
+    "correct_answer": "B",
+    "explanation": "Time-bound, task-scoped permissions are consistent with just-in-time and least-privilege access.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Implementation",
+    "question": "A government agency is migrating to Zero Trust but struggles because its legacy applications cannot integrate with modern identity protocols. What is the main challenge being experienced?",
+    "options": {
+      "A": "Overperformance of network bandwidth causing configuration conflicts",
+      "B": "Excess availability of cybersecurity budget leading to over-provisioning",
+      "C": "Lack of user devices supporting modern authentication standards",
+      "D": "Integration difficulties between Zero Trust architecture and legacy systems"
+    },
+    "correct_answer": "D",
+    "explanation": "Legacy systems often require adapters, gateways or modernization to support contemporary identity controls.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Implementation",
+    "question": "A government agency evaluates multiple Zero Trust vendors for national infrastructure deployment. Which criterion is most critical for long-term viability?",
+    "options": {
+      "A": "Internet service provider partnerships of the vendor",
+      "B": "Integration capability with existing hybrid infrastructure and APIs",
+      "C": "Popularity of vendor among consumer markets",
+      "D": "Visual appeal of the vendor dashboard interface"
+    },
+    "correct_answer": "B",
+    "explanation": "Interoperability with existing systems and APIs supports sustainable, manageable deployments.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "IoT & Emerging Threats",
+    "question": "A telecom regulator warns that 5G adoption may increase exposure to cyber threats in smart cities. What is the primary underlying concern?",
+    "options": {
+      "A": "Expanded attack surface due to massive device connectivity",
+      "B": "Lower number of connected devices in enterprise networks",
+      "C": "Reduced reliance on mobile applications",
+      "D": "Reduced connectivity across mobile infrastructure"
+    },
+    "correct_answer": "A",
+    "explanation": "Large numbers of interconnected devices and services create more potential attack entry points.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Implementation",
+    "question": "A financial institution in Lagos is beginning its transition from perimeter-based security to Zero Trust. The CIO insists that the team must first understand what currently exists before deploying any controls. What should the team prioritise as the first actionable step?",
+    "options": {
+      "A": "Launch organisation-wide cybersecurity awareness training before technical planning",
+      "B": "Procure enterprise-grade Zero Trust tools before conducting any assessment",
+      "C": "Map existing users, devices, applications, and data flows to understand the current environment",
+      "D": "Deploy MFA across all banking applications immediately to reduce credential theft risks"
+    },
+    "correct_answer": "C",
+    "explanation": "Inventorying identities, assets, applications and data flows establishes the baseline for designing appropriate controls.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Implementation",
+    "question": "A university plans to adopt Zero Trust but is unsure how to begin structuring the initiative across faculties and administrative systems. Leadership is debating how to avoid unnecessary disruption. What is the most appropriate purpose of defining scope at this stage?",
+    "options": {
+      "A": "To prioritise replacement of outdated systems across departments immediately",
+      "B": "To eliminate dependency on legacy systems before any design decisions are made",
+      "C": "To standardise firewall policies across all university campuses",
+      "D": "To identify critical assets, data flows, and security objectives that guide implementation boundaries"
+    },
+    "correct_answer": "D",
+    "explanation": "Scope identifies protected resources, objectives and boundaries for a practical phased rollout.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "IoT & Emerging Threats",
+    "question": "A retail company experiences phishing attempts that now include AI-generated emails mimicking executives’ writing styles. What is the key impact of such AI-driven attacks?",
+    "options": {
+      "A": "They reduce overall phishing attempts in enterprise environments",
+      "B": "They increase sophistication and scalability of social engineering attacks",
+      "C": "They eliminate ransomware propagation across networks",
+      "D": "They simplify detection due to predictable patterns"
+    },
+    "correct_answer": "B",
+    "explanation": "Generative AI can make impersonation messages more convincing and easier to produce at scale.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Implementation",
+    "question": "A university hospital begins Zero Trust migration but encounters staff frustration due to repeated authentication prompts and workflow changes. What is the most likely root challenge?",
+    "options": {
+      "A": "User resistance to new access control mechanisms",
+      "B": "Absence of international cybersecurity regulations",
+      "C": "Overstaffing in IT security teams",
+      "D": "Excess automation reducing manual oversight"
+    },
+    "correct_answer": "A",
+    "explanation": "Poorly integrated access changes can cause user friction and resistance to adoption.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "IoT & Emerging Threats",
+    "question": "A logistics company deploys IoT-enabled tracking devices across its fleet. Security engineers propose Zero Trust controls to reduce risk exposure. What combination best mitigates IoT threats?",
+    "options": {
+      "A": "Removing encryption to improve processing speed",
+      "B": "Increasing onboard memory capacity of IoT sensors",
+      "C": "Micro-segmentation combined with strict device authentication policies",
+      "D": "Disabling all IoT tracking devices until audit completion"
+    },
+    "correct_answer": "C",
+    "explanation": "Device authentication limits unauthorized connections while micro-segmentation constrains compromised-device movement.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Implementation",
+    "question": "A telecom company plans a nationwide Zero Trust rollout. Leadership insists on avoiding service disruption and prefers controlled adoption. What is the main advantage of a phased approach?",
+    "options": {
+      "A": "Immediate replacement of all legacy systems in one deployment cycle",
+      "B": "Elimination of the need for architectural planning",
+      "C": "Removal of dependency on security tools during transition",
+      "D": "Gradual implementation allowing validation and risk control at each stage"
+    },
+    "correct_answer": "D",
+    "explanation": "Phased deployment enables testing, learning and rollback before expanding scope.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Compliance & Governance",
+    "question": "A European customer’s data is stored and processed by a Nigerian fintech company. Regulators audit compliance obligations related to personal data handling. What does GDPR primarily govern?",
+    "options": {
+      "A": "Protection and lawful processing of personal data",
+      "B": "Software engineering lifecycle standards",
+      "C": "Financial transaction reporting and banking transparency",
+      "D": "Hardware procurement and device certification"
+    },
+    "correct_answer": "A",
+    "explanation": "GDPR governs protection and lawful processing of personal data. Applicability to a Nigerian company depends on GDPR territorial-scope rules, not merely the customer's nationality.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Identity & Access Management",
+    "question": "A hospital deploys a Zero Trust pilot and integrates multiple identity platforms for staff access. The IT team must ensure consistent enforcement of access decisions across systems. Which interpretation best reflects the role of IAM here?",
+    "options": {
+      "A": "A backup recovery system ensuring patient data is duplicated across servers",
+      "B": "A governance framework that centralises authentication and authorisation decisions across resources",
+      "C": "A database encryption module applied only to sensitive medical records",
+      "D": "A monitoring layer that tracks network speed and system latency across departments"
+    },
+    "correct_answer": "B",
+    "explanation": "IAM coordinates identity lifecycle, authentication and authorization policies across connected systems.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Identity & Access Management",
+    "question": "A financial services firm integrates Azure AD into its Zero Trust architecture to manage thousands of remote employees. What capability makes this IAM solution particularly effective?",
+    "options": {
+      "A": "Automated hardware repair and endpoint maintenance across user devices",
+      "B": "File compression and storage optimisation for enterprise data",
+      "C": "Single Sign-On (SSO) combined with Multi-Factor Authentication for unified access control",
+      "D": "Physical surveillance of office premises to validate identity claims"
+    },
+    "correct_answer": "C",
+    "explanation": "Microsoft Entra ID (formerly Azure AD) supports SSO and MFA to centralize identity-based access control.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Tools",
+    "question": "A multinational enterprise is implementing Zero Trust and needs a tool capable of enforcing segmentation policies dynamically across hybrid workloads. Which tool best aligns with this requirement?",
+    "options": {
+      "A": "Microsoft Word, as it supports structured policy documentation and collaboration",
+      "B": "WinRAR, as it enables compressed secure transfer of files",
+      "C": "VMware NSX, due to its software-defined network segmentation capabilities",
+      "D": "Google Chrome, as it provides secure browsing and session isolation"
+    },
+    "correct_answer": "C",
+    "explanation": "VMware NSX supports software-defined networking and granular workload segmentation.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Implementation",
+    "question": "A telecom company introduces strict access controls under Zero Trust, but employees complain about repeated authentication steps disrupting workflows. What is the most effective mitigation strategy?",
+    "options": {
+      "A": "Introduce structured training and awareness programs alongside user-friendly tools like SSO",
+      "B": "Disable access controls for internal systems to reduce friction",
+      "C": "Increase password complexity requirements without changing workflow design",
+      "D": "Remove authentication layers temporarily to improve productivity"
+    },
+    "correct_answer": "A",
+    "explanation": "Training and SSO can reduce friction while retaining appropriate authentication and access checks.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Zero Trust Tools",
+    "question": "A medium-sized enterprise considers Cisco ACI for Zero Trust deployment but is concerned about operational feasibility. What is a realistic limitation?",
+    "options": {
+      "A": "Absence of core security enforcement features",
+      "B": "High implementation and operational cost for smaller organisations",
+      "C": "Inability to support authentication workflows",
+      "D": "Lack of any cloud compatibility features"
+    },
+    "correct_answer": "B",
+    "explanation": "Cisco ACI may require substantial infrastructure investment and specialist operations expertise, especially for smaller organizations.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "CYB 207",
+    "topic": "Network Segmentation",
+    "question": "A fintech company notices that once an attacker compromises a single employee laptop, they can navigate freely across internal systems. The architecture team proposes segmentation changes. What security property does micro-segmentation primarily improve?",
+    "options": {
+      "A": "It increases network throughput by reducing routing complexity",
+      "B": "It removes the need for user authentication after login",
+      "C": "It restricts lateral movement between systems even after initial compromise",
+      "D": "It enables unrestricted communication between internal applications for efficiency"
+    },
+    "correct_answer": "C",
+    "explanation": "Micro-segmentation restricts allowed communication paths and limits the blast radius of a compromised endpoint.",
+    "type": "mcq"
+  }
+]
