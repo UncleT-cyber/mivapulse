@@ -6,11 +6,11 @@
     "options": {
       "A": "$\\langle-3,7\\rangle$",
       "B": "$\\langle2,-1\\rangle$",
-      "C": "$\\langle1,7\\rangle$",
+      "C": "$\\langle1,7\\rangle$, magnitude $5\\sqrt2$",
       "D": "$\\langle3,1\\rangle$"
     },
     "correct_answer": "C",
-    "explanation": "The sum is $\\langle1,7\\rangle$, whose magnitude is $\\sqrt{50}=5\\sqrt2$. The marked option gives the vector but not the magnitude; the question and choices are inconsistent.",
+    "explanation": "Adding components gives $\\langle2+(-1),3+4\\rangle=\\langle1,7\\rangle$. Its magnitude is $\\sqrt{1^2+7^2}=\\sqrt{50}=5\\sqrt2$. The original assessment's correct option omitted the magnitude; it is included here.",
     "type": "mcq"
   },
   {
@@ -144,19 +144,19 @@
     "topic": "Mid-Semester Assessment",
     "question": "Which of the following correctly represents a 2D vector in component form and magnitude?",
     "options": {
-      "A": "$\\langle2,-1\\rangle$",
+      "A": "$\\langle2,-1\\rangle$, magnitude $\\sqrt5$",
       "B": "$\\sqrt7$",
       "C": "-5",
       "D": "3"
     },
     "correct_answer": "A",
-    "explanation": "A two-dimensional vector has two components; its magnitude here is $\\sqrt5$, although the selected choice does not include it.",
+    "explanation": "The vector is $\\langle2,-1\\rangle$ and its Euclidean magnitude is $\\sqrt{2^2+(-1)^2}=\\sqrt5$. The original assessment option omitted the magnitude.",
     "type": "mcq"
   },
   {
     "course_code": "MTH 205",
     "topic": "Mid-Semester Assessment",
-    "question": "Which of the following correctly represents a 3-dimensional vector suitable for a vector space basis in $\\mathbb R^3$?",
+    "question": "Which of the following correctly represents a 3-dimensional vector that could be included in a basis for $\\mathbb R^3$?",
     "options": {
       "A": "$\\langle1,2,3\\rangle$",
       "B": "10",
@@ -164,7 +164,7 @@
       "D": "$\\sqrt2$"
     },
     "correct_answer": "A",
-    "explanation": "Only the first option is a vector in $\\mathbb R^3$; one vector alone does not constitute a full basis of $\\mathbb R^3$.",
+    "explanation": "$\\langle1,2,3\\rangle$ is a nonzero vector in $\\mathbb R^3$ and can be extended to a basis. One vector by itself is not a basis for $\\mathbb R^3$. The original question's wording was ambiguous.",
     "type": "mcq"
   },
   {
@@ -276,7 +276,7 @@
       "D": "To satisfy addition"
     },
     "correct_answer": "C",
-    "explanation": "Every subspace must contain the additive identity; the marked answer is the intended choice, though zero inclusion is a separate subspace requirement.",
+    "explanation": "Every vector subspace must contain the additive identity $\\mathbf0$. It follows from nonemptiness and closure under scalar multiplication, since $0\\mathbf v=\\mathbf0$ for any vector $\\mathbf v$ in the subspace. The source's choice C is the closest available explanation.",
     "type": "mcq"
   },
   {
@@ -472,7 +472,7 @@
       "D": "$a=8,b=3$"
     },
     "correct_answer": "A",
-    "explanation": "SOURCE GRADING ERROR: Option A ($a=9,b=5$) is mathematically correct despite being marked incorrect in the LMS. With $a=9$, row 3 is three times row 1; with $b=5$, row 4 adds one independent direction, so rank is exactly 2. Option C ($a=9,b=4$) gives rank 1; B and D give rank 3.",
+    "explanation": "CORRECTED SOURCE GRADING ERROR: The assessment marked A wrong, but $a=9,b=5$ is the unique choice yielding rank 2. Row 2 is twice row 1 and row 3 is three times row 1; row 4 differs from row 1 only in its fourth component, so the rank is 2. With B or D, both the third and fourth rows add independent directions, giving rank 3. C makes every row a multiple of row 1, giving rank 1.",
     "type": "mcq"
   },
   {
@@ -506,7 +506,7 @@
   {
     "course_code": "MTH 205",
     "topic": "End-of-Semester Assessment",
-    "question": "Let $U,V,W$ be subspaces of $\\mathbb R^5$ with $\\dim(U)=3$, $\\dim(V)=3$, $\\dim(W)=2$. If $U\\cap V=\\{0\\}$ and $W\\subseteq U$, what is the minimum possible value of $\\dim(U+V+W)$?",
+    "question": "Let $U,V,W$ be subspaces of $\\mathbb R^6$ with $\\dim(U)=3$, $\\dim(V)=3$, $\\dim(W)=2$. If $U\\cap V=\\{0\\}$ and $W\\subseteq U$, what is the minimum possible value of $\\dim(U+V+W)$?",
     "options": {
       "A": "6",
       "B": "4",
@@ -514,7 +514,7 @@
       "D": "7"
     },
     "correct_answer": "A",
-    "explanation": "SOURCE ERROR: Such $U$ and $V$ cannot both be 3-dimensional subspaces of $\\mathbb R^5$ with trivial intersection: dimension formula would require $\\dim(U+V)=6>5$. The marked answer 6 is impossible under the stated ambient space.",
+    "explanation": "CORRECTED SOURCE DIMENSION ERROR: The assessment originally said $\\mathbb R^5$, which makes $U\\cap V=\\{0\\}$ impossible when both subspaces have dimension 3. In the corrected ambient space $\\mathbb R^6$, $\\dim(U+V)=3+3-0=6$. Since $W\\subseteq U$, $\\dim(U+V+W)=6$.",
     "type": "mcq"
   },
   {
