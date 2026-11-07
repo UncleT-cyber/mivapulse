@@ -1,0 +1,562 @@
+[
+  {
+    "course_code": "COS 203",
+    "topic": "Propositional Logic",
+    "question": "A software developer is designing a password validation system. The system must ensure that if a password is valid, it must be at least 8 characters long AND contain a digit. Let P be ‘password is valid’, Q be ‘password length ≥ 8’, and R be ‘password contains a digit’. Which logical statement correctly models this requirement?",
+    "options": {
+      "A": "(Q ∨ R) → P",
+      "B": "P → (Q ∧ R)",
+      "C": "P ∨ (Q ∧ R)",
+      "D": "(Q ∧ R) → P"
+    },
+    "correct_answer": "B",
+    "explanation": "A valid password necessarily satisfies both requirements.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Predicates",
+    "question": "Let P(x) be the statement ‘x + 2 > 5’. If the domain consists of all real numbers, what is the truth value of P(4) and P(2)?",
+    "options": {
+      "A": "P(4) is true, P(2) is false",
+      "B": "P(4) is false, P(2) is true",
+      "C": "P(4) is false, P(2) is false",
+      "D": "P(4) is true, P(2) is true"
+    },
+    "correct_answer": "A",
+    "explanation": "6 > 5 is true, while 4 > 5 is false.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Propositional Logic",
+    "question": "A student is testing a Java program with the following code: boolean result = (x > 5) && (y < 10);. If x = 8 and y = 12, what is the value of result and why?",
+    "options": {
+      "A": "False, because the && operator uses short-circuit evaluation.",
+      "B": "False, because both conditions must be true for AND.",
+      "C": "True, because y < 10 is true.",
+      "D": "True, because x > 5 is true."
+    },
+    "correct_answer": "B",
+    "explanation": "The first condition is true and the second is false; AND therefore evaluates to false.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Predicate Logic",
+    "question": "A logic puzzle states: ‘Everyone who knows Alice knows Bob. No one knows Charlie’. Let K(x, y) mean ‘x knows y’. Which expression correctly represents these statements?",
+    "options": {
+      "A": "∃x (K(x, Alice) → K(x, Bob)) ∧ ∀x K(x, Charlie)",
+      "B": "∀x (K(x, Alice) → K(x, Bob)) ∧ ∀x ¬K(x, Charlie)",
+      "C": "∀x (K(x, Alice) ∨ K(x, Bob)) ∧ ∀x K(x, Charlie)",
+      "D": "∀x (K(x, Alice) ∧ K(x, Bob)) ∧ ∃x ¬K(x, Charlie)"
+    },
+    "correct_answer": "B",
+    "explanation": "Both claims quantify over everyone; the second universally negates knowing Charlie.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Propositional Logic",
+    "question": "A programmer is writing code for an automated greenhouse system. The system must water the plants only when the soil is dry AND it has not rained in the last 24 hours. The programmer defines: P = ‘soil is dry’, Q = ‘it has rained in the last 24 hours’. Which logical expression correctly represents the watering condition?",
+    "options": {
+      "A": "P ∧ Q",
+      "B": "P ∧ ¬Q",
+      "C": "¬P ∧ Q",
+      "D": "P ∨ Q"
+    },
+    "correct_answer": "B",
+    "explanation": "Watering requires dry soil and no recent rain.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Relations",
+    "question": "A relation R on set A = {1, 2, 3, 4} is defined as R = {(1,1), (2,2), (3,3), (4,4), (1,2), (2,1), (2,3), (3,2)}. Which properties does this relation satisfy?",
+    "options": {
+      "A": "Symmetric only",
+      "B": "Reflexive only",
+      "C": "Reflexive, symmetric, and transitive",
+      "D": "Reflexive and symmetric"
+    },
+    "correct_answer": "D",
+    "explanation": "All diagonal pairs exist and every off-diagonal pair has its reverse; transitivity fails because (1,2) and (2,3) would require (1,3).",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Predicates",
+    "question": "A software tester is verifying that a function returns true only when the input is between 10 and 20 (inclusive). Which predicate correctly represents this condition?",
+    "options": {
+      "A": "P(x): x ≥ 10 ∨ x ≤ 20",
+      "B": "P(x): x ≥ 10 ∧ x ≤ 20",
+      "C": "P(x): x > 10 ∧ x < 20",
+      "D": "P(x): x > 10 ∨ x < 20"
+    },
+    "correct_answer": "B",
+    "explanation": "Both inclusive bounds must hold.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Predicate Logic",
+    "question": "A database administrator needs to write a query to find all customers who have placed an order in the last 30 days. Which logical structure best represents this requirement using predicate logic?",
+    "options": {
+      "A": "∃x (Customer(x) → OrderLast30Days(x))",
+      "B": "∀x (Customer(x) → OrderLast30Days(x))",
+      "C": "∃x (Customer(x) ∧ OrderLast30Days(x))",
+      "D": "∀x (Customer(x) ∧ OrderLast30Days(x))"
+    },
+    "correct_answer": "C",
+    "explanation": "Existential conjunction states that at least one customer ordered recently. For an actual query returning all matching customers, the set-builder predicate Customer(x) ∧ OrderLast30Days(x) is more precise; the options do not express that directly.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Relations",
+    "question": "A relation R on a set A is defined as aRb if a ≤ b. Which properties does this relation satisfy on the set of real numbers?",
+    "options": {
+      "A": "Transitive only",
+      "B": "Reflexive, antisymmetric, transitive",
+      "C": "Symmetric only",
+      "D": "Reflexive, symmetric, transitive"
+    },
+    "correct_answer": "B",
+    "explanation": "≤ is reflexive, antisymmetric and transitive.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Propositional Logic",
+    "question": "A security system requires two-factor authentication. A user is granted access if (they have a valid password AND a valid fingerprint) OR (they have a valid password AND a valid security token). Let P = ‘valid password’, F = ‘valid fingerprint’, T = ‘valid security token’. Which expression correctly models this requirement?",
+    "options": {
+      "A": "(P ∧ F) ∨ (P ∧ T)",
+      "B": "P ∨ (F ∧ T)",
+      "C": "P ∧ (F ∨ T)",
+      "D": "P ∧ F ∧ T"
+    },
+    "correct_answer": "A",
+    "explanation": "A and C are logically equivalent by the distributive law. A directly matches the wording; this assessment item has more than one correct option.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Propositional Logic",
+    "question": "A computer scientist is analysing a compound proposition: (p ∧ q) ∨ (¬p ∧ ¬q). This proposition is true under what condition?",
+    "options": {
+      "A": "When p and q have the same truth value.",
+      "B": "When p is true regardless of q.",
+      "C": "When q is false regardless of p.",
+      "D": "When p and q have different truth values."
+    },
+    "correct_answer": "A",
+    "explanation": "This is logical equivalence (XNOR), true when both propositions match.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Relations",
+    "question": "Which of the following relations on the set {1, 2, 3} is both symmetric and transitive?",
+    "options": {
+      "A": "{(1,2), (2,1), (1,1), (2,2)}",
+      "B": "{(1,2), (2,3), (1,3)}",
+      "C": "{(1,1), (2,2), (3,3)}",
+      "D": "{(1,2), (2,1), (2,2), (3,3)}"
+    },
+    "correct_answer": "A",
+    "explanation": "Both A and C are symmetric and transitive; D fails transitivity because (1,2) and (2,1) require (1,1). This is an ambiguous single-answer item.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Predicate Logic",
+    "question": "A security system checks user access with the rule: ‘No user without administrator privileges can modify system settings’. Let U(x) be ‘x is a user’, A(x) be ‘x has administrator privileges’, and M(x) be ‘x can modify system settings’. Which logical expression correctly represents this rule?",
+    "options": {
+      "A": "∀x ((U(x) ∧ ¬A(x)) → ¬M(x))",
+      "B": "∃x (U(x) ∧ ¬A(x) ∧ M(x))",
+      "C": "∀x ((U(x) ∧ A(x)) → M(x))",
+      "D": "∀x ((U(x) ∧ ¬A(x)) → M(x))"
+    },
+    "correct_answer": "A",
+    "explanation": "Every non-admin user is prohibited from modifying settings.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Propositional Logic",
+    "question": "A database query needs to find records where (age > 18 AND age < 65) OR (membership_status = ‘premium’ AND age > 18). Which of the following is a logically equivalent simplified condition?",
+    "options": {
+      "A": "age < 65 OR (age > 18 AND membership_status = \"premium\")",
+      "B": "age > 18 AND (age < 65 OR membership_status = \"premium\")",
+      "C": "age > 18 OR (age < 65 AND membership_status = \"premium\")",
+      "D": "age > 18 AND age < 65 AND membership_status = \"premium\""
+    },
+    "correct_answer": "B",
+    "explanation": "Factor the common age > 18 condition using distributivity.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Combinatorics",
+    "question": "A school needs to select a committee of 4 students from a group of 10. How many different committees can be formed?",
+    "options": {
+      "A": "10 × 4 = 40",
+      "B": "10! / (4! × 6!) = 210",
+      "C": "10 × 9 × 8 × 7 = 5040",
+      "D": "10! = 3,628,800"
+    },
+    "correct_answer": "B",
+    "explanation": "Order does not matter: choose(10,4) = 210.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Functions",
+    "question": "A programmer defines a function in Python: def f(x): return x % 2 == 0. A colleague claims this function is surjective onto the set {True, False}. Is this claim correct?",
+    "options": {
+      "A": "Yes, because the function is defined for all integers",
+      "B": "Yes, because both True and False appear as outputs",
+      "C": "No, because the domain must be specified to determine surjectivity",
+      "D": "No, because the function only outputs True for even numbers"
+    },
+    "correct_answer": "B",
+    "explanation": "Assuming the intended integer domain, even integers map to True and odd integers to False. The domain is not explicitly specified, so the statement relies on that assumption.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Combinatorics",
+    "question": "How many 3-letter words (with repetition allowed) can be formed from the letters {A, B, C}?",
+    "options": {
+      "A": "3! = 6",
+      "B": "3 × 3 = 9",
+      "C": "3 × 2 × 1 = 6",
+      "D": "3³ = 27"
+    },
+    "correct_answer": "D",
+    "explanation": "There are three choices for each of three positions: 3³ = 27.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Propositional Logic",
+    "question": "Using De Morgan's laws, which expression is logically equivalent to ¬(p ∨ ¬q)?",
+    "options": {
+      "A": "¬p ∧ ¬q",
+      "B": "¬p ∧ q",
+      "C": "¬p ∨ q",
+      "D": "p ∧ ¬q"
+    },
+    "correct_answer": "B",
+    "explanation": "Negating an OR yields an AND of negations: ¬p ∧ ¬¬q = ¬p ∧ q.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Predicate Logic",
+    "question": "What is the negation of the statement ∀x (P(x) → Q(x))?",
+    "options": {
+      "A": "∃x (P(x) ∧ ¬Q(x))",
+      "B": "∃x (¬P(x) ∨ Q(x))",
+      "C": "∀x (¬P(x) ∨ ¬Q(x))",
+      "D": "∀x (P(x) ∧ ¬Q(x))"
+    },
+    "correct_answer": "A",
+    "explanation": "Negating a universal implication gives an existential counterexample where P is true and Q false.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Relations",
+    "question": "Let A = {1, 2} and B = {1, 2, 3}. Which of the following is a valid relation from A to B?",
+    "options": {
+      "A": "{(1,1), (1,2), (2,3)}",
+      "B": "{(1,1), (2,2), (3,3)}",
+      "C": "{(1,1), (2,2), (2,3), (3,1)}",
+      "D": "{(1,1), (2,4)}"
+    },
+    "correct_answer": "A",
+    "explanation": "Every ordered pair must belong to A × B.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Dynamic Programming",
+    "question": "A programmer uses dynamic programming to solve the coin change problem. What is the time complexity if there are m coin denominations and target amount A?",
+    "options": {
+      "A": "O(m^A)",
+      "B": "O(m × A)",
+      "C": "O(2^A)",
+      "D": "O(m + A)"
+    },
+    "correct_answer": "B",
+    "explanation": "The standard tabulation algorithm iterates over coin denominations and amounts.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Mathematical Proofs",
+    "question": "A mathematician claims that 'for all integers n, if n² is odd, then n is odd'. To prove this, they assume n is even and show that n² is even. Which proof technique are they using?",
+    "options": {
+      "A": "Proof by contraposition",
+      "B": "Proof by contradiction",
+      "C": "Direct proof",
+      "D": "Proof by exhaustion"
+    },
+    "correct_answer": "A",
+    "explanation": "The contrapositive of n² odd ⇒ n odd is n even ⇒ n² even.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Trees",
+    "question": "A BST is created by inserting values in this order: 50, 30, 70, 20, 40, 60, 80. What is the height of the resulting tree (height = number of edges on longest path from root to leaf)?",
+    "options": {
+      "A": "4",
+      "B": "3",
+      "C": "5",
+      "D": "2"
+    },
+    "correct_answer": "D",
+    "explanation": "The balanced BST has root, child and grandchild levels, so the longest root-to-leaf path has two edges.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Set Theory",
+    "question": "A school has 100 students. 60 students play football, 45 play basketball, and 30 play both. How many students play exactly one sport?",
+    "options": {
+      "A": "45",
+      "B": "30",
+      "C": "15",
+      "D": "75"
+    },
+    "correct_answer": "A",
+    "explanation": "Football-only = 60−30=30; basketball-only = 45−30=15; total 45.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Graphs",
+    "question": "A software developer is testing a search algorithm on a graph with 1,000 vertices. The graph is sparse, meaning most vertices have few connections. Which graph representation should they use to minimise memory usage?",
+    "options": {
+      "A": "Adjacency list",
+      "B": "Incidence matrix",
+      "C": "Adjacency matrix",
+      "D": "Edge list"
+    },
+    "correct_answer": "A",
+    "explanation": "Adjacency lists use O(V+E) space and are a standard efficient representation for sparse graphs. Edge lists can also be compact, so memory efficiency depends on representation details.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Mathematical Proofs",
+    "question": "A student is proving the statement ‘n³ - n is divisible by 6 for all integers n’ by induction. After proving the base case n = 0, they assume true for n = k and attempt to prove for n = k+1. Which expression should they aim to show is divisible by 6?",
+    "options": {
+      "A": "(k+1)³ - (k+1)",
+      "B": "(k+1)³ + k³",
+      "C": "k³ - k",
+      "D": "k³ - (k+1)"
+    },
+    "correct_answer": "A",
+    "explanation": "Substitute k+1 for n in the original statement.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Graphs",
+    "question": "A programmer needs to traverse a social network graph to find all friends within three degrees of a given user. Which traversal algorithm would be MOST appropriate?",
+    "options": {
+      "A": "Depth-First Search (DFS)",
+      "B": "Neither; social networks require special algorithms",
+      "C": "Breadth-First Search (BFS)",
+      "D": "Both BFS and DFS would give the same result"
+    },
+    "correct_answer": "C",
+    "explanation": "BFS explores vertices by shortest unweighted distance and can stop at depth three.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Probability",
+    "question": "In a multiple-choice test with 10 questions, each having 4 options, a student guesses randomly on all questions. What is the probability of getting exactly 3 correct?",
+    "options": {
+      "A": "C(10,3) × (3/4)³ × (1/4)⁷",
+      "B": "C(10,3) × (1/4)³",
+      "C": "(1/4)³ × (3/4)⁷",
+      "D": "C(10,3) × (1/4)³ × (3/4)⁷"
+    },
+    "correct_answer": "D",
+    "explanation": "Use the binomial probability with n=10, k=3 and success probability 1/4.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Combinatorics",
+    "question": "A university offers 5 computer science courses and 4 mathematics courses. How many ways can a student choose 2 courses from computer science and 2 courses from mathematics?",
+    "options": {
+      "A": "5 × 4 = 20",
+      "B": "C(9,4) = 126",
+      "C": "C(5,2) × C(4,2) = 10 × 6 = 60",
+      "D": "P(5,2) × P(4,2) = 20 × 12 = 240"
+    },
+    "correct_answer": "C",
+    "explanation": "Choose two from each category independently: 10 × 6 = 60.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Graphs",
+    "question": "A delivery company needs to find the shortest route from a central warehouse to all delivery locations. The roads have varying distances but all are positive. Which algorithm would be MOST efficient for this scenario?",
+    "options": {
+      "A": "Bellman-Ford algorithm",
+      "B": "Kruskal's algorithm",
+      "C": "Prim's algorithm",
+      "D": "Dijkstra's algorithm"
+    },
+    "correct_answer": "D",
+    "explanation": "Dijkstra computes shortest paths from a single source in graphs with nonnegative weights.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Probability",
+    "question": "A factory produces light bulbs with a 2% defect rate. What is the probability that in a batch of 100 bulbs, at most 1 is defective?",
+    "options": {
+      "A": "C(100,0)(0.02)⁰(0.98)¹⁰⁰",
+      "B": "1 - C(100,0)(0.02)⁰(0.98)¹⁰⁰ - C(100,1)(0.02)¹(0.98)⁹⁹",
+      "C": "C(100,1)(0.02)¹(0.98)⁹⁹",
+      "D": "C(100,0)(0.02)⁰(0.98)¹⁰⁰ + C(100,1)(0.02)¹(0.98)⁹⁹"
+    },
+    "correct_answer": "D",
+    "explanation": "At most one means zero or one defective bulb; add the corresponding binomial probabilities.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Binomial Theorem",
+    "question": "What is the middle term in the expansion of (x + y)⁸?",
+    "options": {
+      "A": "56x⁴y⁴",
+      "B": "35x⁴y⁴",
+      "C": "70x⁴y⁴",
+      "D": "28x⁴y⁴"
+    },
+    "correct_answer": "C",
+    "explanation": "The middle term is choose(8,4)x⁴y⁴ = 70x⁴y⁴.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Mathematical Proofs",
+    "question": "A computer science student is trying to prove that ‘if a number is divisible by 6, then it is divisible by 3’. Which proof technique would be MOST efficient and appropriate?",
+    "options": {
+      "A": "Proof by induction on the value of the number",
+      "B": "Proof by cases considering even and odd numbers separately",
+      "C": "Direct proof using the definition of divisibility",
+      "D": "Proof by contradiction assuming a number divisible by 6 is not divisible by 3"
+    },
+    "correct_answer": "C",
+    "explanation": "If n=6k, then n=3(2k), proving divisibility by 3 directly.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Algorithm Complexity",
+    "question": "A computer scientist is analysing a recursive algorithm with recurrence relation T\n = 2T(n/2) + n. What is the time complexity of this algorithm?",
+    "options": {
+      "A": "O(n log n)",
+      "B": "O(2ⁿ)",
+      "C": "O(n²)",
+      "D": "O"
+    },
+    "correct_answer": "A",
+    "explanation": "By the Master Theorem, T(n)=Θ(n log n). The fourth option appears truncated in the assessment export.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Trees",
+    "question": "A binary search tree is traversed and the output is: 4, 5, 2, 3, 1. Which traversal produced this order?",
+    "options": {
+      "A": "This sequence cannot be produced by any standard traversal",
+      "B": "Inorder traversal",
+      "C": "Preorder traversal",
+      "D": "Postorder traversal"
+    },
+    "correct_answer": "D",
+    "explanation": "This is a valid postorder sequence for a BST rooted at 1, with right subtree rooted at 3 and its left subtree rooted at 2. It is not a valid inorder or preorder BST sequence.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Combinatorics",
+    "question": "How many different 5-card poker hands can be dealt from a standard 52-card deck?",
+    "options": {
+      "A": "52! = 8.07 × 10⁶⁷",
+      "B": "52 × 51 × 50 × 49 × 48 = 311,875,200",
+      "C": "52⁵ = 380,204,032",
+      "D": "C(52,5) = 2,598,960"
+    },
+    "correct_answer": "D",
+    "explanation": "A poker hand is an unordered selection of five cards, so choose(52,5)=2,598,960.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Probability",
+    "question": "A fair die is rolled 5 times. What is the probability of getting exactly 2 sixes?",
+    "options": {
+      "A": "C(5,2) × (1/6)³ × (5/6)²",
+      "B": "C(5,2) × (1/6)² × (5/6)³",
+      "C": "C(5,2) × (1/6)²",
+      "D": "(1/6)² × (5/6)³"
+    },
+    "correct_answer": "B",
+    "explanation": "Use the binomial formula for exactly two successes in five trials.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Probability",
+    "question": "The average number of customers arriving at a bank per hour is 10. What is the probability that exactly 8 customers arrive in a given hour?",
+    "options": {
+      "A": "10⁸ × e⁻¹⁰",
+      "B": "10 × 8 / 8!",
+      "C": "8¹⁰ × e⁻⁸ / 10!",
+      "D": "10⁸ × e⁻¹⁰ / 8!"
+    },
+    "correct_answer": "D",
+    "explanation": "The Poisson probability is e^(−λ) λ^k/k!, with λ=10 and k=8.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Trees",
+    "question": "In a binary tree traversal, the output is: 4, 2, 5, 1, 3. Which traversal produced this order?",
+    "options": {
+      "A": "Inorder traversal",
+      "B": "Postorder traversal",
+      "C": "Preorder traversal",
+      "D": "Level-order traversal"
+    },
+    "correct_answer": "A",
+    "explanation": "This is the inorder traversal of the common example tree with root 1, left child 2 (children 4,5), and right child 3. Without specifying the tree, traversal order cannot be uniquely determined.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 203",
+    "topic": "Graphs",
+    "question": "A telecommunications network has 6 nodes. Using Kruskal's algorithm, edges are considered in order: (A-B, 5), (B-C, 3), (C-D, 7), (D-E, 2), (E-F, 4), (A-F, 6), (B-E, 8), (C-E, 9). After processing the first three edges, which edges have been added to the MST?",
+    "options": {
+      "A": "(D-E,2), (E-F,4), (B-C,3)",
+      "B": "(A-B,5), (B-C,3), (C-D,7)",
+      "C": "(D-E,2), (B-C,3), (A-F,6)",
+      "D": "(D-E,2), (A-B,5), (B-C,3)"
+    },
+    "correct_answer": "A",
+    "explanation": "Kruskal processes edges in ascending weight order, yielding (D-E,2), (B-C,3), (E-F,4). The stated 'edges are considered in order' conflicts with this sorting rule; option A lists the correct set, not sorted order.",
+    "type": "mcq"
+  }
+]
