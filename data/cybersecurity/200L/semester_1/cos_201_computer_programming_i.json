@@ -1,0 +1,282 @@
+[
+  {
+    "course_code": "COS 201",
+    "topic": "Python Variables & Types",
+    "question": "When a variable is created in Python without assigning a value, the programmer must later assign a data type through",
+    "options": {
+      "A": "A comment line",
+      "B": "The value that is assigned to it",
+      "C": "A separate type keyword",
+      "D": "A special declaration keyword"
+    },
+    "correct_answer": "B",
+    "explanation": "Python infers a variable's type from its assigned value; a name cannot be used as a variable before assignment.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Python Variables & Types",
+    "question": "When a program needs to hold the value 3.14 representing pi, the correct data type to declare is",
+    "options": {
+      "A": "list",
+      "B": "float",
+      "C": "str",
+      "D": "int"
+    },
+    "correct_answer": "B",
+    "explanation": "A float represents decimal numbers such as 3.14.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Lists & Arrays",
+    "question": "After creating an array of student names, the programmer wants to add a new name at the end without replacing existing entries. The built-in method that achieves this is ----",
+    "options": {
+      "A": "append()",
+      "B": "remove()",
+      "C": "sort()",
+      "D": "reverse()"
+    },
+    "correct_answer": "A",
+    "explanation": "The append() method adds one item to the end of a Python list.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Python Variables & Types",
+    "question": "In Python, the data type of a variable can be checked at runtime using the built-in function ---",
+    "options": {
+      "A": "print()",
+      "B": "input()",
+      "C": "len()",
+      "D": "type()"
+    },
+    "correct_answer": "D",
+    "explanation": "type(value) returns the runtime type of a Python object.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Programming Languages",
+    "question": "What are the main categories of programming languages used to pass instructions to a computer?",
+    "options": {
+      "A": "Front-end languages and back-end languages only",
+      "B": "Web languages, mobile languages, and desktop languages",
+      "C": "Machine language, low-level language (assembly), and high-level language",
+      "D": "Compiled languages and interpreted languages only"
+    },
+    "correct_answer": "C",
+    "explanation": "Programming languages are commonly classified by abstraction level as machine, assembly and high-level languages.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Python Variables & Types",
+    "question": "A programmer stores a whole number, such as 42, in a variable. The most suitable Python data type for this value is -------",
+    "options": {
+      "A": "float",
+      "B": "int",
+      "C": "bool",
+      "D": "str"
+    },
+    "correct_answer": "B",
+    "explanation": "int stores integer values such as 42.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Programming Languages",
+    "question": "Machine language uses only 0s and 1s. While it is simple for the computer to understand, it is difficult for programmers because ----",
+    "options": {
+      "A": "It includes many built-in commands for loops and variables",
+      "B": "It runs slower than other languages",
+      "C": "It is the bit-based language of machines",
+      "D": "It reads like natural English"
+    },
+    "correct_answer": "C",
+    "explanation": "Machine instructions are represented in binary and are difficult for humans to read and maintain; option C is the closest available answer.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Programming Languages",
+    "question": "Many modern high-level languages do not need to be fully compiled before execution. These are known as",
+    "options": {
+      "A": "Low-level assembly language",
+      "B": "Binary-only languages",
+      "C": "Machine languages",
+      "D": "Scripting languages"
+    },
+    "correct_answer": "D",
+    "explanation": "Scripting languages are often executed by an interpreter or runtime without a separate ahead-of-time compilation step.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Programming Languages",
+    "question": "Low-level language (assembly language) replaces machine bits with short, English-like commands such as ADD and MOV. Before the computer can run this code, it must be translated by ----",
+    "options": {
+      "A": "An interpreter",
+      "B": "A compiler",
+      "C": "An assembler",
+      "D": "A web browser"
+    },
+    "correct_answer": "C",
+    "explanation": "An assembler translates assembly instructions into machine code.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Lists & Arrays",
+    "question": "A developer needs to store the daily temperatures for one week (seven values) in a single variable so they can be accessed by position. The most suitable structure is a ------",
+    "options": {
+      "A": "Two-dimensional array",
+      "B": "Single integer variable",
+      "C": "Simple string",
+      "D": "One-dimensional array"
+    },
+    "correct_answer": "D",
+    "explanation": "A one-dimensional array or Python list stores an indexed sequence of values.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Object-Oriented Programming",
+    "question": "A program treats objects of different subclasses (Dog, Cat) uniformly by calling the same speak() method on each. The correct behaviour occurs because of",
+    "options": {
+      "A": "Static typing",
+      "B": "Polymorphism",
+      "C": "Encapsulation",
+      "D": "Inheritance"
+    },
+    "correct_answer": "B",
+    "explanation": "Polymorphism lets objects of different classes respond to a shared interface in class-specific ways.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Methods & Scope",
+    "question": "A method that can be called directly on the class without creating an object first must be defined using",
+    "options": {
+      "A": "The init method",
+      "B": "An instance method",
+      "C": "The @staticmethod decorator",
+      "D": "A private method"
+    },
+    "correct_answer": "C",
+    "explanation": "@staticmethod defines a method that does not require an instance; class methods can also be called on classes, but are not offered here.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Strings & Formatting",
+    "question": "To display the message “Your total is 125.50” where the number comes from a variable, the best approach is",
+    "options": {
+      "A": "input() inside the print()",
+      "B": "Multiple separate print() statements",
+      "C": "print() with an f-string or .format()",
+      "D": "A comment line"
+    },
+    "correct_answer": "C",
+    "explanation": "An f-string or str.format() inserts formatted variable values into a string.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Methods & Scope",
+    "question": "In a method, when a variable is created and used only within that method’s code block, this variable has",
+    "options": {
+      "A": "Module scope",
+      "B": "Class scope",
+      "C": "Local scope",
+      "D": "Global scope"
+    },
+    "correct_answer": "C",
+    "explanation": "A variable assigned inside a method is normally local to that method unless explicitly declared otherwise.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Methods & Scope",
+    "question": "To reuse a method that adds two numbers from several different places in the program, the correct approach is to",
+    "options": {
+      "A": "Declare the method as a global variable",
+      "B": "Use a print statement inside the method",
+      "C": "Call the method by its name and pass the required arguments",
+      "D": "Copy the entire method code each time it is needed"
+    },
+    "correct_answer": "C",
+    "explanation": "Calling a reusable method with arguments avoids duplicating its implementation.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Recursion",
+    "question": "A method that solves a problem by calling itself with a smaller version of the same problem is using",
+    "options": {
+      "A": "Recursion",
+      "B": "Looping with for",
+      "C": "Iteration",
+      "D": "A global variable"
+    },
+    "correct_answer": "A",
+    "explanation": "Recursion occurs when a function or method calls itself, typically with a base case.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Object-Oriented Programming",
+    "question": "A programmer creates a blueprint that defines attributes and behaviours for all cars in a program. This blueprint is called a",
+    "options": {
+      "A": "Function",
+      "B": "Variable",
+      "C": "String",
+      "D": "Class"
+    },
+    "correct_answer": "D",
+    "explanation": "A class defines the attributes and methods of its instances.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Strings & Formatting",
+    "question": "A program receives a full name as a string and needs to extract just the first name. The most suitable string method is",
+    "options": {
+      "A": "strip()",
+      "B": "upper()",
+      "C": "replace()",
+      "D": "split()"
+    },
+    "correct_answer": "D",
+    "explanation": "split() separates a full name into components, allowing the first part to be selected.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Object-Oriented Programming",
+    "question": "The ability of a class to contain both attributes and methods that operate on those attributes demonstrates",
+    "options": {
+      "A": "Looping",
+      "B": "Input handling",
+      "C": "Recursion",
+      "D": "Encapsulation"
+    },
+    "correct_answer": "D",
+    "explanation": "Encapsulation groups state and behavior in a class and may control access to that state.",
+    "type": "mcq"
+  },
+  {
+    "course_code": "COS 201",
+    "topic": "Object-Oriented Programming",
+    "question": "A class contains both data (attributes) and actions (methods) that belong together. This combination is the core idea of",
+    "options": {
+      "A": "Procedural programming",
+      "B": "Object-oriented programming",
+      "C": "Functional programming",
+      "D": "Scripting"
+    },
+    "correct_answer": "B",
+    "explanation": "Object-oriented programming organizes code around objects that combine data and behavior.",
+    "type": "mcq"
+  }
+]
