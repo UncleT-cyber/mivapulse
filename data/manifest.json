@@ -143,6 +143,11 @@
                       "code": "SEN 201",
                       "title": "Introduction to Software Engineering",
                       "file": "cybersecurity/200L/semester_1/sen_201_introduction_to_software_engineering.json"
+                    },
+                    {
+                      "code": "MTH 205",
+                      "title": "Linear Algebra I",
+                      "file": "cybersecurity/200L/semester_1/mth_205_linear_algebra_i.json"
                     }
                   ]
                 },
