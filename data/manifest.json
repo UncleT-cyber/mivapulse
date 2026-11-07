@@ -138,6 +138,11 @@
                       "code": "CYB 207",
                       "title": "Zero Trust Networking",
                       "file": "cybersecurity/200L/semester_1/cyb_207_zero_trust_networking.json"
+                    },
+                    {
+                      "code": "SEN 201",
+                      "title": "Introduction to Software Engineering",
+                      "file": "cybersecurity/200L/semester_1/sen_201_introduction_to_software_engineering.json"
                     }
                   ]
                 },
