@@ -108,7 +108,13 @@
                 {
                   "id": "semester_1",
                   "name": "1st Semester",
-                  "courses": []
+                  "courses": [
+                    {
+                      "code": "COS 201",
+                      "title": "Computer Programming I",
+                      "file": "cybersecurity/200L/semester_1/cos_201_computer_programming_i.json"
+                    }
+                  ]
                 },
                 {
                   "id": "semester_2",
@@ -176,32 +182,64 @@
               "id": "100L",
               "name": "100 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "200L",
               "name": "200 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "300L",
               "name": "300 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "400L",
               "name": "400 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             }
           ]
@@ -220,32 +258,64 @@
               "id": "100L",
               "name": "100 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "200L",
               "name": "200 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "300L",
               "name": "300 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "400L",
               "name": "400 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             }
           ]
@@ -258,32 +328,64 @@
               "id": "100L",
               "name": "100 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "200L",
               "name": "200 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "300L",
               "name": "300 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "400L",
               "name": "400 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             }
           ]
@@ -302,32 +404,64 @@
               "id": "100L",
               "name": "100 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "200L",
               "name": "200 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "300L",
               "name": "300 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "400L",
               "name": "400 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             }
           ]
@@ -340,32 +474,64 @@
               "id": "100L",
               "name": "100 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "200L",
               "name": "200 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "300L",
               "name": "300 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "400L",
               "name": "400 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             }
           ]
@@ -384,32 +550,64 @@
               "id": "100L",
               "name": "100 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "200L",
               "name": "200 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "300L",
               "name": "300 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "400L",
               "name": "400 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             }
           ]
@@ -422,32 +620,64 @@
               "id": "100L",
               "name": "100 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "200L",
               "name": "200 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "300L",
               "name": "300 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "400L",
               "name": "400 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             }
           ]
@@ -466,32 +696,64 @@
               "id": "100L",
               "name": "100 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "200L",
               "name": "200 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "300L",
               "name": "300 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "400L",
               "name": "400 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             }
           ]
@@ -504,32 +766,64 @@
               "id": "100L",
               "name": "100 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "200L",
               "name": "200 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "300L",
               "name": "300 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             },
             {
               "id": "400L",
               "name": "400 Level",
               "semesters": [
-                { "id": "semester_1", "name": "1st Semester", "courses": [] },
-                { "id": "semester_2", "name": "2nd Semester", "courses": [] }
+                {
+                  "id": "semester_1",
+                  "name": "1st Semester",
+                  "courses": []
+                },
+                {
+                  "id": "semester_2",
+                  "name": "2nd Semester",
+                  "courses": []
+                }
               ]
             }
           ]
